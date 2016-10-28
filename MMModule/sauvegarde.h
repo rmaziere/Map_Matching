@@ -2,11 +2,12 @@
 #define SAUVEGARDE_H
 
 #include <QString>
-#include <QFileDialog>
 #include <QDir>
 #include <QFile>
 #include <QTextStream>
-#include <string>
+
+
+#include "../exception.h"
 #include "trace.h"
 
 
@@ -18,6 +19,11 @@ public:
     Sauvegarde();
 
     //Fonction de sauvegarde en CSV
+    /**
+     * @brief sauvegarderCSV save data in a CSV file
+     * @param cheminAcces
+     * @param maTrace
+     */
     int sauvegarderCSV(QString cheminAcces, Trace maTrace);
 
     //Destructeur
