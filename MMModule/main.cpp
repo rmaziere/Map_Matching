@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 
     //Instantiation de la fonction de lecture d'un fichier CSV
     Trace maTrace = Trace();
-    maTrace.readFromCSV("/home/rmaziere/Map_Matching/Map_Matching/MMModule/csv/20090427085649.csv");
+    maTrace.readFromCSV("/home/rmaziere/DEV/Map_Matching/MMModule/csv/20090427085649.csv");
     for (uint i=0 ; i < maTrace.getPoints().size(); ++i)
     {
         std::cout << i << " "

@@ -1,5 +1,6 @@
 #include "sauvegarde.h"
 #include "../exception.h"
+#include "trace.h"
 
 //Utilisation du namespace std pour standard
 using namespace std;
@@ -11,6 +12,9 @@ Sauvegarde::Sauvegarde()
 }
 
 int Sauvegarde::sauvegarderCSV(int argc, char *argv[]){
+
+    Trace maTrace = Trace();
+    maTrace.readFromCSV("/home/rmaziere/DEV/Map_Matching/MMModule/csv/monFichier.csv");
 
     // Répertoire de l'utilisateur
     QString path = QDir::homePath();
@@ -41,8 +45,15 @@ int Sauvegarde::sauvegarderCSV(int argc, char *argv[]){
             QTextStream out(&file);
 
             // Ajout des valeurs
-            out << "Bonjour!\n";
-            out << "J'écris dans un fichier txt!\n";
+            for (uint i=0 ; i < maTrace.getPoints().size(); ++i){
+                out << i << ","
+                    << maTrace.getPoints()[i]->getLatitude() << ","
+                    << maTrace.getPoints()[i]->getLongitude() << ","
+                    << maTrace.getPoints()[i]->getAltitude() << ","
+                    << maTrace.getPoints()[i]->getTimeStamp().toString()
+                    << "\n";
+            }
+            out << "Fin du fichier CSV";
 
             // Fermeture du fichier
             file.close();
