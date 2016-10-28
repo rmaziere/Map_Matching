@@ -1,4 +1,5 @@
 #include <QApplication>
+#include <QFileDialog>
 
 
 #include "../exception.h"
@@ -8,26 +9,29 @@
 
 int main(int argc, char *argv[])
 {
-    //Instantiation de QApplication
+    // Open the app
     QApplication app(argc, argv);
 
-    //Instantiation de la fonction de lecture d'un fichier CSV
-    Trace maTrace = Trace();
-    QString chemin = "/home/julie/Map_Matching/MMModule/csv/20090427085649.csv";
-    maTrace.readFromCSV(chemin);
-    for (uint i=0 ; i < maTrace.getPoints().size(); ++i)
+    // Set path to home Path
+    QString path = QDir::homePath();
+
+    // Select file
+    QString file;
+    while (file.isEmpty())
     {
-        std::cout << i << " "
-                  << maTrace.getPoints()[i]->getLatitude() << " "
-                  << maTrace.getPoints()[i]->getLongitude() << " "
-                  << maTrace.getPoints()[i]->getAltitude() << " "
-                  << maTrace.getPoints()[i]->getTimeStamp().toString().toStdString()
-                  << std::endl;
+        file = QFileDialog::getOpenFileName(
+                        NULL,
+                        "Select one or more files to open",
+                        path,
+                        "Fichier .csv (*.csv)");
     }
 
+    Trace maTrace = Trace();
+    maTrace.readFromCSV(file);
+    
     //Instantiation de la fonction de sauvegarde d'un fichier en CSV
     Sauvegarde Test;
-    Test.sauvegarderCSV(chemin, maTrace);
+    Test.sauvegarderCSV(file, maTrace);
 
-    return 0;
+    return app.exec();
 }

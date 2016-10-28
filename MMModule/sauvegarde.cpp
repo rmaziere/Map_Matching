@@ -41,11 +41,10 @@ int Sauvegarde::sauvegarderCSV(QString cheminAcces,Trace maTrace){
 
             // Ajout des valeurs
             for (uint i=0 ; i < maTrace.getPoints().size(); ++i){
-                out << i << ","
-                    << maTrace.getPoints()[i]->getLatitude() << ","
+                out << maTrace.getPoints()[i]->getLatitude() << ","
                     << maTrace.getPoints()[i]->getLongitude() << ","
                     << maTrace.getPoints()[i]->getAltitude() << ","
-                    << maTrace.getPoints()[i]->getTimeStamp().toString()
+                    << maTrace.getPoints()[i]->getTimeStamp().toString("yyyy-MM-dd hh:mm:ss")
                     << "\n";
             }
 

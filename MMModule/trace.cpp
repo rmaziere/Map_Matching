@@ -34,12 +34,13 @@ void Trace::readFromCSV(QString filename)
     string value; // Save the value of the line
     QString stringConverted;
 
-    vector<int> correspondance(4); // Correpondance between the header and the parser :
+    vector<int> correspondance(5); // Correpondance between the header and the parser :
     // correspondance :
     //  0 : # latitude column
     //  1 : # longitude column
     //  2 : # altitude column
     //  3 : # date column
+    //  4 : # hour column
     for(uint i = 0; i < correspondance.size(); ++i)
     {
         correspondance[i]=-1;
@@ -155,7 +156,6 @@ void Trace::readFromCSV(QString filename)
                 {
                     // Traitement Date
                     // Read timeStamp from file
-
                     // If complete timestamp with date & time
                     if(text[i].length() == 19){
                         timeStamp = QDateTime::fromString(text[i],"yyyy-MM-dd hh:mm:ss");
