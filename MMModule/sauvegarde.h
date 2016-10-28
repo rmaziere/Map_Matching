@@ -18,6 +18,11 @@ public:
     Sauvegarde();
 
     //Fonction de sauvegarde en CSV
+    /**
+     * @brief sauvegarderCSV save data in a CSV file
+     * @param cheminAcces
+     * @param maTrace
+     */
     int sauvegarderCSV(QString cheminAcces, Trace maTrace);
 
     //Destructeur
