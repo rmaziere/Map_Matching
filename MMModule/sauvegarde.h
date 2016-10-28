@@ -2,11 +2,12 @@
 #define SAUVEGARDE_H
 
 #include <QString>
-#include <QFileDialog>
 #include <QDir>
 #include <QFile>
 #include <QTextStream>
-#include <string>
+
+
+#include "../exception.h"
 #include "trace.h"
 
 

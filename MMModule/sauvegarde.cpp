@@ -1,5 +1,5 @@
 #include "sauvegarde.h"
-#include "../exception.h"
+
 
 //Utilisation du namespace std pour standard
 using namespace std;

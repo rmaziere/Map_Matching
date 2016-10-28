@@ -1,8 +1,10 @@
 #include <QApplication>
-#include <iostream>
+
+
 #include "../exception.h"
 #include "trace.h"
 #include "sauvegarde.h"
+
 
 int main(int argc, char *argv[])
 {
