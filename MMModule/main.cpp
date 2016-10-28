@@ -1,5 +1,5 @@
 #include <iostream>
-#include "exception.h"
+#include "../exception.h"
 #include "trace.h"
 #include "sauvegarde.h"
 

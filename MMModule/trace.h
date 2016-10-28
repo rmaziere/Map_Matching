@@ -3,8 +3,12 @@
 
 #include "pointTrace.h"
 #include <vector>
+#include <string>
 #include <iostream>     // cout
 #include <fstream>      // ifstream
+#include <sstream>
+#include <QString>
+#include <QStringList>
 
 /**
  * @brief The Trace class
