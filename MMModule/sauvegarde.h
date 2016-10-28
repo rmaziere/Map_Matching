@@ -3,12 +3,11 @@
 
 #include <QString>
 #include <QFileDialog>
-#include <QApplication>
 #include <QDir>
 #include <QFile>
 #include <QTextStream>
-#include <iostream>
 #include <string>
+#include "trace.h"
 
 
 class Sauvegarde
@@ -19,7 +18,7 @@ public:
     Sauvegarde();
 
     //Fonction de sauvegarde en CSV
-    int sauvegarderCSV(int argc, char *argv[]);
+    int sauvegarderCSV(QString cheminAcces, Trace maTrace);
 
     //Destructeur
     virtual ~Sauvegarde();

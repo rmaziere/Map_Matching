@@ -1,6 +1,5 @@
 #include "sauvegarde.h"
 #include "../exception.h"
-#include "trace.h"
 
 //Utilisation du namespace std pour standard
 using namespace std;
@@ -11,25 +10,21 @@ Sauvegarde::Sauvegarde()
 
 }
 
-int Sauvegarde::sauvegarderCSV(int argc, char *argv[]){
-
-    Trace maTrace = Trace();
-    maTrace.readFromCSV("/home/rmaziere/DEV/Map_Matching/MMModule/csv/monFichier.csv");
+int Sauvegarde::sauvegarderCSV(QString cheminAcces,Trace maTrace){
 
     // Répertoire de l'utilisateur
-    QString path = QDir::homePath();
+    QString home = QDir::homePath();
+    // Répertoire où on va enregistrer nos fichiers
+    QString path = home + "/.map_matching/";
+    // Créer un répertoire si nom existant
+    QDir(home).mkdir(path);
 
-    // Nom du fichier initialisé
-    QString fichier;
+    // Récupération du nom du fichier
+    QStringList listChemin = cheminAcces.split("/");
+    QString nomExt = listChemin.at(listChemin.size()-1); // Récupération du dernier élément (avec extension)
 
-    // Sélection du chemin et du nom du fichier
-    while (fichier.isEmpty())
-    {
-        fichier = QFileDialog::getSaveFileName(NULL, "Enregistrer un fichier", path, "Fichier .csv (*.csv)");
-    }
-
-    // Chemin + fichier
-    QString nom = fichier + ".csv";
+    // Chemin + fichier d'origine
+    QString nom = path + nomExt;
 
     try{
         // Charge le fichier
@@ -53,7 +48,6 @@ int Sauvegarde::sauvegarderCSV(int argc, char *argv[]){
                     << maTrace.getPoints()[i]->getTimeStamp().toString()
                     << "\n";
             }
-            out << "Fin du fichier CSV";
 
             // Fermeture du fichier
             file.close();
