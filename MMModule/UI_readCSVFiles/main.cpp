@@ -12,7 +12,6 @@
 
 #include "../trace.h"
 
-
 using namespace std;
 
 
