@@ -63,26 +63,30 @@ void Trace::readFromCSV(QString filename)
         for(uint i = 0; i < text.size(); ++i)
         {
             cout << "Colonne " << text[i].toStdString() << endl;
-            // NOTE : aQString.compare(otherQString) return 0 if aQString and otherQString are equal
-            if (!text[i].compare("latitude"))
+            if (text[i].contains(QString::fromStdString("lati"),Qt::CaseInsensitive))
             {
                 correspondance[0]=i;
                 cout << "LATITUDE DETECTED at colonne : " << i << endl;
             }
-            else if (!text[i].compare(QString::fromStdString("longitude"),Qt::CaseInsensitive))
+            else if (text[i].contains(QString::fromStdString("longi"),Qt::CaseInsensitive))
             {
                 correspondance[1]=i;
                 cout << "LONGITUDE DETECTED at colonne : " << i << endl;
             }
-            else if (!text[i].compare(QString::fromStdString("altitude"),Qt::CaseInsensitive))
+            else if (text[i].contains(QString::fromStdString("alti"),Qt::CaseInsensitive))
             {
                 correspondance[2]=i;
                 cout << "ALTITUDE DETECTED at colonne : " << i << endl;
             }
-            else if (!text[i].compare(QString::fromStdString("date"),Qt::CaseInsensitive))
+            else if (text[i].contains(QString::fromStdString("date"),Qt::CaseInsensitive))
             {
                 correspondance[3]=i;
                 cout << "DATE DETECTED at colonne : " << i << endl;
+            }
+            else if (text[i].contains(QString::fromStdString("heure"),Qt::CaseInsensitive))
+            {
+                correspondance[4]=i;
+                cout << "HEURE DETECTED at colonne : " << i << endl;
             }
             else
             {
@@ -110,7 +114,7 @@ void Trace::readFromCSV(QString filename)
         longitude=0;
         altitude=0;
         timeStamp=QDateTime::currentDateTime();
-
+        vector<QString> specificDate(2);
 
         getline(file, value);
         // Convert string to Qstring (easiest
@@ -147,7 +151,7 @@ void Trace::readFromCSV(QString filename)
 
                     cout << "Altitude : " << altitude << " ";
                 }
-                else if (i == correspondance[3])
+                else if (i == correspondance[3] && correspondance[4]==-1)
                 {
                     // Traitement Date
                     // Read timeStamp from file
@@ -164,9 +168,27 @@ void Trace::readFromCSV(QString filename)
                         cout << "Time : " << timeStamp.toString("hh:mm:ss").toStdString();
                     }
                 }
-
-                cout << endl;
+                else if (correspondance[4]!=-1)
+                {
+                    if (i==correspondance[3])
+                    {
+                        // Traitement Date
+                        specificDate[0]=text[i];
+                    }
+                    else if (i==correspondance[4])
+                    {
+                        // Traitement Hours
+                        specificDate[1]=text[i];
+                    }
+                }
             }
+            if (correspondance[4]!=-1) // if there are two columns for date and hours
+            {
+                timeStamp = QDateTime::fromString(specificDate[0]+specificDate[1],"yyyy/MM/ddhh:mm:ssa");
+                cout << "Date time : " << timeStamp.toString().toStdString();
+            }
+
+            cout << endl;
             // Add the read point
             addPoint(latitude, longitude, altitude, timeStamp);
         }
