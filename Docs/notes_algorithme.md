@@ -18,12 +18,11 @@ Le code n'utilise que **C++11** (pas de QT) pour des raisons de performances. Il
   * Paramétrage (filtrage, ...)
   * Transformation et filtrage
 3. Initialisation
-  * Éliminer du réseau les segments > x mètres d'un point GPS
+  * Éliminer du réseau les segments > 200 mètres d'un point GPS
   * Initialiser tous les segments
 
 
- > **Note** Le processus de lecture des fichiers, filtrage et construction/peuplement des structures de données  sera probablement long (>60s), il faudra penser à créer des jeux de tests plus petits
- > ou à sauvegarder cette étape en format binaire (idéalement)
+ > **Note** Le processus de lecture des fichiers, filtrage et construction/peuplement des structures de données  sera probablement long (>60s), il faudra penser à créer des jeux de tests plus petits ou à sauvegarder cette étape en format binaire (idéalement)
 
 ## Étapes préalables à l'application de l'algorithme
 
@@ -101,7 +100,7 @@ Pour chaque état, on affecte une probabilité de passer à un état suivant. S'
 
 >Il faut décider si l'on gère le sens de parcours (donnée présentent dans le jeu de test, mais pas forcément sur nos tests).
 
-```
+``` python
 STAY_ON_ROAD= 0.5  # à décider, probabilité de rester sur la même route
 foreach road r1:
   noOfTargets= 0 # nombre d'embranchements possibles à partir de r1
@@ -113,7 +112,7 @@ foreach road r1:
   statRef= (1.0-STAY_ON_ROAD)/noOfTargets
   r1.set(statNextRoad= statRef, listOfNextRoads= targets)   
 ```
- > **Note**: Complexité N\*N\*length(road). Optimisation possible ?
+ > **Note**: Complexité NxNxlength(road). Optimisation possible ?
 
 #### Probabilité d'émission (*Emission probability*)
 
@@ -127,7 +126,7 @@ foreach point p:
   foreach road r:
     distance= shortestDistance(p,r)
     if distance < DISTANCE_THRESHOLD
-      ...
+    ...  
 ```
 
 ## Estimation de la mémoire nécessaire
@@ -143,7 +142,7 @@ Calcul avec des données réalistes mais non réelles :
 Résultat (sans surchage: classe, fonctions, variable (id), etc) :
 
 ```
-long: 8 octets (64 bits)
+double: 8 octets (64 bits)
 float: 4 octets
 ```
 
@@ -155,22 +154,24 @@ float: 4 octets
 
 ## Description des classes
 
+Proposition idéale qui optimise la mémoire (le diagramme de classe présente des structures de données optimisée en temps de calcul et plus simple à manipuler).
+
 #### Point
-- long x, y
+- double x, y
 - int id
 
 #### Road
 - int id
 - vector`<int>` pointId
 - float statRef
-- vector\<int\> roadId # représente la Matrice de Markov
+- vector`<int>`roadId # représente la Matrice de Markov
 
 #### Network
 - vector`<Road>` road
 - Point rectLowerLeftBound, rectUpperRightBound # boite englobante
 
 #### PointGPS
-- long x,y,z
+- double x,y,z
 - long timeStamp
 - int id
 - vector`<Emission>` emissionProbability
