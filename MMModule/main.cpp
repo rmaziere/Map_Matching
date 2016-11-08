@@ -41,15 +41,10 @@ using namespace std;
 int main(/*int argc, char *argv[]*/)
 {
     Distance dist;
-    std::vector<double> A(2);
-    A[0] = 0;
-    A[1] = 0;
-    std::vector<double> B(2);
-    B[0] = 0;
-    B[1] = 10;
-    std::vector<double> C(2);
-    C[0] = 1;
-    C[1] = 12;
+    Point A(0,0);
+    Point B(0,10);
+    Point C(1,11);
+
     cout << dist.distance2ptsegment(A,B,C);
 
 

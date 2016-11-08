@@ -1,6 +1,8 @@
 #ifndef DISTANCE_H
 #define DISTANCE_H
 
+#include <point.h>
+
 #include <vector>
 #include <math.h>
 
@@ -17,7 +19,7 @@ public:
      * @param pt2 Last point (x,y)
      * @return value of sqrt((pt1.x - pt2.x)² + (pt1.y - pt2.y)²)
      */
-    double distance2pt(std::vector<double> pt1,std::vector<double> pt2);
+    double distance2pt(Point pt1,Point pt2);
     /**
      * @brief distance2ptsegment Calculate distance between a point and a segment
      * @param A First point of the segment (x,y)
@@ -25,7 +27,7 @@ public:
      * @param pt Point (x,y)
      * @return value of distance
      */
-    double distance2ptsegment(std::vector<double> A,std::vector<double> B, std::vector<double> pt);
+    double distance2ptsegment(Point A,Point B, Point pt);
 
 };
 

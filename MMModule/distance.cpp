@@ -7,25 +7,25 @@ Distance::Distance()
 {
 }
 
-double Distance::distance2pt(std::vector<double> pt1,std::vector<double> pt2)
+double Distance::distance2pt(Point pt1,Point pt2)
 {
-    return sqrt(pow(pt2[0]-pt1[0],2)+pow(pt2[1]-pt1[1],2));
+    return sqrt(pow(pt2.m_x-pt1.m_x,2)+pow(pt2.m_y-pt1.m_y,2));
 }
 
-double Distance::distance2ptsegment(std::vector<double> A,std::vector<double> B, std::vector<double> pt)
+double Distance::distance2ptsegment(Point A,Point B, Point pt)
 {
-    if ((B[0] == A[0]) && (B[1] == A[1]))
+    if ((B.m_x == A.m_x) && (B.m_y == A.m_y))
     {
         return distance2pt(A,pt);
     }
     else
     {
-        double num = (pt[0] - A[0]) * (B[0] - A[0]) + (pt[1] - A[1]) * (B[1] - A[1]);
+        double num = (pt.m_x - A.m_x) * (B.m_x - A.m_x) + (pt.m_y - A.m_y) * (B.m_y - A.m_y);
         double tSol = num / pow(distance2pt(A,B),2);
         double t = std::max(0.0, std::min(1.0, tSol));
-        std::vector<double> proj(2);
-        proj[0] = A[0] + t * (B[0] - A[0]);
-        proj[1] = A[1] + t * (B[1] - A[1]);
+        Point proj(A.m_x + t * (B.m_x - A.m_x), A.m_y + t * (B.m_y - A.m_y));
+        //proj.m_x = A.m_x + t * (B.m_x - A.m_x);
+        //proj.m_y = A.m_y + t * (B.m_y - A.m_y);
         return distance2pt(pt, proj);
     }
 }
