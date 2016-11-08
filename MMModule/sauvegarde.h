@@ -7,8 +7,8 @@
 #include <QTextStream>
 
 
-#include "../exception.h"
-#include "trace.h"
+#include "myexception.h"
+#include "track.h"
 
 
 class Sauvegarde
@@ -24,7 +24,7 @@ public:
      * @param cheminAcces
      * @param maTrace
      */
-    int sauvegarderCSV(QString cheminAcces, Trace maTrace);
+    int sauvegarderCSV(QString cheminAcces, Track maTrace);
 
     //Destructeur
     virtual ~Sauvegarde();

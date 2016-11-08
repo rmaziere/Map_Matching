@@ -10,14 +10,24 @@ CONFIG -= app_bundle
 TEMPLATE = app
 
 SOURCES += main.cpp \
-    pointTrace.cpp \
-    trace.cpp \
     sauvegarde.cpp \
+    file.cpp \
+    pointGPS.cpp \
+    track.cpp \
+    network.cpp \
+    point.cpp \
+    road.cpp \
     distance.cpp
 
+
 HEADERS += \
-    pointTrace.h \
-    trace.h \
     sauvegarde.h \
-    ../exception.h \
+    file.h \
+    track.h \
+    pointGPS.h \
+    myexception.h \
+    network.h \
+    point.h \
+    road.h \
+    myexception.h \
     distance.h
