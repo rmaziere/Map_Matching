@@ -1,11 +1,47 @@
 #include <QApplication>
 #include <QFileDialog>
-
+#include <vector>
+#include <math.h>
 
 #include "../exception.h"
 #include "trace.h"
 #include "sauvegarde.h"
+
 using namespace std;
+
+double distance2pt(std::vector<double> pt1,std::vector<double> pt2)
+{
+    return sqrt(pow(pt2[0]-pt1[0],2)+pow(pt2[1]-pt1[1],2));
+}
+
+double distance2ptsegment(std::vector<double> A,std::vector<double> B, std::vector<double> pt)
+{
+    if ((B[0] == A[0]) && (B[1] == A[1]))
+    {
+        return distance2pt(A,pt);
+    }
+    else
+    {
+        double num = (pt[0] - A[0]) * (B[0] - A[0]) + (pt[1] - A[1]) * (B[1] - A[1]);
+        double tSol = num / pow(distance2pt(A,B),2);
+        double t = std::max(0.0, std::min(1.0, tSol));
+        std::vector<double> proj(2);
+        proj[0] = A[0] + t * (B[0] - A[0]);
+        proj[1] = A[1] + t * (B[1] - A[1]);
+        return distance2pt(pt, proj);
+    }
+}
+
+void distance(int identifiantRoad, std::vector<double> pt)
+{
+    double distMin = 1000000;
+    // For each segment in road
+    // distance2ptsegment();
+    //Remplissage.......
+    distMin = double(identifiantRoad) + pt[0];
+}
+
+
 void shp2csv(QString path)
 {
     // Récupération du nom du fichier
@@ -28,9 +64,19 @@ void shp2csv(QString path)
         cout << "!!! Fin de fonction !!!" << endl;
 }
 
-int main(int argc, char *argv[])
+int main(/*int argc, char *argv[]*/)
 {
-    // Open the app
+    std::vector<double> A(2);
+    A[0] = 0;
+    A[1] = 0;
+    std::vector<double> B(2);
+    B[0] = 0;
+    B[1] = 10;
+    std::vector<double> C(2);
+    C[0] = 1;
+    C[1] = 12;
+    cout << distance2ptsegment(A,B,C);
+    /*// Open the app
     QApplication app(argc, argv);
 
     // Set path to home Path
@@ -60,5 +106,11 @@ int main(int argc, char *argv[])
     Sauvegarde Test;
     Test.sauvegarderCSV(file, maTrace);
 
-    return app.exec();
+    return app.exec();*/
 }
+
+
+
+
+
+
