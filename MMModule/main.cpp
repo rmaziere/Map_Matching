@@ -13,12 +13,12 @@ using namespace std;
 
 
 
-/*void distance(int identifiantRoad, std::vector<double> pt)
+/*void distance(int identifiantRoad, Point pt)
 {
     double distMin = 1000000;
     // For each segment in road
-    std::vector<double> A(2);
-    std::vector<double> B(2);
+    Point A;
+    Point B;
     A = road->listOfPoint{0};
     for (int i = 1; i < listOfPoints.size(); i++)
     {
