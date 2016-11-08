@@ -24,7 +24,7 @@ public:
      * @param cheminAcces
      * @param maTrace
      */
-    int sauvegarderCSV(QString cheminAcces, Trace maTrace);
+    int sauvegarderCSV(QString cheminAcces, Track maTrace);
 
     //Destructeur
     virtual ~Sauvegarde();

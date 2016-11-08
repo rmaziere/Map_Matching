@@ -203,7 +203,7 @@ void Track::readFromCSV(QString filename)
 
 
 
-vector<PointTrack*> Track::getPoints()
+vector<PointGPS*> Track::getPoints()
 {
     return m_points;
 }
@@ -211,5 +211,5 @@ vector<PointTrack*> Track::getPoints()
 
 void Track::addPoint(float latitude, float longitude, float altitude, QDateTime timeStamp)
 {
-    m_points.push_back(new PointTrack(latitude, longitude, altitude, timeStamp));
+    m_points.push_back(new PointGPS(latitude, longitude, altitude, timeStamp));
 }

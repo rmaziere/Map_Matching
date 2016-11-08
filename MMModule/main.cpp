@@ -47,8 +47,8 @@ int main(int argc, char *argv[])
                         "Fichier .csv (*.csv);; Fichier .shp (*.shp)");
     }
 
-    Trace maTrace = Trace();
-    maTrace.readFromCSV(file);
+    Track maTrack = Track();
+    maTrack.readFromCSV(file);
 
     // Debut Conversion
 
@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
     
     //Instantiation de la fonction de sauvegarde d'un fichier en CSV
     Sauvegarde Test;
-    Test.sauvegarderCSV(file, maTrace);
+    Test.sauvegarderCSV(file, maTrack);
 
     return app.exec();
 }
