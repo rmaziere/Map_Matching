@@ -17,11 +17,20 @@ namespace {
     };
 
     TEST_F(PointGPSTest, Constructeurs) {
-        /*Track PointsGPS = PointGPS();
-        EXPECT_EQ(0, PointsGPS.m_latitude);
-        EXPECT_EQ(0, PointsGPS.m_longitude);
-        EXPECT_EQ(0, PointsGPS.m_timeStamp);
-        EXPECT_EQ(currentDateTime(), PointsGPS.m_timeStamp);*/
+
+        PointGPS pointgps_vide = PointGPS();
+        /*PointGPS pointgps = PointGPS(2455434, 474527452, 142, currentDateTime());
+
+        EXPECT_EQ(0, pointgps_vide.m_latitude);
+        EXPECT_EQ(0, pointgps_vide.m_longitude);
+        EXPECT_EQ(0, pointgps_vide.m_timeStamp);
+        EXPECT_EQ(currentDateTime(), pointgps_vide.m_timeStamp);
+
+        EXPECT_EQ(2455434, pointgps.m_latitude);
+        EXPECT_EQ(474527452, pointgps.m_longitude);
+        EXPECT_EQ(142, pointgps.m_timeStamp);
+        EXPECT_EQ(currentDateTime(), pointgps.m_timeStamp);
+        //*/
     }
 
 } // namespace
