@@ -3,7 +3,7 @@
 
 
 #include "../exception.h"
-#include "trace.h"
+#include "Track.h"
 #include "sauvegarde.h"
 using namespace std;
 void shp2csv(QString path)
