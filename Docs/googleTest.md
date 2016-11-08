@@ -200,4 +200,10 @@ EXPECT_FLOAT_EQ (expected, actual)
 EXPECT_DOUBLE_EQ (expected, actual) 
 EXPECT_NEAR (expected, actual, absolute_range)
 ```
+#### Les sorties 
+ASSERT_DEATH is simpler than ASSERT_EXIT; it just compares the error message in standard error with whatever is the user-expected message. 
+```cpp
+ASSERT_DEATH(statement, expected_message)
+ASSERT_EXIT (square-root(-22.0), ::testing::ExitedWithCode(-1), "Error: Negative Input");
+```
 
