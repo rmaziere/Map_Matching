@@ -6,6 +6,7 @@
 #include "myexception.h"
 #include "track.h"
 #include "sauvegarde.h"
+#include "file.h"
 
 using namespace std;
 
@@ -55,14 +56,8 @@ void shp2csv(QString path)
 
         cout << "Origine : " + orig << endl;
         cout << "Destination : " + dest << endl;
-
-        string shp2csv_comd = "ogr2ogr -f CSV " + dest + " " +  orig;
-
-        cout << "shp2csv_comd : " + shp2csv_comd << endl;
-
-        system(shp2csv_comd.c_str());
-        cout << "!!! Fin de fonction !!!" << endl;
 }
+
 
 int main(/*int argc, char *argv[]*/)
 {
@@ -106,6 +101,25 @@ int main(/*int argc, char *argv[]*/)
     Sauvegarde Test;
     Test.sauvegarderCSV(file, maTrack);
 
+    return app.exec();*/
+    /*
+    QApplication app(argc, argv);
+
+    File Test;
+    QString ext = "shp";
+
+    Test.selectFilesToOpen(argc, argv, ext);
+    Test.shp2csv();
+    Test.whereSave();
+
+    for (int i = 0; i < Test.filePath.size(); ++i){
+        QString tempFilePath = Test.filePath.at(i);
+        QString tempFileName = Test.fileName.at(i);
+        QString tempFileExtension = Test.fileExtension.at(i);
+        cout << tempFilePath.toStdString() << " - "
+             << tempFileName.toStdString() << " - "
+             << tempFileExtension.toStdString() << endl;
+    }
     return app.exec();*/
 }
 
