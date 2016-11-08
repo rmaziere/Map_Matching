@@ -13,12 +13,17 @@ SOURCES += main.cpp \
     sauvegarde.cpp \
     file.cpp \
     pointGPS.cpp \
-    track.cpp
+    track.cpp \
+    network.cpp \
+    point.cpp \
+    road.cpp
 
 HEADERS += \
     sauvegarde.h \
-    exception.h \
     file.h \
-    exception.h \
     track.h \
-    pointGPS.h
+    pointGPS.h \
+    myexception.h \
+    network.h \
+    point.h \
+    road.h
