@@ -8,7 +8,7 @@ int File::splitPath(QString fileGlobalPath){
     }else{
         QStringList splitter = fileGlobalPath.split(".");
 
-        QString pathWithoutExtension = splitter.at(0); //Path + fileName
+        QString pathWithoutExtension = splitter.at(0); //Path +  fileName
 
         QStringList splitter2 = pathWithoutExtension.split("/");
 

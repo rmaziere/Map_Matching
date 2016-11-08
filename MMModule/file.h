@@ -9,7 +9,7 @@
 #include <QFileDialog>
 #include <QTextStream>
 
-#include "../exception.h"
+#include "myexception.h"
 
 /**
  * @brief The File class
