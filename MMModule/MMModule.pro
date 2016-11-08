@@ -16,7 +16,9 @@ SOURCES += main.cpp \
     track.cpp \
     network.cpp \
     point.cpp \
-    road.cpp
+    road.cpp \
+    distance.cpp
+
 
 HEADERS += \
     sauvegarde.h \
@@ -27,4 +29,5 @@ HEADERS += \
     network.h \
     point.h \
     road.h \
-    myexception.h
+    myexception.h \
+    distance.h

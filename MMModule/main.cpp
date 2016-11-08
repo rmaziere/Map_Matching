@@ -1,64 +1,75 @@
 #include <QApplication>
 #include <QFileDialog>
-
+#include <vector>
+#include <math.h>
 
 #include "myexception.h"
 #include "track.h"
 #include "sauvegarde.h"
+#include "file.h"
+#include "distance.h"
+
 using namespace std;
-void shp2csv(QString path)
+
+
+
+/*void distance(int identifiantRoad, Point pt)
 {
-    // Récupération du nom du fichier
-        QStringList spliter2 = path.split(".");
-        QStringList spliter = path.split("/");
-        string filePath= spliter2.at(0).toStdString(); // Récupération du chemin du fichier
-        string fileName= spliter.at(spliter.size()-1).toStdString(); // Récupération du non du fichier avec extension
-
-        string dest = filePath + ".csv";
-        string orig = path.toStdString();
-
-        cout << "Origine : " + orig << endl;
-        cout << "Destination : " + dest << endl;
-
-        string shp2csv_comd = "ogr2ogr -f CSV " + dest + " " +  orig;
-
-        cout << "shp2csv_comd : " + shp2csv_comd << endl;
-
-        system(shp2csv_comd.c_str());
-        cout << "!!! Fin de fonction !!!" << endl;
-}
-
-int main(int argc, char *argv[])
-{
-    // Open the app
-    QApplication app(argc, argv);
-
-    // Set path to home Path
-    QString path = QDir::homePath();
-
-    // Select file
-    QString file;
-    while (file.isEmpty())
+    double distMin = 1000000;
+    // For each segment in road
+    Point A;
+    Point B;
+    A = road->listOfPoint{0};
+    for (int i = 1; i < listOfPoints.size(); i++)
     {
-        file = QFileDialog::getOpenFileName(
-                        NULL,
-                        "Select one or more files to open",
-                        path,
-                        "Fichier .csv (*.csv);; Fichier .shp (*.shp)");
+        B = road->listOfPoint{i}
+        d = distance2ptsegment(A,B,pt);
+        if (d < distMin)
+        {
+            distMin = d;
+        }
+        A = B;
     }
+    if (d <= 200)
+    {
+        return true;
+    }
+}*/
 
-    Track maTrack = Track();
-    maTrack.readFromCSV(file);
 
-    // Debut Conversion
 
-    shp2csv(file);
+int main(/*int argc, char *argv[]*/)
+{
+    Distance dist;
+    Point A(0,0);
+    Point B(0,10);
+    Point C(1,11);
 
-    // Fin Conversion
-    
-    //Instantiation de la fonction de sauvegarde d'un fichier en CSV
-    Sauvegarde Test;
-    Test.sauvegarderCSV(file, maTrack);
+    cout << dist.distance2ptsegment(A,B,C);
 
-    return app.exec();
+
+    //QApplication app(argc, argv);
+
+    //File Test;
+    //QString ext = "shp";
+
+    //Test.selectFilesToOpen(argc, argv, ext);
+    //Test.shp2csv();
+    /*Test.whereSave();
+    for (int i = 0; i < Test.filePath.size(); ++i){
+        QString tempFilePath = Test.filePath.at(i);
+        QString tempFileName = Test.fileName.at(i);
+        QString tempFileExtension = Test.fileExtension.at(i);
+        cout << tempFilePath.toStdString() << " - "
+             << tempFileName.toStdString() << " - "
+             << tempFileExtension.toStdString() << endl;
+    }*/
+    //return app.exec();
+
 }
+
+
+
+
+
+
