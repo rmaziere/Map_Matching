@@ -176,3 +176,28 @@ Décompresser l'archive téléchargée dans ce dossier :
 				}
 ```
 
+
+## Utilisation 
+ASSERT: Fails fast, aborting the current function.
+EXPECT: Continues after the failure
+
+### Les tests
+#### Les chaines de caractères
+```cpp
+EXPECT_STREQ("jump", functionSingulier("jumps"));
+```
+#### Les booléens
+```cpp
+ASSERT_TRUE(fp = fopen(path, "r"));
+```
+#### Les floatants
+```cpp
+ASSERT_FLOAT_EQ (expected, actual)
+ASSERT_DOUBLE_EQ (expected, actual) 
+ASSERT_NEAR (expected, actual, absolute_range)
+ 
+EXPECT_FLOAT_EQ (expected, actual)
+EXPECT_DOUBLE_EQ (expected, actual) 
+EXPECT_NEAR (expected, actual, absolute_range)
+```
+
