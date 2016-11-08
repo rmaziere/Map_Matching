@@ -32,14 +32,14 @@ double distance2ptsegment(std::vector<double> A,std::vector<double> B, std::vect
     }
 }
 
-void distance(int identifiantRoad, std::vector<double> pt)
+/*void distance(int identifiantRoad, std::vector<double> pt)
 {
     double distMin = 1000000;
     // For each segment in road
     // distance2ptsegment();
     //Remplissage.......
     distMin = double(identifiantRoad) + pt[0];
-}
+}*/
 
 
 void shp2csv(QString path)
