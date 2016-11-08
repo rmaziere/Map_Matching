@@ -17,9 +17,23 @@ using namespace std;
 {
     double distMin = 1000000;
     // For each segment in road
-    // distance2ptsegment();
-    //Remplissage.......
-    distMin = double(identifiantRoad) + pt[0];
+    std::vector<double> A(2);
+    std::vector<double> B(2);
+    A = road->listOfPoint{0};
+    for (int i = 1; i < listOfPoints.size(); i++)
+    {
+        B = road->listOfPoint{i}
+        d = distance2ptsegment(A,B,pt);
+        if (d < distMin)
+        {
+            distMin = d;
+        }
+        A = B;
+    }
+    if (d <= 200)
+    {
+        return d;
+    }
 }*/
 
 
