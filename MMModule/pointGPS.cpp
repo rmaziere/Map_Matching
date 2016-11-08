@@ -1,4 +1,4 @@
-#include "PointGPS.h"
+#include "pointGPS.h"
 
 PointGPS::PointGPS()
     : m_latitude(0)

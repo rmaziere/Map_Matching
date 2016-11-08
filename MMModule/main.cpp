@@ -2,8 +2,8 @@
 #include <QFileDialog>
 
 
-#include "../exception.h"
-#include "Track.h"
+#include "myexception.h"
+#include "track.h"
 #include "sauvegarde.h"
 using namespace std;
 void shp2csv(QString path)

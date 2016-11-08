@@ -1,4 +1,4 @@
-#include "Track.h"
+#include "track.h"
 
 //Utilisation du namespace std pour standard
 using namespace std;
@@ -61,7 +61,7 @@ void Track::readFromCSV(QString filename)
         //vector<string> text = split(value,',');
 
         // Parse header
-        for(uint i = 0; i < text.size(); ++i)
+        for(int i = 0; i < text.size(); ++i)
         {
             cout << "Colonne " << text[i].toStdString() << endl;
             if (text[i].contains(QString::fromStdString("lati"),Qt::CaseInsensitive))
@@ -126,7 +126,7 @@ void Track::readFromCSV(QString filename)
         {
             cout << "Read new point" << endl;
             QStringList text = stringConverted.split(",");
-            for(uint i = 0; i < text.size(); ++i)
+            for(int i = 0; i < text.size(); ++i)
             {
                 if (i == correspondance[0])
                 {

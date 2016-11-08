@@ -1,15 +1,15 @@
-#ifndef EXCEPTION_H
-#define EXCEPTION_H
+#ifndef MYEXCEPTION_H
+#define MYEXCEPTION_H
 
 #include <exception>
 
 using namespace std;
 
-class Erreur: public exception{
+class MyException: public exception{
 
 public:
 
-    Erreur(int numero=0, string const& phrase="", int niveau=0) throw()
+    MyException(int numero=0, string const& phrase="", int niveau=0) throw()
          :m_numero(numero),m_phrase(phrase),m_niveau(niveau){}
 
      virtual const char* what() const throw(){
@@ -20,7 +20,7 @@ public:
           return m_niveau;
      }
 
-    virtual ~Erreur() throw(){}
+    virtual ~MyException() throw(){}
 
 private:
     int m_numero;               //Numéro de l'erreur
@@ -28,4 +28,4 @@ private:
     int m_niveau;               //Niveau de l'erreur
 };
 
-#endif // EXCEPTION_H
+#endif // MYEXCEPTION_H

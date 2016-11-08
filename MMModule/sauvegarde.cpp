@@ -31,7 +31,7 @@ int Sauvegarde::sauvegarderCSV(QString cheminAcces,Track maTrack){
         QFile file(nom);
         // Si non ouvert (en mode écriture)
         if (!file.open(QIODevice::WriteOnly | QIODevice::Text)){
-            throw Erreur(1, "Impossible d'écrire le fichier", 2);
+            throw MyException(1, "Impossible d'écrire le fichier", 2);
         }
         else{
             cout << "Le fichier a été ouvert avec succès !" << endl;

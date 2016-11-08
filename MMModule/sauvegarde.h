@@ -7,8 +7,8 @@
 #include <QTextStream>
 
 
-#include "../exception.h"
-#include "Track.h"
+#include "myexception.h"
+#include "track.h"
 
 
 class Sauvegarde

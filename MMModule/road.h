@@ -1,11 +1,29 @@
 #ifndef ROAD_H
 #define ROAD_H
 
+#include <string>
+#include <vector>
+#include "point.h"
 
-class Road
-{
+using namespace std;
+
+class Road {
 public:
-    Road();
+    Road(string description){} // TODO
+
+    bool addPoint(double x, double y){ return true;} // TODO
+    bool addPoint(long id, double x, double y){ return true;} // TODO
+
+    Point *findPoint(long id){return NULL;} // TODO
+
+protected:
+    long id;
+    long fromNodeId;
+    long toNodeId;
+    bool twoWay;
+    float avgSpeed;
+    int noOfPoints;
+    vector<Point *> listOfPoints{0};
 };
 
 #endif // ROAD_H
