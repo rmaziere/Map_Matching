@@ -11,11 +11,14 @@ TEMPLATE = app
 
 SOURCES += main.cpp \
     sauvegarde.cpp \
-    PointGPS.cpp \
-    Track.cpp
+    file.cpp \
+    pointGPS.cpp \
+    track.cpp
 
 HEADERS += \
     sauvegarde.h \
-    ../exception.h \
-    PointGPS.h \
-    Track.h
+    exception.h \
+    file.h \
+    exception.h \
+    track.h \
+    pointGPS.h
