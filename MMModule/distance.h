@@ -4,11 +4,15 @@
 #include <vector>
 #include <math.h>
 
-class distance
+class Distance
 {
 public:
-    distance();
-    //double distance2pt(std::vector<double> pt1,std::vector<double> pt2);
+
+    Distance();
+
+    double distance2pt(std::vector<double> pt1,std::vector<double> pt2);
+
+    double distance2ptsegment(std::vector<double> A,std::vector<double> B, std::vector<double> pt);
 
 };
 
