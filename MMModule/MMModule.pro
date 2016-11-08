@@ -12,10 +12,12 @@ TEMPLATE = app
 SOURCES += main.cpp \
     pointTrace.cpp \
     trace.cpp \
-    sauvegarde.cpp
+    sauvegarde.cpp \
+    distance.cpp
 
 HEADERS += \
     pointTrace.h \
     trace.h \
     sauvegarde.h \
-    ../exception.h
+    ../exception.h \
+    distance.h
