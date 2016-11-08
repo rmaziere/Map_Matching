@@ -71,38 +71,8 @@ int main(/*int argc, char *argv[]*/)
     C[0] = 1;
     C[1] = 12;
     cout << distance2ptsegment(A,B,C);
-    /*// Open the app
-    QApplication app(argc, argv);
 
-    // Set path to home Path
-    QString path = QDir::homePath();
 
-    // Select file
-    QString file;
-    while (file.isEmpty())
-    {
-        file = QFileDialog::getOpenFileName(
-                        NULL,
-                        "Select one or more files to open",
-                        path,
-                        "Fichier .csv (*.csv);; Fichier .shp (*.shp)");
-    }
-
-    Track maTrack = Track();
-    maTrack.readFromCSV(file);
-
-    // Debut Conversion
-
-    shp2csv(file);
-
-    // Fin Conversion
-    
-    //Instantiation de la fonction de sauvegarde d'un fichier en CSV
-    Sauvegarde Test;
-    Test.sauvegarderCSV(file, maTrack);
-
-    return app.exec();*/
-    /*
     QApplication app(argc, argv);
 
     File Test;
@@ -110,8 +80,7 @@ int main(/*int argc, char *argv[]*/)
 
     Test.selectFilesToOpen(argc, argv, ext);
     Test.shp2csv();
-    Test.whereSave();
-
+    /*Test.whereSave();
     for (int i = 0; i < Test.filePath.size(); ++i){
         QString tempFilePath = Test.filePath.at(i);
         QString tempFileName = Test.fileName.at(i);
@@ -119,8 +88,9 @@ int main(/*int argc, char *argv[]*/)
         cout << tempFilePath.toStdString() << " - "
              << tempFileName.toStdString() << " - "
              << tempFileExtension.toStdString() << endl;
-    }
-    return app.exec();*/
+    }*/
+    return app.exec();
+
 }
 
 
