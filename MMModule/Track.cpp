@@ -1,15 +1,15 @@
-#include "trace.h"
+#include "Track.h"
 
 //Utilisation du namespace std pour standard
 using namespace std;
 
-Trace::Trace()
+Track::Track()
     : m_points(0)
 {
 
 }
 
-Trace::~Trace()
+Track::~Track()
 {
     for (uint i=0 ; i < m_points.size(); ++i)
     {
@@ -20,7 +20,7 @@ Trace::~Trace()
 }
 
 
-void Trace::readFromCSV(QString filename)
+void Track::readFromCSV(QString filename)
 {
     // WARNING : This function doesn't check the correct extension (trust the user who puts a csv-format file)
 
@@ -203,13 +203,13 @@ void Trace::readFromCSV(QString filename)
 
 
 
-vector<PointTrace*> Trace::getPoints()
+vector<PointGPS*> Track::getPoints()
 {
     return m_points;
 }
 
 
-void Trace::addPoint(float latitude, float longitude, float altitude, QDateTime timeStamp)
+void Track::addPoint(float latitude, float longitude, float altitude, QDateTime timeStamp)
 {
-    m_points.push_back(new PointTrace(latitude, longitude, altitude, timeStamp));
+    m_points.push_back(new PointGPS(latitude, longitude, altitude, timeStamp));
 }

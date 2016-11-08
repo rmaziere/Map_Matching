@@ -1,27 +1,27 @@
-#ifndef POINTTRACE_H
-#define POINTTRACE_H
+#ifndef POINTGPS_H
+#define POINTGPS_H
 
 #include <QObject>
 #include <QDateTime>
 
-class PointTrace
+class PointGPS
 {
     public:
         /**
-         * @brief PointTrace constructor
+         * @brief PointGPS constructor
          * Create a new Point Trace with default parameters :
          * latitude = 0
          * longitude = 0
          * altitude = 0
          * timeStamp = currentDate
          */
-        PointTrace();
+        PointGPS();
 
         /**
-         * @brief PointTrace constructor
-         * Create a new Point Trace
+         * @brief PointGPS constructor
+         * Create a new Point GPS
          */
-        PointTrace(float latitude, float longitude, float altitude, QDateTime timeStamp);
+        PointGPS(float latitude, float longitude, float altitude, QDateTime timeStamp);
 
         /**
          * @brief getLatitude Getter for m_latitude parameter
@@ -52,4 +52,4 @@ class PointTrace
         float m_altitude;
         QDateTime m_timeStamp;
 };
-#endif // POINTTRACE_H
+#endif // POINTGPS_H

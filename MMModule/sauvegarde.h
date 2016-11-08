@@ -8,7 +8,7 @@
 
 
 #include "../exception.h"
-#include "trace.h"
+#include "Track.h"
 
 
 class Sauvegarde
@@ -24,7 +24,7 @@ public:
      * @param cheminAcces
      * @param maTrace
      */
-    int sauvegarderCSV(QString cheminAcces, Trace maTrace);
+    int sauvegarderCSV(QString cheminAcces, Track maTrace);
 
     //Destructeur
     virtual ~Sauvegarde();

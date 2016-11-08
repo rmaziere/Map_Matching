@@ -1,6 +1,6 @@
-#include "pointTrace.h"
+#include "PointGPS.h"
 
-PointTrace::PointTrace()
+PointGPS::PointGPS()
     : m_latitude(0)
     , m_longitude(0)
     , m_altitude(0)
@@ -10,7 +10,7 @@ PointTrace::PointTrace()
 }
 
 
-PointTrace::PointTrace(float latitude, float longitude, float altitude, QDateTime timeStamp)
+PointGPS::PointGPS(float latitude, float longitude, float altitude, QDateTime timeStamp)
     : m_latitude(latitude)
     , m_longitude(longitude)
     , m_altitude(altitude)
@@ -19,22 +19,22 @@ PointTrace::PointTrace(float latitude, float longitude, float altitude, QDateTim
 
 }
 
-float PointTrace::getLatitude()
+float PointGPS::getLatitude()
 {
     return m_latitude;
 }
 
-float PointTrace::getLongitude()
+float PointGPS::getLongitude()
 {
     return m_longitude;
 }
 
-float PointTrace::getAltitude()
+float PointGPS::getAltitude()
 {
     return m_altitude;
 }
 
-QDateTime PointTrace::getTimeStamp()
+QDateTime PointGPS::getTimeStamp()
 {
     return m_timeStamp;
 }
