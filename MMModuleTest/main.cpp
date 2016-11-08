@@ -2,6 +2,8 @@
 #include "gtest/gtest.h"
 
 #include "pointtest.h"
+#include "tracktest.h"
+#include "pointgpstest.h"
 
 using namespace std;
 

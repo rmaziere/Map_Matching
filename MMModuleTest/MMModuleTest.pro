@@ -24,4 +24,6 @@ HEADERS += \
     ../MMModule/pointGPS.h \
     ../MMModule/road.h \
     ../MMModule/sauvegarde.h \
-    ../MMModule/track.h
+    ../MMModule/track.h \
+    tracktest.h \
+    pointgpstest.h

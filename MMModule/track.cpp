@@ -19,7 +19,6 @@ Track::~Track()
     // it calls destructors for the objects it holds.
 }
 
-
 void Track::readFromCSV(QString filename)
 {
     // WARNING : This function doesn't check the correct extension (trust the user who puts a csv-format file)
@@ -201,15 +200,16 @@ void Track::readFromCSV(QString filename)
     cout << "Le fichier " << filename.toStdString() << " a été lu."<< endl;
 }
 
-
-
 vector<PointGPS*> Track::getPoints()
 {
     return m_points;
 }
 
-
-void Track::addPoint(float latitude, float longitude, float altitude, QDateTime timeStamp)
+void Track::addPoint(double latitude, double longitude, double altitude, QDateTime timeStamp)
 {
     m_points.push_back(new PointGPS(latitude, longitude, altitude, timeStamp));
+}
+
+void Track::delPointGPS(vector<PointGPS*> pointsGPS){
+    pointsGPS.erase(pointsGPS.begin());
 }

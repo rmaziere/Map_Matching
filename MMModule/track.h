@@ -29,7 +29,15 @@ public:
      * @return The vector of points pointer
      */
     std::vector<PointGPS*> getPoints();
-private:
+
+    /**
+     * @brief delPointGPS deletes a occurence
+     * @param pointer the pointer of the occurrence to delete
+     * @return nothing
+     */
+    void delPointGPS(std::vector<PointGPS*> pointsGPS);
+
+//private:
     /**
      * @brief addPoint Creates a new point and inserts it in m_points
      * @param latitude the latitude of the inserted point
@@ -37,7 +45,7 @@ private:
      * @param altitude the altitude of the inserted point
      * @param timeStamp the timeStamp of the inserted point
      */
-    void addPoint(float latitude, float longitude, float altitude, QDateTime timeStamp);
+    void addPoint(double latitude, double longitude, double altitude, QDateTime timeStamp);
     /**
      * @brief m_points Vector where points of the Track are saved
      */

@@ -46,6 +46,7 @@ class PointGPS
          * @return QDateTime the timeStamp
          */
         QDateTime getTimeStamp();
+
     private:
         float m_latitude;
         float m_longitude;
