@@ -30,7 +30,7 @@ Road::~Road()
 
 double Road::distanceTo(Point pt)
 {
-    double distMin = 1000000;
+    double distMin = 1000000; // TODO !!!
     // For each segment in road
     for (int i = 1; i < this->noOfPoints; i++)
     {

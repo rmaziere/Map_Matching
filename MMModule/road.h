@@ -10,7 +10,7 @@ using namespace std;
 class Road {
 public:
     Road(string description){} // TODO
-    Road(vector<vector<double> > listOfCoordinates, long edgeId, long fromNodeId, long toNodeId); // TODO
+    Road(vector<vector<double> > listOfCoordinates, long edgeId, long fromNodeId, long toNodeId);
     Road(vector<Point> listOfPoints);
 
     virtual ~Road();
@@ -28,8 +28,8 @@ protected:
     long m_edgeId;
     long m_fromNodeId;
     long m_toNodeId;
-    bool twoWay;
-    float avgSpeed;
+    //bool twoWay;
+    //float avgSpeed;
     int noOfPoints;
     vector<Point *> listOfPoints{0};
 };
