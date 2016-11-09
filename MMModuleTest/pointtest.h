@@ -1,8 +1,10 @@
 #ifndef POINTTEST_H
 #define POINTTEST_H
+
 #include "gtest/gtest.h"
 
 namespace {
+
 #include "../MMModule/point.h"
 
 

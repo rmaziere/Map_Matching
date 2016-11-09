@@ -1,6 +1,8 @@
 #ifndef POINTGPSTEST_H
 #define POINTGPSTEST_H
 
+#include <QDateTime>
+
 #include "gtest/gtest.h"
 
 namespace {
@@ -18,18 +20,19 @@ namespace {
 
     TEST_F(PointGPSTest, Constructeurs) {
 
+        /*QDateTime TimeDate = currentDateTime();
         PointGPS pointgps_vide = PointGPS();
-        /*PointGPS pointgps = PointGPS(2455434, 474527452, 142, currentDateTime());
+        PointGPS pointgps = PointGPS(2455434, 474527452, 142, TimeDate);
 
-        EXPECT_EQ(0, pointgps_vide.m_latitude);
-        EXPECT_EQ(0, pointgps_vide.m_longitude);
-        EXPECT_EQ(0, pointgps_vide.m_timeStamp);
-        EXPECT_EQ(currentDateTime(), pointgps_vide.m_timeStamp);
+        EXPECT_EQ(0, pointgps_vide.getLatitude());
+        EXPECT_EQ(0, pointgps_vide.getLongitude());
+        EXPECT_EQ(0, pointgps_vide.getAltitude());
+        EXPECT_EQ(TimeDate, pointgps_vide.getTimeStamp());
 
-        EXPECT_EQ(2455434, pointgps.m_latitude);
-        EXPECT_EQ(474527452, pointgps.m_longitude);
-        EXPECT_EQ(142, pointgps.m_timeStamp);
-        EXPECT_EQ(currentDateTime(), pointgps.m_timeStamp);
+        EXPECT_EQ(2455434, pointgps.getLatitude());
+        EXPECT_EQ(474527452, pointgps.getLongitude());
+        EXPECT_EQ(142, pointgps.getAltitude());
+        EXPECT_EQ(TimeDate, pointgps.getTimeStamp());
         //*/
     }
 
