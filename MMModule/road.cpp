@@ -28,7 +28,7 @@ Road::~Road()
     // it calls destructors for the objects it holds.
 }
 
-double Road::distance(Point pt)
+double Road::distanceTo(Point pt)
 {
     double distMin = 1000000;
     // For each segment in road
