@@ -33,13 +33,15 @@ void Track::readFromCSV(QString filename)
     string value; // Save the value of the line
     QString stringConverted;
 
-    vector<int> correspondance(5); // Correpondance between the header and the parser :
+    vector<int> correspondance(7); // Correpondance between the header and the parser :
     // correspondance :
-    //  0 : # latitude column
-    //  1 : # longitude column
-    //  2 : # altitude column
-    //  3 : # date column
-    //  4 : # hour column
+    //  0 : # x
+    //  1 : # y
+    //  2 : # latitude column
+    //  3 : # longitude column
+    //  4 : # altitude column
+    //  5 : # date column
+    //  6 : # time column
     for(uint i = 0; i < correspondance.size(); ++i)
     {
         correspondance[i]=-1;
@@ -63,30 +65,38 @@ void Track::readFromCSV(QString filename)
         for(int i = 0; i < text.size(); ++i)
         {
             cout << "Colonne " << text[i].toStdString() << endl;
-            if (text[i].contains(QString::fromStdString("lati"),Qt::CaseInsensitive))
+            if (text[i].contains(QString::fromStdString("X"),Qt::CaseInsensitive))
             {
                 correspondance[0]=i;
-                cout << "LATITUDE DETECTED at colonne : " << i << endl;
-            }
-            else if (text[i].contains(QString::fromStdString("longi"),Qt::CaseInsensitive))
+                cout << "X DETECTED at colonne : " << i << endl;
+            }else if (text[i].contains(QString::fromStdString("Y"),Qt::CaseInsensitive))
             {
                 correspondance[1]=i;
-                cout << "LONGITUDE DETECTED at colonne : " << i << endl;
-            }
-            else if (text[i].contains(QString::fromStdString("alti"),Qt::CaseInsensitive))
+                cout << "Y DETECTED at colonne : " << i << endl;
+            }else if (text[i].contains(QString::fromStdString("Lati"),Qt::CaseInsensitive))
             {
                 correspondance[2]=i;
-                cout << "ALTITUDE DETECTED at colonne : " << i << endl;
+                cout << "LATITUDE DETECTED at colonne : " << i << endl;
             }
-            else if (text[i].contains(QString::fromStdString("date"),Qt::CaseInsensitive))
+            else if (text[i].contains(QString::fromStdString("Longi"),Qt::CaseInsensitive))
             {
                 correspondance[3]=i;
-                cout << "DATE DETECTED at colonne : " << i << endl;
+                cout << "LONGITUDE DETECTED at colonne : " << i << endl;
             }
-            else if (text[i].contains(QString::fromStdString("heure"),Qt::CaseInsensitive))
+            else if (text[i].contains(QString::fromStdString("Alti"),Qt::CaseInsensitive))
             {
                 correspondance[4]=i;
-                cout << "HEURE DETECTED at colonne : " << i << endl;
+                cout << "ALTITUDE DETECTED at colonne : " << i << endl;
+            }
+            else if (text[i].contains(QString::fromStdString("Date"),Qt::CaseInsensitive))
+            {
+                correspondance[5]=i;
+                cout << "DATE DETECTED at colonne : " << i << endl;
+            }
+            else if (text[i].contains(QString::fromStdString("Time"),Qt::CaseInsensitive))
+            {
+                correspondance[6]=i;
+                cout << "Time DETECTED at colonne : " << i << endl;
             }
             else
             {
@@ -105,11 +115,14 @@ void Track::readFromCSV(QString filename)
 
 
     // Parse the file
+    double x(0), y(0);
     float latitude(0), longitude(0), altitude(0);
     QDateTime timeStamp(QDateTime::currentDateTime());
     while ( file.good() )
     {
         // Reinitialize variables (default values)
+        x=0;
+        y=0;
         latitude=0;
         longitude=0;
         altitude=0;
@@ -129,13 +142,27 @@ void Track::readFromCSV(QString filename)
             {
                 if (i == correspondance[0])
                 {
+                    // Traitement X
+                    // Read x from file
+                    x = text[i].toFloat();
+
+                    cout << "X : " << latitude << " ";
+                }else if (i == correspondance[1])
+                {
+                    // Traitement Y
+                    // Read y from file
+                    y = text[i].toFloat();
+
+                    cout << "Y : " << latitude << " ";
+                }else if (i == correspondance[2])
+                {
                     // Traitement Latitude
                     // Read latitude from file
                     latitude = text[i].toFloat();
 
                     cout << "Latitude : " << latitude << " ";
                 }
-                else if (i == correspondance[1])
+                else if (i == correspondance[3])
                 {
                     // Traitement Longitude
                     // Read longitude from file
@@ -143,7 +170,7 @@ void Track::readFromCSV(QString filename)
 
                     cout << "Longitude : " << longitude << " ";
                 }
-                else if (i == correspondance[2])
+                else if (i == correspondance[4])
                 {
                     // Traitement Altitude
                     // Read altitude from file
@@ -151,7 +178,22 @@ void Track::readFromCSV(QString filename)
 
                     cout << "Altitude : " << altitude << " ";
                 }
-                else if (i == correspondance[3] && correspondance[4]==-1)
+                else if (i == correspondance[5])
+                {
+                    // Traitement Date
+                    // Read date from file
+                    specificDate[0]=text[i];
+
+                }
+                else if (i == correspondance[6])
+                {
+                    // Traitement Time
+                    // Read time from file
+                    specificDate[1]=text[i];
+
+                }
+                /*
+                else if (i == correspondance[5] && correspondance[6]==-1)
                 {
                     // Traitement Date
                     // Read timeStamp from file
@@ -167,29 +209,37 @@ void Track::readFromCSV(QString filename)
                         cout << "Time : " << timeStamp.toString("hh:mm:ss").toStdString();
                     }
                 }
-                else if (correspondance[4]!=-1)
+                else if (correspondance[6]!=-1)
                 {
-                    if (i==correspondance[3])
+                    if (i==correspondance[5])
                     {
                         // Traitement Date
                         specificDate[0]=text[i];
                     }
-                    else if (i==correspondance[4])
+                    else if (i==correspondance[6])
                     {
                         // Traitement Hours
                         specificDate[1]=text[i];
                     }
                 }
+            */
             }
-            if (correspondance[4]!=-1) // if there are two columns for date and hours
+
+            if((specificDate[0].size()==19) && (specificDate[1].size()==0)) timeStamp = QDateTime::fromString(specificDate[0]+specificDate[1],"yyyy-MM-dd hh:mm:ss");
+            else if((specificDate[0].size()==11) && (specificDate[1].size()==0)) timeStamp = QDateTime::fromString(specificDate[0],"yyyy-MM-dd");
+            else if((specificDate[0].size()==0) && (specificDate[1].size()==8)) timeStamp = QDateTime::fromString(specificDate[1],"hh:mm:ss");
+            else QDateTime::fromString(specificDate[0]+specificDate[1],"yyyy-MM-dd hh:mm:ss");
+           /* if (correspondance[6]!=-1) // if there are two columns for date and hours
             {
-                timeStamp = QDateTime::fromString(specificDate[0]+specificDate[1],"yyyy/MM/ddhh:mm:ssa");
+                if(specificDate[.size()==11)
+                    timeStamp = QDateTime::fromString(specificDate[0]+specificDate[1],"yyyy-MM-dd");
+                else timeStamp = QDateTime::fromString(specificDate[0]+specificDate[1],"yyyy/MM/ddhh:mm:ssa");
                 cout << "Date time : " << timeStamp.toString().toStdString();
-            }
+            }*/
 
             cout << endl;
             // Add the read point
-            addPoint(latitude, longitude, altitude, timeStamp);
+            addPoint(x, y, latitude, longitude, altitude, timeStamp);
         }
         else{
             cout << "Ligne ignorée" << endl;
@@ -205,9 +255,9 @@ vector<PointGPS*> Track::getPoints()
     return m_points;
 }
 
-void Track::addPoint(double latitude, double longitude, double altitude, QDateTime timeStamp)
+void Track::addPoint(double x, double y, float latitude, float longitude, float altitude, QDateTime timeStamp)
 {
-    m_points.push_back(new PointGPS(latitude, longitude, altitude, timeStamp));
+    m_points.push_back(new PointGPS(x, y, latitude, longitude, altitude, timeStamp));
 }
 
 void Track::delPointGPS(vector<PointGPS*> pointsGPS){
