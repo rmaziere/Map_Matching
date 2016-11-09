@@ -192,50 +192,13 @@ void Track::readFromCSV(QString filename)
                     specificDate[1]=text[i];
 
                 }
-                /*
-                else if (i == correspondance[5] && correspondance[6]==-1)
-                {
-                    // Traitement Date
-                    // Read timeStamp from file
-                    // If complete timestamp with date & time
-                    if(text[i].length() == 19){
-                        timeStamp = QDateTime::fromString(text[i],"yyyy-MM-dd hh:mm:ss");
 
-                        cout << "Date time : " << timeStamp.toString().toStdString();
-                    // If uncomplete timestamp with time & without date
-                    }else if(text[i].length() == 8){
-                        timeStamp = QDateTime::fromString(text[i],"hh:mm:ss");
-
-                        cout << "Time : " << timeStamp.toString("hh:mm:ss").toStdString();
-                    }
-                }
-                else if (correspondance[6]!=-1)
-                {
-                    if (i==correspondance[5])
-                    {
-                        // Traitement Date
-                        specificDate[0]=text[i];
-                    }
-                    else if (i==correspondance[6])
-                    {
-                        // Traitement Hours
-                        specificDate[1]=text[i];
-                    }
-                }
-            */
             }
 
             if((specificDate[0].size()==19) && (specificDate[1].size()==0)) timeStamp = QDateTime::fromString(specificDate[0]+specificDate[1],"yyyy-MM-dd hh:mm:ss");
             else if((specificDate[0].size()==11) && (specificDate[1].size()==0)) timeStamp = QDateTime::fromString(specificDate[0],"yyyy-MM-dd");
             else if((specificDate[0].size()==0) && (specificDate[1].size()==8)) timeStamp = QDateTime::fromString(specificDate[1],"hh:mm:ss");
             else QDateTime::fromString(specificDate[0]+specificDate[1],"yyyy-MM-dd hh:mm:ss");
-           /* if (correspondance[6]!=-1) // if there are two columns for date and hours
-            {
-                if(specificDate[.size()==11)
-                    timeStamp = QDateTime::fromString(specificDate[0]+specificDate[1],"yyyy-MM-dd");
-                else timeStamp = QDateTime::fromString(specificDate[0]+specificDate[1],"yyyy/MM/ddhh:mm:ssa");
-                cout << "Date time : " << timeStamp.toString().toStdString();
-            }*/
 
             cout << endl;
             // Add the read point
