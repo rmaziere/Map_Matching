@@ -35,7 +35,7 @@ public:
      * @param pointer the pointer of the occurrence to delete
      * @return nothing
      */
-    void delPointGPS(std::vector<PointGPS*> pointsGPS);
+    void delPointGPS(int occurrence);
 
 //private:
     /**
@@ -45,7 +45,7 @@ public:
      * @param altitude the altitude of the inserted point
      * @param timeStamp the timeStamp of the inserted point
      */
-    void addPoint(double latitude, double longitude, double altitude, QDateTime timeStamp);
+    void addPoint(double x, double y, float latitude, float longitude, float altitude, QDateTime timeStamp);
     /**
      * @brief m_points Vector where points of the Track are saved
      */

@@ -1,14 +1,14 @@
-#ifndef NETWORK_H
-#define NETWORK_H
+#ifndef GRID_H
+#define GRID_H
 
 #include "road.h"
 #include <QString>
 #include <vector>
 using namespace std;
-class Network {
+class grid {
 public:
-    Network();
-    virtual ~Network();
+    grid();
+    virtual ~grid();
     /**
      * @brief readFromCSV Reads a csv file and inserts info into the corresponding attributs
      * @param filename the filepath/filename for the csv file to read
@@ -24,4 +24,4 @@ public:
 
 };
 
-#endif // NETWORK_H
+#endif // GRID_H

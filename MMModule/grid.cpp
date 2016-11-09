@@ -1,4 +1,4 @@
-#include "network.h"
+#include "grid.h"
 #include <QString>
 #include <QStringList>
 #include <fstream>
@@ -7,16 +7,15 @@
 #include <vector>
 
 
-
 using namespace std;
 
-Network::Network():
+grid::grid():
     m_road(0)
 {
 
 }
 
-Network::~Network()
+grid::~grid()
 {
     for (uint i=0 ; i < m_road.size(); ++i)
     {
@@ -26,7 +25,7 @@ Network::~Network()
     // it calls destructors for the objects it holds.
 }
 
-void Network::readFromCSV(QString filename)
+void grid::readFromCSV(QString filename)
 {
     // Declare file stream
     ifstream file(filename.toStdString().c_str()); // c_str() http://stackoverflow.com/questions/32332/why-dont-the-stdfstream-classes-take-a-stdstring
@@ -175,7 +174,7 @@ void Network::readFromCSV(QString filename)
     }
 }
 
-void Network::addRoad(vector<vector<double> > listOfCoordinates, long edgeId, long fromNodeId, long toNodeId)
+void grid::addRoad(vector<vector<double> > listOfCoordinates, long edgeId, long fromNodeId, long toNodeId)
 {
     m_road.push_back(new Road(listOfCoordinates, edgeId, fromNodeId, toNodeId));
 }

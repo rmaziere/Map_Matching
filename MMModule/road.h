@@ -16,13 +16,16 @@ public:
     virtual ~Road();
 
 
-    bool addPoint(double x, double y){ return true;} // TODO
+    bool addPoint(double x, double y);
     bool addPoint(long id, double x, double y){ return true;} // TODO
     bool addPoint(Point){ return true;} // TODO
 
     Point *findPoint(long id){return NULL;} // TODO
 
     double distanceTo(Point);
+
+
+    vector<Point *> getListOfPoints() const;
 
 protected:
     long m_edgeId;
@@ -31,7 +34,7 @@ protected:
     //bool twoWay;
     //float avgSpeed;
     int noOfPoints;
-    vector<Point *> listOfPoints{0};
+    vector<Point *> listOfPoints;
 };
 
 #endif // ROAD_H

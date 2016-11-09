@@ -1,9 +1,9 @@
 #ifndef POINTTEST_H
 #define POINTTEST_H
+
 #include "gtest/gtest.h"
 #include "math.h"
 #include "../MMModule/point.h"
-
 
 class PointTest : public ::testing::Test {
 protected:
@@ -34,6 +34,11 @@ TEST_F(PointTest, samePoint) {
     EXPECT_TRUE(p0.samePointAs(p1));
     EXPECT_FALSE(p0.samePointAs(p2)==true);
 
+    /*Point A(0,0);
+    Point B(0,10);
+    Point C(1,11);
+    EXPECT_EQ(1.41421,C.distance2ptsegment(A,B));
+    EXPECT_EQ(10,A.distance2pt(B));*/
 }
 
 TEST_F(PointTest, distanceToPoint) {
