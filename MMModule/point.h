@@ -27,8 +27,10 @@ public:
      */
     double distance2ptsegment(Point A, Point B);
 
+
     long m_id;  // id when this point is an extremity of a road (-1 otherwise)
     double m_x, m_y; // coordinates in metric system
+
 };
 
 #endif // POINT_H
