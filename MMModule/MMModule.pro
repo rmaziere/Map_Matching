@@ -19,7 +19,6 @@ SOURCES += main.cpp \
     network.cpp \
     point.cpp \
     road.cpp \
-    distance.cpp \
     solver.cpp
 
 
@@ -33,5 +32,5 @@ HEADERS += \
     point.h \
     road.h \
     myexception.h \
-    distance.h \
     solver.h
+

@@ -1,5 +1,6 @@
 #include "pointGPS.h"
 
+
 PointGPS::PointGPS()
     : Point(0.0,0.0)
     , m_latitude(0)
