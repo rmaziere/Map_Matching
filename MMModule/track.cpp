@@ -144,14 +144,14 @@ void Track::readFromCSV(QString filename)
                 {
                     // Traitement X
                     // Read x from file
-                    x = text[i].toFloat();
+                    x = text[i].toDouble();
 
                     cout << "X : " << latitude << " ";
                 }else if (i == correspondance[1])
                 {
                     // Traitement Y
                     // Read y from file
-                    y = text[i].toFloat();
+                    y = text[i].toDouble();
 
                     cout << "Y : " << latitude << " ";
                 }else if (i == correspondance[2])
@@ -221,6 +221,11 @@ vector<PointGPS*> Track::getPoints()
 void Track::addPoint(double x, double y, float latitude, float longitude, float altitude, QDateTime timeStamp)
 {
     m_points.push_back(new PointGPS(x, y, latitude, longitude, altitude, timeStamp));
+}
+
+void Track::addPoint(float latitude, float longitude, float altitude, QDateTime timeStamp)
+{
+    m_points.push_back(new PointGPS(latitude, longitude, altitude, timeStamp));
 }
 
 void Track::delPointGPS(int occurrence){

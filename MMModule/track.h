@@ -46,6 +46,15 @@ public:
      * @param timeStamp the timeStamp of the inserted point
      */
     void addPoint(double x, double y, float latitude, float longitude, float altitude, QDateTime timeStamp);
+
+    /**
+     * @brief addPoint Creates a new point and inserts it in m_points
+     * @param latitude the latitude of the inserted point
+     * @param longitude the longitude of the inserted point
+     * @param altitude the altitude of the inserted point
+     * @param timeStamp the timeStamp of the inserted point
+     */
+    void addPoint(float latitude, float longitude, float altitude, QDateTime timeStamp);
     /**
      * @brief m_points Vector where points of the Track are saved
      */

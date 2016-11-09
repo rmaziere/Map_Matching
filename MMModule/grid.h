@@ -19,8 +19,7 @@ public:
      * @brief addRoad Creates a new road and inserts it in m_road
      */
     void addRoad(vector<vector<double> > listOfCoordinates, long edgeId, long fromNodeId, long toNodeId);
-
-    vector<Road*> m_road;
+    std::vector<Road *> road() const;
 
 };
 

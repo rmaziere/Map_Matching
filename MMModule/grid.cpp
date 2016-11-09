@@ -174,6 +174,11 @@ void grid::readFromCSV(QString filename)
     }
 }
 
+std::vector<Road *> grid::road() const
+{
+    return m_road;
+}
+
 void grid::addRoad(vector<vector<double> > listOfCoordinates, long edgeId, long fromNodeId, long toNodeId)
 {
     m_road.push_back(new Road(listOfCoordinates, edgeId, fromNodeId, toNodeId));

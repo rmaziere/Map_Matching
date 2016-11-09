@@ -26,4 +26,5 @@ HEADERS += \
     tracktest.h \
     pointgpstest.h \
     roadtest.h \
-    networktest.h
+    gridtest.h
+
