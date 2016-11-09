@@ -174,7 +174,7 @@ void grid::readFromCSV(QString filename)
     }
 }
 
-std::vector<Road *> grid::road() const
+std::vector<Road *> grid::getListOfRoad() const
 {
     return m_road;
 }
