@@ -3,7 +3,6 @@
 
 #include "gtest/gtest.h"
 
-namespace {
 #include "../MMModule/track.h"
 
     class TrackTest : public ::testing::Test {
@@ -26,7 +25,5 @@ namespace {
         EXPECT_EQ(125, VecteurPointsGPS.m_points.m_altitude);
         EXPECT_EQ(dateTime.currentDateTime(), VecteurPointsGPS.m_points.m_timeStamp);*/
     }
-
-} // namespace
 
 #endif // TRACKTEST_H
