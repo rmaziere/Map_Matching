@@ -9,55 +9,15 @@
 #include "sauvegarde.h"
 #include "file.h"
 #include "distance.h"
+#include "network.h"
 
 using namespace std;
 
 int main(/*int argc, char *argv[]*/)
 {
-    Point A(0,0);
-    Point B(0,10);
-    Point C(1,11);
-
-    cout << C.distance2ptsegment(A,B);
-
-    //*********PointsGPS**********
-    Track Trace = Track();
-
-    for (uint i=0 ; i < Trace.getPoints().size(); ++i){
-        cout << Trace.getPoints()[i]->getLatitude() << ",\n"
-            << Trace.getPoints()[i]->getLongitude() << ",\n"
-            << Trace.getPoints()[i]->getAltitude() << ",\n"
-            << Trace.getPoints()[i]->getTimeStamp().toString("yyyy-MM-dd hh:mm:ss")
-            << "\n" << endl;
-    }
-
-    Trace.~Track();
-
-    for (uint i=0 ; i < Trace.getPoints().size(); ++i){
-        cout << Trace.getPoints()[i]->getLatitude() << ",\n"
-            << Trace.getPoints()[i]->getLongitude() << ",\n"
-            << Trace.getPoints()[i]->getAltitude() << ",\n"
-            << Trace.getPoints()[i]->getTimeStamp().toString("yyyy-MM-dd hh:mm:ss")
-            << "\n" << endl;
-    }
-
-    int j = 0;
-    int z = 0;
-    for(int i=0; i<10; i++){
-        Trace.addPoint(i, j, z, currentDateTime());
-        j++;
-        z++;
-    }
-    Trace.delPointGPS(Trace.getPoints()[5]);
-
-    for (uint i=0 ; i < Trace.getPoints().size(); ++i){
-        cout << Trace.getPoints()[i]->getLatitude() << ",\n"
-            << Trace.getPoints()[i]->getLongitude() << ",\n"
-            << Trace.getPoints()[i]->getAltitude() << ",\n"
-            << Trace.getPoints()[i]->getTimeStamp().toString("yyyy-MM-dd hh:mm:ss")
-            << "\n" << endl;
-    }
-    //*********PointsGPS**********
+    Network myNetwork;
+    myNetwork.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
+    cout << myNetwork.m_road.size() << endl;
 
     //QApplication app(argc, argv);
 
