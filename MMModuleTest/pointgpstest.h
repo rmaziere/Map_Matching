@@ -31,7 +31,6 @@ TEST_F(PointGPSTest, Constructeurs) {
     EXPECT_EQ(474527452, pointgps.getLongitude());
     EXPECT_EQ(142, pointgps.getAltitude());
     EXPECT_EQ(currentDateTime(), pointgps.getTimeStamp());
-    //*/
 }
 
 
