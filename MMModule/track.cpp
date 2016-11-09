@@ -13,7 +13,7 @@ Track::~Track()
 {
     for (uint i=0 ; i < m_points.size(); ++i)
     {
-        delete[] m_points[i];
+        delete m_points[i];
     }
     m_points.clear(); //vector::clear() does not free memory allocated by the vector to store objects;
     // it calls destructors for the objects it holds.

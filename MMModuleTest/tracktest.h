@@ -29,7 +29,7 @@ TEST_F(TrackTest, Constructeurs) {
     EXPECT_EQ(QDateTime::currentDateTime(), Trace1.getPoints()[0]->getTimeStamp());
     EXPECT_EQ(1, Trace1.getPoints().size());
 
-    Trace1.~Track();
+    //Trace1.~Track();
 
 }
 
@@ -53,7 +53,7 @@ TEST_F(TrackTest, Suppression) {
     EXPECT_EQ(QDateTime::currentDateTime(), Trace2.getPoints()[5]->getTimeStamp());
     EXPECT_EQ(9, Trace2.getPoints().size());
 
-    Trace2.~Track();
+    //Trace2.~Track();
 
 }
 
