@@ -60,5 +60,6 @@ class PointGPS : public Point
         float m_longitude;
         float m_altitude;
         QDateTime m_timeStamp;
+        long m_ts;
 };
 #endif // POINTGPS_H
