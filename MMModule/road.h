@@ -16,6 +16,8 @@ public:
 
     Point *findPoint(long id){return NULL;} // TODO
 
+    double distanceTo(Point);
+
 protected:
     long id;
     long fromNodeId;

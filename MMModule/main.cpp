@@ -14,13 +14,6 @@ using namespace std;
 
 int main(/*int argc, char *argv[]*/)
 {
-    Point A(0,0);
-    Point B(0,10);
-    Point C(1,11);
-
-    cout << C.distance2ptsegment(A,B);
-
-
     //QApplication app(argc, argv);
 
     //File Test;
