@@ -28,6 +28,13 @@ Road::~Road()
     // it calls destructors for the objects it holds.
 }
 
+bool Road::addPoint(double x, double y){
+
+
+    listOfPoints.push_back(new Point(x, y));
+    return true;
+}
+
 double Road::distanceTo(Point pt)
 {
     double distMin = 1000000;
@@ -41,4 +48,9 @@ double Road::distanceTo(Point pt)
         }
     }
     return distMin;
+}
+
+vector<Point *> Road::getListOfPoints() const
+{
+    return listOfPoints;
 }

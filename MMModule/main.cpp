@@ -19,6 +19,12 @@ int main(/*int argc, char *argv[]*/)
     myNetwork.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
     cout << myNetwork.m_road.size() << endl;
 
+    for (size_t i=0; i< myNetwork.m_road.size(); ++i)
+    {
+        cout << myNetwork.m_road[i]->getListOfPoints().size()<< endl;
+        cout << myNetwork.m_road[i]->getListOfPoints()[0]->m_x << endl;
+    }
+
     //QApplication app(argc, argv);
 
     //File Test;
