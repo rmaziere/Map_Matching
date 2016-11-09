@@ -5,7 +5,6 @@ CONFIG -= app_bundle
 LIBS += -lgtest -lpthread
 
 SOURCES += main.cpp \
-    ../MMModule/conversionshp2csv.cpp \
     ../MMModule/file.cpp \
     ../MMModule/network.cpp \
     ../MMModule/point.cpp \
@@ -16,7 +15,6 @@ SOURCES += main.cpp \
 
 HEADERS += \
     pointtest.h \
-    ../MMModule/conversionshp2csv.h \
     ../MMModule/file.h \
     ../MMModule/myexception.h \
     ../MMModule/network.h \
