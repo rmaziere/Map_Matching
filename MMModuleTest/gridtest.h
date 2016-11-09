@@ -1,9 +1,8 @@
 #ifndef GRIDTEST_H
 #define GRIDTEST_H
 
-#include "gtest/gtest.h"
 #include "../MMModule/grid.h"
-
+#include "gtest/gtest.h"
 
 class GridTest : public ::testing::Test {
 protected:
@@ -37,11 +36,6 @@ TEST_F(GridTest, LoadPointsFromFile)
 
     EXPECT_DOUBLE_EQ(1534446.378026439808309, myGrid.m_road[0]->getListOfPoints()[0]->m_x);
     EXPECT_DOUBLE_EQ(330422.365724511211738, myGrid.m_road[0]->getListOfPoints()[0]->m_y);
-
 }
-
-
-
-
 
 #endif // GRIDTEST_H
