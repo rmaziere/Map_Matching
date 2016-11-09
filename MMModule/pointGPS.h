@@ -4,7 +4,9 @@
 #include <QObject>
 #include <QDateTime>
 
-class PointGPS
+#include "point.h"
+
+class PointGPS : public Point
 {
     public:
         /**
@@ -22,6 +24,12 @@ class PointGPS
          * Create a new Point GPS
          */
         PointGPS(float latitude, float longitude, float altitude, QDateTime timeStamp);
+
+        /**
+         * @brief PointGPS constructor
+         * Create a new Point GPS
+         */
+        PointGPS(double x, double y, float latitude, float longitude, float altitude, QDateTime timeStamp);
 
         /**
          * @brief getLatitude Getter for m_latitude parameter
