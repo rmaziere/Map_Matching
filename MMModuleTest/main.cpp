@@ -4,7 +4,7 @@
 #include "pointtest.h"
 #include "tracktest.h"
 #include "pointgpstest.h"
-#include "networktest.h"
+#include "gridtest.h"
 
 using namespace std;
 

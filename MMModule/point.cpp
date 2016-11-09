@@ -25,4 +25,34 @@ double Point::distance2ptsegment(Point A,Point B) {
     }
 }
 
+double Point::y() const
+{
+    return m_y;
+}
+
+void Point::setY(double y)
+{
+    m_y = y;
+}
+
+long Point::id() const
+{
+    return m_id;
+}
+
+void Point::setId(long id)
+{
+    m_id = id;
+}
+
+double Point::x() const
+{
+    return m_x;
+}
+
+void Point::setX(double x)
+{
+    m_x = x;
+}
+
 

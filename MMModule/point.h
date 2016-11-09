@@ -27,6 +27,12 @@ public:
      */
     double distance2ptsegment(Point A, Point B);
 
+    double x() const;
+    void setX(double x);
+    double y() const;
+    void setY(double y);
+    long id() const;
+    void setId(long id);
 
     long m_id;  // id when this point is an extremity of a road (-1 otherwise)
     double m_x, m_y; // coordinates in metric system
