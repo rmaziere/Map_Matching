@@ -22,11 +22,12 @@ TEST_F(TrackTest, Constructeurs) {
     Track Trace1 = Track();
     EXPECT_EQ(0, Trace1.getPoints().size());
 
-    Trace1.addPoint(1321546, 3546843521, 125, QDateTime::currentDateTime());
+    QDateTime timeStamp = QDateTime::currentDateTime();
+    Trace1.addPoint(1321546, 3546843521, 125, timeStamp);
     EXPECT_EQ(1321546, Trace1.getPoints()[0]->getLatitude());
     EXPECT_EQ(3546843521, Trace1.getPoints()[0]->getLongitude());
     EXPECT_EQ(125, Trace1.getPoints()[0]->getAltitude());
-    EXPECT_EQ(QDateTime::currentDateTime(), Trace1.getPoints()[0]->getTimeStamp());
+    EXPECT_EQ(timeStamp, Trace1.getPoints()[0]->getTimeStamp());
     EXPECT_EQ(1, Trace1.getPoints().size());
 
     //Trace1.~Track();

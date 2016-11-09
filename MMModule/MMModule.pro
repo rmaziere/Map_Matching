@@ -16,10 +16,10 @@ SOURCES += main.cpp \
     file.cpp \
     pointGPS.cpp \
     track.cpp \
-    network.cpp \
     point.cpp \
     road.cpp \
-    solver.cpp
+    solver.cpp \
+    grid.cpp
 
 
 HEADERS += \
@@ -28,9 +28,9 @@ HEADERS += \
     track.h \
     pointGPS.h \
     myexception.h \
-    network.h \
     point.h \
     road.h \
     myexception.h \
-    solver.h
+    solver.h \
+    grid.h
 

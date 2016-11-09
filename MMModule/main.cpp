@@ -9,15 +9,21 @@
 #include "sauvegarde.h"
 #include "file.h"
 #include "distance.h"
-#include "network.h"
+#include "grid.h"
 
 using namespace std;
 
 int main(/*int argc, char *argv[]*/)
 {
-    Network myNetwork;
+    grid myNetwork;
     myNetwork.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
     cout << myNetwork.m_road.size() << endl;
+
+    for (size_t i=0; i< myNetwork.m_road.size(); ++i)
+    {
+        cout << myNetwork.m_road[i]->getListOfPoints().size()<< endl;
+        cout << myNetwork.m_road[i]->getListOfPoints()[0]->m_x << endl;
+    }
 
     //QApplication app(argc, argv);
 
