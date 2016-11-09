@@ -9,13 +9,13 @@
 #include "sauvegarde.h"
 #include "file.h"
 #include "distance.h"
-#include "network.h"
+#include "grid.h"
 
 using namespace std;
 
 int main(/*int argc, char *argv[]*/)
 {
-    Network myNetwork;
+    grid myNetwork;
     myNetwork.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
     cout << myNetwork.m_road.size() << endl;
 
