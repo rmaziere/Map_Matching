@@ -57,5 +57,15 @@ TEST_F(TrackTest, Suppression) {
     //Trace2.~Track();
 
 }
+TEST_F(TrackTest, readFromCSV) {
+
+    Track Trace3 = Track();
+    Trace3.readFromCSV("../Data/Unit_tests_data_set/readFromCsvExemple.csv");
+    EXPECT_DOUBLE_EQ(1686462.894975865026936, Trace3.m_points[0]->m_x);
+    EXPECT_DOUBLE_EQ(246133.881616829748964, Trace3.m_points[0]->m_y);
+    EXPECT_FLOAT_EQ(47.6675,Trace3.m_points[1]->getLatitude());
+    EXPECT_FLOAT_EQ(0, Trace3.m_points[1]->getAltitude());
+
+}
 
 #endif // TRACKTEST_H

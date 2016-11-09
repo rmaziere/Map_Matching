@@ -144,14 +144,14 @@ void Track::readFromCSV(QString filename)
                 {
                     // Traitement X
                     // Read x from file
-                    x = text[i].toFloat();
+                    x = text[i].toDouble();
 
                     cout << "X : " << latitude << " ";
                 }else if (i == correspondance[1])
                 {
                     // Traitement Y
                     // Read y from file
-                    y = text[i].toFloat();
+                    y = text[i].toDouble();
 
                     cout << "Y : " << latitude << " ";
                 }else if (i == correspondance[2])
