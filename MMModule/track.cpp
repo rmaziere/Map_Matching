@@ -223,6 +223,11 @@ void Track::addPoint(double x, double y, float latitude, float longitude, float 
     m_points.push_back(new PointGPS(x, y, latitude, longitude, altitude, timeStamp));
 }
 
+void Track::addPoint(float latitude, float longitude, float altitude, QDateTime timeStamp)
+{
+    m_points.push_back(new PointGPS(latitude, longitude, altitude, timeStamp));
+}
+
 void Track::delPointGPS(int occurrence){
     m_points.erase(m_points.begin()+occurrence);
 }
