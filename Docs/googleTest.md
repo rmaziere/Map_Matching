@@ -190,7 +190,7 @@ EXPECT_STREQ("jump", functionSingulier("jumps"));
 ```cpp
 ASSERT_TRUE(fp = fopen(path, "r"));
 ```
-#### Les floatants
+#### Les flottants
 ```cpp
 ASSERT_FLOAT_EQ (expected, actual)
 ASSERT_DOUBLE_EQ (expected, actual) 

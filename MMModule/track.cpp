@@ -13,7 +13,7 @@ Track::~Track()
 {
     for (uint i=0 ; i < m_points.size(); ++i)
     {
-        delete[] m_points[i];
+        delete m_points[i];
     }
     m_points.clear(); //vector::clear() does not free memory allocated by the vector to store objects;
     // it calls destructors for the objects it holds.
@@ -260,6 +260,6 @@ void Track::addPoint(double x, double y, float latitude, float longitude, float 
     m_points.push_back(new PointGPS(x, y, latitude, longitude, altitude, timeStamp));
 }
 
-void Track::delPointGPS(vector<PointGPS*> pointsGPS){
-    pointsGPS.erase(pointsGPS.begin());
+void Track::delPointGPS(int occurrence){
+    m_points.erase(m_points.begin()+occurrence);
 }
