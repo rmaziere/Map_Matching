@@ -210,6 +210,6 @@ void Track::addPoint(double latitude, double longitude, double altitude, QDateTi
     m_points.push_back(new PointGPS(latitude, longitude, altitude, timeStamp));
 }
 
-void Track::delPointGPS(vector<PointGPS*> pointsGPS){
-    pointsGPS.erase(pointsGPS.begin());
+void Track::delPointGPS(int occurrence){
+    m_points.erase(m_points.begin()+occurrence);
 }

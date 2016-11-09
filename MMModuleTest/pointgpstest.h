@@ -23,14 +23,14 @@ TEST_F(PointGPSTest, Constructeurs) {
     EXPECT_EQ(0, pointgps_zero.getLatitude());
     EXPECT_EQ(0, pointgps_zero.getLongitude());
     EXPECT_EQ(0, pointgps_zero.getAltitude());
-    EXPECT_EQ(currentDateTime(), pointgps_zero.getTimeStamp());
+    EXPECT_EQ(QDateTime::currentDateTime(), pointgps_zero.getTimeStamp());
 
-    PointGPS pointgps = PointGPS(2455434, 474527452, 142, currentDateTime());
+    PointGPS pointgps = PointGPS(2455434, 474527452, 142, QDateTime::currentDateTime());
 
     EXPECT_EQ(2455434, pointgps.getLatitude());
     EXPECT_EQ(474527452, pointgps.getLongitude());
     EXPECT_EQ(142, pointgps.getAltitude());
-    EXPECT_EQ(currentDateTime(), pointgps.getTimeStamp());
+    EXPECT_EQ(QDateTime::currentDateTime(), pointgps.getTimeStamp());
 }
 
 

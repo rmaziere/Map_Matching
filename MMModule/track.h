@@ -35,7 +35,7 @@ public:
      * @param pointer the pointer of the occurrence to delete
      * @return nothing
      */
-    void delPointGPS(std::vector<PointGPS*> pointsGPS);
+    void delPointGPS(int occurrence);
 
 //private:
     /**
