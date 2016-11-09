@@ -3,7 +3,6 @@
 
 #include "gtest/gtest.h"
 
-namespace {
 #include "../MMModule/pointGPS.h"
 
     class PointGPSTest : public ::testing::Test {
@@ -33,6 +32,5 @@ namespace {
         //*/
     }
 
-} // namespace
 
 #endif // POINTGPSTEST_H

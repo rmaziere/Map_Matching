@@ -8,45 +8,17 @@
 #include "sauvegarde.h"
 #include "file.h"
 #include "distance.h"
+#include "network.h"
 
 using namespace std;
 
 
-
-/*void distance(int identifiantRoad, Point pt)
-{
-    double distMin = 1000000;
-    // For each segment in road
-    Point A;
-    Point B;
-    A = road->listOfPoint{0};
-    for (int i = 1; i < listOfPoints.size(); i++)
-    {
-        B = road->listOfPoint{i}
-        d = distance2ptsegment(A,B,pt);
-        if (d < distMin)
-        {
-            distMin = d;
-        }
-        A = B;
-    }
-    if (d <= 200)
-    {
-        return true;
-    }
-}*/
-
-
-
 int main(/*int argc, char *argv[]*/)
 {
-    Distance dist;
-    Point A(0,0);
-    Point B(0,10);
-    Point C(1,11);
 
-    cout << dist.distance2ptsegment(A,B,C);
-
+    Network myNetwork;
+    myNetwork.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
+    cout << myNetwork.m_road.size() << endl;
 
     //QApplication app(argc, argv);
 

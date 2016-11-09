@@ -1,5 +1,6 @@
 #include "road.h"
 
+
 Road::Road(vector<vector<double> > listOfCoordinates, long edgeId, long fromNodeId, long toNodeId):
     m_edgeId(edgeId),
     m_fromNodeId(fromNodeId),
@@ -25,4 +26,19 @@ Road::~Road()
     }
     listOfPoints.clear(); //vector::clear() does not free memory allocated by the vector to store objects;
     // it calls destructors for the objects it holds.
+}
+
+double Road::distance(Point pt)
+{
+    double distMin = 1000000;
+    // For each segment in road
+    for (int i = 1; i < this->noOfPoints; i++)
+    {
+        double d = pt.distance2ptsegment(*this->listOfPoints[i-1],*this->listOfPoints[i]);
+        if (d < distMin)
+        {
+            distMin = d;
+        }
+    }
+    return distMin;
 }

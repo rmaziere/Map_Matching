@@ -22,6 +22,8 @@ public:
 
     Point *findPoint(long id){return NULL;} // TODO
 
+    double distance(Point pt);
+
 protected:
     long m_edgeId;
     long m_fromNodeId;

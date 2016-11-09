@@ -3,6 +3,8 @@ QT += gui
 
 CONFIG += c++11
 
+QMAKE_CXXFLAGS += -std=c++11
+
 TARGET = sandbox
 CONFIG -= console
 CONFIG -= app_bundle
@@ -17,7 +19,7 @@ SOURCES += main.cpp \
     network.cpp \
     point.cpp \
     road.cpp \
-    distance.cpp
+    solver.cpp
 
 
 HEADERS += \
@@ -30,4 +32,5 @@ HEADERS += \
     point.h \
     road.h \
     myexception.h \
-    distance.h
+    solver.h
+

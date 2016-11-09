@@ -96,7 +96,7 @@ Probabilité initiale affectée à chaque état. La somme des probabilités = 1.
 
 Pour chaque état, on affecte une probabilité de passer à un état suivant. S'il y a N états, on a alors N transitions pour chaque état (la somme est 1.0). Cela donne une matrice NxN (*Markov matrix*).
 
->Il faut pouvoir calculer les probabilités de transition entre routes. Une transition est possible quand deux segments partagent un point en commun (à priori, par forcément le premier ou le dernier - cas du branchement).  
+>Il faut pouvoir calculer les probabilités de transition entre routes. Une transition est possible quand deux segments partagent un point en commun.  
 
 >Il faut décider si l'on gère le sens de parcours (donnée présentent dans le jeu de test, mais pas forcément sur nos tests).
 
@@ -146,11 +146,10 @@ double: 8 octets (64 bits)
 float: 4 octets
 ```
 
-- Réseau : `2000x5x2x8= 1600ko`
+- Réseau : `20000x5x2x8= 16000ko`
 - Trace : `1000x4x8=32ko`
-- Matrice de Markov : `2000x2000x4= 16Mo`
-- Matrice des émissions : `1000x1000x4= 4Mo`
-- Réseau de Markov : `5!x5x1000=600Mo`
+- Matrice de Markov : `20000x20000x4= 1600Mo`
+- Matrice des émissions : `1000x20000x4= 80Mo`
 
 ## Description des classes
 
