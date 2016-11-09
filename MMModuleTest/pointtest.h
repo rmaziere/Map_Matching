@@ -34,15 +34,11 @@ TEST_F(PointTest, samePoint) {
     EXPECT_TRUE(p0.samePointAs(p1));
     EXPECT_FALSE(p0.samePointAs(p2)==true);
 
-<<<<<<< HEAD
-    Point A(0,0);
+    /*Point A(0,0);
     Point B(0,10);
     Point C(1,11);
-    //EXPECT_EQ(1.41421,C.distance2ptsegment(A,B));
-    //EXPECT_EQ(10,A.distance2pt(B));
-}
-
-=======
+    EXPECT_EQ(1.41421,C.distance2ptsegment(A,B));
+    EXPECT_EQ(10,A.distance2pt(B));*/
 }
 
 TEST_F(PointTest, distanceToPoint) {
@@ -74,5 +70,4 @@ TEST_F(PointTest, distanceToSegment) {
 
 }
 
->>>>>>> 299afe1edd974a248d66937496cca9e6d698562b
 #endif // POINTTEST_H
