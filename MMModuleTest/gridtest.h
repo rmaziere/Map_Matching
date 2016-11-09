@@ -1,5 +1,5 @@
-#ifndef NETWORKTEST_H
-#define NETWORKTEST_H
+#ifndef GRIDTEST_H
+#define GRIDTEST_H
 
 #include "gtest/gtest.h"
 #include "../MMModule/grid.h"
@@ -44,4 +44,4 @@ TEST_F(GridTest, LoadPointsFromFile)
 
 
 
-#endif // NETWORKTEST_H
+#endif // GRIDTEST_H
