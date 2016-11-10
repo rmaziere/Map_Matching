@@ -47,7 +47,7 @@ TEST_F(TrackTest, DeletePoint)
     int j = 0;
     int z = 0;
     for (int i = 0; i < 10; i++) {
-        Trace2.addPoint(i, j, z, QDateTime::currentDateTime());
+        Trace.addPoint(i, j, z, QDateTime::currentDateTime());
         j++;
         z++;
     }
@@ -77,16 +77,10 @@ TEST_F(TrackTest, includingRectangle)
     for (int i = 4; i < 11; i++) {
         Trace.includingRectangle(i, i+2);
     }
-<<<<<<< HEAD
     EXPECT_EQ(4, Trace5.m_xmin);
     EXPECT_EQ(10, Trace5.m_xmax);
     EXPECT_EQ(6, Trace5.m_ymin);
     EXPECT_EQ(12, Trace5.m_ymax);
-=======
-    EXPECT_EQ(4, Trace.xmin);
-    EXPECT_EQ(10, Trace.xmax);
-    EXPECT_EQ(6, Trace.ymin);
-    EXPECT_EQ(12, Trace.ymax);
 }
 
 TEST_F(TrackTest, spaceFilter)
@@ -95,10 +89,13 @@ TEST_F(TrackTest, spaceFilter)
     Track Trace = Track();
 }
 
+/*
 TEST_F(TrackTest, temporalFilter)
 {
-
     Track Trace = Track();
->>>>>>> 44689e7da3fcceb05558ab607270ab99c969c81b
-}
+    for (int i=0; i){
+        Trace.addPoint(1321546, 3546843521, 125, timeStamp);
+    }
+}*/
+
 #endif // TRACKTEST_H
