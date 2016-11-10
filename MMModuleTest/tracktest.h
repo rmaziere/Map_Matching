@@ -73,21 +73,69 @@ TEST_F(TrackTest, readFromCSV)
 TEST_F(TrackTest, includingRectangle)
 {
 
-    Track Trace = Track();
+    Track Trace5 = Track();
     for (int i = 4; i < 11; i++) {
-        Trace.includingRectangle(i, i+2);
+        Trace5.includingRectangle(i, i+2);
     }
-    EXPECT_EQ(4, Trace.xmin);
-    EXPECT_EQ(10, Trace.xmax);
-    EXPECT_EQ(6, Trace.ymin);
-    EXPECT_EQ(12, Trace.ymax);
+    EXPECT_EQ(4, Trace5.m_xmin);
+    EXPECT_EQ(10, Trace5.m_xmax);
+    EXPECT_EQ(6, Trace5.m_ymin);
+    EXPECT_EQ(12, Trace5.m_ymax);
 }
 
-TEST_F(TrackTest, spaceFilter)
+TEST_F(TrackTest, spaceFilterY)
 {
 
     Track Trace = Track();
+    Trace.addPoint(0,0,0,0,0,QDateTime::currentDateTime());
+    Trace.addPoint(0,1,0,0,0,QDateTime::currentDateTime());
+    Trace.addPoint(0,2,0,0,0,QDateTime::currentDateTime());
+    Trace.addPoint(0,3,0,0,0,QDateTime::currentDateTime());
+    Trace.addPoint(0,4,0,0,0,QDateTime::currentDateTime());
+    Trace.addPoint(0,5,0,0,0,QDateTime::currentDateTime());
+    Trace.spaceFilter(2);
+
+    EXPECT_EQ(3, Trace.getPoints().size());
+    EXPECT_EQ(0, Trace.getPoints()[0]->y());
+    EXPECT_EQ(2, Trace.getPoints()[1]->y());
+    EXPECT_EQ(4, Trace.getPoints()[2]->y());
 }
+TEST_F(TrackTest, spaceFilterX)
+    {
+    Track Trace = Track();
+    Trace.addPoint(0,0,0,0,0,QDateTime::currentDateTime());
+    Trace.addPoint(1,0,0,0,0,QDateTime::currentDateTime());
+    Trace.addPoint(2,0,0,0,0,QDateTime::currentDateTime());
+    Trace.addPoint(3,0,0,0,0,QDateTime::currentDateTime());
+    Trace.addPoint(4,0,0,0,0,QDateTime::currentDateTime());
+    Trace.addPoint(5,0,0,0,0,QDateTime::currentDateTime());
+    Trace.spaceFilter(2);
+
+    EXPECT_EQ(3, Trace.getPoints().size());
+    EXPECT_EQ(0, Trace.getPoints()[0]->x());
+    EXPECT_EQ(2, Trace.getPoints()[1]->x());
+    EXPECT_EQ(4, Trace.getPoints()[2]->x());
+}
+
+TEST_F(TrackTest, spaceFilterXY)
+    {
+    Track Trace = Track();
+    Trace.addPoint(0,0,0,0,0,QDateTime::currentDateTime());
+    Trace.addPoint(2,0,0,0,0,QDateTime::currentDateTime());
+    Trace.addPoint(2,2,0,0,0,QDateTime::currentDateTime());
+    Trace.addPoint(2,4,0,0,0,QDateTime::currentDateTime());
+    Trace.addPoint(4,4,0,0,0,QDateTime::currentDateTime());
+    Trace.addPoint(6,4,0,0,0,QDateTime::currentDateTime());
+    Trace.spaceFilter(4);
+    EXPECT_EQ(3, Trace.getPoints().size());
+    cout << Trace.getPoints()[1]->x() << endl;
+
+    cout << Trace.getPoints()[1]->y() << endl;
+    EXPECT_TRUE(Trace.getPoints()[0]->x()==0 && Trace.getPoints()[0]->y()==0);
+    EXPECT_TRUE(Trace.getPoints()[1]->x()==2 && Trace.getPoints()[1]->y()==4);
+    EXPECT_TRUE(Trace.getPoints()[2]->x()==6 && Trace.getPoints()[2]->y()==4);
+}
+
 
 TEST_F(TrackTest, temporalFilter)
 {
