@@ -32,9 +32,14 @@ public:
     /**
      * @brief delPointGPS deletes a occurence
      * @param pointer the pointer of the occurrence to delete
-     * @return nothing
      */
     void delPointGPS(int occurrence);
+
+    /**
+     * @brief spaceFilter delete points in function of the interval input
+     * @param interval minimal wished between two points
+     */
+    void spaceFilter(double interval);
 
     //private:
     /**
@@ -58,6 +63,11 @@ public:
      * @brief m_points Vector where points of the Track are saved
      */
     std::vector<PointGPS*> m_points;
+
+    /**
+     * @brief temporalFiltering
+     */
+    void temporalFilter(int interval);
 
     void includingRectangle(double x, double y);
 

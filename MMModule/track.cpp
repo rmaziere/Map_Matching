@@ -1,6 +1,10 @@
 #include "track.h"
+<<<<<<< HEAD
 #include <limits>
 
+=======
+#include <QLocale>
+>>>>>>> 44689e7da3fcceb05558ab607270ab99c969c81b
 //Utilisation du namespace std pour standard
 using namespace std;
 
@@ -93,7 +97,7 @@ void Track::readFromCSV(QString filename)
 
     // Display the correspondance table
     cout << "BEGIN CORRESPONDANCE" << endl;
-    for (int i = 0; i < correspondance.size(); ++i) {
+    for (uint i = 0; i < correspondance.size(); ++i) {
         cout << correspondance[i] << endl;
     }
     cout << "END CORRESPONDANCE" << endl;
@@ -126,57 +130,61 @@ void Track::readFromCSV(QString filename)
                     // Read x from file
                     x = text[i].toDouble();
 
-                    cout << "X : " << latitude << " ";
+                    cout << " X : " << x << " ";
                 } else if (i == correspondance[1]) {
                     // Traitement Y
                     // Read y from file
                     y = text[i].toDouble();
 
-                    cout << "Y : " << latitude << " ";
+                    cout << " Y : " << y << " ";
                 } else if (i == correspondance[2]) {
                     // Traitement Latitude
                     // Read latitude from file
                     latitude = text[i].toFloat();
 
-                    cout << "Latitude : " << latitude << " ";
+                    cout << " Latitude : " << latitude << " ";
                 } else if (i == correspondance[3]) {
                     // Traitement Longitude
                     // Read longitude from file
                     longitude = text[i].toFloat();
 
-                    cout << "Longitude : " << longitude << " ";
+                    cout << " Longitude : " << longitude << " ";
                 } else if (i == correspondance[4]) {
                     // Traitement Altitude
                     // Read altitude from file
                     altitude = text[i].toFloat();
 
-                    cout << "Altitude : " << altitude << " ";
+                    cout << " Altitude : " << altitude << " ";
                 } else if (i == correspondance[5]) {
                     // Traitement Date
                     // Read date from file
                     specificDate[0] = text[i];
+                    cout << " Date : " << specificDate[0].toStdString();
 
                 } else if (i == correspondance[6]) {
                     // Traitement Time
                     // Read time from file
                     specificDate[1] = text[i];
+                    cout << " Time : " << specificDate[1].toStdString();
                 }
             }
-
             if ((specificDate[0].size() == 19) && (specificDate[1].size() == 0))
-                timeStamp = QDateTime::fromString(specificDate[0] + specificDate[1], "yyyy-MM-dd hh:mm:ss");
+                timeStamp = QDateTime::fromString(specificDate[0], "yyyy-MM-dd hh:mm:ss");
             else if ((specificDate[0].size() == 11) && (specificDate[1].size() == 0))
                 timeStamp = QDateTime::fromString(specificDate[0], "yyyy-MM-dd");
             else if ((specificDate[0].size() == 0) && (specificDate[1].size() == 8))
                 timeStamp = QDateTime::fromString(specificDate[1], "hh:mm:ss");
-            else
-                QDateTime::fromString(specificDate[0] + specificDate[1], "yyyy-MM-dd hh:mm:ss");
-
+            else if ((specificDate[0].size() == 11) && (specificDate[1].size() == 8)) {
+                // Attention : si les mois sont enregistres avec "Jan",
+                // il faut passer en langue anglaise/americaine
+                // Sinon timeStamp est vide... et c'est embetant
+                QLocale locale(QLocale::English, QLocale::UnitedStates);
+                timeStamp = locale.toDateTime((specificDate[0] + specificDate[1]), "dd'-'MMM'-'yyyyhh':'mm':'ss");
+            }
+            cout << "timestamp : " << timeStamp.toString("yyyy-MM-dd hh:mm:ss").toStdString();
             cout << endl;
             // Add the read point
             addPoint(x, y, latitude, longitude, altitude, timeStamp);
-            // Evaluate the footprint
-            includingRectangle(x,y);
         } else {
             cout << "Ligne ignorée" << endl;
             continue;
@@ -201,6 +209,40 @@ void Track::addPoint(float latitude, float longitude, float altitude, QDateTime 
     m_points.push_back(new PointGPS(latitude, longitude, altitude, timeStamp));
 }
 
+void Track::temporalFilter(int interval)
+{
+    PointGPS* pointPrecedent;
+
+    bool firstElement(true);
+    for (vector<PointGPS*>::iterator b = m_points.begin(); b != m_points.end();) {
+        if (firstElement) {
+            pointPrecedent = *b;
+            firstElement = false;
+            ++b;
+        } else {
+            if ((*b)->getTimeStamp().toTime_t() - pointPrecedent->getTimeStamp().toTime_t() <= interval) {
+                b = m_points.erase(b); // reseat iterator to a valid value post-erase
+                cout << "point supprimé" << endl;
+            } else {
+                pointPrecedent = *b;
+                ++b;
+            }
+        }
+    }
+}
+
+void Track::spaceFilter(double interval)
+{
+    for (uint i = 0; i < m_points.size(); i++) { // on parcourt la liste des points
+        // tant qu on ne se trouve pas sur le dernier point
+        //&& (security segmentation)
+        // tant que l interval est inferieure a la distance au point suivant
+        while (i != m_points.size() - 1 && interval > m_points[i]->distance2pt(*m_points[i + 1])) {
+            this->delPointGPS(i + 1); // on supprime le point suivant
+        }
+    }
+}
+
 void Track::delPointGPS(int occurrence)
 {
     m_points.erase(m_points.begin() + occurrence);
@@ -208,8 +250,15 @@ void Track::delPointGPS(int occurrence)
 
 void Track::includingRectangle(double x, double y)
 {
+<<<<<<< HEAD
     m_xmin = std::min(m_xmin,x);
     m_xmax = std::max(m_xmax,x);
     m_ymin = std::min(m_ymin,y);
     m_ymax = std::max(m_ymax,y);
+=======
+    xmin = std::min(xmin, x);
+    xmax = std::max(xmax, x);
+    ymin = std::min(ymin, y);
+    ymax = std::max(ymax, y);
+>>>>>>> 44689e7da3fcceb05558ab607270ab99c969c81b
 }

@@ -13,7 +13,9 @@
 
 using namespace std;
 
-/*void dev_area() {
+
+/*
+void dev_area() {
     Track track;
     track.readFromCSV();
     grid g;
@@ -21,13 +23,9 @@ using namespace std;
     g.readFromCSV();
 
 }*/
+/*
+void dev_network() {
 
-
-int main(/*int argc, char *argv[]*/)
-{
-    //dev_area();
-
-    /*
     grid myNetwork;
     myNetwork.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
     cout << myNetwork.m_road.size() << endl;
@@ -36,7 +34,12 @@ int main(/*int argc, char *argv[]*/)
         cout << myNetwork.m_road[i]->getListOfPoints().size() << endl;
         cout << myNetwork.m_road[i]->getListOfPoints()[0]->m_x << endl;
     }
+}
 */
+/*
+void dev_openFile() {
+
+
     //QApplication app(argc, argv);
 
     //File Test;
@@ -44,7 +47,7 @@ int main(/*int argc, char *argv[]*/)
 
     //Test.selectFilesToOpen(argc, argv, ext);
     //Test.shp2csv();
-    /*Test.whereSave();
+    Test.whereSave();
     for (int i = 0; i < Test.filePath.size(); ++i){
         QString tempFilePath = Test.filePath.at(i);
         QString tempFileName = Test.fileName.at(i);
@@ -52,6 +55,12 @@ int main(/*int argc, char *argv[]*/)
         cout << tempFilePath.toStdString() << " - "
              << tempFileName.toStdString() << " - "
              << tempFileExtension.toStdString() << endl;
-    }*/
+    }
     //return app.exec();
+}
+*/
+
+int main(/*int argc, char *argv[]*/)
+{
+    //dev_network();
 }
