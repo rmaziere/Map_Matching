@@ -136,13 +136,35 @@ TEST_F(TrackTest, spaceFilterXY)
     EXPECT_TRUE(Trace.getPoints()[2]->x()==6 && Trace.getPoints()[2]->y()==4);
 }
 
-/*
+
 TEST_F(TrackTest, temporalFilter)
 {
-    Track Trace = Track();
-    for (int i=0; i){
-        Trace.addPoint(1321546, 3546843521, 125, timeStamp);
-    }
-}*/
 
+    Track Trace = Track();
+    QDateTime time = QDateTime::fromString("2016-12-24 12:00:02", "yyyy-MM-dd hh:mm:ss");
+    for (int i=0; i<10000; i++){
+        Trace.addPoint(i ,i, i, i, i, time.addSecs(i));
+    }
+    int taille_init = Trace.getPoints().size();
+    Trace.temporalFilter(10);
+    int taille_fin = Trace.getPoints().size();
+    cout << taille_fin << endl;
+
+    /*cout << Trace.getPoints()[0]->x() << endl;
+    cout << Trace.getPoints()[1]->x() << endl;
+    cout << Trace.getPoints()[2]->x() << endl;
+    cout << Trace.getPoints()[3]->x() << endl;*/
+
+    EXPECT_GT(taille_init, taille_fin);
+
+    int j = 0;
+    for (int i=0; i<taille_fin; i ++){
+        EXPECT_EQ(j, Trace.getPoints()[i]->x());
+        EXPECT_EQ(j, Trace.getPoints()[i]->y());
+        EXPECT_EQ(j, Trace.getPoints()[i]->getLatitude());
+        EXPECT_EQ(j, Trace.getPoints()[i]->getLongitude());
+        EXPECT_EQ(j, Trace.getPoints()[i]->getAltitude());
+        j += 11;
+    }
+}
 #endif // TRACKTEST_H
