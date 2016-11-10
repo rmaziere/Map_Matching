@@ -20,6 +20,11 @@ public:
     {
     } // used for a point in a road
 
+    /**
+     * @brief samePointAs Compare two points
+     * @param p Point to compare
+     * @return True or False
+     */
     bool samePointAs(Point p);
 
     /**

@@ -73,14 +73,14 @@ TEST_F(TrackTest, readFromCSV)
 TEST_F(TrackTest, includingRectangle)
 {
 
-    Track Trace = Track();
+    Track Trace5 = Track();
     for (int i = 4; i < 11; i++) {
-        Trace.includingRectangle(i, i+2);
+        Trace5.includingRectangle(i, i+2);
     }
-    EXPECT_EQ(4, Trace.xmin);
-    EXPECT_EQ(10, Trace.xmax);
-    EXPECT_EQ(6, Trace.ymin);
-    EXPECT_EQ(12, Trace.ymax);
+    EXPECT_EQ(4, Trace5.m_xmin);
+    EXPECT_EQ(10, Trace5.m_xmax);
+    EXPECT_EQ(6, Trace5.m_ymin);
+    EXPECT_EQ(12, Trace5.m_ymax);
 }
 
 TEST_F(TrackTest, spaceFilterY)
@@ -136,9 +136,13 @@ TEST_F(TrackTest, spaceFilterXY)
     EXPECT_TRUE(Trace.getPoints()[2]->x()==6 && Trace.getPoints()[2]->y()==4);
 }
 
+/*
 TEST_F(TrackTest, temporalFilter)
 {
-
     Track Trace = Track();
-}
+    for (int i=0; i){
+        Trace.addPoint(1321546, 3546843521, 125, timeStamp);
+    }
+}*/
+
 #endif // TRACKTEST_H

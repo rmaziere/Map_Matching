@@ -2,6 +2,8 @@
 #define ROAD_H
 
 #include "point.h"
+#include "track.h"
+
 #include <string>
 #include <vector>
 
@@ -22,8 +24,8 @@ public:
     Point* findPoint(long id) { return NULL; } // TODO
 
     /**
-     * @brief distanceTo
-     * @return
+     * @brief distanceTo Calculate distance between a point and a road
+     * @return Value
      */
     double distanceTo(Point);
 

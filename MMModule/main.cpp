@@ -13,7 +13,19 @@
 
 using namespace std;
 
+
+/*
+void dev_area() {
+    Track track;
+    track.readFromCSV();
+    grid g;
+    g.setZone(track.xmin, )
+    g.readFromCSV();
+
+}*/
+/*
 void dev_network() {
+
     grid myNetwork;
     myNetwork.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
     cout << myNetwork.m_road.size() << endl;
@@ -23,8 +35,10 @@ void dev_network() {
         cout << myNetwork.m_road[i]->getListOfPoints()[0]->m_x << endl;
     }
 }
-
+*/
+/*
 void dev_openFile() {
+
 
     //QApplication app(argc, argv);
 
@@ -33,7 +47,7 @@ void dev_openFile() {
 
     //Test.selectFilesToOpen(argc, argv, ext);
     //Test.shp2csv();
-    /*Test.whereSave();
+    Test.whereSave();
     for (int i = 0; i < Test.filePath.size(); ++i){
         QString tempFilePath = Test.filePath.at(i);
         QString tempFileName = Test.fileName.at(i);
@@ -41,12 +55,12 @@ void dev_openFile() {
         cout << tempFilePath.toStdString() << " - "
              << tempFileName.toStdString() << " - "
              << tempFileExtension.toStdString() << endl;
-    }*/
+    }
     //return app.exec();
 }
-
+*/
 
 int main(/*int argc, char *argv[]*/)
 {
-    dev_network();
+    //dev_network();
 }

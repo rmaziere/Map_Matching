@@ -1,10 +1,18 @@
 #include "track.h"
+#include <limits>
+
+
 #include <QLocale>
 //Utilisation du namespace std pour standard
 using namespace std;
 
+
 Track::Track()
-    : m_points(0)
+    : m_points(0),
+      m_xmin(std::numeric_limits<double>::max()),
+      m_xmax(0),
+      m_ymin(std::numeric_limits<double>::max()),
+      m_ymax(0)
 {
 }
 
@@ -240,8 +248,8 @@ void Track::delPointGPS(int occurrence)
 
 void Track::includingRectangle(double x, double y)
 {
-    xmin = std::min(xmin, x);
-    xmax = std::max(xmax, x);
-    ymin = std::min(ymin, y);
-    ymax = std::max(ymax, y);
+    m_xmin = std::min(m_xmin,x);
+    m_xmax = std::max(m_xmax,x);
+    m_ymin = std::min(m_ymin,y);
+    m_ymax = std::max(m_ymax,y);
 }

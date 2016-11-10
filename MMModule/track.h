@@ -17,6 +17,7 @@ class Track {
 public:
     Track();
     virtual ~Track();
+
     /**
      * @brief readFromCSV Reads a csv file and inserts each point in m_points vector
      * @param filename the filepath/filename for the csv file to read
@@ -41,7 +42,6 @@ public:
      */
     void spaceFilter(double interval);
 
-    //private:
     /**
      * @brief addPoint Creates a new point and inserts it in m_points
      * @param latitude the latitude of the inserted point
@@ -59,6 +59,7 @@ public:
      * @param timeStamp the timeStamp of the inserted point
      */
     void addPoint(float latitude, float longitude, float altitude, QDateTime timeStamp);
+
     /**
      * @brief m_points Vector where points of the Track are saved
      */
@@ -69,12 +70,20 @@ public:
      */
     void temporalFilter(int interval);
 
+    /**
+     * @brief includingRectangle Try to find mimimum/maximum of the hold and save them
+     * @param x Coordinate x of a point
+     * @param y Coordinate x of a point
+     */
     void includingRectangle(double x, double y);
 
-    double xmin = 100;
-    double xmax = 0;
-    double ymin = 100;
-    double ymax = 0;
+    /**
+     * @brief Parametres of the hold
+     */
+    double m_xmin;
+    double m_xmax;
+    double m_ymin;
+    double m_ymax;
 };
 
 #endif // TRACK_H

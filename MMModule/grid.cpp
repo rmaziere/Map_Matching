@@ -22,6 +22,15 @@ grid::~grid()
     // it calls destructors for the objects it holds.
 }
 
+
+void grid::setZone(double xMin,double xMax,double yMin,double yMax)
+{
+    m_xMin = xMin - 200;
+    m_xMax = xMax + 200;
+    m_yMin = yMin - 200;
+    m_yMax = yMax + 200;
+}
+
 void grid::readFromCSV(QString filename)
 {
     // Declare file stream
@@ -126,10 +135,11 @@ void grid::readFromCSV(QString filename)
                 text += afterSplit;
             }
 
+            //Initialisation du test
+            bool inPath = false;
             for (int i = 0; i < text.size(); ++i) {
                 if (i == correspondance[0]) {
                     // traitement WTK
-
                     QStringList contenuList = text[i].split("LINESTRING (");
                     contenuList = contenuList[1].split(")");
                     QString contenu = contenuList[0];
@@ -142,6 +152,7 @@ void grid::readFromCSV(QString filename)
                         QStringList coordonnees = listePoints[j].split(" ");
                         lat = coordonnees[0].toDouble();
                         lon = coordonnees[1].toDouble();
+                        inPath = inFootPrint(lat,lon);
                         cout << setprecision(150) << lat << "," << lon << endl;
                         vector<double> coordinates;
                         coordinates.push_back(lat);
@@ -164,7 +175,8 @@ void grid::readFromCSV(QString filename)
                 }
             }
             cout << endl;
-            addRoad(listOfCoordinates, edgeId, fromNodeId, toNodeId);
+            if (inPath)
+                addRoad(listOfCoordinates, edgeId, fromNodeId, toNodeId);
         }
     }
 }
@@ -177,4 +189,9 @@ std::vector<Road*> grid::getListOfRoad() const
 void grid::addRoad(vector<vector<double> > listOfCoordinates, long edgeId, long fromNodeId, long toNodeId)
 {
     m_road.push_back(new Road(listOfCoordinates, edgeId, fromNodeId, toNodeId));
+}
+
+bool grid::inFootPrint(double x, double y)
+{
+    return (m_xMin <= x && x <= m_xMax) && (m_yMin <= y && y <= m_yMax);
 }
