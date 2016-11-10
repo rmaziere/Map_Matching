@@ -2,13 +2,19 @@
 #define GRID_H
 
 #include "road.h"
+#include "track.h"
+
 #include <QString>
 #include <vector>
 using namespace std;
 class grid {
 public:
     grid();
+
     virtual ~grid();
+
+    void setZone(double xMin,double xMax,double yMin,double yMax);
+
     /**
      * @brief readFromCSV Reads a csv file and inserts info into the corresponding attributs
      * @param filename the filepath/filename for the csv file to read
@@ -22,6 +28,14 @@ public:
     std::vector<Road*> getListOfRoad() const;
 
     std::vector<Road*> m_road;
+
+    bool inFootPrint(double lat,double lon);
+
+    double latMin;
+    double latMax;
+    double longMin;
+    double longMax;
+
 };
 
 #endif // GRID_H

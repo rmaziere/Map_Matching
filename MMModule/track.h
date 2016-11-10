@@ -61,10 +61,10 @@ public:
 
     void includingRectangle(double x, double y);
 
-    double xmin = 100;
-    double xmax = 0;
-    double ymin = 100;
-    double ymax = 0;
+    double m_xmin;
+    double m_xmax;
+    double m_ymin;
+    double m_ymax;
 };
 
 #endif // TRACK_H

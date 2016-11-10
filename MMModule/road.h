@@ -2,6 +2,8 @@
 #define ROAD_H
 
 #include "point.h"
+#include "track.h"
+
 #include <string>
 #include <vector>
 
