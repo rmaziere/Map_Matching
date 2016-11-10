@@ -59,21 +59,37 @@ int File::whereSave(){
     return 0;
 }
 
-int File::shp2csv(){
-    QString originPath ;
-    QString destinationPath;
+int File::shp2csv(QString geometryType){
+    try{
+        if(geometryType.isEmpty() || (geometryType != "Point" && geometryType != "Polyline")){
+            throw MyException(1, "Le type de géométrie n'est pas défini ou n'est pas compatible", 2);
+        }else{
+            QString originPath ;
+            QString destinationPath;
+            string gdalGeometryParam;
 
-    for (int i = 0; i < filePath.size(); ++i){
-        QString tempFilePath = filePath.at(i);
-        QString tempFileName = fileName.at(i);
-        QString tempFileExtension = fileExtension.at(i);
+            if(geometryType == "Point"){
+                gdalGeometryParam = "AS_YX";
+            }else if(geometryType == "Polyline"){
+                gdalGeometryParam = "AS_WKT";
+            }
 
-        originPath = tempFilePath + tempFileName + "." + tempFileExtension;
-        destinationPath = tempFilePath + tempFileName + "_L93.csv";
+            for (int i = 0; i < filePath.size(); ++i){
+                QString tempFilePath = filePath.at(i);
+                QString tempFileName = fileName.at(i);
+                QString tempFileExtension = fileExtension.at(i);
 
-        string shpToCsv_command = "ogr2ogr -f CSV " + destinationPath.toStdString() + " " + originPath.toStdString() + " -s_srs EPSG:4326 -t_srs EPSG:2154 -lco GEOMETRY=AS_YX";
+                originPath = tempFilePath + tempFileName + "." + tempFileExtension;
+                destinationPath = tempFilePath + tempFileName + "_L93.csv";
 
-        system(shpToCsv_command.c_str());//shp wgs84 => csv Lambert 93
+                string shpToCsv_command = "ogr2ogr -f CSV " + destinationPath.toStdString() + " " + originPath.toStdString() + " -t_srs EPSG:2154 -lco GEOMETRY=" + gdalGeometryParam;
+
+                system(shpToCsv_command.c_str());//shp wgs84 => csv Lambert 93
+            }
+            return 0;
+        }
     }
-    return 0;
+    catch(std::exception const& e){
+        cerr << "ERREUR : " << e.what() << endl;
+    }
 }

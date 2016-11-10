@@ -38,9 +38,9 @@ public:
 
     /**
      * @brief The function to convert WGS84 ShapeFile(s) to Lambert 93 CSV(s)
-     * @param none
+     * @param The geometry type (Point, Polyline)
      */
-    int shp2csv();
+    int shp2csv(QString geometryType);
 
     /**
      * @brief The File destructor
@@ -48,7 +48,7 @@ public:
      */
     virtual ~File() {}
 
-//protected:
+protected:
     QStringList filePath;
     QStringList fileName;
     QStringList fileExtension;
