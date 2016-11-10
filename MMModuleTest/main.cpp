@@ -1,14 +1,15 @@
-#include <iostream>
 #include "gtest/gtest.h"
+#include <iostream>
 
+#include "gridtest.h"
+#include "pointgpstest.h"
 #include "pointtest.h"
 #include "tracktest.h"
-#include "pointgpstest.h"
-#include "networktest.h"
 
 using namespace std;
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[])
+{
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
 }

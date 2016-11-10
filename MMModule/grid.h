@@ -14,14 +14,14 @@ public:
      * @param filename the filepath/filename for the csv file to read
      */
     void readFromCSV(QString filename);
-    /**
-    * @brief m_points Vector where roads are saved
-    */
-    std::vector<Road*> m_road;
+
     /**
      * @brief addRoad Creates a new road and inserts it in m_road
      */
     void addRoad(vector<vector<double> > listOfCoordinates, long edgeId, long fromNodeId, long toNodeId);
+    std::vector<Road*> getListOfRoad() const;
+
+    std::vector<Road*> m_road;
 };
 
 #endif // GRID_H

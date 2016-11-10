@@ -2,19 +2,18 @@
 #define TRACK_H
 
 #include "pointGPS.h"
-#include <vector>
-#include <string>
-#include <iostream>     // cout
-#include <fstream>      // ifstream
-#include <sstream>
 #include <QString>
 #include <QStringList>
+#include <fstream> // ifstream
+#include <iostream> // cout
+#include <sstream>
+#include <string>
+#include <vector>
 
 /**
  * @brief The Track class
  */
-class Track
-{
+class Track {
 public:
     Track();
     virtual ~Track();
@@ -37,7 +36,7 @@ public:
      */
     void delPointGPS(int occurrence);
 
-//private:
+    //private:
     /**
      * @brief addPoint Creates a new point and inserts it in m_points
      * @param latitude the latitude of the inserted point

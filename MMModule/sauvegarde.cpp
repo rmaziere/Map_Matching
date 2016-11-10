@@ -1,16 +1,15 @@
 #include "sauvegarde.h"
 
-
 //Utilisation du namespace std pour standard
 using namespace std;
 
 //Fonction de sauvegarde en CSV
 Sauvegarde::Sauvegarde()
 {
-
 }
 
-int Sauvegarde::sauvegarderCSV(QString cheminAcces,Track maTrack){
+int Sauvegarde::sauvegarderCSV(QString cheminAcces, Track maTrack)
+{
 
     // Répertoire de l'utilisateur
     QString home = QDir::homePath();
@@ -21,26 +20,25 @@ int Sauvegarde::sauvegarderCSV(QString cheminAcces,Track maTrack){
 
     // Récupération du nom du fichier
     QStringList listChemin = cheminAcces.split("/");
-    QString nomExt = listChemin.at(listChemin.size()-1); // Récupération du dernier élément (avec extension)
+    QString nomExt = listChemin.at(listChemin.size() - 1); // Récupération du dernier élément (avec extension)
 
     // Chemin + fichier d'origine
     QString nom = path + nomExt;
 
-    try{
+    try {
         // Charge le fichier
         QFile file(nom);
         // Si non ouvert (en mode écriture)
-        if (!file.open(QIODevice::WriteOnly | QIODevice::Text)){
+        if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
             throw MyException(1, "Impossible d'écrire le fichier", 2);
-        }
-        else{
+        } else {
             cout << "Le fichier a été ouvert avec succès !" << endl;
 
             // Outil d'écriture
             QTextStream out(&file);
 
             // Ajout des valeurs
-            for (uint i=0 ; i < maTrack.getPoints().size(); ++i){
+            for (uint i = 0; i < maTrack.getPoints().size(); ++i) {
                 out << maTrack.getPoints()[i]->getLatitude() << ","
                     << maTrack.getPoints()[i]->getLongitude() << ","
                     << maTrack.getPoints()[i]->getAltitude() << ","
@@ -51,8 +49,7 @@ int Sauvegarde::sauvegarderCSV(QString cheminAcces,Track maTrack){
             // Fermeture du fichier
             file.close();
         }
-    }
-    catch(std::exception const& e){
+    } catch (std::exception const& e) {
         cerr << "ERREUR : " << e.what() << endl;
     }
 
@@ -62,5 +59,4 @@ int Sauvegarde::sauvegarderCSV(QString cheminAcces,Track maTrack){
 
 Sauvegarde::~Sauvegarde()
 {
-
 }

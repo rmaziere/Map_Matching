@@ -25,4 +25,6 @@ HEADERS += \
     ../MMModule/track.h \
     tracktest.h \
     pointgpstest.h \
-    networktest.h
+    roadtest.h \
+    gridtest.h
+

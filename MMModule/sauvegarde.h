@@ -1,20 +1,16 @@
 #ifndef SAUVEGARDE_H
 #define SAUVEGARDE_H
 
-#include <QString>
 #include <QDir>
 #include <QFile>
+#include <QString>
 #include <QTextStream>
-
 
 #include "myexception.h"
 #include "track.h"
 
-
-class Sauvegarde
-{
+class Sauvegarde {
 public:
-
     //Constructeur
     Sauvegarde();
 
