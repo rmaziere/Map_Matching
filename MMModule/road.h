@@ -22,6 +22,10 @@ public:
 
     Point *findPoint(long id){return NULL;} // TODO
 
+    /**
+     * @brief distanceTo
+     * @return
+     */
     double distanceTo(Point);
 
 
