@@ -27,10 +27,10 @@ TEST_F(GridTest, SetZone)
 {
     grid myGrid;
     myGrid.setZone(1,8,3,50);
-    EXPECT_EQ(-199, myGrid.latMin);
-    EXPECT_EQ(208, myGrid.latMax);
-    EXPECT_EQ(-197, myGrid.longMin);
-    EXPECT_EQ(250, myGrid.longMax);
+    EXPECT_EQ(-199, myGrid.m_xMin);
+    EXPECT_EQ(208, myGrid.m_xMax);
+    EXPECT_EQ(-197, myGrid.m_yMin);
+    EXPECT_EQ(250, myGrid.m_yMax);
 }
 
 TEST_F(GridTest, LoadRoadFromFile)
