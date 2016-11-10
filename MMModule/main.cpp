@@ -49,5 +49,4 @@ void dev_openFile() {
 int main(/*int argc, char *argv[]*/)
 {
     dev_network();
-
 }

@@ -20,29 +20,29 @@ protected:
 TEST_F(TrackTest, Constructeurs)
 {
 
-    Track Trace1 = Track();
-    EXPECT_EQ(0, Trace1.getPoints().size());
+    Track Trace = Track();
+    EXPECT_EQ(0, Trace.getPoints().size());
 }
 
 TEST_F(TrackTest, AddPoint)
 {
 
-    Track Trace3 = Track();
+    Track Trace = Track();
     QDateTime timeStamp = QDateTime::currentDateTime();
 
-    Trace3.addPoint(1321546, 3546843521, 125, timeStamp);
-    EXPECT_EQ(1321546, Trace3.getPoints()[0]->getLatitude());
-    EXPECT_EQ(3546843521, Trace3.getPoints()[0]->getLongitude());
-    EXPECT_EQ(125, Trace3.getPoints()[0]->getAltitude());
-    EXPECT_EQ(timeStamp, Trace3.getPoints()[0]->getTimeStamp());
-    EXPECT_EQ(1, Trace3.getPoints().size());
+    Trace.addPoint(1321546, 3546843521, 125, timeStamp);
+    EXPECT_EQ(1321546, Trace.getPoints()[0]->getLatitude());
+    EXPECT_EQ(3546843521, Trace.getPoints()[0]->getLongitude());
+    EXPECT_EQ(125, Trace.getPoints()[0]->getAltitude());
+    EXPECT_EQ(timeStamp, Trace.getPoints()[0]->getTimeStamp());
+    EXPECT_EQ(1, Trace.getPoints().size());
 }
 
 TEST_F(TrackTest, DeletePoint)
 {
 
-    Track Trace2 = Track();
-    EXPECT_EQ(0, Trace2.getPoints().size());
+    Track Trace = Track();
+    EXPECT_EQ(0, Trace.getPoints().size());
 
     int j = 0;
     int z = 0;
@@ -51,35 +51,47 @@ TEST_F(TrackTest, DeletePoint)
         j++;
         z++;
     }
-    EXPECT_EQ(10, Trace2.getPoints().size());
-    Trace2.delPointGPS(5); // supression
-    EXPECT_EQ(6, Trace2.getPoints()[5]->getLatitude());
-    EXPECT_EQ(6, Trace2.getPoints()[5]->getLongitude());
-    EXPECT_EQ(6, Trace2.getPoints()[5]->getAltitude());
-    EXPECT_EQ(9, Trace2.getPoints().size());
+    EXPECT_EQ(10, Trace.getPoints().size());
+    Trace.delPointGPS(5); // supression
+    EXPECT_EQ(6, Trace.getPoints()[5]->getLatitude());
+    EXPECT_EQ(6, Trace.getPoints()[5]->getLongitude());
+    EXPECT_EQ(6, Trace.getPoints()[5]->getAltitude());
+    EXPECT_EQ(9, Trace.getPoints().size());
 }
 /*
 TEST_F(TrackTest, readFromCSV)
 {
 
-    Track Trace4 = Track();
-    Trace4.readFromCSV("../Data/Unit_tests_data_set/readFromCsvExemple.csv");
-    EXPECT_DOUBLE_EQ(1686462.894975865026936, Trace4.getPoints()[0]->m_x);
-    EXPECT_DOUBLE_EQ(246133.881616829748964, Trace4.getPoints()[0]->m_y);
-    EXPECT_FLOAT_EQ(47.6675, Trace4.getPoints()[1]->getLatitude());
-    EXPECT_FLOAT_EQ(0, Trace4.getPoints()[1]->getAltitude());
+    Track Trace = Track();
+    Trace.readFromCSV("../Data/Unit_tests_data_set/readFromCsvExemple.csv");
+    EXPECT_DOUBLE_EQ(1686462.894975865026936, Trace.getPoints()[0]->m_x);
+    EXPECT_DOUBLE_EQ(246133.881616829748964, Trace.getPoints()[0]->m_y);
+    EXPECT_FLOAT_EQ(47.6675, Trace.getPoints()[1]->getLatitude());
+    EXPECT_FLOAT_EQ(0, Trace.getPoints()[1]->getAltitude());
 }
 */
 TEST_F(TrackTest, includingRectangle)
 {
 
-    Track Trace5 = Track();
+    Track Trace = Track();
     for (int i = 4; i < 11; i++) {
-        Trace5.includingRectangle(i, i+2);
+        Trace.includingRectangle(i, i+2);
     }
-    EXPECT_EQ(4, Trace5.xmin);
-    EXPECT_EQ(10, Trace5.xmax);
-    EXPECT_EQ(6, Trace5.ymin);
-    EXPECT_EQ(12, Trace5.ymax);
+    EXPECT_EQ(4, Trace.xmin);
+    EXPECT_EQ(10, Trace.xmax);
+    EXPECT_EQ(6, Trace.ymin);
+    EXPECT_EQ(12, Trace.ymax);
+}
+
+TEST_F(TrackTest, spaceFilter)
+{
+
+    Track Trace = Track();
+}
+
+TEST_F(TrackTest, temporalFilter)
+{
+
+    Track Trace = Track();
 }
 #endif // TRACKTEST_H
