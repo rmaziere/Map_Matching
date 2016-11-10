@@ -58,7 +58,7 @@ TEST_F(TrackTest, DeletePoint)
     EXPECT_EQ(6, Trace2.getPoints()[5]->getAltitude());
     EXPECT_EQ(9, Trace2.getPoints().size());
 }
-
+/*
 TEST_F(TrackTest, readFromCSV)
 {
 
@@ -69,5 +69,17 @@ TEST_F(TrackTest, readFromCSV)
     EXPECT_FLOAT_EQ(47.6675, Trace4.getPoints()[1]->getLatitude());
     EXPECT_FLOAT_EQ(0, Trace4.getPoints()[1]->getAltitude());
 }
+*/
+TEST_F(TrackTest, includingRectangle)
+{
 
+    Track Trace5 = Track();
+    for (int i = 4; i < 11; i++) {
+        Trace5.includingRectangle(i, i+2);
+    }
+    EXPECT_EQ(4, Trace5.xmin);
+    EXPECT_EQ(10, Trace5.xmax);
+    EXPECT_EQ(6, Trace5.ymin);
+    EXPECT_EQ(12, Trace5.ymax);
+}
 #endif // TRACKTEST_H

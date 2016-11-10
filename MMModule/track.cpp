@@ -169,6 +169,8 @@ void Track::readFromCSV(QString filename)
             cout << endl;
             // Add the read point
             addPoint(x, y, latitude, longitude, altitude, timeStamp);
+            // Evaluate the footprint
+            includingRectangle(x,y);
         } else {
             cout << "Ligne ignorée" << endl;
             continue;
@@ -196,4 +198,12 @@ void Track::addPoint(float latitude, float longitude, float altitude, QDateTime 
 void Track::delPointGPS(int occurrence)
 {
     m_points.erase(m_points.begin() + occurrence);
+}
+
+void Track::includingRectangle(double x, double y)
+{
+    xmin = std::min(xmin,x);
+    xmax = std::max(xmax,x);
+    ymin = std::min(ymin,y);
+    ymax = std::max(ymax,y);
 }

@@ -58,6 +58,13 @@ public:
      * @brief m_points Vector where points of the Track are saved
      */
     std::vector<PointGPS*> m_points;
+
+    void includingRectangle(double x, double y);
+
+    double xmin = 100;
+    double xmax = 0;
+    double ymin = 100;
+    double ymax = 0;
 };
 
 #endif // TRACK_H
