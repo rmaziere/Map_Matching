@@ -73,9 +73,9 @@ TEST_F(TrackTest, readFromCSV)
 TEST_F(TrackTest, includingRectangle)
 {
 
-    Track Trace = Track();
+    Track Trace5 = Track();
     for (int i = 4; i < 11; i++) {
-        Trace.includingRectangle(i, i+2);
+        Trace5.includingRectangle(i, i+2);
     }
     EXPECT_EQ(4, Trace5.m_xmin);
     EXPECT_EQ(10, Trace5.m_xmax);
