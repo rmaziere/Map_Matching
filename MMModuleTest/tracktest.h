@@ -47,7 +47,7 @@ TEST_F(TrackTest, DeletePoint)
     int j = 0;
     int z = 0;
     for (int i = 0; i < 10; i++) {
-        Trace2.addPoint(i, j, z, QDateTime::currentDateTime());
+        Trace.addPoint(i, j, z, QDateTime::currentDateTime());
         j++;
         z++;
     }
@@ -91,7 +91,10 @@ TEST_F(TrackTest, spaceFilter)
 
 TEST_F(TrackTest, temporalFilter)
 {
-
+/*
     Track Trace = Track();
+    for (int i=0; i){
+        Trace.addPoint(1321546, 3546843521, 125, timeStamp);
+    }*/
 }
 #endif // TRACKTEST_H
