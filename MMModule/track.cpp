@@ -199,7 +199,7 @@ void Track::addPoint(float latitude, float longitude, float altitude, QDateTime 
     m_points.push_back(new PointGPS(latitude, longitude, altitude, timeStamp));
 }
 
-void Track::temporalFiltering(int interval)
+void Track::temporalFilter(int interval)
 {
     PointGPS* pointPrecedent;
 
@@ -223,7 +223,7 @@ void Track::temporalFiltering(int interval)
 
 void Track::spaceFilter(double interval)
 {
-    for (uint i = 0; i < m_points.size(); i++) { // on parcours la liste des points
+    for (uint i = 0; i < m_points.size(); i++) { // on parcourt la liste des points
         // tant qu on ne se trouve pas sur le dernier point
         //&& (security segmentation)
         // tant que l interval est inferieure a la distance au point suivant

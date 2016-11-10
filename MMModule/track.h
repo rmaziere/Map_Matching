@@ -67,7 +67,7 @@ public:
     /**
      * @brief temporalFiltering
      */
-    void temporalFiltering(int interval);
+    void temporalFilter(int interval);
 
     void includingRectangle(double x, double y);
 
