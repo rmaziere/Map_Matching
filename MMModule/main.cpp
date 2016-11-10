@@ -1,15 +1,15 @@
 #include <QApplication>
 #include <QFileDialog>
-#include <vector>
 #include <math.h>
+#include <vector>
 
+#include "distance.h"
+#include "file.h"
+#include "grid.h"
 #include "myexception.h"
-#include "track.h"
 #include "pointGPS.h"
 #include "sauvegarde.h"
-#include "file.h"
-#include "distance.h"
-#include "grid.h"
+#include "track.h"
 
 using namespace std;
 
@@ -19,9 +19,8 @@ int main(/*int argc, char *argv[]*/)
     myNetwork.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
     cout << myNetwork.m_road.size() << endl;
 
-    for (size_t i=0; i< myNetwork.m_road.size(); ++i)
-    {
-        cout << myNetwork.m_road[i]->getListOfPoints().size()<< endl;
+    for (size_t i = 0; i < myNetwork.m_road.size(); ++i) {
+        cout << myNetwork.m_road[i]->getListOfPoints().size() << endl;
         cout << myNetwork.m_road[i]->getListOfPoints()[0]->m_x << endl;
     }
 
@@ -42,5 +41,4 @@ int main(/*int argc, char *argv[]*/)
              << tempFileExtension.toStdString() << endl;
     }*/
     //return app.exec();
-
 }
