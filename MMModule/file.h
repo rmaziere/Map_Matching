@@ -28,6 +28,10 @@ public:
      */
     int splitPath(QString fileGlobalPath);
 
+    /**
+     * @brief The UI to select the file's path to open
+     * @param the file extension to filter
+     */
     int selectFilesToOpen(QString extensionFilter);
 
     /**
@@ -48,7 +52,6 @@ public:
      */
     virtual ~File() {}
 
-protected:
     QStringList filePath;
     QStringList fileName;
     QStringList fileExtension;
