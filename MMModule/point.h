@@ -7,8 +7,18 @@
 
 class Point {
 public:
-    Point(double x, double y):m_id(POINT_GPS), m_x(x), m_y(y) {}    // used for a GPS point
-    Point(long id, double x, double y):m_id(id), m_x(x), m_y(y){}   // used for a point in a road
+    Point(double x, double y)
+        : m_id(POINT_GPS)
+        , m_x(x)
+        , m_y(y)
+    {
+    } // used for a GPS point
+    Point(long id, double x, double y)
+        : m_id(id)
+        , m_x(x)
+        , m_y(y)
+    {
+    } // used for a point in a road
 
     bool samePointAs(Point p);
 
@@ -34,9 +44,8 @@ public:
     long id() const;
     void setId(long id);
 
-    long m_id;  // id when this point is an extremity of a road (-1 otherwise)
+    long m_id; // id when this point is an extremity of a road (-1 otherwise)
     double m_x, m_y; // coordinates in metric system
-
 };
 
 #endif // POINT_H

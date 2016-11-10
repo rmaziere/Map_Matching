@@ -1,9 +1,8 @@
 #ifndef ROADTEST_H
 #define ROADTEST_H
 
-#include "gtest/gtest.h"
 #include "../MMModule/road.h"
-
+#include "gtest/gtest.h"
 
 class RoadTest : public ::testing::Test {
 protected:
@@ -11,12 +10,10 @@ protected:
     virtual ~RoadTest() {}
     virtual void SetUp() {}
     virtual void TearDown() {}
-
-
 };
 
-TEST_F(RoadTest, Constructeurs) {
-
+TEST_F(RoadTest, Constructeurs)
+{
 }
 
 #endif // ROADTEST_H

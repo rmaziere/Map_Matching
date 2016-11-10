@@ -6,19 +6,16 @@
 #include <iostream>
 #include <vector>
 
-
 using namespace std;
 
-grid::grid():
-    m_road(0)
+grid::grid()
+    : m_road(0)
 {
-
 }
 
 grid::~grid()
 {
-    for (uint i=0 ; i < m_road.size(); ++i)
-    {
+    for (uint i = 0; i < m_road.size(); ++i) {
         delete m_road[i];
     }
     m_road.clear(); //vector::clear() does not free memory allocated by the vector to store objects;
@@ -34,7 +31,7 @@ void grid::readFromCSV(QString filename)
     string value; // Save the value of the line
     QString stringConverted;
 
-    vector<int> correspondance(4,-1); // Correpondance between the header and the parser :
+    vector<int> correspondance(4, -1); // Correpondance between the header and the parser :
     // correspondance :
     //  0 : # WKT
     //  1 : # Edge ID
@@ -82,7 +79,6 @@ void grid::readFromCSV(QString filename)
         //cout << correspondance[i] << endl;
     }
     //cout << "END CORRESPONDANCE" << endl;
-
 
     while (file.good()) {
         long edgeId(0);
@@ -168,13 +164,12 @@ void grid::readFromCSV(QString filename)
                 }
             }
             cout << endl;
-            addRoad(listOfCoordinates,edgeId,fromNodeId,toNodeId);
-
+            addRoad(listOfCoordinates, edgeId, fromNodeId, toNodeId);
         }
     }
 }
 
-std::vector<Road *> grid::getListOfRoad() const
+std::vector<Road*> grid::getListOfRoad() const
 {
     return m_road;
 }

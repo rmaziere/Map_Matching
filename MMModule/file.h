@@ -1,21 +1,20 @@
 #ifndef FILE_H
 #define FILE_H
 
-#include <iostream>
-#include <string>
-#include <QString>
-#include <QStringList>
 #include <QFile>
 #include <QFileDialog>
+#include <QString>
+#include <QStringList>
 #include <QTextStream>
+#include <iostream>
+#include <string>
 
 #include "myexception.h"
 
 /**
  * @brief The File class
  */
-class File
-{
+class File {
 public:
     /**
      * @brief The File constructor
@@ -29,7 +28,7 @@ public:
      */
     int splitPath(QString fileGlobalPath);
 
-    int selectFilesToOpen(int argc, char *argv[], QString extensionFilter);
+    int selectFilesToOpen(int argc, char* argv[], QString extensionFilter);
 
     /**
      * @brief The UI to select the file's path to save
@@ -47,7 +46,7 @@ public:
      * @brief The File destructor
      * @param none
      */
-    virtual ~File(){}
+    virtual ~File() {}
 
 protected:
     QStringList filePath;
