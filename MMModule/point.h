@@ -6,7 +6,7 @@
 #define EPS 1e-12
 
 class Point {
-public:
+public:     
     Point(double x, double y)
         : m_id(POINT_GPS)
         , m_x(x)

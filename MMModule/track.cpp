@@ -87,7 +87,7 @@ void Track::readFromCSV(QString filename)
 
     // Display the correspondance table
     cout << "BEGIN CORRESPONDANCE" << endl;
-    for (int i = 0; i < correspondance.size(); ++i) {
+    for (uint i = 0; i < correspondance.size(); ++i) {
         cout << correspondance[i] << endl;
     }
     cout << "END CORRESPONDANCE" << endl;
@@ -221,7 +221,27 @@ void Track::temporalFiltering(int interval)
     }
 }
 
+void Track::spaceFilter(double interval)
+{
+    for (uint i = 0; i < m_points.size(); i++) { // on parcours la liste des points
+        // tant qu on ne se trouve pas sur le dernier point
+        //&& (security segmentation)
+        // tant que l interval est inferieure a la distance au point suivant
+        while (i != m_points.size() - 1 && interval > m_points[i]->distance2pt(*m_points[i + 1])) {
+            this->delPointGPS(i + 1); // on supprime le point suivant
+        }
+    }
+}
+
 void Track::delPointGPS(int occurrence)
 {
     m_points.erase(m_points.begin() + occurrence);
+}
+
+void Track::includingRectangle(double x, double y)
+{
+    xmin = std::min(xmin, x);
+    xmax = std::max(xmax, x);
+    ymin = std::min(ymin, y);
+    ymax = std::max(ymax, y);
 }

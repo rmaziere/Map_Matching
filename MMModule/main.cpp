@@ -13,8 +13,7 @@
 
 using namespace std;
 
-int main(/*int argc, char *argv[]*/)
-{
+void dev_network() {
     grid myNetwork;
     myNetwork.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
     cout << myNetwork.m_road.size() << endl;
@@ -23,6 +22,9 @@ int main(/*int argc, char *argv[]*/)
         cout << myNetwork.m_road[i]->getListOfPoints().size() << endl;
         cout << myNetwork.m_road[i]->getListOfPoints()[0]->m_x << endl;
     }
+}
+
+void dev_openFile() {
 
     //QApplication app(argc, argv);
 
@@ -41,4 +43,11 @@ int main(/*int argc, char *argv[]*/)
              << tempFileExtension.toStdString() << endl;
     }*/
     //return app.exec();
+}
+
+
+int main(/*int argc, char *argv[]*/)
+{
+    dev_network();
+
 }
