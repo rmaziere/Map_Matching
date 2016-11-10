@@ -25,10 +25,10 @@ grid::~grid()
 
 void grid::setZone(double xMin,double xMax,double yMin,double yMax)
 {
-    latMin = xMin - 200;
-    latMax = xMax + 200;
-    longMin = yMin - 200;
-    longMax = yMax + 200;
+    m_xMin = xMin - 200;
+    m_xMax = xMax + 200;
+    m_yMin = yMin - 200;
+    m_yMax = yMax + 200;
 }
 
 void grid::readFromCSV(QString filename)
@@ -191,7 +191,7 @@ void grid::addRoad(vector<vector<double> > listOfCoordinates, long edgeId, long 
     m_road.push_back(new Road(listOfCoordinates, edgeId, fromNodeId, toNodeId));
 }
 
-bool grid::inFootPrint(double lat,double lon)
+bool grid::inFootPrint(double x, double y)
 {
-    return (latMin <= lat && lat <= latMax) && (longMin <= lon && lon <= longMax);
+    return (m_xMin <= x && x <= m_xMax) && (m_yMin <= y && y <= m_yMax);
 }

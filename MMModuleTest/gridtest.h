@@ -57,7 +57,6 @@ TEST_F(GridTest, InFootPrint)
 {
     grid myGrid;
     myGrid.setZone(1,8,3,50);
-    cout << myGrid.inFootPrint(3,12);
     ASSERT_TRUE(myGrid.inFootPrint(3,12));
     ASSERT_TRUE(myGrid.inFootPrint(1,48));
     ASSERT_FALSE(myGrid.inFootPrint(-200,12));
