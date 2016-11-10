@@ -223,7 +223,7 @@ void Track::temporalFilter(int interval)
 
 void Track::spaceFilter(double interval)
 {
-    for (uint i = 0; i < m_points.size(); i++) { // on parcourt la liste des points
+    for (uint i = 0; i < m_points.size(); i++) { // on parcours la liste des points
         // tant qu on ne se trouve pas sur le dernier point
         //&& (security segmentation)
         // tant que l interval est inferieure a la distance au point suivant
