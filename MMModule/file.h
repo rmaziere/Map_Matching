@@ -28,7 +28,7 @@ public:
      */
     int splitPath(QString fileGlobalPath);
 
-    int selectFilesToOpen(int argc, char* argv[], QString extensionFilter);
+    int selectFilesToOpen(QString extensionFilter);
 
     /**
      * @brief The UI to select the file's path to save
@@ -48,7 +48,7 @@ public:
      */
     virtual ~File() {}
 
-protected:
+//protected:
     QStringList filePath;
     QStringList fileName;
     QStringList fileExtension;

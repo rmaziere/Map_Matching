@@ -23,7 +23,7 @@ int File::splitPath(QString fileGlobalPath){
     }
 }
 
-int File::selectFilesToOpen(int argc, char *argv[], QString extensionFilter){
+int File::selectFilesToOpen(QString extensionFilter){
     // Set path to home Path
     QString path = QDir::homePath();
 
