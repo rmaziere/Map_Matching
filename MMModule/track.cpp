@@ -87,7 +87,7 @@ void Track::readFromCSV(QString filename)
 
     // Display the correspondance table
     cout << "BEGIN CORRESPONDANCE" << endl;
-    for (int i = 0; i < correspondance.size(); ++i) {
+    for (uint i = 0; i < correspondance.size(); ++i) {
         cout << correspondance[i] << endl;
     }
     cout << "END CORRESPONDANCE" << endl;
@@ -169,8 +169,6 @@ void Track::readFromCSV(QString filename)
             cout << endl;
             // Add the read point
             addPoint(x, y, latitude, longitude, altitude, timeStamp);
-            // Evaluate the footprint
-            includingRectangle(x,y);
         } else {
             cout << "Ligne ignorée" << endl;
             continue;
@@ -193,6 +191,17 @@ void Track::addPoint(double x, double y, float latitude, float longitude, float 
 void Track::addPoint(float latitude, float longitude, float altitude, QDateTime timeStamp)
 {
     m_points.push_back(new PointGPS(latitude, longitude, altitude, timeStamp));
+}
+
+void Track::spaceFilter(double interval){
+    for( uint i=0; i<m_points.size(); i++){ // on parcours la liste des points
+        // tant qu on ne se trouve pas sur le dernier point
+        //&& (security segmentation)
+        // tant que l interval est inferieure a la distance au point suivant
+        while(i!=m_points.size()-1 && interval > m_points[i]->distance2pt(*m_points[i+1])){
+            this->delPointGPS(i+1); // on supprime le point suivant
+        }
+    }
 }
 
 void Track::delPointGPS(int occurrence)
