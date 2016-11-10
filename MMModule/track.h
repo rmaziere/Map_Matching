@@ -58,6 +58,11 @@ public:
      * @brief m_points Vector where points of the Track are saved
      */
     std::vector<PointGPS*> m_points;
+
+    /**
+     * @brief temporalFiltering
+     */
+    void temporalFiltering(int interval);
 };
 
 #endif // TRACK_H
