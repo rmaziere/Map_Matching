@@ -38,7 +38,7 @@ double Road::distanceTo(Point pt)
     double distMin = 1000000; // TODO !!!
     // For each segment in road
     for (int i = 1; i < this->noOfPoints; i++) {
-        double d = pt.distance2ptsegment(*this->listOfPoints[i - 1], *this->listOfPoints[i]);
+        double d = pt.distanceToSegment(*this->listOfPoints[i - 1], *this->listOfPoints[i]);
         if (d < distMin) {
             distMin = d;
         }

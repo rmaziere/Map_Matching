@@ -6,7 +6,7 @@
 
 class solver {
 public:
-    solver(const grid& network, const Track& track)
+    solver(const Grid& network, const Track& track)
         : m_network(network)
         , m_track(track)
     {
@@ -14,7 +14,7 @@ public:
     void initialize();
 
 protected:
-    grid m_network;
+    Grid m_network;
     Track m_track;
 };
 

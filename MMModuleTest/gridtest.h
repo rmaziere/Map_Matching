@@ -19,13 +19,13 @@ protected:
 
 TEST_F(GridTest, Constructeurs)
 {
-    grid myGrid;
+    Grid myGrid;
     EXPECT_EQ(0, myGrid.m_road.size());
 }
 
 TEST_F(GridTest, SetZone)
 {
-    grid myGrid;
+    Grid myGrid;
     myGrid.setZone(1,8,3,50);
     EXPECT_EQ(-199, myGrid.m_xMin);
     EXPECT_EQ(208, myGrid.m_xMax);
@@ -35,7 +35,7 @@ TEST_F(GridTest, SetZone)
 
 TEST_F(GridTest, LoadRoadFromFile)
 {
-    grid myGrid;
+    Grid myGrid;
     myGrid.setZone(0,100000000,0,10000000000);
     myGrid.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
     EXPECT_EQ(2, myGrid.m_road.size());
@@ -43,19 +43,19 @@ TEST_F(GridTest, LoadRoadFromFile)
 
 TEST_F(GridTest, LoadPointsFromFile)
 {
-    grid myGrid;
+    Grid myGrid;
     myGrid.setZone(0,std::numeric_limits<double>::max(),0,std::numeric_limits<double>::max());
     myGrid.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
     EXPECT_EQ(10, myGrid.m_road[0]->getListOfPoints().size());
     EXPECT_EQ(4, myGrid.m_road[1]->getListOfPoints().size());
 
-    EXPECT_DOUBLE_EQ(1534446.378026439808309, myGrid.m_road[0]->getListOfPoints()[0]->m_x);
-    EXPECT_DOUBLE_EQ(330422.365724511211738, myGrid.m_road[0]->getListOfPoints()[0]->m_y);
+    EXPECT_DOUBLE_EQ(1534446.378026439808309, myGrid.m_road[0]->getListOfPoints()[0]->x());
+    EXPECT_DOUBLE_EQ(330422.365724511211738, myGrid.m_road[0]->getListOfPoints()[0]->y());
 }
 
 TEST_F(GridTest, InFootPrint)
 {
-    grid myGrid;
+    Grid myGrid;
     myGrid.setZone(1,8,3,50);
     ASSERT_TRUE(myGrid.inFootPrint(3,12));
     ASSERT_TRUE(myGrid.inFootPrint(1,48));

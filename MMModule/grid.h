@@ -7,10 +7,10 @@
 #include <QString>
 #include <vector>
 using namespace std;
-class grid {
+class Grid {
 public:
-    grid();
-    virtual ~grid();
+    Grid();
+    virtual ~Grid();
 
     /**
      * @brief setZone Save data about our area of roads

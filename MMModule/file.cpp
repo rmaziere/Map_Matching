@@ -92,4 +92,5 @@ int File::shp2csv(QString geometryType){
     catch(std::exception const& e){
         cerr << "ERREUR : " << e.what() << endl;
     }
+    return 1;
 }

@@ -2,27 +2,26 @@
 #include <algorithm>
 #include <math.h>
 
-bool Point::samePointAs(Point p)
+bool Point::samePointAs(const Point &p) const
 {
     return (fabs(m_x - p.m_x) < EPS) && (fabs(m_y - p.m_y) < EPS);
 }
 
-double Point::distance2pt(Point pt)
+double Point::distanceToPoint(const Point& p) const
 {
-    return sqrt(pow(pt.m_x - this->m_x, 2) + pow(pt.m_y - this->m_y, 2));
+    return sqrt(pow(p.m_x - this->m_x, 2) + pow(p.m_y - this->m_y, 2));
 }
 
-double Point::distance2ptsegment(Point A, Point B)
+double Point::distanceToSegment(const Point& a, const Point& b) const
 {
-    if (A.samePointAs(B)) {
-        return this->distance2pt(A);
+    if (a.samePointAs(b)) {
+        return this->distanceToPoint(a);
     } else {
-        double num = (this->m_x - A.m_x) * (B.m_x - A.m_x) + (this->m_y - A.m_y) * (B.m_y - A.m_y);
-        double tSol = num / pow(A.distance2pt(B), 2);
+        double num = (this->m_x - a.m_x) * (b.m_x - a.m_x) + (this->m_y - a.m_y) * (b.m_y - a.m_y);
+        double tSol = num / pow(a.distanceToPoint(b), 2);
         double t = std::max(0.0, std::min(1.0, tSol));
-        Point proj(A.m_x + t * (B.m_x - A.m_x), A.m_y + t * (B.m_y - A.m_y));
-
-        return this->distance2pt(proj);
+        Point proj(a.m_x + t * (b.m_x - a.m_x), a.m_y + t * (b.m_y - a.m_y));
+        return this->distanceToPoint(proj);
     }
 }
 
@@ -34,16 +33,6 @@ double Point::y() const
 void Point::setY(double y)
 {
     m_y = y;
-}
-
-long Point::id() const
-{
-    return m_id;
-}
-
-void Point::setId(long id)
-{
-    m_id = id;
 }
 
 double Point::x() const

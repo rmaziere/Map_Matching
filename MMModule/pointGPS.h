@@ -1,64 +1,37 @@
 #ifndef POINTGPS_H
 #define POINTGPS_H
 
-#include <QDateTime>
-#include <QObject>
-
 #include "point.h"
 
+#define ALT_DEFAULT 0.0
 class PointGPS : public Point {
 public:
     /**
-         * @brief PointGPS constructor
-         * Create a new Point Trace with default parameters :
-         * latitude = 0
-         * longitude = 0
-         * altitude = 0
-         * timeStamp = currentDate
-         */
-    PointGPS();
+     * @brief PointGPS constructor
+     * Create a new Point GPS with default altitude
+     */
+    PointGPS(double x, double y, unsigned int timestamp)
+        : Point(x, y)
+        , m_altitude(ALT_DEFAULT)
+        , m_timeStamp(timestamp)
+    {
+    }
 
     /**
-         * @brief PointGPS constructor
-         * Create a new Point GPS
-         */
-    PointGPS(float latitude, float longitude, float altitude, QDateTime timeStamp);
+     * @brief PointGPS constructor
+     * Create a new Point GPS
+     */
+    PointGPS(double x, double y, float altitude, unsigned int timestamp)
+        : Point(x, y)
+        , m_altitude(altitude)
+        , m_timeStamp(timestamp)
+    {
+    }
 
-    /**
-         * @brief PointGPS constructor
-         * Create a new Point GPS
-         */
-    PointGPS(double x, double y, float latitude, float longitude, float altitude, QDateTime timeStamp);
-
-    /**
-         * @brief getLatitude Getter for m_latitude parameter
-         * @return float the latitude
-         */
-    float getLatitude();
-
-    /**
-         * @brief getLongitude Getter for m_longitude parameter
-         * @return float the longitude
-         */
-    float getLongitude();
-
-    /**
-         * @brief getAltitude Getter for m_altitude parameter
-         * @return float the altitude
-         */
-    float getAltitude();
-
-    /**
-         * @brief getTimeStamp Getter for m_timeStamp parameter
-         * @return QDateTime the timeStamp
-         */
-    QDateTime getTimeStamp();
-
-private:
-    float m_latitude;
-    float m_longitude;
-    float m_altitude;
-    QDateTime m_timeStamp;
-    long m_ts;
+    unsigned int timeStamp() const { return m_timeStamp;}
+    float altitude() const { return m_altitude;}
+protected:
+    float m_altitude;   // TO keep ?
+    unsigned int m_timeStamp; // WARNING in second
 };
 #endif // POINTGPS_H

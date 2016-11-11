@@ -1,11 +1,13 @@
+QT += core
+QT += gui
+
 TEMPLATE = app
 CONFIG += c++11
-CONFIG -= app_bundle
+CONFIG -= console app_bundle
 
 LIBS += -lgtest -lpthread
 
 SOURCES += main.cpp \
-    ../MMModule/file.cpp \
     ../MMModule/grid.cpp \
     ../MMModule/point.cpp \
     ../MMModule/pointGPS.cpp \
@@ -15,7 +17,6 @@ SOURCES += main.cpp \
 
 HEADERS += \
     pointtest.h \
-    ../MMModule/file.h \
     ../MMModule/myexception.h \
     ../MMModule/grid.h \
     ../MMModule/point.h \
@@ -27,4 +28,3 @@ HEADERS += \
     pointgpstest.h \
     roadtest.h \
     gridtest.h
-

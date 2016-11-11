@@ -11,17 +11,17 @@ using namespace std;
 
 class Road {
 public:
-    Road(string description) {} // TODO
+    //Road(string description) {} // TODO
     Road(vector<vector<double> > listOfCoordinates, long edgeId, long fromNodeId, long toNodeId);
     Road(vector<Point> listOfPoints);
 
     virtual ~Road();
 
     bool addPoint(double x, double y);
-    bool addPoint(long id, double x, double y) { return true; } // TODO
+    //bool addPoint(long id, double x, double y) { return true; } // TODO
     bool addPoint(Point) { return true; } // TODO
 
-    Point* findPoint(long id) { return NULL; } // TODO
+    //Point* findPoint(long id) { return NULL; } // TODO
 
     /**
      * @brief distanceTo Calculate distance between a point and a road

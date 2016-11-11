@@ -2,8 +2,10 @@
 #define TRACK_H
 
 #include "pointGPS.h"
+
 #include <QString>
 #include <QStringList>
+#include <QDateTime>
 #include <fstream> // ifstream
 #include <iostream> // cout
 #include <sstream>
@@ -15,7 +17,14 @@
  */
 class Track {
 public:
-    Track();
+    Track()
+        : //m_points(0),
+          m_xmin(std::numeric_limits<double>::max()),
+          m_xmax(0.0),
+          m_ymin(std::numeric_limits<double>::max()),
+          m_ymax(0.0)
+    {
+    }
     virtual ~Track();
 
     /**
@@ -24,17 +33,21 @@ public:
      */
     void readFromCSV(QString filename);
 
-    /**
-     * @brief getPoints Get the m_points vector
-     * @return The vector of points pointer
-     */
-    std::vector<PointGPS*> getPoints();
 
     /**
      * @brief delPointGPS deletes a occurence
      * @param pointer the pointer of the occurrence to delete
      */
     void delPointGPS(int occurrence);
+
+
+    /**
+     * @brief addPoint Creates a new point and inserts it in m_points
+     * @param altitude the altitude of the inserted point
+     * @param timeStamp the timeStamp of the inserted point
+     */
+    void addPoint(double x, double y, float altitude, unsigned int timeStamp);
+
 
     /**
      * @brief spaceFilter delete points in function of the interval input
@@ -43,47 +56,44 @@ public:
     void spaceFilter(double interval);
 
     /**
-     * @brief addPoint Creates a new point and inserts it in m_points
-     * @param latitude the latitude of the inserted point
-     * @param longitude the longitude of the inserted point
-     * @param altitude the altitude of the inserted point
-     * @param timeStamp the timeStamp of the inserted point
-     */
-    void addPoint(double x, double y, float latitude, float longitude, float altitude, QDateTime timeStamp);
-
-    /**
-     * @brief addPoint Creates a new point and inserts it in m_points
-     * @param latitude the latitude of the inserted point
-     * @param longitude the longitude of the inserted point
-     * @param altitude the altitude of the inserted point
-     * @param timeStamp the timeStamp of the inserted point
-     */
-    void addPoint(float latitude, float longitude, float altitude, QDateTime timeStamp);
-
-    /**
-     * @brief m_points Vector where points of the Track are saved
-     */
-    std::vector<PointGPS*> m_points;
-
-    /**
      * @brief temporalFiltering
      */
-    void temporalFilter(int interval);
+    void temporalFilter(uint interval);
 
     /**
-     * @brief includingRectangle Try to find mimimum/maximum of the hold and save them
+     * @brief updateBox update the enclosing box of the track
      * @param x Coordinate x of a point
      * @param y Coordinate x of a point
      */
-    void includingRectangle(double x, double y);
+    void updateBox(double x, double y);
+
+    void outputInfos();
+
+
 
     /**
+     * @brief getPoints Get the m_points vector
+     * @return The vector of points pointer
+     */
+    std::vector<PointGPS*> getPoints();
+
+
+    /** TODO protected
      * @brief Parametres of the hold
      */
     double m_xmin;
     double m_xmax;
     double m_ymin;
     double m_ymax;
+
+protected:
+    /**
+     * @brief m_points Vector where points of the Track are saved
+     */
+    std::vector<PointGPS*> m_points;
+    //Point m_southWest, m_northEst;  // describe englobing box
+    std::string m_trackFullName;
+
 };
 
 #endif // TRACK_H

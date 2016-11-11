@@ -8,12 +8,12 @@
 
 using namespace std;
 
-grid::grid()
+Grid::Grid()
     : m_road(0)
 {
 }
 
-grid::~grid()
+Grid::~Grid()
 {
     for (uint i = 0; i < m_road.size(); ++i) {
         delete m_road[i];
@@ -23,7 +23,7 @@ grid::~grid()
 }
 
 
-void grid::setZone(double xMin,double xMax,double yMin,double yMax)
+void Grid::setZone(double xMin,double xMax,double yMin,double yMax)
 {
     m_xMin = xMin - 200;
     m_xMax = xMax + 200;
@@ -31,7 +31,7 @@ void grid::setZone(double xMin,double xMax,double yMin,double yMax)
     m_yMax = yMax + 200;
 }
 
-void grid::readFromCSV(QString filename)
+void Grid::readFromCSV(QString filename)
 {
     // Declare file stream
     ifstream file(filename.toStdString().c_str()); // c_str() http://stackoverflow.com/questions/32332/why-dont-the-stdfstream-classes-take-a-stdstring
@@ -181,17 +181,17 @@ void grid::readFromCSV(QString filename)
     }
 }
 
-std::vector<Road*> grid::getListOfRoad() const
+std::vector<Road*> Grid::getListOfRoad() const
 {
     return m_road;
 }
 
-void grid::addRoad(vector<vector<double> > listOfCoordinates, long edgeId, long fromNodeId, long toNodeId)
+void Grid::addRoad(vector<vector<double> > listOfCoordinates, long edgeId, long fromNodeId, long toNodeId)
 {
     m_road.push_back(new Road(listOfCoordinates, edgeId, fromNodeId, toNodeId));
 }
 
-bool grid::inFootPrint(double x, double y)
+bool Grid::inFootPrint(double x, double y)
 {
     return (m_xMin <= x && x <= m_xMax) && (m_yMin <= y && y <= m_yMax);
 }

@@ -28,13 +28,13 @@ TEST_F(TrackTest, AddPoint)
 {
 
     Track Trace = Track();
-    QDateTime timeStamp = QDateTime::currentDateTime();
+    unsigned int timeStamp = QDateTime::currentDateTime().toTime_t();
 
     Trace.addPoint(1321546, 3546843521, 125, timeStamp);
-    EXPECT_EQ(1321546, Trace.getPoints()[0]->getLatitude());
-    EXPECT_EQ(3546843521, Trace.getPoints()[0]->getLongitude());
-    EXPECT_EQ(125, Trace.getPoints()[0]->getAltitude());
-    EXPECT_EQ(timeStamp, Trace.getPoints()[0]->getTimeStamp());
+    EXPECT_DOUBLE_EQ(1321546, Trace.getPoints()[0]->x());
+    EXPECT_DOUBLE_EQ(3546843521, Trace.getPoints()[0]->y());
+    EXPECT_FLOAT_EQ(125, Trace.getPoints()[0]->altitude());
+    EXPECT_EQ(timeStamp, Trace.getPoints()[0]->timeStamp());
     EXPECT_EQ(1, Trace.getPoints().size());
 }
 
@@ -47,15 +47,15 @@ TEST_F(TrackTest, DeletePoint)
     int j = 0;
     int z = 0;
     for (int i = 0; i < 10; i++) {
-        Trace.addPoint(i, j, z, QDateTime::currentDateTime());
+        Trace.addPoint(i, j, z, QDateTime::currentDateTime().toTime_t());
         j++;
         z++;
     }
     EXPECT_EQ(10, Trace.getPoints().size());
     Trace.delPointGPS(5); // supression
-    EXPECT_EQ(6, Trace.getPoints()[5]->getLatitude());
-    EXPECT_EQ(6, Trace.getPoints()[5]->getLongitude());
-    EXPECT_EQ(6, Trace.getPoints()[5]->getAltitude());
+    EXPECT_DOUBLE_EQ(6, Trace.getPoints()[5]->x());
+    EXPECT_DOUBLE_EQ(6, Trace.getPoints()[5]->y());
+    EXPECT_FLOAT_EQ(6, Trace.getPoints()[5]->altitude());
     EXPECT_EQ(9, Trace.getPoints().size());
 }
 /*
@@ -75,7 +75,7 @@ TEST_F(TrackTest, includingRectangle)
 
     Track Trace5 = Track();
     for (int i = 4; i < 11; i++) {
-        Trace5.includingRectangle(i, i+2);
+        Trace5.updateBox(i, i+2);
     }
     EXPECT_EQ(4, Trace5.m_xmin);
     EXPECT_EQ(10, Trace5.m_xmax);
@@ -87,12 +87,12 @@ TEST_F(TrackTest, spaceFilterY)
 {
 
     Track Trace = Track();
-    Trace.addPoint(0,0,0,0,0,QDateTime::currentDateTime());
-    Trace.addPoint(0,1,0,0,0,QDateTime::currentDateTime());
-    Trace.addPoint(0,2,0,0,0,QDateTime::currentDateTime());
-    Trace.addPoint(0,3,0,0,0,QDateTime::currentDateTime());
-    Trace.addPoint(0,4,0,0,0,QDateTime::currentDateTime());
-    Trace.addPoint(0,5,0,0,0,QDateTime::currentDateTime());
+    Trace.addPoint(0,0,0,QDateTime::currentDateTime().toTime_t());
+    Trace.addPoint(0,1,0,QDateTime::currentDateTime().toTime_t());
+    Trace.addPoint(0,2,0,QDateTime::currentDateTime().toTime_t());
+    Trace.addPoint(0,3,0,QDateTime::currentDateTime().toTime_t());
+    Trace.addPoint(0,4,0,QDateTime::currentDateTime().toTime_t());
+    Trace.addPoint(0,5,0,QDateTime::currentDateTime().toTime_t());
     Trace.spaceFilter(2);
 
     EXPECT_EQ(3, Trace.getPoints().size());
@@ -103,12 +103,12 @@ TEST_F(TrackTest, spaceFilterY)
 TEST_F(TrackTest, spaceFilterX)
     {
     Track Trace = Track();
-    Trace.addPoint(0,0,0,0,0,QDateTime::currentDateTime());
-    Trace.addPoint(1,0,0,0,0,QDateTime::currentDateTime());
-    Trace.addPoint(2,0,0,0,0,QDateTime::currentDateTime());
-    Trace.addPoint(3,0,0,0,0,QDateTime::currentDateTime());
-    Trace.addPoint(4,0,0,0,0,QDateTime::currentDateTime());
-    Trace.addPoint(5,0,0,0,0,QDateTime::currentDateTime());
+    Trace.addPoint(0,0,0,QDateTime::currentDateTime().toTime_t());
+    Trace.addPoint(1,0,0,QDateTime::currentDateTime().toTime_t());
+    Trace.addPoint(2,0,0,QDateTime::currentDateTime().toTime_t());
+    Trace.addPoint(3,0,0,QDateTime::currentDateTime().toTime_t());
+    Trace.addPoint(4,0,0,QDateTime::currentDateTime().toTime_t());
+    Trace.addPoint(5,0,0,QDateTime::currentDateTime().toTime_t());
     Trace.spaceFilter(2);
 
     EXPECT_EQ(3, Trace.getPoints().size());
@@ -120,12 +120,12 @@ TEST_F(TrackTest, spaceFilterX)
 TEST_F(TrackTest, spaceFilterXY)
     {
     Track Trace = Track();
-    Trace.addPoint(0,0,0,0,0,QDateTime::currentDateTime());
-    Trace.addPoint(2,0,0,0,0,QDateTime::currentDateTime());
-    Trace.addPoint(2,2,0,0,0,QDateTime::currentDateTime());
-    Trace.addPoint(2,4,0,0,0,QDateTime::currentDateTime());
-    Trace.addPoint(4,4,0,0,0,QDateTime::currentDateTime());
-    Trace.addPoint(6,4,0,0,0,QDateTime::currentDateTime());
+    Trace.addPoint(0,0,0,QDateTime::currentDateTime().toTime_t());
+    Trace.addPoint(2,0,0,QDateTime::currentDateTime().toTime_t());
+    Trace.addPoint(2,2,0,QDateTime::currentDateTime().toTime_t());
+    Trace.addPoint(2,4,0,QDateTime::currentDateTime().toTime_t());
+    Trace.addPoint(4,4,0,QDateTime::currentDateTime().toTime_t());
+    Trace.addPoint(6,4,0,QDateTime::currentDateTime().toTime_t());
     Trace.spaceFilter(4);
     EXPECT_EQ(3, Trace.getPoints().size());
     cout << Trace.getPoints()[1]->x() << endl;
@@ -141,9 +141,9 @@ TEST_F(TrackTest, temporalFilter)
 {
 
     Track Trace = Track();
-    QDateTime time = QDateTime::fromString("2016-12-24 12:00:02", "yyyy-MM-dd hh:mm:ss");
+    unsigned int time = QDateTime::fromString("2016-12-24 12:00:02", "yyyy-MM-dd hh:mm:ss").toTime_t();
     for (int i=0; i<10000; i++){
-        Trace.addPoint(i ,i, i, i, i, time.addSecs(i));
+        Trace.addPoint(i ,i, i, time+ i);
     }
     int taille_init = Trace.getPoints().size();
     Trace.temporalFilter(10);
@@ -159,11 +159,9 @@ TEST_F(TrackTest, temporalFilter)
 
     int j = 0;
     for (int i=0; i<taille_fin; i ++){
-        EXPECT_EQ(j, Trace.getPoints()[i]->x());
-        EXPECT_EQ(j, Trace.getPoints()[i]->y());
-        EXPECT_EQ(j, Trace.getPoints()[i]->getLatitude());
-        EXPECT_EQ(j, Trace.getPoints()[i]->getLongitude());
-        EXPECT_EQ(j, Trace.getPoints()[i]->getAltitude());
+        EXPECT_DOUBLE_EQ(j, Trace.getPoints()[i]->x());
+        EXPECT_DOUBLE_EQ(j, Trace.getPoints()[i]->y());
+        EXPECT_FLOAT_EQ(j, Trace.getPoints()[i]->altitude());
         j += 11;
     }
 }
