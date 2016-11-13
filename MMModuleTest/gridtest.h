@@ -17,50 +17,59 @@ protected:
     // Objects declared here can be used by all tests in the test case for Point.
 };
 
-TEST_F(GridTest, Constructeurs)
+TEST_F(GridTest, Constructor)
 {
-    Grid myGrid;
-    EXPECT_EQ(0, myGrid.m_road.size());
+    Grid grid;
+    EXPECT_EQ(0, grid.getNoOfRoads());
+    EXPECT_EQ(0, grid.getNoOfPoints());
 }
 
-TEST_F(GridTest, SetZone)
+TEST_F(GridTest, setBoundingBox)
 {
-    Grid myGrid;
-    myGrid.setZone(1,8,3,50);
-    EXPECT_EQ(-199, myGrid.m_xMin);
-    EXPECT_EQ(208, myGrid.m_xMax);
-    EXPECT_EQ(-197, myGrid.m_yMin);
-    EXPECT_EQ(250, myGrid.m_yMax);
-}
-
-TEST_F(GridTest, LoadRoadFromFile)
-{
-    Grid myGrid;
-    myGrid.setZone(0,100000000,0,10000000000);
-    myGrid.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
-    EXPECT_EQ(2, myGrid.m_road.size());
-}
-
-TEST_F(GridTest, LoadPointsFromFile)
-{
-    Grid myGrid;
-    myGrid.setZone(0,std::numeric_limits<double>::max(),0,std::numeric_limits<double>::max());
-    myGrid.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
-    EXPECT_EQ(10, myGrid.m_road[0]->getListOfPoints().size());
-    EXPECT_EQ(4, myGrid.m_road[1]->getListOfPoints().size());
-
-    EXPECT_DOUBLE_EQ(1534446.378026439808309, myGrid.m_road[0]->getListOfPoints()[0]->x());
-    EXPECT_DOUBLE_EQ(330422.365724511211738, myGrid.m_road[0]->getListOfPoints()[0]->y());
+    Grid grid;
+    grid.setBoundingBox(10.0,418.0,30.012,50.2);
+    EXPECT_DOUBLE_EQ(10.0, grid.xMin());
+    EXPECT_DOUBLE_EQ(418.0, grid.xMax());
+    EXPECT_DOUBLE_EQ(30.012, grid.yMin());
+    EXPECT_DOUBLE_EQ(50.2, grid.yMax());
 }
 
 TEST_F(GridTest, InFootPrint)
 {
     Grid myGrid;
-    myGrid.setZone(1,8,3,50);
+    myGrid.setBoundingBox(1,8,3,50);
     ASSERT_TRUE(myGrid.inFootPrint(3,12));
     ASSERT_TRUE(myGrid.inFootPrint(1,48));
     ASSERT_FALSE(myGrid.inFootPrint(-200,12));
     ASSERT_FALSE(myGrid.inFootPrint(10,252));
+}
+
+TEST_F(GridTest, LoadRoadFromFile)
+{
+    Grid grid;
+    grid.readFromCSV("../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv");
+    EXPECT_EQ(2, grid.getNoOfRoads());
+    EXPECT_EQ(4, grid.getNoOfPoints());
+}
+
+TEST_F(GridTest, LoadPointsFromFile)    // TODO revoir le test
+{
+/*    Grid myGrid;
+    myGrid.setBoundingBox(0,std::numeric_limits<double>::max(),0,std::numeric_limits<double>::max());
+    myGrid.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
+    EXPECT_EQ(10, myGrid.m_road[0]->getListOfPoints().size());
+    EXPECT_EQ(4, myGrid.m_road[1]->getListOfPoints().size());
+
+    EXPECT_DOUBLE_EQ(1534446.378026439808309, myGrid.m_road[0]->getListOfPoints()[0]->x());
+    EXPECT_DOUBLE_EQ(330422.365724511211738, myGrid.m_road[0]->getListOfPoints()[0]->y());*/
+}
+
+TEST_F(GridTest, PointsHaveNoDuplicate)
+{
+    Grid grid;
+    grid.readFromCSV("../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv");
+    // input has 2 roads with 5 differents points in total, 2 are nodes, one node belongs to 2 roads
+    //grid.
 }
 
 

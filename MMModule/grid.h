@@ -6,7 +6,25 @@
 
 #include <QString>
 #include <vector>
-using namespace std;
+#include <unordered_map>
+
+struct hashFunc {
+    size_t operator()(const PointRoad &p) const{
+    size_t h1 = std::hash<double>()(p.x());
+    size_t h2 = std::hash<double>()(p.y());
+    return h1 ^ (h2 << 1);
+    }
+};
+
+struct equalsFunc{
+  bool operator()( const PointRoad& p1, const PointRoad& p2) const{
+    return p1.samePointAs(p2);
+  }
+};
+
+typedef unordered_map<PointRoad, int, hashFunc, equalsFunc> ExtremityPointMap; // for all edges points
+typedef unordered_map<long, Road> AllRoadMap;   // for all roads
+
 class Grid {
 public:
     Grid();
@@ -19,7 +37,7 @@ public:
      * @param yMin Coordinate yMin of a track
      * @param yMax Coordinate yMax of a track
      */
-    void setZone(double xMin,double xMax,double yMin,double yMax);
+    void setBoundingBox(double xMin,double xMax,double yMin,double yMax);
 
     /**
      * @brief readFromCSV Reads a csv file and inserts info into the corresponding attributs
@@ -30,11 +48,7 @@ public:
     /**
      * @brief addRoad Creates a new road and inserts it in m_road
      */
-    void addRoad(vector<vector<double> > listOfCoordinates, long edgeId, long fromNodeId, long toNodeId);
-
-    std::vector<Road*> getListOfRoad() const;
-
-    std::vector<Road*> m_road;
+    void addRoad(const vector<vector<double> > & listOfCoordinates, long edgeId);
 
     /**
      * @brief inFootPrint Test if a point is in the defined area of a track
@@ -44,14 +58,29 @@ public:
      */
     bool inFootPrint(double x,double y);
 
-    /**
-     * @brief Parametres of the square
-     */
+    void setDistance(PointGPS &p, Road &r);
+
+    void buildKDTree();
+
+    void outputInfos();
+
+    // accessors
+    int getNoOfRoads() const { return m_mapOfAllRoads.size();}
+    int getNoOfPoints() const { return m_vectorOfPoints.size();}
+    double xMin() const { return m_xMin;}
+    double xMax() const { return m_xMax;}
+    double yMin() const { return m_yMin;}
+    double yMax() const { return m_yMax;}
+protected:
+    std::string m_gridFullName;
+    ExtremityPointMap m_mapOfExtPoints; // temporary container during csv loading
+    AllRoadMap m_mapOfAllRoads;
+    std::vector<PointRoad> m_vectorOfPoints;
+
     double m_xMin;
     double m_xMax;
     double m_yMin;
     double m_yMax;
-
 };
 
 #endif // GRID_H

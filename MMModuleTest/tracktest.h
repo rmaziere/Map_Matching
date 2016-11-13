@@ -77,10 +77,10 @@ TEST_F(TrackTest, includingRectangle)
     for (int i = 4; i < 11; i++) {
         Trace5.updateBox(i, i+2);
     }
-    EXPECT_EQ(4, Trace5.m_xmin);
-    EXPECT_EQ(10, Trace5.m_xmax);
-    EXPECT_EQ(6, Trace5.m_ymin);
-    EXPECT_EQ(12, Trace5.m_ymax);
+    EXPECT_EQ(4, Trace5.m_xMin);
+    EXPECT_EQ(10, Trace5.m_xMax);
+    EXPECT_EQ(6, Trace5.m_yMin);
+    EXPECT_EQ(12, Trace5.m_yMax);
 }
 
 TEST_F(TrackTest, spaceFilterY)

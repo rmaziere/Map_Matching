@@ -12,6 +12,8 @@
 #include <string>
 #include <vector>
 
+#define DISTANCE_THRESHOLD 200  // from paper
+
 /**
  * @brief The Track class
  */
@@ -19,10 +21,10 @@ class Track {
 public:
     Track()
         : //m_points(0),
-          m_xmin(std::numeric_limits<double>::max()),
-          m_xmax(0.0),
-          m_ymin(std::numeric_limits<double>::max()),
-          m_ymax(0.0)
+          m_xMin(std::numeric_limits<double>::max()),
+          m_xMax(0.0),
+          m_yMin(std::numeric_limits<double>::max()),
+          m_yMax(0.0)
     {
     }
     virtual ~Track();
@@ -67,6 +69,12 @@ public:
      */
     void updateBox(double x, double y);
 
+    /**
+     * @brief applyThresholdToBox apply a threshold to bounding box once
+     * the data file has been read
+     */
+    void applyThresholdToBox();
+
     void outputInfos();
 
 
@@ -79,19 +87,19 @@ public:
 
 
     /** TODO protected
-     * @brief Parametres of the hold
+     * @brief Parametres of the bounding box
      */
-    double m_xmin;
-    double m_xmax;
-    double m_ymin;
-    double m_ymax;
+    double m_xMin;
+    double m_xMax;
+    double m_yMin;
+    double m_yMax;
 
 protected:
     /**
      * @brief m_points Vector where points of the Track are saved
      */
     std::vector<PointGPS*> m_points;
-    //Point m_southWest, m_northEst;  // describe englobing box
+    //Point m_southWest, m_northEst;  // describe englobing box  (could replace the 4 coordinates ?)
     std::string m_trackFullName;
 
 };

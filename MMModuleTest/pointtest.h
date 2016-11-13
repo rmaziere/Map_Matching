@@ -29,12 +29,6 @@ TEST_F(PointTest, samePoint)
     Point p2(1 + 2 * EPS, 0.0);
     EXPECT_TRUE(p0.samePointAs(p1));
     EXPECT_FALSE(p0.samePointAs(p2) == true);
-
-    /*Point A(0,0);
-    Point B(0,10);
-    Point C(1,11);
-    EXPECT_EQ(1.41421,C.distance2ptsegment(A,B));
-    EXPECT_EQ(10,A.distance2pt(B));*/
 }
 
 TEST_F(PointTest, distanceToPoint)
@@ -63,7 +57,7 @@ TEST_F(PointTest, distanceToSegment)
     EXPECT_DOUBLE_EQ(p1.distanceToSegment(p0, p_up), 0.0);
     EXPECT_DOUBLE_EQ(p0.distanceToSegment(p1, p_up), 1.0);
     EXPECT_DOUBLE_EQ(p0.distanceToSegment(p_up, p1), 1.0);
-    //EXPECT_DOUBLE_EQ(p0.distanceToSegment(p_diag2, p0), 0.0);
+    //EXPECT_FLOAT_EQ(p0.distanceToSegment(p_diag2, p0), 0.0);      // error if double or float comparison
     EXPECT_DOUBLE_EQ(p0.distanceToSegment(p0, p_diag2), 0.0);
 }
 

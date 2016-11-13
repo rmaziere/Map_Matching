@@ -3,23 +3,41 @@
 #include <math.h>
 #include <vector>
 
-#include "distance.h"
 #include "file.h"
 #include "grid.h"
 #include "myexception.h"
 #include "pointGPS.h"
-#include "sauvegarde.h"
 #include "track.h"
 
 using namespace std;
 
-
+void dev_grid() {
+    QString gridFile= "../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv";
+    Grid grid;
+    grid.readFromCSV(gridFile);
+    grid.outputInfos();
+}
 
 void dev_all() {
+    // grid.readFromCSV("../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv");
+    QString trackFile= "../Data/Seattle/mini_start_track.csv";
+    QString gridFile= "../Data/Seattle/mini_start_network.csv";
+    int test= 1;
+    switch(test) {
+    case 1:
+        trackFile= "../Data/Seattle/useful_all_track.csv";
+        gridFile= "../Data/Seattle/useful_all_network.csv";
+    }
+
     Track track;
     Grid grid;
-    track.readFromCSV("../Data/Seattle/mini_start_track.csv");
+    track.readFromCSV(trackFile);
     track.outputInfos();
+
+    grid.setBoundingBox(track.m_xMin, track.m_xMax, track.m_yMin, track.m_yMax);
+    //grid.readFromCSVSeattle(gridFile);
+    grid.readFromCSV(gridFile);
+    grid.outputInfos();
 
 }
 
@@ -61,5 +79,6 @@ void dev_openFile() {
 
 int main(/*int argc, char *argv[]*/)
 {
-    dev_all();
+    dev_grid();
+    //dev_all();
 }

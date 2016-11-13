@@ -18,7 +18,11 @@ SOURCES += main.cpp \
     road.cpp \
     solver.cpp \
     grid.cpp \
-    pointroad.cpp
+    pointroad.cpp \
+    KDTreeAlgos/box.cpp \
+    KDTreeAlgos/boxnode.cpp \
+    KDTreeAlgos/kdtree.cpp \
+    emissionprobability.cpp
 
 
 HEADERS += \
@@ -32,5 +36,9 @@ HEADERS += \
     myexception.h \
     solver.h \
     grid.h \
-    pointroad.h
+    pointroad.h \
+    KDTreeAlgos/box.h \
+    KDTreeAlgos/boxnode.h \
+    KDTreeAlgos/kdtree.h \
+    emissionprobability.h
 

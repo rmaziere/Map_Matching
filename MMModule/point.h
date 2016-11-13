@@ -1,10 +1,14 @@
-#ifndef POINT_H
+﻿#ifndef POINT_H
 #define POINT_H
+
+#include <iostream>
 
 #define EPS 1e-12 // for double comparisons
 
 class Point {
 public:
+    Point() {} // should never be used !!
+
     /**
      * @brief Constructor for GPS points
      * @param x
@@ -15,6 +19,8 @@ public:
         , m_y(y)
     {
     }
+
+    virtual ~Point() {}
 
     /**
      * @brief samePointAs Check if two points share the same coordinates
@@ -38,11 +44,15 @@ public:
      */
     double distanceToSegment(const Point& p1, const Point& p2) const;
 
+    virtual std::string infos() const;
+
     // accessors
     double x() const;
-    void setX(double x);
+    void setx(double x);
     double y() const;
-    void setY(double y);
+    void sety(double y);
+    // accessor for kdtree
+    double x(int dim) const;    // return m_x or m_y
 
 protected:
     double m_x, m_y; // coordinates in metric system

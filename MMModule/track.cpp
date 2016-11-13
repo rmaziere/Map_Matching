@@ -8,10 +8,9 @@ using namespace std;
 
 Track::~Track()
 {
-    /* TODO useful ?
-    for (auto i = 0; i < m_points.size(); ++i) {
+    for (uint i = 0; i < m_points.size(); ++i) {
         delete m_points[i];
-    }*/
+    }
     m_points.clear();
 }
 
@@ -173,7 +172,7 @@ void Track::readFromCSV(QString filename)
             continue;
         }
     }
-
+    applyThresholdToBox();
     if (DEBUG_READCSV) cout << "Le fichier " << filename.toStdString() << " a été lu." << endl;
 }
 
@@ -229,15 +228,23 @@ void Track::addPoint(double x, double y, float altitude, unsigned int timeStamp)
 
 void Track::updateBox(double x, double y)
 {
-    m_xmin = std::min(m_xmin,x);
-    m_xmax = std::max(m_xmax,x);
-    m_ymin = std::min(m_ymin,y);
-    m_ymax = std::max(m_ymax,y);
+    m_xMin = std::min(m_xMin,x);
+    m_xMax = std::max(m_xMax,x);
+    m_yMin = std::min(m_yMin,y);
+    m_yMax = std::max(m_yMax,y);
+}
+
+void Track::applyThresholdToBox()
+{
+    m_xMin-= DISTANCE_THRESHOLD;
+    m_yMin-= DISTANCE_THRESHOLD;
+    m_xMax+= DISTANCE_THRESHOLD;
+    m_yMax+= DISTANCE_THRESHOLD;
 }
 
 void Track::outputInfos()
 {
     cout << "Track " << m_trackFullName << " contains: \n\t" << m_points.size() << " points" << "\n\tin box:";
-    cout << "\n\t\t min (x,y) (" << m_xmin << ", " << m_ymin << ")";
-    cout << "\n\t\t max (x,y) (" << m_xmax << ", " << m_ymax << ")" << endl;
+    cout << "\n\t\t min (x,y) (" << m_xMin << ", " << m_yMin << ")";
+    cout << "\n\t\t max (x,y) (" << m_xMax << ", " << m_yMax << ")" << endl;
 }

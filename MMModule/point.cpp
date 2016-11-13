@@ -1,6 +1,8 @@
 #include "point.h"
 #include <algorithm>
 #include <math.h>
+#include <iomanip>
+#include <sstream>
 
 bool Point::samePointAs(const Point &p) const
 {
@@ -25,14 +27,27 @@ double Point::distanceToSegment(const Point& a, const Point& b) const
     }
 }
 
+
+std::string Point::infos() const
+{
+    std::stringstream ss;
+    ss << "(" << std::fixed << std::setprecision(2) << m_x << ", " << m_y << ")";
+    return ss.str();
+}
+
 double Point::y() const
 {
     return m_y;
 }
 
-void Point::setY(double y)
+void Point::sety(double y)
 {
     m_y = y;
+}
+
+double Point::x(int dim) const
+{
+    return (dim==0)?m_x:m_y;
 }
 
 double Point::x() const
@@ -40,7 +55,7 @@ double Point::x() const
     return m_x;
 }
 
-void Point::setX(double x)
+void Point::setx(double x)
 {
     m_x = x;
 }
