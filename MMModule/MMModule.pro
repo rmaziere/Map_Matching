@@ -1,5 +1,6 @@
 QT += core
 QT += gui
+QT += widgets
 
 CONFIG += c++11
 
@@ -23,7 +24,8 @@ SOURCES += main.cpp \
     KDTreeAlgos/box.cpp \
     KDTreeAlgos/boxnode.cpp \
     KDTreeAlgos/kdtree.cpp \
-    emissionprobability.cpp
+    emissionprobability.cpp \
+    loading.cpp
 
 
 HEADERS += \
@@ -41,5 +43,6 @@ HEADERS += \
     KDTreeAlgos/box.h \
     KDTreeAlgos/boxnode.h \
     KDTreeAlgos/kdtree.h \
-    emissionprobability.h
+    emissionprobability.h \
+    loading.h
 

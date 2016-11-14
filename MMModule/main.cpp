@@ -9,6 +9,8 @@
 #include "pointGPS.h"
 #include "track.h"
 
+#include "loading.h"
+
 using namespace std;
 
 void dev_grid() {
@@ -77,8 +79,15 @@ void dev_openFile() {
 }
 
 
-int main(/*int argc, char *argv[]*/)
+int main(int argc, char *argv[])
 {
-    dev_grid();
+    //dev_grid();
     //dev_all();
+    QApplication app(argc, argv);
+
+    Loading fenetre;
+    // Affichage de la fenêtre
+    fenetre.show();
+
+    return app.exec();
 }
