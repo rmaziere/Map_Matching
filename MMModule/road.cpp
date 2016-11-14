@@ -24,8 +24,4 @@ long Road::getm_edgeId()
 }
 
 
-long Road::getm_fromNodeId()
-{
 
-    return m_fromNodeId;
-}

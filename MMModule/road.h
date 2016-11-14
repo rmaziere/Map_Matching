@@ -24,7 +24,7 @@ public:
 
     vector<Point*> getListOfPoints() const;
     long getm_edgeId();
-    long getm_fromNodeId();
+
 
     void outputInfos() const;
 

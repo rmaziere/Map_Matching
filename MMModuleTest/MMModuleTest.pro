@@ -4,7 +4,7 @@ QT += gui
 TEMPLATE = app
 CONFIG += c++11
 CONFIG -= console app_bundle
-
+QMAKE_CXXFLAGS += -std=c++11
 LIBS += -lgtest -lpthread
 
 SOURCES += main.cpp \
