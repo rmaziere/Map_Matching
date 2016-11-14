@@ -22,8 +22,9 @@ struct equalsFunc{
   }
 };
 
-typedef unordered_map<PointRoad, int, hashFunc, equalsFunc> ExtremityPointMap; // for all edges points
-typedef unordered_map<long, Road> AllRoadMap;   // for all roads
+typedef std::unordered_map<PointRoad, int, hashFunc, equalsFunc> ExtremityPointMap; // for all edges points
+typedef std::unordered_map<long, Road> AllRoadMap;
+//typedef std::unordered_map<long, Road&> AllRoadMap;   // for all roads (& do not recreate object)
 
 class Grid {
 public:
@@ -48,7 +49,7 @@ public:
     /**
      * @brief addRoad Creates a new road and inserts it in m_road
      */
-    void addRoad(const vector<vector<double> > & listOfCoordinates, long edgeId);
+    void addRoad(const std::vector<std::vector<double> > & listOfCoordinates, long edgeId);
 
     /**
      * @brief inFootPrint Test if a point is in the defined area of a track
@@ -62,7 +63,11 @@ public:
 
     void buildKDTree();
 
+    void buildMarkovMatrix();
+
+    // test functions
     void outputInfos();
+    AllRoadMap::iterator getRoadEntry(long id); // used to update neighbors (for markovmatrix)
 
     // accessors
     int getNoOfRoads() const { return m_mapOfAllRoads.size();}

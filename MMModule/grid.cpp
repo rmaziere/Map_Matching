@@ -192,25 +192,29 @@ void Grid::addRoad(const vector<vector<double> > &listOfCoordinates, long edgeId
     for (const auto& coord: listOfCoordinates) {
         newPoint= true;
         PointRoad p(coord[0], coord[1], (curPoint==0 || curPoint==n-1));
+        PointRoad *pp= &p;
         if (curPoint==0 || curPoint==n-1) { // for extremities, check if road already exists, if so use it
             if (m_mapOfExtPoints.count(p)) {
                 ExtremityPointMap::const_iterator got= m_mapOfExtPoints.find(p);
                 existingPointId= got->second;
                 if (DEBUG_ADDROAD) p.outputInfos();
                 newPoint= false;
-                p= m_vectorOfPoints[existingPointId];       // check if not a new point
+                pp= &m_vectorOfPoints[existingPointId];       // TODO error check if not a new point
+            } else {
+                pp= &p;
             }
         }
-        p.updateBelongToRoad(edgeId);
+        pp->updateBelongToRoad(edgeId);
         if (newPoint) {
             p.setid(m_vectorOfPoints.size());
             m_vectorOfPoints.push_back(std::move(p));
             if (p.isNode()) m_mapOfExtPoints[p]= p.id();
         }
-        road.addPoint(p.id());
+        road.addPoint(pp->id());
         ++curPoint;
     }
     m_mapOfAllRoads[road.edgeId()]= road;
+    //m_mapOfAllRoads.insert({road.edgeId(), std::move(road)});
 }
 
 void Grid::outputInfos()
@@ -218,6 +222,12 @@ void Grid::outputInfos()
     cout << "Network " << m_gridFullName << " contains: \n\t" << m_mapOfAllRoads.size() << " roads" << endl;
     cout << "\twith a grand total of " << m_vectorOfPoints.size() << " points" << endl;
     cout << "\tof which " << m_mapOfExtPoints.size() << " are extremities." << endl;
+}
+
+AllRoadMap::iterator Grid::getRoadEntry(long id)
+{
+    AllRoadMap::iterator got= m_mapOfAllRoads.find(id);
+    return got;
 }
 
 bool Grid::inFootPrint(double x, double y)
@@ -239,5 +249,33 @@ void Grid::setDistance(PointGPS &p, Road &r)
 void Grid::buildKDTree()
 {
 
+}
+
+void Grid::buildMarkovMatrix()
+{
+    // check all points and for those who are a node (extremity of a road) update all the roads
+    for (const auto &p : m_vectorOfPoints) {
+        if (p.isNode()) {
+            const vector<long> &listOfRoadId= p.vectorOfRoadId();
+            for (const auto roadId: listOfRoadId) {
+                    AllRoadMap::iterator got=getRoadEntry(roadId);
+                    for (const auto neighborId: listOfRoadId) {
+                        got->second.addNeighbor(neighborId);
+                        cout << "update neighbour " << endl;
+                        got->second.outputInfos();
+                    }
+
+            }
+        }
+    }
+    // verification
+
+    bool DEBUG= true;
+    if (DEBUG) {
+        cout << "Resutat: " << endl;
+        for (auto &it : m_mapOfAllRoads) {
+           it.second.outputInfos();
+        }
+    }
 }
 

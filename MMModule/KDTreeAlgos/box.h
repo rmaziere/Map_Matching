@@ -12,11 +12,6 @@ public:
 
     double distanceToPoint(const Point &point);
 
-    // accessors
-    const Point *low() const { return &m_low;}
-    const Point *high() const { return &m_high;}
-
-protected:
     Point m_low;
     Point m_high;
 };

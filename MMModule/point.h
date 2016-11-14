@@ -53,6 +53,7 @@ public:
     void sety(double y);
     // accessor for kdtree
     double x(int dim) const;    // return m_x or m_y
+    void setx(int dim, double value);
 
 protected:
     double m_x, m_y; // coordinates in metric system

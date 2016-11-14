@@ -7,6 +7,8 @@
 #include "../MMModule/track.h"
 #include "gtest/gtest.h"
 
+using namespace std;
+
 class TrackTest : public ::testing::Test {
 protected:
     TrackTest() {}

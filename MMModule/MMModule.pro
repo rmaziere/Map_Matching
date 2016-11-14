@@ -3,6 +3,8 @@ QT += gui
 
 CONFIG += c++11
 
+QMAKE_CXXFLAGS += -std=c++11
+
 TARGET = sandbox
 CONFIG -= console
 CONFIG -= app_bundle
@@ -22,7 +24,8 @@ SOURCES += main.cpp \
     KDTreeAlgos/box.cpp \
     KDTreeAlgos/boxnode.cpp \
     KDTreeAlgos/kdtree.cpp \
-    emissionprobability.cpp
+    emissionprobability.cpp \
+    KDTreeAlgos/kdtreeviewer.cpp
 
 
 HEADERS += \
@@ -40,5 +43,6 @@ HEADERS += \
     KDTreeAlgos/box.h \
     KDTreeAlgos/boxnode.h \
     KDTreeAlgos/kdtree.h \
-    emissionprobability.h
+    emissionprobability.h \
+    KDTreeAlgos/kdtreeviewer.h
 

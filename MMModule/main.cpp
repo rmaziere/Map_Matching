@@ -8,13 +8,14 @@
 #include "myexception.h"
 #include "pointGPS.h"
 #include "track.h"
-
+#include <limits.h>
 using namespace std;
 
 void dev_grid() {
     QString gridFile= "../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv";
     Grid grid;
     grid.readFromCSV(gridFile);
+    grid.buildMarkovMatrix();
     grid.outputInfos();
 }
 
@@ -81,4 +82,5 @@ int main(/*int argc, char *argv[]*/)
 {
     dev_grid();
     //dev_all();
+
 }

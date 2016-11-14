@@ -48,8 +48,8 @@ TEST_F(GridTest, LoadRoadFromFile)
 {
     Grid grid;
     grid.readFromCSV("../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv");
-    EXPECT_EQ(2, grid.getNoOfRoads());
-    EXPECT_EQ(4, grid.getNoOfPoints());
+    EXPECT_EQ(3, grid.getNoOfRoads());
+    EXPECT_EQ(5, grid.getNoOfPoints());
 }
 
 TEST_F(GridTest, LoadPointsFromFile)    // TODO revoir le test
@@ -64,12 +64,15 @@ TEST_F(GridTest, LoadPointsFromFile)    // TODO revoir le test
     EXPECT_DOUBLE_EQ(330422.365724511211738, myGrid.m_road[0]->getListOfPoints()[0]->y());*/
 }
 
-TEST_F(GridTest, PointsHaveNoDuplicate)
+TEST_F(GridTest, Neighbours)
 {
     Grid grid;
     grid.readFromCSV("../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv");
-    // input has 2 roads with 5 differents points in total, 2 are nodes, one node belongs to 2 roads
-    //grid.
+    grid.buildMarkovMatrix();
+    AllRoadMap::iterator got= grid.getRoadEntry(1000);
+    EXPECT_EQ(got->second.getNoOfNeighbors(), 2);
+    got= grid.getRoadEntry(2000);
+    EXPECT_EQ(got->second.getNoOfNeighbors(), 3);
 }
 
 

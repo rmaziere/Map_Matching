@@ -53,10 +53,28 @@ KDTree::KDTree(std::vector<Point> &points)
         np= pthi-ptlo+1;                                // number of points in the subdivision
         kk= (np-1)/2;                                   // index of the last point on left (boundary point)
 
-        partition(kk, hp, np, cp);
+        (void) partition(kk, hp, np, cp);
+        high= m_arrayOfBoxes[tmom].m_high;
+        low= m_arrayOfBoxes[tmom].m_low;
+        high.setx(tdim, m_arrayOfCoordinates[tdim*m_noOfPoints+ hp[kk]]);
+        low.setx(tdim, m_arrayOfCoordinates[tdim*m_noOfPoints+ hp[kk]]);
+        m_arrayOfBoxes[++jbox]= BoxNode(m_arrayOfBoxes[tmom].m_low, high, tmom, 0,0,ptlo, ptlo+kk);
+        m_arrayOfBoxes[++jbox]= BoxNode(low, m_arrayOfBoxes[tmom].m_high, tmom, 0,0,ptlo+kk+1, pthi);
+        m_arrayOfBoxes[tmom].m_daughterBox1= jbox-1;
+        m_arrayOfBoxes[tmom].m_daughterBox2= jbox;
 
-        nowtask= 0;
+        if (kk>1) {
+            taskmom[++nowtask]= jbox-1;
+            taskdim[nowtask]= (tdim+1)%2;
+        }
+        if (np-kk > 3) {
+            taskmom[++nowtask]= jbox;
+            taskdim[nowtask]= (tdim+1)%2;
+        }
+        //nowtask= 0;
     }
+    for (j=0; j<m_noOfPoints; j++) m_vectorOfReversedPointIndexes[m_vectorOfPointIndexes[j]]= j;
+    delete [] m_arrayOfCoordinates;
 }
 
 KDTree::~KDTree()
@@ -100,4 +118,23 @@ int KDTree::partition(const int k, int *idx, int n, double *arr)
             if (j <= k) l= i;
         }
     }
+}
+
+double KDTree::distance(int idxOfPoint1, int idxOfPoint2)
+{
+    if (idxOfPoint1==idxOfPoint2) return BIG;
+    else return m_vectorOfPoints[idxOfPoint1].distanceToPoint(m_vectorOfPoints[idxOfPoint2]);
+}
+
+int KDTree::locate(const Point &p)
+{
+    int nb, d1, jdim;
+    nb= jdim =0 ;   // start with the root box
+    while (m_arrayOfBoxes[nb].m_daughterBox1) { // as far as possible down the tree
+        d1= m_arrayOfBoxes[nb].m_daughterBox1;
+        if (p.x(jdim) <= m_arrayOfBoxes[d1].m_high.x(jdim)) nb= d1;
+        else nb= m_arrayOfBoxes[nb].m_daughterBox2;
+        jdim= (++jdim) % 2;   // increment dimension cyclically
+    }
+    return nb;
 }
