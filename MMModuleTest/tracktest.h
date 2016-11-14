@@ -60,18 +60,29 @@ TEST_F(TrackTest, DeletePoint)
     EXPECT_FLOAT_EQ(6, Trace.getPoints()[5]->altitude());
     EXPECT_EQ(9, Trace.getPoints().size());
 }
-/*
-TEST_F(TrackTest, readFromCSV)
+
+TEST_F(TrackTest, readFromCSVen)
 {
 
     Track Trace = Track();
     Trace.readFromCSV("../Data/Unit_tests_data_set/readFromCsvExemple.csv");
-    EXPECT_DOUBLE_EQ(1686462.894975865026936, Trace.getPoints()[0]->m_x);
-    EXPECT_DOUBLE_EQ(246133.881616829748964, Trace.getPoints()[0]->m_y);
-    EXPECT_FLOAT_EQ(47.6675, Trace.getPoints()[1]->getLatitude());
-    EXPECT_FLOAT_EQ(0, Trace.getPoints()[1]->getAltitude());
+    EXPECT_DOUBLE_EQ(1686462.894975865026936, Trace.getPoints()[0]->x());
+    EXPECT_DOUBLE_EQ(246133.881616829748964, Trace.getPoints()[0]->y());
+    //EXPECT_FLOAT_EQ(47.6675, Trace.getPoints()[1]->getLatitude());
+    //EXPECT_FLOAT_EQ(0, Trace.getPoints()[1]->getAltitude());
 }
-*/
+
+TEST_F(TrackTest, readFromCSVfr)
+{
+
+    Track Trace = Track();
+    Trace.readFromCSV("../Data/Unit_tests_data_set/readFromCsvExempleFr.csv");
+    EXPECT_DOUBLE_EQ(570487.228190631256439, Trace.getPoints()[0]->x());
+    EXPECT_DOUBLE_EQ(6231740.287864646874368, Trace.getPoints()[0]->y());
+    //EXPECT_FLOAT_EQ(47.6675, Trace.getPoints()[1]->getLatitude());
+    //EXPECT_FLOAT_EQ(0, Trace.getPoints()[1]->getAltitude());
+}
+
 TEST_F(TrackTest, includingRectangle)
 {
 

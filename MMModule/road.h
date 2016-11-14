@@ -21,7 +21,13 @@ public:
     void addPoint(int pointId);
     void addNeighbor(long roadId);
 
+
+    std::vector<Point*> getListOfPoints() const;
+    long getm_edgeId();
+
+
     void outputInfos() const;
+
 
     // accessors
     long edgeId() const {return m_edgeId;}

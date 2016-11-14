@@ -27,7 +27,6 @@ double Point::distanceToSegment(const Point& a, const Point& b) const
     }
 }
 
-
 std::string Point::infos() const
 {
     std::stringstream ss;

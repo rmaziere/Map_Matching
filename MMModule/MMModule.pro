@@ -1,5 +1,6 @@
 QT += core
 QT += gui
+QT += widgets
 
 CONFIG += c++11
 
@@ -21,6 +22,7 @@ SOURCES += main.cpp \
     solver.cpp \
     grid.cpp \
     pointroad.cpp \
+    loading.cpp \
     KDTreeAlgos/box.cpp \
     KDTreeAlgos/boxnode.cpp \
     KDTreeAlgos/kdtree.cpp \
@@ -40,6 +42,7 @@ HEADERS += \
     solver.h \
     grid.h \
     pointroad.h \
+    loading.h \
     KDTreeAlgos/box.h \
     KDTreeAlgos/boxnode.h \
     KDTreeAlgos/kdtree.h \
