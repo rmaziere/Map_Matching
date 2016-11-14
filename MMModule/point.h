@@ -3,7 +3,19 @@
 
 #include <iostream>
 
-#define EPS 1e-12 // for double comparisons
+/**
+  * @file point.h
+  * @brief Class Point
+  */
+
+/**
+  * @brief Used to compare doubles
+  */
+#define EPS 1e-12
+
+/**
+ * @brief The Point class
+ */
 
 class Point {
 public:
@@ -19,25 +31,27 @@ public:
         , m_y(y)
     {
     }
-
+    /**
+     * @brief Point Class's Destructor
+     */
     virtual ~Point() {}
 
     /**
-     * @brief samePointAs Check if two points share the same coordinates
+     * @brief Check if two points share the same coordinates
      * @param p Point to compare
      * @return true or false
      */
     bool samePointAs(const Point& p) const;
 
     /**
-     * @brief distanceToPoint Calculate distance between two points
-     * @param p Point
-     * @return euclidian distance
+     * @brief Calculate distance between two points
+     * @param p Point to compare
+     * @return Euclidian distance
      */
     double distanceToPoint(const Point& p) const;
 
     /**
-     * @brief distanceToSegment Compute the distance between a point and a segment
+     * @brief Compute the distance between a point and a segment
      * @param p1 A point corresponding to one extremity of the segment
      * @param p2 The other extremity
      * @return Value of distance
@@ -46,16 +60,31 @@ public:
 
     virtual std::string infos() const;
 
-    // accessors
-    double x() const;
-    void setx(double x);
-    double y() const;
-    void sety(double y);
-    // accessor for kdtree
-    double x(int dim) const;    // return m_x or m_y
+    /**
+     * @name Setters and getters of x & y
+     */
+    //@{
+    double x() const;       /**< x getter */
+    void setx(double x);    /**< x setter */
+    double y() const;       /**< y getter */
+    void sety(double y);    /**< y setter */
+    //@}
+
+    /**
+     * @brief x the accessor for the KDtree
+     * @param dim, the value must be 0 for x and 1 for y
+     * @return m_x or m_y depending on the dim value
+     */
+    double x(int dim) const;
 
 protected:
-    double m_x, m_y; // coordinates in metric system
+    /**
+     * @name The point's coordinates
+     */
+    //@{
+    double m_x; /**< x coordinate*/
+    double m_y; /**< y coordinate*/
+    //@}
 };
 
 #endif // POINT_H

@@ -1,6 +1,10 @@
 #ifndef FILE_H
 #define FILE_H
 
+/**
+  * @file file.h
+  */
+
 #include <QFile>
 #include <QFileDialog>
 #include <QString>
@@ -18,12 +22,11 @@ class File {
 public:
     /**
      * @brief The File constructor
-     * @param none
      */
     File();
 
     /**
-     * @brief The split function to split the path file to filePath, fileName, fileExtension
+     * @brief The split function to split the path file to filePath, fileName, fileExtension attributes
      * @param The Global file's path
      */
     int splitPath(QString fileGlobalPath);
@@ -36,7 +39,6 @@ public:
 
     /**
      * @brief The UI to select the file's path to save
-     * @param none
      */
     int whereSave();
 
@@ -52,9 +54,14 @@ public:
      */
     virtual ~File() {}
 
-    QStringList filePath;
-    QStringList fileName;
-    QStringList fileExtension;
+    /**
+     * @name All the informations of the files list
+     */
+    //@{
+    QStringList filePath;       /**< The path of files*/
+    QStringList fileName;       /**< The name of files*/
+    QStringList fileExtension;  /**< The extension of files*/
+    //@}
 };
 
 #endif // FILE_H

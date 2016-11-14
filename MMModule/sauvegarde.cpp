@@ -3,14 +3,7 @@
 //Utilisation du namespace std pour standard
 using namespace std;
 
-//Fonction de sauvegarde en CSV
-Sauvegarde::Sauvegarde()
-{
-}
-
-int Sauvegarde::sauvegarderCSV(QString cheminAcces, Track maTrack)
-{
-
+int Sauvegarde::sauvegarderCSV(QString cheminAcces, Track maTrack){
     // Répertoire de l'utilisateur
     QString home = QDir::homePath();
     // Répertoire où on va enregistrer nos fichiers
@@ -55,8 +48,4 @@ int Sauvegarde::sauvegarderCSV(QString cheminAcces, Track maTrack)
 
     //return app.exec();
     return 0;
-}
-
-Sauvegarde::~Sauvegarde()
-{
 }
