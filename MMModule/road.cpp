@@ -50,3 +50,16 @@ vector<Point*> Road::getListOfPoints() const
 {
     return listOfPoints;
 }
+
+long Road::getm_edgeId()
+{
+
+    return m_edgeId;
+}
+
+
+long Road::getm_fromNodeId()
+{
+
+    return m_fromNodeId;
+}

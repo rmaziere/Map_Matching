@@ -25,6 +25,9 @@ TEST_F(GridTest, LoadRoadFromFile)
     grid myGrid;
     myGrid.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
     EXPECT_EQ(2, myGrid.m_road.size());
+    std::cout<< myGrid.m_road[0]->getm_edgeId();
+    EXPECT_EQ(883991900000, myGrid.m_road[0]->getm_edgeId());
+    EXPECT_EQ(883991900001, myGrid.m_road[1]->getm_edgeId());
 }
 
 TEST_F(GridTest, LoadPointsFromFile)

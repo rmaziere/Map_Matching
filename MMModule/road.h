@@ -28,6 +28,8 @@ public:
     double distanceTo(Point);
 
     vector<Point*> getListOfPoints() const;
+    long getm_edgeId();
+    long getm_fromNodeId();
 
 protected:
     long m_edgeId;
