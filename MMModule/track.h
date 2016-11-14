@@ -12,6 +12,7 @@
 #include <string>
 #include <vector>
 
+
 #define DISTANCE_THRESHOLD 200  // from paper
 
 /**
