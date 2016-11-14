@@ -52,9 +52,14 @@ public:
      */
     virtual ~File() {}
 
-    QStringList filePath;
-    QStringList fileName;
-    QStringList fileExtension;
+    /**
+     * @brief All the informations of the files list
+     */
+    //@{
+    QStringList filePath;       /**< The path of files*/
+    QStringList fileName;       /**< The name of files*/
+    QStringList fileExtension;  /**< The extension of files*/
+    //@}
 };
 
 #endif // FILE_H
