@@ -50,34 +50,36 @@ void Track::readFromCSV(QString filename)
         //vector<string> text = split(value,',');
 
         // Parse header
-        for (int i = 0; i < text.size(); ++i) {
-            if (DEBUG_READCSV) cout << "Colonne " << text[i].toStdString() << endl;
-            if (text[i].contains(QString::fromStdString("X"), Qt::CaseInsensitive)) {
-                correspondance[0] = i;
-                if (DEBUG_READCSV) cout << "X DETECTED at colonne : " << i << endl;
-            } else if (text[i].contains(QString::fromStdString("Y"), Qt::CaseInsensitive)) {
-                correspondance[1] = i;
-                if (DEBUG_READCSV) cout << "Y DETECTED at colonne : " << i << endl;
-            } else if (text[i].contains(QString::fromStdString("Lati"), Qt::CaseInsensitive)) {
-                correspondance[2] = i;
-                if (DEBUG_READCSV) cout << "LATITUDE DETECTED at colonne : " << i << endl;
-            } else if (text[i].contains(QString::fromStdString("Longi"), Qt::CaseInsensitive)) {
-                correspondance[3] = i;
-                if (DEBUG_READCSV) cout << "LONGITUDE DETECTED at colonne : " << i << endl;
-            } else if (text[i].contains(QString::fromStdString("Alti"), Qt::CaseInsensitive)) {
-                correspondance[4] = i;
-                if (DEBUG_READCSV) cout << "ALTITUDE DETECTED at colonne : " << i << endl;
-            } else if (text[i].contains(QString::fromStdString("Date"), Qt::CaseInsensitive)) {
-                correspondance[5] = i;
-                if (DEBUG_READCSV) cout << "DATE DETECTED at colonne : " << i << endl;
-            } else if (text[i].contains(QString::fromStdString("Time"), Qt::CaseInsensitive)) {
-                correspondance[6] = i;
-                if (DEBUG_READCSV) cout << "Time DETECTED at colonne : " << i << endl;
-            } else {
-                if (DEBUG_READCSV) cout << "Colonne " << text[i].toStdString() << " non reconnue" << endl;
+
+            for (int i = 0; i < text.size(); ++i) {
+                if (DEBUG_READCSV) cout << "Colonne " << text[i].toStdString() << endl;
+                if (text[i].contains(QString::fromStdString("X"), Qt::CaseInsensitive)&&(!(text[i].contains(QString::fromStdString("max"), Qt::CaseInsensitive)))) {
+                    correspondance[0] = i;
+                    if (DEBUG_READCSV) cout << "X DETECTED at colonne : " << i << endl;
+                } else if ((text[i].contains(QString::fromStdString("Y"), Qt::CaseInsensitive))&&(!(text[i].contains(QString::fromStdString("Type"), Qt::CaseInsensitive)))) {
+                    correspondance[1] = i;
+                    if (DEBUG_READCSV) cout << "Y DETECTED at colonne : " << i << endl;
+                } else if (text[i].contains(QString::fromStdString("Lati"), Qt::CaseInsensitive)) {
+                    correspondance[2] = i;
+                    if (DEBUG_READCSV) cout << "LATITUDE DETECTED at colonne : " << i << endl;
+                } else if (text[i].contains(QString::fromStdString("Longi"), Qt::CaseInsensitive)) {
+                    correspondance[3] = i;
+                    if (DEBUG_READCSV) cout << "LONGITUDE DETECTED at colonne : " << i << endl;
+                } else if (text[i].contains(QString::fromStdString("Alti"), Qt::CaseInsensitive)) {
+                    correspondance[4] = i;
+                    if (DEBUG_READCSV) cout << "ALTITUDE DETECTED at colonne : " << i << endl;
+                } else if (text[i].contains(QString::fromStdString("Date"), Qt::CaseInsensitive)) {
+                    correspondance[5] = i;
+                    if (DEBUG_READCSV) cout << "DATE DETECTED at colonne : " << i << endl;
+                } else if ((text[i].contains(QString::fromStdString("Time"), Qt::CaseInsensitive))||(text[i].contains(QString::fromStdString("Heure"), Qt::CaseInsensitive))) {
+                    correspondance[6] = i;
+                    if (DEBUG_READCSV) cout << "Time DETECTED at colonne : " << i << endl;
+                } else {
+                    if (DEBUG_READCSV) cout << "Colonne " << text[i].toStdString() << " non reconnue" << endl;
+                }
             }
+
         }
-    }
 
     // Display the correspondance table
     if (DEBUG_READCSV) cout << "BEGIN CORRESPONDANCE" << endl;
