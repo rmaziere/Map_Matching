@@ -5,31 +5,45 @@
 #include <iomanip>
 #include <iostream>
 #include <vector>
+#include <regex>
 
 using namespace std;
 
-grid::grid()
-    : m_road(0)
+#define DEBUG_READCSV false
+#define DEBUG_ADDROAD false
+
+Grid::Grid()
+    : m_xMin(0.0)
+    , m_xMax(std::numeric_limits<double>::max())
+    , m_yMin(0.0)
+    , m_yMax(std::numeric_limits<double>::max())
 {
+
 }
 
-grid::~grid()
+Grid::~Grid()
 {
-    for (uint i = 0; i < m_road.size(); ++i) {
-        delete m_road[i];
-    }
-    m_road.clear(); //vector::clear() does not free memory allocated by the vector to store objects;
-    // it calls destructors for the objects it holds.
+    m_mapOfAllRoads.clear();
+    m_mapOfExtPoints.clear(); // should be already done at the end of reading CSV
+    m_vectorOfPoints.clear();
 }
 
-void grid::readFromCSV(QString filename)
+
+void Grid::setBoundingBox(double xMin,double xMax,double yMin,double yMax)
 {
+    m_xMin = xMin;
+    m_xMax = xMax;
+    m_yMin = yMin;
+    m_yMax = yMax;
+}
+
+void Grid::readFromCSV(QString filename)
+{
+    string line;
+    QString stringConverted;
+    m_gridFullName= filename.toStdString();
     // Declare file stream
     ifstream file(filename.toStdString().c_str()); // c_str() http://stackoverflow.com/questions/32332/why-dont-the-stdfstream-classes-take-a-stdstring
-
-    // Declaration
-    string value; // Save the value of the line
-    QString stringConverted;
 
     vector<int> correspondance(4, -1); // Correpondance between the header and the parser :
     // correspondance :
@@ -40,13 +54,8 @@ void grid::readFromCSV(QString filename)
 
     // Read header
     if (file.good()) {
-        // Read the line
-        getline(file, value);
-
-        // Convert string to Qstring
-        stringConverted = QString::fromStdString(value);
-
-        // Split the line with separator
+        getline(file, line);
+        stringConverted = QString::fromStdString(line);
         QStringList text = stringConverted.split(",");
 
         // Parse header
@@ -74,21 +83,21 @@ void grid::readFromCSV(QString filename)
     }
 
     // Display the correspondance table
-    //cout << "BEGIN CORRESPONDANCE" << endl;
+    /*cout << "BEGIN CORRESPONDANCE" << endl;
     for (uint i = 0; i < correspondance.size(); ++i) {
-        //cout << correspondance[i] << endl;
+        cout << correspondance[i] << endl;
     }
-    //cout << "END CORRESPONDANCE" << endl;
+    cout << "END CORRESPONDANCE" << endl;*/
 
     while (file.good()) {
         long edgeId(0);
-        long fromNodeId(0);
-        long toNodeId(0);
-        vector<vector<double> > listOfCoordinates(0);
+        //long fromNodeId(0);
+        //long toNodeId(0);
+        vector<vector<double>> listOfCoordinates(0);
 
-        getline(file, value);
+        getline(file, line);
         // Convert string to Qstring (easiest
-        stringConverted = QString::fromStdString(value);
+        stringConverted = QString::fromStdString(line);
         if (stringConverted.length() != 0) // Elimine les lignes vides
         {
             // Exemple :
@@ -126,55 +135,109 @@ void grid::readFromCSV(QString filename)
                 text += afterSplit;
             }
 
+            //Initialisation du test
+            bool inBox = false;
             for (int i = 0; i < text.size(); ++i) {
                 if (i == correspondance[0]) {
                     // traitement WTK
-
                     QStringList contenuList = text[i].split("LINESTRING (");
                     contenuList = contenuList[1].split(")");
                     QString contenu = contenuList[0];
 
                     QStringList listePoints = contenu.split(",");
-                    cout << "Coordonnées points : " << endl;
+                    if (DEBUG_READCSV) cout << "Coordonnées points : " << endl;
                     for (int j = 0; j < listePoints.size(); ++j) {
-                        double lat(0.0);
-                        double lon(0.0);
+                        double x(0.0);
+                        double y(0.0);
                         QStringList coordonnees = listePoints[j].split(" ");
-                        lat = coordonnees[0].toDouble();
-                        lon = coordonnees[1].toDouble();
-                        cout << setprecision(150) << lat << "," << lon << endl;
+                        x = coordonnees[0].toDouble();
+                        y = coordonnees[1].toDouble();
+                        inBox = inFootPrint(x,y);
+                        if (DEBUG_READCSV) cout << setprecision(150) << x << "," << y << endl;
                         vector<double> coordinates;
-                        coordinates.push_back(lat);
-                        coordinates.push_back(lon);
+                        coordinates.push_back(x);
+                        coordinates.push_back(y);
                         listOfCoordinates.push_back(coordinates);
                     }
 
                 } else if (i == correspondance[1]) {
                     // traitement Edge ID
-                    cout << "Edge ID : " << text[i].toStdString() << " ";
+                    if (DEBUG_READCSV) cout << "Edge ID : " << text[i].toStdString() << " ";
                     edgeId = text[i].toLong();
                 } else if (i == correspondance[2]) {
                     // traitement From Node
-                    cout << "From Node : " << text[i].toStdString() << " ";
-                    fromNodeId = text[i].toLong();
+                    if (DEBUG_READCSV) cout << "From Node : " << text[i].toStdString() << " ";
+                    //fromNodeId = text[i].toLong();
                 } else if (i == correspondance[3]) {
                     // traitement To Node ID
-                    cout << "To Node ID : " << text[i].toStdString() << " ";
-                    toNodeId = text[i].toLong();
+                    if (DEBUG_READCSV) cout << "To Node ID : " << text[i].toStdString() << " ";
+                    //toNodeId = text[i].toLong();
                 }
             }
-            cout << endl;
-            addRoad(listOfCoordinates, edgeId, fromNodeId, toNodeId);
+            if (DEBUG_READCSV) cout << endl;
+            if (inBox)
+                addRoad(listOfCoordinates, edgeId);
         }
     }
+    // m_mapOfExtPoints.clear(); // TODO remove comment, and DO clear map
 }
 
-std::vector<Road*> grid::getListOfRoad() const
+void Grid::addRoad(const vector<vector<double> > &listOfCoordinates, long edgeId)
 {
-    return m_road;
+    int n= listOfCoordinates.size();
+    int curPoint= 0;    // used to apply a special treatment to first and last point of a road
+    bool newPoint= true;
+    int existingPointId= -1;    // id of the point if its already exists
+    Road road(edgeId);
+    for (const auto& coord: listOfCoordinates) {
+        newPoint= true;
+        PointRoad p(coord[0], coord[1], (curPoint==0 || curPoint==n-1));
+        if (curPoint==0 || curPoint==n-1) { // for extremities, check if road already exists, if so use it
+            if (m_mapOfExtPoints.count(p)) {
+                ExtremityPointMap::const_iterator got= m_mapOfExtPoints.find(p);
+                existingPointId= got->second;
+                if (DEBUG_ADDROAD) p.outputInfos();
+                newPoint= false;
+                p= m_vectorOfPoints[existingPointId];       // check if not a new point
+            }
+        }
+        p.updateBelongToRoad(edgeId);
+        if (newPoint) {
+            p.setid(m_vectorOfPoints.size());
+            m_vectorOfPoints.push_back(std::move(p));
+            if (p.isNode()) m_mapOfExtPoints[p]= p.id();
+        }
+        road.addPoint(p.id());
+        ++curPoint;
+    }
+    m_mapOfAllRoads[road.edgeId()]= road;
 }
 
-void grid::addRoad(vector<vector<double> > listOfCoordinates, long edgeId, long fromNodeId, long toNodeId)
+void Grid::outputInfos()
 {
-    m_road.push_back(new Road(listOfCoordinates, edgeId, fromNodeId, toNodeId));
+    cout << "Network " << m_gridFullName << " contains: \n\t" << m_mapOfAllRoads.size() << " roads" << endl;
+    cout << "\twith a grand total of " << m_vectorOfPoints.size() << " points" << endl;
+    cout << "\tof which " << m_mapOfExtPoints.size() << " are extremities." << endl;
 }
+
+bool Grid::inFootPrint(double x, double y)
+{
+    return (m_xMin <= x) && (x <= m_xMax) && (m_yMin <= y) && (y <= m_yMax);
+}
+
+void Grid::setDistance(PointGPS &p, Road &r)
+{
+    const vector<int> &listOfPointId= r.vectorOfPointsId();
+    double d, bestDistance= std::numeric_limits<double>::max();
+    for (uint i=1; i<listOfPointId.size(); i++) {
+        d= p.distanceToSegment(m_vectorOfPoints[listOfPointId[i-1]], m_vectorOfPoints[listOfPointId[i]]);
+        if (d<bestDistance) bestDistance= d;
+    }
+    p.addEmissionProbability(r.edgeId(), bestDistance);
+}
+
+void Grid::buildKDTree()
+{
+
+}
+
