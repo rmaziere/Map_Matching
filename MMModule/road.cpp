@@ -16,3 +16,12 @@ void Road::outputInfos() const
 {
     std::cout << "Route " << m_edgeId << " contains " << m_vectorOfPointsId.size() << std::endl;
 }
+
+long Road::getm_edgeId()
+{
+
+    return m_edgeId;
+}
+
+
+
