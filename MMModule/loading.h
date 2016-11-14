@@ -11,6 +11,8 @@
 #include <QDialogButtonBox>
 #include <QObject>
 
+#include <file.h>
+
 class Loading : public QWidget
 {
     Q_OBJECT
@@ -20,9 +22,12 @@ public:
     ~Loading();
 
 public slots:
-    //void changerLargeur(int largeur);
-    void loadFileTrack();
+    void loadFileCSVTrack();
+    void loadFileSHPTrack();
     void loadFileGrid();
+    void getCountry();
+    void launchFiles();
+
 
 signals:
     //void agrandissementMax();
@@ -38,6 +43,9 @@ private:
     QGroupBox *m_track;
     QGroupBox *m_grid;
     QGroupBox *m_boutonXY;
+
+    QRadioButton *m_fr;
+    QRadioButton *m_usa;
 
     QPushButton *m_csvTrack;
     QPushButton *m_shpTrack;

@@ -33,7 +33,7 @@ void Loading::boutonXY()
     m_cancel = new QPushButton("Cancel");
     m_launch = new QPushButton("Launch");
     QObject::connect(m_cancel, SIGNAL(clicked()), qApp, SLOT(quit()));
-    //connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    QObject::connect(m_launch, SIGNAL(clicked()), this, SLOT(launchFiles()));
 
     QHBoxLayout *vbox = new QHBoxLayout;
     vbox->addWidget(m_cancel);
@@ -47,13 +47,16 @@ void Loading::country()
 {
     m_country = new QGroupBox("Country");
 
-    QRadioButton *radio1 = new QRadioButton("France");
-    QRadioButton *radio2 = new QRadioButton("USA");
-    radio1->setChecked(true);
+    m_fr = new QRadioButton("France");
+    m_usa = new QRadioButton("USA");
+    //radio1->setChecked(true);
+
+    QObject::connect(m_fr, SIGNAL(clicked()), this, SLOT(getCountry()));
+    QObject::connect(m_usa, SIGNAL(clicked()), this, SLOT(getCountry()));
 
     QHBoxLayout *vbox = new QHBoxLayout;
-    vbox->addWidget(radio1);
-    vbox->addWidget(radio2);
+    vbox->addWidget(m_fr);
+    vbox->addWidget(m_usa);
     vbox->addStretch(1);
     m_country->setLayout(vbox);
 }
@@ -63,7 +66,7 @@ void Loading::grid()
     m_grid = new QGroupBox("Grid");
     m_fileGrid = new QLabel(this);
 
-    m_csvGrid = new QPushButton("CSV");
+    m_csvGrid = new QPushButton("SHP");
     m_csvGrid->setGeometry(0, 2, 0, 3);
 
     QObject::connect(m_csvGrid, SIGNAL(clicked()), this, SLOT(loadFileGrid()));
@@ -83,8 +86,8 @@ void Loading::track()
     m_shpTrack = new QPushButton("SHP");
     m_fileGPS = new QLabel(this);
 
-    QObject::connect(m_csvTrack, SIGNAL(clicked()), this, SLOT(loadFileTrack()));
-    QObject::connect(m_shpTrack, SIGNAL(clicked()), this, SLOT(loadFileTrack()));
+    QObject::connect(m_csvTrack, SIGNAL(clicked()), this, SLOT(loadFileCSVTrack()));
+    QObject::connect(m_shpTrack, SIGNAL(clicked()), this, SLOT(loadFileSHPTrack()));
 
     QVBoxLayout *vbox = new QVBoxLayout;
     vbox->addWidget(m_csvTrack);
@@ -94,15 +97,42 @@ void Loading::track()
     m_track->setLayout(vbox);
 }
 
-void Loading::loadFileTrack()
+void Loading::loadFileCSVTrack()
 {
     m_fileGPS->setText("1 file loaded");
     m_csvTrack->setEnabled(false);
     m_shpTrack->setEnabled(false);
+    File fileCSV;
+    fileCSV.selectFilesToOpen("csv");
+}
+
+void Loading::loadFileSHPTrack()
+{
+    m_fileGPS->setText("1 file loaded");
+    m_csvTrack->setEnabled(false);
+    m_shpTrack->setEnabled(false);
+    File fileSHP;
+    fileSHP.selectFilesToOpen("shp");
+    //fileSHP.shp2csv("Point");
 }
 
 void Loading::loadFileGrid()
 {
     m_fileGrid->setText("1 file loaded");
     m_csvGrid->setEnabled(false);
+    File fileSHP;
+    fileSHP.selectFilesToOpen("shp");
+    //fileSHP.shp2csv("Polyline");
+}
+
+void Loading::getCountry()
+{
+    m_country->setEnabled(false);
+    if( m_fr->isChecked())
+        cout << "fr";
+}
+
+void Loading::launchFiles()
+{
+    //if (m_fileGrid->)
 }
