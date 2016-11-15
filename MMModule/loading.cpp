@@ -10,16 +10,13 @@ Loading::Loading() : QWidget()
     // Création d'un widget qui servira de fenêtre
     setFixedSize(500, 400);
 
-
-
-     QVBoxLayout *mainLayout = new QVBoxLayout;
-     mainLayout->addWidget(m_country);
-     mainLayout->addWidget(m_track);
-     mainLayout->addWidget(m_grid);
-     mainLayout->addWidget(m_boutonXY);
-     setLayout(mainLayout);
-     setWindowTitle("Launch");
-
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    mainLayout->addWidget(m_country);
+    mainLayout->addWidget(m_track);
+    mainLayout->addWidget(m_grid);
+    mainLayout->addWidget(m_boutonXY);
+    setLayout(mainLayout);
+    setWindowTitle("Launch");
 }
 
 Loading::~Loading()
@@ -143,7 +140,6 @@ void Loading::loadFileGrid()
 
 void Loading::getCountry() //A modifier
 {
-    //m_country->setEnabled(false);
     if( m_fr->isChecked())
         cout << "fr";
     else

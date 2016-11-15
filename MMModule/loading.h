@@ -30,10 +30,9 @@ public slots:
 
 
 signals:
-    //void agrandissementMax();
+
 
 private:
-    QGridLayout *grille;
     void country();
     void track();
     void grid();
@@ -55,8 +54,6 @@ private:
 
     QPushButton *m_cancel;
     QPushButton *m_launch;
-
-
 
 };
 
