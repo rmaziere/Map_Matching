@@ -32,11 +32,12 @@ public:
     int id() const { return m_id;}
     void setid(int id) { m_id= id; }
     long isNode() const { return m_isNode;}
+    const std::vector<long> &vectorOfRoadId() const { return m_vectorOfRoadId;}
 protected:
     static long counter;    // counter used to generate unique m_id (not used for Seattle data)
     bool m_isNode;  // true if this point is an extremity of a road
     int m_id;      // unique id of the point
-    std::vector<long> m_belongToRoadId;  // list of road sharing the point
+    std::vector<long> m_vectorOfRoadId;  // list of roads sharing the point
 };
 
 

@@ -5,6 +5,7 @@ QT += widgets
 CONFIG += c++11
 
 QMAKE_CXXFLAGS += -std=c++11
+
 TARGET = sandbox
 CONFIG -= console
 CONFIG -= app_bundle
@@ -21,11 +22,12 @@ SOURCES += main.cpp \
     solver.cpp \
     grid.cpp \
     pointroad.cpp \
+    loading.cpp \
     KDTreeAlgos/box.cpp \
     KDTreeAlgos/boxnode.cpp \
     KDTreeAlgos/kdtree.cpp \
     emissionprobability.cpp \
-    loading.cpp
+    KDTreeAlgos/kdtreeviewer.cpp
 
 
 HEADERS += \
@@ -40,9 +42,10 @@ HEADERS += \
     solver.h \
     grid.h \
     pointroad.h \
+    loading.h \
     KDTreeAlgos/box.h \
     KDTreeAlgos/boxnode.h \
     KDTreeAlgos/kdtree.h \
     emissionprobability.h \
-    loading.h
+    KDTreeAlgos/kdtreeviewer.h
 

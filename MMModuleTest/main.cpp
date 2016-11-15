@@ -5,7 +5,6 @@
 #include "pointgpstest.h"
 #include "pointtest.h"
 #include "tracktest.h"
-#include "filetest.h"
 
 using namespace std;
 

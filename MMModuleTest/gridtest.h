@@ -46,12 +46,10 @@ TEST_F(GridTest, InFootPrint)
 
 TEST_F(GridTest, LoadRoadFromFile)
 {
-    Grid myGrid;
-    myGrid.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
-   // EXPECT_EQ(2, myGrid.m_road.size());
-    //std::cout<< myGrid.m_road[0]->getm_edgeId();
-    //EXPECT_EQ(883991900000, myGrid.m_road[0]->getm_edgeId());
-    //sEXPECT_EQ(883991900001, myGrid.m_road[1]->getm_edgeId());
+    Grid grid;
+    grid.readFromCSV("../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv");
+    EXPECT_EQ(3, grid.getNoOfRoads());
+    EXPECT_EQ(5, grid.getNoOfPoints());
 }
 
 TEST_F(GridTest, LoadPointsFromFile)    // TODO revoir le test
@@ -66,12 +64,15 @@ TEST_F(GridTest, LoadPointsFromFile)    // TODO revoir le test
     EXPECT_DOUBLE_EQ(330422.365724511211738, myGrid.m_road[0]->getListOfPoints()[0]->y());*/
 }
 
-TEST_F(GridTest, PointsHaveNoDuplicate)
+TEST_F(GridTest, Neighbours)
 {
     Grid grid;
     grid.readFromCSV("../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv");
-    // input has 2 roads with 5 differents points in total, 2 are nodes, one node belongs to 2 roads
-    //grid.
+    grid.buildMarkovMatrix();
+    AllRoadMap::iterator got= grid.getRoadEntry(1000);
+    EXPECT_EQ(got->second.getNoOfNeighbors(), 2);
+    got= grid.getRoadEntry(2000);
+    EXPECT_EQ(got->second.getNoOfNeighbors(), 3);
 }
 
 

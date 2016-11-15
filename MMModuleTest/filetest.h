@@ -16,17 +16,6 @@ protected:
     // Objects declared here can be used by all tests in the test case for File.
 };
 
-/*TEST_F(FileTest, Constructeurs)
-{
-    File test;
-    test.splitPath("/home/user/Document/couche.ShP");
 
-    EXPECT_STREQ("/home/user/Document/", test.filePath.at(0).toStdString());
-    EXPECT_STREQ("couche", test.fileName.at(0).toStdString());
-    EXPECT_STREQ("shp", test.fileExtension.at(0).toStdString());
-    //EXPECT_STREQ("test", "test");
-    std::cerr << "################################" << test.filePath.at(0).toStdString() << "################################" << endl;
-}
-*/
 
 #endif // FILETEST_H

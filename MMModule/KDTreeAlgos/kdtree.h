@@ -16,7 +16,8 @@ public:
 
     int partition(const int k, int *index, int n, double *arr);
 
-    //double distance(int idxOfPoint1, int idxOfPoint2);
+    double distance(int idxOfPoint1, int idxOfPoint2);
+    int locate(const Point &p);
 
 protected:
     int m_noOfBoxes;
