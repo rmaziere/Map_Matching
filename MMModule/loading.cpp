@@ -49,7 +49,6 @@ void Loading::country()
 
     m_fr = new QRadioButton("France");
     m_usa = new QRadioButton("USA");
-    //radio1->setChecked(true);
 
     QObject::connect(m_fr, SIGNAL(clicked()), this, SLOT(getCountry()));
     QObject::connect(m_usa, SIGNAL(clicked()), this, SLOT(getCountry()));
@@ -67,7 +66,7 @@ void Loading::grid()
     m_fileGrid = new QLabel(this);
 
     m_csvGrid = new QPushButton("SHP");
-    m_csvGrid->setGeometry(0, 2, 0, 3);
+    m_csvGrid->setCheckable(true);
 
     QObject::connect(m_csvGrid, SIGNAL(clicked()), this, SLOT(loadFileGrid()));
 
@@ -84,6 +83,8 @@ void Loading::track()
 
     m_csvTrack = new QPushButton("CSV");
     m_shpTrack = new QPushButton("SHP");
+    m_csvTrack->setCheckable(true);
+    m_shpTrack->setCheckable(true);
     m_fileGPS = new QLabel(this);
 
     QObject::connect(m_csvTrack, SIGNAL(clicked()), this, SLOT(loadFileCSVTrack()));
@@ -136,13 +137,11 @@ void Loading::loadFileGrid()
         {
             m_fileGrid->setText("1 file loaded");
             m_csvGrid->setEnabled(false);
-            m_grid->setChecked(true);
         }
     }
-    cout << m_grid->isChecked();
 }
 
-void Loading::getCountry()
+void Loading::getCountry() //A modifier
 {
     //m_country->setEnabled(false);
     if( m_fr->isChecked())
@@ -153,8 +152,6 @@ void Loading::getCountry()
 
 void Loading::launchFiles()
 {
-    cout << m_usa->isChecked();
-    cout << m_grid->isChecked();
-    if ((m_fr->isChecked() || m_usa->isChecked()) && (m_track->isChecked()) && (m_grid->isChecked()))
-        cout << "tout ok";
+    if ((m_fr->isChecked() || m_usa->isChecked()) && (m_csvTrack->isChecked() || m_shpTrack->isChecked()) && (m_csvGrid->isChecked()))
+        cout << "tout ok"; // A modifier
 }
