@@ -36,6 +36,10 @@ int File::selectFilesToOpen(QString extensionFilter){
                         "Select one or more files to open",
                         path,
                         "Fichier ." + extensionFilter + " (*." + extensionFilter + ")");
+        /*if (files == "false")
+        {
+            cout << "No file selected. Cannot continue.";
+        }*/
     }
     for (int i = 0; i < files.size(); ++i){
         QString temp = files.at(i);

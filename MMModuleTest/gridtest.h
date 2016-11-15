@@ -75,5 +75,14 @@ TEST_F(GridTest, Neighbours)
     EXPECT_EQ(got->second.getNoOfNeighbors(), 3);
 }
 
+TEST_F(GridTest, updateGrid)
+{
+    Grid grid;
+    grid.readFromCSV("../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv");
+    EXPECT_DOUBLE_EQ(1.0, grid.xMinGrid());
+    EXPECT_DOUBLE_EQ(10000.0, grid.xMaxGrid());
+    EXPECT_DOUBLE_EQ(2.0, grid.yMinGrid());
+    EXPECT_DOUBLE_EQ(11000.0, grid.yMaxGrid());
+}
 
 #endif // GRIDTEST_H

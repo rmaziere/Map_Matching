@@ -76,6 +76,11 @@ public:
     double xMax() const { return m_xMax;}
     double yMin() const { return m_yMin;}
     double yMax() const { return m_yMax;}
+    double xMinGrid() const { return m_xMinGrid;}
+    double xMaxGrid() const { return m_xMaxGrid;}
+    double yMinGrid() const { return m_yMinGrid;}
+    double yMaxGrid() const { return m_yMaxGrid;}
+
 protected:
     std::string m_gridFullName;
     ExtremityPointMap m_mapOfExtPoints; // temporary container during csv loading
@@ -86,6 +91,21 @@ protected:
     double m_xMax;
     double m_yMin;
     double m_yMax;
+
+    /**
+     * @brief updateGrid Find max and min of the grid
+     * @param x Coordinate x
+     * @param y Coordinate y
+     */
+    void updateGrid(double x, double y);
+    /**
+     * @name The coordinates of the grid.
+     */
+    //@{
+    double m_xMinGrid;  /**< The x min value*/
+    double m_xMaxGrid;  /**< The x max value*/
+    double m_yMinGrid;  /**< The y min value*/
+    double m_yMaxGrid;  /**< The y max value*/
 };
 
 #endif // GRID_H
