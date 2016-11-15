@@ -27,7 +27,8 @@ SOURCES += main.cpp \
     KDTreeAlgos/boxnode.cpp \
     KDTreeAlgos/kdtree.cpp \
     emissionprobability.cpp \
-    KDTreeAlgos/kdtreeviewer.cpp
+    KDTreeAlgos/kdtreeviewer.cpp \
+    journalprocess.cpp
 
 
 HEADERS += \
@@ -47,5 +48,9 @@ HEADERS += \
     KDTreeAlgos/boxnode.h \
     KDTreeAlgos/kdtree.h \
     emissionprobability.h \
-    KDTreeAlgos/kdtreeviewer.h
+    KDTreeAlgos/kdtreeviewer.h \
+    journalprocess.h \
+    qdebugstream.h
+
+FORMS +=
 
