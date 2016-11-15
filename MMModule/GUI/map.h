@@ -17,6 +17,11 @@ public:
      */
     Map(int width, int height);
 
+    void scaleCalculator(double xMinGrid, double xMaxGrid, double yMinGrid, double yMaxGrid);
+    void deltaCalculator(double xMinGrid, double yMinGrid);
+
+    QPointF coordinateTranslator(double x, double y);
+
     /**
      * @brief drawPolyline
      * @param polyligne
@@ -25,7 +30,7 @@ public:
     int drawPolyline(QPointF polyligne, int size);
 
     /**
-     * @brief draw is a test draw
+     * @brief draw is a test drawing function
      * @return an image on the disk
      */
     int draw();
@@ -37,12 +42,14 @@ public:
      */
     int save(QString file);
 
-
 protected:
-    int width;  /**< image width*/
-    int height; /**< image height*/
-    QImage img;
-    QPainter paint;
+    int width;      /**< image width*/
+    int height;     /**< image height*/
+    int scale;      /**< scale between the grid and the image*/
+    int deltaX;     /**< delta between the SRID's x origin and the grid's x*/
+    int deltaY;     /**< delta between the SRID's y origin and the grid's y*/
+    QImage img;     /**< The QImage object*/
+    QPainter paint; /**< The QPainter object*/
 };
 
 #endif // MAP_H
