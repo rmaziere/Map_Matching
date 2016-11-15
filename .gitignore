@@ -1,6 +1,8 @@
 build*
-MMModule/MMModule.pro.user
 Docs/Rapport/build
 !Docs/Rapport/build/Rapport.pdf
 Docs/Presentation/build/Presentation.pdf
 html/
+MMModule/MMModule.pro.user
+MMModuleTest/MMModuleTest.pro.user
+pluginQgis/geomaticsprojet.pro.user

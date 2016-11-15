@@ -77,7 +77,7 @@ public:
      */
     void updateBox(double x, double y);
 
-    /**
+    /** TODO
      * @brief Apply a threshold to bounding box once the data file has been read
      */
     void applyThresholdToBox();
@@ -92,6 +92,9 @@ public:
      * @return The vector of points pointer
      */
     std::vector<PointGPS*> getPoints();
+
+    std::vector<PointGPS*> * getPointsAsPointer() { return &m_points;} // TODO const ?
+
 
     //TODO protected
     /**

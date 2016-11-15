@@ -3,6 +3,7 @@
 #include <math.h>
 #include <vector>
 #include <limits.h>
+#include <iostream>
 
 #include "file.h"
 #include "grid.h"
@@ -11,13 +12,16 @@
 #include "track.h"
 #include "loading.h"
 #include "journalprocess.h"
-#include "processlog.h"
 #include<QTextEdit>
 #include"qdebugstream.h"
+#include "solver.h"
+
+
 
 using namespace std;
 
-void dev_grid() {
+void dev_grid()
+{
     QString gridFile= "../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv";
     Grid grid;
     grid.readFromCSV(gridFile);
@@ -25,11 +29,12 @@ void dev_grid() {
     grid.outputInfos();
 }
 
-void dev_all() {
+void dev_all()
+{
     // grid.readFromCSV("../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv");
     QString trackFile= "../Data/Seattle/mini_start_track.csv";
     QString gridFile= "../Data/Seattle/mini_start_network.csv";
-    int test= 1;
+    int test= 0;
     switch(test) {
     case 1:
         trackFile= "../Data/Seattle/useful_all_track.csv";
@@ -45,10 +50,15 @@ void dev_all() {
     //grid.readFromCSVSeattle(gridFile);
     grid.readFromCSV(gridFile);
     grid.outputInfos();
+    grid.buildMarkovMatrix();
+    Solver solver(grid.getRoads(), grid.getPoints(), track.getPointsAsPointer());
+    solver.initialize();
 
+    std::cout << "The end." << std::endl;
 }
 
-void dev_network() {
+void dev_network()
+{
 /*
     grid myNetwork;
     myNetwork.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
@@ -60,8 +70,8 @@ void dev_network() {
     }*/
 }
 
-
-void dev_openFile() {
+void dev_openFile()
+{
 /*
 
     //QApplication app(argc, argv);
@@ -83,6 +93,14 @@ void dev_openFile() {
     //return app.exec();*/
 }
 
+void dev_file(){
+    File f;
+    f.selectFilesToOpen("shp");
+    cout << "File name : " << f.fileName.at(0).toStdString() << ", file extension : " << f.fileExtension.at(0).toStdString() << endl;
+
+    f.shp2csv("Polyline");
+    cout << "File name : " << f.fileName.at(0).toStdString() << ", file extension : " << f.fileExtension.at(0).toStdString() << endl;
+}
 
 int main(int argc, char *argv[])
 {
@@ -98,18 +116,22 @@ int main(int argc, char *argv[])
     QDebugStream log(std::cout, logProcess);
     process->show();
 
-    dev_grid();
+    //dev_grid();
     //dev_all();
 
 
-    //Loading fenetre;
+    Loading fenetre;
     // Affichage de la fenêtre
-    //fenetre.show();
+    fenetre.show();
 
 
     std::cout << "Send this to the Text Edit!" << std::endl;
    // ProcessLog log;
     //log.show();
+    //dev_grid();
+    dev_all();
 
+
+    QApplication app(argc, argv);
     return app.exec();
 }
