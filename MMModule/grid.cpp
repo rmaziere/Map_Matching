@@ -235,17 +235,6 @@ bool Grid::inFootPrint(double x, double y)
     return (m_xMin <= x) && (x <= m_xMax) && (m_yMin <= y) && (y <= m_yMax);
 }
 
-void Grid::setDistance(PointGPS &p, Road &r)
-{
-    const vector<int> &listOfPointId= r.vectorOfPointsId();
-    double d, bestDistance= std::numeric_limits<double>::max();
-    for (uint i=1; i<listOfPointId.size(); i++) {
-        d= p.distanceToSegment(m_vectorOfPoints[listOfPointId[i-1]], m_vectorOfPoints[listOfPointId[i]]);
-        if (d<bestDistance) bestDistance= d;
-    }
-    p.addEmissionProbability(r.edgeId(), bestDistance);
-}
-
 void Grid::buildKDTree()
 {
 

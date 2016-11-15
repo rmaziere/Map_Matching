@@ -10,6 +10,7 @@
 #include "pointGPS.h"
 #include "track.h"
 #include "loading.h"
+#include "solver.h"
 
 
 using namespace std;
@@ -26,7 +27,7 @@ void dev_all() {
     // grid.readFromCSV("../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv");
     QString trackFile= "../Data/Seattle/mini_start_track.csv";
     QString gridFile= "../Data/Seattle/mini_start_network.csv";
-    int test= 1;
+    int test= 0;
     switch(test) {
     case 1:
         trackFile= "../Data/Seattle/useful_all_track.csv";
@@ -42,7 +43,11 @@ void dev_all() {
     //grid.readFromCSVSeattle(gridFile);
     grid.readFromCSV(gridFile);
     grid.outputInfos();
+    grid.buildMarkovMatrix();
+    Solver solver(grid.getRoads(), grid.getPoints(), track.getPointsAsPointer());
+    solver.initialize();
 
+    std::cout << "The end." << std::endl;
 }
 
 void dev_network() {
@@ -84,12 +89,9 @@ void dev_openFile() {
 int main(int argc, char *argv[])
 {
     //dev_grid();
-    //dev_all();
+    dev_all();
+
+
     QApplication app(argc, argv);
-
-    Loading fenetre;
-    // Affichage de la fenêtre
-    fenetre.show();
-
     return app.exec();
 }

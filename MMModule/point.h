@@ -76,7 +76,7 @@ public:
      * @return m_x or m_y depending on the dim value
      */
     double x(int dim) const;
-    void setx(int dim, double value);   /*< set m_x or m_y according to dim value */
+    void setx(int dim, double value);   /**< set m_x or m_y according to dim value */
 
 
 protected:

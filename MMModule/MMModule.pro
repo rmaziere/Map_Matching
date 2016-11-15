@@ -27,7 +27,9 @@ SOURCES += main.cpp \
     KDTreeAlgos/boxnode.cpp \
     KDTreeAlgos/kdtree.cpp \
     emissionprobability.cpp \
-    KDTreeAlgos/kdtreeviewer.cpp
+    KDTreeAlgos/kdtreeviewer.cpp \
+    GUI/qmapviewer.cpp \
+    GUI/controller.cpp
 
 
 HEADERS += \
@@ -47,5 +49,7 @@ HEADERS += \
     KDTreeAlgos/boxnode.h \
     KDTreeAlgos/kdtree.h \
     emissionprobability.h \
-    KDTreeAlgos/kdtreeviewer.h
+    KDTreeAlgos/kdtreeviewer.h \
+    GUI/qmapviewer.h \
+    GUI/controller.h
 

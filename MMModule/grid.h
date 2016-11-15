@@ -22,7 +22,7 @@ struct equalsFunc{
   }
 };
 
-typedef std::unordered_map<PointRoad, int, hashFunc, equalsFunc> ExtremityPointMap; // for all edges points
+typedef std::unordered_map<PointRoad, int, hashFunc, equalsFunc> ExtremityPointMap; // for all node points
 typedef std::unordered_map<long, Road> AllRoadMap;
 //typedef std::unordered_map<long, Road&> AllRoadMap;   // for all roads (& do not recreate object)
 
@@ -59,8 +59,6 @@ public:
      */
     bool inFootPrint(double x,double y);
 
-    void setDistance(PointGPS &p, Road &r);
-
     void buildKDTree();
 
     void buildMarkovMatrix();
@@ -68,6 +66,8 @@ public:
     // test functions
     void outputInfos();
     AllRoadMap::iterator getRoadEntry(long id); // used to update neighbors (for markovmatrix)
+    AllRoadMap *getRoads() { return &m_mapOfAllRoads;} // TODO const ?
+    std::vector<PointRoad> *getPoints() { return &m_vectorOfPoints;}
 
     // accessors
     int getNoOfRoads() const { return m_mapOfAllRoads.size();}
