@@ -50,7 +50,7 @@ HEADERS += geomaticsprojet.h \
     ../MMModule/KDTreeAlgos/boxnode.h \
     ../MMModule/KDTreeAlgos/kdtree.h
 
-DEST = libagileplugin.so
+DEST = libgeomaticsprojet.so
 
 DEFINES += GUI_EXPORT= CORE_EXPORT=
 
@@ -68,4 +68,4 @@ MOC_DIR = build/.moc
 RCC_DIR = build/.rcc
 UI_DIR = build/.ui
 
-#QMAKE_POST_LINK += $$quote(cp build/libagileplugin.so.1.0.0 /usr/lib/qgis/plugins/libagileplugin.so)
+#QMAKE_POST_LINK += $$quote(cp build/libgeomaticsprojet.so.1.0.0 /usr/lib/qgis/plugins/libgeomaticsprojet.so)

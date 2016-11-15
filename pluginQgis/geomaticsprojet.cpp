@@ -1,11 +1,7 @@
 #include "geomaticsprojet.h"
 #include "qgisinterface.h"
 #include "qgsmessagelog.h"
-#include "qgsmapcanvas.h"
-#include "qgsrasterlayer.h"
-#include "qgsmaplayerregistry.h"
 #include <QAction>
-#include <QList>
 
 // Static variables for plugin description
 static const QString sName = QObject::tr("GeomaticsProject");
