@@ -11,7 +11,11 @@
 #include "pointGPS.h"
 #include "track.h"
 #include "loading.h"
+#include "journalprocess.h"
+#include<QTextEdit>
+#include"qdebugstream.h"
 #include "solver.h"
+
 
 
 using namespace std;
@@ -100,6 +104,30 @@ void dev_file(){
 
 int main(int argc, char *argv[])
 {
+    QApplication app(argc, argv);
+
+    JournalProcess *process = new JournalProcess();
+
+    QTextEdit* logProcess = new QTextEdit(process);
+    process->setWidgetResizable(true);
+    logProcess->resize(process->size().width(),
+                       process->size().height());
+    logProcess->setReadOnly(true);
+    QDebugStream log(std::cout, logProcess);
+    process->show();
+
+    //dev_grid();
+    //dev_all();
+
+
+    Loading fenetre;
+    // Affichage de la fenêtre
+    fenetre.show();
+
+
+    std::cout << "Send this to the Text Edit!" << std::endl;
+   // ProcessLog log;
+    //log.show();
     //dev_grid();
     dev_all();
 
