@@ -31,7 +31,7 @@ SOURCES += main.cpp \
     filtering.cpp \
     MainWindow.cpp \
     SlidingStackedWidget.cpp
-
+    journalprocess.cpp
 
 HEADERS += \
     sauvegarde.h \
@@ -54,4 +54,7 @@ HEADERS += \
     filtering.h \
     SlidingStackedWidget.h \
     MainWindow.h
+    journalprocess.h \
+    qdebugstream.h
+
 

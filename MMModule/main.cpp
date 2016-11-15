@@ -11,7 +11,16 @@
 #include "pointGPS.h"
 #include "track.h"
 #include "loading.h"
+<<<<<<< HEAD
 #include "MainWindow.h"
+=======
+#include "journalprocess.h"
+#include<QTextEdit>
+#include"qdebugstream.h"
+#include "solver.h"
+
+
+>>>>>>> 24d0739435aa03419b47ac5d2ad8cda5f19c899a
 
 using namespace std;
 
@@ -29,7 +38,7 @@ void dev_all()
     // grid.readFromCSV("../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv");
     QString trackFile= "../Data/Seattle/mini_start_track.csv";
     QString gridFile= "../Data/Seattle/mini_start_network.csv";
-    int test= 1;
+    int test= 0;
     switch(test) {
     case 1:
         trackFile= "../Data/Seattle/useful_all_track.csv";
@@ -45,7 +54,11 @@ void dev_all()
     //grid.readFromCSVSeattle(gridFile);
     grid.readFromCSV(gridFile);
     grid.outputInfos();
+    grid.buildMarkovMatrix();
+    Solver solver(grid.getRoads(), grid.getPoints(), track.getPointsAsPointer());
+    solver.initialize();
 
+    std::cout << "The end." << std::endl;
 }
 
 void dev_network()
@@ -95,6 +108,21 @@ void dev_file(){
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
+
+
+    JournalProcess *process = new JournalProcess();
+
+    QTextEdit* logProcess = new QTextEdit(process);
+    process->setWidgetResizable(true);
+    logProcess->resize(process->size().width(),
+                       process->size().height());
+    logProcess->setReadOnly(true);
+    QDebugStream log(std::cout, logProcess);
+    process->show();
+
+    //dev_grid();
+    //dev_all();
+
     MainWindow w;
     w.setWindowTitle("Map Matching");
 
@@ -106,4 +134,14 @@ int main(int argc, char *argv[]) {
 #endif
 
     return a.exec();
+
+
+    std::cout << "Send this to the Text Edit!" << std::endl;
+   // ProcessLog log;
+    //log.show();
+    //dev_grid();
+    dev_all();
+
+    return app.exec();
+
 }

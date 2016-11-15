@@ -32,6 +32,8 @@ public:
 
     void addEmissionProbability(long roadId, double distance);
 
+    std::string infos() const;
+
     // accessors
     unsigned int timeStamp() const { return m_timeStamp;}
     float altitude() const { return m_altitude;}

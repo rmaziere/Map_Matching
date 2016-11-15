@@ -30,7 +30,7 @@ double Point::distanceToSegment(const Point& a, const Point& b) const
 std::string Point::infos() const
 {
     std::stringstream ss;
-    ss << "(" << std::fixed << std::setprecision(2) << m_x << ", " << m_y << ")";
+    ss << "(" << std::fixed << std::setprecision(2) << m_x << ", " << m_y << ") ";
     return ss.str();
 }
 

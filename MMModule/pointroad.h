@@ -26,6 +26,7 @@ public:
 
     void updateBelongToRoad(long roadId);
 
+    std::string infos() const {return Point::infos();}
     void outputInfos();
 
     // accessors
