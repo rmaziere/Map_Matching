@@ -77,6 +77,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li class="current"><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
+      <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -85,7 +87,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_c"><span>c</span></a></li>
       <li><a href="#index_f"><span>f</span></a></li>
       <li><a href="#index_l"><span>l</span></a></li>
-      <li class="current"><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_m"><span>m</span></a></li>
+      <li class="current"><a href="#index_s"><span>s</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -108,7 +111,7 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -124,10 +127,25 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>BIG
 : <a class="el" href="class_k_d_tree.html#a95ac5f144323f1a56833bb929e9c1253">KDTree</a>
 </li>
+<li>blockedPageList
+: <a class="el" href="class_sliding_stacked_widget.html#a228a9e132816be341b5d95f958e3bc10">SlidingStackedWidget</a>
+</li>
+<li>buttonCancel
+: <a class="el" href="class_main_window.html#aab7cc2e774c2f61e7164f6f32b9cb7f7">MainWindow</a>
+</li>
+<li>buttonNext
+: <a class="el" href="class_main_window.html#adfe7c2194fe57ad0a85bb653c362267e">MainWindow</a>
+</li>
 </ul>
 
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>centralWidget
+: <a class="el" href="class_main_window.html#ad3bde47a75b6c59146d6aff1752d077f">MainWindow</a>
+</li>
+<li>controlPaneLayout
+: <a class="el" href="class_main_window.html#a5393cd08b95bbca76fe578f8ce152692">MainWindow</a>
+</li>
 <li>counter
 : <a class="el" href="class_point_road.html#a0d9c04079f1316c84dfc7488aa5a1325">PointRoad</a>
 </li>
@@ -155,8 +173,14 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 
 
 <h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>m_active
+: <a class="el" href="class_sliding_stacked_widget.html#a7449e32d40ecea4815aba82ddd36d23f">SlidingStackedWidget</a>
+</li>
 <li>m_altitude
 : <a class="el" href="class_point_g_p_s.html#ab65928ed63bbd67e0e1c995ecddf59ba">PointGPS</a>
+</li>
+<li>m_animationtype
+: <a class="el" href="class_sliding_stacked_widget.html#ad067ee3c7f02cb850166c8facca924dc">SlidingStackedWidget</a>
 </li>
 <li>m_arrayOfBoxes
 : <a class="el" href="class_k_d_tree.html#ab46bbba45f605a7107cb610f7ef313f1">KDTree</a>
@@ -236,6 +260,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_low
 : <a class="el" href="class_box.html#a9abe19fa263c0891d8faef785cc3ad09">Box</a>
 </li>
+<li>m_mainwindow
+: <a class="el" href="class_sliding_stacked_widget.html#a0cde9dd12f47754c06f52be17d40b66f">SlidingStackedWidget</a>
+</li>
 <li>m_mapOfAllRoads
 : <a class="el" href="class_grid.html#a5578e1ff240198b12d1d17f919bb182c">Grid</a>
 </li>
@@ -248,6 +275,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_nbPtTrack
 : <a class="el" href="class_filtering.html#a44cc9a35582b7355d1a7ca0dccc355be">Filtering</a>
 </li>
+<li>m_next
+: <a class="el" href="class_sliding_stacked_widget.html#a1c92215f46b9a6431227bad40027ad8b">SlidingStackedWidget</a>
+</li>
 <li>m_niveau
 : <a class="el" href="class_my_exception.html#a6c4a238c570bbe45f827234b67fea202">MyException</a>
 </li>
@@ -257,6 +287,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_noOfPoints
 : <a class="el" href="class_k_d_tree.html#ade745ebe4be3f535fa39cdaf156e4044">KDTree</a>
 </li>
+<li>m_now
+: <a class="el" href="class_sliding_stacked_widget.html#a5d3376989689f64af25501c6653b9650">SlidingStackedWidget</a>
+</li>
 <li>m_numero
 : <a class="el" href="class_my_exception.html#a39af090a31662562d29e0fe93635d20e">MyException</a>
 </li>
@@ -265,6 +298,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </li>
 <li>m_phrase
 : <a class="el" href="class_my_exception.html#a94897ed2fd5c5ae59db053b15b498020">MyException</a>
+</li>
+<li>m_pnow
+: <a class="el" href="class_sliding_stacked_widget.html#a6a5402b5c18e7d4a56637cbd0e8414ce">SlidingStackedWidget</a>
 </li>
 <li>m_points
 : <a class="el" href="class_track.html#a8aebda84f3ffc1d1c2516cc025ecad5a">Track</a>
@@ -295,6 +331,9 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 </li>
 <li>m_spat
 : <a class="el" href="class_filtering.html#a02f16ab02bbf47efd67dc54761337655">Filtering</a>
+</li>
+<li>m_speed
+: <a class="el" href="class_sliding_stacked_widget.html#a058e6dacb0f06beaaa994e8b468664d9">SlidingStackedWidget</a>
 </li>
 <li>m_stream
 : <a class="el" href="class_q_debug_stream.html#ae4c4c428ef6b8c54d200c62fb5c90188">QDebugStream</a>
@@ -342,6 +381,12 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_vectorOfRoadId
 : <a class="el" href="class_point_road.html#a1105365ecbef2833b6bd57fdb533230b">PointRoad</a>
 </li>
+<li>m_vertical
+: <a class="el" href="class_sliding_stacked_widget.html#a2a544abdfe5de89cb3173c4e6b7bb761">SlidingStackedWidget</a>
+</li>
+<li>m_wrap
+: <a class="el" href="class_sliding_stacked_widget.html#a813274557a97ab77cc445b64f7b74d8e">SlidingStackedWidget</a>
+</li>
 <li>m_x
 : <a class="el" href="class_point.html#a75a0d32cac6568a153e387789c020d37">Point</a>
 </li>
@@ -379,13 +424,35 @@ $(document).ready(function(){initNavTree('functions_vars.html','');});
 <li>m_yMinGrid
 : <a class="el" href="class_grid.html#a49d9db5b72ed67bec16f9a3c0ef1493f">Grid</a>
 </li>
+<li>mainLayout
+: <a class="el" href="class_main_window.html#a435581f9df912d1cc365d67d83366264">MainWindow</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>slideWidget1
+: <a class="el" href="class_main_window.html#adac3cc58151f290448278566dd239feb">MainWindow</a>
+</li>
+<li>slideWidget2
+: <a class="el" href="class_main_window.html#a6d1482a2600f48816cd21d8cbb942888">MainWindow</a>
+</li>
+<li>slideWidget3
+: <a class="el" href="class_main_window.html#a3b318a5b814146f66dec0330d3cd219c">MainWindow</a>
+</li>
+<li>slideWidget4
+: <a class="el" href="class_main_window.html#a82d42f9b369cd95ca0079e4ecf56e274">MainWindow</a>
+</li>
+<li>slidingStacked
+: <a class="el" href="class_main_window.html#a332418e6b26277d22c9d4e4ee007a61a">MainWindow</a>
+</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Nov 15 2016 17:53:13 for Map Matching by
+    <li class="footer">Generated on Tue Nov 15 2016 18:28:13 for Map Matching by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

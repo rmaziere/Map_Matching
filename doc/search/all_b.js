@@ -1,6 +1,7 @@
 var searchData=
 [
   ['launchfiles',['launchFiles',['../class_loading.html#a1d3058f5f9c701a3bd7300ae985ff83a',1,'Loading']]],
+  ['left2right',['LEFT2RIGHT',['../class_sliding_stacked_widget.html#ab28c2d6c9d8d84b944e1d5b3e4ca47d3aa274097d8681573515ae4e79aabc4ca9',1,'SlidingStackedWidget']]],
   ['loadfilecsvtrack',['loadFileCSVTrack',['../class_loading.html#ae0c96193667418083fc4a8c6cc19d9db',1,'Loading']]],
   ['loadfilegrid',['loadFileGrid',['../class_loading.html#a84d718939a74cf1680ea3e2409324194',1,'Loading']]],
   ['loadfileshptrack',['loadFileSHPTrack',['../class_loading.html#a9a01f3e328100b681f3f08192fc9b208',1,'Loading']]],

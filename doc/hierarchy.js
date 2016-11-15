@@ -20,11 +20,17 @@ var hierarchy =
       [ "PointGPS", "class_point_g_p_s.html", null ],
       [ "PointRoad", "class_point_road.html", null ]
     ] ],
+    [ "QMainWindow", null, [
+      [ "MainWindow", "class_main_window.html", null ]
+    ] ],
     [ "QObject", null, [
       [ "Controller", "class_controller.html", null ]
     ] ],
     [ "QScrollArea", null, [
       [ "JournalProcess", "class_journal_process.html", null ]
+    ] ],
+    [ "QStackedWidget", null, [
+      [ "SlidingStackedWidget", "class_sliding_stacked_widget.html", null ]
     ] ],
     [ "QWidget", null, [
       [ "Filtering", "class_filtering.html", null ],

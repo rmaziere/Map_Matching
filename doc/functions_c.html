@@ -77,6 +77,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li class="current"><a href="functions.html"><span>All</span></a></li>
       <li><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
+      <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
     </ul>
   </div>
   <div id="navrow4" class="tabs3">
@@ -128,7 +130,7 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -141,8 +143,14 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 <div class="textblock">Here is a list of all class members with links to the classes they belong to:</div>
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>centralWidget
+: <a class="el" href="class_main_window.html#ad3bde47a75b6c59146d6aff1752d077f">MainWindow</a>
+</li>
 <li>Controller()
 : <a class="el" href="class_controller.html#afd9457573afed55dbcabb192e898a22d">Controller</a>
+</li>
+<li>controlPaneLayout
+: <a class="el" href="class_main_window.html#a5393cd08b95bbca76fe578f8ce152692">MainWindow</a>
 </li>
 <li>counter
 : <a class="el" href="class_point_road.html#a0d9c04079f1316c84dfc7488aa5a1325">PointRoad</a>
@@ -150,13 +158,28 @@ $(document).ready(function(){initNavTree('functions_c.html','');});
 <li>country()
 : <a class="el" href="class_loading.html#a8393eca502e0e8946e9e9b8ca57a565d">Loading</a>
 </li>
+<li>createConnections()
+: <a class="el" href="class_main_window.html#af773488e0b16efe6c0fc67ad348b86b2">MainWindow</a>
+</li>
+<li>createGuiControlComponents()
+: <a class="el" href="class_main_window.html#a684fe2be6fa67486c75ebddfbbe7d42b">MainWindow</a>
+</li>
+<li>createMainLayout()
+: <a class="el" href="class_main_window.html#af3626d206fdb542dc454250f37418d8f">MainWindow</a>
+</li>
+<li>createSlidingStackedWidget()
+: <a class="el" href="class_main_window.html#a9b5bcc86b4b159c34a7631e586b7be55">MainWindow</a>
+</li>
+<li>createSubSlidingWidgets()
+: <a class="el" href="class_main_window.html#a10e39f33826503a9967be862a5b27c40">MainWindow</a>
+</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Nov 15 2016 17:53:13 for Map Matching by
+    <li class="footer">Generated on Tue Nov 15 2016 18:28:13 for Map Matching by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

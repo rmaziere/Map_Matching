@@ -11,9 +11,11 @@ var indexSectionsWithContent =
   1: "bcefghjklmpqrst",
   2: "bcefgjklmpqrst",
   3: "abcdefgijklmnopqrstuvwxy~",
-  4: "bcflm",
+  4: "bcflms",
   5: "ae",
-  6: "ademn"
+  6: "t",
+  7: "ablrt",
+  8: "ademn"
 };
 
 var indexSectionNames =
@@ -24,7 +26,9 @@ var indexSectionNames =
   3: "functions",
   4: "variables",
   5: "typedefs",
-  6: "defines"
+  6: "enums",
+  7: "enumvalues",
+  8: "defines"
 };
 
 function convertToId(search)

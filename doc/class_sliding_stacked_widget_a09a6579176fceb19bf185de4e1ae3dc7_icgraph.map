@@ -1,0 +1,7 @@
+<map id="SlidingStackedWidget::animationFinished" name="SlidingStackedWidget::animationFinished">
+<area shape="rect" id="node2" href="$class_sliding_stacked_widget.html#a9f0032f65d7c2c7eb2cc57fe6b745499" title="SlidingStackedWidget\l::animationDoneSlot" alt="" coords="204,39,355,80"/>
+<area shape="rect" id="node3" href="$class_sliding_stacked_widget.html#a3eabd598082e3f7a87d12ef21609c6bf" title="SlidingStackedWidget\l::slideInWgt" alt="" coords="403,39,553,80"/>
+<area shape="rect" id="node4" href="$class_sliding_stacked_widget.html#aabd161d7cf704e4037ade499e8b46636" title="SlidingStackedWidget\l::slideInIdx" alt="" coords="601,39,752,80"/>
+<area shape="rect" id="node5" href="$class_sliding_stacked_widget.html#a7be460f27a6b5f71325b1130d580eb4a" title="SlidingStackedWidget\l::slideInNext" alt="" coords="800,5,951,47"/>
+<area shape="rect" id="node6" href="$class_sliding_stacked_widget.html#ab726634223ef321df3e0fb132f8f9396" title="SlidingStackedWidget\l::slideInPrev" alt="" coords="800,71,951,112"/>
+</map>

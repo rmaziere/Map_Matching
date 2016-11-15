@@ -13,6 +13,7 @@ var annotated =
     [ "KDTree", "class_k_d_tree.html", "class_k_d_tree" ],
     [ "KDTreeViewer", "class_k_d_tree_viewer.html", "class_k_d_tree_viewer" ],
     [ "Loading", "class_loading.html", "class_loading" ],
+    [ "MainWindow", "class_main_window.html", "class_main_window" ],
     [ "MyException", "class_my_exception.html", "class_my_exception" ],
     [ "Point", "class_point.html", "class_point" ],
     [ "PointGPS", "class_point_g_p_s.html", "class_point_g_p_s" ],
@@ -21,6 +22,7 @@ var annotated =
     [ "QMapViewer", "class_q_map_viewer.html", "class_q_map_viewer" ],
     [ "Road", "class_road.html", "class_road" ],
     [ "Sauvegarde", "class_sauvegarde.html", "class_sauvegarde" ],
+    [ "SlidingStackedWidget", "class_sliding_stacked_widget.html", "class_sliding_stacked_widget" ],
     [ "Solver", "class_solver.html", "class_solver" ],
     [ "Track", "class_track.html", "class_track" ]
 ];

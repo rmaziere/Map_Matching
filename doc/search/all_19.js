@@ -6,10 +6,12 @@ var searchData=
   ['_7ejournalprocess',['~JournalProcess',['../class_journal_process.html#a4fa55433876d5c81015765617d5d85d7',1,'JournalProcess']]],
   ['_7ekdtree',['~KDTree',['../class_k_d_tree.html#a0920219cb85bb5abc8dc1bb22c44a56c',1,'KDTree']]],
   ['_7eloading',['~Loading',['../class_loading.html#a20079ea595d12566365a80d2480f7e09',1,'Loading']]],
+  ['_7emainwindow',['~MainWindow',['../class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7',1,'MainWindow']]],
   ['_7emyexception',['~MyException',['../class_my_exception.html#adf15e65b87d2cf4220cdbe3e0b36ee77',1,'MyException']]],
   ['_7epoint',['~Point',['../class_point.html#a364091762d6aa1aa5983d36fd7d8b6d5',1,'Point']]],
   ['_7eqdebugstream',['~QDebugStream',['../class_q_debug_stream.html#a4005a33eb4732190dea924731d7467d9',1,'QDebugStream']]],
   ['_7eroad',['~Road',['../class_road.html#a3fa0feda8a96c3763d5f5a1f06f2972e',1,'Road']]],
   ['_7esauvegarde',['~Sauvegarde',['../class_sauvegarde.html#a05bd0a2e7e37d63b515f135b81518e22',1,'Sauvegarde']]],
+  ['_7eslidingstackedwidget',['~SlidingStackedWidget',['../class_sliding_stacked_widget.html#ae2587b8ed4c48029a5338bcf66c79bdd',1,'SlidingStackedWidget']]],
   ['_7etrack',['~Track',['../class_track.html#a416e75e66accc8eb9e3fafc3e8555216',1,'Track']]]
 ];

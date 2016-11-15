@@ -5,5 +5,7 @@ var searchData=
   ['addpoint',['addPoint',['../class_road.html#a7f97b4f20c598103baad510b19a0c0b5',1,'Road::addPoint()'],['../class_track.html#ab0315e74b9b49e40d163a2ff978d833c',1,'Track::addPoint()']]],
   ['addroad',['addRoad',['../class_grid.html#aba1830bc145f128d6deeed29cfb94c9f',1,'Grid']]],
   ['altitude',['altitude',['../class_point_g_p_s.html#a0e03a1b5542483fafea1bc8e7305fb5d',1,'PointGPS']]],
+  ['animationdoneslot',['animationDoneSlot',['../class_sliding_stacked_widget.html#a9f0032f65d7c2c7eb2cc57fe6b745499',1,'SlidingStackedWidget']]],
+  ['animationfinished',['animationFinished',['../class_sliding_stacked_widget.html#a09a6579176fceb19bf185de4e1ae3dc7',1,'SlidingStackedWidget']]],
   ['applythresholdtobox',['applyThresholdToBox',['../class_track.html#aac5002af6aa69a20101a5709dbbebc82',1,'Track']]]
 ];

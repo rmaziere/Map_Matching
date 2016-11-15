@@ -26,6 +26,10 @@ var files =
       [ "Loading", "class_loading.html", "class_loading" ]
     ] ],
     [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
+    [ "MainWindow.cpp", "_main_window_8cpp.html", null ],
+    [ "MainWindow.h", "_main_window_8h.html", [
+      [ "MainWindow", "class_main_window.html", "class_main_window" ]
+    ] ],
     [ "myexception.h", "myexception_8h.html", [
       [ "MyException", "class_my_exception.html", "class_my_exception" ]
     ] ],
@@ -45,6 +49,10 @@ var files =
     [ "sauvegarde.cpp", "sauvegarde_8cpp.html", null ],
     [ "sauvegarde.h", "sauvegarde_8h.html", [
       [ "Sauvegarde", "class_sauvegarde.html", "class_sauvegarde" ]
+    ] ],
+    [ "SlidingStackedWidget.cpp", "_sliding_stacked_widget_8cpp.html", null ],
+    [ "SlidingStackedWidget.h", "_sliding_stacked_widget_8h.html", [
+      [ "SlidingStackedWidget", "class_sliding_stacked_widget.html", "class_sliding_stacked_widget" ]
     ] ],
     [ "solver.cpp", "solver_8cpp.html", "solver_8cpp" ],
     [ "solver.h", "solver_8h.html", "solver_8h" ],
