@@ -1,6 +1,0 @@
-<map id="PointRoad::isNode" name="PointRoad::isNode">
-<area shape="rect" id="node2" href="$class_grid.html#aba1830bc145f128d6deeed29cfb94c9f" title="addRoad Creates a new road and inserts it in m_road " alt="" coords="185,31,292,57"/>
-<area shape="rect" id="node3" href="$class_grid.html#ae848f1c59c544adc1af9133409ee0106" title="readFromCSV Reads a csv file and inserts info into the corresponding attributs " alt="" coords="340,31,477,57"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a640261e473790d1a87c2f33332460793" title="dev_grid" alt="" coords="525,5,596,32"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="529,56,592,83"/>
-</map>
