@@ -25,7 +25,7 @@
 class QAction;
 class QgisInterface;
 
-// Declaration of the AgilePlugin class
+// Declaration of the GeomaticsProjet class
 class GeomaticsProjet: public QObject, public QgisPlugin
 {
 Q_OBJECT
