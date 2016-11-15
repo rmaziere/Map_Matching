@@ -45,11 +45,14 @@ int File::selectFilesToOpen(QString extensionFilter){
             QString temp = files.at(i);
             splitPath(temp);
         }
+    return 1;
     }
     catch(std::exception const& e){
         cerr << "ERROR : " << e.what() << endl;
+        return 0;
     }
-    return 0;
+
+
 }
 
 int File::whereSave(){
@@ -96,11 +99,11 @@ int File::shp2csv(QString geometryType){
                 fileName.replace(i, tempFileName + "_L93");
                 fileExtension.replace(i, "csv");
             }
-            return 0;
+            return 1;
         }
     }
     catch(std::exception const& e){
         cerr << "ERREUR : " << e.what() << endl;
     }
-    return 1;
+    return 0;
 }
