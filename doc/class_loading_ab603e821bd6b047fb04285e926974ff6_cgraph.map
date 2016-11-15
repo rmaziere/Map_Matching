@@ -1,7 +1,0 @@
-<map id="Loading::track" name="Loading::track">
-<area shape="rect" id="node2" href="$class_loading.html#ae0c96193667418083fc4a8c6cc19d9db" title="Loading::loadFileCSVTrack" alt="" coords="157,5,339,32"/>
-<area shape="rect" id="node5" href="$class_loading.html#a9a01f3e328100b681f3f08192fc9b208" title="Loading::loadFileSHPTrack" alt="" coords="157,56,339,83"/>
-<area shape="rect" id="node3" href="$class_file.html#a7177a8eac75b0fc5425ebd65e16c2d6f" title="The UI to select the file&#39;s path to open. " alt="" coords="387,5,547,32"/>
-<area shape="rect" id="node4" href="$class_file.html#ac464caa98a33cfe227111dd7cd5e77e1" title="The split function to split the path file to filePath, fileName, fileExtension attributes. " alt="" coords="595,5,697,32"/>
-<area shape="rect" id="node6" href="$class_file.html#a2cd702098066c4abde1c20ee708fa91f" title="The function to convert WGS84 ShapeFile(s) to Lambert 93 CSV(s) " alt="" coords="417,56,517,83"/>
-</map>
