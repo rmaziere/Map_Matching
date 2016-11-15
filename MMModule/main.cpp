@@ -11,6 +11,7 @@
 #include "pointGPS.h"
 #include "track.h"
 #include "loading.h"
+#include "GUI/map.h"
 
 
 using namespace std;
@@ -81,6 +82,12 @@ void dev_openFile() {
     //return app.exec();*/
 }
 
+void ui(){
+    Loading fenetre;
+    // Affichage de la fenêtre
+    fenetre.show();
+}
+
 void dev_file(){
     File f;
     f.selectFilesToOpen("shp");
@@ -90,16 +97,19 @@ void dev_file(){
     cout << "File name : " << f.fileName.at(0).toStdString() << ", file extension : " << f.fileExtension.at(0).toStdString() << endl;
 }
 
+void dev_img(){
+    Map m(100, 100);
+    m.draw();
+    m.save("/home/rmaziere/DEV/QImage_TP/img_2.png");
+}
+
 
 int main(int argc, char *argv[])
 {
-    //dev_grid();
-    //dev_all();
     QApplication app(argc, argv);
 
-    Loading fenetre;
-    // Affichage de la fenêtre
-    fenetre.show();
+    //Fonction à exécuter ci-dessous :
+
 
     return app.exec();
 }
