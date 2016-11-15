@@ -28,9 +28,7 @@ SOURCES += main.cpp \
     KDTreeAlgos/kdtree.cpp \
     emissionprobability.cpp \
     KDTreeAlgos/kdtreeviewer.cpp \
-    GUI/qmapviewer.cpp \
-    GUI/controller.cpp
-
+    journalprocess.cpp
 
 HEADERS += \
     sauvegarde.h \
@@ -50,6 +48,6 @@ HEADERS += \
     KDTreeAlgos/kdtree.h \
     emissionprobability.h \
     KDTreeAlgos/kdtreeviewer.h \
-    GUI/qmapviewer.h \
-    GUI/controller.h
+    journalprocess.h \
+    qdebugstream.h
 

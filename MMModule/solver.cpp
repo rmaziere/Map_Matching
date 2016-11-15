@@ -1,5 +1,4 @@
 #include "solver.h"
-
 #define DEBUG true
 
 void Solver::initialize()
@@ -19,15 +18,17 @@ void Solver::setDistance(PointGPS *p, Road &r)
         std::cout << p->infos() << std::endl;
         r.outputInfos();
     }
-/*    const vector<int> &listOfPointId= r.vectorOfPointsId();
+    const std::vector<int> &listOfPointId= r.vectorOfPointsId();
     double d, bestDistance= std::numeric_limits<double>::max();
     for (uint i=1; i<listOfPointId.size(); i++) {
-        d= p->distanceToSegment(*m_roadPoints[listOfPointId[i-1]], *m_roadPoints[listOfPointId[i]]);
+        //int j=listOfPointId[i-1];
+        //Point p1= m_roadPoints->at(j);
+        d= p->distanceToSegment(m_roadPoints->at(listOfPointId[i-1]), m_roadPoints->at(listOfPointId[i]));
         if (d<bestDistance) bestDistance= d;
     }
     p->addEmissionProbability(r.edgeId(), bestDistance);
 
     if (DEBUG) {
-        //std::cout << p->infos() << std::endl;
-    }*/
+        std::cout << p->infos() << std::endl;
+    }
 }
