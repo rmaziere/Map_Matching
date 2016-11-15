@@ -1,0 +1,4 @@
+<map id="Point" name="Point">
+<area shape="rect" id="node2" href="$class_point_g_p_s.html" title="PointGPS" alt="" coords="5,80,85,107"/>
+<area shape="rect" id="node3" href="$class_point_road.html" title="PointRoad" alt="" coords="109,80,192,107"/>
+</map>
