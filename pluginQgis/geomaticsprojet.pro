@@ -54,11 +54,6 @@ DEST = libgeomaticsprojet.so
 
 DEFINES += GUI_EXPORT= CORE_EXPORT=
 
-DISTFILES +=
-
-SUBDIRS += \
-    ../MMModule/MMModule.pro
-
 QMAKE_CXXFLAGS += -std=c++0x
 QMAKE_CXXFLAGS += -std=c++11
 
