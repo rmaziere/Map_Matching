@@ -64,7 +64,10 @@ public:
      * @param y Coordinate y
      */
     void updateGrid(double x, double y);
-
+    /**
+     * @brief trackInGrid
+     * @return true if track is in grid
+     */
     bool trackInGrid();
     /**
      * @brief setDistance
