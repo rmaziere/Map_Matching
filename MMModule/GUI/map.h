@@ -1,6 +1,7 @@
 #ifndef MAP_H
 #define MAP_H
 
+#include <iostream>
 #include <string>
 #include <QApplication>
 #include <QString>
@@ -15,12 +16,16 @@ public:
      * @param Image's width
      * @param Image's height
      */
+    Map();
+
     Map(int width, int height);
 
     void scaleCalculator(double xMinGrid, double xMaxGrid, double yMinGrid, double yMaxGrid);
     void deltaCalculator(double xMinGrid, double yMinGrid);
 
     QPointF coordinateTranslator(double x, double y);
+
+    int makePolyline(std::vector<std::vector<double>> vXY);
 
     /**
      * @brief drawPolyline

@@ -1,6 +1,10 @@
 #include "map.h"
 
-Map::Map(int width, int height){
+Map::Map(){
+    Map(1280, 1024);
+}
+
+Map::Map(int width=1280, int height=1024){
     this->width  = width;
     this->height = height;
 
@@ -20,15 +24,15 @@ void Map::scaleCalculator(double xMinGrid, double xMaxGrid, double yMinGrid, dou
 }
 
 void Map::deltaCalculator(double xMinGrid, double yMinGrid){
-    deltaX = int(xMinGrid);
-    deltaY = int(yMinGrid);
+    deltaX = round(xMinGrid);
+    deltaY = round(yMinGrid);
 }
 
 QPointF Map::coordinateTranslator(double x, double y){
-    int newX = (x - deltaX);//Changement de référence (décalage du 0,0 du SRID)
+    float newX = (x - deltaX);//Changement de référence (décalage du 0,0 du SRID)
     newX *= scale;          //Application de l'échelle
 
-    int newY = (y - deltaY);//Changement de référence (décalage du 0,0 du SRID)
+    float newY = (y - deltaY);//Changement de référence (décalage du 0,0 du SRID)
     newY *= scale;          //Application de l'échelle
     newY = height - y;      //Changement de l'orientation du y
 
@@ -38,9 +42,10 @@ QPointF Map::coordinateTranslator(double x, double y){
 
 int Map::draw(){
     paint.begin(&img);
-    paint.drawRect(0,0,99,99);
 
     paint.setPen(QPen(Qt::black, 3, Qt::SolidLine, Qt::SquareCap, Qt::BevelJoin));
+
+    paint.drawRect(0,0,99,99);
 
     static const QPointF points[3] = {
         QPointF(10.0, 80.0),
@@ -56,11 +61,30 @@ int Map::draw(){
     paint.end();
     return 0;
 }
-/*
-int Map::drawPolyline(QPointF polyligne, int size){
-    paint.drawPolyline(polyligne, size);
+
+int Map::makePolyline(std::vector<std::vector<double>> vXY){
+    paint.begin(&img);
+
+    std::cout << "Taille du vecteur : " << vXY.size()<< std::endl;
+
+    for(int i = 0; i < vXY.size(); i++){
+        std::cout << "x = " << vXY.at(i).at(0) << ", ";
+        std::cout << "y = " << vXY.at(i).at(1) << std::endl;
+
+        if (i < vXY.size() - 1) {
+            QPointF polyligne[2] = {QPointF(vXY.at(i).at(0), vXY.at(i).at(1)), QPointF(vXY.at(i+1).at(0), vXY.at(i+1).at(1))};
+            paint.setPen(QPen(Qt::red, 3, Qt::SolidLine, Qt::RoundCap, Qt::BevelJoin));
+            paint.drawPolyline(polyligne, 2);
+
+        }
+        paint.setPen(QPen(Qt::blue, 15, Qt::SolidLine, Qt::RoundCap, Qt::BevelJoin));
+        paint.drawPoint(QPointF(vXY.at(i).at(0), vXY.at(i).at(1)));
+    }
+
+    std::cout << "drawPolyline" << std::endl;
+    paint.end();
     return 0;
-}*/
+}
 
 int Map::save(QString file){
     img.save(file);
