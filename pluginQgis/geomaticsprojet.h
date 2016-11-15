@@ -1,5 +1,5 @@
-#ifndef AGILEPLUGIN_H
-#define AGILEPLUGIN_H
+#ifndef GEOMATICSPROJET_H
+#define GEOMATICSPROJET_H
 
 #include <QObject>
 #include <iostream>

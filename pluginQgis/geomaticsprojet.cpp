@@ -1,4 +1,4 @@
-#include "agileplugin.h"
+#include "geomaticsprojet.h"
 #include "qgisinterface.h"
 #include "qgsmessagelog.h"
 #include "qgsmapcanvas.h"
@@ -8,9 +8,9 @@
 #include <QList>
 
 // Static variables for plugin description
-static const QString sName = QObject::tr("AgilePlugin");
-static const QString sDescription = QObject::tr("This is a very agile plugin");
-static const QString sCategory = QObject::tr("Agile projects");
+static const QString sName = QObject::tr("GeomaticsProject");
+static const QString sDescription = QObject::tr("This is Geomatics Project");
+static const QString sCategory = QObject::tr("Geomatics Project");
 static const QString sPluginVersion = QObject::tr("Version 1.0");
 static const QgisPlugin::PLUGINTYPE sPluginType = QgisPlugin::UI;
 static const QString sPluginIcon = "";
@@ -24,7 +24,7 @@ GeomaticsProjet::GeomaticsProjet(QgisInterface * interface)
 
 void GeomaticsProjet::initGui()
 {
-   std::cout << "geomaticsproject::initGui" << std::endl;
+   std::cout << "GeomaticsProject::initGui" << std::endl;
 
    // Creates the action
    m_action = new QAction(QIcon(""), tr("Geomatics projet"), this);

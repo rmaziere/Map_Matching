@@ -14,7 +14,7 @@ LIBS += -lgtest -lpthread
 
 INCLUDEPATH += /usr/include/qgis/
 
-SOURCES += agileplugin.cpp \
+SOURCES += geomaticsprojet.cpp \
     ../MMModule/emissionprobability.cpp \
     ../MMModule/file.cpp \
     ../MMModule/grid.cpp \
@@ -32,7 +32,7 @@ SOURCES += agileplugin.cpp \
     ../MMModule/KDTreeAlgos/kdtreeviewer.cpp \
     main.cpp
 
-HEADERS += agileplugin.h \
+HEADERS += geomaticsprojet.h \
     ../MMModule/emissionprobability.h \
     ../MMModule/file.h \
     ../MMModule/grid.h \
