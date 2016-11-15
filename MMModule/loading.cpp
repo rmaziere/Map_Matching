@@ -127,9 +127,11 @@ void Loading::loadFileGrid()
 
 void Loading::getCountry()
 {
-    m_country->setEnabled(false);
+    //m_country->setEnabled(false);
     if( m_fr->isChecked())
         cout << "fr";
+    else
+        cout << "usa";
 }
 
 void Loading::launchFiles()
