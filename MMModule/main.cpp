@@ -3,6 +3,7 @@
 #include <math.h>
 #include <vector>
 #include <limits.h>
+#include <iostream>
 
 #include "file.h"
 #include "grid.h"
@@ -81,6 +82,15 @@ void dev_openFile()
              << tempFileExtension.toStdString() << endl;
     }
     //return app.exec();*/
+}
+
+void dev_file(){
+    File f;
+    f.selectFilesToOpen("shp");
+    cout << "File name : " << f.fileName.at(0).toStdString() << ", file extension : " << f.fileExtension.at(0).toStdString() << endl;
+
+    f.shp2csv("Polyline");
+    cout << "File name : " << f.fileName.at(0).toStdString() << ", file extension : " << f.fileExtension.at(0).toStdString() << endl;
 }
 
 int main(int argc, char *argv[])

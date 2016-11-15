@@ -24,24 +24,31 @@ int File::splitPath(QString fileGlobalPath){
 }
 
 int File::selectFilesToOpen(QString extensionFilter){
-    // Set path to home Path
-    QString path = QDir::homePath();
+    try{
+        // Set path to home Path
+        QString path = QDir::homePath();
 
-    // Select multiple files
-    QStringList files;
-    while (files.isEmpty())
-    {
+        // Select multiple files
+        QStringList files;
+
+        //Return null is cancel buttom is pressed
         files = QFileDialog::getOpenFileNames(
                         NULL,
                         "Select one or more files to open",
                         path,
                         "Fichier ." + extensionFilter + " (*." + extensionFilter + ")");
-    }
-    for (int i = 0; i < files.size(); ++i){
-        QString temp = files.at(i);
-        splitPath(temp);
-    }
 
+        if(files.isEmpty()){
+             throw MyException(1, "No file selected !", 2);
+        }
+        for (int i = 0; i < files.size(); ++i){
+            QString temp = files.at(i);
+            splitPath(temp);
+        }
+    }
+    catch(std::exception const& e){
+        cerr << "ERROR : " << e.what() << endl;
+    }
     return 0;
 }
 
@@ -85,6 +92,9 @@ int File::shp2csv(QString geometryType){
                 string shpToCsv_command = "ogr2ogr -f CSV " + destinationPath.toStdString() + " " + originPath.toStdString() + " -t_srs EPSG:2154 -lco GEOMETRY=" + gdalGeometryParam;
 
                 system(shpToCsv_command.c_str());//shp wgs84 => csv Lambert 93
+
+                fileName.replace(i, tempFileName + "_L93");
+                fileExtension.replace(i, "csv");
             }
             return 0;
         }
