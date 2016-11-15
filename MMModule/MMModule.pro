@@ -28,7 +28,9 @@ SOURCES += main.cpp \
     KDTreeAlgos/kdtree.cpp \
     emissionprobability.cpp \
     KDTreeAlgos/kdtreeviewer.cpp \
-    filtering.cpp
+    filtering.cpp \
+    MainWindow.cpp \
+    SlidingStackedWidget.cpp
 
 
 HEADERS += \
@@ -49,5 +51,7 @@ HEADERS += \
     KDTreeAlgos/kdtree.h \
     emissionprobability.h \
     KDTreeAlgos/kdtreeviewer.h \
-    filtering.h
+    filtering.h \
+    SlidingStackedWidget.h \
+    MainWindow.h
 

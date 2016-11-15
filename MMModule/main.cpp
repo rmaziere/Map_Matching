@@ -1,4 +1,4 @@
-#include <QApplication>
+#include <QtGui/QApplication>
 #include <QFileDialog>
 #include <math.h>
 #include <vector>
@@ -11,7 +11,7 @@
 #include "pointGPS.h"
 #include "track.h"
 #include "loading.h"
-
+#include "MainWindow.h"
 
 using namespace std;
 
@@ -93,15 +93,17 @@ void dev_file(){
     cout << "File name : " << f.fileName.at(0).toStdString() << ", file extension : " << f.fileExtension.at(0).toStdString() << endl;
 }
 
-int main(int argc, char *argv[])
-{
-    //dev_grid();
-    //dev_all();
-    QApplication app(argc, argv);
+int main(int argc, char *argv[]) {
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.setWindowTitle("Map Matching");
 
-    Loading fenetre;
-    // Affichage de la fenêtre
-    fenetre.show();
+#ifdef Q_OS_SYMBIAN
+    w.showMaximized();
+#else
+    w.resize(360, 504);
+    w.show();
+#endif
 
-    return app.exec();
+    return a.exec();
 }
