@@ -291,3 +291,8 @@ void Grid::updateGrid(double x, double y)
     m_yMinGrid = std::min(m_yMinGrid,y);
     m_yMaxGrid = std::max(m_yMaxGrid,y);
 }
+
+bool Grid::trackInGrid()
+{
+    return (xMin() >= xMinGrid()) && (xMax() <= xMaxGrid()) && (yMin() >= yMinGrid()) && (yMax() <= yMaxGrid());
+}

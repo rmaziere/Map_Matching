@@ -85,4 +85,12 @@ TEST_F(GridTest, updateGrid)
     EXPECT_DOUBLE_EQ(11000.0, grid.yMaxGrid());
 }
 
+TEST_F(GridTest, trackInGrid)
+{
+    Grid grid;
+    grid.setBoundingBox(1,5,30,50);
+    grid.readFromCSV("../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv");
+    ASSERT_TRUE(grid.trackInGrid());
+}
+
 #endif // GRIDTEST_H

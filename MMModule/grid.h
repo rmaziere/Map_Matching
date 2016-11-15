@@ -58,11 +58,27 @@ public:
      * @return true or false
      */
     bool inFootPrint(double x,double y);
+    /**
+     * @brief updateGrid Find max and min of the grid
+     * @param x Coordinate x
+     * @param y Coordinate y
+     */
+    void updateGrid(double x, double y);
 
+    bool trackInGrid();
+    /**
+     * @brief setDistance
+     * @param p Point GPS
+     * @param r Road
+     */
     void setDistance(PointGPS &p, Road &r);
-
+    /**
+     * @brief buildKDTree
+     */
     void buildKDTree();
-
+    /**
+     * @brief buildMarkovMatrix
+     */
     void buildMarkovMatrix();
 
     // test functions
@@ -92,12 +108,6 @@ protected:
     double m_yMin;
     double m_yMax;
 
-    /**
-     * @brief updateGrid Find max and min of the grid
-     * @param x Coordinate x
-     * @param y Coordinate y
-     */
-    void updateGrid(double x, double y);
     /**
      * @name The coordinates of the grid.
      */
