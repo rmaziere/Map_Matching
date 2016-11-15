@@ -17,6 +17,10 @@ Grid::Grid()
     , m_xMax(std::numeric_limits<double>::max())
     , m_yMin(0.0)
     , m_yMax(std::numeric_limits<double>::max())
+    , m_xMinGrid(std::numeric_limits<double>::max())
+    , m_xMaxGrid(0.0)
+    , m_yMinGrid(std::numeric_limits<double>::max())
+    , m_yMaxGrid(0.0)
 {
 
 }
@@ -153,6 +157,7 @@ void Grid::readFromCSV(QString filename)
                         x = coordonnees[0].toDouble();
                         y = coordonnees[1].toDouble();
                         inBox = inFootPrint(x,y);
+                        updateGrid(x,y);
                         if (DEBUG_READCSV) cout << setprecision(150) << x << "," << y << endl;
                         vector<double> coordinates;
                         coordinates.push_back(x);
@@ -268,3 +273,15 @@ void Grid::buildMarkovMatrix()
     }
 }
 
+void Grid::updateGrid(double x, double y)
+{
+    m_xMinGrid = std::min(m_xMinGrid,x);
+    m_xMaxGrid = std::max(m_xMaxGrid,x);
+    m_yMinGrid = std::min(m_yMinGrid,y);
+    m_yMaxGrid = std::max(m_yMaxGrid,y);
+}
+
+bool Grid::trackInGrid()
+{
+    return (xMin() >= xMinGrid()) && (xMax() <= xMaxGrid()) && (yMin() >= yMinGrid()) && (yMax() <= yMaxGrid());
+}

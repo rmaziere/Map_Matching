@@ -49,7 +49,6 @@ void Loading::country()
 
     m_fr = new QRadioButton("France");
     m_usa = new QRadioButton("USA");
-    //radio1->setChecked(true);
 
     QObject::connect(m_fr, SIGNAL(clicked()), this, SLOT(getCountry()));
     QObject::connect(m_usa, SIGNAL(clicked()), this, SLOT(getCountry()));
@@ -67,7 +66,7 @@ void Loading::grid()
     m_fileGrid = new QLabel(this);
 
     m_csvGrid = new QPushButton("SHP");
-    m_csvGrid->setGeometry(0, 2, 0, 3);
+    m_csvGrid->setCheckable(true);
 
     QObject::connect(m_csvGrid, SIGNAL(clicked()), this, SLOT(loadFileGrid()));
 
@@ -84,6 +83,8 @@ void Loading::track()
 
     m_csvTrack = new QPushButton("CSV");
     m_shpTrack = new QPushButton("SHP");
+    m_csvTrack->setCheckable(true);
+    m_shpTrack->setCheckable(true);
     m_fileGPS = new QLabel(this);
 
     QObject::connect(m_csvTrack, SIGNAL(clicked()), this, SLOT(loadFileCSVTrack()));
@@ -99,40 +100,58 @@ void Loading::track()
 
 void Loading::loadFileCSVTrack()
 {
-    m_fileGPS->setText("1 file loaded");
-    m_csvTrack->setEnabled(false);
-    m_shpTrack->setEnabled(false);
     File fileCSV;
-    fileCSV.selectFilesToOpen("csv");
+    int result = fileCSV.selectFilesToOpen("csv");
+    if (result == 1)
+    {
+        m_fileGPS->setText("1 file loaded");
+        m_csvTrack->setEnabled(false);
+        m_shpTrack->setEnabled(false);
+    }
 }
 
 void Loading::loadFileSHPTrack()
 {
-    m_fileGPS->setText("1 file loaded");
-    m_csvTrack->setEnabled(false);
-    m_shpTrack->setEnabled(false);
     File fileSHP;
-    fileSHP.selectFilesToOpen("shp");
-    //fileSHP.shp2csv("Point");
+    int result = fileSHP.selectFilesToOpen("shp");
+    if (result == 1)
+    {
+        int conv = fileSHP.shp2csv("Point");
+        if (conv == 1)
+        {
+            m_fileGPS->setText("1 file loaded");
+            m_csvTrack->setEnabled(false);
+            m_shpTrack->setEnabled(false);
+        }
+    }
 }
 
 void Loading::loadFileGrid()
 {
-    m_fileGrid->setText("1 file loaded");
-    m_csvGrid->setEnabled(false);
     File fileSHP;
-    fileSHP.selectFilesToOpen("shp");
-    //fileSHP.shp2csv("Polyline");
+    int result = fileSHP.selectFilesToOpen("shp");
+    if (result == 1)
+    {
+        int conv = fileSHP.shp2csv("Polyline");
+        if (conv == 1)
+        {
+            m_fileGrid->setText("1 file loaded");
+            m_csvGrid->setEnabled(false);
+        }
+    }
 }
 
-void Loading::getCountry()
+void Loading::getCountry() //A modifier
 {
-    m_country->setEnabled(false);
+    //m_country->setEnabled(false);
     if( m_fr->isChecked())
         cout << "fr";
+    else
+        cout << "usa";
 }
 
 void Loading::launchFiles()
 {
-    //if (m_fileGrid->)
+    if ((m_fr->isChecked() || m_usa->isChecked()) && (m_csvTrack->isChecked() || m_shpTrack->isChecked()) && (m_csvGrid->isChecked()))
+        cout << "tout ok"; // A modifier
 }

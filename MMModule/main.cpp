@@ -3,6 +3,7 @@
 #include <math.h>
 #include <vector>
 #include <limits.h>
+#include <iostream>
 
 #include "file.h"
 #include "grid.h"
@@ -15,7 +16,8 @@
 
 using namespace std;
 
-void dev_grid() {
+void dev_grid()
+{
     QString gridFile= "../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv";
     Grid grid;
     grid.readFromCSV(gridFile);
@@ -23,7 +25,8 @@ void dev_grid() {
     grid.outputInfos();
 }
 
-void dev_all() {
+void dev_all()
+{
     // grid.readFromCSV("../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv");
     QString trackFile= "../Data/Seattle/mini_start_track.csv";
     QString gridFile= "../Data/Seattle/mini_start_network.csv";
@@ -50,7 +53,8 @@ void dev_all() {
     std::cout << "The end." << std::endl;
 }
 
-void dev_network() {
+void dev_network()
+{
 /*
     grid myNetwork;
     myNetwork.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
@@ -62,8 +66,8 @@ void dev_network() {
     }*/
 }
 
-
-void dev_openFile() {
+void dev_openFile()
+{
 /*
 
     //QApplication app(argc, argv);
@@ -85,6 +89,14 @@ void dev_openFile() {
     //return app.exec();*/
 }
 
+void dev_file(){
+    File f;
+    f.selectFilesToOpen("shp");
+    cout << "File name : " << f.fileName.at(0).toStdString() << ", file extension : " << f.fileExtension.at(0).toStdString() << endl;
+
+    f.shp2csv("Polyline");
+    cout << "File name : " << f.fileName.at(0).toStdString() << ", file extension : " << f.fileExtension.at(0).toStdString() << endl;
+}
 
 int main(int argc, char *argv[])
 {
