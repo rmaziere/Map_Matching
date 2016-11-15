@@ -4,13 +4,12 @@
 #include <vector>
 #include <limits.h>
 
-#include "file.h"
-#include "grid.h"
-#include "myexception.h"
-#include "pointGPS.h"
-#include "track.h"
-#include "loading.h"
-
+#include "../MMModule/file.h"
+#include "../MMModule/grid.h"
+#include "../MMModule/myexception.h"
+#include "../MMModule/pointGPS.h"
+#include "../MMModule/track.h"
+#include "../MMModule/loading.h"
 
 using namespace std;
 
@@ -83,15 +82,8 @@ void dev_openFile()
     //return app.exec();*/
 }
 
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
-    //dev_grid();
-    //dev_all();
-    QApplication app(argc, argv);
-
-    Loading fenetre;
-    // Affichage de la fenêtre
-    fenetre.show();
-
-    return app.exec();
+    cout << "Run succesful" << endl;
+    return 0;
 }
