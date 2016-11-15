@@ -14,7 +14,7 @@ LIBS += -lgtest -lpthread
 
 INCLUDEPATH += /usr/include/qgis/
 
-SOURCES += agileplugin.cpp \
+SOURCES += geomaticsprojet.cpp \
     ../MMModule/emissionprobability.cpp \
     ../MMModule/file.cpp \
     ../MMModule/grid.cpp \
@@ -32,7 +32,7 @@ SOURCES += agileplugin.cpp \
     ../MMModule/KDTreeAlgos/kdtreeviewer.cpp \
     main.cpp
 
-HEADERS += agileplugin.h \
+HEADERS += geomaticsprojet.h \
     ../MMModule/emissionprobability.h \
     ../MMModule/file.h \
     ../MMModule/grid.h \
@@ -50,14 +50,9 @@ HEADERS += agileplugin.h \
     ../MMModule/KDTreeAlgos/boxnode.h \
     ../MMModule/KDTreeAlgos/kdtree.h
 
-DEST = libagileplugin.so
+DEST = libgeomaticsprojet.so
 
 DEFINES += GUI_EXPORT= CORE_EXPORT=
-
-DISTFILES +=
-
-SUBDIRS += \
-    ../MMModule/MMModule.pro
 
 QMAKE_CXXFLAGS += -std=c++0x
 QMAKE_CXXFLAGS += -std=c++11
@@ -68,4 +63,4 @@ MOC_DIR = build/.moc
 RCC_DIR = build/.rcc
 UI_DIR = build/.ui
 
-#QMAKE_POST_LINK += $$quote(cp build/libagileplugin.so.1.0.0 /usr/lib/qgis/plugins/libagileplugin.so)
+#QMAKE_POST_LINK += $$quote(cp build/libgeomaticsprojet.so.1.0.0 /usr/lib/qgis/plugins/libgeomaticsprojet.so)

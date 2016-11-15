@@ -1,5 +1,5 @@
-#ifndef AGILEPLUGIN_H
-#define AGILEPLUGIN_H
+#ifndef GEOMATICSPROJET_H
+#define GEOMATICSPROJET_H
 
 #include <QObject>
 #include <iostream>
@@ -25,7 +25,7 @@
 class QAction;
 class QgisInterface;
 
-// Declaration of the AgilePlugin class
+// Declaration of the GeomaticsProjet class
 class GeomaticsProjet: public QObject, public QgisPlugin
 {
 Q_OBJECT
