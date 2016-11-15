@@ -131,7 +131,5 @@ int main(int argc, char *argv[])
     //dev_grid();
     dev_all();
 
-
-    QApplication app(argc, argv);
     return app.exec();
 }

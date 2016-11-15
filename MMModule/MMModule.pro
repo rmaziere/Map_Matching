@@ -28,13 +28,7 @@ SOURCES += main.cpp \
     KDTreeAlgos/kdtree.cpp \
     emissionprobability.cpp \
     KDTreeAlgos/kdtreeviewer.cpp \
-<<<<<<< HEAD
     journalprocess.cpp
-=======
-    GUI/qmapviewer.cpp \
-    GUI/controller.cpp
->>>>>>> b4a1f1dabf01dd8776f5a335202a67bf50cef185
-
 
 HEADERS += \
     sauvegarde.h \
@@ -54,13 +48,6 @@ HEADERS += \
     KDTreeAlgos/kdtree.h \
     emissionprobability.h \
     KDTreeAlgos/kdtreeviewer.h \
-<<<<<<< HEAD
     journalprocess.h \
     qdebugstream.h
-
-FORMS +=
-=======
-    GUI/qmapviewer.h \
-    GUI/controller.h
->>>>>>> b4a1f1dabf01dd8776f5a335202a67bf50cef185
 
