@@ -64,10 +64,10 @@ public:
      * @name Setters and getters of x & y
      */
     //@{
-    double x() const;       /**< x getter */
-    void setx(double x);    /**< x setter */
-    double y() const;       /**< y getter */
-    void sety(double y);    /**< y setter */
+    double x() const; /**< x getter */
+    void setx(double x); /**< x setter */
+    double y() const; /**< y getter */
+    void sety(double y); /**< y setter */
     //@}
 
     /**
@@ -76,8 +76,7 @@ public:
      * @return m_x or m_y depending on the dim value
      */
     double x(int dim) const;
-    void setx(int dim, double value);   /**< set m_x or m_y according to dim value */
-
+    void setx(int dim, double value); /**< set m_x or m_y according to dim value */
 
 protected:
     /**

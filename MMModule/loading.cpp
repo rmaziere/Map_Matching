@@ -1,6 +1,7 @@
 #include "loading.h"
 
-Loading::Loading() : QWidget()
+Loading::Loading()
+    : QWidget()
 {
     country();
     track();
@@ -10,7 +11,7 @@ Loading::Loading() : QWidget()
     // Création d'un widget qui servira de fenêtre
     setFixedSize(500, 400);
 
-    QVBoxLayout *mainLayout = new QVBoxLayout;
+    QVBoxLayout* mainLayout = new QVBoxLayout;
     mainLayout->addWidget(m_country);
     mainLayout->addWidget(m_track);
     mainLayout->addWidget(m_grid);
@@ -32,12 +33,11 @@ void Loading::boutonXY()
     QObject::connect(m_cancel, SIGNAL(clicked()), qApp, SLOT(quit()));
     QObject::connect(m_launch, SIGNAL(clicked()), this, SLOT(launchFiles()));
 
-    QHBoxLayout *vbox = new QHBoxLayout;
+    QHBoxLayout* vbox = new QHBoxLayout;
     vbox->addWidget(m_cancel);
     vbox->addWidget(m_launch);
     vbox->addStretch(1);
     m_boutonXY->setLayout(vbox);
-
 }
 
 void Loading::country()
@@ -50,7 +50,7 @@ void Loading::country()
     QObject::connect(m_fr, SIGNAL(clicked()), this, SLOT(getCountry()));
     QObject::connect(m_usa, SIGNAL(clicked()), this, SLOT(getCountry()));
 
-    QHBoxLayout *vbox = new QHBoxLayout;
+    QHBoxLayout* vbox = new QHBoxLayout;
     vbox->addWidget(m_fr);
     vbox->addWidget(m_usa);
     vbox->addStretch(1);
@@ -67,7 +67,7 @@ void Loading::grid()
 
     QObject::connect(m_csvGrid, SIGNAL(clicked()), this, SLOT(loadFileGrid()));
 
-    QVBoxLayout *vbox = new QVBoxLayout;
+    QVBoxLayout* vbox = new QVBoxLayout;
     vbox->addWidget(m_csvGrid);
     vbox->addWidget(m_fileGrid);
     vbox->addStretch(1);
@@ -87,7 +87,7 @@ void Loading::track()
     QObject::connect(m_csvTrack, SIGNAL(clicked()), this, SLOT(loadFileCSVTrack()));
     QObject::connect(m_shpTrack, SIGNAL(clicked()), this, SLOT(loadFileSHPTrack()));
 
-    QVBoxLayout *vbox = new QVBoxLayout;
+    QVBoxLayout* vbox = new QVBoxLayout;
     vbox->addWidget(m_csvTrack);
     vbox->addWidget(m_shpTrack);
     vbox->addWidget(m_fileGPS);
@@ -99,8 +99,7 @@ void Loading::loadFileCSVTrack()
 {
     File fileCSV;
     int result = fileCSV.selectFilesToOpen("csv");
-    if (result == 1)
-    {
+    if (result == 1) {
         m_fileGPS->setText("1 file loaded");
         m_csvTrack->setEnabled(false);
         m_shpTrack->setEnabled(false);
@@ -111,11 +110,9 @@ void Loading::loadFileSHPTrack()
 {
     File fileSHP;
     int result = fileSHP.selectFilesToOpen("shp");
-    if (result == 1)
-    {
+    if (result == 1) {
         int conv = fileSHP.shp2csv("Point");
-        if (conv == 1)
-        {
+        if (conv == 1) {
             m_fileGPS->setText("1 file loaded");
             m_csvTrack->setEnabled(false);
             m_shpTrack->setEnabled(false);
@@ -127,11 +124,9 @@ void Loading::loadFileGrid()
 {
     File fileSHP;
     int result = fileSHP.selectFilesToOpen("shp");
-    if (result == 1)
-    {
+    if (result == 1) {
         int conv = fileSHP.shp2csv("Polyline");
-        if (conv == 1)
-        {
+        if (conv == 1) {
             m_fileGrid->setText("1 file loaded");
             m_csvGrid->setEnabled(false);
         }
@@ -140,7 +135,7 @@ void Loading::loadFileGrid()
 
 void Loading::getCountry() //A modifier
 {
-    if( m_fr->isChecked())
+    if (m_fr->isChecked())
         cout << "fr";
     else
         cout << "usa";

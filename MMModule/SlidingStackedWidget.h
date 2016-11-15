@@ -3,10 +3,10 @@
 
 #include <QStackedWidget>
 
-#include <QtGui>
-#include <QWidget>
 #include <QDebug>
 #include <QEasingCurve>
+#include <QWidget>
+#include <QtGui>
 
 /* Description
 
@@ -30,14 +30,14 @@ public:
     };
 
     // The Constructor and Destructor
-    SlidingStackedWidget(QWidget *parent);
+    SlidingStackedWidget(QWidget* parent);
     ~SlidingStackedWidget(void);
 
 public slots:
     // Some basic settings API
     void setSpeed(int speed); // animation duration in milliseconds
     void setAnimation(enum QEasingCurve::Type animationtype); // check out the QEasingCurve documentation for different styles
-    void setVerticalMode(bool vertical=true);
+    void setVerticalMode(bool vertical = true);
     void setWrap(bool wrap); // wrapping is related to slideInNext/Prev;it defines the behaviour when reaching last/first page
 
     // The Animation / Page Change API
@@ -55,9 +55,9 @@ protected slots:
 
 protected:
     // this is used for internal purposes in the class engine
-    void slideInWgt(QWidget *widget, enum t_direction direction = AUTOMATIC);
+    void slideInWgt(QWidget* widget, enum t_direction direction = AUTOMATIC);
 
-    QWidget *m_mainwindow;
+    QWidget* m_mainwindow;
 
     int m_speed;
     enum QEasingCurve::Type m_animationtype;

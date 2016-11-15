@@ -1,8 +1,8 @@
 #ifndef POINTGPS_H
 #define POINTGPS_H
 
-#include "point.h"
 #include "emissionprobability.h"
+#include "point.h"
 #include <vector>
 
 #define ALT_DEFAULT 0.0
@@ -35,12 +35,11 @@ public:
     std::string infos() const;
 
     // accessors
-    unsigned int timeStamp() const { return m_timeStamp;}
-    float altitude() const { return m_altitude;}
+    unsigned int timeStamp() const { return m_timeStamp; }
+    float altitude() const { return m_altitude; }
 protected:
-    float m_altitude;   // TODO keep ?
+    float m_altitude; // TODO keep ?
     unsigned int m_timeStamp; // WARNING in second
     std::vector<EmissionProbability> m_emissionProbability;
-
 };
 #endif // POINTGPS_H

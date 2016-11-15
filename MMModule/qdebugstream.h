@@ -34,7 +34,6 @@ protected:
         } else
             m_string += v;
 
-
         QTextCursor cursor(log_window->textCursor());
         cursor.movePosition(QTextCursor::End);
         log_window->setTextCursor(cursor);

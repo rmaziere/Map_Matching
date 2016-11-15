@@ -8,17 +8,16 @@
 
 #include "pointGPS.h"
 
+#include <QDateTime>
 #include <QString>
 #include <QStringList>
-#include <QDateTime>
 #include <fstream> // ifstream
 #include <iostream> // cout
 #include <sstream>
 #include <string>
 #include <vector>
 
-
-#define DISTANCE_THRESHOLD 200  // from paper
+#define DISTANCE_THRESHOLD 200 // from paper
 
 /**
  * @brief The Track class
@@ -28,13 +27,14 @@ public:
     /**
      * @brief Track's Constructor
      */
-    Track() :
-        //m_points(0),
-          m_xMin(std::numeric_limits<double>::max()),
-          m_xMax(0.0),
-          m_yMin(std::numeric_limits<double>::max()),
-          m_yMax(0.0)
-    {}
+    Track()
+        : //m_points(0),
+        m_xMin(std::numeric_limits<double>::max())
+        , m_xMax(0.0)
+        , m_yMin(std::numeric_limits<double>::max())
+        , m_yMax(0.0)
+    {
+    }
     virtual ~Track();
 
     /**
@@ -93,28 +93,26 @@ public:
      */
     std::vector<PointGPS*> getPoints();
 
-    std::vector<PointGPS*> * getPointsAsPointer() { return &m_points;} // TODO const ?
-
+    std::vector<PointGPS*>* getPointsAsPointer() { return &m_points; } // TODO const ?
 
     //TODO protected
     /**
      * @name The coordinates of the bounding box.
      */
     //@{
-    double m_xMin;  /**< The x min value*/
-    double m_xMax;  /**< The x max value*/
-    double m_yMin;  /**< The y min value*/
-    double m_yMax;  /**< The y max value*/
+    double m_xMin; /**< The x min value*/
+    double m_xMax; /**< The x max value*/
+    double m_yMin; /**< The y min value*/
+    double m_yMax; /**< The y max value*/
     //@}
 
 protected:
     /**
      * @brief m_points Vector where points of the Track are saved
      */
-    std::vector<PointGPS*> m_points;    /**< Vector of points*/
+    std::vector<PointGPS*> m_points; /**< Vector of points*/
     //Point m_southWest, m_northEst;    /**< englobing box*/
-    std::string m_trackFullName;        /**< Name of the track */
-
+    std::string m_trackFullName; /**< Name of the track */
 };
 
 #endif // TRACK_H

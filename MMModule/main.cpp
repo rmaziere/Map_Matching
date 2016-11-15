@@ -1,32 +1,29 @@
-#include <QtGui/QApplication>
 #include <QFileDialog>
+#include <QtGui/QApplication>
+#include <iostream>
+#include <limits.h>
 #include <math.h>
 #include <vector>
-#include <limits.h>
-#include <iostream>
 
 #include "file.h"
 #include "grid.h"
+#include "loading.h"
 #include "myexception.h"
 #include "pointGPS.h"
 #include "track.h"
-#include "loading.h"
-<<<<<<< HEAD
 #include "MainWindow.h"
-=======
 #include "journalprocess.h"
-#include<QTextEdit>
-#include"qdebugstream.h"
+#include "qdebugstream.h"
 #include "solver.h"
+#include <QTextEdit>
 
 
->>>>>>> 24d0739435aa03419b47ac5d2ad8cda5f19c899a
 
-using namespace std;
+    using namespace std;
 
 void dev_grid()
 {
-    QString gridFile= "../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv";
+    QString gridFile = "../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv";
     Grid grid;
     grid.readFromCSV(gridFile);
     grid.buildMarkovMatrix();
@@ -36,13 +33,13 @@ void dev_grid()
 void dev_all()
 {
     // grid.readFromCSV("../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv");
-    QString trackFile= "../Data/Seattle/mini_start_track.csv";
-    QString gridFile= "../Data/Seattle/mini_start_network.csv";
-    int test= 0;
-    switch(test) {
+    QString trackFile = "../Data/Seattle/mini_start_track.csv";
+    QString gridFile = "../Data/Seattle/mini_start_network.csv";
+    int test = 0;
+    switch (test) {
     case 1:
-        trackFile= "../Data/Seattle/useful_all_track.csv";
-        gridFile= "../Data/Seattle/useful_all_network.csv";
+        trackFile = "../Data/Seattle/useful_all_track.csv";
+        gridFile = "../Data/Seattle/useful_all_network.csv";
     }
 
     Track track;
@@ -63,7 +60,7 @@ void dev_all()
 
 void dev_network()
 {
-/*
+    /*
     grid myNetwork;
     myNetwork.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
     cout << myNetwork.m_road.size() << endl;
@@ -76,7 +73,7 @@ void dev_network()
 
 void dev_openFile()
 {
-/*
+    /*
 
     //QApplication app(argc, argv);
 
@@ -97,7 +94,8 @@ void dev_openFile()
     //return app.exec();*/
 }
 
-void dev_file(){
+void dev_file()
+{
     File f;
     f.selectFilesToOpen("shp");
     cout << "File name : " << f.fileName.at(0).toStdString() << ", file extension : " << f.fileExtension.at(0).toStdString() << endl;
@@ -106,16 +104,16 @@ void dev_file(){
     cout << "File name : " << f.fileName.at(0).toStdString() << ", file extension : " << f.fileExtension.at(0).toStdString() << endl;
 }
 
-int main(int argc, char *argv[]) {
-    QApplication a(argc, argv);
+int main(int argc, char* argv[])
+{
+    QApplication app(argc, argv);
 
-
-    JournalProcess *process = new JournalProcess();
+    JournalProcess* process = new JournalProcess();
 
     QTextEdit* logProcess = new QTextEdit(process);
     process->setWidgetResizable(true);
     logProcess->resize(process->size().width(),
-                       process->size().height());
+        process->size().height());
     logProcess->setReadOnly(true);
     QDebugStream log(std::cout, logProcess);
     process->show();
@@ -132,16 +130,6 @@ int main(int argc, char *argv[]) {
     w.resize(360, 504);
     w.show();
 #endif
-
-    return a.exec();
-
-
-    std::cout << "Send this to the Text Edit!" << std::endl;
-   // ProcessLog log;
-    //log.show();
-    //dev_grid();
-    dev_all();
-
+    std::cout << "Tous les cout sont rediriges ici" << endl;
     return app.exec();
-
 }

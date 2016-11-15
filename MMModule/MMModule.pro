@@ -30,7 +30,7 @@ SOURCES += main.cpp \
     KDTreeAlgos/kdtreeviewer.cpp \
     filtering.cpp \
     MainWindow.cpp \
-    SlidingStackedWidget.cpp
+    SlidingStackedWidget.cpp \
     journalprocess.cpp
 
 HEADERS += \
@@ -53,7 +53,7 @@ HEADERS += \
     KDTreeAlgos/kdtreeviewer.h \
     filtering.h \
     SlidingStackedWidget.h \
-    MainWindow.h
+    MainWindow.h \
     journalprocess.h \
     qdebugstream.h
 

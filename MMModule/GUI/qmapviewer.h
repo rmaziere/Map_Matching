@@ -3,11 +3,10 @@
 
 #include <QWidget>
 
-class QMapViewer : public QWidget
-{
+class QMapViewer : public QWidget {
     Q_OBJECT
 public:
-    explicit QMapViewer(QWidget *parent = 0);
+    explicit QMapViewer(QWidget* parent = 0);
 
 signals:
     void onSignalMessage(QString);

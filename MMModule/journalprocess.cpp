@@ -1,13 +1,13 @@
 #include "journalprocess.h"
-#include <QTextEdit>
 #include "qdebugstream.h"
+#include <QTextEdit>
 
-JournalProcess::JournalProcess() : QScrollArea()
+JournalProcess::JournalProcess()
+    : QScrollArea()
 {
     setWindowTitle("JournalProcess");
 
-   // setWidgetResizable();
-
+    // setWidgetResizable();
 }
 
 JournalProcess::~JournalProcess()

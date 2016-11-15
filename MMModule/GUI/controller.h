@@ -1,15 +1,17 @@
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 
-#include <QObject>
-#include "track.h"
 #include "qmapviewer.h"
+#include "track.h"
+#include <QObject>
 
-class Controller : public QObject
-{
+class Controller : public QObject {
     Q_OBJECT
 public:
-    explicit Controller(QObject *parent = 0): QObject(parent) {}
+    explicit Controller(QObject* parent = 0)
+        : QObject(parent)
+    {
+    }
 
 signals:
 

@@ -1,6 +1,6 @@
 #include "qmapviewer.h"
 
-QMapViewer::QMapViewer(QWidget *parent) : QWidget(parent)
+QMapViewer::QMapViewer(QWidget* parent)
+    : QWidget(parent)
 {
-
 }

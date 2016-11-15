@@ -3,15 +3,13 @@
 
 #include <QImage>
 
-class KDTreeViewer
-{
+class KDTreeViewer {
 public:
     KDTreeViewer();
 
 protected:
     QImage m_image;
     double m_xshift;
-
 };
 
 #endif // KDTREEVIEWER_H
