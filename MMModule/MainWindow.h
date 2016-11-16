@@ -42,7 +42,6 @@ protected:
     Loading* slideWidget1;
     Filtering* slideWidget2;
     QWidget* slideWidget3;
-    QWidget* slideWidget4;
 
     /**
      * @brief Value of the first Slide
