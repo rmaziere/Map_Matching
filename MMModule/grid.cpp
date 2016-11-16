@@ -243,7 +243,6 @@ string Grid::infos()
     ss << "\twith a grand total of " << m_vectorOfPoints.size() << " points\n";
     ss << "\tof which " << m_mapOfExtPoints.size() << " are extremities.\n";
     return ss.str();
-
 }
 
 AllRoadMap::iterator Grid::getRoadEntry(long id)
@@ -272,7 +271,7 @@ void Grid::buildMarkovMatrix()
                 AllRoadMap::iterator got = getRoadEntry(roadId);
                 for (const auto neighborId : listOfRoadId) {
                     got->second.addNeighbor(neighborId);
-                    if (DEBUG)  {
+                    if (DEBUG) {
                         cout << "update neighbour " << endl;
                         got->second.outputInfos();
                     }

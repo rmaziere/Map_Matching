@@ -10,17 +10,15 @@ class Controller : public QObject {
 public:
     explicit Controller();
 
-    void addSolver(Solver *solver);
+    void addSolver(Solver* solver);
     void connectSignals();
 
-    Solver *m_solver;
-    QMapViewer *m_qMapViewer;
+    Solver* m_solver;
+    QMapViewer* m_qMapViewer;
 
 signals:
 
 public slots:
-
-
 };
 
 #endif // CONTROLLER_H

@@ -1,25 +1,25 @@
 #include <QFileDialog>
-#include <QtGui/QApplication>
 #include <QTimer> // for sleep test
+#include <QtGui/QApplication>
 
 #include <iostream>
 #include <limits.h>
 #include <math.h>
-#include <vector>
 #include <stdio.h>
+#include <vector>
 //#include <QLabel>
 
-#include "myexception.h"
-#include "file.h"
-#include "grid.h"
-#include "loading.h"
-#include "pointGPS.h"
-#include "track.h"
+#include "GUI/controller.h"
 #include "GUI/map.h"
 #include "MainWindow.h"
+#include "file.h"
+#include "grid.h"
 #include "journalprocess.h"
+#include "loading.h"
+#include "myexception.h"
+#include "pointGPS.h"
 #include "solver.h"
-#include "GUI/controller.h"
+#include "track.h"
 
 #include <QTextEdit>
 
@@ -36,23 +36,25 @@ using namespace std;
  *
  * etc...
  */
-void dev_thread() {
-    QThread* thread= new QThread();
-    Solver *solver= new Solver();
-    solver->m_gridFilename= "../Data/Seattle/useful_all_network.csv";
-    solver->m_trackFilename= "../Data/Seattle/useful_all_track.csv";
+void dev_thread()
+{
+    QThread* thread = new QThread();
+    Solver* solver = new Solver();
+    solver->m_gridFilename = "../Data/Seattle/useful_all_network.csv";
+    solver->m_trackFilename = "../Data/Seattle/useful_all_track.csv";
     solver->moveToThread(thread);
     thread->start();
-    Controller *controller= new Controller();
+    Controller* controller = new Controller();
     //QMetaObject::invokeMethod(solver, "onSignalStart");
     controller->addSolver(solver);
     controller->connectSignals();
-    controller->m_qMapViewer->resize(500,500);
+    controller->m_qMapViewer->resize(500, 500);
     controller->m_qMapViewer->show();
 }
 
-void dev_signals() { // to remove
-    Controller *controller= new Controller();
+void dev_signals()
+{ // to remove
+    Controller* controller = new Controller();
     controller->m_qMapViewer->show();
 
     QString trackFile = "../Data/Seattle/useful_all_track.csv";
@@ -74,7 +76,6 @@ void dev_signals() { // to remove
     controller->graphicEmitter->testMessagePoint(QString("solver.outputInfos()"));*/
     std::cout << "The end." << std::endl;
 }
-
 
 void dev_grid()
 {
@@ -145,13 +146,15 @@ void dev_openFile()
     }
     //return app.exec();*/
 }
-void ui(){
+void ui()
+{
     Loading fenetre;
     // Affichage de la fenêtre
     fenetre.show();
 }
 
-void dev_file(){
+void dev_file()
+{
     File f;
     f.selectFilesToOpen("shp");
     cout << "File name : " << f.fileName.at(0).toStdString() << ", file extension : " << f.fileExtension.at(0).toStdString() << endl;
@@ -160,10 +163,11 @@ void dev_file(){
     cout << "File name : " << f.fileName.at(0).toStdString() << ", file extension : " << f.fileExtension.at(0).toStdString() << endl;
 }
 
-void dev_img(){
-    vector<vector<double>> poly;
+void dev_img()
+{
+    vector<vector<double> > poly;
 
-    for(int i = 0; i <= 1000; i+= 150){
+    for (int i = 0; i <= 1000; i += 150) {
         double x = i + 25;
         double y = i * 0.75;
         vector<double> coordinates;
@@ -172,7 +176,7 @@ void dev_img(){
         poly.push_back(coordinates);
     }
 
-    vector<vector<double>> polyRoad;
+    vector<vector<double> > polyRoad;
 
     vector<double> coordinates;
     coordinates.push_back(1000.25);
@@ -195,8 +199,7 @@ void dev_img(){
 
     m.makePolylineFromRoad(polyRoad, "grey");
 
-
-    vector<vector<double>> point;
+    vector<vector<double> > point;
 
     vector<double> pcoordinates;
     pcoordinates.push_back(1800.0);
@@ -207,7 +210,7 @@ void dev_img(){
 
     m.landmarkMaker(200);
 
-    QLabel *myLabel = new QLabel();
+    QLabel* myLabel = new QLabel();
     myLabel->setPixmap(QPixmap::fromImage(m.img));
 
     myLabel->show();
@@ -219,7 +222,8 @@ void dev_img(){
     cout << "Facteur d'échelle : " << m.scale << endl;
 }
 
-void dev_ui2(){
+void dev_ui2()
+{
     //Fenetre non enlevable
     MainWindow w;
     w.setWindowTitle("Map Matching");
@@ -242,9 +246,9 @@ int main(int argc, char* argv[])
 
     //Fonction à exécuter ci-dessous :
     //dev_img();
-/********************************************************************************/
+    /********************************************************************************/
     //Fenetre non enlevable
-/********************************************************************************/
+    /********************************************************************************/
     MainWindow w;
     w.setWindowTitle("Map Matching");
     w.resize(360, 504);

@@ -3,11 +3,10 @@
 
 #include <QObject>
 
-class GraphicEmitter : public QObject
-{
+class GraphicEmitter : public QObject {
     Q_OBJECT
 public:
-    explicit GraphicEmitter(QObject *parent = 0);
+    explicit GraphicEmitter(QObject* parent = 0);
     void testMessagePoint(QString);
 signals:
     void signalDrawPoint(QString);

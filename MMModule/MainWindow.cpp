@@ -80,14 +80,9 @@ void MainWindow::readyToNext1(File file1, File file2)
     grille.setBoundingBox(trace.m_xMin, trace.m_xMax, trace.m_yMin, trace.m_yMax);
     grille.readFromCSV(fileG);
 
-    if (!grille.trackInGrid())
-    {
+    if (!grille.trackInGrid()) {
         QMessageBox::warning(this, "Erreur de fichiers", "Attention, l'emprise des données de correspond pas !");
-    }
-    else
-    {
+    } else {
         buttonNext->setEnabled(true);
     }
-
 }
-

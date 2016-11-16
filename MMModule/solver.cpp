@@ -26,7 +26,8 @@ void Solver::setDistance(PointGPS* p, Road& r)
         if (d < bestDistance)
             bestDistance = d;
     }
-    if (bestDistance < DISTANCE_THRESHOLD) p->addEmissionProbability(r.edgeId(), bestDistance);
+    if (bestDistance < DISTANCE_THRESHOLD)
+        p->addEmissionProbability(r.edgeId(), bestDistance);
 
     if (DEBUG_SOLVER) {
         std::cout << p->infos() << std::endl;
@@ -35,12 +36,12 @@ void Solver::setDistance(PointGPS* p, Road& r)
 
 void Solver::onSignalSetGrid(QString s)
 {
-    m_gridFilename= s;
+    m_gridFilename = s;
 }
 
 void Solver::onSignalSetTrack(QString s)
 {
-    m_trackFilename= s;
+    m_trackFilename = s;
 }
 
 void Solver::onSignalStart()

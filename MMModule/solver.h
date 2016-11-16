@@ -3,12 +3,11 @@
 
 #include <QObject>
 
+#include "grid.h"
 #include "pointGPS.h"
 #include "pointroad.h"
 #include "road.h"
-#include "grid.h"
 #include "track.h"
-
 
 #include <unordered_map>
 #include <vector>
@@ -16,7 +15,7 @@
 typedef std::unordered_map<long, Road> AllRoadMap;
 typedef std::vector<PointGPS*> AllPointVector;
 
-class Solver  : public QObject {
+class Solver : public QObject {
     Q_OBJECT
 public:
     explicit Solver() {}
@@ -41,8 +40,6 @@ public slots:
     void onSignalSetGrid(QString s);
     void onSignalSetTrack(QString s);
     void onSignalStart();
-
-
 
 protected:
     Grid grid;

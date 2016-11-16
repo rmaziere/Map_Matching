@@ -30,7 +30,6 @@ public slots:
     void loadFileGrid();
     void getCountry();
 
-
 signals:
     void ready(File, File);
 

@@ -154,7 +154,7 @@ int KDTree::locate(const Point& p)
         else
             nb = m_arrayOfBoxes[nb].m_daughterBox2;
         ++jdim;
-        jdim%= 2; // increment dimension cyclically
+        jdim %= 2; // increment dimension cyclically
     }
     return nb;
 }

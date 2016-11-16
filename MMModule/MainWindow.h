@@ -13,8 +13,8 @@
 #include "filtering.h"
 #include "loading.h"
 
-#include "track.h"
 #include "grid.h"
+#include "track.h"
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -48,7 +48,6 @@ protected:
      */
     Track trace;
     Grid grille;
-
 };
 
 #endif // MAINWINDOW_H

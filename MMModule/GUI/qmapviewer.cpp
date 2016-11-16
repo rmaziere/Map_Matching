@@ -12,7 +12,7 @@ QMapViewer::QMapViewer(QWidget* parent)
     closeButton = new QPushButton(tr("&Close"));
     connect(closeButton, SIGNAL(clicked()), this, SLOT(close()));
 
-    startSolver= new QPushButton(tr("&Start Solver"));
+    startSolver = new QPushButton(tr("&Start Solver"));
 
     QVBoxLayout* layout = new QVBoxLayout;
     layout->addWidget(textEdit);
@@ -31,7 +31,6 @@ void QMapViewer::onSignalMessage(QString s)
 void QMapViewer::onSignalDrawPoint(QString s)
 {
     textEdit->append(s);
-
 }
 
 void QMapViewer::onSignalDrawRoad(QString s)

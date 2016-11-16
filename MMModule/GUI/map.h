@@ -1,15 +1,14 @@
 #ifndef MAP_H
 #define MAP_H
 
-#include <iostream>
-#include <string>
 #include <QApplication>
-#include <QString>
 #include <QImage>
 #include <QPainter>
+#include <QString>
+#include <iostream>
+#include <string>
 
-class Map
-{
+class Map {
 public:
     /**
      * @brief The Map class's constructor
@@ -44,21 +43,20 @@ public:
      */
     QPointF coordinateTranslator(double x, double y);
 
-    void landmarkMaker(int resolution, QString color="black");
+    void landmarkMaker(int resolution, QString color = "black");
 
-    void write(QPoint point, QString text,  QString color="black");
+    void write(QPoint point, QString text, QString color = "black");
 
-
-    void makePointFromTrack(std::vector<std::vector<double>> vXY, QString color="black");
+    void makePointFromTrack(std::vector<std::vector<double> > vXY, QString color = "black");
 
     /**
      * @brief makePolyline
      * @param vXY
      * @return
      */
-    void makePolyline(std::vector<std::vector<double>> vXY, QString color="black");
+    void makePolyline(std::vector<std::vector<double> > vXY, QString color = "black");
 
-    void makePolylineFromRoad(std::vector<std::vector<double>> vXY, QString color="black");
+    void makePolylineFromRoad(std::vector<std::vector<double> > vXY, QString color = "black");
 
     /**
      * @brief drawPolyline
@@ -74,13 +72,13 @@ public:
      */
     void save(QString file);
 
-//protected:
-    int width;      /**< image width*/
-    int height;     /**< image height*/
-    double scale = 1;      /**< scale between the grid and the image*/
-    int deltaX;     /**< delta between the SRID's x origin and the grid's x*/
-    int deltaY;     /**< delta between the SRID's y origin and the grid's y*/
-    QImage img;     /**< The QImage object*/
+    //protected:
+    int width; /**< image width*/
+    int height; /**< image height*/
+    double scale = 1; /**< scale between the grid and the image*/
+    int deltaX; /**< delta between the SRID's x origin and the grid's x*/
+    int deltaY; /**< delta between the SRID's y origin and the grid's y*/
+    QImage img; /**< The QImage object*/
     QPainter paint; /**< The QPainter object*/
 };
 

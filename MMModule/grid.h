@@ -131,20 +131,20 @@ protected:
      * @brief The coordinates of the track
      */
     //@{
-    double m_xMin;  /**< The x min value*/
-    double m_xMax;  /**< The x max value*/
-    double m_yMin;  /**< The y min value*/
-    double m_yMax;  /**< The y max value*/
+    double m_xMin; /**< The x min value*/
+    double m_xMax; /**< The x max value*/
+    double m_yMin; /**< The y min value*/
+    double m_yMax; /**< The y max value*/
     //@}
 
     /**
      * @name The coordinates of the grid.
      */
     //@{
-    double m_xMinGrid;  /**< The x min value*/
-    double m_xMaxGrid;  /**< The x max value*/
-    double m_yMinGrid;  /**< The y min value*/
-    double m_yMaxGrid;  /**< The y max value*/
+    double m_xMinGrid; /**< The x min value*/
+    double m_xMaxGrid; /**< The x max value*/
+    double m_yMinGrid; /**< The y min value*/
+    double m_yMaxGrid; /**< The y max value*/
     //@}
 };
 

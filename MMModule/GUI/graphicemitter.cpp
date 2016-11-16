@@ -1,8 +1,8 @@
 #include "graphicemitter.h"
 
-GraphicEmitter::GraphicEmitter(QObject *parent) : QObject(parent)
+GraphicEmitter::GraphicEmitter(QObject* parent)
+    : QObject(parent)
 {
-
 }
 
 void GraphicEmitter::testMessagePoint(QString s)

@@ -281,8 +281,8 @@ string Track::infos()
 {
     std::stringstream ss;
     ss << "Track " << m_trackFullName << " contains: \n\t" << m_points.size() << " points"
-         << "\n\tin box:";
+       << "\n\tin box:";
     ss << "\n\t\t min (x,y) (" << m_xMin << ", " << m_yMin << ")";
-    ss << "\n\t\t max (x,y) (" << m_xMax << ", " << m_yMax << ")\n" ;
+    ss << "\n\t\t max (x,y) (" << m_xMax << ", " << m_yMax << ")\n";
     return ss.str();
 }

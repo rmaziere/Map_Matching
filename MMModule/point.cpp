@@ -4,7 +4,7 @@
 #include <math.h>
 #include <sstream>
 
-const double Point::POINT_RADIUS= 200;
+const double Point::POINT_RADIUS = 200;
 
 bool Point::samePointAs(const Point& p) const
 {
@@ -36,14 +36,14 @@ std::string Point::infos() const
     return ss.str();
 }
 
-double Point::y() const
-{
-    return m_y;
+double Point::y() const 
+{ 
+    return m_y; 
 }
 
-void Point::sety(double y)
-{
-    m_y = y;
+void Point::sety(double y) 
+{ 
+    m_y = y; 
 }
 
 double Point::x(int dim) const
