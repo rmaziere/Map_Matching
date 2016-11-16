@@ -25,15 +25,18 @@ public slots:
     void loadFileSHPTrack();
     void loadFileGrid();
     void getCountry();
-    void launchFiles();
+
 
 signals:
+    void ready();
 
 private:
     void country();
     void track();
     void grid();
-    void boutonXY();
+    //void boutonXY();
+
+    void launchFiles();
 
     QGroupBox* m_country;
     QGroupBox* m_track;
@@ -49,8 +52,10 @@ private:
     QLabel* m_fileGPS;
     QLabel* m_fileGrid;
 
-    QPushButton* m_cancel;
-    QPushButton* m_launch;
+    int nextOk;
+
+    //QPushButton* m_cancel;
+    //QPushButton* m_launch;
 };
 
 #endif // LOADING_H

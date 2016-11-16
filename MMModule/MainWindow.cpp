@@ -19,6 +19,7 @@ MainWindow::~MainWindow()
 void MainWindow::createGuiControlComponents()
 {
     buttonNext = new QPushButton(tr("Next"));
+    buttonNext->setEnabled(false);
     buttonCancel = new QPushButton(tr("Cancel"));
 }
 
@@ -39,27 +40,21 @@ void MainWindow::createMainLayout()
 
 void MainWindow::createSubSlidingWidgets()
 {
-    slideWidget1 = new QWidget();
-    slideWidget2 = new QWidget();
+    slideWidget1 = new Loading();
+    slideWidget2 = new Filtering();
     slideWidget3 = new QWidget();
-    slideWidget4 = new Filtering();
+    slideWidget4 = new QWidget();
 
-    QVBoxLayout* slideWidget1layout = new QVBoxLayout();
-    slideWidget1->setLayout(slideWidget1layout);
-    QVBoxLayout* slideWidget2layout = new QVBoxLayout();
-    slideWidget2->setLayout(slideWidget2layout);
+    QVBoxLayout* slideWidget4layout = new QVBoxLayout();
+    slideWidget4->setLayout(slideWidget4layout);
     QVBoxLayout* slideWidget3layout = new QVBoxLayout();
     slideWidget3->setLayout(slideWidget3layout);
 
-    QPushButton* b11 = new QPushButton("Qt");
-    slideWidget1layout->addWidget(b11);
-    QPushButton* b12 = new QPushButton("is cool !");
-    slideWidget1layout->addWidget(b12);
 
-    QPushButton* b21 = new QPushButton("Cool");
-    slideWidget2layout->addWidget(b21);
-    QPushButton* b22 = new QPushButton("is Qt !");
-    slideWidget2layout->addWidget(b22);
+    QPushButton* b41 = new QPushButton("Cool");
+    slideWidget4layout->addWidget(b41);
+    QPushButton* b42 = new QPushButton("is Qt !");
+    slideWidget4layout->addWidget(b42);
 
     QPushButton* b31 = new QPushButton("Isn't");
     slideWidget3layout->addWidget(b31);
@@ -78,6 +73,12 @@ void MainWindow::createSlidingStackedWidget()
 
 void MainWindow::createConnections()
 {
-    QObject::connect(buttonNext, SIGNAL(pressed()), slidingStacked, SLOT(slideInNext()));
+    QObject::connect(slideWidget1, SIGNAL(ready()), this, SLOT(readyToNext()));
+    QObject::connect(buttonNext, SIGNAL(clicked()), slidingStacked, SLOT(slideInNext()));
     QObject::connect(buttonCancel, SIGNAL(clicked()), qApp, SLOT(quit()));
+}
+
+void MainWindow::readyToNext()
+{
+    buttonNext->setEnabled(true);
 }

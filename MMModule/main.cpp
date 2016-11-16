@@ -11,7 +11,6 @@
 #include "loading.h"
 #include "pointGPS.h"
 #include "track.h"
-#include "loading.h"
 #include "GUI/map.h"
 #include "MainWindow.h"
 #include "journalprocess.h"
@@ -20,6 +19,19 @@
 #include <QTextEdit>
 
 using namespace std;
+
+/*! \mainpage My Personal Index Page
+ *
+ * \section intro_sec Introduction
+ *
+ * This is the introduction.
+ *
+ * \section install_sec Installation
+ *
+ * \subsection step1 Step 1: Opening the box
+ *
+ * etc...
+ */
 
 void dev_grid()
 {
@@ -85,7 +97,7 @@ void dev_file(){
     cout << "File name : " << f.fileName.at(0).toStdString() << ", file extension : " << f.fileExtension.at(0).toStdString() << endl;
 }
 
-int dev_img(){
+void dev_img(){
     vector<vector<double>> poly;
 
     for(int i = 0; i <= 1000; i+= 150){
@@ -137,8 +149,6 @@ int dev_img(){
     cout << "width : " << m.width << endl;
     cout << "height : " << m.height << endl;
     cout << "Facteur d'échelle : " << m.scale << endl;
-
-    return 0;
 }
 
 void dev_ui(){
@@ -151,10 +161,11 @@ void dev_ui(){
     logProcess->setReadOnly(true);
     QDebugStream log(std::cout, logProcess);
     process->show();
+    std::cout << "Tous les cout sont rediriges ici" << endl;
+}
 
-    //dev_grid();
-    //dev_all();
-
+void dev_ui2(){
+    //Fenetre non enlevable
     MainWindow w;
     w.setWindowTitle("Map Matching");
 
@@ -164,8 +175,8 @@ void dev_ui(){
     w.resize(360, 504);
     w.show();
 #endif
-    std::cout << "Tous les cout sont rediriges ici" << endl;
 }
+
 
 
 /****************************************************************************/
