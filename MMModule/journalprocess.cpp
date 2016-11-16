@@ -1,5 +1,4 @@
 #include "journalprocess.h"
-#include "qdebugstream.h"
 #include <QTextEdit>
 
 JournalProcess::JournalProcess()
