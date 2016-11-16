@@ -73,12 +73,37 @@ void MainWindow::createSlidingStackedWidget()
 
 void MainWindow::createConnections()
 {
-    QObject::connect(slideWidget1, SIGNAL(ready()), this, SLOT(readyToNext()));
+    QObject::connect(slideWidget1, SIGNAL(ready(File, File)), this, SLOT(readyToNext1(File, File)));
+    //QObject::connect(slideWidget2, SIGNAL(ready()), this, SLOT(readyToNext2()));
     QObject::connect(buttonNext, SIGNAL(clicked()), slidingStacked, SLOT(slideInNext()));
     QObject::connect(buttonCancel, SIGNAL(clicked()), qApp, SLOT(quit()));
 }
 
-void MainWindow::readyToNext()
+void MainWindow::readyToNext1(File file1, File file2)
 {
     buttonNext->setEnabled(true);
+
+    File fileTrack = file1;
+    File fileGrid = file2;
+    QString fileT = fileTrack.filePath.at(0) + fileTrack.fileName.at(0) + "." + fileTrack.fileExtension.at(0);
+    QString fileG = fileGrid.filePath.at(0) + fileGrid.fileName.at(0) + "." + fileGrid.fileExtension.at(0);
+
+    trace.readFromCSV(fileT);
+    grille.setBoundingBox(trace.m_xMin, trace.m_xMax, trace.m_yMin, trace.m_yMax);
+    grille.readFromCSV(fileG);
+
+    cout << grille.trackInGrid() << endl;
+    cout << grille.xMax() << endl;
+    cout << grille.xMin() << endl;
+    cout << grille.yMax() << endl;
+    cout << grille.yMin() << endl;
+    cout << grille.xMaxGrid() << endl;
+    cout << grille.xMinGrid() << endl;
+    cout << grille.yMaxGrid() << endl;
+    cout << grille.yMinGrid() << endl;
+
+
+
+
 }
+
