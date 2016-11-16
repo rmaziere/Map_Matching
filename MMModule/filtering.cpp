@@ -49,6 +49,7 @@ void Filtering::spatial()
     m_slidSpat->setRange(0, 10);
 
     QObject::connect(m_slidSpat, SIGNAL(valueChanged(int)), m_valueSpat, SLOT(display(int)));
+    //QObject::connect(m_valueSpat, SIGNAL(valueChanged(int)), this, SLOT(launchFiltre(int)));
 
     QHBoxLayout* vbox = new QHBoxLayout;
     vbox->addWidget(m_valueSpat);
@@ -60,4 +61,14 @@ void Filtering::nbPtTrack()
 {
     m_nbPtTrack = new QLabel();
     m_nbPtTrack->setText("Your track had 0 GPS points.");
+}
+
+void Filtering::launchFiltre(int i)
+{
+    std::cout << i;
+    /*if (true)
+        if (true)
+            emit ready();
+        else
+            emit ready();*/
 }

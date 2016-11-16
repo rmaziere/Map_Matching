@@ -21,8 +21,10 @@ public:
     ~Filtering();
 
 public slots:
+    void launchFiltre(int);
 
 signals:
+    void ready();
 
 private:
     void nbPtTrack();
