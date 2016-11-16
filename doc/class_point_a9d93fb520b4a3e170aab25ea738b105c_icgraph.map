@@ -1,8 +1,0 @@
-<map id="Point::samePointAs" name="Point::samePointAs">
-<area shape="rect" id="node2" href="$structequals_func.html#a20bec4534ac20aba8bd6652318f35ac8" title="equalsFunc::operator()" alt="" coords="204,5,356,32"/>
-<area shape="rect" id="node3" href="$class_point.html#a39daa6ebd31cdc2d7151db77bfdf2166" title="Compute the distance between a point and a segment. " alt="" coords="192,56,368,83"/>
-<area shape="rect" id="node4" href="$class_solver.html#a11051ddab551fdcee7dc71dcad1d0fd7" title="Solver::setDistance" alt="" coords="416,56,553,83"/>
-<area shape="rect" id="node5" href="$class_solver.html#a0c67ab4d4fd9c36cfcbfdc13021b419f" title="Solver::initialize" alt="" coords="601,56,716,83"/>
-<area shape="rect" id="node6" href="$main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="764,56,827,83"/>
-<area shape="rect" id="node7" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="875,56,925,83"/>
-</map>

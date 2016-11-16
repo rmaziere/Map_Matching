@@ -1,10 +1,6 @@
 #ifndef FILE_H
 #define FILE_H
 
-/**
-  * @file file.h
-  */
-
 #include <QFile>
 #include <QFileDialog>
 #include <QString>
