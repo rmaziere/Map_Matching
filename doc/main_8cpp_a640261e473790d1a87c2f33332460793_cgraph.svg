@@ -204,7 +204,7 @@ var sectionId = 'dynsection-3';
 </g>
 <!-- Node11 -->
 <g id="node11" class="node"><title>Node11</title>
-<g id="a_node11"><a xlink:href="class_road.html#a7f97b4f20c598103baad510b19a0c0b5" target="_top" xlink:title="addPoint ">
+<g id="a_node11"><a xlink:href="class_road.html#a7f97b4f20c598103baad510b19a0c0b5" target="_top" xlink:title="Add a point to the road. ">
 <polygon fill="none" stroke="black" points="421,-38.5 421,-57.5 505,-57.5 505,-38.5 421,-38.5"/>
 <text text-anchor="middle" x="463" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">Road::addPoint</text>
 </a>
@@ -217,7 +217,7 @@ var sectionId = 'dynsection-3';
 </g>
 <!-- Node12 -->
 <g id="node12" class="node"><title>Node12</title>
-<g id="a_node12"><a xlink:href="class_road.html#ad6715392969e36eb10efac542519755c" target="_top" xlink:title="edgeId ">
+<g id="a_node12"><a xlink:href="class_road.html#ad6715392969e36eb10efac542519755c" target="_top" xlink:title="Get the id of the road. ">
 <polygon fill="none" stroke="black" points="425.5,-0.5 425.5,-19.5 500.5,-19.5 500.5,-0.5 425.5,-0.5"/>
 <text text-anchor="middle" x="463" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Road::edgeId</text>
 </a>

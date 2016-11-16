@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -112,27 +113,33 @@ $(document).ready(function(){initNavTree('class_sauvegarde.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Container for manipulation of files with graphic interface.  
+ <a href="class_sauvegarde.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="sauvegarde_8h_source.html">sauvegarde.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Sauvegarde:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_sauvegarde__coll__graph.svg" width="152" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_sauvegarde__coll__graph.svg" width="152" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3f46af85f171d6a5f4450b2c42b15fa2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sauvegarde.html#a3f46af85f171d6a5f4450b2c42b15fa2">Sauvegarde</a> ()</td></tr>
+<tr class="memdesc:a3f46af85f171d6a5f4450b2c42b15fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="#a3f46af85f171d6a5f4450b2c42b15fa2">More...</a><br /></td></tr>
 <tr class="separator:a3f46af85f171d6a5f4450b2c42b15fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae906a8c82dd7e2c0539b9f7ff9e5d715"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sauvegarde.html#ae906a8c82dd7e2c0539b9f7ff9e5d715">sauvegarderCSV</a> (QString cheminAcces, <a class="el" href="class_track.html">Track</a> maTrace)</td></tr>
-<tr class="memdesc:ae906a8c82dd7e2c0539b9f7ff9e5d715"><td class="mdescLeft">&#160;</td><td class="mdescRight">sauvegarderCSV save data in a CSV file  <a href="#ae906a8c82dd7e2c0539b9f7ff9e5d715">More...</a><br /></td></tr>
+<tr class="memdesc:ae906a8c82dd7e2c0539b9f7ff9e5d715"><td class="mdescLeft">&#160;</td><td class="mdescRight">save data in a CSV file  <a href="#ae906a8c82dd7e2c0539b9f7ff9e5d715">More...</a><br /></td></tr>
 <tr class="separator:ae906a8c82dd7e2c0539b9f7ff9e5d715"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05bd0a2e7e37d63b515f135b81518e22"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sauvegarde.html#a05bd0a2e7e37d63b515f135b81518e22">~Sauvegarde</a> ()</td></tr>
+<tr class="memdesc:a05bd0a2e7e37d63b515f135b81518e22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a05bd0a2e7e37d63b515f135b81518e22">More...</a><br /></td></tr>
 <tr class="separator:a05bd0a2e7e37d63b515f135b81518e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p>Definition at line <a class="el" href="sauvegarde_8h_source.html#l00012">12</a> of file <a class="el" href="sauvegarde_8h_source.html">sauvegarde.h</a>.</p>
+<div class="textblock"><p>Container for manipulation of files with graphic interface. </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000004">Todo:</a></b></dt><dd>rendre la classe statique </dd></dl>
+
+<p>Definition at line <a class="el" href="sauvegarde_8h_source.html#l00016">16</a> of file <a class="el" href="sauvegarde_8h_source.html">sauvegarde.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a3f46af85f171d6a5f4450b2c42b15fa2"></a>
 <div class="memitem">
@@ -146,6 +153,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor. </p>
 
 </div>
 </div>
@@ -169,6 +178,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destructor. </p>
 
 </div>
 </div>
@@ -197,22 +208,24 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>sauvegarderCSV save data in a CSV file </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>save data in a CSV file </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000005">Todo:</a></b></dt><dd><p class="startdd">Documenter les paramètres de la fonction... A quoi sert cheminAccess ? </p>
+<p class="enddd">Refactorer les noms des paramètres </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cheminAcces</td><td></td></tr>
     <tr><td class="paramname">maTrace</td><td></td></tr>
   </table>
   </dd>
 </dl>
+</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000003">Todo:</a></b></dt><dd>save what is necessary ! </dd></dl>
 
 <p>Definition at line <a class="el" href="sauvegarde_8cpp_source.html#l00006">6</a> of file <a class="el" href="sauvegarde_8cpp_source.html">sauvegarde.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_sauvegarde_ae906a8c82dd7e2c0539b9f7ff9e5d715_cgraph.svg" width="376" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_sauvegarde_ae906a8c82dd7e2c0539b9f7ff9e5d715_cgraph.svg" width="376" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -228,7 +241,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_sauvegarde.html">Sauvegarde</a></li>
-    <li class="footer">Generated on Wed Nov 16 2016 15:26:45 for Map Matching by
+    <li class="footer">Generated on Wed Nov 16 2016 16:58:26 for Map Matching by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

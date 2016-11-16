@@ -4,6 +4,6 @@
 <area shape="rect" id="node4" href="$class_point_road.html#a998665db2d7e4fc4935ef95df092ff2b" title="PointRoad::setid" alt="" coords="209,107,327,133"/>
 <area shape="rect" id="node5" href="$class_point_road.html#a81372f2c2c0fe1084fa2397289518124" title="PointRoad::id" alt="" coords="424,132,525,159"/>
 <area shape="rect" id="node6" href="$class_point_road.html#ae83941b37b026758fdd7974b4b186fbc" title="PointRoad::isNode" alt="" coords="202,208,334,235"/>
-<area shape="rect" id="node7" href="$class_road.html#a7f97b4f20c598103baad510b19a0c0b5" title="addPoint " alt="" coords="212,259,324,285"/>
-<area shape="rect" id="node8" href="$class_road.html#ad6715392969e36eb10efac542519755c" title="edgeId " alt="" coords="218,309,318,336"/>
+<area shape="rect" id="node7" href="$class_road.html#a7f97b4f20c598103baad510b19a0c0b5" title="Add a point to the road. " alt="" coords="212,259,324,285"/>
+<area shape="rect" id="node8" href="$class_road.html#ad6715392969e36eb10efac542519755c" title="Get the id of the road. " alt="" coords="218,309,318,336"/>
 </map>

@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -283,13 +284,24 @@ $(document).ready(function(){initNavTree('main_8cpp_source.html','');});
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    QApplication app(argc, argv);</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="comment">//Fonction à exécuter ci-dessous :</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <a class="code" href="main_8cpp.html#a5e1c37b6b0ca91ad100d6bd39fc4062f">dev_img</a>();</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Fonction terminée !&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="comment">//return app.exec();</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">return</span> app.closingDown();</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;}</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="comment">//dev_img();</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment">/********************************************************************************/</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="comment">//Fenetre non enlevable</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="comment">/********************************************************************************/</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <a class="code" href="class_main_window.html">MainWindow</a> w;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    w.setWindowTitle(<span class="stringliteral">&quot;Map Matching&quot;</span>);</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="preprocessor">#ifdef Q_OS_SYMBIAN</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    w.showMaximized();</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    w.resize(360, 504);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    w.show();</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Fonction terminée !&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordflow">return</span> app.exec();</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="comment">//return app.closingDown();</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;}</div>
 <div class="ttc" id="myexception_8h_html"><div class="ttname"><a href="myexception_8h.html">myexception.h</a></div></div>
 <div class="ttc" id="class_grid_html_aea292f48c96b2e9d1abee08040cd3833"><div class="ttname"><a href="class_grid.html#aea292f48c96b2e9d1abee08040cd3833">Grid::buildMarkovMatrix</a></div><div class="ttdeci">void buildMarkovMatrix()</div><div class="ttdoc">buildMarkovMatrix </div><div class="ttdef"><b>Definition:</b> <a href="grid_8cpp_source.html#l00253">grid.cpp:253</a></div></div>
 <div class="ttc" id="class_track_html_aa54ae143dfe05f408f2590cf17caae3c"><div class="ttname"><a href="class_track.html#aa54ae143dfe05f408f2590cf17caae3c">Track::m_xMin</a></div><div class="ttdeci">double m_xMin</div><div class="ttdef"><b>Definition:</b> <a href="track_8h_source.html#l00103">track.h:103</a></div></div>
@@ -354,7 +366,7 @@ $(document).ready(function(){initNavTree('main_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Generated on Wed Nov 16 2016 15:26:45 for Map Matching by
+    <li class="footer">Generated on Wed Nov 16 2016 16:58:26 for Map Matching by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

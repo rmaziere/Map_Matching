@@ -87,7 +87,7 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node5 -->
 <g id="node5" class="node"><title>Node5</title>
-<g id="a_node5"><a xlink:href="class_road.html#acb1a56234cdbb34e0cf5c647c7c6406d" target="_top" xlink:title="outputInfos ">
+<g id="a_node5"><a xlink:href="class_road.html#acb1a56234cdbb34e0cf5c647c7c6406d" target="_top" xlink:title="print some informations about the road ">
 <polygon fill="none" stroke="black" points="297.5,-152.5 297.5,-171.5 392.5,-171.5 392.5,-152.5 297.5,-152.5"/>
 <text text-anchor="middle" x="345" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">Road::outputInfos</text>
 </a>
@@ -100,7 +100,7 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node6 -->
 <g id="node6" class="node"><title>Node6</title>
-<g id="a_node6"><a xlink:href="class_road.html#a2877f55c577ddff8c519e7f44c2256d5" target="_top" xlink:title="vectorOfPointsId ">
+<g id="a_node6"><a xlink:href="class_road.html#a2877f55c577ddff8c519e7f44c2256d5" target="_top" xlink:title="Get the vector of points composing the road. ">
 <polygon fill="none" stroke="black" points="285.5,-114.5 285.5,-133.5 404.5,-133.5 404.5,-114.5 285.5,-114.5"/>
 <text text-anchor="middle" x="345" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">Road::vectorOfPointsId</text>
 </a>
@@ -139,7 +139,7 @@ var sectionId = 'dynsection-1';
 </g>
 <!-- Node11 -->
 <g id="node11" class="node"><title>Node11</title>
-<g id="a_node11"><a xlink:href="class_road.html#ad6715392969e36eb10efac542519755c" target="_top" xlink:title="edgeId ">
+<g id="a_node11"><a xlink:href="class_road.html#ad6715392969e36eb10efac542519755c" target="_top" xlink:title="Get the id of the road. ">
 <polygon fill="none" stroke="black" points="307.5,-0.5 307.5,-19.5 382.5,-19.5 382.5,-0.5 307.5,-0.5"/>
 <text text-anchor="middle" x="345" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Road::edgeId</text>
 </a>

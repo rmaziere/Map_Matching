@@ -301,7 +301,7 @@
 </g>
 <!-- Node18 -->
 <g id="node18" class="node"><title>Node18</title>
-<g id="a_node18"><a xlink:href="class_road.html#a7f97b4f20c598103baad510b19a0c0b5" target="_top" xlink:title="addPoint ">
+<g id="a_node18"><a xlink:href="class_road.html#a7f97b4f20c598103baad510b19a0c0b5" target="_top" xlink:title="Add a point to the road. ">
 <polygon fill="none" stroke="black" points="431,-228.5 431,-247.5 515,-247.5 515,-228.5 431,-228.5"/>
 <text text-anchor="middle" x="473" y="-235.5" font-family="Helvetica,sans-Serif" font-size="10.00">Road::addPoint</text>
 </a>
@@ -314,7 +314,7 @@
 </g>
 <!-- Node19 -->
 <g id="node19" class="node"><title>Node19</title>
-<g id="a_node19"><a xlink:href="class_road.html#ad6715392969e36eb10efac542519755c" target="_top" xlink:title="edgeId ">
+<g id="a_node19"><a xlink:href="class_road.html#ad6715392969e36eb10efac542519755c" target="_top" xlink:title="Get the id of the road. ">
 <polygon fill="none" stroke="black" points="435.5,-190.5 435.5,-209.5 510.5,-209.5 510.5,-190.5 435.5,-190.5"/>
 <text text-anchor="middle" x="473" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">Road::edgeId</text>
 </a>
@@ -376,7 +376,7 @@
 </g>
 <!-- Node30 -->
 <g id="node30" class="node"><title>Node30</title>
-<g id="a_node30"><a xlink:href="class_road.html#acb1a56234cdbb34e0cf5c647c7c6406d" target="_top" xlink:title="outputInfos ">
+<g id="a_node30"><a xlink:href="class_road.html#acb1a56234cdbb34e0cf5c647c7c6406d" target="_top" xlink:title="print some informations about the road ">
 <polygon fill="none" stroke="black" points="425.5,-114.5 425.5,-133.5 520.5,-133.5 520.5,-114.5 425.5,-114.5"/>
 <text text-anchor="middle" x="473" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">Road::outputInfos</text>
 </a>
@@ -389,7 +389,7 @@
 </g>
 <!-- Node31 -->
 <g id="node31" class="node"><title>Node31</title>
-<g id="a_node31"><a xlink:href="class_road.html#a2877f55c577ddff8c519e7f44c2256d5" target="_top" xlink:title="vectorOfPointsId ">
+<g id="a_node31"><a xlink:href="class_road.html#a2877f55c577ddff8c519e7f44c2256d5" target="_top" xlink:title="Get the vector of points composing the road. ">
 <polygon fill="none" stroke="black" points="413.5,-76.5 413.5,-95.5 532.5,-95.5 532.5,-76.5 413.5,-76.5"/>
 <text text-anchor="middle" x="473" y="-83.5" font-family="Helvetica,sans-Serif" font-size="10.00">Road::vectorOfPointsId</text>
 </a>

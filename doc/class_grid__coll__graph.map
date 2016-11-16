@@ -3,5 +3,5 @@
 <area shape="rect" id="node4" href="$class_point.html" title="The Point class. " alt="" coords="13,5,172,288"/>
 <area shape="rect" id="node6" title="STL class. " alt="" coords="410,652,490,729"/>
 <area shape="rect" id="node7" title="STL class. " alt="" coords="373,417,500,509"/>
-<area shape="rect" id="node10" href="$class_road.html" title="{Road\n|# m_edgeId\l|+ addNeighbor()\l+ addPoint()\l+ edgeId()\l+ getListOfPoints()\l+ getm_edgeId()\l+ getNoOfNeighbors()\l+ outputInfos()\l+ Road()\l+ Road()\l+ vectorOfPointsId()\l+ ~Road()\l}" alt="" coords="524,351,675,575"/>
+<area shape="rect" id="node10" href="$class_road.html" title="Road is an element of a network. Road are strongly linked with Points. " alt="" coords="524,351,675,575"/>
 </map>

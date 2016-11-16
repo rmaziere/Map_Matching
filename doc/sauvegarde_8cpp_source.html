@@ -46,6 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
@@ -139,29 +140,29 @@ $(document).ready(function(){initNavTree('sauvegarde_8cpp_source.html','');});
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="comment">// Outil d&#39;écriture</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            QTextStream out(&amp;file);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="comment">// Ajout des valeurs TODO save what is necessary !</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="comment">// Ajout des valeurs</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">for</span> (uint i = 0; i &lt; maTrack.<a class="code" href="class_track.html#a6360ae2dbed31e542a2cbaa986970352">getPoints</a>().size(); ++i) {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="comment">/*                out &lt;&lt; maTrack.getPoints()[i]-&gt;getLatitude() &lt;&lt; &quot;,&quot;</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">                    &lt;&lt; maTrack.getPoints()[i]-&gt;getLongitude() &lt;&lt; &quot;,&quot;</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">                    &lt;&lt; maTrack.getPoints()[i]-&gt;getAltitude() &lt;&lt; &quot;,&quot;</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">                    &lt;&lt; maTrack.getPoints()[i]-&gt;getTimeStamp().toString(&quot;yyyy-MM-dd hh:mm:ss&quot;)</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">                    &lt;&lt; &quot;\n&quot;;*/</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="comment">// Fermeture du fichier</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            file.close();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    } <span class="keywordflow">catch</span> (std::exception <span class="keyword">const</span>&amp; e) {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        cerr &lt;&lt; <span class="stringliteral">&quot;ERREUR : &quot;</span> &lt;&lt; e.what() &lt;&lt; endl;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">//return app.exec();</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="comment">/*                out &lt;&lt; maTrack.getPoints()[i]-&gt;getLatitude() &lt;&lt; &quot;,&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="comment">                    &lt;&lt; maTrack.getPoints()[i]-&gt;getLongitude() &lt;&lt; &quot;,&quot;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">                    &lt;&lt; maTrack.getPoints()[i]-&gt;getAltitude() &lt;&lt; &quot;,&quot;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">                    &lt;&lt; maTrack.getPoints()[i]-&gt;getTimeStamp().toString(&quot;yyyy-MM-dd hh:mm:ss&quot;)</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">                    &lt;&lt; &quot;\n&quot;;*/</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="comment">// Fermeture du fichier</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            file.close();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    } <span class="keywordflow">catch</span> (std::exception <span class="keyword">const</span>&amp; e) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        cerr &lt;&lt; <span class="stringliteral">&quot;ERREUR : &quot;</span> &lt;&lt; e.what() &lt;&lt; endl;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">//return app.exec();</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
 <div class="ttc" id="sauvegarde_8h_html"><div class="ttname"><a href="sauvegarde_8h.html">sauvegarde.h</a></div></div>
 <div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdoc">STL namespace. </div></div>
 <div class="ttc" id="class_track_html_a6360ae2dbed31e542a2cbaa986970352"><div class="ttname"><a href="class_track.html#a6360ae2dbed31e542a2cbaa986970352">Track::getPoints</a></div><div class="ttdeci">std::vector&lt; PointGPS * &gt; getPoints()</div><div class="ttdoc">getPoints Get the m_points vector </div><div class="ttdef"><b>Definition:</b> <a href="track_8cpp_source.html#l00205">track.cpp:205</a></div></div>
-<div class="ttc" id="class_sauvegarde_html_ae906a8c82dd7e2c0539b9f7ff9e5d715"><div class="ttname"><a href="class_sauvegarde.html#ae906a8c82dd7e2c0539b9f7ff9e5d715">Sauvegarde::sauvegarderCSV</a></div><div class="ttdeci">int sauvegarderCSV(QString cheminAcces, Track maTrace)</div><div class="ttdoc">sauvegarderCSV save data in a CSV file </div><div class="ttdef"><b>Definition:</b> <a href="sauvegarde_8cpp_source.html#l00006">sauvegarde.cpp:6</a></div></div>
+<div class="ttc" id="class_sauvegarde_html_ae906a8c82dd7e2c0539b9f7ff9e5d715"><div class="ttname"><a href="class_sauvegarde.html#ae906a8c82dd7e2c0539b9f7ff9e5d715">Sauvegarde::sauvegarderCSV</a></div><div class="ttdeci">int sauvegarderCSV(QString cheminAcces, Track maTrace)</div><div class="ttdoc">save data in a CSV file </div><div class="ttdef"><b>Definition:</b> <a href="sauvegarde_8cpp_source.html#l00006">sauvegarde.cpp:6</a></div></div>
 <div class="ttc" id="class_track_html"><div class="ttname"><a href="class_track.html">Track</a></div><div class="ttdoc">The Track class. </div><div class="ttdef"><b>Definition:</b> <a href="track_8h_source.html#l00025">track.h:25</a></div></div>
 <div class="ttc" id="class_my_exception_html"><div class="ttname"><a href="class_my_exception.html">MyException</a></div><div class="ttdef"><b>Definition:</b> <a href="myexception_8h_source.html#l00008">myexception.h:8</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -170,7 +171,7 @@ $(document).ready(function(){initNavTree('sauvegarde_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="sauvegarde_8cpp.html">sauvegarde.cpp</a></li>
-    <li class="footer">Generated on Wed Nov 16 2016 15:26:45 for Map Matching by
+    <li class="footer">Generated on Wed Nov 16 2016 16:58:26 for Map Matching by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

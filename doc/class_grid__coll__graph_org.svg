@@ -201,7 +201,7 @@
 </g>
 <!-- Node10 -->
 <g id="node10" class="node"><title>Node10</title>
-<g id="a_node10"><a xlink:href="class_road.html" target="_top" xlink:title="{Road\n|# m_edgeId\l|+ addNeighbor()\l+ addPoint()\l+ edgeId()\l+ getListOfPoints()\l+ getm_edgeId()\l+ getNoOfNeighbors()\l+ outputInfos()\l+ Road()\l+ Road()\l+ vectorOfPointsId()\l+ ~Road()\l}">
+<g id="a_node10"><a xlink:href="class_road.html" target="_top" xlink:title="Road is an element of a network. Road are strongly linked with Points. ">
 <polygon fill="none" stroke="black" points="389,-430.5 389,-597.5 502,-597.5 502,-430.5 389,-430.5"/>
 <text text-anchor="middle" x="445.5" y="-585.5" font-family="Helvetica,sans-Serif" font-size="10.00">Road</text>
 <polyline fill="none" stroke="black" points="389,-578.5 502,-578.5 "/>

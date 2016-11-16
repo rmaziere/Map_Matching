@@ -7,6 +7,7 @@ var NAVTREE =
         [ "Step 1: Opening the box", "index.html#step1", null ]
       ] ]
     ] ],
+    [ "Todo List", "todo.html", null ],
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
       [ "Class Index", "classes.html", null ],

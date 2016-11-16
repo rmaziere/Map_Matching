@@ -10,7 +10,7 @@
 <title>Graphical Class Hierarchy</title>
 <!-- Node1 -->
 <g id="node1" class="node"><title>Node1</title>
-<g id="a_node1"><a xlink:href="class_sauvegarde.html" target="_top" xlink:title="Sauvegarde">
+<g id="a_node1"><a xlink:href="class_sauvegarde.html" target="_top" xlink:title="Container for manipulation of files with graphic interface. ">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 68,-19.5 68,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="34" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Sauvegarde</text>
 </a>
