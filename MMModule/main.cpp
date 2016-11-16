@@ -109,22 +109,60 @@ void dev_file(){
     cout << "File name : " << f.fileName.at(0).toStdString() << ", file extension : " << f.fileExtension.at(0).toStdString() << endl;
 }
 
-void dev_img(){
+int dev_img(){
     vector<vector<double>> poly;
 
     for(int i = 0; i <= 1000; i+= 150){
         double x = i + 25;
-        double y = i * 0.65 + 50;
+        double y = i * 0.75;
         vector<double> coordinates;
         coordinates.push_back(x);
         coordinates.push_back(y);
         poly.push_back(coordinates);
     }
 
+    vector<vector<double>> polyRoad;
+
+    vector<double> coordinates;
+    coordinates.push_back(1000.25);
+    coordinates.push_back(3352.28);
+    polyRoad.push_back(coordinates);
+
+    coordinates.clear();
+
+    coordinates.push_back(2000.0);
+    coordinates.push_back(6000.0);
+    polyRoad.push_back(coordinates);
+
     Map m(1280, 1024);
-    //m.draw();
-    m.makePolyline(poly);
+
+    m.scaleCalculator(1000.25, 2000.75, 3352.28, 6000.67);
+
+    m.deltaCalculator(1000.25, 3352.28);
+
+    m.makePolyline(poly, "green");
+
+    m.makePolylineFromRoad(polyRoad, "grey");
+
+
+    vector<vector<double>> point;
+
+    vector<double> pcoordinates;
+    pcoordinates.push_back(1800.0);
+    pcoordinates.push_back(4800.0);
+    point.push_back(pcoordinates);
+
+    m.makePointFromTrack(point, "orange");
+
+    m.landmarkMaker(200);
+
     m.save("/tmp/test.png");
+
+    cout << "width : " << m.width << endl;
+    cout << "height : " << m.height << endl;
+    cout << "Facteur d'échelle : " << m.scale << endl;
+
+    return 0;
 }
 
 void dev_ui(){
@@ -165,5 +203,8 @@ int main(int argc, char* argv[])
     //Fonction à exécuter ci-dessous :
     dev_img();
 
-    return app.exec();
+    cout << "Fonction terminée !" << endl;
+
+    //return app.exec();
+    return app.closingDown();
 }
