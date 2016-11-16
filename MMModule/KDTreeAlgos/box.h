@@ -3,14 +3,16 @@
 
 #include "../point.h"
 
-class Box
-{
+class Box {
 public:
     Box() {}
-    Box(const Point &low, const Point &high)
-        : m_low(low), m_high(high) {}
+    Box(const Point& low, const Point& high)
+        : m_low(low)
+        , m_high(high)
+    {
+    }
 
-    double distanceToPoint(const Point &point);
+    double distanceToPoint(const Point& point);
 
     Point m_low;
     Point m_high;
