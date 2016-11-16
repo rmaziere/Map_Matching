@@ -6,7 +6,6 @@ Loading::Loading()
     country();
     track();
     grid();
-    //boutonXY();
     nextOk = 0;
 
     // Création d'un widget qui servira de fenêtre
@@ -16,31 +15,13 @@ Loading::Loading()
     mainLayout->addWidget(m_country);
     mainLayout->addWidget(m_track);
     mainLayout->addWidget(m_grid);
-    //mainLayout->addWidget(m_boutonXY);
     setLayout(mainLayout);
-    //setWindowTitle("Launch");
 }
 
 Loading::~Loading()
 {
 }
 
-/*void Loading::boutonXY()
-{
-    m_boutonXY = new QGroupBox("");
-
-    m_cancel = new QPushButton("Cancel");
-    m_launch = new QPushButton("Launch");
-    QObject::connect(m_cancel, SIGNAL(clicked()), qApp, SLOT(quit()));
-    QObject::connect(m_launch, SIGNAL(clicked()), this, SLOT(launchFiles()));
-
-    QHBoxLayout* vbox = new QHBoxLayout;
-    vbox->addWidget(m_cancel);
-    vbox->addWidget(m_launch);
-    vbox->addStretch(1);
-    m_boutonXY->setLayout(vbox);
-}
-*/
 void Loading::country()
 {
     m_country = new QGroupBox("Country");
@@ -106,7 +87,6 @@ void Loading::loadFileCSVTrack()
         nextOk += 1;
         launchFiles();
     }
-    //cout << fileCSVTrack.fileName.begin();
 }
 
 void Loading::loadFileSHPTrack()
