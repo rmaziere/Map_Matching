@@ -7,11 +7,9 @@
 
 #include "file.h"
 #include "grid.h"
-#include "loading.h"
 #include "myexception.h"
 #include "pointGPS.h"
 #include "track.h"
-#include "loading.h"
 #include "GUI/map.h"
 #include "MainWindow.h"
 #include "journalprocess.h"
@@ -110,16 +108,27 @@ void dev_file(){
 }
 
 void dev_img(){
-    Map m(100, 100);
-    m.draw();
-    m.save("/home/rmaziere/DEV/QImage_TP/img_2.png");
+    vector<vector<double>> poly;
+
+    for(int i = 0; i <= 1000; i+= 150){
+        double x = i + 25;
+        double y = i * 0.65 + 50;
+        vector<double> coordinates;
+        coordinates.push_back(x);
+        coordinates.push_back(y);
+        poly.push_back(coordinates);
+    }
+
+    Map m(1280, 1024);
+    //m.draw();
+    m.makePolyline(poly);
+    m.save("/tmp/test.png");
 }
 
-int main(int argc, char* argv[])
-{
-    QApplication app(argc, argv);
 
-    /*JournalProcess* process = new JournalProcess();
+
+void dev_ui(){
+    JournalProcess* process = new JournalProcess();
 
     QTextEdit* logProcess = new QTextEdit(process);
     process->setWidgetResizable(true);
@@ -127,11 +136,24 @@ int main(int argc, char* argv[])
         process->size().height());
     logProcess->setReadOnly(true);
     QDebugStream log(std::cout, logProcess);
-    process->show();*/
+    process->show();
+    std::cout << "Tous les cout sont rediriges ici" << endl;
+}
 
-    //dev_grid();
-    //dev_all();
 
+
+/****************************************************************************/
+/*** Pas de code dans le main, seulement l'appel d'une fonction ci-dessus ***/
+/****************************************************************************/
+
+int main(int argc, char* argv[])
+{
+    QApplication app(argc, argv);
+
+    //Fonction à exécuter ci-dessous :
+    //dev_img();
+
+    //Fenetre non enlevable
     MainWindow w;
     w.setWindowTitle("Map Matching");
 
@@ -141,6 +163,6 @@ int main(int argc, char* argv[])
     w.resize(360, 504);
     w.show();
 #endif
-    std::cout << "Tous les cout sont rediriges ici" << endl;
+
     return app.exec();
 }
