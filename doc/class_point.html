@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('class_point.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -118,24 +118,16 @@ $(document).ready(function(){initNavTree('class_point.html','');});
 <div class="dynheader">
 Inheritance diagram for Point:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_point__inherit__graph.png" border="0" usemap="#_point_inherit__map" alt="Inheritance graph"/></div>
-<map name="_point_inherit__map" id="_point_inherit__map">
-<area shape="rect" id="node2" href="class_point_g_p_s.html" title="PointGPS" alt="" coords="5,80,85,107"/><area shape="rect" id="node3" href="class_point_road.html" title="PointRoad" alt="" coords="109,80,192,107"/></map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_point__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<div class="dynheader">
+Collaboration diagram for Point:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_point__coll__graph.svg" width="170" height="367"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad92f2337b839a94ce97dcdb439b4325a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_point.html#ad92f2337b839a94ce97dcdb439b4325a">Point</a> ()</td></tr>
-<tr class="separator:ad92f2337b839a94ce97dcdb439b4325a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a78b55e8d5466bb8c2cf60fa55f2562ff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_point.html#a78b55e8d5466bb8c2cf60fa55f2562ff">Point</a> (double <a class="el" href="class_point.html#a3eef47b1c4849b3395a8f9c658ca7c4a">x</a>, double <a class="el" href="class_point.html#a96e90df6b3c18e64c31abdf196e49ae9">y</a>)</td></tr>
-<tr class="memdesc:a78b55e8d5466bb8c2cf60fa55f2562ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for GPS points.  <a href="#a78b55e8d5466bb8c2cf60fa55f2562ff">More...</a><br /></td></tr>
-<tr class="separator:a78b55e8d5466bb8c2cf60fa55f2562ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a364091762d6aa1aa5983d36fd7d8b6d5"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_point.html#a364091762d6aa1aa5983d36fd7d8b6d5">~Point</a> ()</td></tr>
-<tr class="memdesc:a364091762d6aa1aa5983d36fd7d8b6d5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_point.html" title="The Point class. ">Point</a> Class's Destructor.  <a href="#a364091762d6aa1aa5983d36fd7d8b6d5">More...</a><br /></td></tr>
-<tr class="separator:a364091762d6aa1aa5983d36fd7d8b6d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d93fb520b4a3e170aab25ea738b105c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_point.html#a9d93fb520b4a3e170aab25ea738b105c">samePointAs</a> (const <a class="el" href="class_point.html">Point</a> &amp;p) const </td></tr>
-<tr class="memdesc:a9d93fb520b4a3e170aab25ea738b105c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if two points share the same coordinates.  <a href="#a9d93fb520b4a3e170aab25ea738b105c">More...</a><br /></td></tr>
-<tr class="separator:a9d93fb520b4a3e170aab25ea738b105c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7cd7f7e2c0f1a11b66eac8b6f360bfd9"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_point.html#a7cd7f7e2c0f1a11b66eac8b6f360bfd9">distanceToPoint</a> (const <a class="el" href="class_point.html">Point</a> &amp;p) const </td></tr>
 <tr class="memdesc:a7cd7f7e2c0f1a11b66eac8b6f360bfd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate distance between two points.  <a href="#a7cd7f7e2c0f1a11b66eac8b6f360bfd9">More...</a><br /></td></tr>
 <tr class="separator:a7cd7f7e2c0f1a11b66eac8b6f360bfd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,11 +136,22 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a39daa6ebd31cdc2d7151db77bfdf2166"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c2033a89f5dc6faa9e50f06c2111e88"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_point.html#a1c2033a89f5dc6faa9e50f06c2111e88">infos</a> () const </td></tr>
 <tr class="separator:a1c2033a89f5dc6faa9e50f06c2111e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad92f2337b839a94ce97dcdb439b4325a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_point.html#ad92f2337b839a94ce97dcdb439b4325a">Point</a> ()</td></tr>
+<tr class="separator:ad92f2337b839a94ce97dcdb439b4325a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78b55e8d5466bb8c2cf60fa55f2562ff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_point.html#a78b55e8d5466bb8c2cf60fa55f2562ff">Point</a> (double <a class="el" href="class_point.html#a3eef47b1c4849b3395a8f9c658ca7c4a">x</a>, double <a class="el" href="class_point.html#a96e90df6b3c18e64c31abdf196e49ae9">y</a>)</td></tr>
+<tr class="memdesc:a78b55e8d5466bb8c2cf60fa55f2562ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for GPS points.  <a href="#a78b55e8d5466bb8c2cf60fa55f2562ff">More...</a><br /></td></tr>
+<tr class="separator:a78b55e8d5466bb8c2cf60fa55f2562ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d93fb520b4a3e170aab25ea738b105c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_point.html#a9d93fb520b4a3e170aab25ea738b105c">samePointAs</a> (const <a class="el" href="class_point.html">Point</a> &amp;p) const </td></tr>
+<tr class="memdesc:a9d93fb520b4a3e170aab25ea738b105c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if two points share the same coordinates.  <a href="#a9d93fb520b4a3e170aab25ea738b105c">More...</a><br /></td></tr>
+<tr class="separator:a9d93fb520b4a3e170aab25ea738b105c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a643bc096cfd5930a93898d1ba1a4de96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_point.html#a643bc096cfd5930a93898d1ba1a4de96">setx</a> (int dim, double value)</td></tr>
+<tr class="separator:a643bc096cfd5930a93898d1ba1a4de96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac967b65705dd88e31ac706500de9e2d0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_point.html#ac967b65705dd88e31ac706500de9e2d0">x</a> (int dim) const </td></tr>
 <tr class="memdesc:ac967b65705dd88e31ac706500de9e2d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">x the accessor for the KDtree  <a href="#ac967b65705dd88e31ac706500de9e2d0">More...</a><br /></td></tr>
 <tr class="separator:ac967b65705dd88e31ac706500de9e2d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a643bc096cfd5930a93898d1ba1a4de96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_point.html#a643bc096cfd5930a93898d1ba1a4de96">setx</a> (int dim, double value)</td></tr>
-<tr class="separator:a643bc096cfd5930a93898d1ba1a4de96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a364091762d6aa1aa5983d36fd7d8b6d5"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_point.html#a364091762d6aa1aa5983d36fd7d8b6d5">~Point</a> ()</td></tr>
+<tr class="memdesc:a364091762d6aa1aa5983d36fd7d8b6d5"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_point.html" title="The Point class. ">Point</a> Class's Destructor.  <a href="#a364091762d6aa1aa5983d36fd7d8b6d5">More...</a><br /></td></tr>
+<tr class="separator:a364091762d6aa1aa5983d36fd7d8b6d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Setters and getters of x &amp; y</div></td></tr>
 <tr class="memitem:a3eef47b1c4849b3395a8f9c658ca7c4a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_point.html#a3eef47b1c4849b3395a8f9c658ca7c4a">x</a> () const </td></tr>
 <tr class="separator:a3eef47b1c4849b3395a8f9c658ca7c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -298,9 +301,7 @@ Protected Attributes</h2></td></tr>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_point_a7cd7f7e2c0f1a11b66eac8b6f360bfd9_icgraph.png" border="0" usemap="#class_point_a7cd7f7e2c0f1a11b66eac8b6f360bfd9_icgraph" alt=""/></div>
-<map name="class_point_a7cd7f7e2c0f1a11b66eac8b6f360bfd9_icgraph" id="class_point_a7cd7f7e2c0f1a11b66eac8b6f360bfd9_icgraph">
-<area shape="rect" id="node2" href="class_point.html#a39daa6ebd31cdc2d7151db77bfdf2166" title="Compute the distance between a point and a segment. " alt="" coords="208,5,384,32"/><area shape="rect" id="node3" href="class_solver.html#a11051ddab551fdcee7dc71dcad1d0fd7" title="Solver::setDistance" alt="" coords="432,5,569,32"/><area shape="rect" id="node4" href="class_solver.html#a0c67ab4d4fd9c36cfcbfdc13021b419f" title="Solver::initialize" alt="" coords="617,5,732,32"/><area shape="rect" id="node5" href="main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="780,5,843,32"/></map>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_point_a7cd7f7e2c0f1a11b66eac8b6f360bfd9_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </p>
 
@@ -345,18 +346,14 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_point_a39daa6ebd31cdc2d7151db77bfdf2166_cgraph.png" border="0" usemap="#class_point_a39daa6ebd31cdc2d7151db77bfdf2166_cgraph" alt=""/></div>
-<map name="class_point_a39daa6ebd31cdc2d7151db77bfdf2166_cgraph" id="class_point_a39daa6ebd31cdc2d7151db77bfdf2166_cgraph">
-<area shape="rect" id="node2" href="class_point.html#a9d93fb520b4a3e170aab25ea738b105c" title="Check if two points share the same coordinates. " alt="" coords="237,5,376,32"/><area shape="rect" id="node3" href="class_point.html#a7cd7f7e2c0f1a11b66eac8b6f360bfd9" title="Calculate distance between two points. " alt="" coords="229,56,384,83"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_point_a39daa6ebd31cdc2d7151db77bfdf2166_cgraph.svg" width="390" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_point_a39daa6ebd31cdc2d7151db77bfdf2166_icgraph.png" border="0" usemap="#class_point_a39daa6ebd31cdc2d7151db77bfdf2166_icgraph" alt=""/></div>
-<map name="class_point_a39daa6ebd31cdc2d7151db77bfdf2166_icgraph" id="class_point_a39daa6ebd31cdc2d7151db77bfdf2166_icgraph">
-<area shape="rect" id="node2" href="class_solver.html#a11051ddab551fdcee7dc71dcad1d0fd7" title="Solver::setDistance" alt="" coords="229,5,367,32"/><area shape="rect" id="node3" href="class_solver.html#a0c67ab4d4fd9c36cfcbfdc13021b419f" title="Solver::initialize" alt="" coords="415,5,529,32"/><area shape="rect" id="node4" href="main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="577,5,640,32"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_point_a39daa6ebd31cdc2d7151db77bfdf2166_icgraph.svg" width="646" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -390,9 +387,7 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_point_a1c2033a89f5dc6faa9e50f06c2111e88_icgraph.png" border="0" usemap="#class_point_a1c2033a89f5dc6faa9e50f06c2111e88_icgraph" alt=""/></div>
-<map name="class_point_a1c2033a89f5dc6faa9e50f06c2111e88_icgraph" id="class_point_a1c2033a89f5dc6faa9e50f06c2111e88_icgraph">
-<area shape="rect" id="node2" href="class_point_g_p_s.html#a9a622f6883b721ee5f04f092a76ece64" title="PointGPS::infos" alt="" coords="143,5,259,32"/><area shape="rect" id="node6" href="class_point_road.html#a10e2495cf2c6b435e23e8da80e7276e6" title="PointRoad::infos" alt="" coords="141,56,260,83"/><area shape="rect" id="node3" href="class_solver.html#a11051ddab551fdcee7dc71dcad1d0fd7" title="Solver::setDistance" alt="" coords="308,5,445,32"/><area shape="rect" id="node4" href="class_solver.html#a0c67ab4d4fd9c36cfcbfdc13021b419f" title="Solver::initialize" alt="" coords="493,5,608,32"/><area shape="rect" id="node5" href="main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="656,5,719,32"/></map>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_point_a1c2033a89f5dc6faa9e50f06c2111e88_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </p>
 
@@ -426,9 +421,7 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_point_a9d93fb520b4a3e170aab25ea738b105c_icgraph.png" border="0" usemap="#class_point_a9d93fb520b4a3e170aab25ea738b105c_icgraph" alt=""/></div>
-<map name="class_point_a9d93fb520b4a3e170aab25ea738b105c_icgraph" id="class_point_a9d93fb520b4a3e170aab25ea738b105c_icgraph">
-<area shape="rect" id="node2" href="structequals_func.html#a20bec4534ac20aba8bd6652318f35ac8" title="equalsFunc::operator()" alt="" coords="204,5,356,32"/><area shape="rect" id="node3" href="class_point.html#a39daa6ebd31cdc2d7151db77bfdf2166" title="Compute the distance between a point and a segment. " alt="" coords="192,56,368,83"/><area shape="rect" id="node4" href="class_solver.html#a11051ddab551fdcee7dc71dcad1d0fd7" title="Solver::setDistance" alt="" coords="416,56,553,83"/><area shape="rect" id="node5" href="class_solver.html#a0c67ab4d4fd9c36cfcbfdc13021b419f" title="Solver::initialize" alt="" coords="601,56,716,83"/><area shape="rect" id="node6" href="main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="764,56,827,83"/></map>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_point_a9d93fb520b4a3e170aab25ea738b105c_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </p>
 
@@ -454,18 +447,14 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_point_a6f6a42c3b4bfe6e7e5ccb502788227d6_cgraph.png" border="0" usemap="#class_point_a6f6a42c3b4bfe6e7e5ccb502788227d6_cgraph" alt=""/></div>
-<map name="class_point_a6f6a42c3b4bfe6e7e5ccb502788227d6_cgraph" id="class_point_a6f6a42c3b4bfe6e7e5ccb502788227d6_cgraph">
-<area shape="rect" id="node2" href="class_point.html#a3eef47b1c4849b3395a8f9c658ca7c4a" title="Point::x" alt="" coords="139,5,205,32"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_point_a6f6a42c3b4bfe6e7e5ccb502788227d6_cgraph.svg" width="211" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_point_a6f6a42c3b4bfe6e7e5ccb502788227d6_icgraph.png" border="0" usemap="#class_point_a6f6a42c3b4bfe6e7e5ccb502788227d6_icgraph" alt=""/></div>
-<map name="class_point_a6f6a42c3b4bfe6e7e5ccb502788227d6_icgraph" id="class_point_a6f6a42c3b4bfe6e7e5ccb502788227d6_icgraph">
-<area shape="rect" id="node2" href="class_k_d_tree.html#a8f658d6d9211976a26b0f60471880e4a" title="KDTree::KDTree" alt="" coords="139,5,259,32"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_point_a6f6a42c3b4bfe6e7e5ccb502788227d6_icgraph.svg" width="264" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -520,9 +509,7 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_point_a16550863eab3e713371cdf8d5fa26926_cgraph.png" border="0" usemap="#class_point_a16550863eab3e713371cdf8d5fa26926_cgraph" alt=""/></div>
-<map name="class_point_a16550863eab3e713371cdf8d5fa26926_cgraph" id="class_point_a16550863eab3e713371cdf8d5fa26926_cgraph">
-<area shape="rect" id="node2" href="class_point.html#a96e90df6b3c18e64c31abdf196e49ae9" title="Point::y" alt="" coords="139,5,205,32"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_point_a16550863eab3e713371cdf8d5fa26926_cgraph.svg" width="211" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -547,9 +534,7 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_point_a3eef47b1c4849b3395a8f9c658ca7c4a_icgraph.png" border="0" usemap="#class_point_a3eef47b1c4849b3395a8f9c658ca7c4a_icgraph" alt=""/></div>
-<map name="class_point_a3eef47b1c4849b3395a8f9c658ca7c4a_icgraph" id="class_point_a3eef47b1c4849b3395a8f9c658ca7c4a_icgraph">
-<area shape="rect" id="node2" href="structhash_func.html#a1ec440ab36b0e013a3bbc9cf48f34e35" title="hashFunc::operator()" alt="" coords="122,5,265,32"/><area shape="rect" id="node3" href="class_box.html#a3a96bf8f86322e4885028e517ef40535" title="Box::distanceToPoint" alt="" coords="120,56,267,83"/><area shape="rect" id="node4" href="class_k_d_tree.html#a39df3eb7a379ef30cf6b71136cdb320e" title="KDTree::locate" alt="" coords="138,107,249,133"/><area shape="rect" id="node5" href="class_point.html#a6f6a42c3b4bfe6e7e5ccb502788227d6" title="Point::setx" alt="" coords="151,157,236,184"/><area shape="rect" id="node6" href="class_k_d_tree.html#a8f658d6d9211976a26b0f60471880e4a" title="KDTree::KDTree" alt="" coords="315,157,435,184"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_point_a3eef47b1c4849b3395a8f9c658ca7c4a_icgraph.svg" width="440" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -601,9 +586,7 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_point_a96e90df6b3c18e64c31abdf196e49ae9_icgraph.png" border="0" usemap="#class_point_a96e90df6b3c18e64c31abdf196e49ae9_icgraph" alt=""/></div>
-<map name="class_point_a96e90df6b3c18e64c31abdf196e49ae9_icgraph" id="class_point_a96e90df6b3c18e64c31abdf196e49ae9_icgraph">
-<area shape="rect" id="node2" href="structhash_func.html#a1ec440ab36b0e013a3bbc9cf48f34e35" title="hashFunc::operator()" alt="" coords="122,5,265,32"/><area shape="rect" id="node3" href="class_box.html#a3a96bf8f86322e4885028e517ef40535" title="Box::distanceToPoint" alt="" coords="120,56,267,83"/><area shape="rect" id="node4" href="class_point.html#a16550863eab3e713371cdf8d5fa26926" title="Point::sety" alt="" coords="151,107,236,133"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_point_a96e90df6b3c18e64c31abdf196e49ae9_icgraph.svg" width="272" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -666,7 +649,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_point.html">Point</a></li>
-    <li class="footer">Generated on Wed Nov 16 2016 11:07:05 for Map Matching by
+    <li class="footer">Generated on Wed Nov 16 2016 11:43:18 for Map Matching by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

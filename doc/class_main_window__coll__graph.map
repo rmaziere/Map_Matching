@@ -1,5 +1,5 @@
 <map id="MainWindow" name="MainWindow">
-<area shape="rect" id="node3" href="$class_loading.html" title="Loading" alt="" coords="136,81,203,108"/>
-<area shape="rect" id="node7" href="$class_filtering.html" title="Filtering" alt="" coords="227,81,295,108"/>
-<area shape="rect" id="node5" href="$class_sliding_stacked_widget.html" title="SlidingStackedWidget" alt="" coords="319,81,470,108"/>
+<area shape="rect" id="node3" href="$class_loading.html" title="{Loading\n|&#45; m_boutonXY\l&#45; m_country\l&#45; m_csvGrid\l&#45; m_csvTrack\l&#45; m_fileGPS\l&#45; m_fileGrid\l&#45; m_fr\l&#45; m_grid\l&#45; m_shpTrack\l&#45; m_track\l&#45; m_usa\l&#45; nextOk\l|+ Loading()\l+ ~Loading()\l+ getCountry()\l+ loadFileCSVTrack()\l+ loadFileGrid()\l+ loadFileSHPTrack()\l&#45; country()\l&#45; grid()\l&#45; launchFiles()\l&#45; track()\l}" alt="" coords="137,132,285,503"/>
+<area shape="rect" id="node7" href="$class_filtering.html" title="{Filtering\n|&#45; m_boutonXY\l&#45; m_cancel\l&#45; m_launch\l&#45; m_nbPtTrack\l&#45; m_slidSpat\l&#45; m_slidTemp\l&#45; m_spat\l&#45; m_temp\l&#45; m_valueSpat\l&#45; m_valueTemp\l|+ Filtering()\l+ ~Filtering()\l&#45; boutonXY()\l&#45; nbPtTrack()\l&#45; spatial()\l&#45; temporal()\l}" alt="" coords="308,176,420,459"/>
+<area shape="rect" id="node5" href="$class_sliding_stacked_widget.html" title="{SlidingStackedWidget\n|# blockedPageList\l# m_active\l# m_animationtype\l# m_mainwindow\l# m_next\l# m_now\l# m_pnow\l# m_speed\l# m_vertical\l# m_wrap\l|+ SlidingStackedWidget()\l+ ~SlidingStackedWidget()\l+ setAnimation()\l+ setSpeed()\l+ setVerticalMode()\l+ setWrap()\l+ slideInIdx()\l+ slideInNext()\l+ slideInPrev()\l# slideInWgt()\l# animationDoneSlot()\l}" alt="" coords="444,139,623,495"/>
 </map>

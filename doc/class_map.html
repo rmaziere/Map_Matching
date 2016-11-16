@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('class_map.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -113,48 +113,53 @@ $(document).ready(function(){initNavTree('class_map.html','');});
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="map_8h_source.html">map.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Map:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_map__coll__graph.svg" width="171" height="294"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:afcf922c62157c1c6a39cc76daa07c51f"><td class="memItemLeft" align="right" valign="top">QPointF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#afcf922c62157c1c6a39cc76daa07c51f">coordinateTranslator</a> (double x, double y)</td></tr>
+<tr class="separator:afcf922c62157c1c6a39cc76daa07c51f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76eec388eebc5e22e1aa39082b885aa4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a76eec388eebc5e22e1aa39082b885aa4">deltaCalculator</a> (double xMinGrid, double yMinGrid)</td></tr>
+<tr class="separator:a76eec388eebc5e22e1aa39082b885aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a270a6d34a2bf557a7ccae3b5bc3f1c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a0a270a6d34a2bf557a7ccae3b5bc3f1c">draw</a> ()</td></tr>
+<tr class="memdesc:a0a270a6d34a2bf557a7ccae3b5bc3f1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw is a test drawing function  <a href="#a0a270a6d34a2bf557a7ccae3b5bc3f1c">More...</a><br /></td></tr>
+<tr class="separator:a0a270a6d34a2bf557a7ccae3b5bc3f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab77beca5dd42b4b3704a7dc0fe773556"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ab77beca5dd42b4b3704a7dc0fe773556">drawPolyline</a> (QPointF polyligne, int size)</td></tr>
+<tr class="memdesc:ab77beca5dd42b4b3704a7dc0fe773556"><td class="mdescLeft">&#160;</td><td class="mdescRight">drawPolyline  <a href="#ab77beca5dd42b4b3704a7dc0fe773556">More...</a><br /></td></tr>
+<tr class="separator:ab77beca5dd42b4b3704a7dc0fe773556"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7554d14b445b15ef83465ae3829bf76"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ad7554d14b445b15ef83465ae3829bf76">makePolyline</a> (std::vector&lt; std::vector&lt; double &gt;&gt; vXY)</td></tr>
+<tr class="separator:ad7554d14b445b15ef83465ae3829bf76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f5ad0fd4563497b4214038cbca8b582"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a0f5ad0fd4563497b4214038cbca8b582">Map</a> ()</td></tr>
 <tr class="memdesc:a0f5ad0fd4563497b4214038cbca8b582"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="class_map.html">Map</a> class's constructor.  <a href="#a0f5ad0fd4563497b4214038cbca8b582">More...</a><br /></td></tr>
 <tr class="separator:a0f5ad0fd4563497b4214038cbca8b582"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8497952fd6e1f0584d868e6ceb97d42d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a8497952fd6e1f0584d868e6ceb97d42d">Map</a> (int <a class="el" href="class_map.html#a9ecfe932ad2d2bc22492416033bdacfd">width</a>, int <a class="el" href="class_map.html#a0546fef98caebe38385bb2e0c7a15da1">height</a>)</td></tr>
 <tr class="separator:a8497952fd6e1f0584d868e6ceb97d42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65a21293c1d7351ea086f685991b6fae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a65a21293c1d7351ea086f685991b6fae">scaleCalculator</a> (double xMinGrid, double xMaxGrid, double yMinGrid, double yMaxGrid)</td></tr>
-<tr class="separator:a65a21293c1d7351ea086f685991b6fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76eec388eebc5e22e1aa39082b885aa4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a76eec388eebc5e22e1aa39082b885aa4">deltaCalculator</a> (double xMinGrid, double yMinGrid)</td></tr>
-<tr class="separator:a76eec388eebc5e22e1aa39082b885aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcf922c62157c1c6a39cc76daa07c51f"><td class="memItemLeft" align="right" valign="top">QPointF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#afcf922c62157c1c6a39cc76daa07c51f">coordinateTranslator</a> (double x, double y)</td></tr>
-<tr class="separator:afcf922c62157c1c6a39cc76daa07c51f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7554d14b445b15ef83465ae3829bf76"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ad7554d14b445b15ef83465ae3829bf76">makePolyline</a> (std::vector&lt; std::vector&lt; double &gt;&gt; vXY)</td></tr>
-<tr class="separator:ad7554d14b445b15ef83465ae3829bf76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab77beca5dd42b4b3704a7dc0fe773556"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ab77beca5dd42b4b3704a7dc0fe773556">drawPolyline</a> (QPointF polyligne, int size)</td></tr>
-<tr class="memdesc:ab77beca5dd42b4b3704a7dc0fe773556"><td class="mdescLeft">&#160;</td><td class="mdescRight">drawPolyline  <a href="#ab77beca5dd42b4b3704a7dc0fe773556">More...</a><br /></td></tr>
-<tr class="separator:ab77beca5dd42b4b3704a7dc0fe773556"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a270a6d34a2bf557a7ccae3b5bc3f1c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a0a270a6d34a2bf557a7ccae3b5bc3f1c">draw</a> ()</td></tr>
-<tr class="memdesc:a0a270a6d34a2bf557a7ccae3b5bc3f1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw is a test drawing function  <a href="#a0a270a6d34a2bf557a7ccae3b5bc3f1c">More...</a><br /></td></tr>
-<tr class="separator:a0a270a6d34a2bf557a7ccae3b5bc3f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad25cd1c04791edcda24f7aaba0ca6557"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ad25cd1c04791edcda24f7aaba0ca6557">save</a> (QString file)</td></tr>
 <tr class="memdesc:ad25cd1c04791edcda24f7aaba0ca6557"><td class="mdescLeft">&#160;</td><td class="mdescRight">save the current image  <a href="#ad25cd1c04791edcda24f7aaba0ca6557">More...</a><br /></td></tr>
 <tr class="separator:ad25cd1c04791edcda24f7aaba0ca6557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65a21293c1d7351ea086f685991b6fae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a65a21293c1d7351ea086f685991b6fae">scaleCalculator</a> (double xMinGrid, double xMaxGrid, double yMinGrid, double yMaxGrid)</td></tr>
+<tr class="separator:a65a21293c1d7351ea086f685991b6fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a9ecfe932ad2d2bc22492416033bdacfd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a9ecfe932ad2d2bc22492416033bdacfd">width</a></td></tr>
-<tr class="separator:a9ecfe932ad2d2bc22492416033bdacfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0546fef98caebe38385bb2e0c7a15da1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a0546fef98caebe38385bb2e0c7a15da1">height</a></td></tr>
-<tr class="separator:a0546fef98caebe38385bb2e0c7a15da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad303761659cd4401f3fdc17641110be2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ad303761659cd4401f3fdc17641110be2">scale</a></td></tr>
-<tr class="separator:ad303761659cd4401f3fdc17641110be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d922770d19a95db062b5561e69495a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a0d922770d19a95db062b5561e69495a4">deltaX</a></td></tr>
 <tr class="separator:a0d922770d19a95db062b5561e69495a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae200a6863f84140c6c2a569e0cbcea3c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ae200a6863f84140c6c2a569e0cbcea3c">deltaY</a></td></tr>
 <tr class="separator:ae200a6863f84140c6c2a569e0cbcea3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0546fef98caebe38385bb2e0c7a15da1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a0546fef98caebe38385bb2e0c7a15da1">height</a></td></tr>
+<tr class="separator:a0546fef98caebe38385bb2e0c7a15da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9e5c311297a8adf8f7b48a507340d71"><td class="memItemLeft" align="right" valign="top">QImage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ae9e5c311297a8adf8f7b48a507340d71">img</a></td></tr>
 <tr class="separator:ae9e5c311297a8adf8f7b48a507340d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac49a7d11a7bc450a1b78ed2d76a2f004"><td class="memItemLeft" align="right" valign="top">QPainter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ac49a7d11a7bc450a1b78ed2d76a2f004">paint</a></td></tr>
 <tr class="separator:ac49a7d11a7bc450a1b78ed2d76a2f004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad303761659cd4401f3fdc17641110be2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ad303761659cd4401f3fdc17641110be2">scale</a></td></tr>
+<tr class="separator:ad303761659cd4401f3fdc17641110be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ecfe932ad2d2bc22492416033bdacfd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a9ecfe932ad2d2bc22492416033bdacfd">width</a></td></tr>
+<tr class="separator:a9ecfe932ad2d2bc22492416033bdacfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -345,9 +350,7 @@ Protected Attributes</h2></td></tr>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_map_ad7554d14b445b15ef83465ae3829bf76_icgraph.png" border="0" usemap="#class_map_ad7554d14b445b15ef83465ae3829bf76_icgraph" alt=""/></div>
-<map name="class_map_ad7554d14b445b15ef83465ae3829bf76_icgraph" id="class_map_ad7554d14b445b15ef83465ae3829bf76_icgraph">
-<area shape="rect" id="node2" href="main_8cpp.html#a5e1c37b6b0ca91ad100d6bd39fc4062f" title="dev_img" alt="" coords="187,5,257,32"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_map_ad7554d14b445b15ef83465ae3829bf76_icgraph.svg" width="263" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -381,9 +384,7 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_map_ad25cd1c04791edcda24f7aaba0ca6557_icgraph.png" border="0" usemap="#class_map_ad25cd1c04791edcda24f7aaba0ca6557_icgraph" alt=""/></div>
-<map name="class_map_ad25cd1c04791edcda24f7aaba0ca6557_icgraph" id="class_map_ad25cd1c04791edcda24f7aaba0ca6557_icgraph">
-<area shape="rect" id="node2" href="main_8cpp.html#a5e1c37b6b0ca91ad100d6bd39fc4062f" title="dev_img" alt="" coords="136,5,207,32"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_map_ad25cd1c04791edcda24f7aaba0ca6557_icgraph.svg" width="212" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -592,8 +593,8 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>GUI/<a class="el" href="map_8h_source.html">map.h</a></li>
-<li>GUI/<a class="el" href="map_8cpp_source.html">map.cpp</a></li>
+<li><a class="el" href="map_8h_source.html">map.h</a></li>
+<li><a class="el" href="map_8cpp_source.html">map.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -601,7 +602,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_map.html">Map</a></li>
-    <li class="footer">Generated on Wed Nov 16 2016 11:07:05 for Map Matching by
+    <li class="footer">Generated on Wed Nov 16 2016 11:43:18 for Map Matching by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

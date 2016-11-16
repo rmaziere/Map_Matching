@@ -1,4 +1,4 @@
-<map id="GUI/controller.h" name="GUI/controller.h">
+<map id="controller.h" name="controller.h">
 <area shape="rect" id="node2" href="$qmapviewer_8h.html" title="qmapviewer.h" alt="" coords="223,80,326,107"/>
 <area shape="rect" id="node4" href="$track_8h.html" title="The class Track. " alt="" coords="457,80,519,107"/>
 <area shape="rect" id="node5" href="$point_g_p_s_8h.html" title="pointGPS.h" alt="" coords="177,155,266,181"/>

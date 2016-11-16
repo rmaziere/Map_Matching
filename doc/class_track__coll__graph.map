@@ -1,0 +1,7 @@
+<map id="Track" name="Track">
+<area shape="rect" id="node2" title="STL class. " alt="" coords="35,836,115,913"/>
+<area shape="rect" id="node3" title="STL class. " alt="" coords="5,645,132,737"/>
+<area shape="rect" id="node5" href="$class_point_g_p_s.html" title="{PointGPS\n|# m_altitude\l# m_timeStamp\l|+ addEmissionProbability()\l+ altitude()\l+ infos()\l+ PointGPS()\l+ PointGPS()\l+ timeStamp()\l}" alt="" coords="157,608,335,773"/>
+<area shape="rect" id="node6" href="$class_point.html" title="The Point class. " alt="" coords="101,189,260,545"/>
+<area shape="rect" id="node8" href="$class_emission_probability.html" title="{EmissionProbability\n|# m_distance\l# m_probability\l# m_roadId\l|+ EmissionProbability()\l+ updateProbability()\l}" alt="" coords="317,5,474,127"/>
+</map>

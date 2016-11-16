@@ -1,6 +1,6 @@
 <map id="Point::x" name="Point::x">
-<area shape="rect" id="node2" href="$structhash_func.html#a1ec440ab36b0e013a3bbc9cf48f34e35" title="hashFunc::operator()" alt="" coords="122,5,265,32"/>
-<area shape="rect" id="node3" href="$class_box.html#a3a96bf8f86322e4885028e517ef40535" title="Box::distanceToPoint" alt="" coords="120,56,267,83"/>
+<area shape="rect" id="node2" href="$class_box.html#a3a96bf8f86322e4885028e517ef40535" title="Box::distanceToPoint" alt="" coords="120,5,267,32"/>
+<area shape="rect" id="node3" href="$structhash_func.html#a1ec440ab36b0e013a3bbc9cf48f34e35" title="hashFunc::operator()" alt="" coords="122,56,265,83"/>
 <area shape="rect" id="node4" href="$class_k_d_tree.html#a39df3eb7a379ef30cf6b71136cdb320e" title="KDTree::locate" alt="" coords="138,107,249,133"/>
 <area shape="rect" id="node5" href="$class_point.html#a6f6a42c3b4bfe6e7e5ccb502788227d6" title="Point::setx" alt="" coords="151,157,236,184"/>
 <area shape="rect" id="node6" href="$class_k_d_tree.html#a8f658d6d9211976a26b0f60471880e4a" title="KDTree::KDTree" alt="" coords="315,157,435,184"/>

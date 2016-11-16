@@ -1,5 +1,5 @@
-<map id="KDTreeAlgos/boxnode.h" name="KDTreeAlgos/boxnode.h">
-<area shape="rect" id="node2" href="$boxnode_8cpp.html" title="KDTreeAlgos/boxnode.cpp" alt="" coords="5,80,184,107"/>
-<area shape="rect" id="node3" href="$kdtree_8h.html" title="KDTreeAlgos/kdtree.h" alt="" coords="209,80,359,107"/>
-<area shape="rect" id="node4" href="$kdtree_8cpp.html" title="KDTreeAlgos/kdtree.cpp" alt="" coords="201,155,367,181"/>
+<map id="boxnode.h" name="boxnode.h">
+<area shape="rect" id="node2" href="$boxnode_8cpp.html" title="boxnode.cpp" alt="" coords="5,80,101,107"/>
+<area shape="rect" id="node3" href="$kdtree_8h.html" title="kdtree.h" alt="" coords="125,80,195,107"/>
+<area shape="rect" id="node4" href="$kdtree_8cpp.html" title="kdtree.cpp" alt="" coords="119,155,201,181"/>
 </map>

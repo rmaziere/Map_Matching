@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('class_k_d_tree.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -117,23 +117,21 @@ $(document).ready(function(){initNavTree('class_k_d_tree.html','');});
 <div class="dynheader">
 Collaboration diagram for KDTree:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_k_d_tree__coll__graph.png" border="0" usemap="#_k_d_tree_coll__map" alt="Collaboration graph"/></div>
-<map name="_k_d_tree_coll__map" id="_k_d_tree_coll__map">
-<area shape="rect" id="node2" href="class_box_node.html" title="BoxNode" alt="" coords="5,185,81,212"/><area shape="rect" id="node3" href="class_box.html" title="Box" alt="" coords="21,109,66,136"/><area shape="rect" id="node4" href="class_point.html" title="The Point class. " alt="" coords="17,5,69,32"/></map>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_k_d_tree__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8f658d6d9211976a26b0f60471880e4a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_k_d_tree.html#a8f658d6d9211976a26b0f60471880e4a">KDTree</a> (std::vector&lt; <a class="el" href="class_point.html">Point</a> &gt; &amp;points)</td></tr>
-<tr class="separator:a8f658d6d9211976a26b0f60471880e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0920219cb85bb5abc8dc1bb22c44a56c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_k_d_tree.html#a0920219cb85bb5abc8dc1bb22c44a56c">~KDTree</a> ()</td></tr>
-<tr class="separator:a0920219cb85bb5abc8dc1bb22c44a56c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc2bb09f80006a59dafc094b76d92b09"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_k_d_tree.html#adc2bb09f80006a59dafc094b76d92b09">partition</a> (const int k, int *index, int n, double *arr)</td></tr>
-<tr class="separator:adc2bb09f80006a59dafc094b76d92b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ddd631373d7508b86c6f0533dbd35c0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_k_d_tree.html#a9ddd631373d7508b86c6f0533dbd35c0">distance</a> (int idxOfPoint1, int idxOfPoint2)</td></tr>
 <tr class="separator:a9ddd631373d7508b86c6f0533dbd35c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f658d6d9211976a26b0f60471880e4a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_k_d_tree.html#a8f658d6d9211976a26b0f60471880e4a">KDTree</a> (std::vector&lt; <a class="el" href="class_point.html">Point</a> &gt; &amp;points)</td></tr>
+<tr class="separator:a8f658d6d9211976a26b0f60471880e4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39df3eb7a379ef30cf6b71136cdb320e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_k_d_tree.html#a39df3eb7a379ef30cf6b71136cdb320e">locate</a> (const <a class="el" href="class_point.html">Point</a> &amp;p)</td></tr>
 <tr class="separator:a39df3eb7a379ef30cf6b71136cdb320e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc2bb09f80006a59dafc094b76d92b09"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_k_d_tree.html#adc2bb09f80006a59dafc094b76d92b09">partition</a> (const int k, int *index, int n, double *arr)</td></tr>
+<tr class="separator:adc2bb09f80006a59dafc094b76d92b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0920219cb85bb5abc8dc1bb22c44a56c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_k_d_tree.html#a0920219cb85bb5abc8dc1bb22c44a56c">~KDTree</a> ()</td></tr>
+<tr class="separator:a0920219cb85bb5abc8dc1bb22c44a56c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -142,20 +140,20 @@ Static Public Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:aa4dd9efa552ff681d09afc7652920d4b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_k_d_tree.html#aa4dd9efa552ff681d09afc7652920d4b">m_noOfBoxes</a></td></tr>
-<tr class="separator:aa4dd9efa552ff681d09afc7652920d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81e74c0b12ad54f68e5cbd612e39fec2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_point.html">Point</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_k_d_tree.html#a81e74c0b12ad54f68e5cbd612e39fec2">m_vectorOfPoints</a></td></tr>
-<tr class="separator:a81e74c0b12ad54f68e5cbd612e39fec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade745ebe4be3f535fa39cdaf156e4044"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_k_d_tree.html#ade745ebe4be3f535fa39cdaf156e4044">m_noOfPoints</a></td></tr>
-<tr class="separator:ade745ebe4be3f535fa39cdaf156e4044"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab46bbba45f605a7107cb610f7ef313f1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_box_node.html">BoxNode</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_k_d_tree.html#ab46bbba45f605a7107cb610f7ef313f1">m_arrayOfBoxes</a></td></tr>
 <tr class="separator:ab46bbba45f605a7107cb610f7ef313f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1379708c79cd791eada0f170e6f598c2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_k_d_tree.html#a1379708c79cd791eada0f170e6f598c2">m_vectorOfPointIndexes</a></td></tr>
-<tr class="separator:a1379708c79cd791eada0f170e6f598c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c99b1343603783ea541ef79a6bc119a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_k_d_tree.html#a3c99b1343603783ea541ef79a6bc119a">m_vectorOfReversedPointIndexes</a></td></tr>
-<tr class="separator:a3c99b1343603783ea541ef79a6bc119a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a780ba15bae06b57a27324e9f735cd6e9"><td class="memItemLeft" align="right" valign="top">double *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_k_d_tree.html#a780ba15bae06b57a27324e9f735cd6e9">m_arrayOfCoordinates</a></td></tr>
 <tr class="separator:a780ba15bae06b57a27324e9f735cd6e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4dd9efa552ff681d09afc7652920d4b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_k_d_tree.html#aa4dd9efa552ff681d09afc7652920d4b">m_noOfBoxes</a></td></tr>
+<tr class="separator:aa4dd9efa552ff681d09afc7652920d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade745ebe4be3f535fa39cdaf156e4044"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_k_d_tree.html#ade745ebe4be3f535fa39cdaf156e4044">m_noOfPoints</a></td></tr>
+<tr class="separator:ade745ebe4be3f535fa39cdaf156e4044"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1379708c79cd791eada0f170e6f598c2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_k_d_tree.html#a1379708c79cd791eada0f170e6f598c2">m_vectorOfPointIndexes</a></td></tr>
+<tr class="separator:a1379708c79cd791eada0f170e6f598c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81e74c0b12ad54f68e5cbd612e39fec2"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_point.html">Point</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_k_d_tree.html#a81e74c0b12ad54f68e5cbd612e39fec2">m_vectorOfPoints</a></td></tr>
+<tr class="separator:a81e74c0b12ad54f68e5cbd612e39fec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c99b1343603783ea541ef79a6bc119a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_k_d_tree.html#a3c99b1343603783ea541ef79a6bc119a">m_vectorOfReversedPointIndexes</a></td></tr>
+<tr class="separator:a3c99b1343603783ea541ef79a6bc119a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -180,9 +178,7 @@ Protected Attributes</h2></td></tr>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_k_d_tree_a8f658d6d9211976a26b0f60471880e4a_cgraph.png" border="0" usemap="#class_k_d_tree_a8f658d6d9211976a26b0f60471880e4a_cgraph" alt=""/></div>
-<map name="class_k_d_tree_a8f658d6d9211976a26b0f60471880e4a_cgraph" id="class_k_d_tree_a8f658d6d9211976a26b0f60471880e4a_cgraph">
-<area shape="rect" id="node2" href="class_k_d_tree.html#adc2bb09f80006a59dafc094b76d92b09" title="KDTree::partition" alt="" coords="173,5,295,32"/><area shape="rect" id="node3" href="class_point.html#a6f6a42c3b4bfe6e7e5ccb502788227d6" title="Point::setx" alt="" coords="191,56,277,83"/><area shape="rect" id="node4" href="class_point.html#a3eef47b1c4849b3395a8f9c658ca7c4a" title="Point::x" alt="" coords="343,56,409,83"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_k_d_tree_a8f658d6d9211976a26b0f60471880e4a_cgraph.svg" width="415" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -253,9 +249,7 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_k_d_tree_a39df3eb7a379ef30cf6b71136cdb320e_cgraph.png" border="0" usemap="#class_k_d_tree_a39df3eb7a379ef30cf6b71136cdb320e_cgraph" alt=""/></div>
-<map name="class_k_d_tree_a39df3eb7a379ef30cf6b71136cdb320e_cgraph" id="class_k_d_tree_a39df3eb7a379ef30cf6b71136cdb320e_cgraph">
-<area shape="rect" id="node2" href="class_point.html#a3eef47b1c4849b3395a8f9c658ca7c4a" title="Point::x" alt="" coords="164,5,231,32"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_k_d_tree_a39df3eb7a379ef30cf6b71136cdb320e_cgraph.svg" width="236" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -302,9 +296,7 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_k_d_tree_adc2bb09f80006a59dafc094b76d92b09_icgraph.png" border="0" usemap="#class_k_d_tree_adc2bb09f80006a59dafc094b76d92b09_icgraph" alt=""/></div>
-<map name="class_k_d_tree_adc2bb09f80006a59dafc094b76d92b09_icgraph" id="class_k_d_tree_adc2bb09f80006a59dafc094b76d92b09_icgraph">
-<area shape="rect" id="node2" href="class_k_d_tree.html#a8f658d6d9211976a26b0f60471880e4a" title="KDTree::KDTree" alt="" coords="175,5,295,32"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_k_d_tree_adc2bb09f80006a59dafc094b76d92b09_icgraph.svg" width="300" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -488,8 +480,8 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>KDTreeAlgos/<a class="el" href="kdtree_8h_source.html">kdtree.h</a></li>
-<li>KDTreeAlgos/<a class="el" href="kdtree_8cpp_source.html">kdtree.cpp</a></li>
+<li><a class="el" href="kdtree_8h_source.html">kdtree.h</a></li>
+<li><a class="el" href="kdtree_8cpp_source.html">kdtree.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -497,7 +489,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_k_d_tree.html">KDTree</a></li>
-    <li class="footer">Generated on Wed Nov 16 2016 11:07:05 for Map Matching by
+    <li class="footer">Generated on Wed Nov 16 2016 11:43:18 for Map Matching by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -1,30 +1,30 @@
 <map id="point.h" name="point.h">
-<area shape="rect" id="node2" href="$point_g_p_s_8h.html" title="pointGPS.h" alt="" coords="689,80,778,107"/>
-<area shape="rect" id="node21" href="$pointroad_8h.html" title="pointroad.h" alt="" coords="898,155,985,181"/>
-<area shape="rect" id="node23" href="$box_8h.html" title="KDTreeAlgos/box.h" alt="" coords="1107,80,1243,107"/>
-<area shape="rect" id="node27" href="$kdtree_8h.html" title="KDTreeAlgos/kdtree.h" alt="" coords="1310,229,1461,256"/>
-<area shape="rect" id="node29" href="$point_8cpp.html" title="point.cpp" alt="" coords="1423,80,1497,107"/>
-<area shape="rect" id="node3" href="$track_8h.html" title="The class Track. " alt="" coords="423,155,486,181"/>
+<area shape="rect" id="node2" href="$point_g_p_s_8h.html" title="pointGPS.h" alt="" coords="662,80,751,107"/>
+<area shape="rect" id="node21" href="$pointroad_8h.html" title="pointroad.h" alt="" coords="871,155,958,181"/>
+<area shape="rect" id="node23" href="$box_8h.html" title="box.h" alt="" coords="1038,80,1093,107"/>
+<area shape="rect" id="node27" href="$kdtree_8h.html" title="kdtree.h" alt="" coords="1160,229,1229,256"/>
+<area shape="rect" id="node29" href="$point_8cpp.html" title="point.cpp" alt="" coords="1232,80,1307,107"/>
+<area shape="rect" id="node3" href="$track_8h.html" title="The class Track. " alt="" coords="403,155,466,181"/>
 <area shape="rect" id="node7" href="$main_8cpp.html" title="main.cpp" alt="" coords="269,379,344,405"/>
-<area shape="rect" id="node12" href="$solver_8h.html" title="solver.h" alt="" coords="795,304,863,331"/>
-<area shape="rect" id="node20" href="$point_g_p_s_8cpp.html" title="pointGPS.cpp" alt="" coords="771,155,874,181"/>
+<area shape="rect" id="node12" href="$solver_8h.html" title="solver.h" alt="" coords="769,304,837,331"/>
+<area shape="rect" id="node20" href="$point_g_p_s_8cpp.html" title="pointGPS.cpp" alt="" coords="745,155,847,181"/>
 <area shape="rect" id="node4" href="$filtering_8h.html" title="filtering.h" alt="" coords="169,229,244,256"/>
-<area shape="rect" id="node9" href="$road_8h.html" title="road.h" alt="" coords="647,229,705,256"/>
-<area shape="rect" id="node10" href="$grid_8h.html" title="grid.h" alt="" coords="619,304,674,331"/>
-<area shape="rect" id="node15" href="$controller_8h.html" title="GUI/controller.h" alt="" coords="332,229,447,256"/>
-<area shape="rect" id="node17" href="$sauvegarde_8h.html" title="sauvegarde.h" alt="" coords="471,229,571,256"/>
+<area shape="rect" id="node9" href="$road_8h.html" title="road.h" alt="" coords="619,229,677,256"/>
+<area shape="rect" id="node10" href="$grid_8h.html" title="grid.h" alt="" coords="593,304,647,331"/>
+<area shape="rect" id="node15" href="$controller_8h.html" title="controller.h" alt="" coords="333,229,419,256"/>
+<area shape="rect" id="node17" href="$sauvegarde_8h.html" title="sauvegarde.h" alt="" coords="443,229,543,256"/>
 <area shape="rect" id="node19" href="$track_8cpp.html" title="track.cpp" alt="" coords="69,229,145,256"/>
 <area shape="rect" id="node5" href="$filtering_8cpp.html" title="filtering.cpp" alt="" coords="31,304,121,331"/>
 <area shape="rect" id="node6" href="$_main_window_8h.html" title="MainWindow.h" alt="" coords="145,304,253,331"/>
 <area shape="rect" id="node8" href="$_main_window_8cpp.html" title="MainWindow.cpp" alt="" coords="123,379,245,405"/>
-<area shape="rect" id="node14" href="$road_8cpp.html" title="road.cpp" alt="" coords="699,304,771,331"/>
-<area shape="rect" id="node11" href="$grid_8cpp.html" title="grid.cpp" alt="" coords="613,379,681,405"/>
-<area shape="rect" id="node13" href="$solver_8cpp.html" title="solver.cpp" alt="" coords="788,379,871,405"/>
-<area shape="rect" id="node16" href="$controller_8cpp.html" title="GUI/controller.cpp" alt="" coords="328,304,456,331"/>
-<area shape="rect" id="node18" href="$sauvegarde_8cpp.html" title="sauvegarde.cpp" alt="" coords="480,304,595,331"/>
-<area shape="rect" id="node22" href="$pointroad_8cpp.html" title="pointroad.cpp" alt="" coords="891,229,991,256"/>
-<area shape="rect" id="node24" href="$box_8cpp.html" title="KDTreeAlgos/box.cpp" alt="" coords="1009,155,1159,181"/>
-<area shape="rect" id="node25" href="$boxnode_8h.html" title="KDTreeAlgos/boxnode.h" alt="" coords="1183,155,1347,181"/>
-<area shape="rect" id="node26" href="$boxnode_8cpp.html" title="KDTreeAlgos/boxnode.cpp" alt="" coords="1107,229,1285,256"/>
-<area shape="rect" id="node28" href="$kdtree_8cpp.html" title="KDTreeAlgos/kdtree.cpp" alt="" coords="1303,304,1468,331"/>
+<area shape="rect" id="node14" href="$road_8cpp.html" title="road.cpp" alt="" coords="672,304,744,331"/>
+<area shape="rect" id="node11" href="$grid_8cpp.html" title="grid.cpp" alt="" coords="586,379,654,405"/>
+<area shape="rect" id="node13" href="$solver_8cpp.html" title="solver.cpp" alt="" coords="761,379,844,405"/>
+<area shape="rect" id="node16" href="$controller_8cpp.html" title="controller.cpp" alt="" coords="329,304,429,331"/>
+<area shape="rect" id="node18" href="$sauvegarde_8cpp.html" title="sauvegarde.cpp" alt="" coords="453,304,568,331"/>
+<area shape="rect" id="node22" href="$pointroad_8cpp.html" title="pointroad.cpp" alt="" coords="865,229,965,256"/>
+<area shape="rect" id="node24" href="$box_8cpp.html" title="box.cpp" alt="" coords="982,155,1050,181"/>
+<area shape="rect" id="node25" href="$boxnode_8h.html" title="boxnode.h" alt="" coords="1075,155,1157,181"/>
+<area shape="rect" id="node26" href="$boxnode_8cpp.html" title="boxnode.cpp" alt="" coords="1040,229,1136,256"/>
+<area shape="rect" id="node28" href="$kdtree_8cpp.html" title="kdtree.cpp" alt="" coords="1153,304,1236,331"/>
 </map>

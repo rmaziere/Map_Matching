@@ -8,7 +8,7 @@ var hierarchy =
     ] ],
     [ "EmissionProbability", "class_emission_probability.html", null ],
     [ "equalsFunc", "structequals_func.html", null ],
-    [ "exception", null, [
+    [ "std::exception", null, [
       [ "MyException", "class_my_exception.html", null ]
     ] ],
     [ "File", "class_file.html", null ],

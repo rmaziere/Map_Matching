@@ -1,4 +1,4 @@
-<map id="GUI/map.h" name="GUI/map.h">
-<area shape="rect" id="node2" href="$map_8cpp.html" title="GUI/map.cpp" alt="" coords="5,80,105,107"/>
-<area shape="rect" id="node3" href="$main_8cpp.html" title="main.cpp" alt="" coords="129,80,203,107"/>
+<map id="map.h" name="map.h">
+<area shape="rect" id="node2" href="$map_8cpp.html" title="map.cpp" alt="" coords="5,80,77,107"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="main.cpp" alt="" coords="101,80,176,107"/>
 </map>

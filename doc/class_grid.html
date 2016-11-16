@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('class_grid.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -113,77 +113,82 @@ $(document).ready(function(){initNavTree('class_grid.html','');});
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="grid_8h_source.html">grid.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for Grid:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_grid__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4ac9ff4f63552b4c61ff90fcb35ad66c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a4ac9ff4f63552b4c61ff90fcb35ad66c">Grid</a> ()</td></tr>
-<tr class="separator:a4ac9ff4f63552b4c61ff90fcb35ad66c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3661d0a7f998caaaf8627d7a67072116"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a3661d0a7f998caaaf8627d7a67072116">~Grid</a> ()</td></tr>
-<tr class="separator:a3661d0a7f998caaaf8627d7a67072116"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19318437702e712955d0c4631c94cb04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a19318437702e712955d0c4631c94cb04">setBoundingBox</a> (double <a class="el" href="class_grid.html#a13d6d18b26d70ab5871a8c2ddf7fa1b5">xMin</a>, double <a class="el" href="class_grid.html#a5e140affdf9653d8badf596f1f151908">xMax</a>, double <a class="el" href="class_grid.html#a6acf01d876905d8709f4fb8ebe18aa94">yMin</a>, double <a class="el" href="class_grid.html#abfa1a601742ca69a5ecc3b6a5318d7a8">yMax</a>)</td></tr>
-<tr class="memdesc:a19318437702e712955d0c4631c94cb04"><td class="mdescLeft">&#160;</td><td class="mdescRight">setZone Save data about our area of roads  <a href="#a19318437702e712955d0c4631c94cb04">More...</a><br /></td></tr>
-<tr class="separator:a19318437702e712955d0c4631c94cb04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae848f1c59c544adc1af9133409ee0106"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#ae848f1c59c544adc1af9133409ee0106">readFromCSV</a> (QString filename)</td></tr>
-<tr class="memdesc:ae848f1c59c544adc1af9133409ee0106"><td class="mdescLeft">&#160;</td><td class="mdescRight">readFromCSV Reads a csv file and inserts info into the corresponding attributs  <a href="#ae848f1c59c544adc1af9133409ee0106">More...</a><br /></td></tr>
-<tr class="separator:ae848f1c59c544adc1af9133409ee0106"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba1830bc145f128d6deeed29cfb94c9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#aba1830bc145f128d6deeed29cfb94c9f">addRoad</a> (const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;listOfCoordinates, long edgeId)</td></tr>
 <tr class="memdesc:aba1830bc145f128d6deeed29cfb94c9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">addRoad Creates a new road and inserts it in m_road  <a href="#aba1830bc145f128d6deeed29cfb94c9f">More...</a><br /></td></tr>
 <tr class="separator:aba1830bc145f128d6deeed29cfb94c9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b6af4fb2545b398b47794de576f15f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a6b6af4fb2545b398b47794de576f15f5">inFootPrint</a> (double x, double y)</td></tr>
-<tr class="memdesc:a6b6af4fb2545b398b47794de576f15f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">inFootPrint Test if a point is in the defined area of a track  <a href="#a6b6af4fb2545b398b47794de576f15f5">More...</a><br /></td></tr>
-<tr class="separator:a6b6af4fb2545b398b47794de576f15f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58233ab60f7477144af334f205606aa4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a58233ab60f7477144af334f205606aa4">updateGrid</a> (double x, double y)</td></tr>
-<tr class="memdesc:a58233ab60f7477144af334f205606aa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">updateGrid Find max and min of the grid  <a href="#a58233ab60f7477144af334f205606aa4">More...</a><br /></td></tr>
-<tr class="separator:a58233ab60f7477144af334f205606aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d8b7fa0ee20d81f130a46d80fc2a018"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a8d8b7fa0ee20d81f130a46d80fc2a018">trackInGrid</a> ()</td></tr>
-<tr class="memdesc:a8d8b7fa0ee20d81f130a46d80fc2a018"><td class="mdescLeft">&#160;</td><td class="mdescRight">trackInGrid  <a href="#a8d8b7fa0ee20d81f130a46d80fc2a018">More...</a><br /></td></tr>
-<tr class="separator:a8d8b7fa0ee20d81f130a46d80fc2a018"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19bf6c03c97f95b07397aa4b845adc96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a19bf6c03c97f95b07397aa4b845adc96">setDistance</a> (<a class="el" href="class_point_g_p_s.html">PointGPS</a> &amp;p, <a class="el" href="class_road.html">Road</a> &amp;r)</td></tr>
-<tr class="memdesc:a19bf6c03c97f95b07397aa4b845adc96"><td class="mdescLeft">&#160;</td><td class="mdescRight">setDistance  <a href="#a19bf6c03c97f95b07397aa4b845adc96">More...</a><br /></td></tr>
-<tr class="separator:a19bf6c03c97f95b07397aa4b845adc96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a385463a3b96dcdbd212cbfc07c711c12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a385463a3b96dcdbd212cbfc07c711c12">buildKDTree</a> ()</td></tr>
 <tr class="memdesc:a385463a3b96dcdbd212cbfc07c711c12"><td class="mdescLeft">&#160;</td><td class="mdescRight">buildKDTree  <a href="#a385463a3b96dcdbd212cbfc07c711c12">More...</a><br /></td></tr>
 <tr class="separator:a385463a3b96dcdbd212cbfc07c711c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea292f48c96b2e9d1abee08040cd3833"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#aea292f48c96b2e9d1abee08040cd3833">buildMarkovMatrix</a> ()</td></tr>
 <tr class="memdesc:aea292f48c96b2e9d1abee08040cd3833"><td class="mdescLeft">&#160;</td><td class="mdescRight">buildMarkovMatrix  <a href="#aea292f48c96b2e9d1abee08040cd3833">More...</a><br /></td></tr>
 <tr class="separator:aea292f48c96b2e9d1abee08040cd3833"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58f05023aca02a77494c52263bd2df20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a58f05023aca02a77494c52263bd2df20">outputInfos</a> ()</td></tr>
-<tr class="separator:a58f05023aca02a77494c52263bd2df20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d75bb937fdfc204e9451da88f0650d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a7d75bb937fdfc204e9451da88f0650d3">getNoOfPoints</a> () const </td></tr>
+<tr class="separator:a7d75bb937fdfc204e9451da88f0650d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0545cd5f236dced312b694dc768f137"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#aa0545cd5f236dced312b694dc768f137">getNoOfRoads</a> () const </td></tr>
+<tr class="separator:aa0545cd5f236dced312b694dc768f137"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e3943e4ae3440bd4bf2e6b7fc73ed55"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_point_road.html">PointRoad</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a3e3943e4ae3440bd4bf2e6b7fc73ed55">getPoints</a> ()</td></tr>
+<tr class="separator:a3e3943e4ae3440bd4bf2e6b7fc73ed55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54c76e927f8428bca87520d8ca310bec"><td class="memItemLeft" align="right" valign="top">AllRoadMap::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a54c76e927f8428bca87520d8ca310bec">getRoadEntry</a> (long id)</td></tr>
 <tr class="separator:a54c76e927f8428bca87520d8ca310bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae43b7156c770eb4a8812d7ecce223b36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="grid_8h.html#ac56897dddd132e4c97d442b506be559c">AllRoadMap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#ae43b7156c770eb4a8812d7ecce223b36">getRoads</a> ()</td></tr>
 <tr class="separator:ae43b7156c770eb4a8812d7ecce223b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e3943e4ae3440bd4bf2e6b7fc73ed55"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_point_road.html">PointRoad</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a3e3943e4ae3440bd4bf2e6b7fc73ed55">getPoints</a> ()</td></tr>
-<tr class="separator:a3e3943e4ae3440bd4bf2e6b7fc73ed55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0545cd5f236dced312b694dc768f137"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#aa0545cd5f236dced312b694dc768f137">getNoOfRoads</a> () const </td></tr>
-<tr class="separator:aa0545cd5f236dced312b694dc768f137"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d75bb937fdfc204e9451da88f0650d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a7d75bb937fdfc204e9451da88f0650d3">getNoOfPoints</a> () const </td></tr>
-<tr class="separator:a7d75bb937fdfc204e9451da88f0650d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13d6d18b26d70ab5871a8c2ddf7fa1b5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a13d6d18b26d70ab5871a8c2ddf7fa1b5">xMin</a> () const </td></tr>
-<tr class="separator:a13d6d18b26d70ab5871a8c2ddf7fa1b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ac9ff4f63552b4c61ff90fcb35ad66c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a4ac9ff4f63552b4c61ff90fcb35ad66c">Grid</a> ()</td></tr>
+<tr class="separator:a4ac9ff4f63552b4c61ff90fcb35ad66c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b6af4fb2545b398b47794de576f15f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a6b6af4fb2545b398b47794de576f15f5">inFootPrint</a> (double x, double y)</td></tr>
+<tr class="memdesc:a6b6af4fb2545b398b47794de576f15f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">inFootPrint Test if a point is in the defined area of a track  <a href="#a6b6af4fb2545b398b47794de576f15f5">More...</a><br /></td></tr>
+<tr class="separator:a6b6af4fb2545b398b47794de576f15f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58f05023aca02a77494c52263bd2df20"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a58f05023aca02a77494c52263bd2df20">outputInfos</a> ()</td></tr>
+<tr class="separator:a58f05023aca02a77494c52263bd2df20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae848f1c59c544adc1af9133409ee0106"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#ae848f1c59c544adc1af9133409ee0106">readFromCSV</a> (QString filename)</td></tr>
+<tr class="memdesc:ae848f1c59c544adc1af9133409ee0106"><td class="mdescLeft">&#160;</td><td class="mdescRight">readFromCSV Reads a csv file and inserts info into the corresponding attributs  <a href="#ae848f1c59c544adc1af9133409ee0106">More...</a><br /></td></tr>
+<tr class="separator:ae848f1c59c544adc1af9133409ee0106"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19318437702e712955d0c4631c94cb04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a19318437702e712955d0c4631c94cb04">setBoundingBox</a> (double <a class="el" href="class_grid.html#a13d6d18b26d70ab5871a8c2ddf7fa1b5">xMin</a>, double <a class="el" href="class_grid.html#a5e140affdf9653d8badf596f1f151908">xMax</a>, double <a class="el" href="class_grid.html#a6acf01d876905d8709f4fb8ebe18aa94">yMin</a>, double <a class="el" href="class_grid.html#abfa1a601742ca69a5ecc3b6a5318d7a8">yMax</a>)</td></tr>
+<tr class="memdesc:a19318437702e712955d0c4631c94cb04"><td class="mdescLeft">&#160;</td><td class="mdescRight">setZone Save data about our area of roads  <a href="#a19318437702e712955d0c4631c94cb04">More...</a><br /></td></tr>
+<tr class="separator:a19318437702e712955d0c4631c94cb04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19bf6c03c97f95b07397aa4b845adc96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a19bf6c03c97f95b07397aa4b845adc96">setDistance</a> (<a class="el" href="class_point_g_p_s.html">PointGPS</a> &amp;p, <a class="el" href="class_road.html">Road</a> &amp;r)</td></tr>
+<tr class="memdesc:a19bf6c03c97f95b07397aa4b845adc96"><td class="mdescLeft">&#160;</td><td class="mdescRight">setDistance  <a href="#a19bf6c03c97f95b07397aa4b845adc96">More...</a><br /></td></tr>
+<tr class="separator:a19bf6c03c97f95b07397aa4b845adc96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d8b7fa0ee20d81f130a46d80fc2a018"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a8d8b7fa0ee20d81f130a46d80fc2a018">trackInGrid</a> ()</td></tr>
+<tr class="memdesc:a8d8b7fa0ee20d81f130a46d80fc2a018"><td class="mdescLeft">&#160;</td><td class="mdescRight">trackInGrid  <a href="#a8d8b7fa0ee20d81f130a46d80fc2a018">More...</a><br /></td></tr>
+<tr class="separator:a8d8b7fa0ee20d81f130a46d80fc2a018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58233ab60f7477144af334f205606aa4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a58233ab60f7477144af334f205606aa4">updateGrid</a> (double x, double y)</td></tr>
+<tr class="memdesc:a58233ab60f7477144af334f205606aa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">updateGrid Find max and min of the grid  <a href="#a58233ab60f7477144af334f205606aa4">More...</a><br /></td></tr>
+<tr class="separator:a58233ab60f7477144af334f205606aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e140affdf9653d8badf596f1f151908"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a5e140affdf9653d8badf596f1f151908">xMax</a> () const </td></tr>
 <tr class="separator:a5e140affdf9653d8badf596f1f151908"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6acf01d876905d8709f4fb8ebe18aa94"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a6acf01d876905d8709f4fb8ebe18aa94">yMin</a> () const </td></tr>
-<tr class="separator:a6acf01d876905d8709f4fb8ebe18aa94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfa1a601742ca69a5ecc3b6a5318d7a8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#abfa1a601742ca69a5ecc3b6a5318d7a8">yMax</a> () const </td></tr>
-<tr class="separator:abfa1a601742ca69a5ecc3b6a5318d7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa96eed7a551f45aeee1068a289bd2a7b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#aa96eed7a551f45aeee1068a289bd2a7b">xMinGrid</a> () const </td></tr>
-<tr class="separator:aa96eed7a551f45aeee1068a289bd2a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3dd1e75998e6214c3ef33cdc5e02204"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#aa3dd1e75998e6214c3ef33cdc5e02204">xMaxGrid</a> () const </td></tr>
 <tr class="separator:aa3dd1e75998e6214c3ef33cdc5e02204"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa95de5fff735d1121572075a872121c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#afa95de5fff735d1121572075a872121c">yMinGrid</a> () const </td></tr>
-<tr class="separator:afa95de5fff735d1121572075a872121c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13d6d18b26d70ab5871a8c2ddf7fa1b5"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a13d6d18b26d70ab5871a8c2ddf7fa1b5">xMin</a> () const </td></tr>
+<tr class="separator:a13d6d18b26d70ab5871a8c2ddf7fa1b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa96eed7a551f45aeee1068a289bd2a7b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#aa96eed7a551f45aeee1068a289bd2a7b">xMinGrid</a> () const </td></tr>
+<tr class="separator:aa96eed7a551f45aeee1068a289bd2a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfa1a601742ca69a5ecc3b6a5318d7a8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#abfa1a601742ca69a5ecc3b6a5318d7a8">yMax</a> () const </td></tr>
+<tr class="separator:abfa1a601742ca69a5ecc3b6a5318d7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97ee4a72430770462f5e2ba140f2ca65"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a97ee4a72430770462f5e2ba140f2ca65">yMaxGrid</a> () const </td></tr>
 <tr class="separator:a97ee4a72430770462f5e2ba140f2ca65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6acf01d876905d8709f4fb8ebe18aa94"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a6acf01d876905d8709f4fb8ebe18aa94">yMin</a> () const </td></tr>
+<tr class="separator:a6acf01d876905d8709f4fb8ebe18aa94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa95de5fff735d1121572075a872121c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#afa95de5fff735d1121572075a872121c">yMinGrid</a> () const </td></tr>
+<tr class="separator:afa95de5fff735d1121572075a872121c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3661d0a7f998caaaf8627d7a67072116"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a3661d0a7f998caaaf8627d7a67072116">~Grid</a> ()</td></tr>
+<tr class="separator:a3661d0a7f998caaaf8627d7a67072116"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a3d09e3c15b281cd790ea559ac0cd8600"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a3d09e3c15b281cd790ea559ac0cd8600">m_gridFullName</a></td></tr>
 <tr class="separator:a3d09e3c15b281cd790ea559ac0cd8600"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9774c5aed906c94a14a41c732ec1f800"><td class="memItemLeft" align="right" valign="top"><a class="el" href="grid_8h.html#ae213445293bdb59728d1618fa962967a">ExtremityPointMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a9774c5aed906c94a14a41c732ec1f800">m_mapOfExtPoints</a></td></tr>
-<tr class="separator:a9774c5aed906c94a14a41c732ec1f800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5578e1ff240198b12d1d17f919bb182c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="grid_8h.html#ac56897dddd132e4c97d442b506be559c">AllRoadMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a5578e1ff240198b12d1d17f919bb182c">m_mapOfAllRoads</a></td></tr>
 <tr class="separator:a5578e1ff240198b12d1d17f919bb182c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9774c5aed906c94a14a41c732ec1f800"><td class="memItemLeft" align="right" valign="top"><a class="el" href="grid_8h.html#ae213445293bdb59728d1618fa962967a">ExtremityPointMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a9774c5aed906c94a14a41c732ec1f800">m_mapOfExtPoints</a></td></tr>
+<tr class="separator:a9774c5aed906c94a14a41c732ec1f800"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affafdc2764a84765c24b9010ba19de94"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_point_road.html">PointRoad</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#affafdc2764a84765c24b9010ba19de94">m_vectorOfPoints</a></td></tr>
 <tr class="separator:affafdc2764a84765c24b9010ba19de94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader"></div></td></tr>
@@ -284,18 +289,14 @@ Protected Attributes</h2></td></tr>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_aba1830bc145f128d6deeed29cfb94c9f_cgraph.png" border="0" usemap="#class_grid_aba1830bc145f128d6deeed29cfb94c9f_cgraph" alt=""/></div>
-<map name="class_grid_aba1830bc145f128d6deeed29cfb94c9f_cgraph" id="class_grid_aba1830bc145f128d6deeed29cfb94c9f_cgraph">
-<area shape="rect" id="node2" href="class_point_road.html#aa1b90c3fdf8ae7a1fcd8ce6182d13287" title="PointRoad::outputInfos" alt="" coords="190,5,346,32"/><area shape="rect" id="node3" href="class_point_road.html#ab53ccb3c883bdfd27c707901c5c658c8" title="PointRoad::updateBelongToRoad" alt="" coords="160,56,376,83"/><area shape="rect" id="node4" href="class_point_road.html#a998665db2d7e4fc4935ef95df092ff2b" title="PointRoad::setid" alt="" coords="209,107,327,133"/><area shape="rect" id="node5" href="class_point_road.html#a81372f2c2c0fe1084fa2397289518124" title="PointRoad::id" alt="" coords="424,132,525,159"/><area shape="rect" id="node6" href="class_point_road.html#ae83941b37b026758fdd7974b4b186fbc" title="PointRoad::isNode" alt="" coords="202,208,334,235"/><area shape="rect" id="node7" href="class_road.html#a7f97b4f20c598103baad510b19a0c0b5" title="addPoint " alt="" coords="212,259,324,285"/><area shape="rect" id="node8" href="class_road.html#ad6715392969e36eb10efac542519755c" title="edgeId " alt="" coords="218,309,318,336"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid_aba1830bc145f128d6deeed29cfb94c9f_cgraph.svg" width="531" height="342"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_aba1830bc145f128d6deeed29cfb94c9f_icgraph.png" border="0" usemap="#class_grid_aba1830bc145f128d6deeed29cfb94c9f_icgraph" alt=""/></div>
-<map name="class_grid_aba1830bc145f128d6deeed29cfb94c9f_icgraph" id="class_grid_aba1830bc145f128d6deeed29cfb94c9f_icgraph">
-<area shape="rect" id="node2" href="class_grid.html#ae848f1c59c544adc1af9133409ee0106" title="readFromCSV Reads a csv file and inserts info into the corresponding attributs " alt="" coords="160,31,297,57"/><area shape="rect" id="node3" href="main_8cpp.html#a640261e473790d1a87c2f33332460793" title="dev_grid" alt="" coords="345,5,416,32"/><area shape="rect" id="node4" href="main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="349,56,412,83"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid_aba1830bc145f128d6deeed29cfb94c9f_icgraph.svg" width="422" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -340,18 +341,14 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_aea292f48c96b2e9d1abee08040cd3833_cgraph.png" border="0" usemap="#class_grid_aea292f48c96b2e9d1abee08040cd3833_cgraph" alt=""/></div>
-<map name="class_grid_aea292f48c96b2e9d1abee08040cd3833_cgraph" id="class_grid_aea292f48c96b2e9d1abee08040cd3833_cgraph">
-<area shape="rect" id="node2" href="class_grid.html#a54c76e927f8428bca87520d8ca310bec" title="Grid::getRoadEntry" alt="" coords="213,5,348,32"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid_aea292f48c96b2e9d1abee08040cd3833_cgraph.svg" width="354" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_aea292f48c96b2e9d1abee08040cd3833_icgraph.png" border="0" usemap="#class_grid_aea292f48c96b2e9d1abee08040cd3833_icgraph" alt=""/></div>
-<map name="class_grid_aea292f48c96b2e9d1abee08040cd3833_icgraph" id="class_grid_aea292f48c96b2e9d1abee08040cd3833_icgraph">
-<area shape="rect" id="node2" href="main_8cpp.html#a640261e473790d1a87c2f33332460793" title="dev_grid" alt="" coords="213,5,284,32"/><area shape="rect" id="node3" href="main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="217,56,280,83"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid_aea292f48c96b2e9d1abee08040cd3833_icgraph.svg" width="290" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -433,9 +430,7 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_a3e3943e4ae3440bd4bf2e6b7fc73ed55_icgraph.png" border="0" usemap="#class_grid_a3e3943e4ae3440bd4bf2e6b7fc73ed55_icgraph" alt=""/></div>
-<map name="class_grid_a3e3943e4ae3440bd4bf2e6b7fc73ed55_icgraph" id="class_grid_a3e3943e4ae3440bd4bf2e6b7fc73ed55_icgraph">
-<area shape="rect" id="node2" href="main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="163,5,225,32"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid_a3e3943e4ae3440bd4bf2e6b7fc73ed55_icgraph.svg" width="231" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -460,9 +455,7 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_a54c76e927f8428bca87520d8ca310bec_icgraph.png" border="0" usemap="#class_grid_a54c76e927f8428bca87520d8ca310bec_icgraph" alt=""/></div>
-<map name="class_grid_a54c76e927f8428bca87520d8ca310bec_icgraph" id="class_grid_a54c76e927f8428bca87520d8ca310bec_icgraph">
-<area shape="rect" id="node2" href="class_grid.html#aea292f48c96b2e9d1abee08040cd3833" title="buildMarkovMatrix " alt="" coords="188,31,348,57"/><area shape="rect" id="node3" href="main_8cpp.html#a640261e473790d1a87c2f33332460793" title="dev_grid" alt="" coords="396,5,467,32"/><area shape="rect" id="node4" href="main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="400,56,463,83"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid_a54c76e927f8428bca87520d8ca310bec_icgraph.svg" width="472" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -494,9 +487,7 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_ae43b7156c770eb4a8812d7ecce223b36_icgraph.png" border="0" usemap="#class_grid_ae43b7156c770eb4a8812d7ecce223b36_icgraph" alt=""/></div>
-<map name="class_grid_ae43b7156c770eb4a8812d7ecce223b36_icgraph" id="class_grid_ae43b7156c770eb4a8812d7ecce223b36_icgraph">
-<area shape="rect" id="node2" href="main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="164,5,227,32"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid_ae43b7156c770eb4a8812d7ecce223b36_icgraph.svg" width="232" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -541,9 +532,7 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_a6b6af4fb2545b398b47794de576f15f5_icgraph.png" border="0" usemap="#class_grid_a6b6af4fb2545b398b47794de576f15f5_icgraph" alt=""/></div>
-<map name="class_grid_a6b6af4fb2545b398b47794de576f15f5_icgraph" id="class_grid_a6b6af4fb2545b398b47794de576f15f5_icgraph">
-<area shape="rect" id="node2" href="class_grid.html#ae848f1c59c544adc1af9133409ee0106" title="readFromCSV Reads a csv file and inserts info into the corresponding attributs " alt="" coords="171,31,308,57"/><area shape="rect" id="node3" href="main_8cpp.html#a640261e473790d1a87c2f33332460793" title="dev_grid" alt="" coords="356,5,427,32"/><area shape="rect" id="node4" href="main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="360,56,423,83"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid_a6b6af4fb2545b398b47794de576f15f5_icgraph.svg" width="432" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -567,9 +556,7 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_a58f05023aca02a77494c52263bd2df20_icgraph.png" border="0" usemap="#class_grid_a58f05023aca02a77494c52263bd2df20_icgraph" alt=""/></div>
-<map name="class_grid_a58f05023aca02a77494c52263bd2df20_icgraph" id="class_grid_a58f05023aca02a77494c52263bd2df20_icgraph">
-<area shape="rect" id="node2" href="main_8cpp.html#a640261e473790d1a87c2f33332460793" title="dev_grid" alt="" coords="172,5,243,32"/><area shape="rect" id="node3" href="main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="176,56,239,83"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid_a58f05023aca02a77494c52263bd2df20_icgraph.svg" width="248" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -602,18 +589,14 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_ae848f1c59c544adc1af9133409ee0106_cgraph.png" border="0" usemap="#class_grid_ae848f1c59c544adc1af9133409ee0106_cgraph" alt=""/></div>
-<map name="class_grid_ae848f1c59c544adc1af9133409ee0106_cgraph" id="class_grid_ae848f1c59c544adc1af9133409ee0106_cgraph">
-<area shape="rect" id="node2" href="class_grid.html#a6b6af4fb2545b398b47794de576f15f5" title="inFootPrint Test if a point is in the defined area of a track " alt="" coords="191,56,308,83"/><area shape="rect" id="node3" href="class_grid.html#a58233ab60f7477144af334f205606aa4" title="updateGrid Find max and min of the grid " alt="" coords="191,107,308,133"/><area shape="rect" id="node4" href="class_grid.html#aba1830bc145f128d6deeed29cfb94c9f" title="addRoad Creates a new road and inserts it in m_road " alt="" coords="196,157,303,184"/><area shape="rect" id="node5" href="class_point_road.html#aa1b90c3fdf8ae7a1fcd8ce6182d13287" title="PointRoad::outputInfos" alt="" coords="386,5,542,32"/><area shape="rect" id="node6" href="class_point_road.html#ab53ccb3c883bdfd27c707901c5c658c8" title="PointRoad::updateBelongToRoad" alt="" coords="356,56,572,83"/><area shape="rect" id="node7" href="class_point_road.html#a998665db2d7e4fc4935ef95df092ff2b" title="PointRoad::setid" alt="" coords="405,107,523,133"/><area shape="rect" id="node8" href="class_point_road.html#a81372f2c2c0fe1084fa2397289518124" title="PointRoad::id" alt="" coords="620,132,721,159"/><area shape="rect" id="node9" href="class_point_road.html#ae83941b37b026758fdd7974b4b186fbc" title="PointRoad::isNode" alt="" coords="398,208,530,235"/><area shape="rect" id="node10" href="class_road.html#a7f97b4f20c598103baad510b19a0c0b5" title="addPoint " alt="" coords="408,259,520,285"/><area shape="rect" id="node11" href="class_road.html#ad6715392969e36eb10efac542519755c" title="edgeId " alt="" coords="414,309,514,336"/></map>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_grid_ae848f1c59c544adc1af9133409ee0106_cgraph.svg" width="100%" height="556"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_ae848f1c59c544adc1af9133409ee0106_icgraph.png" border="0" usemap="#class_grid_ae848f1c59c544adc1af9133409ee0106_icgraph" alt=""/></div>
-<map name="class_grid_ae848f1c59c544adc1af9133409ee0106_icgraph" id="class_grid_ae848f1c59c544adc1af9133409ee0106_icgraph">
-<area shape="rect" id="node2" href="main_8cpp.html#a640261e473790d1a87c2f33332460793" title="dev_grid" alt="" coords="191,5,261,32"/><area shape="rect" id="node3" href="main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="195,56,257,83"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid_ae848f1c59c544adc1af9133409ee0106_icgraph.svg" width="267" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -671,18 +654,14 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_a19318437702e712955d0c4631c94cb04_cgraph.png" border="0" usemap="#class_grid_a19318437702e712955d0c4631c94cb04_cgraph" alt=""/></div>
-<map name="class_grid_a19318437702e712955d0c4631c94cb04_cgraph" id="class_grid_a19318437702e712955d0c4631c94cb04_cgraph">
-<area shape="rect" id="node2" href="class_grid.html#a13d6d18b26d70ab5871a8c2ddf7fa1b5" title="Grid::xMin" alt="" coords="205,5,287,32"/><area shape="rect" id="node3" href="class_grid.html#a5e140affdf9653d8badf596f1f151908" title="Grid::xMax" alt="" coords="203,56,289,83"/><area shape="rect" id="node4" href="class_grid.html#a6acf01d876905d8709f4fb8ebe18aa94" title="Grid::yMin" alt="" coords="205,107,287,133"/><area shape="rect" id="node5" href="class_grid.html#abfa1a601742ca69a5ecc3b6a5318d7a8" title="Grid::yMax" alt="" coords="203,157,289,184"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid_a19318437702e712955d0c4631c94cb04_cgraph.svg" width="295" height="190"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_a19318437702e712955d0c4631c94cb04_icgraph.png" border="0" usemap="#class_grid_a19318437702e712955d0c4631c94cb04_icgraph" alt=""/></div>
-<map name="class_grid_a19318437702e712955d0c4631c94cb04_icgraph" id="class_grid_a19318437702e712955d0c4631c94cb04_icgraph">
-<area shape="rect" id="node2" href="main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="203,5,265,32"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid_a19318437702e712955d0c4631c94cb04_icgraph.svg" width="271" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -744,9 +723,7 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_a8d8b7fa0ee20d81f130a46d80fc2a018_cgraph.png" border="0" usemap="#class_grid_a8d8b7fa0ee20d81f130a46d80fc2a018_cgraph" alt=""/></div>
-<map name="class_grid_a8d8b7fa0ee20d81f130a46d80fc2a018_cgraph" id="class_grid_a8d8b7fa0ee20d81f130a46d80fc2a018_cgraph">
-<area shape="rect" id="node2" href="class_grid.html#a13d6d18b26d70ab5871a8c2ddf7fa1b5" title="Grid::xMin" alt="" coords="186,5,269,32"/><area shape="rect" id="node3" href="class_grid.html#aa96eed7a551f45aeee1068a289bd2a7b" title="Grid::xMinGrid" alt="" coords="174,56,281,83"/><area shape="rect" id="node4" href="class_grid.html#a5e140affdf9653d8badf596f1f151908" title="Grid::xMax" alt="" coords="184,107,271,133"/><area shape="rect" id="node5" href="class_grid.html#aa3dd1e75998e6214c3ef33cdc5e02204" title="Grid::xMaxGrid" alt="" coords="172,157,283,184"/><area shape="rect" id="node6" href="class_grid.html#a6acf01d876905d8709f4fb8ebe18aa94" title="Grid::yMin" alt="" coords="186,208,269,235"/><area shape="rect" id="node7" href="class_grid.html#afa95de5fff735d1121572075a872121c" title="Grid::yMinGrid" alt="" coords="174,259,281,285"/><area shape="rect" id="node8" href="class_grid.html#abfa1a601742ca69a5ecc3b6a5318d7a8" title="Grid::yMax" alt="" coords="184,309,271,336"/><area shape="rect" id="node9" href="class_grid.html#a97ee4a72430770462f5e2ba140f2ca65" title="Grid::yMaxGrid" alt="" coords="172,360,283,387"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid_a8d8b7fa0ee20d81f130a46d80fc2a018_cgraph.svg" width="288" height="392"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -790,9 +767,7 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_a58233ab60f7477144af334f205606aa4_icgraph.png" border="0" usemap="#class_grid_a58233ab60f7477144af334f205606aa4_icgraph" alt=""/></div>
-<map name="class_grid_a58233ab60f7477144af334f205606aa4_icgraph" id="class_grid_a58233ab60f7477144af334f205606aa4_icgraph">
-<area shape="rect" id="node2" href="class_grid.html#ae848f1c59c544adc1af9133409ee0106" title="readFromCSV Reads a csv file and inserts info into the corresponding attributs " alt="" coords="171,31,308,57"/><area shape="rect" id="node3" href="main_8cpp.html#a640261e473790d1a87c2f33332460793" title="dev_grid" alt="" coords="356,5,427,32"/><area shape="rect" id="node4" href="main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="360,56,423,83"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid_a58233ab60f7477144af334f205606aa4_icgraph.svg" width="432" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -824,9 +799,7 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_a5e140affdf9653d8badf596f1f151908_icgraph.png" border="0" usemap="#class_grid_a5e140affdf9653d8badf596f1f151908_icgraph" alt=""/></div>
-<map name="class_grid_a5e140affdf9653d8badf596f1f151908_icgraph" id="class_grid_a5e140affdf9653d8badf596f1f151908_icgraph">
-<area shape="rect" id="node2" href="class_grid.html#a19318437702e712955d0c4631c94cb04" title="setZone Save data about our area of roads " alt="" coords="140,5,289,32"/><area shape="rect" id="node4" href="class_grid.html#a8d8b7fa0ee20d81f130a46d80fc2a018" title="trackInGrid " alt="" coords="155,56,274,83"/><area shape="rect" id="node3" href="main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="337,5,400,32"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid_a5e140affdf9653d8badf596f1f151908_icgraph.svg" width="406" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -858,9 +831,7 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_aa3dd1e75998e6214c3ef33cdc5e02204_icgraph.png" border="0" usemap="#class_grid_aa3dd1e75998e6214c3ef33cdc5e02204_icgraph" alt=""/></div>
-<map name="class_grid_aa3dd1e75998e6214c3ef33cdc5e02204_icgraph" id="class_grid_aa3dd1e75998e6214c3ef33cdc5e02204_icgraph">
-<area shape="rect" id="node2" href="class_grid.html#a8d8b7fa0ee20d81f130a46d80fc2a018" title="trackInGrid " alt="" coords="164,5,283,32"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid_aa3dd1e75998e6214c3ef33cdc5e02204_icgraph.svg" width="288" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -892,9 +863,7 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_a13d6d18b26d70ab5871a8c2ddf7fa1b5_icgraph.png" border="0" usemap="#class_grid_a13d6d18b26d70ab5871a8c2ddf7fa1b5_icgraph" alt=""/></div>
-<map name="class_grid_a13d6d18b26d70ab5871a8c2ddf7fa1b5_icgraph" id="class_grid_a13d6d18b26d70ab5871a8c2ddf7fa1b5_icgraph">
-<area shape="rect" id="node2" href="class_grid.html#a19318437702e712955d0c4631c94cb04" title="setZone Save data about our area of roads " alt="" coords="136,5,285,32"/><area shape="rect" id="node4" href="class_grid.html#a8d8b7fa0ee20d81f130a46d80fc2a018" title="trackInGrid " alt="" coords="151,56,270,83"/><area shape="rect" id="node3" href="main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="333,5,396,32"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid_a13d6d18b26d70ab5871a8c2ddf7fa1b5_icgraph.svg" width="402" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -926,9 +895,7 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_aa96eed7a551f45aeee1068a289bd2a7b_icgraph.png" border="0" usemap="#class_grid_aa96eed7a551f45aeee1068a289bd2a7b_icgraph" alt=""/></div>
-<map name="class_grid_aa96eed7a551f45aeee1068a289bd2a7b_icgraph" id="class_grid_aa96eed7a551f45aeee1068a289bd2a7b_icgraph">
-<area shape="rect" id="node2" href="class_grid.html#a8d8b7fa0ee20d81f130a46d80fc2a018" title="trackInGrid " alt="" coords="160,5,279,32"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid_aa96eed7a551f45aeee1068a289bd2a7b_icgraph.svg" width="284" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -960,9 +927,7 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_abfa1a601742ca69a5ecc3b6a5318d7a8_icgraph.png" border="0" usemap="#class_grid_abfa1a601742ca69a5ecc3b6a5318d7a8_icgraph" alt=""/></div>
-<map name="class_grid_abfa1a601742ca69a5ecc3b6a5318d7a8_icgraph" id="class_grid_abfa1a601742ca69a5ecc3b6a5318d7a8_icgraph">
-<area shape="rect" id="node2" href="class_grid.html#a19318437702e712955d0c4631c94cb04" title="setZone Save data about our area of roads " alt="" coords="140,5,289,32"/><area shape="rect" id="node4" href="class_grid.html#a8d8b7fa0ee20d81f130a46d80fc2a018" title="trackInGrid " alt="" coords="155,56,274,83"/><area shape="rect" id="node3" href="main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="337,5,400,32"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid_abfa1a601742ca69a5ecc3b6a5318d7a8_icgraph.svg" width="406" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -994,9 +959,7 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_a97ee4a72430770462f5e2ba140f2ca65_icgraph.png" border="0" usemap="#class_grid_a97ee4a72430770462f5e2ba140f2ca65_icgraph" alt=""/></div>
-<map name="class_grid_a97ee4a72430770462f5e2ba140f2ca65_icgraph" id="class_grid_a97ee4a72430770462f5e2ba140f2ca65_icgraph">
-<area shape="rect" id="node2" href="class_grid.html#a8d8b7fa0ee20d81f130a46d80fc2a018" title="trackInGrid " alt="" coords="164,5,283,32"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid_a97ee4a72430770462f5e2ba140f2ca65_icgraph.svg" width="288" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1028,9 +991,7 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_a6acf01d876905d8709f4fb8ebe18aa94_icgraph.png" border="0" usemap="#class_grid_a6acf01d876905d8709f4fb8ebe18aa94_icgraph" alt=""/></div>
-<map name="class_grid_a6acf01d876905d8709f4fb8ebe18aa94_icgraph" id="class_grid_a6acf01d876905d8709f4fb8ebe18aa94_icgraph">
-<area shape="rect" id="node2" href="class_grid.html#a19318437702e712955d0c4631c94cb04" title="setZone Save data about our area of roads " alt="" coords="136,5,285,32"/><area shape="rect" id="node4" href="class_grid.html#a8d8b7fa0ee20d81f130a46d80fc2a018" title="trackInGrid " alt="" coords="151,56,270,83"/><area shape="rect" id="node3" href="main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="333,5,396,32"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid_a6acf01d876905d8709f4fb8ebe18aa94_icgraph.svg" width="402" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1062,9 +1023,7 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_grid_afa95de5fff735d1121572075a872121c_icgraph.png" border="0" usemap="#class_grid_afa95de5fff735d1121572075a872121c_icgraph" alt=""/></div>
-<map name="class_grid_afa95de5fff735d1121572075a872121c_icgraph" id="class_grid_afa95de5fff735d1121572075a872121c_icgraph">
-<area shape="rect" id="node2" href="class_grid.html#a8d8b7fa0ee20d81f130a46d80fc2a018" title="trackInGrid " alt="" coords="160,5,279,32"/></map>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid_afa95de5fff735d1121572075a872121c_icgraph.svg" width="284" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </p>
 
@@ -1355,7 +1314,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_grid.html">Grid</a></li>
-    <li class="footer">Generated on Wed Nov 16 2016 11:07:05 for Map Matching by
+    <li class="footer">Generated on Wed Nov 16 2016 11:43:17 for Map Matching by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

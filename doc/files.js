@@ -1,8 +1,17 @@
 var files =
 [
-    [ "GUI", "dir_171b764decf33d63a7df2fab4f4bc6d8.html", "dir_171b764decf33d63a7df2fab4f4bc6d8" ],
-    [ "KDTreeAlgos", "dir_2fe82b5e3d2dafca23a662af4008efe2.html", "dir_2fe82b5e3d2dafca23a662af4008efe2" ],
-    [ "UI_readCSVFiles", "dir_a4b7e95830c7b931ed524f0cd664bf77.html", "dir_a4b7e95830c7b931ed524f0cd664bf77" ],
+    [ "box.cpp", "box_8cpp.html", null ],
+    [ "box.h", "box_8h.html", [
+      [ "Box", "class_box.html", "class_box" ]
+    ] ],
+    [ "boxnode.cpp", "boxnode_8cpp.html", null ],
+    [ "boxnode.h", "boxnode_8h.html", [
+      [ "BoxNode", "class_box_node.html", "class_box_node" ]
+    ] ],
+    [ "controller.cpp", "controller_8cpp.html", null ],
+    [ "controller.h", "controller_8h.html", [
+      [ "Controller", "class_controller.html", "class_controller" ]
+    ] ],
     [ "emissionprobability.cpp", "emissionprobability_8cpp.html", null ],
     [ "emissionprobability.h", "emissionprobability_8h.html", [
       [ "EmissionProbability", "class_emission_probability.html", "class_emission_probability" ]
@@ -21,14 +30,27 @@ var files =
     [ "journalprocess.h", "journalprocess_8h.html", [
       [ "JournalProcess", "class_journal_process.html", "class_journal_process" ]
     ] ],
+    [ "kdtree.cpp", "kdtree_8cpp.html", "kdtree_8cpp" ],
+    [ "kdtree.h", "kdtree_8h.html", [
+      [ "KDTree", "class_k_d_tree.html", "class_k_d_tree" ]
+    ] ],
+    [ "kdtreeviewer.cpp", "kdtreeviewer_8cpp.html", null ],
+    [ "kdtreeviewer.h", "kdtreeviewer_8h.html", [
+      [ "KDTreeViewer", "class_k_d_tree_viewer.html", "class_k_d_tree_viewer" ]
+    ] ],
     [ "loading.cpp", "loading_8cpp.html", null ],
     [ "loading.h", "loading_8h.html", [
       [ "Loading", "class_loading.html", "class_loading" ]
     ] ],
     [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
+    [ "UI_readCSVFiles/main.cpp", "_u_i__read_c_s_v_files_2main_8cpp.html", "_u_i__read_c_s_v_files_2main_8cpp" ],
     [ "MainWindow.cpp", "_main_window_8cpp.html", null ],
     [ "MainWindow.h", "_main_window_8h.html", [
       [ "MainWindow", "class_main_window.html", "class_main_window" ]
+    ] ],
+    [ "map.cpp", "map_8cpp.html", null ],
+    [ "map.h", "map_8h.html", [
+      [ "Map", "class_map.html", "class_map" ]
     ] ],
     [ "myexception.h", "myexception_8h.html", [
       [ "MyException", "class_my_exception.html", "class_my_exception" ]
@@ -41,6 +63,10 @@ var files =
     [ "pointroad.h", "pointroad_8h.html", "pointroad_8h" ],
     [ "qdebugstream.h", "qdebugstream_8h.html", [
       [ "QDebugStream", "class_q_debug_stream.html", "class_q_debug_stream" ]
+    ] ],
+    [ "qmapviewer.cpp", "qmapviewer_8cpp.html", null ],
+    [ "qmapviewer.h", "qmapviewer_8h.html", [
+      [ "QMapViewer", "class_q_map_viewer.html", "class_q_map_viewer" ]
     ] ],
     [ "road.cpp", "road_8cpp.html", null ],
     [ "road.h", "road_8h.html", [

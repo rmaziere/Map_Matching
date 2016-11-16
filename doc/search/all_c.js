@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['my_20personal_20index_20page',['My Personal Index Page',['../index.html',1,'']]],
   ['m_5factive',['m_active',['../class_sliding_stacked_widget.html#a7449e32d40ecea4815aba82ddd36d23f',1,'SlidingStackedWidget']]],
   ['m_5faltitude',['m_altitude',['../class_point_g_p_s.html#ab65928ed63bbd67e0e1c995ecddf59ba',1,'PointGPS']]],
   ['m_5fanimationtype',['m_animationtype',['../class_sliding_stacked_widget.html#ad067ee3c7f02cb850166c8facca924dc',1,'SlidingStackedWidget']]],
@@ -83,7 +84,6 @@ var searchData=
   ['m_5fymingrid',['m_yMinGrid',['../class_grid.html#a49d9db5b72ed67bec16f9a3c0ef1493f',1,'Grid']]],
   ['main',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp'],['../_u_i__read_c_s_v_files_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp']]],
   ['main_2ecpp',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['main_2ecpp',['main.cpp',['../_u_i__read_c_s_v_files_2main_8cpp.html',1,'']]],
   ['mainlayout',['mainLayout',['../class_main_window.html#a435581f9df912d1cc365d67d83366264',1,'MainWindow']]],
   ['mainwindow',['MainWindow',['../class_main_window.html',1,'MainWindow'],['../class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db',1,'MainWindow::MainWindow()']]],
   ['mainwindow_2ecpp',['MainWindow.cpp',['../_main_window_8cpp.html',1,'']]],

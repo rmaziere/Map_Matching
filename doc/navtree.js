@@ -1,6 +1,12 @@
 var NAVTREE =
 [
   [ "Map Matching", "index.html", [
+    [ "My Personal Index Page", "index.html", [
+      [ "Introduction", "index.html#intro_sec", null ],
+      [ "Installation", "index.html#install_sec", [
+        [ "Step 1: Opening the box", "index.html#step1", null ]
+      ] ]
+    ] ],
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
       [ "Class Index", "classes.html", null ],
