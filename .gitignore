@@ -3,7 +3,6 @@ Docs/Rapport/build
 !Docs/Rapport/build/Rapport.pdf
 Docs/Presentation/build/Presentation.pdf
 html/
-Data/France/Zones/
 MMModule/MMModule.pro.user
 MMModuleTest/MMModuleTest.pro.user
 pluginQgis/geomaticsprojet.pro.user
