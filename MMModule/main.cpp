@@ -188,10 +188,21 @@ int main(int argc, char* argv[])
     QApplication app(argc, argv);
 
     //Fonction à exécuter ci-dessous :
-    dev_img();
+    //dev_img();
+/********************************************************************************/
+    //Fenetre non enlevable
+/********************************************************************************/
+    MainWindow w;
+    w.setWindowTitle("Map Matching");
 
+#ifdef Q_OS_SYMBIAN
+    w.showMaximized();
+#else
+    w.resize(360, 504);
+    w.show();
+#endif
     cout << "Fonction terminée !" << endl;
 
-    //return app.exec();
-    return app.closingDown();
+    return app.exec();
+    //return app.closingDown();
 }
