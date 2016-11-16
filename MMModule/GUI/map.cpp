@@ -46,7 +46,7 @@ QPointF Map::coordinateTranslator(double x, double y){
     return p;
 }
 
-int Map::landmarkMaker(int resolution, QString color){
+void Map::landmarkMaker(int resolution, QString color){
     /*Echelle en x*/
     for(int i = 0; i < width; i += resolution){
         write(QPoint(i, 15), QString::number(i), color);
@@ -56,10 +56,9 @@ int Map::landmarkMaker(int resolution, QString color){
     for(int i = 0; i < height; i += resolution){
         write(QPoint(5, i), QString::number(i));
     }
-    return 0;
 }
 
-int Map::write(QPoint point, QString text, QString color){
+void Map::write(QPoint point, QString text, QString color){
     paint.begin(&img);
 
     paint.setPen(QPen(QColor(color)));
@@ -68,9 +67,9 @@ int Map::write(QPoint point, QString text, QString color){
     paint.end();
 }
 
-int Map::makePointFromTrack(std::vector<std::vector<double>> vXY, QString color){
+void Map::makePointFromTrack(std::vector<std::vector<double>> vXY, QString color){
     paint.begin(&img);
-    for(int i = 0; i < vXY.size(); i++){
+    for(uint i = 0; i < vXY.size(); i++){
         std::cout << "Point x = " << vXY.at(i).at(0) << ", ";
         std::cout << "Point y = " << vXY.at(i).at(1) << std::endl;
 
@@ -81,12 +80,11 @@ int Map::makePointFromTrack(std::vector<std::vector<double>> vXY, QString color)
         }
     }
     paint.end();
-    return 0;
 }
 
-int Map::makePolyline(std::vector<std::vector<double>> vXY, QString color){
+void Map::makePolyline(std::vector<std::vector<double>> vXY, QString color){
     paint.begin(&img);
-    for(int i = 0; i < vXY.size(); i++){
+    for(uint i = 0; i < vXY.size(); i++){
         std::cout << "x = " << vXY.at(i).at(0) << ", ";
         std::cout << "y = " << vXY.at(i).at(1) << std::endl;
 
@@ -95,16 +93,14 @@ int Map::makePolyline(std::vector<std::vector<double>> vXY, QString color){
             paint.setPen(QPen(QColor(color), 3, Qt::SolidLine, Qt::RoundCap, Qt::BevelJoin));
             paint.drawPolyline(polyligne, 2);
         }
-        paint.drawPoint(QPointF(vXY.at(i).at(0), vXY.at(i).at(1)));
     }
     paint.end();
-    return 0;
 }
 
-int Map::makePolylineFromRoad(std::vector<std::vector<double>> vXY, QString color){
+void Map::makePolylineFromRoad(std::vector<std::vector<double>> vXY, QString color){
     paint.begin(&img);
 
-    for(int i = 0; i < vXY.size(); i++){
+    for(uint i = 0; i < vXY.size(); i++){
         std::cout << "x = " << vXY.at(i).at(0) << ", ";
         std::cout << "y = " << vXY.at(i).at(1) << std::endl;
 
@@ -113,14 +109,10 @@ int Map::makePolylineFromRoad(std::vector<std::vector<double>> vXY, QString colo
             paint.setPen(QPen(QColor(color), 2, Qt::SolidLine, Qt::RoundCap, Qt::BevelJoin));
             paint.drawPolyline(polyligne, 2);
         }
-        paint.setPen(QPen(Qt::blue, 15, Qt::SolidLine, Qt::RoundCap, Qt::BevelJoin));
-        paint.drawPoint(QPointF(vXY.at(i).at(0), vXY.at(i).at(1)));
     }
     paint.end();
-    return 0;
 }
 
-int Map::save(QString file){
+void Map::save(QString file){
     img.save(file);
-    return 0;
 }

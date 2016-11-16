@@ -44,35 +44,35 @@ public:
      */
     QPointF coordinateTranslator(double x, double y);
 
-    int landmarkMaker(int resolution, QString color="black");
+    void landmarkMaker(int resolution, QString color="black");
 
-    int write(QPoint point, QString text,  QString color="black");
+    void write(QPoint point, QString text,  QString color="black");
 
 
-    int makePointFromTrack(std::vector<std::vector<double>> vXY, QString color="black");
+    void makePointFromTrack(std::vector<std::vector<double>> vXY, QString color="black");
 
     /**
      * @brief makePolyline
      * @param vXY
      * @return
      */
-    int makePolyline(std::vector<std::vector<double>> vXY, QString color="black");
+    void makePolyline(std::vector<std::vector<double>> vXY, QString color="black");
 
-    int makePolylineFromRoad(std::vector<std::vector<double>> vXY, QString color="black");
+    void makePolylineFromRoad(std::vector<std::vector<double>> vXY, QString color="black");
 
     /**
      * @brief drawPolyline
      * @param polyligne
      * @param size the number of polyligne's points
      */
-    int drawPolyline(QPointF polyligne, int size);
+    void drawPolyline(QPointF polyligne, int size);
 
     /**
      * @brief save the current image
      * @param file is the path used for output
      * @return
      */
-    int save(QString file);
+    void save(QString file);
 
 //protected:
     int width;      /**< image width*/
