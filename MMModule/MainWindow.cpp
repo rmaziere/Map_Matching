@@ -43,18 +43,9 @@ void MainWindow::createSubSlidingWidgets()
     slideWidget1 = new Loading();
     slideWidget2 = new Filtering();
     slideWidget3 = new QWidget();
-    slideWidget4 = new QWidget();
 
-    QVBoxLayout* slideWidget4layout = new QVBoxLayout();
-    slideWidget4->setLayout(slideWidget4layout);
     QVBoxLayout* slideWidget3layout = new QVBoxLayout();
     slideWidget3->setLayout(slideWidget3layout);
-
-
-    QPushButton* b41 = new QPushButton("Cool");
-    slideWidget4layout->addWidget(b41);
-    QPushButton* b42 = new QPushButton("is Qt !");
-    slideWidget4layout->addWidget(b42);
 
     QPushButton* b31 = new QPushButton("Isn't");
     slideWidget3layout->addWidget(b31);
@@ -68,7 +59,6 @@ void MainWindow::createSlidingStackedWidget()
     slidingStacked->addWidget(slideWidget1);
     slidingStacked->addWidget(slideWidget2);
     slidingStacked->addWidget(slideWidget3);
-    slidingStacked->addWidget(slideWidget4);
 }
 
 void MainWindow::createConnections()
@@ -81,8 +71,6 @@ void MainWindow::createConnections()
 
 void MainWindow::readyToNext1(File file1, File file2)
 {
-    buttonNext->setEnabled(true);
-
     File fileTrack = file1;
     File fileGrid = file2;
     QString fileT = fileTrack.filePath.at(0) + fileTrack.fileName.at(0) + "." + fileTrack.fileExtension.at(0);
@@ -92,18 +80,14 @@ void MainWindow::readyToNext1(File file1, File file2)
     grille.setBoundingBox(trace.m_xMin, trace.m_xMax, trace.m_yMin, trace.m_yMax);
     grille.readFromCSV(fileG);
 
-    cout << grille.trackInGrid() << endl;
-    cout << grille.xMax() << endl;
-    cout << grille.xMin() << endl;
-    cout << grille.yMax() << endl;
-    cout << grille.yMin() << endl;
-    cout << grille.xMaxGrid() << endl;
-    cout << grille.xMinGrid() << endl;
-    cout << grille.yMaxGrid() << endl;
-    cout << grille.yMinGrid() << endl;
-
-
-
+    if (!grille.trackInGrid())
+    {
+        QMessageBox::warning(this, "Erreur de fichiers", "Attention, l'emprise des données de correspond pas !");
+    }
+    else
+    {
+        buttonNext->setEnabled(true);
+    }
 
 }
 

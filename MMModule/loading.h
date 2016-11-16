@@ -38,7 +38,6 @@ private:
     void country();
     void track();
     void grid();
-    //void boutonXY();
 
     void launchFiles();
 
@@ -57,11 +56,6 @@ private:
     QLabel* m_fileGrid;
 
     int nextOk;
-
-
-
-    //QPushButton* m_cancel;
-    //QPushButton* m_launch;
 };
 
 #endif // LOADING_H

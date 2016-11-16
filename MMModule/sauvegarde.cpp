@@ -31,8 +31,9 @@ int Sauvegarde::sauvegarderCSV(QString cheminAcces, Track maTrack)
             // Outil d'écriture
             QTextStream out(&file);
 
-            // Ajout des valeurs TODO save what is necessary !
+            // Ajout des valeurs
             for (uint i = 0; i < maTrack.getPoints().size(); ++i) {
+                /** @todo save what is necessary ! */
                 /*                out << maTrack.getPoints()[i]->getLatitude() << ","
                     << maTrack.getPoints()[i]->getLongitude() << ","
                     << maTrack.getPoints()[i]->getAltitude() << ","
