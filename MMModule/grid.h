@@ -33,11 +33,17 @@ typedef std::unordered_map<long, Road> AllRoadMap;
  */
 class Grid {
 public:
+    /**
+     * @brief Constructor
+     */
     Grid();
+    /**
+     * @brief Destructor
+     */
     virtual ~Grid();
 
     /**
-     * @brief setZone Save data about our area of roads
+     * @brief Save data about our area of roads
      * @param xMin Coordinate xMin of a track
      * @param xMax Coordinate xMax of a track
      * @param yMin Coordinate yMin of a track
@@ -46,18 +52,18 @@ public:
     void setBoundingBox(double xMin, double xMax, double yMin, double yMax);
 
     /**
-     * @brief readFromCSV Reads a csv file and inserts info into the corresponding attributs
+     * @brief Reads a csv file and inserts info into the corresponding attributs
      * @param filename the filepath/filename for the csv file to read
      */
     void readFromCSV(QString filename);
 
     /**
-     * @brief addRoad Creates a new road and inserts it in m_road
+     * @brief Creates a new road and inserts it in m_road
      */
     void addRoad(const std::vector<std::vector<double> >& listOfCoordinates, long edgeId);
 
     /**
-     * @brief inFootPrint Test if a point is in the defined area of a track
+     * @brief Test if a point is in the defined area of a track
      * @param x Coordinate x of a point
      * @param y Coordinate x of a point
      * @return true or false
@@ -65,27 +71,30 @@ public:
     bool inFootPrint(double x, double y);
 
     /**
-     * @brief updateGrid Find max and min of the grid
+     * @brief Find max and min of the grid
      * @param x Coordinate x
      * @param y Coordinate y
      */
     void updateGrid(double x, double y);
+
     /**
-     * @brief trackInGrid
+     * @brief Check if track is in grid
      * @return true if track is in grid
      */
     bool trackInGrid();
+
     /**
-     * @brief setDistance
-     * @param p Point GPS
-     * @param r Road
+     * @brief Compute the distance of a point to a road
+     * @param p the Point GPS
+     * @param r the Road
      */
     void setDistance(PointGPS& p, Road& r);
+
     /**
      * @brief buildKDTree
      */
-
     void buildKDTree();
+
     /**
      * @brief buildMarkovMatrix
      */
@@ -97,7 +106,9 @@ public:
     AllRoadMap* getRoads() { return &m_mapOfAllRoads; } // TODO const ?
     std::vector<PointRoad>* getPoints() { return &m_vectorOfPoints; }
 
-    // accessors
+    /**
+     * @brief Getters
+     */
     int getNoOfRoads() const { return m_mapOfAllRoads.size(); }
     int getNoOfPoints() const { return m_vectorOfPoints.size(); }
     double xMin() const { return m_xMin; }
