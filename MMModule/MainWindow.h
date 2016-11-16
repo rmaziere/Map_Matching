@@ -13,6 +13,9 @@
 #include "filtering.h"
 #include "loading.h"
 
+#include "track.h"
+#include "grid.h"
+
 class MainWindow : public QMainWindow {
     Q_OBJECT
 
@@ -21,7 +24,7 @@ public:
     ~MainWindow();
 
 public slots:
-    void readyToNext();
+    void readyToNext1(File file1, File file2);
 
 protected:
     void createGuiControlComponents();
@@ -40,6 +43,12 @@ protected:
     Filtering* slideWidget2;
     QWidget* slideWidget3;
     QWidget* slideWidget4;
+
+    /**
+     * @brief Value of the first Slide
+     */
+    Track trace;
+    Grid grille;
 
 };
 

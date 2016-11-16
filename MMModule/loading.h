@@ -20,6 +20,10 @@ public:
     Loading();
     ~Loading();
 
+    File fileSHPGrid;
+    File fileSHPTrack;
+    File fileCSVTrack;
+
 public slots:
     void loadFileCSVTrack();
     void loadFileSHPTrack();
@@ -28,7 +32,7 @@ public slots:
 
 
 signals:
-    void ready();
+    void ready(File, File);
 
 private:
     void country();
@@ -53,6 +57,8 @@ private:
     QLabel* m_fileGrid;
 
     int nextOk;
+
+
 
     //QPushButton* m_cancel;
     //QPushButton* m_launch;
