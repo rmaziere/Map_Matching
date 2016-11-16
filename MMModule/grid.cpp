@@ -13,11 +13,11 @@ using namespace std;
 #define DEBUG_ADDROAD false
 
 Grid::Grid()
-    : /*m_xMin(std::numeric_limits<double>::max())
-    , m_xMax(0.0)
-    , m_yMin(std::numeric_limits<double>::max())
-    , m_yMax(0.0)
-    ,*/ m_xMinGrid(std::numeric_limits<double>::max())
+    : m_xMin(0.0)
+    , m_xMax(std::numeric_limits<double>::max())
+    , m_yMin(0.0)
+    , m_yMax(std::numeric_limits<double>::max())
+    , m_xMinGrid(std::numeric_limits<double>::max())
     , m_xMaxGrid(0.0)
     , m_yMinGrid(std::numeric_limits<double>::max())
     , m_yMaxGrid(0.0)
@@ -102,7 +102,7 @@ void Grid::readFromCSV(QString filename)
         stringConverted = QString::fromStdString(line);
         if (stringConverted.length() != 0) // Elimine les lignes vides
         {
-            // Exemple :
+            // Exemple :QMetaObject
             //   Entrée :
             //     "LINESTRING (1.37 3.36,1.24 3.84)",839,825,883,1,22.222222219999999,10
             //   Sortie :
@@ -189,6 +189,7 @@ void Grid::readFromCSV(QString filename)
         }
     }
     // m_mapOfExtPoints.clear(); // TODO remove comment, and DO clear map
+    cout << "Fichier lu" << endl;
 }
 
 void Grid::addRoad(const vector<vector<double> >& listOfCoordinates, long edgeId)
@@ -235,6 +236,16 @@ void Grid::outputInfos()
     cout << "\tof which " << m_mapOfExtPoints.size() << " are extremities." << endl;
 }
 
+string Grid::infos()
+{
+    std::stringstream ss;
+    ss << "Network " << m_gridFullName << " contains: \n\t" << m_mapOfAllRoads.size() << " roads\n";
+    ss << "\twith a grand total of " << m_vectorOfPoints.size() << " points\n";
+    ss << "\tof which " << m_mapOfExtPoints.size() << " are extremities.\n";
+    return ss.str();
+
+}
+
 AllRoadMap::iterator Grid::getRoadEntry(long id)
 {
     AllRoadMap::iterator got = m_mapOfAllRoads.find(id);
@@ -252,6 +263,7 @@ void Grid::buildKDTree()
 
 void Grid::buildMarkovMatrix()
 {
+    bool DEBUG = false;
     // check all points and for those who are a node (extremity of a road) update all the roads
     for (const auto& p : m_vectorOfPoints) {
         if (p.isNode()) {
@@ -260,15 +272,16 @@ void Grid::buildMarkovMatrix()
                 AllRoadMap::iterator got = getRoadEntry(roadId);
                 for (const auto neighborId : listOfRoadId) {
                     got->second.addNeighbor(neighborId);
-                    cout << "update neighbour " << endl;
-                    got->second.outputInfos();
+                    if (DEBUG)  {
+                        cout << "update neighbour " << endl;
+                        got->second.outputInfos();
+                    }
                 }
             }
         }
     }
     // verification
 
-    bool DEBUG = true;
     if (DEBUG) {
         cout << "Resutat: " << endl;
         for (auto& it : m_mapOfAllRoads) {

@@ -17,7 +17,7 @@
 #include <string>
 #include <vector>
 
-#define DISTANCE_THRESHOLD 200 // from paper
+#define DISTANCE_THRESHOLD 200
 
 /**
  * @brief The Track class
@@ -86,6 +86,11 @@ public:
      * @brief Print some informations to user in console
      */
     void outputInfos();
+
+    /**
+     * @brief Return a string containing information about the content of this object
+     */
+    std::string infos();
 
     /**
      * @brief getPoints Get the m_points vector

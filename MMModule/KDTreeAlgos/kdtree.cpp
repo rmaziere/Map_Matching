@@ -145,14 +145,16 @@ double KDTree::distance(int idxOfPoint1, int idxOfPoint2)
 int KDTree::locate(const Point& p)
 {
     int nb, d1, jdim;
-    nb = jdim = 0; // start with the root box
+    nb = 0;
+    jdim = 0; // start with the root box
     while (m_arrayOfBoxes[nb].m_daughterBox1) { // as far as possible down the tree
         d1 = m_arrayOfBoxes[nb].m_daughterBox1;
         if (p.x(jdim) <= m_arrayOfBoxes[d1].m_high.x(jdim))
             nb = d1;
         else
             nb = m_arrayOfBoxes[nb].m_daughterBox2;
-        jdim = (++jdim) % 2; // increment dimension cyclically
+        ++jdim;
+        jdim%= 2; // increment dimension cyclically
     }
     return nb;
 }
