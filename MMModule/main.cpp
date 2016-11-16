@@ -1,9 +1,13 @@
 #include <QFileDialog>
 #include <QtGui/QApplication>
+#include <QTimer> // for sleep test
+
 #include <iostream>
 #include <limits.h>
 #include <math.h>
 #include <vector>
+#include <stdio.h>
+//#include <QLabel>
 
 #include "myexception.h"
 #include "file.h"
@@ -14,12 +18,12 @@
 #include "GUI/map.h"
 #include "MainWindow.h"
 #include "journalprocess.h"
-#include "qdebugstream.h"
 #include "solver.h"
+#include "GUI/controller.h"
+
 #include <QTextEdit>
 
 using namespace std;
-
 /*! \mainpage My Personal Index Page
  *
  * \section intro_sec Introduction
@@ -32,6 +36,45 @@ using namespace std;
  *
  * etc...
  */
+void dev_thread() {
+    QThread* thread= new QThread();
+    Solver *solver= new Solver();
+    solver->m_gridFilename= "../Data/Seattle/useful_all_network.csv";
+    solver->m_trackFilename= "../Data/Seattle/useful_all_track.csv";
+    solver->moveToThread(thread);
+    thread->start();
+    Controller *controller= new Controller();
+    //QMetaObject::invokeMethod(solver, "onSignalStart");
+    controller->addSolver(solver);
+    controller->connectSignals();
+    controller->m_qMapViewer->resize(500,500);
+    controller->m_qMapViewer->show();
+}
+
+void dev_signals() { // to remove
+    Controller *controller= new Controller();
+    controller->m_qMapViewer->show();
+
+    QString trackFile = "../Data/Seattle/useful_all_track.csv";
+    QString gridFile = "../Data/Seattle/useful_all_network.csv";
+
+    Track track;
+    Grid grid;
+    track.readFromCSV(trackFile);
+    /*
+    controller->graphicEmitter->testMessagePoint(QString("track.outputInfos()"));
+    grid.setBoundingBox(track.m_xMin, track.m_xMax, track.m_yMin, track.m_yMax);
+    //grid.readFromCSVSeattle(gridFile);
+    grid.readFromCSV(gridFile);
+    controller->graphicEmitter->testMessagePoint(QString("grid.outputInfos()"));
+    grid.buildMarkovMatrix();
+    Solver solver(grid.getRoads(), grid.getPoints(), track.getPointsAsPointer());
+    //solver.initialize();
+    //QTimer::singleShot(2000, this, )
+    controller->graphicEmitter->testMessagePoint(QString("solver.outputInfos()"));*/
+    std::cout << "The end." << std::endl;
+}
+
 
 void dev_grid()
 {
@@ -42,12 +85,12 @@ void dev_grid()
     grid.outputInfos();
 }
 
-void dev_all()
+void dev_gridAndTrack()
 {
     // grid.readFromCSV("../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv");
     QString trackFile = "../Data/Seattle/mini_start_track.csv";
     QString gridFile = "../Data/Seattle/mini_start_network.csv";
-    int test = 0;
+    int test = 1;
     switch (test) {
     case 1:
         trackFile = "../Data/Seattle/useful_all_track.csv";
@@ -64,8 +107,9 @@ void dev_all()
     grid.readFromCSV(gridFile);
     grid.outputInfos();
     grid.buildMarkovMatrix();
-    Solver solver(grid.getRoads(), grid.getPoints(), track.getPointsAsPointer());
-    solver.initialize();
+    //Solver solver();
+    //grid.getRoads(), grid.getPoints(), track.getPointsAsPointer());
+    //solver.initialize();
 
     std::cout << "The end." << std::endl;
 }
@@ -82,6 +126,25 @@ void dev_network()
     }*/
 }
 
+void dev_openFile()
+{
+    /*
+    //File Test;
+    //QString ext = "shp";
+
+    //Test.selectFilesToOpen(argc, argv, ext);
+    //Test.shp2csv();
+    Test.whereSave();
+    for (int i = 0; i < Test.filePath.size(); ++i){
+        QString tempFilePath = Test.filePath.at(i);
+        QString tempFileName = Test.fileName.at(i);
+        QString tempFileExtension = Test.fileExtension.at(i);
+        cout << tempFilePath.toStdString() << " - "
+             << tempFileName.toStdString() << " - "
+             << tempFileExtension.toStdString() << endl;
+    }
+    //return app.exec();*/
+}
 void ui(){
     Loading fenetre;
     // Affichage de la fenêtre
@@ -144,24 +207,16 @@ void dev_img(){
 
     m.landmarkMaker(200);
 
+    QLabel *myLabel = new QLabel();
+    myLabel->setPixmap(QPixmap::fromImage(m.img));
+
+    myLabel->show();
+
     m.save("/tmp/test.png");
 
     cout << "width : " << m.width << endl;
     cout << "height : " << m.height << endl;
     cout << "Facteur d'échelle : " << m.scale << endl;
-}
-
-void dev_ui(){
-    JournalProcess* process = new JournalProcess();
-
-    QTextEdit* logProcess = new QTextEdit(process);
-    process->setWidgetResizable(true);
-    logProcess->resize(process->size().width(),
-        process->size().height());
-    logProcess->setReadOnly(true);
-    QDebugStream log(std::cout, logProcess);
-    process->show();
-    std::cout << "Tous les cout sont rediriges ici" << endl;
 }
 
 void dev_ui2(){
@@ -176,8 +231,6 @@ void dev_ui2(){
     w.show();
 #endif
 }
-
-
 
 /****************************************************************************/
 /*** Pas de code dans le main, seulement l'appel d'une fonction ci-dessus ***/
@@ -194,13 +247,11 @@ int main(int argc, char* argv[])
 /********************************************************************************/
     MainWindow w;
     w.setWindowTitle("Map Matching");
-
-#ifdef Q_OS_SYMBIAN
-    w.showMaximized();
-#else
     w.resize(360, 504);
     w.show();
-#endif
+
+    std::cout << "Tous les cout sont rediriges ici" << endl;
+
     cout << "Fonction terminée !" << endl;
 
     return app.exec();

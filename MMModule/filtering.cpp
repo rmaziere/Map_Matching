@@ -5,7 +5,6 @@ Filtering::Filtering()
     nbPtTrack();
     temporal();
     spatial();
-    boutonXY();
 
     // Création d'un widget qui servira de fenêtre
     setFixedSize(500, 400);
@@ -14,29 +13,11 @@ Filtering::Filtering()
     mainLayout->addWidget(m_nbPtTrack);
     mainLayout->addWidget(m_temp);
     mainLayout->addWidget(m_spat);
-    mainLayout->addWidget(m_boutonXY);
     setLayout(mainLayout);
-    setWindowTitle("Filtrage");
 }
 
 Filtering::~Filtering()
 {
-}
-
-void Filtering::boutonXY()
-{
-    m_boutonXY = new QGroupBox("");
-
-    m_cancel = new QPushButton("Cancel");
-    m_launch = new QPushButton("Launch");
-    QObject::connect(m_cancel, SIGNAL(clicked()), qApp, SLOT(quit()));
-    //connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
-
-    QHBoxLayout* vbox = new QHBoxLayout;
-    vbox->addWidget(m_cancel);
-    vbox->addWidget(m_launch);
-    vbox->addStretch(1);
-    m_boutonXY->setLayout(vbox);
 }
 
 void Filtering::temporal()
@@ -54,13 +35,12 @@ void Filtering::temporal()
     QHBoxLayout* vbox = new QHBoxLayout;
     vbox->addWidget(m_valueTemp);
     vbox->addWidget(m_slidTemp);
-
     m_temp->setLayout(vbox);
 }
 
 void Filtering::spatial()
 {
-    m_spat = new QGroupBox("Filtrage spatial (en mètre)");
+    m_spat = new QGroupBox("Filtrage spatial (en metre)");
 
     m_valueSpat = new QLCDNumber();
     m_valueSpat->setSegmentStyle(QLCDNumber::Flat);
@@ -69,11 +49,11 @@ void Filtering::spatial()
     m_slidSpat->setRange(0, 10);
 
     QObject::connect(m_slidSpat, SIGNAL(valueChanged(int)), m_valueSpat, SLOT(display(int)));
+    //QObject::connect(m_valueSpat, SIGNAL(valueChanged(int)), this, SLOT(launchFiltre(int)));
 
     QHBoxLayout* vbox = new QHBoxLayout;
     vbox->addWidget(m_valueSpat);
     vbox->addWidget(m_slidSpat);
-
     m_spat->setLayout(vbox);
 }
 
@@ -81,4 +61,14 @@ void Filtering::nbPtTrack()
 {
     m_nbPtTrack = new QLabel();
     m_nbPtTrack->setText("Your track had 0 GPS points.");
+}
+
+void Filtering::launchFiltre(int i)
+{
+    std::cout << i;
+    /*if (true)
+        if (true)
+            emit ready();
+        else
+            emit ready();*/
 }

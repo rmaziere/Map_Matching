@@ -102,6 +102,7 @@ public:
 
     // test functions
     void outputInfos();
+    std::string infos();
     AllRoadMap::iterator getRoadEntry(long id); // used to update neighbors (for markovmatrix)
     AllRoadMap* getRoads() { return &m_mapOfAllRoads; } // TODO const ?
     std::vector<PointRoad>* getPoints() { return &m_vectorOfPoints; }
