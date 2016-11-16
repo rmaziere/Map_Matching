@@ -2,7 +2,6 @@ var class_loading =
 [
     [ "Loading", "class_loading.html#a7634c001ec052e10c402e49f5be030db", null ],
     [ "~Loading", "class_loading.html#a20079ea595d12566365a80d2480f7e09", null ],
-    [ "boutonXY", "class_loading.html#aee0838d3f0d0160999eba6fd6b18dd1c", null ],
     [ "country", "class_loading.html#a8393eca502e0e8946e9e9b8ca57a565d", null ],
     [ "getCountry", "class_loading.html#a1925efcb9ccc2a01359b40a59cb542d9", null ],
     [ "grid", "class_loading.html#afb0b2fe451bdc3f6f2cc186903df96b4", null ],
@@ -10,9 +9,9 @@ var class_loading =
     [ "loadFileCSVTrack", "class_loading.html#ae0c96193667418083fc4a8c6cc19d9db", null ],
     [ "loadFileGrid", "class_loading.html#a84d718939a74cf1680ea3e2409324194", null ],
     [ "loadFileSHPTrack", "class_loading.html#a9a01f3e328100b681f3f08192fc9b208", null ],
+    [ "ready", "class_loading.html#a33ea30cec981d89425abf9a74f659db2", null ],
     [ "track", "class_loading.html#ab603e821bd6b047fb04285e926974ff6", null ],
     [ "m_boutonXY", "class_loading.html#a31ce65f5e96b6c8135860735090542c0", null ],
-    [ "m_cancel", "class_loading.html#ac603fd7b790a5145ad61da317c994143", null ],
     [ "m_country", "class_loading.html#a3b636e2bdbb2b6b5be905fb7051af701", null ],
     [ "m_csvGrid", "class_loading.html#ae30c806c62566dccb0cd490cf7ccdb10", null ],
     [ "m_csvTrack", "class_loading.html#ada43c088e665d1661fc71f73bdda5212", null ],
@@ -20,8 +19,8 @@ var class_loading =
     [ "m_fileGrid", "class_loading.html#abdaaa944868d8c06dc74d04fea96be98", null ],
     [ "m_fr", "class_loading.html#a8cf66551caa45f573a2b1fe76b597cbc", null ],
     [ "m_grid", "class_loading.html#a3877c4e6b3fa299cf06998b940c72437", null ],
-    [ "m_launch", "class_loading.html#a150b38f4f9e69b1272a5832b165bbdf4", null ],
     [ "m_shpTrack", "class_loading.html#a1c1023216111baad372e40eb1e01bcdc", null ],
     [ "m_track", "class_loading.html#ad4a61661d34e5b13e86535e3c6c3df71", null ],
-    [ "m_usa", "class_loading.html#a73d117eb8d76759552ea8959a397f324", null ]
+    [ "m_usa", "class_loading.html#a73d117eb8d76759552ea8959a397f324", null ],
+    [ "nextOk", "class_loading.html#ae4a46be3510080f094a59b08c22e082e", null ]
 ];

@@ -28,6 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Map Matching
    </div>
@@ -110,26 +111,25 @@ $(document).ready(function(){initNavTree('pointroad_8cpp_source.html','');});
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keywordtype">long</span> <a class="code" href="class_point_road.html#a0d9c04079f1316c84dfc7488aa5a1325">PointRoad::counter</a> = 0;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_point_road.html#ab53ccb3c883bdfd27c707901c5c658c8">    8</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_point_road.html#ab53ccb3c883bdfd27c707901c5c658c8">PointRoad::updateBelongToRoad</a>(<span class="keywordtype">long</span> roadId)</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_point_road.html#a1105365ecbef2833b6bd57fdb533230b">m_vectorOfRoadId</a>.push_back(roadId);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_point_road.html#aa1b90c3fdf8ae7a1fcd8ce6182d13287">   13</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_point_road.html#aa1b90c3fdf8ae7a1fcd8ce6182d13287">PointRoad::outputInfos</a>()</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    std::cout &lt;&lt; std::setprecision(10);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    std::cout &lt;&lt; (<a class="code" href="class_point_road.html#a42b37a46513e69008540f3a9031fab5d">m_isNode</a>?<span class="stringliteral">&quot;EXT&quot;</span>:<span class="stringliteral">&quot;   &quot;</span>) &lt;&lt; <span class="stringliteral">&quot; (&quot;</span> &lt;&lt; <a class="code" href="class_point.html#a75a0d32cac6568a153e387789c020d37">m_x</a> &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; <a class="code" href="class_point.html#a923b7de1d53753e6b3e927a30dd44286">m_y</a> &lt;&lt; <span class="stringliteral">&quot;) [&quot;</span> &lt;&lt; <a class="code" href="class_point_road.html#a1d861355e6662e6935d866c3112781bc">m_id</a>  &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;belong to &quot;</span> &lt;&lt; <a class="code" href="class_point_road.html#a1105365ecbef2833b6bd57fdb533230b">m_vectorOfRoadId</a>.size() &lt;&lt; <span class="stringliteral">&quot; roads\n\t&quot;</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> r: <a class="code" href="class_point_road.html#a1105365ecbef2833b6bd57fdb533230b">m_vectorOfRoadId</a>)</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      std::cout &lt;&lt; r &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    std::cout &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_point_road.html#ab53ccb3c883bdfd27c707901c5c658c8">    7</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_point_road.html#ab53ccb3c883bdfd27c707901c5c658c8">PointRoad::updateBelongToRoad</a>(<span class="keywordtype">long</span> roadId)</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_point_road.html#a1105365ecbef2833b6bd57fdb533230b">m_vectorOfRoadId</a>.push_back(roadId);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_point_road.html#aa1b90c3fdf8ae7a1fcd8ce6182d13287">   12</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_point_road.html#aa1b90c3fdf8ae7a1fcd8ce6182d13287">PointRoad::outputInfos</a>()</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::cout &lt;&lt; std::setprecision(10);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    std::cout &lt;&lt; (<a class="code" href="class_point_road.html#a42b37a46513e69008540f3a9031fab5d">m_isNode</a> ? <span class="stringliteral">&quot;EXT&quot;</span> : <span class="stringliteral">&quot;   &quot;</span>) &lt;&lt; <span class="stringliteral">&quot; (&quot;</span> &lt;&lt; <a class="code" href="class_point.html#a75a0d32cac6568a153e387789c020d37">m_x</a> &lt;&lt; <span class="stringliteral">&quot;, &quot;</span> &lt;&lt; <a class="code" href="class_point.html#a923b7de1d53753e6b3e927a30dd44286">m_y</a> &lt;&lt; <span class="stringliteral">&quot;) [&quot;</span> &lt;&lt; <a class="code" href="class_point_road.html#a1d861355e6662e6935d866c3112781bc">m_id</a> &lt;&lt; <span class="stringliteral">&quot;]&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    std::cout &lt;&lt; <span class="stringliteral">&quot;belong to &quot;</span> &lt;&lt; <a class="code" href="class_point_road.html#a1105365ecbef2833b6bd57fdb533230b">m_vectorOfRoadId</a>.size() &lt;&lt; <span class="stringliteral">&quot; roads\n\t&quot;</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> r : <a class="code" href="class_point_road.html#a1105365ecbef2833b6bd57fdb533230b">m_vectorOfRoadId</a>)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        std::cout &lt;&lt; r &lt;&lt; <span class="charliteral">&#39; &#39;</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    std::cout &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
 <div class="ttc" id="class_point_road_html_a0d9c04079f1316c84dfc7488aa5a1325"><div class="ttname"><a href="class_point_road.html#a0d9c04079f1316c84dfc7488aa5a1325">PointRoad::counter</a></div><div class="ttdeci">static long counter</div><div class="ttdef"><b>Definition:</b> <a href="pointroad_8h_source.html#l00038">pointroad.h:38</a></div></div>
-<div class="ttc" id="class_point_html_a923b7de1d53753e6b3e927a30dd44286"><div class="ttname"><a href="class_point.html#a923b7de1d53753e6b3e927a30dd44286">Point::m_y</a></div><div class="ttdeci">double m_y</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00088">point.h:88</a></div></div>
-<div class="ttc" id="class_point_road_html_aa1b90c3fdf8ae7a1fcd8ce6182d13287"><div class="ttname"><a href="class_point_road.html#aa1b90c3fdf8ae7a1fcd8ce6182d13287">PointRoad::outputInfos</a></div><div class="ttdeci">void outputInfos()</div><div class="ttdef"><b>Definition:</b> <a href="pointroad_8cpp_source.html#l00013">pointroad.cpp:13</a></div></div>
-<div class="ttc" id="class_point_road_html_ab53ccb3c883bdfd27c707901c5c658c8"><div class="ttname"><a href="class_point_road.html#ab53ccb3c883bdfd27c707901c5c658c8">PointRoad::updateBelongToRoad</a></div><div class="ttdeci">void updateBelongToRoad(long roadId)</div><div class="ttdef"><b>Definition:</b> <a href="pointroad_8cpp_source.html#l00008">pointroad.cpp:8</a></div></div>
-<div class="ttc" id="class_point_html_a75a0d32cac6568a153e387789c020d37"><div class="ttname"><a href="class_point.html#a75a0d32cac6568a153e387789c020d37">Point::m_x</a></div><div class="ttdeci">double m_x</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00087">point.h:87</a></div></div>
+<div class="ttc" id="class_point_html_a923b7de1d53753e6b3e927a30dd44286"><div class="ttname"><a href="class_point.html#a923b7de1d53753e6b3e927a30dd44286">Point::m_y</a></div><div class="ttdeci">double m_y</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00087">point.h:87</a></div></div>
+<div class="ttc" id="class_point_road_html_aa1b90c3fdf8ae7a1fcd8ce6182d13287"><div class="ttname"><a href="class_point_road.html#aa1b90c3fdf8ae7a1fcd8ce6182d13287">PointRoad::outputInfos</a></div><div class="ttdeci">void outputInfos()</div><div class="ttdef"><b>Definition:</b> <a href="pointroad_8cpp_source.html#l00012">pointroad.cpp:12</a></div></div>
+<div class="ttc" id="class_point_road_html_ab53ccb3c883bdfd27c707901c5c658c8"><div class="ttname"><a href="class_point_road.html#ab53ccb3c883bdfd27c707901c5c658c8">PointRoad::updateBelongToRoad</a></div><div class="ttdeci">void updateBelongToRoad(long roadId)</div><div class="ttdef"><b>Definition:</b> <a href="pointroad_8cpp_source.html#l00007">pointroad.cpp:7</a></div></div>
+<div class="ttc" id="class_point_html_a75a0d32cac6568a153e387789c020d37"><div class="ttname"><a href="class_point.html#a75a0d32cac6568a153e387789c020d37">Point::m_x</a></div><div class="ttdeci">double m_x</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00086">point.h:86</a></div></div>
 <div class="ttc" id="class_point_road_html_a1105365ecbef2833b6bd57fdb533230b"><div class="ttname"><a href="class_point_road.html#a1105365ecbef2833b6bd57fdb533230b">PointRoad::m_vectorOfRoadId</a></div><div class="ttdeci">std::vector&lt; long &gt; m_vectorOfRoadId</div><div class="ttdef"><b>Definition:</b> <a href="pointroad_8h_source.html#l00041">pointroad.h:41</a></div></div>
 <div class="ttc" id="pointroad_8h_html"><div class="ttname"><a href="pointroad_8h.html">pointroad.h</a></div></div>
 <div class="ttc" id="class_point_road_html_a42b37a46513e69008540f3a9031fab5d"><div class="ttname"><a href="class_point_road.html#a42b37a46513e69008540f3a9031fab5d">PointRoad::m_isNode</a></div><div class="ttdeci">bool m_isNode</div><div class="ttdef"><b>Definition:</b> <a href="pointroad_8h_source.html#l00039">pointroad.h:39</a></div></div>
@@ -140,7 +140,7 @@ $(document).ready(function(){initNavTree('pointroad_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="pointroad_8cpp.html">pointroad.cpp</a></li>
-    <li class="footer">Generated on Tue Nov 15 2016 18:28:12 for Map Matching by
+    <li class="footer">Generated on Wed Nov 16 2016 11:01:31 for Map Matching by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

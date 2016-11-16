@@ -1,6 +1,5 @@
 <map id="Grid::xMax" name="Grid::xMax">
 <area shape="rect" id="node2" href="$class_grid.html#a19318437702e712955d0c4631c94cb04" title="setZone Save data about our area of roads " alt="" coords="140,5,289,32"/>
-<area shape="rect" id="node5" href="$class_grid.html#a8d8b7fa0ee20d81f130a46d80fc2a018" title="trackInGrid " alt="" coords="155,56,274,83"/>
+<area shape="rect" id="node4" href="$class_grid.html#a8d8b7fa0ee20d81f130a46d80fc2a018" title="trackInGrid " alt="" coords="155,56,274,83"/>
 <area shape="rect" id="node3" href="$main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="337,5,400,32"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="448,5,499,32"/>
 </map>

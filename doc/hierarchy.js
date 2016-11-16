@@ -16,6 +16,7 @@ var hierarchy =
     [ "hashFunc", "structhash_func.html", null ],
     [ "KDTree", "class_k_d_tree.html", null ],
     [ "KDTreeViewer", "class_k_d_tree_viewer.html", null ],
+    [ "Map", "class_map.html", null ],
     [ "Point", "class_point.html", [
       [ "PointGPS", "class_point_g_p_s.html", null ],
       [ "PointRoad", "class_point_road.html", null ]

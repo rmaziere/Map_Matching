@@ -5,6 +5,7 @@ var searchData=
   ['controller_2ecpp',['controller.cpp',['../controller_8cpp.html',1,'']]],
   ['controller_2eh',['controller.h',['../controller_8h.html',1,'']]],
   ['controlpanelayout',['controlPaneLayout',['../class_main_window.html#a5393cd08b95bbca76fe578f8ce152692',1,'MainWindow']]],
+  ['coordinatetranslator',['coordinateTranslator',['../class_map.html#afcf922c62157c1c6a39cc76daa07c51f',1,'Map']]],
   ['counter',['counter',['../class_point_road.html#a0d9c04079f1316c84dfc7488aa5a1325',1,'PointRoad']]],
   ['country',['country',['../class_loading.html#a8393eca502e0e8946e9e9b8ca57a565d',1,'Loading']]],
   ['createconnections',['createConnections',['../class_main_window.html#af773488e0b16efe6c0fc67ad348b86b2',1,'MainWindow']]],

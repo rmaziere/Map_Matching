@@ -28,6 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Map Matching
    </div>
@@ -106,11 +107,11 @@ $(document).ready(function(){initNavTree('point_8cpp_source.html','');});
 <div class="contents">
 <a href="point_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="point_8h.html">point.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_point.html#a9d93fb520b4a3e170aab25ea738b105c">    7</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_point.html#a9d93fb520b4a3e170aab25ea738b105c">Point::samePointAs</a>(<span class="keyword">const</span> <a class="code" href="class_point.html">Point</a> &amp;p)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_point.html#a9d93fb520b4a3e170aab25ea738b105c">    7</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="class_point.html#a9d93fb520b4a3e170aab25ea738b105c">Point::samePointAs</a>(<span class="keyword">const</span> <a class="code" href="class_point.html">Point</a>&amp; p)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword"></span>{</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">return</span> (fabs(<a class="code" href="class_point.html#a75a0d32cac6568a153e387789c020d37">m_x</a> - p.<a class="code" href="class_point.html#a75a0d32cac6568a153e387789c020d37">m_x</a>) &lt; <a class="code" href="point_8h.html#a6ebf6899d6c1c8b7b9d09be872c05aae">EPS</a>) &amp;&amp; (fabs(<a class="code" href="class_point.html#a923b7de1d53753e6b3e927a30dd44286">m_y</a> - p.<a class="code" href="class_point.html#a923b7de1d53753e6b3e927a30dd44286">m_y</a>) &lt; <a class="code" href="point_8h.html#a6ebf6899d6c1c8b7b9d09be872c05aae">EPS</a>);</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
@@ -152,34 +153,37 @@ $(document).ready(function(){initNavTree('point_8cpp_source.html','');});
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
 <div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="class_point.html#ac967b65705dd88e31ac706500de9e2d0">   47</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="class_point.html#a3eef47b1c4849b3395a8f9c658ca7c4a">Point::x</a>(<span class="keywordtype">int</span> dim)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> (dim==0)?<a class="code" href="class_point.html#a75a0d32cac6568a153e387789c020d37">m_x</a>:<a class="code" href="class_point.html#a923b7de1d53753e6b3e927a30dd44286">m_y</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> (dim == 0) ? <a class="code" href="class_point.html#a75a0d32cac6568a153e387789c020d37">m_x</a> : <a class="code" href="class_point.html#a923b7de1d53753e6b3e927a30dd44286">m_y</a>;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_point.html#a643bc096cfd5930a93898d1ba1a4de96">   52</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_point.html#a6f6a42c3b4bfe6e7e5ccb502788227d6">Point::setx</a>(<span class="keywordtype">int</span> dim, <span class="keywordtype">double</span> value)</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (dim==0) <a class="code" href="class_point.html#a75a0d32cac6568a153e387789c020d37">m_x</a>= value; <span class="keywordflow">else</span> <a class="code" href="class_point.html#a923b7de1d53753e6b3e927a30dd44286">m_y</a>= value;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_point.html#a3eef47b1c4849b3395a8f9c658ca7c4a">   57</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="class_point.html#a3eef47b1c4849b3395a8f9c658ca7c4a">Point::x</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_point.html#a75a0d32cac6568a153e387789c020d37">m_x</a>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_point.html#a6f6a42c3b4bfe6e7e5ccb502788227d6">   62</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_point.html#a6f6a42c3b4bfe6e7e5ccb502788227d6">Point::setx</a>(<span class="keywordtype">double</span> x)</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="class_point.html#a75a0d32cac6568a153e387789c020d37">m_x</a> = <a class="code" href="class_point.html#a3eef47b1c4849b3395a8f9c658ca7c4a">x</a>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span> (dim == 0)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="class_point.html#a75a0d32cac6568a153e387789c020d37">m_x</a> = value;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="class_point.html#a923b7de1d53753e6b3e927a30dd44286">m_y</a> = value;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_point.html#a3eef47b1c4849b3395a8f9c658ca7c4a">   60</a></span>&#160;<span class="keywordtype">double</span> <a class="code" href="class_point.html#a3eef47b1c4849b3395a8f9c658ca7c4a">Point::x</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_point.html#a75a0d32cac6568a153e387789c020d37">m_x</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_point.html#a6f6a42c3b4bfe6e7e5ccb502788227d6">   65</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_point.html#a6f6a42c3b4bfe6e7e5ccb502788227d6">Point::setx</a>(<span class="keywordtype">double</span> x)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="class_point.html#a75a0d32cac6568a153e387789c020d37">m_x</a> = <a class="code" href="class_point.html#a3eef47b1c4849b3395a8f9c658ca7c4a">x</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
 <div class="ttc" id="class_point_html_a39daa6ebd31cdc2d7151db77bfdf2166"><div class="ttname"><a href="class_point.html#a39daa6ebd31cdc2d7151db77bfdf2166">Point::distanceToSegment</a></div><div class="ttdeci">double distanceToSegment(const Point &amp;p1, const Point &amp;p2) const </div><div class="ttdoc">Compute the distance between a point and a segment. </div><div class="ttdef"><b>Definition:</b> <a href="point_8cpp_source.html#l00017">point.cpp:17</a></div></div>
-<div class="ttc" id="class_point_html_a923b7de1d53753e6b3e927a30dd44286"><div class="ttname"><a href="class_point.html#a923b7de1d53753e6b3e927a30dd44286">Point::m_y</a></div><div class="ttdeci">double m_y</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00088">point.h:88</a></div></div>
-<div class="ttc" id="class_point_html_a6f6a42c3b4bfe6e7e5ccb502788227d6"><div class="ttname"><a href="class_point.html#a6f6a42c3b4bfe6e7e5ccb502788227d6">Point::setx</a></div><div class="ttdeci">void setx(double x)</div><div class="ttdef"><b>Definition:</b> <a href="point_8cpp_source.html#l00062">point.cpp:62</a></div></div>
+<div class="ttc" id="class_point_html_a923b7de1d53753e6b3e927a30dd44286"><div class="ttname"><a href="class_point.html#a923b7de1d53753e6b3e927a30dd44286">Point::m_y</a></div><div class="ttdeci">double m_y</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00087">point.h:87</a></div></div>
+<div class="ttc" id="class_point_html_a6f6a42c3b4bfe6e7e5ccb502788227d6"><div class="ttname"><a href="class_point.html#a6f6a42c3b4bfe6e7e5ccb502788227d6">Point::setx</a></div><div class="ttdeci">void setx(double x)</div><div class="ttdef"><b>Definition:</b> <a href="point_8cpp_source.html#l00065">point.cpp:65</a></div></div>
 <div class="ttc" id="point_8h_html"><div class="ttname"><a href="point_8h.html">point.h</a></div><div class="ttdoc">Class Point. </div></div>
 <div class="ttc" id="class_point_html_a9d93fb520b4a3e170aab25ea738b105c"><div class="ttname"><a href="class_point.html#a9d93fb520b4a3e170aab25ea738b105c">Point::samePointAs</a></div><div class="ttdeci">bool samePointAs(const Point &amp;p) const </div><div class="ttdoc">Check if two points share the same coordinates. </div><div class="ttdef"><b>Definition:</b> <a href="point_8cpp_source.html#l00007">point.cpp:7</a></div></div>
 <div class="ttc" id="class_point_html_a16550863eab3e713371cdf8d5fa26926"><div class="ttname"><a href="class_point.html#a16550863eab3e713371cdf8d5fa26926">Point::sety</a></div><div class="ttdeci">void sety(double y)</div><div class="ttdef"><b>Definition:</b> <a href="point_8cpp_source.html#l00042">point.cpp:42</a></div></div>
 <div class="ttc" id="class_point_html_a96e90df6b3c18e64c31abdf196e49ae9"><div class="ttname"><a href="class_point.html#a96e90df6b3c18e64c31abdf196e49ae9">Point::y</a></div><div class="ttdeci">double y() const </div><div class="ttdef"><b>Definition:</b> <a href="point_8cpp_source.html#l00037">point.cpp:37</a></div></div>
-<div class="ttc" id="class_point_html_a3eef47b1c4849b3395a8f9c658ca7c4a"><div class="ttname"><a href="class_point.html#a3eef47b1c4849b3395a8f9c658ca7c4a">Point::x</a></div><div class="ttdeci">double x() const </div><div class="ttdef"><b>Definition:</b> <a href="point_8cpp_source.html#l00057">point.cpp:57</a></div></div>
+<div class="ttc" id="class_point_html_a3eef47b1c4849b3395a8f9c658ca7c4a"><div class="ttname"><a href="class_point.html#a3eef47b1c4849b3395a8f9c658ca7c4a">Point::x</a></div><div class="ttdeci">double x() const </div><div class="ttdef"><b>Definition:</b> <a href="point_8cpp_source.html#l00060">point.cpp:60</a></div></div>
 <div class="ttc" id="class_point_html_a1c2033a89f5dc6faa9e50f06c2111e88"><div class="ttname"><a href="class_point.html#a1c2033a89f5dc6faa9e50f06c2111e88">Point::infos</a></div><div class="ttdeci">virtual std::string infos() const </div><div class="ttdef"><b>Definition:</b> <a href="point_8cpp_source.html#l00030">point.cpp:30</a></div></div>
 <div class="ttc" id="class_point_html_a7cd7f7e2c0f1a11b66eac8b6f360bfd9"><div class="ttname"><a href="class_point.html#a7cd7f7e2c0f1a11b66eac8b6f360bfd9">Point::distanceToPoint</a></div><div class="ttdeci">double distanceToPoint(const Point &amp;p) const </div><div class="ttdoc">Calculate distance between two points. </div><div class="ttdef"><b>Definition:</b> <a href="point_8cpp_source.html#l00012">point.cpp:12</a></div></div>
-<div class="ttc" id="class_point_html_a75a0d32cac6568a153e387789c020d37"><div class="ttname"><a href="class_point.html#a75a0d32cac6568a153e387789c020d37">Point::m_x</a></div><div class="ttdeci">double m_x</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00087">point.h:87</a></div></div>
+<div class="ttc" id="class_point_html_a75a0d32cac6568a153e387789c020d37"><div class="ttname"><a href="class_point.html#a75a0d32cac6568a153e387789c020d37">Point::m_x</a></div><div class="ttdeci">double m_x</div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00086">point.h:86</a></div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdoc">The Point class. </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00020">point.h:20</a></div></div>
 <div class="ttc" id="point_8h_html_a6ebf6899d6c1c8b7b9d09be872c05aae"><div class="ttname"><a href="point_8h.html#a6ebf6899d6c1c8b7b9d09be872c05aae">EPS</a></div><div class="ttdeci">#define EPS</div><div class="ttdoc">Used to compare doubles. </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00014">point.h:14</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -188,7 +192,7 @@ $(document).ready(function(){initNavTree('point_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="point_8cpp.html">point.cpp</a></li>
-    <li class="footer">Generated on Tue Nov 15 2016 18:28:12 for Map Matching by
+    <li class="footer">Generated on Wed Nov 16 2016 11:01:31 for Map Matching by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

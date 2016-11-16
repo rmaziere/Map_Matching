@@ -1,8 +1,7 @@
 <map id="Point::infos" name="Point::infos">
 <area shape="rect" id="node2" href="$class_point_g_p_s.html#a9a622f6883b721ee5f04f092a76ece64" title="PointGPS::infos" alt="" coords="143,5,259,32"/>
-<area shape="rect" id="node7" href="$class_point_road.html#a10e2495cf2c6b435e23e8da80e7276e6" title="PointRoad::infos" alt="" coords="141,56,260,83"/>
+<area shape="rect" id="node6" href="$class_point_road.html#a10e2495cf2c6b435e23e8da80e7276e6" title="PointRoad::infos" alt="" coords="141,56,260,83"/>
 <area shape="rect" id="node3" href="$class_solver.html#a11051ddab551fdcee7dc71dcad1d0fd7" title="Solver::setDistance" alt="" coords="308,5,445,32"/>
 <area shape="rect" id="node4" href="$class_solver.html#a0c67ab4d4fd9c36cfcbfdc13021b419f" title="Solver::initialize" alt="" coords="493,5,608,32"/>
 <area shape="rect" id="node5" href="$main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="656,5,719,32"/>
-<area shape="rect" id="node6" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="767,5,817,32"/>
 </map>

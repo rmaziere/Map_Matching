@@ -14,6 +14,7 @@ var annotated =
     [ "KDTreeViewer", "class_k_d_tree_viewer.html", "class_k_d_tree_viewer" ],
     [ "Loading", "class_loading.html", "class_loading" ],
     [ "MainWindow", "class_main_window.html", "class_main_window" ],
+    [ "Map", "class_map.html", "class_map" ],
     [ "MyException", "class_my_exception.html", "class_my_exception" ],
     [ "Point", "class_point.html", "class_point" ],
     [ "PointGPS", "class_point_g_p_s.html", "class_point_g_p_s" ],

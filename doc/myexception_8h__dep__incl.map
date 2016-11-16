@@ -1,9 +1,11 @@
 <map id="myexception.h" name="myexception.h">
-<area shape="rect" id="node2" href="$file_8h.html" title="file.h" alt="" coords="137,80,188,107"/>
-<area shape="rect" id="node6" href="$main_8cpp.html" title="main.cpp" alt="" coords="184,229,259,256"/>
-<area shape="rect" id="node7" href="$sauvegarde_8h.html" title="sauvegarde.h" alt="" coords="297,80,397,107"/>
-<area shape="rect" id="node3" href="$file_8cpp.html" title="file.cpp" alt="" coords="5,155,69,181"/>
-<area shape="rect" id="node4" href="$loading_8h.html" title="loading.h" alt="" coords="93,155,168,181"/>
-<area shape="rect" id="node5" href="$loading_8cpp.html" title="loading.cpp" alt="" coords="72,229,160,256"/>
-<area shape="rect" id="node8" href="$sauvegarde_8cpp.html" title="sauvegarde.cpp" alt="" coords="293,155,408,181"/>
+<area shape="rect" id="node2" href="$file_8h.html" title="file.h" alt="" coords="196,80,247,107"/>
+<area shape="rect" id="node7" href="$main_8cpp.html" title="main.cpp" alt="" coords="241,304,316,331"/>
+<area shape="rect" id="node9" href="$sauvegarde_8h.html" title="sauvegarde.h" alt="" coords="355,80,455,107"/>
+<area shape="rect" id="node3" href="$file_8cpp.html" title="file.cpp" alt="" coords="56,155,120,181"/>
+<area shape="rect" id="node4" href="$loading_8h.html" title="loading.h" alt="" coords="144,155,219,181"/>
+<area shape="rect" id="node5" href="$loading_8cpp.html" title="loading.cpp" alt="" coords="5,229,93,256"/>
+<area shape="rect" id="node6" href="$_main_window_8h.html" title="MainWindow.h" alt="" coords="118,229,226,256"/>
+<area shape="rect" id="node8" href="$_main_window_8cpp.html" title="MainWindow.cpp" alt="" coords="95,304,217,331"/>
+<area shape="rect" id="node10" href="$sauvegarde_8cpp.html" title="sauvegarde.cpp" alt="" coords="352,155,467,181"/>
 </map>

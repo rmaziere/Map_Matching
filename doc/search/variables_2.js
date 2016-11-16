@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['fileextension',['fileExtension',['../class_file.html#af7ab7f0dc150d2d69254f58a186c0a4c',1,'File']]],
-  ['filename',['fileName',['../class_file.html#a67635de5c9c2b19eaaaf67095c015079',1,'File']]],
-  ['filepath',['filePath',['../class_file.html#afb96a35e9f2e984faeba9163d321e2d8',1,'File']]]
+  ['deltax',['deltaX',['../class_map.html#a0d922770d19a95db062b5561e69495a4',1,'Map']]],
+  ['deltay',['deltaY',['../class_map.html#ae200a6863f84140c6c2a569e0cbcea3c',1,'Map']]]
 ];

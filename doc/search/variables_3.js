@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['log_5fwindow',['log_window',['../class_q_debug_stream.html#aaf3b796d7fc80cf96d19946e5f8c2211',1,'QDebugStream']]]
+  ['fileextension',['fileExtension',['../class_file.html#af7ab7f0dc150d2d69254f58a186c0a4c',1,'File']]],
+  ['filename',['fileName',['../class_file.html#a67635de5c9c2b19eaaaf67095c015079',1,'File']]],
+  ['filepath',['filePath',['../class_file.html#afb96a35e9f2e984faeba9163d321e2d8',1,'File']]]
 ];

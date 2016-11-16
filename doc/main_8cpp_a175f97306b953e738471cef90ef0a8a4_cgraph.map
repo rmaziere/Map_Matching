@@ -21,13 +21,13 @@
 <area shape="rect" id="node15" href="$class_point_road.html#a998665db2d7e4fc4935ef95df092ff2b" title="PointRoad::setid" alt="" coords="577,252,695,279"/>
 <area shape="rect" id="node16" href="$class_point_road.html#a81372f2c2c0fe1084fa2397289518124" title="PointRoad::id" alt="" coords="823,277,924,304"/>
 <area shape="rect" id="node17" href="$class_point_road.html#ae83941b37b026758fdd7974b4b186fbc" title="PointRoad::isNode" alt="" coords="570,353,702,380"/>
-<area shape="rect" id="node18" href="$class_road.html#a7f97b4f20c598103baad510b19a0c0b5" title="Road::addPoint" alt="" coords="580,404,692,431"/>
-<area shape="rect" id="node19" href="$class_road.html#ad6715392969e36eb10efac542519755c" title="Road::edgeId" alt="" coords="586,455,686,481"/>
+<area shape="rect" id="node18" href="$class_road.html#a7f97b4f20c598103baad510b19a0c0b5" title="addPoint " alt="" coords="580,404,692,431"/>
+<area shape="rect" id="node19" href="$class_road.html#ad6715392969e36eb10efac542519755c" title="edgeId " alt="" coords="586,455,686,481"/>
 <area shape="rect" id="node22" href="$class_grid.html#a54c76e927f8428bca87520d8ca310bec" title="Grid::getRoadEntry" alt="" coords="340,360,475,387"/>
 <area shape="rect" id="node27" href="$class_solver.html#a11051ddab551fdcee7dc71dcad1d0fd7" title="Solver::setDistance" alt="" coords="339,556,476,583"/>
 <area shape="rect" id="node28" href="$class_point_g_p_s.html#a9a622f6883b721ee5f04f092a76ece64" title="PointGPS::infos" alt="" coords="578,505,694,532"/>
-<area shape="rect" id="node30" href="$class_road.html#acb1a56234cdbb34e0cf5c647c7c6406d" title="Road::outputInfos" alt="" coords="573,556,699,583"/>
-<area shape="rect" id="node31" href="$class_road.html#a2877f55c577ddff8c519e7f44c2256d5" title="Road::vectorOfPointsId" alt="" coords="557,607,715,633"/>
+<area shape="rect" id="node30" href="$class_road.html#acb1a56234cdbb34e0cf5c647c7c6406d" title="outputInfos " alt="" coords="573,556,699,583"/>
+<area shape="rect" id="node31" href="$class_road.html#a2877f55c577ddff8c519e7f44c2256d5" title="vectorOfPointsId " alt="" coords="557,607,715,633"/>
 <area shape="rect" id="node32" href="$class_point.html#a39daa6ebd31cdc2d7151db77bfdf2166" title="Compute the distance between a point and a segment. " alt="" coords="548,657,724,684"/>
 <area shape="rect" id="node35" href="$class_point_g_p_s.html#a9c833db3ff338f3cd2ee8480db6c7d56" title="PointGPS::addEmissionProbability" alt="" coords="524,708,748,735"/>
 <area shape="rect" id="node29" href="$class_point.html#a1c2033a89f5dc6faa9e50f06c2111e88" title="Point::infos" alt="" coords="829,505,917,532"/>

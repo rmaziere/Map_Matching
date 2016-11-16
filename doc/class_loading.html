@@ -28,6 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Map Matching
    </div>
@@ -104,6 +105,7 @@ $(document).ready(function(){initNavTree('class_loading.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-slots">Public Slots</a> &#124;
+<a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
@@ -118,15 +120,11 @@ $(document).ready(function(){initNavTree('class_loading.html','');});
 Inheritance diagram for Loading:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_loading__inherit__graph.png" border="0" usemap="#_loading_inherit__map" alt="Inheritance graph"/></div>
-<map name="_loading_inherit__map" id="_loading_inherit__map">
-</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for Loading:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_loading__coll__graph.png" border="0" usemap="#_loading_coll__map" alt="Collaboration graph"/></div>
-<map name="_loading_coll__map" id="_loading_coll__map">
-</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
@@ -139,8 +137,11 @@ Public Slots</h2></td></tr>
 <tr class="separator:a84d718939a74cf1680ea3e2409324194"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1925efcb9ccc2a01359b40a59cb542d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_loading.html#a1925efcb9ccc2a01359b40a59cb542d9">getCountry</a> ()</td></tr>
 <tr class="separator:a1925efcb9ccc2a01359b40a59cb542d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d3058f5f9c701a3bd7300ae985ff83a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_loading.html#a1d3058f5f9c701a3bd7300ae985ff83a">launchFiles</a> ()</td></tr>
-<tr class="separator:a1d3058f5f9c701a3bd7300ae985ff83a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+Signals</h2></td></tr>
+<tr class="memitem:a33ea30cec981d89425abf9a74f659db2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_loading.html#a33ea30cec981d89425abf9a74f659db2">ready</a> ()</td></tr>
+<tr class="separator:a33ea30cec981d89425abf9a74f659db2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -157,8 +158,8 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:ab603e821bd6b047fb04285e926974ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb0b2fe451bdc3f6f2cc186903df96b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_loading.html#afb0b2fe451bdc3f6f2cc186903df96b4">grid</a> ()</td></tr>
 <tr class="separator:afb0b2fe451bdc3f6f2cc186903df96b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee0838d3f0d0160999eba6fd6b18dd1c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_loading.html#aee0838d3f0d0160999eba6fd6b18dd1c">boutonXY</a> ()</td></tr>
-<tr class="separator:aee0838d3f0d0160999eba6fd6b18dd1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d3058f5f9c701a3bd7300ae985ff83a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_loading.html#a1d3058f5f9c701a3bd7300ae985ff83a">launchFiles</a> ()</td></tr>
+<tr class="separator:a1d3058f5f9c701a3bd7300ae985ff83a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -184,10 +185,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ac60839e2986c7b693539b07d102ad543"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdaaa944868d8c06dc74d04fea96be98"><td class="memItemLeft" align="right" valign="top">QLabel *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_loading.html#abdaaa944868d8c06dc74d04fea96be98">m_fileGrid</a></td></tr>
 <tr class="separator:abdaaa944868d8c06dc74d04fea96be98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac603fd7b790a5145ad61da317c994143"><td class="memItemLeft" align="right" valign="top">QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_loading.html#ac603fd7b790a5145ad61da317c994143">m_cancel</a></td></tr>
-<tr class="separator:ac603fd7b790a5145ad61da317c994143"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a150b38f4f9e69b1272a5832b165bbdf4"><td class="memItemLeft" align="right" valign="top">QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_loading.html#a150b38f4f9e69b1272a5832b165bbdf4">m_launch</a></td></tr>
-<tr class="separator:a150b38f4f9e69b1272a5832b165bbdf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4a46be3510080f094a59b08c22e082e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_loading.html#ae4a46be3510080f094a59b08c22e082e">nextOk</a></td></tr>
+<tr class="separator:ae4a46be3510080f094a59b08c22e082e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -213,7 +212,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_loading_a7634c001ec052e10c402e49f5be030db_cgraph.png" border="0" usemap="#class_loading_a7634c001ec052e10c402e49f5be030db_cgraph" alt=""/></div>
 <map name="class_loading_a7634c001ec052e10c402e49f5be030db_cgraph" id="class_loading_a7634c001ec052e10c402e49f5be030db_cgraph">
-<area shape="rect" id="node2" href="class_loading.html#a8393eca502e0e8946e9e9b8ca57a565d" title="Loading::country" alt="" coords="180,31,299,57"/><area shape="rect" id="node4" href="class_loading.html#ab603e821bd6b047fb04285e926974ff6" title="Loading::track" alt="" coords="187,107,291,133"/><area shape="rect" id="node10" href="class_loading.html#afb0b2fe451bdc3f6f2cc186903df96b4" title="Loading::grid" alt="" coords="191,157,287,184"/><area shape="rect" id="node12" href="class_loading.html#aee0838d3f0d0160999eba6fd6b18dd1c" title="Loading::boutonXY" alt="" coords="173,208,305,235"/><area shape="rect" id="node3" href="class_loading.html#a1925efcb9ccc2a01359b40a59cb542d9" title="Loading::getCountry" alt="" coords="375,5,513,32"/><area shape="rect" id="node5" href="class_loading.html#ae0c96193667418083fc4a8c6cc19d9db" title="Loading::loadFileCSVTrack" alt="" coords="353,56,535,83"/><area shape="rect" id="node8" href="class_loading.html#a9a01f3e328100b681f3f08192fc9b208" title="Loading::loadFileSHPTrack" alt="" coords="353,107,535,133"/><area shape="rect" id="node6" href="class_file.html#a7177a8eac75b0fc5425ebd65e16c2d6f" title="The UI to select the file&#39;s path to open. " alt="" coords="583,107,743,133"/><area shape="rect" id="node7" href="class_file.html#ac464caa98a33cfe227111dd7cd5e77e1" title="The split function to split the path file to filePath, fileName, fileExtension attributes. " alt="" coords="791,107,893,133"/><area shape="rect" id="node9" href="class_file.html#a2cd702098066c4abde1c20ee708fa91f" title="The function to convert WGS84 ShapeFile(s) to Lambert 93 CSV(s) " alt="" coords="613,157,713,184"/><area shape="rect" id="node11" href="class_loading.html#a84d718939a74cf1680ea3e2409324194" title="Loading::loadFileGrid" alt="" coords="372,157,516,184"/><area shape="rect" id="node13" href="class_loading.html#a1d3058f5f9c701a3bd7300ae985ff83a" title="Loading::launchFiles" alt="" coords="373,208,515,235"/></map>
+<area shape="rect" id="node2" href="class_loading.html#a8393eca502e0e8946e9e9b8ca57a565d" title="Loading::country" alt="" coords="173,12,292,39"/><area shape="rect" id="node4" href="class_loading.html#ab603e821bd6b047fb04285e926974ff6" title="Loading::track" alt="" coords="181,69,285,96"/><area shape="rect" id="node11" href="class_loading.html#afb0b2fe451bdc3f6f2cc186903df96b4" title="Loading::grid" alt="" coords="185,132,281,159"/><area shape="rect" id="node3" href="class_loading.html#a1925efcb9ccc2a01359b40a59cb542d9" title="Loading::getCountry" alt="" coords="361,5,500,32"/><area shape="rect" id="node5" href="class_loading.html#ae0c96193667418083fc4a8c6cc19d9db" title="Loading::loadFileCSVTrack" alt="" coords="340,56,521,83"/><area shape="rect" id="node9" href="class_loading.html#a9a01f3e328100b681f3f08192fc9b208" title="Loading::loadFileSHPTrack" alt="" coords="340,107,521,133"/><area shape="rect" id="node6" href="class_file.html#a7177a8eac75b0fc5425ebd65e16c2d6f" title="The UI to select the file&#39;s path to open. " alt="" coords="569,107,729,133"/><area shape="rect" id="node8" href="class_loading.html#a1d3058f5f9c701a3bd7300ae985ff83a" title="Loading::launchFiles" alt="" coords="579,56,720,83"/><area shape="rect" id="node7" href="class_file.html#ac464caa98a33cfe227111dd7cd5e77e1" title="The split function to split the path file to filePath, fileName, fileExtension attributes. " alt="" coords="777,107,880,133"/><area shape="rect" id="node10" href="class_file.html#a2cd702098066c4abde1c20ee708fa91f" title="The function to convert WGS84 ShapeFile(s) to Lambert 93 CSV(s) " alt="" coords="599,157,699,184"/><area shape="rect" id="node12" href="class_loading.html#a84d718939a74cf1680ea3e2409324194" title="Loading::loadFileGrid" alt="" coords="359,157,503,184"/></map>
 </div>
 </p>
 
@@ -232,54 +231,11 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="loading_8cpp_source.html#l00022">22</a> of file <a class="el" href="loading_8cpp_source.html">loading.cpp</a>.</p>
+<p>Definition at line <a class="el" href="loading_8cpp_source.html#l00024">24</a> of file <a class="el" href="loading_8cpp_source.html">loading.cpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aee0838d3f0d0160999eba6fd6b18dd1c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Loading::boutonXY </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="loading_8cpp_source.html#l00026">26</a> of file <a class="el" href="loading_8cpp_source.html">loading.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_loading_aee0838d3f0d0160999eba6fd6b18dd1c_cgraph.png" border="0" usemap="#class_loading_aee0838d3f0d0160999eba6fd6b18dd1c_cgraph" alt=""/></div>
-<map name="class_loading_aee0838d3f0d0160999eba6fd6b18dd1c_cgraph" id="class_loading_aee0838d3f0d0160999eba6fd6b18dd1c_cgraph">
-<area shape="rect" id="node2" href="class_loading.html#a1d3058f5f9c701a3bd7300ae985ff83a" title="Loading::launchFiles" alt="" coords="185,5,327,32"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_loading_aee0838d3f0d0160999eba6fd6b18dd1c_icgraph.png" border="0" usemap="#class_loading_aee0838d3f0d0160999eba6fd6b18dd1c_icgraph" alt=""/></div>
-<map name="class_loading_aee0838d3f0d0160999eba6fd6b18dd1c_icgraph" id="class_loading_aee0838d3f0d0160999eba6fd6b18dd1c_icgraph">
-<area shape="rect" id="node2" href="class_loading.html#a7634c001ec052e10c402e49f5be030db" title="Loading::Loading" alt="" coords="185,5,305,32"/></map>
-</div>
-</p>
-
-</div>
-</div>
 <a class="anchor" id="a8393eca502e0e8946e9e9b8ca57a565d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -301,7 +257,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="loading_8cpp_source.html#l00043">43</a> of file <a class="el" href="loading_8cpp_source.html">loading.cpp</a>.</p>
+<p>Definition at line <a class="el" href="loading_8cpp_source.html#l00044">44</a> of file <a class="el" href="loading_8cpp_source.html">loading.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -344,7 +300,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="loading_8cpp_source.html#l00141">141</a> of file <a class="el" href="loading_8cpp_source.html">loading.cpp</a>.</p>
+<p>Definition at line <a class="el" href="loading_8cpp_source.html#l00140">140</a> of file <a class="el" href="loading_8cpp_source.html">loading.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -378,14 +334,14 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="loading_8cpp_source.html#l00060">60</a> of file <a class="el" href="loading_8cpp_source.html">loading.cpp</a>.</p>
+<p>Definition at line <a class="el" href="loading_8cpp_source.html#l00061">61</a> of file <a class="el" href="loading_8cpp_source.html">loading.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_loading_afb0b2fe451bdc3f6f2cc186903df96b4_cgraph.png" border="0" usemap="#class_loading_afb0b2fe451bdc3f6f2cc186903df96b4_cgraph" alt=""/></div>
 <map name="class_loading_afb0b2fe451bdc3f6f2cc186903df96b4_cgraph" id="class_loading_afb0b2fe451bdc3f6f2cc186903df96b4_cgraph">
-<area shape="rect" id="node2" href="class_loading.html#a84d718939a74cf1680ea3e2409324194" title="Loading::loadFileGrid" alt="" coords="149,31,293,57"/><area shape="rect" id="node3" href="class_file.html#a7177a8eac75b0fc5425ebd65e16c2d6f" title="The UI to select the file&#39;s path to open. " alt="" coords="341,5,501,32"/><area shape="rect" id="node5" href="class_file.html#a2cd702098066c4abde1c20ee708fa91f" title="The function to convert WGS84 ShapeFile(s) to Lambert 93 CSV(s) " alt="" coords="371,56,471,83"/><area shape="rect" id="node4" href="class_file.html#ac464caa98a33cfe227111dd7cd5e77e1" title="The split function to split the path file to filePath, fileName, fileExtension attributes. " alt="" coords="549,5,652,32"/></map>
+<area shape="rect" id="node2" href="class_loading.html#a84d718939a74cf1680ea3e2409324194" title="Loading::loadFileGrid" alt="" coords="149,56,293,83"/><area shape="rect" id="node3" href="class_file.html#a7177a8eac75b0fc5425ebd65e16c2d6f" title="The UI to select the file&#39;s path to open. " alt="" coords="341,5,501,32"/><area shape="rect" id="node5" href="class_file.html#a2cd702098066c4abde1c20ee708fa91f" title="The function to convert WGS84 ShapeFile(s) to Lambert 93 CSV(s) " alt="" coords="371,56,471,83"/><area shape="rect" id="node6" href="class_loading.html#a1d3058f5f9c701a3bd7300ae985ff83a" title="Loading::launchFiles" alt="" coords="351,107,492,133"/><area shape="rect" id="node4" href="class_file.html#ac464caa98a33cfe227111dd7cd5e77e1" title="The split function to split the path file to filePath, fileName, fileExtension attributes. " alt="" coords="549,5,652,32"/></map>
 </div>
 </p>
 
@@ -416,19 +372,19 @@ Here is the caller graph for this function:</div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="loading_8cpp_source.html#l00149">149</a> of file <a class="el" href="loading_8cpp_source.html">loading.cpp</a>.</p>
+<p>Definition at line <a class="el" href="loading_8cpp_source.html#l00148">148</a> of file <a class="el" href="loading_8cpp_source.html">loading.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_loading_a1d3058f5f9c701a3bd7300ae985ff83a_icgraph.png" border="0" usemap="#class_loading_a1d3058f5f9c701a3bd7300ae985ff83a_icgraph" alt=""/></div>
 <map name="class_loading_a1d3058f5f9c701a3bd7300ae985ff83a_icgraph" id="class_loading_a1d3058f5f9c701a3bd7300ae985ff83a_icgraph">
-<area shape="rect" id="node2" href="class_loading.html#aee0838d3f0d0160999eba6fd6b18dd1c" title="Loading::boutonXY" alt="" coords="195,5,327,32"/><area shape="rect" id="node3" href="class_loading.html#a7634c001ec052e10c402e49f5be030db" title="Loading::Loading" alt="" coords="375,5,495,32"/></map>
+<area shape="rect" id="node2" href="class_loading.html#ae0c96193667418083fc4a8c6cc19d9db" title="Loading::loadFileCSVTrack" alt="" coords="195,5,376,32"/><area shape="rect" id="node5" href="class_loading.html#a9a01f3e328100b681f3f08192fc9b208" title="Loading::loadFileSHPTrack" alt="" coords="195,56,376,83"/><area shape="rect" id="node6" href="class_loading.html#a84d718939a74cf1680ea3e2409324194" title="Loading::loadFileGrid" alt="" coords="213,107,357,133"/><area shape="rect" id="node3" href="class_loading.html#ab603e821bd6b047fb04285e926974ff6" title="Loading::track" alt="" coords="424,56,528,83"/><area shape="rect" id="node4" href="class_loading.html#a7634c001ec052e10c402e49f5be030db" title="Loading::Loading" alt="" coords="576,81,696,108"/><area shape="rect" id="node7" href="class_loading.html#afb0b2fe451bdc3f6f2cc186903df96b4" title="Loading::grid" alt="" coords="428,107,524,133"/></map>
 </div>
 </p>
 
@@ -455,14 +411,14 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="loading_8cpp_source.html#l00098">98</a> of file <a class="el" href="loading_8cpp_source.html">loading.cpp</a>.</p>
+<p>Definition at line <a class="el" href="loading_8cpp_source.html#l00099">99</a> of file <a class="el" href="loading_8cpp_source.html">loading.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_loading_ae0c96193667418083fc4a8c6cc19d9db_cgraph.png" border="0" usemap="#class_loading_ae0c96193667418083fc4a8c6cc19d9db_cgraph" alt=""/></div>
 <map name="class_loading_ae0c96193667418083fc4a8c6cc19d9db_cgraph" id="class_loading_ae0c96193667418083fc4a8c6cc19d9db_cgraph">
-<area shape="rect" id="node2" href="class_file.html#a7177a8eac75b0fc5425ebd65e16c2d6f" title="The UI to select the file&#39;s path to open. " alt="" coords="235,5,395,32"/><area shape="rect" id="node3" href="class_file.html#ac464caa98a33cfe227111dd7cd5e77e1" title="The split function to split the path file to filePath, fileName, fileExtension attributes. " alt="" coords="443,5,545,32"/></map>
+<area shape="rect" id="node2" href="class_file.html#a7177a8eac75b0fc5425ebd65e16c2d6f" title="The UI to select the file&#39;s path to open. " alt="" coords="235,5,395,32"/><area shape="rect" id="node4" href="class_loading.html#a1d3058f5f9c701a3bd7300ae985ff83a" title="Loading::launchFiles" alt="" coords="244,56,385,83"/><area shape="rect" id="node3" href="class_file.html#ac464caa98a33cfe227111dd7cd5e77e1" title="The split function to split the path file to filePath, fileName, fileExtension attributes. " alt="" coords="443,5,545,32"/></map>
 </div>
 </p>
 
@@ -505,7 +461,7 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_loading_a84d718939a74cf1680ea3e2409324194_cgraph.png" border="0" usemap="#class_loading_a84d718939a74cf1680ea3e2409324194_cgraph" alt=""/></div>
 <map name="class_loading_a84d718939a74cf1680ea3e2409324194_cgraph" id="class_loading_a84d718939a74cf1680ea3e2409324194_cgraph">
-<area shape="rect" id="node2" href="class_file.html#a7177a8eac75b0fc5425ebd65e16c2d6f" title="The UI to select the file&#39;s path to open. " alt="" coords="197,5,357,32"/><area shape="rect" id="node4" href="class_file.html#a2cd702098066c4abde1c20ee708fa91f" title="The function to convert WGS84 ShapeFile(s) to Lambert 93 CSV(s) " alt="" coords="227,56,327,83"/><area shape="rect" id="node3" href="class_file.html#ac464caa98a33cfe227111dd7cd5e77e1" title="The split function to split the path file to filePath, fileName, fileExtension attributes. " alt="" coords="405,5,508,32"/></map>
+<area shape="rect" id="node2" href="class_file.html#a7177a8eac75b0fc5425ebd65e16c2d6f" title="The UI to select the file&#39;s path to open. " alt="" coords="197,5,357,32"/><area shape="rect" id="node4" href="class_file.html#a2cd702098066c4abde1c20ee708fa91f" title="The function to convert WGS84 ShapeFile(s) to Lambert 93 CSV(s) " alt="" coords="227,56,327,83"/><area shape="rect" id="node5" href="class_loading.html#a1d3058f5f9c701a3bd7300ae985ff83a" title="Loading::launchFiles" alt="" coords="207,107,348,133"/><area shape="rect" id="node3" href="class_file.html#ac464caa98a33cfe227111dd7cd5e77e1" title="The split function to split the path file to filePath, fileName, fileExtension attributes. " alt="" coords="405,5,508,32"/></map>
 </div>
 </p>
 
@@ -541,14 +497,14 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="loading_8cpp_source.html#l00110">110</a> of file <a class="el" href="loading_8cpp_source.html">loading.cpp</a>.</p>
+<p>Definition at line <a class="el" href="loading_8cpp_source.html#l00111">111</a> of file <a class="el" href="loading_8cpp_source.html">loading.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_loading_a9a01f3e328100b681f3f08192fc9b208_cgraph.png" border="0" usemap="#class_loading_a9a01f3e328100b681f3f08192fc9b208_cgraph" alt=""/></div>
 <map name="class_loading_a9a01f3e328100b681f3f08192fc9b208_cgraph" id="class_loading_a9a01f3e328100b681f3f08192fc9b208_cgraph">
-<area shape="rect" id="node2" href="class_file.html#a7177a8eac75b0fc5425ebd65e16c2d6f" title="The UI to select the file&#39;s path to open. " alt="" coords="235,5,395,32"/><area shape="rect" id="node4" href="class_file.html#a2cd702098066c4abde1c20ee708fa91f" title="The function to convert WGS84 ShapeFile(s) to Lambert 93 CSV(s) " alt="" coords="265,56,365,83"/><area shape="rect" id="node3" href="class_file.html#ac464caa98a33cfe227111dd7cd5e77e1" title="The split function to split the path file to filePath, fileName, fileExtension attributes. " alt="" coords="443,5,545,32"/></map>
+<area shape="rect" id="node2" href="class_file.html#a7177a8eac75b0fc5425ebd65e16c2d6f" title="The UI to select the file&#39;s path to open. " alt="" coords="235,5,395,32"/><area shape="rect" id="node4" href="class_file.html#a2cd702098066c4abde1c20ee708fa91f" title="The function to convert WGS84 ShapeFile(s) to Lambert 93 CSV(s) " alt="" coords="265,56,365,83"/><area shape="rect" id="node5" href="class_loading.html#a1d3058f5f9c701a3bd7300ae985ff83a" title="Loading::launchFiles" alt="" coords="244,107,385,133"/><area shape="rect" id="node3" href="class_file.html#ac464caa98a33cfe227111dd7cd5e77e1" title="The split function to split the path file to filePath, fileName, fileExtension attributes. " alt="" coords="443,5,545,32"/></map>
 </div>
 </p>
 
@@ -558,6 +514,38 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="class_loading_a9a01f3e328100b681f3f08192fc9b208_icgraph.png" border="0" usemap="#class_loading_a9a01f3e328100b681f3f08192fc9b208_icgraph" alt=""/></div>
 <map name="class_loading_a9a01f3e328100b681f3f08192fc9b208_icgraph" id="class_loading_a9a01f3e328100b681f3f08192fc9b208_icgraph">
 <area shape="rect" id="node2" href="class_loading.html#ab603e821bd6b047fb04285e926974ff6" title="Loading::track" alt="" coords="235,5,339,32"/><area shape="rect" id="node3" href="class_loading.html#a7634c001ec052e10c402e49f5be030db" title="Loading::Loading" alt="" coords="387,5,507,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a33ea30cec981d89425abf9a74f659db2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Loading::ready </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_loading_a33ea30cec981d89425abf9a74f659db2_icgraph.png" border="0" usemap="#class_loading_a33ea30cec981d89425abf9a74f659db2_icgraph" alt=""/></div>
+<map name="class_loading_a33ea30cec981d89425abf9a74f659db2_icgraph" id="class_loading_a33ea30cec981d89425abf9a74f659db2_icgraph">
+<area shape="rect" id="node2" href="class_loading.html#a1d3058f5f9c701a3bd7300ae985ff83a" title="Loading::launchFiles" alt="" coords="160,56,301,83"/><area shape="rect" id="node3" href="class_loading.html#ae0c96193667418083fc4a8c6cc19d9db" title="Loading::loadFileCSVTrack" alt="" coords="349,5,531,32"/><area shape="rect" id="node6" href="class_loading.html#a9a01f3e328100b681f3f08192fc9b208" title="Loading::loadFileSHPTrack" alt="" coords="349,56,531,83"/><area shape="rect" id="node7" href="class_loading.html#a84d718939a74cf1680ea3e2409324194" title="Loading::loadFileGrid" alt="" coords="368,107,512,133"/><area shape="rect" id="node4" href="class_loading.html#ab603e821bd6b047fb04285e926974ff6" title="Loading::track" alt="" coords="579,56,683,83"/><area shape="rect" id="node5" href="class_loading.html#a7634c001ec052e10c402e49f5be030db" title="Loading::Loading" alt="" coords="731,81,851,108"/><area shape="rect" id="node8" href="class_loading.html#afb0b2fe451bdc3f6f2cc186903df96b4" title="Loading::grid" alt="" coords="583,107,679,133"/></map>
 </div>
 </p>
 
@@ -584,14 +572,14 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="loading_8cpp_source.html#l00077">77</a> of file <a class="el" href="loading_8cpp_source.html">loading.cpp</a>.</p>
+<p>Definition at line <a class="el" href="loading_8cpp_source.html#l00078">78</a> of file <a class="el" href="loading_8cpp_source.html">loading.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_loading_ab603e821bd6b047fb04285e926974ff6_cgraph.png" border="0" usemap="#class_loading_ab603e821bd6b047fb04285e926974ff6_cgraph" alt=""/></div>
 <map name="class_loading_ab603e821bd6b047fb04285e926974ff6_cgraph" id="class_loading_ab603e821bd6b047fb04285e926974ff6_cgraph">
-<area shape="rect" id="node2" href="class_loading.html#ae0c96193667418083fc4a8c6cc19d9db" title="Loading::loadFileCSVTrack" alt="" coords="157,5,339,32"/><area shape="rect" id="node5" href="class_loading.html#a9a01f3e328100b681f3f08192fc9b208" title="Loading::loadFileSHPTrack" alt="" coords="157,56,339,83"/><area shape="rect" id="node3" href="class_file.html#a7177a8eac75b0fc5425ebd65e16c2d6f" title="The UI to select the file&#39;s path to open. " alt="" coords="387,5,547,32"/><area shape="rect" id="node4" href="class_file.html#ac464caa98a33cfe227111dd7cd5e77e1" title="The split function to split the path file to filePath, fileName, fileExtension attributes. " alt="" coords="595,5,697,32"/><area shape="rect" id="node6" href="class_file.html#a2cd702098066c4abde1c20ee708fa91f" title="The function to convert WGS84 ShapeFile(s) to Lambert 93 CSV(s) " alt="" coords="417,56,517,83"/></map>
+<area shape="rect" id="node2" href="class_loading.html#ae0c96193667418083fc4a8c6cc19d9db" title="Loading::loadFileCSVTrack" alt="" coords="157,5,339,32"/><area shape="rect" id="node6" href="class_loading.html#a9a01f3e328100b681f3f08192fc9b208" title="Loading::loadFileSHPTrack" alt="" coords="157,56,339,83"/><area shape="rect" id="node3" href="class_file.html#a7177a8eac75b0fc5425ebd65e16c2d6f" title="The UI to select the file&#39;s path to open. " alt="" coords="387,56,547,83"/><area shape="rect" id="node5" href="class_loading.html#a1d3058f5f9c701a3bd7300ae985ff83a" title="Loading::launchFiles" alt="" coords="396,5,537,32"/><area shape="rect" id="node4" href="class_file.html#ac464caa98a33cfe227111dd7cd5e77e1" title="The split function to split the path file to filePath, fileName, fileExtension attributes. " alt="" coords="595,56,697,83"/><area shape="rect" id="node7" href="class_file.html#a2cd702098066c4abde1c20ee708fa91f" title="The function to convert WGS84 ShapeFile(s) to Lambert 93 CSV(s) " alt="" coords="417,107,517,133"/></map>
 </div>
 </p>
 
@@ -626,28 +614,6 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="loading_8h_source.html#l00044">44</a> of file <a class="el" href="loading_8h_source.html">loading.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ac603fd7b790a5145ad61da317c994143"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QPushButton* Loading::m_cancel</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="loading_8h_source.html#l00055">55</a> of file <a class="el" href="loading_8h_source.html">loading.h</a>.</p>
 
 </div>
 </div>
@@ -805,28 +771,6 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="a150b38f4f9e69b1272a5832b165bbdf4"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QPushButton* Loading::m_launch</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="loading_8h_source.html#l00056">56</a> of file <a class="el" href="loading_8h_source.html">loading.h</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a1c1023216111baad372e40eb1e01bcdc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -893,6 +837,28 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="ae4a46be3510080f094a59b08c22e082e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Loading::nextOk</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="loading_8h_source.html#l00055">55</a> of file <a class="el" href="loading_8h_source.html">loading.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="loading_8h_source.html">loading.h</a></li>
 <li><a class="el" href="loading_8cpp_source.html">loading.cpp</a></li>
@@ -903,7 +869,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_loading.html">Loading</a></li>
-    <li class="footer">Generated on Tue Nov 15 2016 18:28:13 for Map Matching by
+    <li class="footer">Generated on Wed Nov 16 2016 11:01:31 for Map Matching by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

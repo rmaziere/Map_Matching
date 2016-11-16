@@ -1,8 +1,11 @@
 <map id="MainWindow.h" name="MainWindow.h">
-<area shape="rect" id="node9" href="$_sliding_stacked_widget_8h.html" title="SlidingStackedWidget.h" alt="" coords="243,80,405,107"/>
-<area shape="rect" id="node14" href="$filtering_8h.html" title="filtering.h" alt="" coords="856,80,931,107"/>
-<area shape="rect" id="node21" href="$track_8h.html" title="The class Track. " alt="" coords="1267,155,1330,181"/>
-<area shape="rect" id="node22" href="$point_g_p_s_8h.html" title="pointGPS.h" alt="" coords="999,229,1089,256"/>
-<area shape="rect" id="node23" href="$point_8h.html" title="Class Point. " alt="" coords="887,304,948,331"/>
-<area shape="rect" id="node25" href="$emissionprobability_8h.html" title="emissionprobability.h" alt="" coords="972,304,1116,331"/>
+<area shape="rect" id="node9" href="$_sliding_stacked_widget_8h.html" title="SlidingStackedWidget.h" alt="" coords="272,80,433,107"/>
+<area shape="rect" id="node14" href="$filtering_8h.html" title="filtering.h" alt="" coords="1102,80,1177,107"/>
+<area shape="rect" id="node33" href="$loading_8h.html" title="loading.h" alt="" coords="1003,80,1078,107"/>
+<area shape="rect" id="node21" href="$track_8h.html" title="The class Track. " alt="" coords="1711,155,1773,181"/>
+<area shape="rect" id="node22" href="$point_g_p_s_8h.html" title="pointGPS.h" alt="" coords="1520,229,1609,256"/>
+<area shape="rect" id="node23" href="$emissionprobability_8h.html" title="emissionprobability.h" alt="" coords="1393,304,1537,331"/>
+<area shape="rect" id="node24" href="$point_8h.html" title="Class Point. " alt="" coords="1561,304,1622,331"/>
+<area shape="rect" id="node35" href="$file_8h.html" title="file.h" alt="" coords="803,155,854,181"/>
+<area shape="rect" id="node39" href="$myexception_8h.html" title="myexception.h" alt="" coords="730,229,837,256"/>
 </map>

@@ -1,4 +1,5 @@
 <map id="MainWindow" name="MainWindow">
-<area shape="rect" id="node3" href="$class_sliding_stacked_widget.html" title="SlidingStackedWidget" alt="" coords="137,81,287,108"/>
-<area shape="rect" id="node5" href="$class_filtering.html" title="Filtering" alt="" coords="311,81,379,108"/>
+<area shape="rect" id="node3" href="$class_loading.html" title="Loading" alt="" coords="136,81,203,108"/>
+<area shape="rect" id="node7" href="$class_filtering.html" title="Filtering" alt="" coords="227,81,295,108"/>
+<area shape="rect" id="node5" href="$class_sliding_stacked_widget.html" title="SlidingStackedWidget" alt="" coords="319,81,470,108"/>
 </map>

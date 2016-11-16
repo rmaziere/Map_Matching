@@ -3,6 +3,8 @@ var searchData=
   ['samepointas',['samePointAs',['../class_point.html#a9d93fb520b4a3e170aab25ea738b105c',1,'Point']]],
   ['sauvegarde',['Sauvegarde',['../class_sauvegarde.html#a3f46af85f171d6a5f4450b2c42b15fa2',1,'Sauvegarde']]],
   ['sauvegardercsv',['sauvegarderCSV',['../class_sauvegarde.html#ae906a8c82dd7e2c0539b9f7ff9e5d715',1,'Sauvegarde']]],
+  ['save',['save',['../class_map.html#ad25cd1c04791edcda24f7aaba0ca6557',1,'Map']]],
+  ['scalecalculator',['scaleCalculator',['../class_map.html#a65a21293c1d7351ea086f685991b6fae',1,'Map']]],
   ['selectfilestoopen',['selectFilesToOpen',['../class_file.html#a7177a8eac75b0fc5425ebd65e16c2d6f',1,'File']]],
   ['setanimation',['setAnimation',['../class_sliding_stacked_widget.html#a0ec32891720e1b1c95f3d925996c373b',1,'SlidingStackedWidget']]],
   ['setboundingbox',['setBoundingBox',['../class_grid.html#a19318437702e712955d0c4631c94cb04',1,'Grid']]],

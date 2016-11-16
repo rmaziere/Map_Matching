@@ -28,6 +28,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Map Matching
    </div>
@@ -109,25 +110,27 @@ $(document).ready(function(){initNavTree('box_8h_source.html','');});
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;../point.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_box.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_box.html">Box</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_box.html#aca78d7db44972bfa78d46b7bbc8796f6">    9</a></span>&#160;    <a class="code" href="class_box.html#aca78d7db44972bfa78d46b7bbc8796f6">Box</a>() {}</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_box.html#ad1025ca7dfb54b3ce438306fe322d3ae">   10</a></span>&#160;    <a class="code" href="class_box.html#ad1025ca7dfb54b3ce438306fe322d3ae">Box</a>(<span class="keyword">const</span> <a class="code" href="class_point.html">Point</a> &amp;low, <span class="keyword">const</span> <a class="code" href="class_point.html">Point</a> &amp;high)</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        : <a class="code" href="class_box.html#a9abe19fa263c0891d8faef785cc3ad09">m_low</a>(low), <a class="code" href="class_box.html#a419ffb7c81f62921a1985c5a74bda872">m_high</a>(high) {}</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_box.html#a3a96bf8f86322e4885028e517ef40535">distanceToPoint</a>(<span class="keyword">const</span> <a class="code" href="class_point.html">Point</a> &amp;point);</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_box.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_box.html">Box</a> {</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_box.html#aca78d7db44972bfa78d46b7bbc8796f6">    8</a></span>&#160;    <a class="code" href="class_box.html#aca78d7db44972bfa78d46b7bbc8796f6">Box</a>() {}</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_box.html#ad1025ca7dfb54b3ce438306fe322d3ae">    9</a></span>&#160;    <a class="code" href="class_box.html#ad1025ca7dfb54b3ce438306fe322d3ae">Box</a>(<span class="keyword">const</span> <a class="code" href="class_point.html">Point</a>&amp; low, <span class="keyword">const</span> <a class="code" href="class_point.html">Point</a>&amp; high)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        : <a class="code" href="class_box.html#a9abe19fa263c0891d8faef785cc3ad09">m_low</a>(low)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        , <a class="code" href="class_box.html#a419ffb7c81f62921a1985c5a74bda872">m_high</a>(high)</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    }</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_box.html#a9abe19fa263c0891d8faef785cc3ad09">   15</a></span>&#160;    <a class="code" href="class_point.html">Point</a> <a class="code" href="class_box.html#a9abe19fa263c0891d8faef785cc3ad09">m_low</a>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_box.html#a419ffb7c81f62921a1985c5a74bda872">   16</a></span>&#160;    <a class="code" href="class_point.html">Point</a> <a class="code" href="class_box.html#a419ffb7c81f62921a1985c5a74bda872">m_high</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;};</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif // BOX_H</span></div>
-<div class="ttc" id="class_box_html_a419ffb7c81f62921a1985c5a74bda872"><div class="ttname"><a href="class_box.html#a419ffb7c81f62921a1985c5a74bda872">Box::m_high</a></div><div class="ttdeci">Point m_high</div><div class="ttdef"><b>Definition:</b> <a href="box_8h_source.html#l00016">box.h:16</a></div></div>
-<div class="ttc" id="class_box_html_aca78d7db44972bfa78d46b7bbc8796f6"><div class="ttname"><a href="class_box.html#aca78d7db44972bfa78d46b7bbc8796f6">Box::Box</a></div><div class="ttdeci">Box()</div><div class="ttdef"><b>Definition:</b> <a href="box_8h_source.html#l00009">box.h:9</a></div></div>
-<div class="ttc" id="class_box_html_a9abe19fa263c0891d8faef785cc3ad09"><div class="ttname"><a href="class_box.html#a9abe19fa263c0891d8faef785cc3ad09">Box::m_low</a></div><div class="ttdeci">Point m_low</div><div class="ttdef"><b>Definition:</b> <a href="box_8h_source.html#l00015">box.h:15</a></div></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">double</span> <a class="code" href="class_box.html#a3a96bf8f86322e4885028e517ef40535">distanceToPoint</a>(<span class="keyword">const</span> <a class="code" href="class_point.html">Point</a>&amp; point);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_box.html#a9abe19fa263c0891d8faef785cc3ad09">   17</a></span>&#160;    <a class="code" href="class_point.html">Point</a> <a class="code" href="class_box.html#a9abe19fa263c0891d8faef785cc3ad09">m_low</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_box.html#a419ffb7c81f62921a1985c5a74bda872">   18</a></span>&#160;    <a class="code" href="class_point.html">Point</a> <a class="code" href="class_box.html#a419ffb7c81f62921a1985c5a74bda872">m_high</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif // BOX_H</span></div>
+<div class="ttc" id="class_box_html_a419ffb7c81f62921a1985c5a74bda872"><div class="ttname"><a href="class_box.html#a419ffb7c81f62921a1985c5a74bda872">Box::m_high</a></div><div class="ttdeci">Point m_high</div><div class="ttdef"><b>Definition:</b> <a href="box_8h_source.html#l00018">box.h:18</a></div></div>
+<div class="ttc" id="class_box_html_aca78d7db44972bfa78d46b7bbc8796f6"><div class="ttname"><a href="class_box.html#aca78d7db44972bfa78d46b7bbc8796f6">Box::Box</a></div><div class="ttdeci">Box()</div><div class="ttdef"><b>Definition:</b> <a href="box_8h_source.html#l00008">box.h:8</a></div></div>
+<div class="ttc" id="class_box_html_a9abe19fa263c0891d8faef785cc3ad09"><div class="ttname"><a href="class_box.html#a9abe19fa263c0891d8faef785cc3ad09">Box::m_low</a></div><div class="ttdeci">Point m_low</div><div class="ttdef"><b>Definition:</b> <a href="box_8h_source.html#l00017">box.h:17</a></div></div>
 <div class="ttc" id="class_box_html_a3a96bf8f86322e4885028e517ef40535"><div class="ttname"><a href="class_box.html#a3a96bf8f86322e4885028e517ef40535">Box::distanceToPoint</a></div><div class="ttdeci">double distanceToPoint(const Point &amp;point)</div><div class="ttdef"><b>Definition:</b> <a href="box_8cpp_source.html#l00004">box.cpp:4</a></div></div>
-<div class="ttc" id="class_box_html_ad1025ca7dfb54b3ce438306fe322d3ae"><div class="ttname"><a href="class_box.html#ad1025ca7dfb54b3ce438306fe322d3ae">Box::Box</a></div><div class="ttdeci">Box(const Point &amp;low, const Point &amp;high)</div><div class="ttdef"><b>Definition:</b> <a href="box_8h_source.html#l00010">box.h:10</a></div></div>
+<div class="ttc" id="class_box_html_ad1025ca7dfb54b3ce438306fe322d3ae"><div class="ttname"><a href="class_box.html#ad1025ca7dfb54b3ce438306fe322d3ae">Box::Box</a></div><div class="ttdeci">Box(const Point &amp;low, const Point &amp;high)</div><div class="ttdef"><b>Definition:</b> <a href="box_8h_source.html#l00009">box.h:9</a></div></div>
 <div class="ttc" id="class_box_html"><div class="ttname"><a href="class_box.html">Box</a></div><div class="ttdef"><b>Definition:</b> <a href="box_8h_source.html#l00006">box.h:6</a></div></div>
 <div class="ttc" id="class_point_html"><div class="ttname"><a href="class_point.html">Point</a></div><div class="ttdoc">The Point class. </div><div class="ttdef"><b>Definition:</b> <a href="point_8h_source.html#l00020">point.h:20</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -136,7 +139,7 @@ $(document).ready(function(){initNavTree('box_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_2fe82b5e3d2dafca23a662af4008efe2.html">KDTreeAlgos</a></li><li class="navelem"><a class="el" href="box_8h.html">box.h</a></li>
-    <li class="footer">Generated on Tue Nov 15 2016 18:28:12 for Map Matching by
+    <li class="footer">Generated on Wed Nov 16 2016 11:01:31 for Map Matching by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
