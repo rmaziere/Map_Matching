@@ -9,20 +9,29 @@
 #include "myexception.h"
 #include "track.h"
 
+/**
+ * @brief Container for manipulation of files with graphic interface
+ * @todo rendre la classe statique
+ */
 class Sauvegarde {
 public:
-    //Constructeur
+    /**
+     * @brief Constructor
+     */
     Sauvegarde();
 
-    //Fonction de sauvegarde en CSV
     /**
-     * @brief sauvegarderCSV save data in a CSV file
+     * @brief save data in a CSV file
+     * @todo Documenter les paramètres de la fonction... A quoi sert cheminAccess ?
+     * @todo Refactorer les noms des paramètres
      * @param cheminAcces
      * @param maTrace
      */
     int sauvegarderCSV(QString cheminAcces, Track maTrace);
 
-    //Destructeur
+    /**
+     * @brief Destructor
+     */
     virtual ~Sauvegarde();
 };
 
