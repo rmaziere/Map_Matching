@@ -28,6 +28,9 @@ typedef std::unordered_map<PointRoad, int, hashFunc, equalsFunc> ExtremityPointM
 typedef std::unordered_map<long, Road> AllRoadMap;
 //typedef std::unordered_map<long, Road&> AllRoadMap;   // for all roads (& do not recreate object)
 
+/**
+ * @brief Grid embedded roads. This describes the network.
+ */
 class Grid {
 public:
     Grid();
