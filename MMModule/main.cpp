@@ -119,7 +119,7 @@ int main(int argc, char* argv[])
 {
     QApplication app(argc, argv);
 
-    JournalProcess* process = new JournalProcess();
+    /*JournalProcess* process = new JournalProcess();
 
     QTextEdit* logProcess = new QTextEdit(process);
     process->setWidgetResizable(true);
@@ -127,7 +127,7 @@ int main(int argc, char* argv[])
         process->size().height());
     logProcess->setReadOnly(true);
     QDebugStream log(std::cout, logProcess);
-    process->show();
+    process->show();*/
 
     //dev_grid();
     //dev_all();

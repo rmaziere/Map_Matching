@@ -6,7 +6,8 @@ Loading::Loading()
     country();
     track();
     grid();
-    boutonXY();
+    //boutonXY();
+    nextOk = 0;
 
     // Création d'un widget qui servira de fenêtre
     setFixedSize(500, 400);
@@ -15,16 +16,16 @@ Loading::Loading()
     mainLayout->addWidget(m_country);
     mainLayout->addWidget(m_track);
     mainLayout->addWidget(m_grid);
-    mainLayout->addWidget(m_boutonXY);
+    //mainLayout->addWidget(m_boutonXY);
     setLayout(mainLayout);
-    setWindowTitle("Launch");
+    //setWindowTitle("Launch");
 }
 
 Loading::~Loading()
 {
 }
 
-void Loading::boutonXY()
+/*void Loading::boutonXY()
 {
     m_boutonXY = new QGroupBox("");
 
@@ -39,7 +40,7 @@ void Loading::boutonXY()
     vbox->addStretch(1);
     m_boutonXY->setLayout(vbox);
 }
-
+*/
 void Loading::country()
 {
     m_country = new QGroupBox("Country");
@@ -103,6 +104,7 @@ void Loading::loadFileCSVTrack()
         m_fileGPS->setText("1 file loaded");
         m_csvTrack->setEnabled(false);
         m_shpTrack->setEnabled(false);
+        launchFiles();
     }
 }
 
@@ -116,6 +118,7 @@ void Loading::loadFileSHPTrack()
             m_fileGPS->setText("1 file loaded");
             m_csvTrack->setEnabled(false);
             m_shpTrack->setEnabled(false);
+            launchFiles();
         }
     }
 }
@@ -129,6 +132,7 @@ void Loading::loadFileGrid()
         if (conv == 1) {
             m_fileGrid->setText("1 file loaded");
             m_csvGrid->setEnabled(false);
+            launchFiles();
         }
     }
 }
@@ -143,6 +147,8 @@ void Loading::getCountry() //A modifier
 
 void Loading::launchFiles()
 {
-    if ((m_fr->isChecked() || m_usa->isChecked()) && (m_csvTrack->isChecked() || m_shpTrack->isChecked()) && (m_csvGrid->isChecked()))
+    nextOk += 1;
+    if ((m_fr->isChecked() || m_usa->isChecked()) && (nextOk == 2))
         cout << "tout ok"; // A modifier
+        emit ready();
 }
