@@ -5,9 +5,10 @@
 #include <math.h>
 #include <vector>
 
+#include "myexception.h"
 #include "file.h"
 #include "grid.h"
-#include "myexception.h"
+#include "loading.h"
 #include "pointGPS.h"
 #include "track.h"
 #include "GUI/map.h"
@@ -71,8 +72,7 @@ void dev_all()
 
 void dev_network()
 {
-    /*
-    grid myNetwork;
+    /*grid myNetwork;
     myNetwork.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
     cout << myNetwork.m_road.size() << endl;
 
@@ -80,29 +80,6 @@ void dev_network()
         cout << myNetwork.m_road[i]->getListOfPoints().size() << endl;
         cout << myNetwork.m_road[i]->getListOfPoints()[0]->m_x << endl;
     }*/
-}
-
-void dev_openFile()
-{
-    /*
-
-    //QApplication app(argc, argv);
-
-    //File Test;
-    //QString ext = "shp";
-
-    //Test.selectFilesToOpen(argc, argv, ext);
-    //Test.shp2csv();
-    Test.whereSave();
-    for (int i = 0; i < Test.filePath.size(); ++i){
-        QString tempFilePath = Test.filePath.at(i);
-        QString tempFileName = Test.fileName.at(i);
-        QString tempFileExtension = Test.fileExtension.at(i);
-        cout << tempFilePath.toStdString() << " - "
-             << tempFileName.toStdString() << " - "
-             << tempFileExtension.toStdString() << endl;
-    }
-    //return app.exec();*/
 }
 
 void ui(){
@@ -125,20 +102,54 @@ void dev_img(){
 
     for(int i = 0; i <= 1000; i+= 150){
         double x = i + 25;
-        double y = i * 0.65 + 50;
+        double y = i * 0.75;
         vector<double> coordinates;
         coordinates.push_back(x);
         coordinates.push_back(y);
         poly.push_back(coordinates);
     }
 
+    vector<vector<double>> polyRoad;
+
+    vector<double> coordinates;
+    coordinates.push_back(1000.25);
+    coordinates.push_back(3352.28);
+    polyRoad.push_back(coordinates);
+
+    coordinates.clear();
+
+    coordinates.push_back(2000.0);
+    coordinates.push_back(6000.0);
+    polyRoad.push_back(coordinates);
+
     Map m(1280, 1024);
-    //m.draw();
-    m.makePolyline(poly);
+
+    m.scaleCalculator(1000.25, 2000.75, 3352.28, 6000.67);
+
+    m.deltaCalculator(1000.25, 3352.28);
+
+    m.makePolyline(poly, "green");
+
+    m.makePolylineFromRoad(polyRoad, "grey");
+
+
+    vector<vector<double>> point;
+
+    vector<double> pcoordinates;
+    pcoordinates.push_back(1800.0);
+    pcoordinates.push_back(4800.0);
+    point.push_back(pcoordinates);
+
+    m.makePointFromTrack(point, "orange");
+
+    m.landmarkMaker(200);
+
     m.save("/tmp/test.png");
+
+    cout << "width : " << m.width << endl;
+    cout << "height : " << m.height << endl;
+    cout << "Facteur d'échelle : " << m.scale << endl;
 }
-
-
 
 void dev_ui(){
     JournalProcess* process = new JournalProcess();
@@ -153,6 +164,19 @@ void dev_ui(){
     std::cout << "Tous les cout sont rediriges ici" << endl;
 }
 
+void dev_ui2(){
+    //Fenetre non enlevable
+    MainWindow w;
+    w.setWindowTitle("Map Matching");
+
+#ifdef Q_OS_SYMBIAN
+    w.showMaximized();
+#else
+    w.resize(360, 504);
+    w.show();
+#endif
+}
+
 
 
 /****************************************************************************/
@@ -164,18 +188,10 @@ int main(int argc, char* argv[])
     QApplication app(argc, argv);
 
     //Fonction à exécuter ci-dessous :
-    //dev_img();
+    dev_img();
 
-    //Fenetre non enlevable
-    MainWindow w;
-    w.setWindowTitle("Map Matching");
+    cout << "Fonction terminée !" << endl;
 
-#ifdef Q_OS_SYMBIAN
-    w.showMaximized();
-#else
-    w.resize(360, 504);
-    w.show();
-#endif
-
-    return app.exec();
+    //return app.exec();
+    return app.closingDown();
 }
