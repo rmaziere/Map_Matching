@@ -13,5 +13,6 @@ var searchData=
   ['getroads',['getRoads',['../class_grid.html#ae43b7156c770eb4a8812d7ecce223b36',1,'Grid']]],
   ['grid',['Grid',['../class_grid.html',1,'Grid'],['../class_grid.html#a4ac9ff4f63552b4c61ff90fcb35ad66c',1,'Grid::Grid()'],['../class_loading.html#afb0b2fe451bdc3f6f2cc186903df96b4',1,'Loading::grid()']]],
   ['grid_2ecpp',['grid.cpp',['../grid_8cpp.html',1,'']]],
-  ['grid_2eh',['grid.h',['../grid_8h.html',1,'']]]
+  ['grid_2eh',['grid.h',['../grid_8h.html',1,'']]],
+  ['grille',['grille',['../class_main_window.html#ae79aeaf1e52524e07754b5ab52c91f76',1,'MainWindow']]]
 ];

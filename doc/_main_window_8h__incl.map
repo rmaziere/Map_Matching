@@ -1,11 +1,14 @@
 <map id="MainWindow.h" name="MainWindow.h">
-<area shape="rect" id="node9" href="$_sliding_stacked_widget_8h.html" title="SlidingStackedWidget.h" alt="" coords="272,80,433,107"/>
-<area shape="rect" id="node14" href="$filtering_8h.html" title="filtering.h" alt="" coords="1102,80,1177,107"/>
-<area shape="rect" id="node33" href="$loading_8h.html" title="loading.h" alt="" coords="1003,80,1078,107"/>
-<area shape="rect" id="node21" href="$track_8h.html" title="The class Track. " alt="" coords="1711,155,1773,181"/>
-<area shape="rect" id="node22" href="$point_g_p_s_8h.html" title="pointGPS.h" alt="" coords="1520,229,1609,256"/>
-<area shape="rect" id="node23" href="$emissionprobability_8h.html" title="emissionprobability.h" alt="" coords="1393,304,1537,331"/>
-<area shape="rect" id="node24" href="$point_8h.html" title="Class Point. " alt="" coords="1561,304,1622,331"/>
-<area shape="rect" id="node35" href="$file_8h.html" title="file.h" alt="" coords="803,155,854,181"/>
-<area shape="rect" id="node39" href="$myexception_8h.html" title="myexception.h" alt="" coords="730,229,837,256"/>
+<area shape="rect" id="node9" href="$_sliding_stacked_widget_8h.html" title="SlidingStackedWidget.h" alt="" coords="269,80,431,107"/>
+<area shape="rect" id="node14" href="$filtering_8h.html" title="filtering.h" alt="" coords="1235,80,1310,107"/>
+<area shape="rect" id="node21" href="$track_8h.html" title="The class Track. " alt="" coords="1888,229,1951,256"/>
+<area shape="rect" id="node33" href="$loading_8h.html" title="loading.h" alt="" coords="989,80,1063,107"/>
+<area shape="rect" id="node41" href="$grid_8h.html" title="grid.h" alt="" coords="1924,80,1979,107"/>
+<area shape="rect" id="node22" href="$point_g_p_s_8h.html" title="pointGPS.h" alt="" coords="1709,304,1799,331"/>
+<area shape="rect" id="node23" href="$emissionprobability_8h.html" title="emissionprobability.h" alt="" coords="1709,379,1853,405"/>
+<area shape="rect" id="node24" href="$point_8h.html" title="Class Point. " alt="" coords="1877,379,1938,405"/>
+<area shape="rect" id="node35" href="$file_8h.html" title="file.h" alt="" coords="1199,229,1250,256"/>
+<area shape="rect" id="node39" href="$myexception_8h.html" title="myexception.h" alt="" coords="1003,304,1110,331"/>
+<area shape="rect" id="node42" href="$road_8h.html" title="road.h" alt="" coords="1982,155,2041,181"/>
+<area shape="rect" id="node43" href="$pointroad_8h.html" title="pointroad.h" alt="" coords="2223,304,2309,331"/>
 </map>

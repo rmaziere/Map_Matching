@@ -1,6 +1,9 @@
 <map id="PointRoad::setid" name="PointRoad::setid">
-<area shape="rect" id="node2" href="$class_grid.html#aba1830bc145f128d6deeed29cfb94c9f" title="addRoad Creates a new road and inserts it in m_road " alt="" coords="172,31,279,57"/>
-<area shape="rect" id="node3" href="$class_grid.html#ae848f1c59c544adc1af9133409ee0106" title="readFromCSV Reads a csv file and inserts info into the corresponding attributs " alt="" coords="327,31,464,57"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a640261e473790d1a87c2f33332460793" title="dev_grid" alt="" coords="512,5,583,32"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="516,56,579,83"/>
+<area shape="rect" id="node2" href="$class_grid.html#aba1830bc145f128d6deeed29cfb94c9f" title="addRoad Creates a new road and inserts it in m_road " alt="" coords="172,56,279,83"/>
+<area shape="rect" id="node3" href="$class_grid.html#ae848f1c59c544adc1af9133409ee0106" title="readFromCSV Reads a csv file and inserts info into the corresponding attributs " alt="" coords="327,56,464,83"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a640261e473790d1a87c2f33332460793" title="dev_grid" alt="" coords="570,5,641,32"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="574,56,637,83"/>
+<area shape="rect" id="node6" href="$class_main_window.html#ad39bbe8ced0d3248206ac0ca6c444d55" title="MainWindow::readyToNext1" alt="" coords="512,107,699,133"/>
+<area shape="rect" id="node7" href="$class_main_window.html#af773488e0b16efe6c0fc67ad348b86b2" title="MainWindow::createConnections" alt="" coords="747,107,961,133"/>
+<area shape="rect" id="node8" href="$class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="1009,107,1189,133"/>
 </map>

@@ -1,0 +1,12 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$main_8cpp.html#a5e1c37b6b0ca91ad100d6bd39fc4062f" title="dev_img" alt="" coords="104,157,175,184"/>
+<area shape="rect" id="node3" href="$class_map.html#a65a21293c1d7351ea086f685991b6fae" title="scaleCalculator " alt="" coords="247,5,393,32"/>
+<area shape="rect" id="node4" href="$class_map.html#a76eec388eebc5e22e1aa39082b885aa4" title="deltaCalculator " alt="" coords="249,56,391,83"/>
+<area shape="rect" id="node5" href="$class_map.html#ab31f3b3557f28b10e312d6c910146dcb" title="makePolyline " alt="" coords="253,107,387,133"/>
+<area shape="rect" id="node6" href="$class_map.html#af49cbdcf946167a1192d4ba67618f070" title="Map::makePolylineFromRoad" alt="" coords="223,157,417,184"/>
+<area shape="rect" id="node8" href="$class_map.html#a9013c3efbd674f2880d67222eb5fefc2" title="Map::makePointFromTrack" alt="" coords="230,208,410,235"/>
+<area shape="rect" id="node9" href="$class_map.html#a252bb9c052015eac4e2a6b5cbe39f31c" title="Map::landmarkMaker" alt="" coords="248,259,392,285"/>
+<area shape="rect" id="node11" href="$class_map.html#a9b194ba0253bb86032877a5fa49ea122" title="save the current image " alt="" coords="279,309,361,336"/>
+<area shape="rect" id="node7" href="$class_map.html#afcf922c62157c1c6a39cc76daa07c51f" title="coordinateTranslator " alt="" coords="465,183,639,209"/>
+<area shape="rect" id="node10" href="$class_map.html#a4ce23875252638dd588889f105620e00" title="Map::write" alt="" coords="511,259,593,285"/>
+</map>
