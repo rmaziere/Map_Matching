@@ -43,18 +43,9 @@ void MainWindow::createSubSlidingWidgets()
     slideWidget1 = new Loading();
     slideWidget2 = new Filtering();
     slideWidget3 = new QWidget();
-    slideWidget4 = new QWidget();
 
-    QVBoxLayout* slideWidget4layout = new QVBoxLayout();
-    slideWidget4->setLayout(slideWidget4layout);
     QVBoxLayout* slideWidget3layout = new QVBoxLayout();
     slideWidget3->setLayout(slideWidget3layout);
-
-
-    QPushButton* b41 = new QPushButton("Cool");
-    slideWidget4layout->addWidget(b41);
-    QPushButton* b42 = new QPushButton("is Qt !");
-    slideWidget4layout->addWidget(b42);
 
     QPushButton* b31 = new QPushButton("Isn't");
     slideWidget3layout->addWidget(b31);
@@ -68,7 +59,6 @@ void MainWindow::createSlidingStackedWidget()
     slidingStacked->addWidget(slideWidget1);
     slidingStacked->addWidget(slideWidget2);
     slidingStacked->addWidget(slideWidget3);
-    slidingStacked->addWidget(slideWidget4);
 }
 
 void MainWindow::createConnections()

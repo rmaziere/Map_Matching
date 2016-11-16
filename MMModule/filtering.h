@@ -28,7 +28,6 @@ private:
     void nbPtTrack();
     void spatial();
     void temporal();
-    void boutonXY();
 
     QGroupBox* m_spat;
     QGroupBox* m_temp;
@@ -39,9 +38,6 @@ private:
     QSlider* m_slidSpat;
     QLCDNumber* m_valueSpat;
     QLabel* m_nbPtTrack;
-
-    QPushButton* m_cancel;
-    QPushButton* m_launch;
 };
 
 #endif // FILTERING_H
