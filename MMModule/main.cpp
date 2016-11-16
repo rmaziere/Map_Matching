@@ -7,19 +7,17 @@
 
 #include "file.h"
 #include "grid.h"
-#include "loading.h"
 #include "myexception.h"
 #include "pointGPS.h"
 #include "track.h"
+#include "GUI/map.h"
 #include "MainWindow.h"
 #include "journalprocess.h"
 #include "qdebugstream.h"
 #include "solver.h"
 #include <QTextEdit>
 
-
-
-    using namespace std;
+using namespace std;
 
 void dev_grid()
 {
@@ -94,8 +92,13 @@ void dev_openFile()
     //return app.exec();*/
 }
 
-void dev_file()
-{
+void ui(){
+    Loading fenetre;
+    // Affichage de la fenêtre
+    fenetre.show();
+}
+
+void dev_file(){
     File f;
     f.selectFilesToOpen("shp");
     cout << "File name : " << f.fileName.at(0).toStdString() << ", file extension : " << f.fileExtension.at(0).toStdString() << endl;
@@ -104,10 +107,27 @@ void dev_file()
     cout << "File name : " << f.fileName.at(0).toStdString() << ", file extension : " << f.fileExtension.at(0).toStdString() << endl;
 }
 
-int main(int argc, char* argv[])
-{
-    QApplication app(argc, argv);
+void dev_img(){
+    vector<vector<double>> poly;
 
+    for(int i = 0; i <= 1000; i+= 150){
+        double x = i + 25;
+        double y = i * 0.65 + 50;
+        vector<double> coordinates;
+        coordinates.push_back(x);
+        coordinates.push_back(y);
+        poly.push_back(coordinates);
+    }
+
+    Map m(1280, 1024);
+    //m.draw();
+    m.makePolyline(poly);
+    m.save("/tmp/test.png");
+}
+
+
+
+void dev_ui(){
     JournalProcess* process = new JournalProcess();
 
     QTextEdit* logProcess = new QTextEdit(process);
@@ -117,10 +137,23 @@ int main(int argc, char* argv[])
     logProcess->setReadOnly(true);
     QDebugStream log(std::cout, logProcess);
     process->show();
+    std::cout << "Tous les cout sont rediriges ici" << endl;
+}
 
-    //dev_grid();
-    //dev_all();
 
+
+/****************************************************************************/
+/*** Pas de code dans le main, seulement l'appel d'une fonction ci-dessus ***/
+/****************************************************************************/
+
+int main(int argc, char* argv[])
+{
+    QApplication app(argc, argv);
+
+    //Fonction à exécuter ci-dessous :
+    //dev_img();
+
+    //Fenetre non enlevable
     MainWindow w;
     w.setWindowTitle("Map Matching");
 
@@ -130,6 +163,6 @@ int main(int argc, char* argv[])
     w.resize(360, 504);
     w.show();
 #endif
-    std::cout << "Tous les cout sont rediriges ici" << endl;
+
     return app.exec();
 }

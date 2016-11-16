@@ -11,6 +11,7 @@
 
 #include "SlidingStackedWidget.h"
 #include "filtering.h"
+#include "loading.h"
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -18,6 +19,9 @@ class MainWindow : public QMainWindow {
 public:
     MainWindow(QWidget* parent = 0);
     ~MainWindow();
+
+public slots:
+    void readyToNext();
 
 protected:
     void createGuiControlComponents();
@@ -32,10 +36,11 @@ protected:
     QVBoxLayout* mainLayout;
     QGridLayout* controlPaneLayout;
     QWidget* centralWidget;
-    QWidget* slideWidget1;
-    QWidget* slideWidget2;
+    Loading* slideWidget1;
+    Filtering* slideWidget2;
     QWidget* slideWidget3;
-    Filtering* slideWidget4;
+    QWidget* slideWidget4;
+
 };
 
 #endif // MAINWINDOW_H

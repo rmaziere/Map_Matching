@@ -28,6 +28,7 @@ SOURCES += main.cpp \
     KDTreeAlgos/kdtree.cpp \
     emissionprobability.cpp \
     KDTreeAlgos/kdtreeviewer.cpp \
+    GUI/map.cpp \
     filtering.cpp \
     MainWindow.cpp \
     SlidingStackedWidget.cpp \
@@ -51,10 +52,9 @@ HEADERS += \
     KDTreeAlgos/kdtree.h \
     emissionprobability.h \
     KDTreeAlgos/kdtreeviewer.h \
+    GUI/map.h \
     filtering.h \
     SlidingStackedWidget.h \
     MainWindow.h \
     journalprocess.h \
     qdebugstream.h
-
-
