@@ -4,6 +4,8 @@
 #include <math.h>
 #include <sstream>
 
+const double Point::POINT_RADIUS= 200;
+
 bool Point::samePointAs(const Point& p) const
 {
     return (fabs(m_x - p.m_x) < EPS) && (fabs(m_y - p.m_y) < EPS);

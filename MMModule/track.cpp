@@ -1,6 +1,7 @@
 #include "track.h"
 #include <QLocale>
 #include <limits>
+#include <sstream>
 
 using namespace std;
 
@@ -274,4 +275,14 @@ void Track::outputInfos()
          << "\n\tin box:";
     cout << "\n\t\t min (x,y) (" << m_xMin << ", " << m_yMin << ")";
     cout << "\n\t\t max (x,y) (" << m_xMax << ", " << m_yMax << ")" << endl;
+}
+
+string Track::infos()
+{
+    std::stringstream ss;
+    ss << "Track " << m_trackFullName << " contains: \n\t" << m_points.size() << " points"
+         << "\n\tin box:";
+    ss << "\n\t\t min (x,y) (" << m_xMin << ", " << m_yMin << ")";
+    ss << "\n\t\t max (x,y) (" << m_xMax << ", " << m_yMax << ")\n" ;
+    return ss.str();
 }

@@ -1,21 +1,19 @@
 #include "solver.h"
-#define DEBUG true
+#define DEBUG_SOLVER false
 
-void Solver::initialize()
+void Solver::start()
 {
-    if (DEBUG)
-        std::cout << m_roads->size() << " roads and " << m_trackPoints->size() << " points." << std::endl;
-    // construction of the emissionMatrix
-    for (PointGPS* p : *m_trackPoints) {
-        for (auto& it : *m_roads) {
-            setDistance(p, it.second);
-        }
-    }
+    track.readFromCSV(m_trackFilename);
+    emit signalMessage(QString::fromStdString(track.infos()));
+    grid.readFromCSV(m_gridFilename);
+    emit signalMessage(QString::fromStdString(grid.infos()));
+    grid.buildMarkovMatrix();
+    emit signalMessage("Markov Matrix built");
 }
 
 void Solver::setDistance(PointGPS* p, Road& r)
 {
-    if (DEBUG) {
+    if (DEBUG_SOLVER) {
         std::cout << p->infos() << std::endl;
         r.outputInfos();
     }
@@ -28,9 +26,25 @@ void Solver::setDistance(PointGPS* p, Road& r)
         if (d < bestDistance)
             bestDistance = d;
     }
-    p->addEmissionProbability(r.edgeId(), bestDistance);
+    if (bestDistance < DISTANCE_THRESHOLD) p->addEmissionProbability(r.edgeId(), bestDistance);
 
-    if (DEBUG) {
+    if (DEBUG_SOLVER) {
         std::cout << p->infos() << std::endl;
     }
+}
+
+void Solver::onSignalSetGrid(QString s)
+{
+    m_gridFilename= s;
+}
+
+void Solver::onSignalSetTrack(QString s)
+{
+    m_trackFilename= s;
+}
+
+void Solver::onSignalStart()
+{
+    emit signalMessage("Solver started");
+    start();
 }

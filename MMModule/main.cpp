@@ -1,5 +1,7 @@
 #include <QFileDialog>
 #include <QtGui/QApplication>
+#include <QTimer> // for sleep test
+
 #include <iostream>
 #include <limits.h>
 #include <math.h>
@@ -15,11 +17,51 @@
 #include "journalprocess.h"
 #include "qdebugstream.h"
 #include "solver.h"
+#include "GUI/controller.h"
+
 #include <QTextEdit>
 
+using namespace std;
 
+void dev_thread() {
+    QThread* thread= new QThread();
+    Solver *solver= new Solver();
+    solver->m_gridFilename= "../Data/Seattle/useful_all_network.csv";
+    solver->m_trackFilename= "../Data/Seattle/useful_all_track.csv";
+    solver->moveToThread(thread);
+    thread->start();
+    Controller *controller= new Controller();
+    //QMetaObject::invokeMethod(solver, "onSignalStart");
+    controller->addSolver(solver);
+    controller->connectSignals();
+    controller->m_qMapViewer->resize(500,500);
+    controller->m_qMapViewer->show();
+}
 
-    using namespace std;
+void dev_signals() { // to remove
+    Controller *controller= new Controller();
+    controller->m_qMapViewer->show();
+
+    QString trackFile = "../Data/Seattle/useful_all_track.csv";
+    QString gridFile = "../Data/Seattle/useful_all_network.csv";
+
+    Track track;
+    Grid grid;
+    track.readFromCSV(trackFile);
+    /*
+    controller->graphicEmitter->testMessagePoint(QString("track.outputInfos()"));
+    grid.setBoundingBox(track.m_xMin, track.m_xMax, track.m_yMin, track.m_yMax);
+    //grid.readFromCSVSeattle(gridFile);
+    grid.readFromCSV(gridFile);
+    controller->graphicEmitter->testMessagePoint(QString("grid.outputInfos()"));
+    grid.buildMarkovMatrix();
+    Solver solver(grid.getRoads(), grid.getPoints(), track.getPointsAsPointer());
+    //solver.initialize();
+    //QTimer::singleShot(2000, this, )
+    controller->graphicEmitter->testMessagePoint(QString("solver.outputInfos()"));*/
+    std::cout << "The end." << std::endl;
+}
+
 
 void dev_grid()
 {
@@ -30,12 +72,12 @@ void dev_grid()
     grid.outputInfos();
 }
 
-void dev_all()
+void dev_gridAndTrack()
 {
     // grid.readFromCSV("../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv");
     QString trackFile = "../Data/Seattle/mini_start_track.csv";
     QString gridFile = "../Data/Seattle/mini_start_network.csv";
-    int test = 0;
+    int test = 1;
     switch (test) {
     case 1:
         trackFile = "../Data/Seattle/useful_all_track.csv";
@@ -52,8 +94,9 @@ void dev_all()
     grid.readFromCSV(gridFile);
     grid.outputInfos();
     grid.buildMarkovMatrix();
-    Solver solver(grid.getRoads(), grid.getPoints(), track.getPointsAsPointer());
-    solver.initialize();
+    //Solver solver();
+    //grid.getRoads(), grid.getPoints(), track.getPointsAsPointer());
+    //solver.initialize();
 
     std::cout << "The end." << std::endl;
 }
@@ -74,9 +117,6 @@ void dev_network()
 void dev_openFile()
 {
     /*
-
-    //QApplication app(argc, argv);
-
     //File Test;
     //QString ext = "shp";
 
@@ -108,6 +148,12 @@ int main(int argc, char* argv[])
 {
     QApplication app(argc, argv);
 
+    dev_thread();
+    app.exec();
+    //dev_gridAndTrack();
+
+
+/*
     JournalProcess* process = new JournalProcess();
 
     QTextEdit* logProcess = new QTextEdit(process);
@@ -130,6 +176,6 @@ int main(int argc, char* argv[])
     w.resize(360, 504);
     w.show();
 #endif
-    std::cout << "Tous les cout sont rediriges ici" << endl;
-    return app.exec();
+    std::cout << "Tous les cout sont rediriges ici" << endl;*/
+    return 0;
 }
