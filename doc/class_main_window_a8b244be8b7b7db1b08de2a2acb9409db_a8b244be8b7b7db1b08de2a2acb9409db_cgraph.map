@@ -1,8 +1,0 @@
-<map id="MainWindow::MainWindow" name="MainWindow::MainWindow">
-<area shape="rect" id="node2" href="$class_main_window_a684fe2be6fa67486c75ebddfbbe7d42b.html#a684fe2be6fa67486c75ebddfbbe7d42b" title="MainWindow::createGuiControl\lComponents" alt="" coords="239,5,442,47"/>
-<area shape="rect" id="node3" href="$class_main_window_a10e39f33826503a9967be862a5b27c40.html#a10e39f33826503a9967be862a5b27c40" title="MainWindow::createSubSliding\lWidgets" alt="" coords="239,71,442,112"/>
-<area shape="rect" id="node4" href="$class_main_window_a9b5bcc86b4b159c34a7631e586b7be55.html#a9b5bcc86b4b159c34a7631e586b7be55" title="MainWindow::createSliding\lStackedWidget" alt="" coords="251,136,431,177"/>
-<area shape="rect" id="node5" href="$class_main_window_af3626d206fdb542dc454250f37418d8f.html#af3626d206fdb542dc454250f37418d8f" title="MainWindow::createMainLayout" alt="" coords="237,202,445,229"/>
-<area shape="rect" id="node6" href="$class_main_window_af773488e0b16efe6c0fc67ad348b86b2.html#af773488e0b16efe6c0fc67ad348b86b2" title="MainWindow::createConnections" alt="" coords="233,253,448,279"/>
-<area shape="rect" id="node7" href="$class_main_window_a07d3913b63e49ecb6fd236b59e7819b5.html#a07d3913b63e49ecb6fd236b59e7819b5" title="MainWindow::readyToNext" alt="" coords="496,253,676,279"/>
-</map>
