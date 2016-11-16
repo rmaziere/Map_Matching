@@ -29,7 +29,7 @@ public:
      */
     Track()
         : //m_points(0),
-        m_xMin(std::numeric_limits<double>::max())
+          m_xMin(std::numeric_limits<double>::max())
         , m_xMax(0.0)
         , m_yMin(std::numeric_limits<double>::max())
         , m_yMax(0.0)

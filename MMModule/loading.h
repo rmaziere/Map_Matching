@@ -20,20 +20,26 @@ public:
     Loading();
     ~Loading();
 
+    File fileSHPGrid;
+    File fileSHPTrack;
+    File fileCSVTrack;
+
 public slots:
     void loadFileCSVTrack();
     void loadFileSHPTrack();
     void loadFileGrid();
     void getCountry();
-    void launchFiles();
+
 
 signals:
+    void ready(File, File);
 
 private:
     void country();
     void track();
     void grid();
-    void boutonXY();
+
+    void launchFiles();
 
     QGroupBox* m_country;
     QGroupBox* m_track;
@@ -49,8 +55,7 @@ private:
     QLabel* m_fileGPS;
     QLabel* m_fileGrid;
 
-    QPushButton* m_cancel;
-    QPushButton* m_launch;
+    int nextOk;
 };
 
 #endif // LOADING_H

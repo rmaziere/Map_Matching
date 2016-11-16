@@ -4,9 +4,7 @@ File::File() {}
 
 int File::splitPath(QString fileGlobalPath)
 {
-    if (fileGlobalPath.isEmpty()) {
-        return 1;
-    } else {
+    if (!fileGlobalPath.isEmpty()) {
         QStringList splitter = fileGlobalPath.split(".");
 
         QString pathWithoutExtension = splitter.at(0); //Path +  fileName
@@ -20,8 +18,13 @@ int File::splitPath(QString fileGlobalPath)
 
         fileExtension << splitter.at(1).toLower(); //fileExtension
 
-        return 0;
+    } else {
+        return 1;
     }
+    filePathFirst = filePath.at(0);
+    fileNameFirst = fileName.at(0);
+    fileExtensionFirst = fileExtension.at(0);
+    return 0;
 }
 
 int File::selectFilesToOpen(QString extensionFilter)
@@ -100,6 +103,8 @@ int File::shp2csv(QString geometryType)
                 fileName.replace(i, tempFileName + "_L93");
                 fileExtension.replace(i, "csv");
             }
+            fileNameFirst = fileName.at(0);
+            fileExtensionFirst = fileExtension.at(0);
             return 1;
         }
     } catch (std::exception const& e) {

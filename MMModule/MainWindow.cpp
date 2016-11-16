@@ -19,6 +19,7 @@ MainWindow::~MainWindow()
 void MainWindow::createGuiControlComponents()
 {
     buttonNext = new QPushButton(tr("Next"));
+    buttonNext->setEnabled(false);
     buttonCancel = new QPushButton(tr("Cancel"));
 }
 
@@ -39,27 +40,21 @@ void MainWindow::createMainLayout()
 
 void MainWindow::createSubSlidingWidgets()
 {
-    slideWidget1 = new QWidget();
-    slideWidget2 = new QWidget();
+    slideWidget1 = new Loading();
+    slideWidget2 = new Filtering();
     slideWidget3 = new QWidget();
-    slideWidget4 = new Filtering();
+    slideWidget4 = new QWidget();
 
-    QVBoxLayout* slideWidget1layout = new QVBoxLayout();
-    slideWidget1->setLayout(slideWidget1layout);
-    QVBoxLayout* slideWidget2layout = new QVBoxLayout();
-    slideWidget2->setLayout(slideWidget2layout);
+    QVBoxLayout* slideWidget4layout = new QVBoxLayout();
+    slideWidget4->setLayout(slideWidget4layout);
     QVBoxLayout* slideWidget3layout = new QVBoxLayout();
     slideWidget3->setLayout(slideWidget3layout);
 
-    QPushButton* b11 = new QPushButton("Qt");
-    slideWidget1layout->addWidget(b11);
-    QPushButton* b12 = new QPushButton("is cool !");
-    slideWidget1layout->addWidget(b12);
 
-    QPushButton* b21 = new QPushButton("Cool");
-    slideWidget2layout->addWidget(b21);
-    QPushButton* b22 = new QPushButton("is Qt !");
-    slideWidget2layout->addWidget(b22);
+    QPushButton* b41 = new QPushButton("Cool");
+    slideWidget4layout->addWidget(b41);
+    QPushButton* b42 = new QPushButton("is Qt !");
+    slideWidget4layout->addWidget(b42);
 
     QPushButton* b31 = new QPushButton("Isn't");
     slideWidget3layout->addWidget(b31);
@@ -78,6 +73,31 @@ void MainWindow::createSlidingStackedWidget()
 
 void MainWindow::createConnections()
 {
-    QObject::connect(buttonNext, SIGNAL(pressed()), slidingStacked, SLOT(slideInNext()));
+    QObject::connect(slideWidget1, SIGNAL(ready(File, File)), this, SLOT(readyToNext1(File, File)));
+    //QObject::connect(slideWidget2, SIGNAL(ready()), this, SLOT(readyToNext2()));
+    QObject::connect(buttonNext, SIGNAL(clicked()), slidingStacked, SLOT(slideInNext()));
     QObject::connect(buttonCancel, SIGNAL(clicked()), qApp, SLOT(quit()));
 }
+
+void MainWindow::readyToNext1(File file1, File file2)
+{
+    File fileTrack = file1;
+    File fileGrid = file2;
+    QString fileT = fileTrack.filePath.at(0) + fileTrack.fileName.at(0) + "." + fileTrack.fileExtension.at(0);
+    QString fileG = fileGrid.filePath.at(0) + fileGrid.fileName.at(0) + "." + fileGrid.fileExtension.at(0);
+
+    trace.readFromCSV(fileT);
+    grille.setBoundingBox(trace.m_xMin, trace.m_xMax, trace.m_yMin, trace.m_yMax);
+    grille.readFromCSV(fileG);
+
+    if (!grille.trackInGrid())
+    {
+        QMessageBox::warning(this, "Erreur de fichiers", "Attention, l'emprise des données de correspond pas !");
+    }
+    else
+    {
+        buttonNext->setEnabled(true);
+    }
+
+}
+

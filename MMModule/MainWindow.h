@@ -11,6 +11,10 @@
 
 #include "SlidingStackedWidget.h"
 #include "filtering.h"
+#include "loading.h"
+
+#include "track.h"
+#include "grid.h"
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -18,6 +22,9 @@ class MainWindow : public QMainWindow {
 public:
     MainWindow(QWidget* parent = 0);
     ~MainWindow();
+
+public slots:
+    void readyToNext1(File file1, File file2);
 
 protected:
     void createGuiControlComponents();
@@ -32,10 +39,17 @@ protected:
     QVBoxLayout* mainLayout;
     QGridLayout* controlPaneLayout;
     QWidget* centralWidget;
-    QWidget* slideWidget1;
-    QWidget* slideWidget2;
+    Loading* slideWidget1;
+    Filtering* slideWidget2;
     QWidget* slideWidget3;
-    Filtering* slideWidget4;
+    QWidget* slideWidget4;
+
+    /**
+     * @brief Value of the first Slide
+     */
+    Track trace;
+    Grid grille;
+
 };
 
 #endif // MAINWINDOW_H

@@ -13,11 +13,11 @@ using namespace std;
 #define DEBUG_ADDROAD false
 
 Grid::Grid()
-    : m_xMin(0.0)
-    , m_xMax(std::numeric_limits<double>::max())
-    , m_yMin(0.0)
-    , m_yMax(std::numeric_limits<double>::max())
-    , m_xMinGrid(std::numeric_limits<double>::max())
+    : /*m_xMin(std::numeric_limits<double>::max())
+    , m_xMax(0.0)
+    , m_yMin(std::numeric_limits<double>::max())
+    , m_yMax(0.0)
+    ,*/ m_xMinGrid(std::numeric_limits<double>::max())
     , m_xMaxGrid(0.0)
     , m_yMinGrid(std::numeric_limits<double>::max())
     , m_yMaxGrid(0.0)
