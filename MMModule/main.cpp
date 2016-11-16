@@ -110,15 +110,24 @@ void dev_file(){
 }
 
 void dev_img(){
-    Map m(100, 100);
-    m.draw();
-    m.save("/home/rmaziere/DEV/QImage_TP/img_2.png");
+    vector<vector<double>> poly;
+
+    for(int i = 0; i <= 1000; i+= 150){
+        double x = i + 25;
+        double y = i * 0.65 + 50;
+        vector<double> coordinates;
+        coordinates.push_back(x);
+        coordinates.push_back(y);
+        poly.push_back(coordinates);
+    }
+
+    Map m(1280, 1024);
+    //m.draw();
+    m.makePolyline(poly);
+    m.save("/tmp/test.png");
 }
 
-int main(int argc, char* argv[])
-{
-    QApplication app(argc, argv);
-
+void dev_ui(){
     JournalProcess* process = new JournalProcess();
 
     QTextEdit* logProcess = new QTextEdit(process);
@@ -142,5 +151,19 @@ int main(int argc, char* argv[])
     w.show();
 #endif
     std::cout << "Tous les cout sont rediriges ici" << endl;
+}
+
+
+/****************************************************************************/
+/*** Pas de code dans le main, seulement l'appel d'une fonction ci-dessus ***/
+/****************************************************************************/
+
+int main(int argc, char* argv[])
+{
+    QApplication app(argc, argv);
+
+    //Fonction à exécuter ci-dessous :
+    dev_img();
+
     return app.exec();
 }
