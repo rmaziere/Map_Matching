@@ -4,6 +4,8 @@
 #include <limits.h>
 #include <math.h>
 #include <vector>
+#include <stdio.h>
+//#include <QLabel>
 
 #include "myexception.h"
 #include "file.h"
@@ -144,6 +146,11 @@ void dev_img(){
 
     m.landmarkMaker(200);
 
+    QLabel *myLabel = new QLabel();
+    myLabel->setPixmap(QPixmap::fromImage(m.img));
+
+    myLabel->show();
+
     m.save("/tmp/test.png");
 
     cout << "width : " << m.width << endl;
@@ -192,6 +199,6 @@ int main(int argc, char* argv[])
 
     cout << "Fonction terminée !" << endl;
 
-    //return app.exec();
-    return app.closingDown();
+    return app.exec();
+    //return app.closingDown();
 }
