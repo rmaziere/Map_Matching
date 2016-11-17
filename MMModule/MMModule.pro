@@ -31,7 +31,6 @@ SOURCES += main.cpp \
     filtering.cpp \
     MainWindow.cpp \
     SlidingStackedWidget.cpp \
-    journalprocess.cpp \
     GUI/controller.cpp \
     GUI/graphicemitter.cpp \
     GUI/qprocessviewer.cpp \
@@ -58,7 +57,6 @@ HEADERS += \
     filtering.h \
     SlidingStackedWidget.h \
     MainWindow.h \
-    journalprocess.h \
     GUI/controller.h \
     GUI/graphicemitter.h \
     GUI/qprocessviewer.h \
