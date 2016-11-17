@@ -42,7 +42,7 @@ public:
 
 public slots:
     // Slot called when the plugin is launched
-    int run(int argc, char *argv[]);
+    void run();
 
 private:
     QgisInterface * m_GISInterface; // GIS interface

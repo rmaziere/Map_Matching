@@ -2,7 +2,6 @@ TEMPLATE = lib
 
 CONFIG = qt
 CONFIG += c++11
-CONFIG -= console app_bundle
 
 QT += xml widgets
 QT += core
