@@ -1,6 +1,7 @@
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 
+#include "qprocessviewer.h"
 #include "qmapviewer.h"
 #include "solver.h"
 #include <QObject>
@@ -14,6 +15,7 @@ public:
     void connectSignals();
 
     Solver* m_solver;
+    QProcessViewer* m_qProcessViewer;
     QMapViewer* m_qMapViewer;
 
 signals:

@@ -48,34 +48,10 @@ void dev_thread()
     //QMetaObject::invokeMethod(solver, "onSignalStart");
     controller->addSolver(solver);
     controller->connectSignals();
-    controller->m_qMapViewer->resize(500, 500);
-    controller->m_qMapViewer->show();
+    controller->m_qProcessViewer->resize(500, 500);
+    controller->m_qProcessViewer->show();
 }
 
-void dev_signals()
-{ // to remove
-    Controller* controller = new Controller();
-    controller->m_qMapViewer->show();
-
-    QString trackFile = "../Data/Seattle/useful_all_track.csv";
-    QString gridFile = "../Data/Seattle/useful_all_network.csv";
-
-    Track track;
-    Grid grid;
-    track.readFromCSV(trackFile);
-    /*
-    controller->graphicEmitter->testMessagePoint(QString("track.outputInfos()"));
-    grid.setBoundingBox(track.m_xMin, track.m_xMax, track.m_yMin, track.m_yMax);
-    //grid.readFromCSVSeattle(gridFile);
-    grid.readFromCSV(gridFile);
-    controller->graphicEmitter->testMessagePoint(QString("grid.outputInfos()"));
-    grid.buildMarkovMatrix();
-    Solver solver(grid.getRoads(), grid.getPoints(), track.getPointsAsPointer());
-    //solver.initialize();
-    //QTimer::singleShot(2000, this, )
-    controller->graphicEmitter->testMessagePoint(QString("solver.outputInfos()"));*/
-    std::cout << "The end." << std::endl;
-}
 
 void dev_grid()
 {
@@ -115,37 +91,6 @@ void dev_gridAndTrack()
     std::cout << "The end." << std::endl;
 }
 
-void dev_network()
-{
-    /*grid myNetwork;
-    myNetwork.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
-    cout << myNetwork.m_road.size() << endl;
-
-    for (size_t i = 0; i < myNetwork.m_road.size(); ++i) {
-        cout << myNetwork.m_road[i]->getListOfPoints().size() << endl;
-        cout << myNetwork.m_road[i]->getListOfPoints()[0]->m_x << endl;
-    }*/
-}
-
-void dev_openFile()
-{
-    /*
-    //File Test;
-    //QString ext = "shp";
-
-    //Test.selectFilesToOpen(argc, argv, ext);
-    //Test.shp2csv();
-    Test.whereSave();
-    for (int i = 0; i < Test.filePath.size(); ++i){
-        QString tempFilePath = Test.filePath.at(i);
-        QString tempFileName = Test.fileName.at(i);
-        QString tempFileExtension = Test.fileExtension.at(i);
-        cout << tempFilePath.toStdString() << " - "
-             << tempFileName.toStdString() << " - "
-             << tempFileExtension.toStdString() << endl;
-    }
-    //return app.exec();*/
-}
 void ui()
 {
     Loading fenetre;
@@ -228,12 +173,9 @@ void dev_ui2()
     MainWindow w;
     w.setWindowTitle("Map Matching");
 
-#ifdef Q_OS_SYMBIAN
-    w.showMaximized();
-#else
     w.resize(360, 504);
     w.show();
-#endif
+
 }
 
 /****************************************************************************/
@@ -244,20 +186,8 @@ int main(int argc, char* argv[])
 {
     QApplication app(argc, argv);
 
-    //Fonction à exécuter ci-dessous :
     //dev_img();
-    /********************************************************************************/
-    //Fenetre non enlevable
-    /********************************************************************************/
-    MainWindow w;
-    w.setWindowTitle("Map Matching");
-    w.resize(360, 504);
-    w.show();
-
-    std::cout << "Tous les cout sont rediriges ici" << endl;
-
-    cout << "Fonction terminée !" << endl;
-
+    dev_thread();
     return app.exec();
     //return app.closingDown();
 }

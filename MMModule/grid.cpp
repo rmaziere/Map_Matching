@@ -188,8 +188,7 @@ void Grid::readFromCSV(QString filename)
                 addRoad(listOfCoordinates, edgeId);
         }
     }
-    // m_mapOfExtPoints.clear(); // TODO remove comment, and DO clear map
-    cout << "Fichier lu" << endl;
+    // m_mapOfExtPoints.clear(); // TODO remove comment, and DO clear map (kept for test)
 }
 
 void Grid::addRoad(const vector<vector<double> >& listOfCoordinates, long edgeId)
