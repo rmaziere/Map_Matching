@@ -34,18 +34,9 @@ void GeomaticsProjet::initGui()
    m_GISInterface->addPluginToMenu(tr("&Geomatics projet"), m_action);
 }
 
-int GeomaticsProjet::run(int argc, char *argv[])
+void GeomaticsProjet::run()
 {
     QgsMessageLog::instance()->logMessage("Geomatics projet launched", "Geomatics projet", QgsMessageLog::INFO);
-/*
-    QApplication app(argc, argv);
-
-    Loading fenetre;
-    // affichage de la fenetre
-    fenetre.show();
-
-    return app.exec();*/
-    return 0;
 }
 
 void GeomaticsProjet::unload()
