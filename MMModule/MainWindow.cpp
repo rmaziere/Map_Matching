@@ -64,6 +64,7 @@ void MainWindow::createSlidingStackedWidget()
 void MainWindow::createConnections()
 {
     QObject::connect(slideWidget1, SIGNAL(ready(File, File)), this, SLOT(readyToNext1(File, File)));
+    QObject::connect(slideWidget1, SIGNAL(ready(File,File)), slideWidget2, SLOT(getInfo(File,File)));
     //QObject::connect(slideWidget2, SIGNAL(ready()), this, SLOT(readyToNext2()));
     QObject::connect(buttonNext, SIGNAL(clicked()), slidingStacked, SLOT(slideInNext()));
     QObject::connect(buttonCancel, SIGNAL(clicked()), qApp, SLOT(quit()));

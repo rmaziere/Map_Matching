@@ -31,6 +31,7 @@ void Filtering::temporal()
     m_slidTemp->setRange(0, 90);
 
     QObject::connect(m_slidTemp, SIGNAL(valueChanged(int)), m_valueTemp, SLOT(display(int)));
+    QObject::connect(m_slidTemp, SIGNAL(valueChanged(int)), this, SLOT(launchFiltreTemp(int)));
 
     QHBoxLayout* vbox = new QHBoxLayout;
     vbox->addWidget(m_valueTemp);
@@ -49,7 +50,7 @@ void Filtering::spatial()
     m_slidSpat->setRange(0, 10);
 
     QObject::connect(m_slidSpat, SIGNAL(valueChanged(int)), m_valueSpat, SLOT(display(int)));
-    //QObject::connect(m_valueSpat, SIGNAL(valueChanged(int)), this, SLOT(launchFiltre(int)));
+    QObject::connect(m_slidSpat, SIGNAL(valueChanged(int)), this, SLOT(launchFiltreSpat(int)));
 
     QHBoxLayout* vbox = new QHBoxLayout;
     vbox->addWidget(m_valueSpat);
@@ -60,15 +61,26 @@ void Filtering::spatial()
 void Filtering::nbPtTrack()
 {
     m_nbPtTrack = new QLabel();
-    m_nbPtTrack->setText("Your track had 0 GPS points.");
+    //m_nbPtTrack->setText((QString("Your track had ") + QString::number(m_ptTrack)) + " GPS points.");
 }
 
-void Filtering::launchFiltre(int i)
+void Filtering::launchFiltreSpat(int i)
 {
-    std::cout << i;
-    /*if (true)
-        if (true)
-            emit ready();
-        else
-            emit ready();*/
+    m_filtreSpat = i;
+}
+
+void Filtering::launchFiltreTemp(int i)
+{
+    m_filtreTemp = i;
+}
+
+void Filtering::getInfo(File fileT, File fileG)
+{
+    QString file = fileT.filePath.at(0) + fileT.fileName.at(0) + "." + fileT.fileExtension.at(0);
+    Track trace;
+    trace.readFromCSV(file);
+    m_ptTrack = trace.getPoints().size();
+    cout << m_ptTrack;
+
+    m_nbPtTrack->setText((QString("Your track had ") + QString::number(m_ptTrack)) + " GPS points.");
 }

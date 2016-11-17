@@ -13,6 +13,7 @@
 #include <QWidget>
 
 #include "track.h"
+#include "file.h"
 
 class Filtering : public QWidget {
     Q_OBJECT
@@ -21,7 +22,9 @@ public:
     ~Filtering();
 
 public slots:
-    void launchFiltre(int);
+    void launchFiltreSpat(int);
+    void launchFiltreTemp(int);
+    void getInfo(File fileT, File fileG);
 
 signals:
     void ready();
@@ -40,6 +43,11 @@ private:
     QSlider* m_slidSpat;
     QLCDNumber* m_valueSpat;
     QLabel* m_nbPtTrack;
+
+    int m_ptTrack;
+
+    int m_filtreSpat = 0;
+    int m_filtreTemp = 0;
 };
 
 #endif // FILTERING_H
