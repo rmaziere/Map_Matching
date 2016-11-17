@@ -55,7 +55,7 @@ void Filtering::spatial()
     m_valueSpat->setSegmentStyle(QLCDNumber::Flat);
 
     m_slidSpat = new QSlider(Qt::Horizontal);
-    m_slidSpat->setRange(0, 10);
+    m_slidSpat->setRange(0, 1000);
 
     m_boutonSpat = new QPushButton("Ok");
     m_boutonSpat->setCheckable(true);
@@ -75,17 +75,7 @@ void Filtering::nbPtTrack()
 {
     m_nbPtTrack = new QLabel();
 }
-/*
-void Filtering::launchFiltreSpat(int i)
-{
-    m_filtreSpat = i/100;
-}
 
-void Filtering::launchFiltreTemp(int i)
-{
-    m_filtreTemp = i;
-}
-*/
 void Filtering::getInfo(File fileT)
 {
     QString file = fileT.filePath.at(0) + fileT.fileName.at(0) + "." + fileT.fileExtension.at(0);

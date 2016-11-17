@@ -22,8 +22,6 @@ public:
     ~Filtering();
 
 public slots:
-    //void launchFiltreSpat(int);
-    //void launchFiltreTemp(int);
     void getInfo(File fileT);
     void launchFiltre();
 

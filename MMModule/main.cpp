@@ -168,14 +168,14 @@ l: _ZTV6
 
 void dev_ui2()
 {
-    /*
+
     //Fenetre non enlevable
     MainWindow *w = new MainWindow();
-    w->setWindowTl: _ZTV6itle("Map Matching");
+    w->setWindowTitle("Map Matching");
 
     w->resize(360, 504);
     w->show();
-*/
+
 }
 
 /****************************************************************************/
@@ -187,8 +187,8 @@ int main(int argc, char* argv[])
     QApplication app(argc, argv);
 
     //dev_img();
-    dev_thread();
-    //dev_ui2();
+    //dev_thread();
+    dev_ui2();
     return app.exec();
     //return app.closingDown();
 }
