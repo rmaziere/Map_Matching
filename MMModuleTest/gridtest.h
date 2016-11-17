@@ -52,16 +52,17 @@ TEST_F(GridTest, LoadRoadFromFile)
     EXPECT_EQ(5, grid.getNoOfPoints());
 }
 
-TEST_F(GridTest, LoadPointsFromFile)    // TODO revoir le test
+TEST_F(GridTest, LoadPointsFromFile)
 {
-/*    Grid myGrid;
+    Grid myGrid;
     myGrid.setBoundingBox(0,std::numeric_limits<double>::max(),0,std::numeric_limits<double>::max());
     myGrid.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
-    EXPECT_EQ(10, myGrid.m_road[0]->getListOfPoints().size());
-    EXPECT_EQ(4, myGrid.m_road[1]->getListOfPoints().size());
-
-    EXPECT_DOUBLE_EQ(1534446.378026439808309, myGrid.m_road[0]->getListOfPoints()[0]->x());
-    EXPECT_DOUBLE_EQ(330422.365724511211738, myGrid.m_road[0]->getListOfPoints()[0]->y());*/
+    EXPECT_EQ(2, myGrid.getRoads()[0].size());
+    EXPECT_DOUBLE_EQ(14, myGrid.getPoints()[0].size());
+    EXPECT_DOUBLE_EQ(1534446.378026439808309, myGrid.getPoints()[0][0].x());
+    EXPECT_DOUBLE_EQ(330422.365724511211738, myGrid.getPoints()[0][0].y());
+    EXPECT_DOUBLE_EQ(1534494.241580214584246, myGrid.getPoints()[0][1].x());
+    EXPECT_DOUBLE_EQ(330574.840771912015043, myGrid.getPoints()[0][1].y());
 }
 
 TEST_F(GridTest, Neighbours)
