@@ -1,0 +1,6 @@
+<map id="Grid::xMaxGrid" name="Grid::xMaxGrid">
+<area shape="rect" id="node2" href="$class_grid.html#a8d8b7fa0ee20d81f130a46d80fc2a018" title="Check if track is in grid. " alt="" coords="164,5,283,32"/>
+<area shape="rect" id="node3" href="$class_main_window.html#ad39bbe8ced0d3248206ac0ca6c444d55" title="MainWindow::readyToNext1" alt="" coords="331,5,517,32"/>
+<area shape="rect" id="node4" href="$class_main_window.html#af773488e0b16efe6c0fc67ad348b86b2" title="MainWindow::createConnections" alt="" coords="565,5,780,32"/>
+<area shape="rect" id="node5" href="$class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="828,5,1008,32"/>
+</map>

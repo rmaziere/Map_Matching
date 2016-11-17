@@ -1,0 +1,4 @@
+<map id="Point" name="Point">
+<area shape="rect" id="node2" href="$class_point_g_p_s.html" title="{PointGPS\n|# m_altitude\l# m_emissionProbability\l# m_timeStamp\l|+ addEmissionProbability()\l+ altitude()\l+ infos()\l+ PointGPS()\l+ PointGPS()\l+ timeStamp()\l}" alt="" coords="5,365,184,545"/>
+<area shape="rect" id="node3" href="$class_point_road.html" title="{PointRoad\n|# m_id\l# m_isNode\l# m_vectorOfRoadId\l# counter\l|+ id()\l+ infos()\l+ isNode()\l+ outputInfos()\l+ PointRoad()\l+ PointRoad()\l+ setid()\l+ updateBelongToRoad()\l+ vectorOfRoadId()\l}" alt="" coords="209,336,375,575"/>
+</map>

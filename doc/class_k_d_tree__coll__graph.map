@@ -1,0 +1,5 @@
+<map id="KDTree" name="KDTree">
+<area shape="rect" id="node2" href="$class_box_node.html" title="{BoxNode\n|+ m_daughterBox1\l+ m_daughterBox2\l+ m_indexOfLowerPoint\l+ m_indexOfUpperPoint\l+ m_motherBox\l|+ BoxNode()\l+ BoxNode()\l}" alt="" coords="5,597,168,748"/>
+<area shape="rect" id="node3" href="$class_box.html" title="{Box\n||+ Box()\l+ Box()\l+ distanceToPoint()\l}" alt="" coords="33,365,169,472"/>
+<area shape="rect" id="node4" href="$class_point.html" title="The Point class. " alt="" coords="82,5,241,288"/>
+</map>
