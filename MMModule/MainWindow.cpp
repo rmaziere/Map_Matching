@@ -21,6 +21,12 @@ void MainWindow::createGuiControlComponents()
     buttonNext = new QPushButton(tr("Next"));
     buttonNext->setEnabled(false);
     buttonCancel = new QPushButton(tr("Cancel"));
+    //thread = new QThread();
+    solver = new Solver();
+    //solver->moveToThread(thread);
+    //thread->start();
+    controller = new Controller();
+    controller->addSolver(solver);
 }
 
 void MainWindow::createMainLayout()
@@ -64,7 +70,7 @@ void MainWindow::createSlidingStackedWidget()
 void MainWindow::createConnections()
 {
     QObject::connect(slideWidget1, SIGNAL(ready(File, File)), this, SLOT(readyToNext1(File, File)));
-    QObject::connect(slideWidget1, SIGNAL(ready(File,File)), slideWidget2, SLOT(getInfo(File,File)));
+    QObject::connect(slideWidget1, SIGNAL(readyNext(File)), slideWidget2, SLOT(getInfo(File)));
     QObject::connect(slideWidget2, SIGNAL(ready(double, int)), this, SLOT(readyToNext2(double, int)));
     QObject::connect(buttonNext, SIGNAL(clicked()), slidingStacked, SLOT(slideInNext()));
     QObject::connect(buttonNext, SIGNAL(clicked()), this, SLOT(putNone()));

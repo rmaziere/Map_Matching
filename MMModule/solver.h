@@ -18,7 +18,7 @@ typedef std::vector<PointGPS*> AllPointVector;
 class Solver : public QObject {
     Q_OBJECT
 public:
-    explicit Solver() {}
+    explicit Solver(QObject *parent=0) ;
     /*
     explicit Solver(AllRoadMap* gridRoad, std::vector<PointRoad>* roadPoints, AllPointVector* trackPoint)
         : m_roads(gridRoad)

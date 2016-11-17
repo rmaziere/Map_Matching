@@ -38,7 +38,6 @@ void Track::readFromCSV(QString filename)
     for (uint i = 0; i < correspondance.size(); ++i) {
         correspondance[i] = -1;
     }
-
     // Read header
     if (file.good()) {
         // Read the line
