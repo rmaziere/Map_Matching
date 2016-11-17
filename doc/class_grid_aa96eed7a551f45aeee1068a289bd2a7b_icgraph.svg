@@ -61,7 +61,7 @@ var sectionId = 'dynsection-20';
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="class_grid.html#a8d8b7fa0ee20d81f130a46d80fc2a018" target="_top" xlink:title="trackInGrid ">
+<g id="a_node2"><a xlink:href="class_grid.html#a8d8b7fa0ee20d81f130a46d80fc2a018" target="_top" xlink:title="Check if track is in grid. ">
 <polygon fill="none" stroke="black" points="116,-0.5 116,-19.5 205,-19.5 205,-0.5 116,-0.5"/>
 <text text-anchor="middle" x="160.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Grid::trackInGrid</text>
 </a>

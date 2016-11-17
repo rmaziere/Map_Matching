@@ -24,12 +24,12 @@ var files =
     [ "filtering.h", "filtering_8h.html", [
       [ "Filtering", "class_filtering.html", "class_filtering" ]
     ] ],
+    [ "graphicemitter.cpp", "graphicemitter_8cpp.html", null ],
+    [ "graphicemitter.h", "graphicemitter_8h.html", [
+      [ "GraphicEmitter", "class_graphic_emitter.html", "class_graphic_emitter" ]
+    ] ],
     [ "grid.cpp", "grid_8cpp.html", "grid_8cpp" ],
     [ "grid.h", "grid_8h.html", "grid_8h" ],
-    [ "journalprocess.cpp", "journalprocess_8cpp.html", null ],
-    [ "journalprocess.h", "journalprocess_8h.html", [
-      [ "JournalProcess", "class_journal_process.html", "class_journal_process" ]
-    ] ],
     [ "kdtree.cpp", "kdtree_8cpp.html", "kdtree_8cpp" ],
     [ "kdtree.h", "kdtree_8h.html", [
       [ "KDTree", "class_k_d_tree.html", "class_k_d_tree" ]
@@ -48,10 +48,6 @@ var files =
     [ "MainWindow.h", "_main_window_8h.html", [
       [ "MainWindow", "class_main_window.html", "class_main_window" ]
     ] ],
-    [ "map.cpp", "map_8cpp.html", null ],
-    [ "map.h", "map_8h.html", [
-      [ "Map", "class_map.html", "class_map" ]
-    ] ],
     [ "myexception.h", "myexception_8h.html", [
       [ "MyException", "class_my_exception.html", "class_my_exception" ]
     ] ],
@@ -61,12 +57,13 @@ var files =
     [ "pointGPS.h", "point_g_p_s_8h.html", "point_g_p_s_8h" ],
     [ "pointroad.cpp", "pointroad_8cpp.html", null ],
     [ "pointroad.h", "pointroad_8h.html", "pointroad_8h" ],
-    [ "qdebugstream.h", "qdebugstream_8h.html", [
-      [ "QDebugStream", "class_q_debug_stream.html", "class_q_debug_stream" ]
-    ] ],
     [ "qmapviewer.cpp", "qmapviewer_8cpp.html", null ],
     [ "qmapviewer.h", "qmapviewer_8h.html", [
       [ "QMapViewer", "class_q_map_viewer.html", "class_q_map_viewer" ]
+    ] ],
+    [ "qprocessviewer.cpp", "qprocessviewer_8cpp.html", null ],
+    [ "qprocessviewer.h", "qprocessviewer_8h.html", [
+      [ "QProcessViewer", "class_q_process_viewer.html", "class_q_process_viewer" ]
     ] ],
     [ "road.cpp", "road_8cpp.html", null ],
     [ "road.h", "road_8h.html", [

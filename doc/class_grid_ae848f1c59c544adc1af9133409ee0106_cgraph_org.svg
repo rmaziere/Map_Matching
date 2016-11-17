@@ -15,7 +15,7 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<g id="a_node2"><a xlink:href="class_grid.html#a6b6af4fb2545b398b47794de576f15f5" target="_top" xlink:title="inFootPrint Test if a point is in the defined area of a track ">
+<g id="a_node2"><a xlink:href="class_grid.html#a6b6af4fb2545b398b47794de576f15f5" target="_top" xlink:title="Test if a point is in the defined area of a track. ">
 <polygon fill="none" stroke="black" points="139,-190.5 139,-209.5 227,-209.5 227,-190.5 139,-190.5"/>
 <text text-anchor="middle" x="183" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">Grid::inFootPrint</text>
 </a>
@@ -28,7 +28,7 @@
 </g>
 <!-- Node3 -->
 <g id="node3" class="node"><title>Node3</title>
-<g id="a_node3"><a xlink:href="class_grid.html#a58233ab60f7477144af334f205606aa4" target="_top" xlink:title="updateGrid Find max and min of the grid ">
+<g id="a_node3"><a xlink:href="class_grid.html#a58233ab60f7477144af334f205606aa4" target="_top" xlink:title="Find max and min of the grid. ">
 <polygon fill="none" stroke="black" points="139,-152.5 139,-171.5 227,-171.5 227,-152.5 139,-152.5"/>
 <text text-anchor="middle" x="183" y="-159.5" font-family="Helvetica,sans-Serif" font-size="10.00">Grid::updateGrid</text>
 </a>
@@ -41,7 +41,7 @@
 </g>
 <!-- Node4 -->
 <g id="node4" class="node"><title>Node4</title>
-<g id="a_node4"><a xlink:href="class_grid.html#aba1830bc145f128d6deeed29cfb94c9f" target="_top" xlink:title="addRoad Creates a new road and inserts it in m_road ">
+<g id="a_node4"><a xlink:href="class_grid.html#aba1830bc145f128d6deeed29cfb94c9f" target="_top" xlink:title="Creates a new road and inserts it in m_road. ">
 <polygon fill="none" stroke="black" points="143,-114.5 143,-133.5 223,-133.5 223,-114.5 143,-114.5"/>
 <text text-anchor="middle" x="183" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">Grid::addRoad</text>
 </a>

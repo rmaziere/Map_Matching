@@ -93,7 +93,7 @@ var sectionId = 'dynsection-1';
 <polygon fill="none" stroke="black" points="1.5,-288.5 1.5,-499.5 120.5,-499.5 120.5,-288.5 1.5,-288.5"/>
 <text text-anchor="middle" x="61" y="-487.5" font-family="Helvetica,sans-Serif" font-size="10.00">Point</text>
 <polyline fill="none" stroke="black" points="1.5,-480.5 120.5,-480.5 "/>
-<text text-anchor="middle" x="61" y="-468.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<text text-anchor="start" x="9.5" y="-468.5" font-family="Helvetica,sans-Serif" font-size="10.00"># POINT_RADIUS</text>
 <polyline fill="none" stroke="black" points="1.5,-461.5 120.5,-461.5 "/>
 <text text-anchor="start" x="9.5" y="-449.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ distanceToPoint()</text>
 <text text-anchor="start" x="9.5" y="-438.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ distanceToSegment()</text>

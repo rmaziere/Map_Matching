@@ -10,6 +10,7 @@ var class_loading =
     [ "loadFileGrid", "class_loading.html#a84d718939a74cf1680ea3e2409324194", null ],
     [ "loadFileSHPTrack", "class_loading.html#a9a01f3e328100b681f3f08192fc9b208", null ],
     [ "ready", "class_loading.html#a93ce5ebbd8eb3ea2438942bc7d4a706b", null ],
+    [ "readyNext", "class_loading.html#aa1efa9ef3bdd0368afbdd5f99b2bc30a", null ],
     [ "track", "class_loading.html#ab603e821bd6b047fb04285e926974ff6", null ],
     [ "fileCSVTrack", "class_loading.html#a261ca1f2ce72cbb2b76613e7e4ab6938", null ],
     [ "fileSHPGrid", "class_loading.html#a2942b2d8e7f14ce51a02d8daca20d6cc", null ],

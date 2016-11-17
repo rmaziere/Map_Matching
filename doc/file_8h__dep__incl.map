@@ -1,8 +1,10 @@
 <map id="file.h" name="file.h">
-<area shape="rect" id="node2" href="$file_8cpp.html" title="file.cpp" alt="" coords="5,80,69,107"/>
-<area shape="rect" id="node3" href="$loading_8h.html" title="loading.h" alt="" coords="173,80,248,107"/>
-<area shape="rect" id="node5" href="$main_8cpp.html" title="main.cpp" alt="" coords="120,229,195,256"/>
-<area shape="rect" id="node4" href="$loading_8cpp.html" title="loading.cpp" alt="" coords="195,155,283,181"/>
-<area shape="rect" id="node6" href="$_main_window_8h.html" title="MainWindow.h" alt="" coords="307,155,415,181"/>
-<area shape="rect" id="node7" href="$_main_window_8cpp.html" title="MainWindow.cpp" alt="" coords="300,229,423,256"/>
+<area shape="rect" id="node2" href="$file_8cpp.html" title="file.cpp" alt="" coords="43,80,107,107"/>
+<area shape="rect" id="node3" href="$filtering_8h.html" title="filtering.h" alt="" coords="131,80,206,107"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title="main.cpp" alt="" coords="242,229,317,256"/>
+<area shape="rect" id="node8" href="$loading_8h.html" title="loading.h" alt="" coords="230,80,305,107"/>
+<area shape="rect" id="node4" href="$filtering_8cpp.html" title="filtering.cpp" alt="" coords="5,155,95,181"/>
+<area shape="rect" id="node5" href="$_main_window_8h.html" title="MainWindow.h" alt="" coords="119,155,227,181"/>
+<area shape="rect" id="node7" href="$_main_window_8cpp.html" title="MainWindow.cpp" alt="" coords="95,229,218,256"/>
+<area shape="rect" id="node9" href="$loading_8cpp.html" title="loading.cpp" alt="" coords="302,155,390,181"/>
 </map>

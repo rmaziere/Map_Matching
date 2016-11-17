@@ -4,6 +4,7 @@ var searchData=
   ['addneighbor',['addNeighbor',['../class_road.html#a0ee0c86e07844910fddaee0d1df9b619',1,'Road']]],
   ['addpoint',['addPoint',['../class_road.html#a7f97b4f20c598103baad510b19a0c0b5',1,'Road::addPoint()'],['../class_track.html#ab0315e74b9b49e40d163a2ff978d833c',1,'Track::addPoint()']]],
   ['addroad',['addRoad',['../class_grid.html#aba1830bc145f128d6deeed29cfb94c9f',1,'Grid']]],
+  ['addsolver',['addSolver',['../class_controller.html#ab8e345d91e901e46e0ad42a0b75ef94c',1,'Controller']]],
   ['allpointvector',['AllPointVector',['../solver_8h.html#a02e6dd83095d393f9b66c6213e30256e',1,'solver.h']]],
   ['allroadmap',['AllRoadMap',['../grid_8h.html#ac56897dddd132e4c97d442b506be559c',1,'AllRoadMap():&#160;grid.h'],['../solver_8h.html#ac56897dddd132e4c97d442b506be559c',1,'AllRoadMap():&#160;solver.h']]],
   ['alt_5fdefault',['ALT_DEFAULT',['../point_g_p_s_8h.html#aa352a9f40e9c044c83b1fef99e7ca0c6',1,'pointGPS.h']]],

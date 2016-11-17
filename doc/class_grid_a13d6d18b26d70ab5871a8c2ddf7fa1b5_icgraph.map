@@ -1,7 +1,7 @@
 <map id="Grid::xMin" name="Grid::xMin">
-<area shape="rect" id="node2" href="$class_grid.html#a19318437702e712955d0c4631c94cb04" title="setZone Save data about our area of roads " alt="" coords="136,5,285,32"/>
-<area shape="rect" id="node7" href="$class_grid.html#a8d8b7fa0ee20d81f130a46d80fc2a018" title="trackInGrid " alt="" coords="151,56,270,83"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#a175f97306b953e738471cef90ef0a8a4" title="dev_all" alt="" coords="395,5,458,32"/>
+<area shape="rect" id="node2" href="$class_grid.html#a19318437702e712955d0c4631c94cb04" title="Save data about our area of roads. " alt="" coords="136,5,285,32"/>
+<area shape="rect" id="node7" href="$class_grid.html#a8d8b7fa0ee20d81f130a46d80fc2a018" title="Check if track is in grid. " alt="" coords="151,56,270,83"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a141063eccadf0e03662d414d897d9f5d" title="dev_gridAndTrack" alt="" coords="363,5,490,32"/>
 <area shape="rect" id="node4" href="$class_main_window.html#ad39bbe8ced0d3248206ac0ca6c444d55" title="MainWindow::readyToNext1" alt="" coords="333,56,520,83"/>
 <area shape="rect" id="node5" href="$class_main_window.html#af773488e0b16efe6c0fc67ad348b86b2" title="MainWindow::createConnections" alt="" coords="568,56,783,83"/>
 <area shape="rect" id="node6" href="$class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="831,56,1011,83"/>

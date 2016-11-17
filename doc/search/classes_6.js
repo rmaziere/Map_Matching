@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['journalprocess',['JournalProcess',['../class_journal_process.html',1,'']]]
+  ['kdtree',['KDTree',['../class_k_d_tree.html',1,'']]],
+  ['kdtreeviewer',['KDTreeViewer',['../class_k_d_tree_viewer.html',1,'']]]
 ];

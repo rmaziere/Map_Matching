@@ -108,14 +108,37 @@ $(document).ready(function(){initNavTree('controller_8cpp_source.html','');});
 </div><!--header-->
 <div class="contents">
 <a href="controller_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="controller_8h.html">controller.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="class_controller.html#a95c56822d667e94b031451729ce069a9">    3</a></span>&#160;<a class="code" href="class_controller.html#a95c56822d667e94b031451729ce069a9">Controller::Controller</a>() {}</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_controller.html#ab8e345d91e901e46e0ad42a0b75ef94c">    5</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_controller.html#ab8e345d91e901e46e0ad42a0b75ef94c">Controller::addSolver</a>(<a class="code" href="class_solver.html">Solver</a>* solver)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="class_controller.html#af1b53de5613ec51b3375adbea44696b1">m_solver</a> = solver;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_controller.html#aa92b9a18a88aeb59c53272c3beab2724">   10</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_controller.html#aa92b9a18a88aeb59c53272c3beab2724">Controller::connectSignals</a>()</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_controller.html#a129e056cb6f47177c68e2f1a624949e0">m_qProcessViewer</a> = <span class="keyword">new</span> <a class="code" href="class_q_process_viewer.html">QProcessViewer</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    QObject::connect(<a class="code" href="class_controller.html#af1b53de5613ec51b3375adbea44696b1">m_solver</a>, SIGNAL(signalMessage(QString)), <a class="code" href="class_controller.html#a129e056cb6f47177c68e2f1a624949e0">m_qProcessViewer</a>, SLOT(onSignalMessage(QString)));</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    QObject::connect(<a class="code" href="class_controller.html#a129e056cb6f47177c68e2f1a624949e0">m_qProcessViewer</a>-&gt;<a class="code" href="class_q_process_viewer.html#a5d461b17c4b8059e3be42874ee5adf1a">startSolver</a>, SIGNAL(clicked()), <a class="code" href="class_controller.html#af1b53de5613ec51b3375adbea44696b1">m_solver</a>, SLOT(onSignalStart()));</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<div class="ttc" id="class_controller_html_a95c56822d667e94b031451729ce069a9"><div class="ttname"><a href="class_controller.html#a95c56822d667e94b031451729ce069a9">Controller::Controller</a></div><div class="ttdeci">Controller()</div><div class="ttdef"><b>Definition:</b> <a href="controller_8cpp_source.html#l00003">controller.cpp:3</a></div></div>
+<div class="ttc" id="class_q_process_viewer_html"><div class="ttname"><a href="class_q_process_viewer.html">QProcessViewer</a></div><div class="ttdef"><b>Definition:</b> <a href="qprocessviewer_8h_source.html#l00008">qprocessviewer.h:8</a></div></div>
+<div class="ttc" id="class_controller_html_a129e056cb6f47177c68e2f1a624949e0"><div class="ttname"><a href="class_controller.html#a129e056cb6f47177c68e2f1a624949e0">Controller::m_qProcessViewer</a></div><div class="ttdeci">QProcessViewer * m_qProcessViewer</div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00018">controller.h:18</a></div></div>
+<div class="ttc" id="class_solver_html"><div class="ttname"><a href="class_solver.html">Solver</a></div><div class="ttdef"><b>Definition:</b> <a href="solver_8h_source.html#l00018">solver.h:18</a></div></div>
+<div class="ttc" id="class_q_process_viewer_html_a5d461b17c4b8059e3be42874ee5adf1a"><div class="ttname"><a href="class_q_process_viewer.html#a5d461b17c4b8059e3be42874ee5adf1a">QProcessViewer::startSolver</a></div><div class="ttdeci">QPushButton * startSolver</div><div class="ttdef"><b>Definition:</b> <a href="qprocessviewer_8h_source.html#l00014">qprocessviewer.h:14</a></div></div>
+<div class="ttc" id="class_controller_html_af1b53de5613ec51b3375adbea44696b1"><div class="ttname"><a href="class_controller.html#af1b53de5613ec51b3375adbea44696b1">Controller::m_solver</a></div><div class="ttdeci">Solver * m_solver</div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00017">controller.h:17</a></div></div>
 <div class="ttc" id="controller_8h_html"><div class="ttname"><a href="controller_8h.html">controller.h</a></div></div>
+<div class="ttc" id="class_controller_html_ab8e345d91e901e46e0ad42a0b75ef94c"><div class="ttname"><a href="class_controller.html#ab8e345d91e901e46e0ad42a0b75ef94c">Controller::addSolver</a></div><div class="ttdeci">void addSolver(Solver *solver)</div><div class="ttdef"><b>Definition:</b> <a href="controller_8cpp_source.html#l00005">controller.cpp:5</a></div></div>
+<div class="ttc" id="class_controller_html_aa92b9a18a88aeb59c53272c3beab2724"><div class="ttname"><a href="class_controller.html#aa92b9a18a88aeb59c53272c3beab2724">Controller::connectSignals</a></div><div class="ttdeci">void connectSignals()</div><div class="ttdef"><b>Definition:</b> <a href="controller_8cpp_source.html#l00010">controller.cpp:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_171b764decf33d63a7df2fab4f4bc6d8.html">GUI</a></li><li class="navelem"><a class="el" href="controller_8cpp.html">controller.cpp</a></li>
-    <li class="footer">Generated on Wed Nov 16 2016 16:58:26 for Map Matching by
+    <li class="footer">Generated on Thu Nov 17 2016 17:12:04 for Map Matching by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

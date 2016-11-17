@@ -7,6 +7,7 @@ var class_track =
     [ "delPointGPS", "class_track.html#a0477b30aca07ba3f43b25d4c6ea782e0", null ],
     [ "getPoints", "class_track.html#a6360ae2dbed31e542a2cbaa986970352", null ],
     [ "getPointsAsPointer", "class_track.html#ad262a30c2abcd29cf4cdc04facd290ee", null ],
+    [ "infos", "class_track.html#abf3b02de2c94d38c6a79b7c932aa6c5b", null ],
     [ "outputInfos", "class_track.html#a1bdd5f826a2b58fcbca40fb7fb2de1c8", null ],
     [ "readFromCSV", "class_track.html#aff258a8c303ee8a09a962d237f3823e7", null ],
     [ "spaceFilter", "class_track.html#a9f1da7896167f44da967acf9fd05d92a", null ],

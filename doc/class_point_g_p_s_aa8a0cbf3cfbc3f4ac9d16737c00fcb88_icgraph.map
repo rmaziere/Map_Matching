@@ -1,3 +1,6 @@
 <map id="PointGPS::timeStamp" name="PointGPS::timeStamp">
 <area shape="rect" id="node2" href="$class_track.html#a58fcdaf47f2c87bb7095933616f5a4bc" title="This is a temporal filter, which deletes points depending on a time value. " alt="" coords="204,5,347,32"/>
+<area shape="rect" id="node3" href="$class_main_window.html#ae2500bf587f9630ce61d27ca231cfd7a" title="MainWindow::readyToNext2" alt="" coords="395,5,581,32"/>
+<area shape="rect" id="node4" href="$class_main_window.html#af773488e0b16efe6c0fc67ad348b86b2" title="MainWindow::createConnections" alt="" coords="629,5,844,32"/>
+<area shape="rect" id="node5" href="$class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="892,5,1072,32"/>
 </map>

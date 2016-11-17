@@ -95,7 +95,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_g.html#index_g"><span>g</span></a></li>
       <li><a href="functions_h.html#index_h"><span>h</span></a></li>
       <li><a href="functions_i.html#index_i"><span>i</span></a></li>
-      <li><a href="functions_j.html#index_j"><span>j</span></a></li>
       <li><a href="functions_k.html#index_k"><span>k</span></a></li>
       <li><a href="functions_l.html#index_l"><span>l</span></a></li>
       <li class="current"><a href="functions_m.html#index_m"><span>m</span></a></li>
@@ -162,12 +161,14 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 <li>m_arrayOfCoordinates
 : <a class="el" href="class_k_d_tree.html#a780ba15bae06b57a27324e9f735cd6e9">KDTree</a>
 </li>
-<li>m_boutonXY
-: <a class="el" href="class_filtering.html#a8ede555e11be1d3ad8878fee76faa42c">Filtering</a>
-, <a class="el" href="class_loading.html#a31ce65f5e96b6c8135860735090542c0">Loading</a>
+<li>m_boutonSpat
+: <a class="el" href="class_filtering.html#aed06738a070290d09b3377203dd0cae5">Filtering</a>
 </li>
-<li>m_cancel
-: <a class="el" href="class_filtering.html#afb40d66ae92d5b73d910b8c6ac04cd9f">Filtering</a>
+<li>m_boutonTemp
+: <a class="el" href="class_filtering.html#ab80a0b28a2605e0d51b3b02c04fdb146">Filtering</a>
+</li>
+<li>m_boutonXY
+: <a class="el" href="class_loading.html#a31ce65f5e96b6c8135860735090542c0">Loading</a>
 </li>
 <li>m_country
 : <a class="el" href="class_loading.html#a3b636e2bdbb2b6b5be905fb7051af701">Loading</a>
@@ -199,11 +200,20 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 <li>m_fileGrid
 : <a class="el" href="class_loading.html#abdaaa944868d8c06dc74d04fea96be98">Loading</a>
 </li>
+<li>m_filtreSpat
+: <a class="el" href="class_filtering.html#a4b702ea52a51879988f43a2f16f95d14">Filtering</a>
+</li>
+<li>m_filtreTemp
+: <a class="el" href="class_filtering.html#aaf85022e7ad57beee4fc513c264daa53">Filtering</a>
+</li>
 <li>m_fr
 : <a class="el" href="class_loading.html#a8cf66551caa45f573a2b1fe76b597cbc">Loading</a>
 </li>
 <li>m_grid
 : <a class="el" href="class_loading.html#a3877c4e6b3fa299cf06998b940c72437">Loading</a>
+</li>
+<li>m_gridFilename
+: <a class="el" href="class_solver.html#a0078c3931f5bd4c64ce440e0f75f5084">Solver</a>
 </li>
 <li>m_gridFullName
 : <a class="el" href="class_grid.html#a3d09e3c15b281cd790ea559ac0cd8600">Grid</a>
@@ -225,9 +235,6 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 </li>
 <li>m_isNode
 : <a class="el" href="class_point_road.html#a42b37a46513e69008540f3a9031fab5d">PointRoad</a>
-</li>
-<li>m_launch
-: <a class="el" href="class_filtering.html#aa2d239eae2da6657bad5a4918aa58fe7">Filtering</a>
 </li>
 <li>m_low
 : <a class="el" href="class_box.html#a9abe19fa263c0891d8faef785cc3ad09">Box</a>
@@ -265,9 +272,6 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 <li>m_numero
 : <a class="el" href="class_my_exception.html#a39af090a31662562d29e0fe93635d20e">MyException</a>
 </li>
-<li>m_old_buf
-: <a class="el" href="class_q_debug_stream.html#a0c47976994673716f961ec18b4c9326f">QDebugStream</a>
-</li>
 <li>m_phrase
 : <a class="el" href="class_my_exception.html#a94897ed2fd5c5ae59db053b15b498020">MyException</a>
 </li>
@@ -279,6 +283,15 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 </li>
 <li>m_probability
 : <a class="el" href="class_emission_probability.html#a2b8f34c1ee57040532f7e04d4d190c05">EmissionProbability</a>
+</li>
+<li>m_ptTrack
+: <a class="el" href="class_filtering.html#a49b8c20a1bae523f7aa064ac04e9310c">Filtering</a>
+</li>
+<li>m_qMapViewer
+: <a class="el" href="class_controller.html#acf06505dc0d93253e693b74f87531900">Controller</a>
+</li>
+<li>m_qProcessViewer
+: <a class="el" href="class_controller.html#a129e056cb6f47177c68e2f1a624949e0">Controller</a>
 </li>
 <li>m_roadId
 : <a class="el" href="class_emission_probability.html#aa55730074a2211b5c2fa580e7a4ad394">EmissionProbability</a>
@@ -301,17 +314,14 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 <li>m_slidTemp
 : <a class="el" href="class_filtering.html#a457d337ae1d27b2189a273dda810d476">Filtering</a>
 </li>
+<li>m_solver
+: <a class="el" href="class_controller.html#af1b53de5613ec51b3375adbea44696b1">Controller</a>
+</li>
 <li>m_spat
 : <a class="el" href="class_filtering.html#a02f16ab02bbf47efd67dc54761337655">Filtering</a>
 </li>
 <li>m_speed
 : <a class="el" href="class_sliding_stacked_widget.html#a058e6dacb0f06beaaa994e8b468664d9">SlidingStackedWidget</a>
-</li>
-<li>m_stream
-: <a class="el" href="class_q_debug_stream.html#ae4c4c428ef6b8c54d200c62fb5c90188">QDebugStream</a>
-</li>
-<li>m_string
-: <a class="el" href="class_q_debug_stream.html#ad79a6a7325f417a53b35bd2940b93fdb">QDebugStream</a>
 </li>
 <li>m_temp
 : <a class="el" href="class_filtering.html#a5b2cbf7b1965d95d18bedd225a4badef">Filtering</a>
@@ -321,6 +331,9 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 </li>
 <li>m_track
 : <a class="el" href="class_loading.html#ad4a61661d34e5b13e86535e3c6c3df71">Loading</a>
+</li>
+<li>m_trackFilename
+: <a class="el" href="class_solver.html#ae3bc6bbdda75da96e47fa155a2f339d8">Solver</a>
 </li>
 <li>m_trackFullName
 : <a class="el" href="class_track.html#a2979cda7dc5f5964c3cc58a87676f755">Track</a>
@@ -403,16 +416,13 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 : <a class="el" href="class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db">MainWindow</a>
 </li>
 <li>makePointFromTrack()
-: <a class="el" href="class_map.html#a9013c3efbd674f2880d67222eb5fefc2">Map</a>
+: <a class="el" href="class_q_map_viewer.html#a7ab3a05f3f8542dc36fffdf7068b5c52">QMapViewer</a>
 </li>
 <li>makePolyline()
-: <a class="el" href="class_map.html#ab31f3b3557f28b10e312d6c910146dcb">Map</a>
+: <a class="el" href="class_q_map_viewer.html#a6cb07aee3bb914c77ede9f45f1c9cddf">QMapViewer</a>
 </li>
 <li>makePolylineFromRoad()
-: <a class="el" href="class_map.html#af49cbdcf946167a1192d4ba67618f070">Map</a>
-</li>
-<li>Map()
-: <a class="el" href="class_map.html#a0f5ad0fd4563497b4214038cbca8b582">Map</a>
+: <a class="el" href="class_q_map_viewer.html#a5eaa22fa92fc348ab4116299b68e0896">QMapViewer</a>
 </li>
 <li>MyException()
 : <a class="el" href="class_my_exception.html#a5b84bffa731804ba8c801f54b5ad4a83">MyException</a>
@@ -423,7 +433,7 @@ $(document).ready(function(){initNavTree('functions_m.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Nov 16 2016 16:58:26 for Map Matching by
+    <li class="footer">Generated on Thu Nov 17 2016 17:12:05 for Map Matching by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

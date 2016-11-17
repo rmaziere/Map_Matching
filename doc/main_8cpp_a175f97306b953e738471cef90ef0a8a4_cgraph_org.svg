@@ -41,7 +41,7 @@
 </g>
 <!-- Node4 -->
 <g id="node4" class="node"><title>Node4</title>
-<g id="a_node4"><a xlink:href="class_grid.html#a19318437702e712955d0c4631c94cb04" target="_top" xlink:title="setZone Save data about our area of roads ">
+<g id="a_node4"><a xlink:href="class_grid.html#a19318437702e712955d0c4631c94cb04" target="_top" xlink:title="Save data about our area of roads. ">
 <polygon fill="none" stroke="black" points="92.5,-413.5 92.5,-432.5 204.5,-432.5 204.5,-413.5 92.5,-413.5"/>
 <text text-anchor="middle" x="148.5" y="-420.5" font-family="Helvetica,sans-Serif" font-size="10.00">Grid::setBoundingBox</text>
 </a>
@@ -54,7 +54,7 @@
 </g>
 <!-- Node9 -->
 <g id="node9" class="node"><title>Node9</title>
-<g id="a_node9"><a xlink:href="class_grid.html#ae848f1c59c544adc1af9133409ee0106" target="_top" xlink:title="readFromCSV Reads a csv file and inserts info into the corresponding attributs ">
+<g id="a_node9"><a xlink:href="class_grid.html#ae848f1c59c544adc1af9133409ee0106" target="_top" xlink:title="Reads a csv file and inserts info into the corresponding attributs. ">
 <polygon fill="none" stroke="black" points="97,-356.5 97,-375.5 200,-375.5 200,-356.5 97,-356.5"/>
 <text text-anchor="middle" x="148.5" y="-363.5" font-family="Helvetica,sans-Serif" font-size="10.00">Grid::readFromCSV</text>
 </a>
@@ -197,7 +197,7 @@
 </g>
 <!-- Node10 -->
 <g id="node10" class="node"><title>Node10</title>
-<g id="a_node10"><a xlink:href="class_grid.html#a6b6af4fb2545b398b47794de576f15f5" target="_top" xlink:title="inFootPrint Test if a point is in the defined area of a track ">
+<g id="a_node10"><a xlink:href="class_grid.html#a6b6af4fb2545b398b47794de576f15f5" target="_top" xlink:title="Test if a point is in the defined area of a track. ">
 <polygon fill="none" stroke="black" points="257.5,-375.5 257.5,-394.5 345.5,-394.5 345.5,-375.5 257.5,-375.5"/>
 <text text-anchor="middle" x="301.5" y="-382.5" font-family="Helvetica,sans-Serif" font-size="10.00">Grid::inFootPrint</text>
 </a>
@@ -210,7 +210,7 @@
 </g>
 <!-- Node11 -->
 <g id="node11" class="node"><title>Node11</title>
-<g id="a_node11"><a xlink:href="class_grid.html#a58233ab60f7477144af334f205606aa4" target="_top" xlink:title="updateGrid Find max and min of the grid ">
+<g id="a_node11"><a xlink:href="class_grid.html#a58233ab60f7477144af334f205606aa4" target="_top" xlink:title="Find max and min of the grid. ">
 <polygon fill="none" stroke="black" points="257.5,-337.5 257.5,-356.5 345.5,-356.5 345.5,-337.5 257.5,-337.5"/>
 <text text-anchor="middle" x="301.5" y="-344.5" font-family="Helvetica,sans-Serif" font-size="10.00">Grid::updateGrid</text>
 </a>
@@ -223,7 +223,7 @@
 </g>
 <!-- Node12 -->
 <g id="node12" class="node"><title>Node12</title>
-<g id="a_node12"><a xlink:href="class_grid.html#aba1830bc145f128d6deeed29cfb94c9f" target="_top" xlink:title="addRoad Creates a new road and inserts it in m_road ">
+<g id="a_node12"><a xlink:href="class_grid.html#aba1830bc145f128d6deeed29cfb94c9f" target="_top" xlink:title="Creates a new road and inserts it in m_road. ">
 <polygon fill="none" stroke="black" points="261.5,-299.5 261.5,-318.5 341.5,-318.5 341.5,-299.5 261.5,-299.5"/>
 <text text-anchor="middle" x="301.5" y="-306.5" font-family="Helvetica,sans-Serif" font-size="10.00">Grid::addRoad</text>
 </a>

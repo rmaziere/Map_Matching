@@ -25,7 +25,7 @@
 <text text-anchor="start" x="226" y="-128.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ getRoads()</text>
 <text text-anchor="start" x="226" y="-117.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Grid()</text>
 <text text-anchor="start" x="226" y="-106.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ inFootPrint()</text>
-<text text-anchor="start" x="226" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 15 more...</text>
+<text text-anchor="start" x="226" y="-95.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 16 more...</text>
 <text text-anchor="start" x="226" y="-84.5" font-family="Helvetica,sans-Serif" font-size="10.00">* m_xMin</text>
 <text text-anchor="start" x="226" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00">* m_xMax</text>
 <text text-anchor="start" x="226" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">* m_yMin</text>
@@ -101,7 +101,7 @@
 <polygon fill="none" stroke="black" points="6,-645.5 6,-856.5 125,-856.5 125,-645.5 6,-645.5"/>
 <text text-anchor="middle" x="65.5" y="-844.5" font-family="Helvetica,sans-Serif" font-size="10.00">Point</text>
 <polyline fill="none" stroke="black" points="6,-837.5 125,-837.5 "/>
-<text text-anchor="middle" x="65.5" y="-825.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<text text-anchor="start" x="14" y="-825.5" font-family="Helvetica,sans-Serif" font-size="10.00"># POINT_RADIUS</text>
 <polyline fill="none" stroke="black" points="6,-818.5 125,-818.5 "/>
 <text text-anchor="start" x="14" y="-806.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ distanceToPoint()</text>
 <text text-anchor="start" x="14" y="-795.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ distanceToSegment()</text>

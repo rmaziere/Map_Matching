@@ -1,7 +1,12 @@
 <map id="controller.h" name="controller.h">
-<area shape="rect" id="node2" href="$qmapviewer_8h.html" title="qmapviewer.h" alt="" coords="223,80,326,107"/>
-<area shape="rect" id="node4" href="$track_8h.html" title="The class Track. " alt="" coords="457,80,519,107"/>
-<area shape="rect" id="node5" href="$point_g_p_s_8h.html" title="pointGPS.h" alt="" coords="177,155,266,181"/>
-<area shape="rect" id="node6" href="$emissionprobability_8h.html" title="emissionprobability.h" alt="" coords="5,229,149,256"/>
-<area shape="rect" id="node7" href="$point_8h.html" title="Class Point. " alt="" coords="173,229,235,256"/>
+<area shape="rect" id="node2" href="$qprocessviewer_8h.html" title="qprocessviewer.h" alt="" coords="147,80,271,107"/>
+<area shape="rect" id="node6" href="$qmapviewer_8h.html" title="qmapviewer.h" alt="" coords="260,304,363,331"/>
+<area shape="rect" id="node13" href="$solver_8h.html" title="../solver.h" alt="" coords="654,80,734,107"/>
+<area shape="rect" id="node15" href="$grid_8h.html" title="grid.h" alt="" coords="601,155,656,181"/>
+<area shape="rect" id="node16" href="$road_8h.html" title="road.h" alt="" coords="731,229,790,256"/>
+<area shape="rect" id="node17" href="$pointroad_8h.html" title="pointroad.h" alt="" coords="1285,379,1372,405"/>
+<area shape="rect" id="node20" href="$track_8h.html" title="The class Track. " alt="" coords="796,304,859,331"/>
+<area shape="rect" id="node21" href="$point_g_p_s_8h.html" title="pointGPS.h" alt="" coords="761,379,851,405"/>
+<area shape="rect" id="node18" href="$point_8h.html" title="Class Point. " alt="" coords="1230,453,1291,480"/>
+<area shape="rect" id="node22" href="$emissionprobability_8h.html" title="emissionprobability.h" alt="" coords="734,453,878,480"/>
 </map>

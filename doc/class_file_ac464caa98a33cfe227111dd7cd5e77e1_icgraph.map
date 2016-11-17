@@ -1,6 +1,5 @@
 <map id="File::splitPath" name="File::splitPath">
 <area shape="rect" id="node2" href="$class_file.html#a7177a8eac75b0fc5425ebd65e16c2d6f" title="The UI to select the file&#39;s path to open. " alt="" coords="156,81,316,108"/>
-<area shape="rect" id="node10" href="$class_file.html#a4392063fcbc3883e165baf5b0da9a165" title="The UI to select the file&#39;s path to save. " alt="" coords="178,132,294,159"/>
 <area shape="rect" id="node3" href="$class_loading.html#ae0c96193667418083fc4a8c6cc19d9db" title="Loading::loadFileCSVTrack" alt="" coords="364,5,545,32"/>
 <area shape="rect" id="node6" href="$class_loading.html#a9a01f3e328100b681f3f08192fc9b208" title="Loading::loadFileSHPTrack" alt="" coords="364,56,545,83"/>
 <area shape="rect" id="node7" href="$class_loading.html#a84d718939a74cf1680ea3e2409324194" title="Loading::loadFileGrid" alt="" coords="383,107,527,133"/>

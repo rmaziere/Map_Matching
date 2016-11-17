@@ -33,7 +33,7 @@
 <polygon fill="none" stroke="black" points="0,-215.5 0,-426.5 119,-426.5 119,-215.5 0,-215.5"/>
 <text text-anchor="middle" x="59.5" y="-414.5" font-family="Helvetica,sans-Serif" font-size="10.00">Point</text>
 <polyline fill="none" stroke="black" points="0,-407.5 119,-407.5 "/>
-<text text-anchor="middle" x="59.5" y="-395.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<text text-anchor="start" x="8" y="-395.5" font-family="Helvetica,sans-Serif" font-size="10.00"># POINT_RADIUS</text>
 <polyline fill="none" stroke="black" points="0,-388.5 119,-388.5 "/>
 <text text-anchor="start" x="8" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ distanceToPoint()</text>
 <text text-anchor="start" x="8" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ distanceToSegment()</text>

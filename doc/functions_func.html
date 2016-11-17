@@ -94,7 +94,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="#index_f"><span>f</span></a></li>
       <li><a href="#index_g"><span>g</span></a></li>
       <li><a href="#index_i"><span>i</span></a></li>
-      <li><a href="#index_j"><span>j</span></a></li>
       <li><a href="#index_k"><span>k</span></a></li>
       <li><a href="#index_l"><span>l</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
@@ -159,6 +158,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>addRoad()
 : <a class="el" href="class_grid.html#aba1830bc145f128d6deeed29cfb94c9f">Grid</a>
 </li>
+<li>addSolver()
+: <a class="el" href="class_controller.html#ab8e345d91e901e46e0ad42a0b75ef94c">Controller</a>
+</li>
 <li>altitude()
 : <a class="el" href="class_point_g_p_s.html#a0e03a1b5542483fafea1bc8e7305fb5d">PointGPS</a>
 </li>
@@ -175,14 +177,11 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 
 <h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
-<li>boutonXY()
-: <a class="el" href="class_filtering.html#a1835ee1467d1e01c4282d9e762b33528">Filtering</a>
-</li>
 <li>Box()
 : <a class="el" href="class_box.html#aca78d7db44972bfa78d46b7bbc8796f6">Box</a>
 </li>
 <li>BoxNode()
-: <a class="el" href="class_box_node.html#a839b67b47241cdfacea494667729880a">BoxNode</a>
+: <a class="el" href="class_box_node.html#a7b8603d8007187dfcd5d296795a08f48">BoxNode</a>
 </li>
 <li>buildKDTree()
 : <a class="el" href="class_grid.html#a385463a3b96dcdbd212cbfc07c711c12">Grid</a>
@@ -194,11 +193,14 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 
 <h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>connectSignals()
+: <a class="el" href="class_controller.html#aa92b9a18a88aeb59c53272c3beab2724">Controller</a>
+</li>
 <li>Controller()
-: <a class="el" href="class_controller.html#afd9457573afed55dbcabb192e898a22d">Controller</a>
+: <a class="el" href="class_controller.html#a95c56822d667e94b031451729ce069a9">Controller</a>
 </li>
 <li>coordinateTranslator()
-: <a class="el" href="class_map.html#afcf922c62157c1c6a39cc76daa07c51f">Map</a>
+: <a class="el" href="class_q_map_viewer.html#a30149c35a8eda554537ef5f1f013430c">QMapViewer</a>
 </li>
 <li>country()
 : <a class="el" href="class_loading.html#a8393eca502e0e8946e9e9b8ca57a565d">Loading</a>
@@ -226,7 +228,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_track.html#a0477b30aca07ba3f43b25d4c6ea782e0">Track</a>
 </li>
 <li>deltaCalculator()
-: <a class="el" href="class_map.html#a76eec388eebc5e22e1aa39082b885aa4">Map</a>
+: <a class="el" href="class_q_map_viewer.html#ae7b652870547068296dfad664ebe8944">QMapViewer</a>
 </li>
 <li>distance()
 : <a class="el" href="class_k_d_tree.html#a9ddd631373d7508b86c6f0533dbd35c0">KDTree</a>
@@ -239,7 +241,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_point.html#a39daa6ebd31cdc2d7151db77bfdf2166">Point</a>
 </li>
 <li>drawPolyline()
-: <a class="el" href="class_map.html#a8b83f4a3fa3d773636f0d49fbd8d2553">Map</a>
+: <a class="el" href="class_q_map_viewer.html#a945212de41c82ddfb8c241487ebc2f39">QMapViewer</a>
 </li>
 </ul>
 
@@ -267,6 +269,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
 <li>getCountry()
 : <a class="el" href="class_loading.html#a1925efcb9ccc2a01359b40a59cb542d9">Loading</a>
+</li>
+<li>getInfo()
+: <a class="el" href="class_filtering.html#ad96665ec38911625b6778741000fbfe2">Filtering</a>
 </li>
 <li>getListOfPoints()
 : <a class="el" href="class_road.html#a1241f9bb27054a32b1f013f03a51be8a">Road</a>
@@ -299,6 +304,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>getRoads()
 : <a class="el" href="class_grid.html#ae43b7156c770eb4a8812d7ecce223b36">Grid</a>
 </li>
+<li>GraphicEmitter()
+: <a class="el" href="class_graphic_emitter.html#afdf980080770a86efa90530bd5fa0830">GraphicEmitter</a>
+</li>
 <li>Grid()
 : <a class="el" href="class_grid.html#a4ac9ff4f63552b4c61ff90fcb35ad66c">Grid</a>
 </li>
@@ -316,22 +324,14 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_grid.html#a6b6af4fb2545b398b47794de576f15f5">Grid</a>
 </li>
 <li>infos()
-: <a class="el" href="class_point.html#a1c2033a89f5dc6faa9e50f06c2111e88">Point</a>
+: <a class="el" href="class_grid.html#a37103de283959ce994c5c76113b7b033">Grid</a>
+, <a class="el" href="class_point.html#a1c2033a89f5dc6faa9e50f06c2111e88">Point</a>
 , <a class="el" href="class_point_g_p_s.html#a9a622f6883b721ee5f04f092a76ece64">PointGPS</a>
 , <a class="el" href="class_point_road.html#a10e2495cf2c6b435e23e8da80e7276e6">PointRoad</a>
-</li>
-<li>initialize()
-: <a class="el" href="class_solver.html#a0c67ab4d4fd9c36cfcbfdc13021b419f">Solver</a>
+, <a class="el" href="class_track.html#abf3b02de2c94d38c6a79b7c932aa6c5b">Track</a>
 </li>
 <li>isNode()
 : <a class="el" href="class_point_road.html#ae83941b37b026758fdd7974b4b186fbc">PointRoad</a>
-</li>
-</ul>
-
-
-<h3><a class="anchor" id="index_j"></a>- j -</h3><ul>
-<li>JournalProcess()
-: <a class="el" href="class_journal_process.html#a7353fa6229db34669338bf71fc53614f">JournalProcess</a>
 </li>
 </ul>
 
@@ -348,10 +348,13 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 <h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
 <li>landmarkMaker()
-: <a class="el" href="class_map.html#a252bb9c052015eac4e2a6b5cbe39f31c">Map</a>
+: <a class="el" href="class_q_map_viewer.html#adebcdd66becb55104a21e34ac22de419">QMapViewer</a>
 </li>
 <li>launchFiles()
 : <a class="el" href="class_loading.html#a1d3058f5f9c701a3bd7300ae985ff83a">Loading</a>
+</li>
+<li>launchFiltre()
+: <a class="el" href="class_filtering.html#af19a51baea507dd6ab30d1f7c2843600">Filtering</a>
 </li>
 <li>loadFileCSVTrack()
 : <a class="el" href="class_loading.html#ae0c96193667418083fc4a8c6cc19d9db">Loading</a>
@@ -376,16 +379,13 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db">MainWindow</a>
 </li>
 <li>makePointFromTrack()
-: <a class="el" href="class_map.html#a9013c3efbd674f2880d67222eb5fefc2">Map</a>
+: <a class="el" href="class_q_map_viewer.html#a7ab3a05f3f8542dc36fffdf7068b5c52">QMapViewer</a>
 </li>
 <li>makePolyline()
-: <a class="el" href="class_map.html#ab31f3b3557f28b10e312d6c910146dcb">Map</a>
+: <a class="el" href="class_q_map_viewer.html#a6cb07aee3bb914c77ede9f45f1c9cddf">QMapViewer</a>
 </li>
 <li>makePolylineFromRoad()
-: <a class="el" href="class_map.html#af49cbdcf946167a1192d4ba67618f070">Map</a>
-</li>
-<li>Map()
-: <a class="el" href="class_map.html#a0f5ad0fd4563497b4214038cbca8b582">Map</a>
+: <a class="el" href="class_q_map_viewer.html#a5eaa22fa92fc348ab4116299b68e0896">QMapViewer</a>
 </li>
 <li>MyException()
 : <a class="el" href="class_my_exception.html#a5b84bffa731804ba8c801f54b5ad4a83">MyException</a>
@@ -402,7 +402,16 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 
 <h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
 <li>onSignalMessage()
-: <a class="el" href="class_q_map_viewer.html#a481f922bf691337076abf5f08987555e">QMapViewer</a>
+: <a class="el" href="class_q_process_viewer.html#afe4095ff7e94986a3f48ef39343bc644">QProcessViewer</a>
+</li>
+<li>onSignalSetGrid()
+: <a class="el" href="class_solver.html#a479a7924b6dc1c32032132f47b71c157">Solver</a>
+</li>
+<li>onSignalSetTrack()
+: <a class="el" href="class_solver.html#a8453ed9c55ff4140209500dbd3ee5e17">Solver</a>
+</li>
+<li>onSignalStart()
+: <a class="el" href="class_solver.html#a323c9c0407f26a2ed3ec3ff5ed02a760">Solver</a>
 </li>
 <li>operator()()
 : <a class="el" href="structequals_func.html#a20bec4534ac20aba8bd6652318f35ac8">equalsFunc</a>
@@ -413,9 +422,6 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 , <a class="el" href="class_point_road.html#aa1b90c3fdf8ae7a1fcd8ce6182d13287">PointRoad</a>
 , <a class="el" href="class_road.html#acb1a56234cdbb34e0cf5c647c7c6406d">Road</a>
 , <a class="el" href="class_track.html#a1bdd5f826a2b58fcbca40fb7fb2de1c8">Track</a>
-</li>
-<li>overflow()
-: <a class="el" href="class_q_debug_stream.html#a3653bb2dfd5151e27fedd27b6ca47443">QDebugStream</a>
 </li>
 </ul>
 
@@ -428,20 +434,23 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_point.html#ad92f2337b839a94ce97dcdb439b4325a">Point</a>
 </li>
 <li>PointGPS()
-: <a class="el" href="class_point_g_p_s.html#ac547767bd05e353a545ceb4f4ac7d3c3">PointGPS</a>
+: <a class="el" href="class_point_g_p_s.html#ad8625de611e4ef09be3c48467584a78a">PointGPS</a>
 </li>
 <li>PointRoad()
 : <a class="el" href="class_point_road.html#a37c044a490aa80fa60d173ea1bbe0a03">PointRoad</a>
+</li>
+<li>putNone()
+: <a class="el" href="class_main_window.html#a8316cc41f24ecba912fb4c2a90103be4">MainWindow</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_q"></a>- q -</h3><ul>
-<li>QDebugStream()
-: <a class="el" href="class_q_debug_stream.html#aea803cf631a89db810910b1a8501fd29">QDebugStream</a>
-</li>
 <li>QMapViewer()
-: <a class="el" href="class_q_map_viewer.html#a066617cf7ca6ad9b4c3ed946abfc300f">QMapViewer</a>
+: <a class="el" href="class_q_map_viewer.html#a5ea0161ff05380850a0260b051158d36">QMapViewer</a>
+</li>
+<li>QProcessViewer()
+: <a class="el" href="class_q_process_viewer.html#aa9d974e89de8a6930c3c6bd08766f488">QProcessViewer</a>
 </li>
 </ul>
 
@@ -452,10 +461,17 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 , <a class="el" href="class_track.html#aff258a8c303ee8a09a962d237f3823e7">Track</a>
 </li>
 <li>ready()
-: <a class="el" href="class_loading.html#a93ce5ebbd8eb3ea2438942bc7d4a706b">Loading</a>
+: <a class="el" href="class_filtering.html#a8f1e6884c1784652000e763327cce302">Filtering</a>
+, <a class="el" href="class_loading.html#a93ce5ebbd8eb3ea2438942bc7d4a706b">Loading</a>
+</li>
+<li>readyNext()
+: <a class="el" href="class_loading.html#aa1efa9ef3bdd0368afbdd5f99b2bc30a">Loading</a>
 </li>
 <li>readyToNext1()
 : <a class="el" href="class_main_window.html#ad39bbe8ced0d3248206ac0ca6c444d55">MainWindow</a>
+</li>
+<li>readyToNext2()
+: <a class="el" href="class_main_window.html#ae2500bf587f9630ce61d27ca231cfd7a">MainWindow</a>
 </li>
 <li>Road()
 : <a class="el" href="class_road.html#a90bb6be2a5c3b6997849a915e2af0cf0">Road</a>
@@ -474,10 +490,10 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_sauvegarde.html#ae906a8c82dd7e2c0539b9f7ff9e5d715">Sauvegarde</a>
 </li>
 <li>save()
-: <a class="el" href="class_map.html#a9b194ba0253bb86032877a5fa49ea122">Map</a>
+: <a class="el" href="class_q_map_viewer.html#aa2be98881c6ef74a74d159ba62594cb8">QMapViewer</a>
 </li>
 <li>scaleCalculator()
-: <a class="el" href="class_map.html#a65a21293c1d7351ea086f685991b6fae">Map</a>
+: <a class="el" href="class_q_map_viewer.html#a9120965a1e4976608a89b32f791cf7a0">QMapViewer</a>
 </li>
 <li>selectFilesToOpen()
 : <a class="el" href="class_file.html#a7177a8eac75b0fc5425ebd65e16c2d6f">File</a>
@@ -505,13 +521,25 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_sliding_stacked_widget.html#a8fde5c77212b3aa707296e209c135bfa">SlidingStackedWidget</a>
 </li>
 <li>setx()
-: <a class="el" href="class_point.html#a643bc096cfd5930a93898d1ba1a4de96">Point</a>
+: <a class="el" href="class_point.html#a6f6a42c3b4bfe6e7e5ccb502788227d6">Point</a>
 </li>
 <li>sety()
 : <a class="el" href="class_point.html#a16550863eab3e713371cdf8d5fa26926">Point</a>
 </li>
 <li>shp2csv()
 : <a class="el" href="class_file.html#a2cd702098066c4abde1c20ee708fa91f">File</a>
+</li>
+<li>signalDrawPoint()
+: <a class="el" href="class_graphic_emitter.html#a25b72e7a4b8037fefdebc05be247d71b">GraphicEmitter</a>
+</li>
+<li>signalDrawRoad()
+: <a class="el" href="class_graphic_emitter.html#a2a7e89cf6d9cfd4775488fc3ec32190e">GraphicEmitter</a>
+</li>
+<li>signalMessage()
+: <a class="el" href="class_solver.html#a340cbdcbcd9aba83f28439c955af7550">Solver</a>
+</li>
+<li>signalStartSolver()
+: <a class="el" href="class_q_process_viewer.html#a5eaf86227439ca526b846e92b0292561">QProcessViewer</a>
 </li>
 <li>slideInIdx()
 : <a class="el" href="class_sliding_stacked_widget.html#aabd161d7cf704e4037ade499e8b46636">SlidingStackedWidget</a>
@@ -529,7 +557,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_sliding_stacked_widget.html#a6d75403ad8dc7a612bce48014c55bf26">SlidingStackedWidget</a>
 </li>
 <li>Solver()
-: <a class="el" href="class_solver.html#ad3f945eda05c5c68aa02e98533a1ff05">Solver</a>
+: <a class="el" href="class_solver.html#a106d95eb5f1d870cd1dd2c6f3e1543d5">Solver</a>
 </li>
 <li>spaceFilter()
 : <a class="el" href="class_track.html#a9f1da7896167f44da967acf9fd05d92a">Track</a>
@@ -540,6 +568,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>splitPath()
 : <a class="el" href="class_file.html#ac464caa98a33cfe227111dd7cd5e77e1">File</a>
 </li>
+<li>start()
+: <a class="el" href="class_solver.html#a97bc7169c18b339fecd4937150f907c3">Solver</a>
+</li>
 </ul>
 
 
@@ -549,6 +580,9 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </li>
 <li>temporalFilter()
 : <a class="el" href="class_track.html#a58fcdaf47f2c87bb7095933616f5a4bc">Track</a>
+</li>
+<li>testMessagePoint()
+: <a class="el" href="class_graphic_emitter.html#add91bb23b30ddfef88aefe83b3eb052f">GraphicEmitter</a>
 </li>
 <li>timeStamp()
 : <a class="el" href="class_point_g_p_s.html#aa8a0cbf3cfbc3f4ac9d16737c00fcb88">PointGPS</a>
@@ -599,7 +633,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 : <a class="el" href="class_file.html#a4392063fcbc3883e165baf5b0da9a165">File</a>
 </li>
 <li>write()
-: <a class="el" href="class_map.html#a4ce23875252638dd588889f105620e00">Map</a>
+: <a class="el" href="class_q_map_viewer.html#a496f18a20406bb02f0705b031f814faa">QMapViewer</a>
 </li>
 </ul>
 
@@ -619,9 +653,6 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </li>
 <li>xMinGrid()
 : <a class="el" href="class_grid.html#aa96eed7a551f45aeee1068a289bd2a7b">Grid</a>
-</li>
-<li>xsputn()
-: <a class="el" href="class_q_debug_stream.html#a1397645c08c8936c2609bfcfe2013866">QDebugStream</a>
 </li>
 </ul>
 
@@ -655,9 +686,6 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <li>~Grid()
 : <a class="el" href="class_grid.html#a3661d0a7f998caaaf8627d7a67072116">Grid</a>
 </li>
-<li>~JournalProcess()
-: <a class="el" href="class_journal_process.html#a4fa55433876d5c81015765617d5d85d7">JournalProcess</a>
-</li>
 <li>~KDTree()
 : <a class="el" href="class_k_d_tree.html#a0920219cb85bb5abc8dc1bb22c44a56c">KDTree</a>
 </li>
@@ -672,9 +700,6 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 </li>
 <li>~Point()
 : <a class="el" href="class_point.html#a364091762d6aa1aa5983d36fd7d8b6d5">Point</a>
-</li>
-<li>~QDebugStream()
-: <a class="el" href="class_q_debug_stream.html#a4005a33eb4732190dea924731d7467d9">QDebugStream</a>
 </li>
 <li>~Road()
 : <a class="el" href="class_road.html#a3fa0feda8a96c3763d5f5a1f06f2972e">Road</a>
@@ -694,7 +719,7 @@ $(document).ready(function(){initNavTree('functions_func.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Nov 16 2016 16:58:26 for Map Matching by
+    <li class="footer">Generated on Thu Nov 17 2016 17:12:05 for Map Matching by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -1,0 +1,5 @@
+<map id="MainWindow::readyToNext2" name="MainWindow::readyToNext2">
+<area shape="rect" id="node2" href="$class_track.html#a9f1da7896167f44da967acf9fd05d92a" title="This is a space filter, which deletes points depending on a distance interval. " alt="" coords="248,5,375,32"/>
+<area shape="rect" id="node3" href="$class_track.html#a58fcdaf47f2c87bb7095933616f5a4bc" title="This is a temporal filter, which deletes points depending on a time value. " alt="" coords="240,56,383,83"/>
+<area shape="rect" id="node4" href="$class_point_g_p_s.html#aa8a0cbf3cfbc3f4ac9d16737c00fcb88" title="PointGPS::timeStamp" alt="" coords="431,56,581,83"/>
+</map>

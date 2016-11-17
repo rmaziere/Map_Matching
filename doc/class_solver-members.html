@@ -112,18 +112,26 @@ $(document).ready(function(){initNavTree('class_solver.html','');});
 
 <p>This is the complete list of members for <a class="el" href="class_solver.html">Solver</a>, including all inherited members.</p>
 <table class="directory">
-  <tr class="even"><td class="entry"><a class="el" href="class_solver.html#a0c67ab4d4fd9c36cfcbfdc13021b419f">initialize</a>()</td><td class="entry"><a class="el" href="class_solver.html">Solver</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_solver.html#abaa8ebee53c185be6f3f2b8e466c9905">m_roadPoints</a></td><td class="entry"><a class="el" href="class_solver.html">Solver</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_solver.html#ad397c6b4f3c5a670b3b15e4afcde2b13">m_roads</a></td><td class="entry"><a class="el" href="class_solver.html">Solver</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_solver.html#a98ab7b88d8ad3992195a3813ec4fdbf8">grid</a></td><td class="entry"><a class="el" href="class_solver.html">Solver</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_solver.html#a0078c3931f5bd4c64ce440e0f75f5084">m_gridFilename</a></td><td class="entry"><a class="el" href="class_solver.html">Solver</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_solver.html#abaa8ebee53c185be6f3f2b8e466c9905">m_roadPoints</a></td><td class="entry"><a class="el" href="class_solver.html">Solver</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_solver.html#ad397c6b4f3c5a670b3b15e4afcde2b13">m_roads</a></td><td class="entry"><a class="el" href="class_solver.html">Solver</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_solver.html#ae3bc6bbdda75da96e47fa155a2f339d8">m_trackFilename</a></td><td class="entry"><a class="el" href="class_solver.html">Solver</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_solver.html#a3c2ec12de9fbeb1f3d96af60422ca267">m_trackPoints</a></td><td class="entry"><a class="el" href="class_solver.html">Solver</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_solver.html#a11051ddab551fdcee7dc71dcad1d0fd7">setDistance</a>(PointGPS *p, Road &amp;r)</td><td class="entry"><a class="el" href="class_solver.html">Solver</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_solver.html#ad3f945eda05c5c68aa02e98533a1ff05">Solver</a>(AllRoadMap *gridRoad, std::vector&lt; PointRoad &gt; *roadPoints, AllPointVector *trackPoint)</td><td class="entry"><a class="el" href="class_solver.html">Solver</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_solver.html#a479a7924b6dc1c32032132f47b71c157">onSignalSetGrid</a>(QString s)</td><td class="entry"><a class="el" href="class_solver.html">Solver</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_solver.html#a8453ed9c55ff4140209500dbd3ee5e17">onSignalSetTrack</a>(QString s)</td><td class="entry"><a class="el" href="class_solver.html">Solver</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_solver.html#a323c9c0407f26a2ed3ec3ff5ed02a760">onSignalStart</a>()</td><td class="entry"><a class="el" href="class_solver.html">Solver</a></td><td class="entry"><span class="mlabel">slot</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_solver.html#a11051ddab551fdcee7dc71dcad1d0fd7">setDistance</a>(PointGPS *p, Road &amp;r)</td><td class="entry"><a class="el" href="class_solver.html">Solver</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_solver.html#a340cbdcbcd9aba83f28439c955af7550">signalMessage</a>(QString)</td><td class="entry"><a class="el" href="class_solver.html">Solver</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_solver.html#a106d95eb5f1d870cd1dd2c6f3e1543d5">Solver</a>(QObject *parent=0)</td><td class="entry"><a class="el" href="class_solver.html">Solver</a></td><td class="entry"><span class="mlabel">explicit</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_solver.html#a97bc7169c18b339fecd4937150f907c3">start</a>()</td><td class="entry"><a class="el" href="class_solver.html">Solver</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_solver.html#a1922935767611b2215097b1ea056eef5">track</a></td><td class="entry"><a class="el" href="class_solver.html">Solver</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Nov 16 2016 16:58:26 for Map Matching by
+    <li class="footer">Generated on Thu Nov 17 2016 17:12:05 for Map Matching by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

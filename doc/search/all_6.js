@@ -1,6 +1,7 @@
 var searchData=
 [
   ['getcountry',['getCountry',['../class_loading.html#a1925efcb9ccc2a01359b40a59cb542d9',1,'Loading']]],
+  ['getinfo',['getInfo',['../class_filtering.html#ad96665ec38911625b6778741000fbfe2',1,'Filtering']]],
   ['getlistofpoints',['getListOfPoints',['../class_road.html#a1241f9bb27054a32b1f013f03a51be8a',1,'Road']]],
   ['getm_5fedgeid',['getm_edgeId',['../class_road.html#a7036f33f69704b5e3e7486fe4d23b883',1,'Road']]],
   ['getniveau',['getNiveau',['../class_my_exception.html#ad336238b0193bd30f9eebbdfb30b6ae2',1,'MyException']]],
@@ -11,7 +12,10 @@ var searchData=
   ['getpointsaspointer',['getPointsAsPointer',['../class_track.html#ad262a30c2abcd29cf4cdc04facd290ee',1,'Track']]],
   ['getroadentry',['getRoadEntry',['../class_grid.html#a54c76e927f8428bca87520d8ca310bec',1,'Grid']]],
   ['getroads',['getRoads',['../class_grid.html#ae43b7156c770eb4a8812d7ecce223b36',1,'Grid']]],
-  ['grid',['Grid',['../class_grid.html',1,'Grid'],['../class_grid.html#a4ac9ff4f63552b4c61ff90fcb35ad66c',1,'Grid::Grid()'],['../class_loading.html#afb0b2fe451bdc3f6f2cc186903df96b4',1,'Loading::grid()']]],
+  ['graphicemitter',['GraphicEmitter',['../class_graphic_emitter.html',1,'GraphicEmitter'],['../class_graphic_emitter.html#afdf980080770a86efa90530bd5fa0830',1,'GraphicEmitter::GraphicEmitter()']]],
+  ['graphicemitter_2ecpp',['graphicemitter.cpp',['../graphicemitter_8cpp.html',1,'']]],
+  ['graphicemitter_2eh',['graphicemitter.h',['../graphicemitter_8h.html',1,'']]],
+  ['grid',['Grid',['../class_grid.html',1,'Grid'],['../class_grid.html#a4ac9ff4f63552b4c61ff90fcb35ad66c',1,'Grid::Grid()'],['../class_solver.html#a98ab7b88d8ad3992195a3813ec4fdbf8',1,'Solver::grid()'],['../class_loading.html#afb0b2fe451bdc3f6f2cc186903df96b4',1,'Loading::grid()']]],
   ['grid_2ecpp',['grid.cpp',['../grid_8cpp.html',1,'']]],
   ['grid_2eh',['grid.h',['../grid_8h.html',1,'']]],
   ['grille',['grille',['../class_main_window.html#ae79aeaf1e52524e07754b5ab52c91f76',1,'MainWindow']]]

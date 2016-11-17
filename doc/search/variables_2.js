@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['deltax',['deltaX',['../class_map.html#a0d922770d19a95db062b5561e69495a4',1,'Map']]],
-  ['deltay',['deltaY',['../class_map.html#ae200a6863f84140c6c2a569e0cbcea3c',1,'Map']]]
+  ['deltax',['deltaX',['../class_q_map_viewer.html#a3f383cd6897262acfbc872112a816114',1,'QMapViewer']]],
+  ['deltay',['deltaY',['../class_q_map_viewer.html#a4bab2b2de511da31331d32610834b12f',1,'QMapViewer']]]
 ];

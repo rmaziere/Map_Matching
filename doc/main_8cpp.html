@@ -110,45 +110,42 @@ $(document).ready(function(){initNavTree('main_8cpp.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;QFileDialog&gt;</code><br />
+<code>#include &lt;QTimer&gt;</code><br />
 <code>#include &lt;QtGui/QApplication&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;limits.h&gt;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
-<code>#include &quot;<a class="el" href="myexception_8h_source.html">myexception.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="controller_8h_source.html">GUI/controller.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_main_window_8h_source.html">MainWindow.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="file_8h_source.html">file.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="grid_8h_source.html">grid.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="loading_8h_source.html">loading.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="myexception_8h_source.html">myexception.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="point_g_p_s_8h_source.html">pointGPS.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="track_8h_source.html">track.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="map_8h_source.html">GUI/map.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_main_window_8h_source.html">MainWindow.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="journalprocess_8h_source.html">journalprocess.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="qdebugstream_8h_source.html">qdebugstream.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="solver_8h_source.html">solver.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="track_8h_source.html">track.h</a>&quot;</code><br />
 <code>#include &lt;QTextEdit&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.cpp:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="main_8cpp__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="main_8cpp__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 </div>
 <p><a href="main_8cpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a175f97306b953e738471cef90ef0a8a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a175f97306b953e738471cef90ef0a8a4">dev_all</a> ()</td></tr>
-<tr class="separator:a175f97306b953e738471cef90ef0a8a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a78a67b17d4d189a7c0732ad1ac54912e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a78a67b17d4d189a7c0732ad1ac54912e">dev_file</a> ()</td></tr>
 <tr class="separator:a78a67b17d4d189a7c0732ad1ac54912e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a640261e473790d1a87c2f33332460793"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a640261e473790d1a87c2f33332460793">dev_grid</a> ()</td></tr>
 <tr class="separator:a640261e473790d1a87c2f33332460793"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e1c37b6b0ca91ad100d6bd39fc4062f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a5e1c37b6b0ca91ad100d6bd39fc4062f">dev_img</a> ()</td></tr>
-<tr class="separator:a5e1c37b6b0ca91ad100d6bd39fc4062f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3b75ec760f84dcb3ab7b6a61af76bfb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#aa3b75ec760f84dcb3ab7b6a61af76bfb">dev_network</a> ()</td></tr>
-<tr class="separator:aa3b75ec760f84dcb3ab7b6a61af76bfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d29265a023b53c0fdc10ac0ad445fe1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a3d29265a023b53c0fdc10ac0ad445fe1">dev_ui</a> ()</td></tr>
-<tr class="separator:a3d29265a023b53c0fdc10ac0ad445fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a141063eccadf0e03662d414d897d9f5d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a141063eccadf0e03662d414d897d9f5d">dev_gridAndTrack</a> ()</td></tr>
+<tr class="separator:a141063eccadf0e03662d414d897d9f5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dd67c19acf7317c6296b63e29dcfab9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a9dd67c19acf7317c6296b63e29dcfab9">dev_thread</a> ()</td></tr>
+<tr class="separator:a9dd67c19acf7317c6296b63e29dcfab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1ae2a39d3963d837f4b3a851eb17170"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#af1ae2a39d3963d837f4b3a851eb17170">dev_ui2</a> ()</td></tr>
 <tr class="separator:af1ae2a39d3963d837f4b3a851eb17170"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
@@ -157,30 +154,6 @@ Functions</h2></td></tr>
 <tr class="separator:a6548943dc3a7a07dba51b4a4e8a8a2b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a175f97306b953e738471cef90ef0a8a4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dev_all </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="main_8cpp_source.html#l00045">45</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="main_8cpp_a175f97306b953e738471cef90ef0a8a4_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
-</div>
-</p>
-
-</div>
-</div>
 <a class="anchor" id="a78a67b17d4d189a7c0732ad1ac54912e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -194,7 +167,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="main_8cpp_source.html#l00091">91</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p>Definition at line <a class="el" href="main_8cpp_source.html#l00100">100</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -218,7 +191,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="main_8cpp_source.html#l00036">36</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p>Definition at line <a class="el" href="main_8cpp_source.html#l00055">55</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -229,12 +202,12 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="a5e1c37b6b0ca91ad100d6bd39fc4062f"></a>
+<a class="anchor" id="a141063eccadf0e03662d414d897d9f5d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void dev_img </td>
+          <td class="memname">void dev_gridAndTrack </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -242,23 +215,23 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="main_8cpp_source.html#l00100">100</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p>Definition at line <a class="el" href="main_8cpp_source.html#l00064">64</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="main_8cpp_a5e1c37b6b0ca91ad100d6bd39fc4062f_cgraph.svg" width="546" height="342"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="main_8cpp_a141063eccadf0e03662d414d897d9f5d_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="aa3b75ec760f84dcb3ab7b6a61af76bfb"></a>
+<a class="anchor" id="a9dd67c19acf7317c6296b63e29dcfab9"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void dev_network </td>
+          <td class="memname">void dev_thread </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -266,24 +239,21 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="main_8cpp_source.html#l00073">73</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p>Definition at line <a class="el" href="main_8cpp_source.html#l00038">38</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="main_8cpp_a9dd67c19acf7317c6296b63e29dcfab9_cgraph.svg" width="100%" height="556"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
-</div>
-<a class="anchor" id="a3d29265a023b53c0fdc10ac0ad445fe1"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void dev_ui </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+</p>
 
-<p>Definition at line <a class="el" href="main_8cpp_source.html#l00154">154</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="main_8cpp_a9dd67c19acf7317c6296b63e29dcfab9_icgraph.svg" width="196" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
 
 </div>
 </div>
@@ -300,7 +270,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="main_8cpp_source.html#l00167">167</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p>Definition at line <a class="el" href="main_8cpp_source.html#l00169">169</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -328,7 +298,14 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="main_8cpp_source.html#l00186">186</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p>Definition at line <a class="el" href="main_8cpp_source.html#l00185">185</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph.svg" width="100%" height="556"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+</p>
 
 </div>
 </div>
@@ -345,7 +322,7 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="main_8cpp_source.html#l00085">85</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p>Definition at line <a class="el" href="main_8cpp_source.html#l00093">93</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -355,7 +332,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Generated on Wed Nov 16 2016 16:58:26 for Map Matching by
+    <li class="footer">Generated on Thu Nov 17 2016 17:12:05 for Map Matching by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

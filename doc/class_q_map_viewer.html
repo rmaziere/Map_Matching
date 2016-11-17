@@ -106,8 +106,8 @@ $(document).ready(function(){initNavTree('class_q_map_viewer.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="class_q_map_viewer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">QMapViewer Class Reference</div>  </div>
@@ -116,78 +116,602 @@ $(document).ready(function(){initNavTree('class_q_map_viewer.html','');});
 
 <p><code>#include &lt;<a class="el" href="qmapviewer_8h_source.html">qmapviewer.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for QMapViewer:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_q_map_viewer__inherit__graph.svg" width="128" height="214"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-<div class="dynheader">
 Collaboration diagram for QMapViewer:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_q_map_viewer__coll__graph.svg" width="128" height="214"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_q_map_viewer__coll__graph.svg" width="192" height="338"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
-Signals</h2></td></tr>
-<tr class="memitem:a481f922bf691337076abf5f08987555e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_map_viewer.html#a481f922bf691337076abf5f08987555e">onSignalMessage</a> (QString)</td></tr>
-<tr class="separator:a481f922bf691337076abf5f08987555e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a066617cf7ca6ad9b4c3ed946abfc300f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_map_viewer.html#a066617cf7ca6ad9b4c3ed946abfc300f">QMapViewer</a> (QWidget *parent=0)</td></tr>
-<tr class="separator:a066617cf7ca6ad9b4c3ed946abfc300f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30149c35a8eda554537ef5f1f013430c"><td class="memItemLeft" align="right" valign="top">QPointF&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_map_viewer.html#a30149c35a8eda554537ef5f1f013430c">coordinateTranslator</a> (double x, double y)</td></tr>
+<tr class="memdesc:a30149c35a8eda554537ef5f1f013430c"><td class="mdescLeft">&#160;</td><td class="mdescRight">coordinateTranslator  <a href="#a30149c35a8eda554537ef5f1f013430c">More...</a><br /></td></tr>
+<tr class="separator:a30149c35a8eda554537ef5f1f013430c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7b652870547068296dfad664ebe8944"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_map_viewer.html#ae7b652870547068296dfad664ebe8944">deltaCalculator</a> (double xMinGrid, double yMinGrid)</td></tr>
+<tr class="memdesc:ae7b652870547068296dfad664ebe8944"><td class="mdescLeft">&#160;</td><td class="mdescRight">deltaCalculator  <a href="#ae7b652870547068296dfad664ebe8944">More...</a><br /></td></tr>
+<tr class="separator:ae7b652870547068296dfad664ebe8944"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a945212de41c82ddfb8c241487ebc2f39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_map_viewer.html#a945212de41c82ddfb8c241487ebc2f39">drawPolyline</a> (QPointF polyligne, int size)</td></tr>
+<tr class="memdesc:a945212de41c82ddfb8c241487ebc2f39"><td class="mdescLeft">&#160;</td><td class="mdescRight">drawPolyline  <a href="#a945212de41c82ddfb8c241487ebc2f39">More...</a><br /></td></tr>
+<tr class="separator:a945212de41c82ddfb8c241487ebc2f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adebcdd66becb55104a21e34ac22de419"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_map_viewer.html#adebcdd66becb55104a21e34ac22de419">landmarkMaker</a> (int resolution, QString color=&quot;black&quot;)</td></tr>
+<tr class="separator:adebcdd66becb55104a21e34ac22de419"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ab3a05f3f8542dc36fffdf7068b5c52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_map_viewer.html#a7ab3a05f3f8542dc36fffdf7068b5c52">makePointFromTrack</a> (std::vector&lt; std::vector&lt; double &gt; &gt; vXY, QString color=&quot;black&quot;)</td></tr>
+<tr class="separator:a7ab3a05f3f8542dc36fffdf7068b5c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cb07aee3bb914c77ede9f45f1c9cddf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_map_viewer.html#a6cb07aee3bb914c77ede9f45f1c9cddf">makePolyline</a> (std::vector&lt; std::vector&lt; double &gt; &gt; vXY, QString color=&quot;black&quot;)</td></tr>
+<tr class="memdesc:a6cb07aee3bb914c77ede9f45f1c9cddf"><td class="mdescLeft">&#160;</td><td class="mdescRight">makePolyline  <a href="#a6cb07aee3bb914c77ede9f45f1c9cddf">More...</a><br /></td></tr>
+<tr class="separator:a6cb07aee3bb914c77ede9f45f1c9cddf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5eaa22fa92fc348ab4116299b68e0896"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_map_viewer.html#a5eaa22fa92fc348ab4116299b68e0896">makePolylineFromRoad</a> (std::vector&lt; std::vector&lt; double &gt; &gt; vXY, QString color=&quot;black&quot;)</td></tr>
+<tr class="separator:a5eaa22fa92fc348ab4116299b68e0896"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ea0161ff05380850a0260b051158d36"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_map_viewer.html#a5ea0161ff05380850a0260b051158d36">QMapViewer</a> ()</td></tr>
+<tr class="memdesc:a5ea0161ff05380850a0260b051158d36"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Map class's constructor.  <a href="#a5ea0161ff05380850a0260b051158d36">More...</a><br /></td></tr>
+<tr class="separator:a5ea0161ff05380850a0260b051158d36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69186327628579b2687b8cb69026d86d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_map_viewer.html#a69186327628579b2687b8cb69026d86d">QMapViewer</a> (int <a class="el" href="class_q_map_viewer.html#a41a7639274af4d75e1da4ccfba366663">width</a>, int <a class="el" href="class_q_map_viewer.html#a6860a0b4df84d1a6f395dbc056a8045d">height</a>)</td></tr>
+<tr class="separator:a69186327628579b2687b8cb69026d86d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2be98881c6ef74a74d159ba62594cb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_map_viewer.html#aa2be98881c6ef74a74d159ba62594cb8">save</a> (QString file)</td></tr>
+<tr class="memdesc:aa2be98881c6ef74a74d159ba62594cb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">save the current image  <a href="#aa2be98881c6ef74a74d159ba62594cb8">More...</a><br /></td></tr>
+<tr class="separator:aa2be98881c6ef74a74d159ba62594cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9120965a1e4976608a89b32f791cf7a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_map_viewer.html#a9120965a1e4976608a89b32f791cf7a0">scaleCalculator</a> (double xMinGrid, double xMaxGrid, double yMinGrid, double yMaxGrid)</td></tr>
+<tr class="memdesc:a9120965a1e4976608a89b32f791cf7a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">scaleCalculator  <a href="#a9120965a1e4976608a89b32f791cf7a0">More...</a><br /></td></tr>
+<tr class="separator:a9120965a1e4976608a89b32f791cf7a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a496f18a20406bb02f0705b031f814faa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_map_viewer.html#a496f18a20406bb02f0705b031f814faa">write</a> (QPoint point, QString text, QString color=&quot;black&quot;)</td></tr>
+<tr class="separator:a496f18a20406bb02f0705b031f814faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a3f383cd6897262acfbc872112a816114"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_map_viewer.html#a3f383cd6897262acfbc872112a816114">deltaX</a></td></tr>
+<tr class="separator:a3f383cd6897262acfbc872112a816114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bab2b2de511da31331d32610834b12f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_map_viewer.html#a4bab2b2de511da31331d32610834b12f">deltaY</a></td></tr>
+<tr class="separator:a4bab2b2de511da31331d32610834b12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6860a0b4df84d1a6f395dbc056a8045d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_map_viewer.html#a6860a0b4df84d1a6f395dbc056a8045d">height</a></td></tr>
+<tr class="separator:a6860a0b4df84d1a6f395dbc056a8045d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4cc95cbcb3898964637d792ded1a945"><td class="memItemLeft" align="right" valign="top">QImage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_map_viewer.html#af4cc95cbcb3898964637d792ded1a945">img</a></td></tr>
+<tr class="separator:af4cc95cbcb3898964637d792ded1a945"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b71b61442c36e90a2489c20a85b07a3"><td class="memItemLeft" align="right" valign="top">QPainter&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_map_viewer.html#a8b71b61442c36e90a2489c20a85b07a3">paint</a></td></tr>
+<tr class="separator:a8b71b61442c36e90a2489c20a85b07a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32ece0c7e2f272b01fce8131f48df238"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_map_viewer.html#a32ece0c7e2f272b01fce8131f48df238">scale</a> = 1</td></tr>
+<tr class="separator:a32ece0c7e2f272b01fce8131f48df238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41a7639274af4d75e1da4ccfba366663"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_map_viewer.html#a41a7639274af4d75e1da4ccfba366663">width</a></td></tr>
+<tr class="separator:a41a7639274af4d75e1da4ccfba366663"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="qmapviewer_8h_source.html#l00006">6</a> of file <a class="el" href="qmapviewer_8h_source.html">qmapviewer.h</a>.</p>
+<p>Definition at line <a class="el" href="qmapviewer_8h_source.html#l00011">11</a> of file <a class="el" href="qmapviewer_8h_source.html">qmapviewer.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a066617cf7ca6ad9b4c3ed946abfc300f"></a>
+<a class="anchor" id="a5ea0161ff05380850a0260b051158d36"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">QMapViewer::QMapViewer </td>
           <td>(</td>
-          <td class="paramtype">QWidget *&#160;</td>
-          <td class="paramname"><em>parent</em> = <code>0</code></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>The Map class's constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Image's</td><td>width </td></tr>
+    <tr><td class="paramname">Image's</td><td>height </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Definition at line <a class="el" href="qmapviewer_8cpp_source.html#l00003">3</a> of file <a class="el" href="qmapviewer_8cpp_source.html">qmapviewer.cpp</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a481f922bf691337076abf5f08987555e"></a>
+<a class="anchor" id="a69186327628579b2687b8cb69026d86d"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void QMapViewer::onSignalMessage </td>
+          <td class="memname">QMapViewer::QMapViewer </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em> = <code>1280</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em> = <code>1024</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="qmapviewer_8cpp_source.html#l00005">5</a> of file <a class="el" href="qmapviewer_8cpp_source.html">qmapviewer.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a30149c35a8eda554537ef5f1f013430c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPointF QMapViewer::coordinateTranslator </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>coordinateTranslator </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td></td></tr>
+    <tr><td class="paramname">y</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Definition at line <a class="el" href="qmapviewer_8cpp_source.html#l00035">35</a> of file <a class="el" href="qmapviewer_8cpp_source.html">qmapviewer.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_q_map_viewer_a30149c35a8eda554537ef5f1f013430c_icgraph.svg" width="479" height="118"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae7b652870547068296dfad664ebe8944"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void QMapViewer::deltaCalculator </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>xMinGrid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>yMinGrid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>deltaCalculator </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xMinGrid</td><td></td></tr>
+    <tr><td class="paramname">yMinGrid</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="qmapviewer_8cpp_source.html#l00029">29</a> of file <a class="el" href="qmapviewer_8cpp_source.html">qmapviewer.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a945212de41c82ddfb8c241487ebc2f39"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void QMapViewer::drawPolyline </td>
+          <td>(</td>
+          <td class="paramtype">QPointF&#160;</td>
+          <td class="paramname"><em>polyligne</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>drawPolyline </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">polyligne</td><td></td></tr>
+    <tr><td class="paramname">size</td><td>the number of polyligne's points </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="adebcdd66becb55104a21e34ac22de419"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void QMapViewer::landmarkMaker </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>resolution</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>color</em> = <code>&quot;black&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="qmapviewer_8cpp_source.html#l00051">51</a> of file <a class="el" href="qmapviewer_8cpp_source.html">qmapviewer.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_q_map_viewer_adebcdd66becb55104a21e34ac22de419_cgraph.svg" width="387" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7ab3a05f3f8542dc36fffdf7068b5c52"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void QMapViewer::makePointFromTrack </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td>
+          <td class="paramname"><em>vXY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>color</em> = <code>&quot;black&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="qmapviewer_8cpp_source.html#l00074">74</a> of file <a class="el" href="qmapviewer_8cpp_source.html">qmapviewer.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_q_map_viewer_a7ab3a05f3f8542dc36fffdf7068b5c52_cgraph.svg" width="479" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6cb07aee3bb914c77ede9f45f1c9cddf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void QMapViewer::makePolyline </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td>
+          <td class="paramname"><em>vXY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>color</em> = <code>&quot;black&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>makePolyline </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vXY</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Definition at line <a class="el" href="qmapviewer_8cpp_source.html#l00090">90</a> of file <a class="el" href="qmapviewer_8cpp_source.html">qmapviewer.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5eaa22fa92fc348ab4116299b68e0896"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void QMapViewer::makePolylineFromRoad </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::vector&lt; double &gt; &gt;&#160;</td>
+          <td class="paramname"><em>vXY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>color</em> = <code>&quot;black&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="qmapviewer_8cpp_source.html#l00106">106</a> of file <a class="el" href="qmapviewer_8cpp_source.html">qmapviewer.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_q_map_viewer_a5eaa22fa92fc348ab4116299b68e0896_cgraph.svg" width="464" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa2be98881c6ef74a74d159ba62594cb8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void QMapViewer::save </td>
           <td>(</td>
           <td class="paramtype">QString&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>save the current image </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>is the path used for output </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p>Definition at line <a class="el" href="qmapviewer_8cpp_source.html#l00123">123</a> of file <a class="el" href="qmapviewer_8cpp_source.html">qmapviewer.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9120965a1e4976608a89b32f791cf7a0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void QMapViewer::scaleCalculator </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>xMinGrid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>xMaxGrid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>yMinGrid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>yMaxGrid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>scaleCalculator </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xMinGrid</td><td></td></tr>
+    <tr><td class="paramname">xMaxGrid</td><td></td></tr>
+    <tr><td class="paramname">yMinGrid</td><td></td></tr>
+    <tr><td class="paramname">yMaxGrid</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="qmapviewer_8cpp_source.html#l00014">14</a> of file <a class="el" href="qmapviewer_8cpp_source.html">qmapviewer.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a496f18a20406bb02f0705b031f814faa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void QMapViewer::write </td>
+          <td>(</td>
+          <td class="paramtype">QPoint&#160;</td>
+          <td class="paramname"><em>point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>color</em> = <code>&quot;black&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="qmapviewer_8cpp_source.html#l00064">64</a> of file <a class="el" href="qmapviewer_8cpp_source.html">qmapviewer.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_q_map_viewer_a496f18a20406bb02f0705b031f814faa_icgraph.svg" width="387" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a class="anchor" id="a3f383cd6897262acfbc872112a816114"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int QMapViewer::deltaX</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>delta between the SRID's x origin and the grid's x </p>
+
+<p>Definition at line <a class="el" href="qmapviewer_8h_source.html#l00079">79</a> of file <a class="el" href="qmapviewer_8h_source.html">qmapviewer.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a4bab2b2de511da31331d32610834b12f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int QMapViewer::deltaY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>delta between the SRID's y origin and the grid's y </p>
+
+<p>Definition at line <a class="el" href="qmapviewer_8h_source.html#l00080">80</a> of file <a class="el" href="qmapviewer_8h_source.html">qmapviewer.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6860a0b4df84d1a6f395dbc056a8045d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int QMapViewer::height</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>image height </p>
+
+<p>Definition at line <a class="el" href="qmapviewer_8h_source.html#l00077">77</a> of file <a class="el" href="qmapviewer_8h_source.html">qmapviewer.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af4cc95cbcb3898964637d792ded1a945"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QImage QMapViewer::img</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The QImage object </p>
+
+<p>Definition at line <a class="el" href="qmapviewer_8h_source.html#l00081">81</a> of file <a class="el" href="qmapviewer_8h_source.html">qmapviewer.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8b71b61442c36e90a2489c20a85b07a3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPainter QMapViewer::paint</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>The QPainter object </p>
+
+<p>Definition at line <a class="el" href="qmapviewer_8h_source.html#l00082">82</a> of file <a class="el" href="qmapviewer_8h_source.html">qmapviewer.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a32ece0c7e2f272b01fce8131f48df238"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double QMapViewer::scale = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>scale between the grid and the image </p>
+
+<p>Definition at line <a class="el" href="qmapviewer_8h_source.html#l00078">78</a> of file <a class="el" href="qmapviewer_8h_source.html">qmapviewer.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a41a7639274af4d75e1da4ccfba366663"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int QMapViewer::width</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>image width </p>
+
+<p>Definition at line <a class="el" href="qmapviewer_8h_source.html#l00076">76</a> of file <a class="el" href="qmapviewer_8h_source.html">qmapviewer.h</a>.</p>
 
 </div>
 </div>
@@ -201,7 +725,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_q_map_viewer.html">QMapViewer</a></li>
-    <li class="footer">Generated on Wed Nov 16 2016 16:58:26 for Map Matching by
+    <li class="footer">Generated on Thu Nov 17 2016 17:12:05 for Map Matching by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

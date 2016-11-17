@@ -11,6 +11,7 @@ var class_grid =
     [ "getRoadEntry", "class_grid.html#a54c76e927f8428bca87520d8ca310bec", null ],
     [ "getRoads", "class_grid.html#ae43b7156c770eb4a8812d7ecce223b36", null ],
     [ "inFootPrint", "class_grid.html#a6b6af4fb2545b398b47794de576f15f5", null ],
+    [ "infos", "class_grid.html#a37103de283959ce994c5c76113b7b033", null ],
     [ "outputInfos", "class_grid.html#a58f05023aca02a77494c52263bd2df20", null ],
     [ "readFromCSV", "class_grid.html#ae848f1c59c544adc1af9133409ee0106", null ],
     [ "setBoundingBox", "class_grid.html#a19318437702e712955d0c4631c94cb04", null ],

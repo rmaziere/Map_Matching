@@ -56,8 +56,8 @@ var sectionId = 'dynsection-4';
 <title>File::splitPath</title>
 <!-- Node1 -->
 <g id="node1" class="node"><title>Node1</title>
-<polygon fill="#bfbfbf" stroke="black" points="0,-38.5 0,-57.5 77,-57.5 77,-38.5 0,-38.5"/>
-<text text-anchor="middle" x="38.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">File::splitPath</text>
+<polygon fill="#bfbfbf" stroke="black" points="0,-57.5 0,-76.5 77,-76.5 77,-57.5 0,-57.5"/>
+<text text-anchor="middle" x="38.5" y="-64.5" font-family="Helvetica,sans-Serif" font-size="10.00">File::splitPath</text>
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
@@ -69,21 +69,8 @@ var sectionId = 'dynsection-4';
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge"><title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M87.0982,-54.8254C95.4929,-56.0292 104.323,-57.2953 112.985,-58.5375"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="87.5103,-51.3488 77.1148,-53.3938 86.5167,-58.2779 87.5103,-51.3488"/>
-</g>
-<!-- Node10 -->
-<g id="node10" class="node"><title>Node10</title>
-<g id="a_node10"><a xlink:href="class_file.html#a4392063fcbc3883e165baf5b0da9a165" target="_top" xlink:title="The UI to select the file&#39;s path to save. ">
-<polygon fill="none" stroke="black" points="129.5,-19.5 129.5,-38.5 216.5,-38.5 216.5,-19.5 129.5,-19.5"/>
-<text text-anchor="middle" x="173" y="-26.5" font-family="Helvetica,sans-Serif" font-size="10.00">File::whereSave</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node10 -->
-<g id="edge11" class="edge"><title>Node1&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M87.3068,-41.1447C100.981,-39.1838 115.795,-37.0596 129.153,-35.1442"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="86.5167,-37.7221 77.1148,-42.6062 87.5103,-44.6512 86.5167,-37.7221"/>
+<path fill="none" stroke="midnightblue" d="M87.3751,-67C95.687,-67 104.418,-67 112.985,-67"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="87.1148,-63.5001 77.1148,-67 87.1147,-70.5001 87.1148,-63.5001"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node"><title>Node3</title>
@@ -134,8 +121,8 @@ var sectionId = 'dynsection-4';
 </g>
 <!-- Node2&#45;&gt;Node9 -->
 <g id="edge10" class="edge"><title>Node2&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M216.901,-54.1568C222.373,-52.2353 227.855,-50.1666 233,-48 249.673,-40.9784 252.205,-35.7269 269,-29 282.805,-23.4704 298.811,-18.8683 311.717,-15.5788"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="215.497,-50.9363 207.138,-57.4459 217.732,-57.57 215.497,-50.9363"/>
+<path fill="none" stroke="midnightblue" d="M205.36,-53.4997C223.729,-45.8332 247.479,-36.3336 269,-29 283.077,-24.2033 299.093,-19.6298 311.936,-16.1723"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="203.879,-50.3255 196.021,-57.4323 206.596,-56.7768 203.879,-50.3255"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node"><title>Node4</title>

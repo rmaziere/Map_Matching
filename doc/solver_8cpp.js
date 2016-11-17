@@ -1,4 +1,4 @@
 var solver_8cpp =
 [
-    [ "DEBUG", "solver_8cpp.html#ad72dbcf6d0153db1b8d8a58001feed83", null ]
+    [ "DEBUG_SOLVER", "solver_8cpp.html#a7933417f657528c88e8b24fe926a5685", null ]
 ];

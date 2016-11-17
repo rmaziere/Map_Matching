@@ -1,6 +1,6 @@
 <map id="Filtering::Filtering" name="Filtering::Filtering">
 <area shape="rect" id="node2" href="$class_filtering.html#a3baa778d251523a5b109f693dcb47fe2" title="Filtering::nbPtTrack" alt="" coords="176,5,312,32"/>
 <area shape="rect" id="node3" href="$class_filtering.html#a25effdf66380ccdd5079874be70832b2" title="Filtering::temporal" alt="" coords="181,56,307,83"/>
-<area shape="rect" id="node4" href="$class_filtering.html#ae15eb7d32eb9459e25edd996bbd155cb" title="Filtering::spatial" alt="" coords="187,107,301,133"/>
-<area shape="rect" id="node5" href="$class_filtering.html#a1835ee1467d1e01c4282d9e762b33528" title="Filtering::boutonXY" alt="" coords="177,157,311,184"/>
+<area shape="rect" id="node5" href="$class_filtering.html#ae15eb7d32eb9459e25edd996bbd155cb" title="Filtering::spatial" alt="" coords="187,107,301,133"/>
+<area shape="rect" id="node4" href="$class_filtering.html#af19a51baea507dd6ab30d1f7c2843600" title="Filtering::launchFiltre" alt="" coords="360,81,503,108"/>
 </map>
