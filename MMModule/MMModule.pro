@@ -34,7 +34,9 @@ SOURCES += main.cpp \
     GUI/controller.cpp \
     GUI/graphicemitter.cpp \
     GUI/qprocessviewer.cpp \
-    GUI/qmapviewer.cpp
+    GUI/qmapviewer.cpp \
+    GUI/qmapwidget.cpp \
+    GUI/qmapscene.cpp
 
 HEADERS += \
     sauvegarde.h \
@@ -60,5 +62,7 @@ HEADERS += \
     GUI/controller.h \
     GUI/graphicemitter.h \
     GUI/qprocessviewer.h \
-    GUI/qmapviewer.h
+    GUI/qmapviewer.h \
+    GUI/qmapwidget.h \
+    GUI/qmapscene.h
 

@@ -1,45 +1,59 @@
 #include "qmapviewer.h"
 
-QMapViewer::QMapViewer(){}
+#define GPSDEFAULT "red"
+#define X 0
+#define Y 2
 
-QMapViewer::QMapViewer(int width = 1280, int height = 1024)
+QMapViewer::QMapViewer(int width, int height)
 {
-    this->width = width;
-    this->height = height;
+    this->m_width = width;
+    this->m_height = height;
 
-    img = QImage(this->width, this->height, QImage::Format_RGB32);
-    img.fill(Qt::color0);
+    m_map = QImage(this->m_width, this->m_height, QImage::Format_RGB32);
+    m_map.fill(Qt::color0);
 }
 
-void QMapViewer::scaleCalculator(double xMinGrid, double xMaxGrid, double yMinGrid, double yMaxGrid)
+void QMapViewer::drawAllGPSPoints()
 {
-    double scaleX = (xMaxGrid - xMinGrid) / width;
-    double scaleY = (yMaxGrid - yMinGrid) / height;
-
-    std::cout << "scaleCalculator.scaleX = " << std::to_string(scaleX) << std::endl;
-    std::cout << "scaleCalculator.scaleY = " << std::to_string(scaleY) << std::endl;
-
-    if (scaleX < scaleY) {
-        scale = scaleY;
-    } else {
-        scale = scaleX;
+    m_paint.begin(&m_map);
+    m_paint.setPen(QPen(QColor(GPSDEFAULT), 10, Qt::SolidLine, Qt::RoundCap, Qt::BevelJoin));
+    for (auto p : *m_trackPoints) {
+        drawPoint(*p);
     }
+    m_paint.end();
+    emit signalTrackCompleted("Track has been graphically processed");
 }
 
-void QMapViewer::deltaCalculator(double xMinGrid, double yMinGrid)
+void QMapViewer::drawPoint(Point &p)
 {
-    deltaX = round(xMinGrid);
-    deltaY = round(yMinGrid);
+    QPointF pf(transform(p.x(),X), transform(p.y(),Y));
+    m_paint.drawPoint(pf);
 }
 
-QPointF QMapViewer::coordinateTranslator(double x, double y)
+double QMapViewer::transform(double x, int dim)
 {
-    float newX = (x - deltaX); //Changement de référence (décalage du 0,0 du SRID)
-    newX /= scale; //Application de l'échelle
+    if (dim==X) return (x-m_shiftX)/m_scaleFactor;
+    else return m_height-((x-m_shiftY)/m_scaleFactor);
+}
+/*
+void QMapViewer::onSignalDimension(double xMinGrid, double xMaxGrid, double yMinGrid, double yMaxGrid)
+{
+    double scaleX = (xMaxGrid - xMinGrid) / m_width;
+    double scaleY = (yMaxGrid - yMinGrid) / m_height;
+    m_scaleFactor = (scaleX < scaleY)?scaleY:scaleX;
+    m_shiftX = round(xMinGrid);
+    m_shiftY = round(yMinGrid);
+}
+*/
 
-    float newY = (y - deltaY); //Changement de référence (décalage du 0,0 du SRID)
-    newY /= scale; //Application de l'échelle
-    newY = height - newY; //Changement de l'orientation du y
+QPointF QMapViewer::TranslateToQPoint(double x, double y)
+{
+    float newX = (x - m_shiftX); //Changement de référence (décalage du 0,0 du SRID)
+    newX /= m_scaleFactor; //Application de l'échelle
+
+    float newY = (y - m_shiftY); //Changement de référence (décalage du 0,0 du SRID)
+    newY /= m_scaleFactor; //Application de l'échelle
+    newY = m_height - newY; //Changement de l'orientation du y
 
     std::cout << "NewX : " << std::to_string(newX) << std::endl;
     std::cout << "NewY : " << std::to_string(newY) << std::endl;
@@ -51,76 +65,82 @@ QPointF QMapViewer::coordinateTranslator(double x, double y)
 void QMapViewer::landmarkMaker(int resolution, QString color)
 {
     /*Echelle en x*/
-    for (int i = 0; i < width; i += resolution) {
-        write(QPoint(i, 15), QString::number(i), color);
+    for (int i = 0; i < m_width; i += resolution) {
+        paintTick(QPoint(i, 15), QString::number(i), color);
     }
 
     /*Echelle en y*/
-    for (int i = 0; i < height; i += resolution) {
-        write(QPoint(5, i), QString::number(i));
+    for (int i = 0; i < m_height; i += resolution) {
+        paintTick(QPoint(5, i), QString::number(i));
     }
 }
 
-void QMapViewer::write(QPoint point, QString text, QString color)
+void QMapViewer::paintTick(QPoint point, QString text, QString color)
 {
-    paint.begin(&img);
+    m_paint.begin(&m_map);
 
-    paint.setPen(QPen(QColor(color)));
-    paint.drawText(point, text);
+    m_paint.setPen(QPen(QColor(color)));
+    m_paint.drawText(point, text);
 
-    paint.end();
+    m_paint.end();
 }
 
 void QMapViewer::makePointFromTrack(std::vector<std::vector<double> > vXY, QString color)
 {
-    paint.begin(&img);
+    m_paint.begin(&m_map);
     for (uint i = 0; i < vXY.size(); i++) {
         std::cout << "Point x = " << vXY.at(i).at(0) << ", ";
         std::cout << "Point y = " << vXY.at(i).at(1) << std::endl;
 
         if (i < vXY.size()) {
-            paint.setPen(QPen(QColor(color), 10, Qt::SolidLine, Qt::RoundCap, Qt::BevelJoin));
-            QPointF point = { coordinateTranslator(vXY.at(i).at(0), vXY.at(i).at(1)) };
-            paint.drawPoint(point);
+            m_paint.setPen(QPen(QColor(color), 10, Qt::SolidLine, Qt::RoundCap, Qt::BevelJoin));
+            QPointF point = { TranslateToQPoint(vXY.at(i).at(0), vXY.at(i).at(1)) };
+            m_paint.drawPoint(point);
         }
     }
-    paint.end();
+    m_paint.end();
 }
 
 void QMapViewer::makePolyline(std::vector<std::vector<double> > vXY, QString color)
 {
-    paint.begin(&img);
+    m_paint.begin(&m_map);
     for (uint i = 0; i < vXY.size(); i++) {
         std::cout << "x = " << vXY.at(i).at(0) << ", ";
         std::cout << "y = " << vXY.at(i).at(1) << std::endl;
 
         if (i < vXY.size() - 1) {
             QPointF polyligne[2] = { QPointF(vXY.at(i).at(0), vXY.at(i).at(1)), QPointF(vXY.at(i + 1).at(0), vXY.at(i + 1).at(1)) };
-            paint.setPen(QPen(QColor(color), 3, Qt::SolidLine, Qt::RoundCap, Qt::BevelJoin));
-            paint.drawPolyline(polyligne, 2);
-        }
+            m_paint.setPen(QPen(QColor(color), 3, Qt::SolidLine, Qt::RoundCap, Qt::BevelJoin));
+            m_paint.drawPolyline(polyligne, 2);
+        }    emit signalTrackCompleted("Track has been graphically processed");
     }
-    paint.end();
+    m_paint.end();
 }
 
 void QMapViewer::makePolylineFromRoad(std::vector<std::vector<double> > vXY, QString color)
 {
-    paint.begin(&img);
+    m_paint.begin(&m_map);
 
     for (uint i = 0; i < vXY.size(); i++) {
         std::cout << "x = " << vXY.at(i).at(0) << ", ";
         std::cout << "y = " << vXY.at(i).at(1) << std::endl;
 
         if (i < vXY.size() - 1) {
-            QPointF polyligne[2] = { coordinateTranslator(vXY.at(i).at(0), vXY.at(i).at(1)), coordinateTranslator(vXY.at(i + 1).at(0), vXY.at(i + 1).at(1)) };
-            paint.setPen(QPen(QColor(color), 2, Qt::SolidLine, Qt::RoundCap, Qt::BevelJoin));
-            paint.drawPolyline(polyligne, 2);
+            QPointF polyligne[2] = { TranslateToQPoint(vXY.at(i).at(0), vXY.at(i).at(1)), TranslateToQPoint(vXY.at(i + 1).at(0), vXY.at(i + 1).at(1)) };
+            m_paint.setPen(QPen(QColor(color), 2, Qt::SolidLine, Qt::RoundCap, Qt::BevelJoin));
+            m_paint.drawPolyline(polyligne, 2);
         }
     }
-    paint.end();
+    m_paint.end();
 }
 
 void QMapViewer::save(QString file)
 {
-    img.save(file);
+    m_map.save(file);
+}
+
+void QMapViewer::onSignalAllPoints(std::vector<PointGPS *> *p)
+{
+    m_trackPoints=p;
+    drawAllGPSPoints();
 }

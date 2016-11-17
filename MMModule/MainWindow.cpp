@@ -66,6 +66,14 @@ void MainWindow::createSlidingStackedWidget()
 
 void MainWindow::createConnections()
 {
+    thread = new QThread();
+    solver = new Solver();
+    solver->moveToThread(thread);
+    controller = new Controller();
+    controller->m_qProcessViewer = process;
+    controller->addSolver(solver);
+    controller->connectSignals();
+
     QObject::connect(slideWidget1, SIGNAL(ready(File, File)), this, SLOT(readyToNext1(File, File)));
     QObject::connect(slideWidget1, SIGNAL(readyNext(File)), slideWidget2, SLOT(getInfo(File)));
     QObject::connect(slideWidget2, SIGNAL(ready(double, int)), this, SLOT(readyToNext2(double, int)));
@@ -81,16 +89,8 @@ void MainWindow::putNone()
 
 void MainWindow::readyToNext1(File file1, File file2)
 {
-    File fileTrack = file1;
-    File fileGrid = file2;
-    QString fileT = fileTrack.filePath.at(0) + fileTrack.fileName.at(0) + "." + fileTrack.fileExtension.at(0);
-    QString fileG = fileGrid.filePath.at(0) + fileGrid.fileName.at(0) + "." + fileGrid.fileExtension.at(0);
-
-    trace.readFromCSV(fileT);
-    grille.setBoundingBox(trace.m_xMin, trace.m_xMax, trace.m_yMin, trace.m_yMax);
-    grille.readFromCSV(fileG);
-
-    if (!grille.trackInGrid()) {
+    solver->readFiles(file1,file2);
+    if (!solver->grid.trackInGrid()) {
         QMessageBox::warning(this, "Erreur de fichiers", "Attention, l'emprise des données de correspond pas !");
     } else {
         buttonNext->setEnabled(true);

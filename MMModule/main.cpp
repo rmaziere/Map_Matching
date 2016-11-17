@@ -1,5 +1,4 @@
 #include <QFileDialog>
-#include <QTimer> // for sleep test
 #include <QtGui/QApplication>
 #include <iostream>
 #include <limits.h>
@@ -39,8 +38,10 @@ void dev_thread()
 {
     QThread* thread = new QThread();
     Solver* solver = new Solver();
-    solver->m_gridFilename = "../Data/Seattle/useful_all_network.csv";
     solver->m_trackFilename = "../Data/Seattle/useful_all_track.csv";
+    solver->m_gridFilename = "../Data/Seattle/useful_all_network.csv";
+    //solver->m_trackFilename = "../Data/Seattle/mini_start_track.csv";
+    //solver->m_gridFilename = "../Data/Seattle/mini_start_network.csv";
     solver->moveToThread(thread);
     thread->start();
     Controller* controller = new Controller();
@@ -49,6 +50,10 @@ void dev_thread()
     controller->connectSignals();
     controller->m_qProcessViewer->resize(500, 500);
     controller->m_qProcessViewer->show();
+
+
+    controller->m_qMapWidget->resize(500,500);
+    controller->m_qMapWidget->show();
 }
 
 
@@ -107,65 +112,6 @@ void dev_file()
     cout << "File name : " << f.fileName.at(0).toStdString() << ", file extension : " << f.fileExtension.at(0).toStdString() << endl;
 }
 
-/*void dev_img()
-{
-    vector<vector<double> > poly;
-
-    for (int i = 0; i <= 1000; i += 150) {
-        double x = i + 25;
-        double y = i * 0.75;
-        vector<double> coordinates;
-        coordinates.push_back(x);
-        coordinates.push_back(y);
-        poly.push_back(coordinates);
-    }
-
-    vector<vector<double> > polyRoad;
-
-    vector<double> coordinates;
-    coordinates.push_back(1000.25);
-    coordinates.push_back(3352.28);
-    polyRoad.push_back(coordinates);
-l: _ZTV6
-    coordinates.clear();
-
-    coordinates.push_back(2000.0);
-    coordinates.push_back(6000.0);
-    polyRoad.push_back(coordinates);
-
-    Map m(1280, 1024);
-
-    m.scaleCalculator(1000.25, 2000.75, 3352.28, 6000.67);
-
-    m.deltaCalculator(1000.25, 3352.28);
-
-    m.makePolyline(poly, "green");
-
-    m.makePolylineFromRoad(polyRoad, "grey");
-
-    vector<vector<double> > point;
-
-    vector<double> pcoordinates;
-    pcoordinates.push_back(1800.0);
-    pcoordinates.push_back(4800.0);
-    point.push_back(pcoordinates);
-
-    m.makePointFromTrack(point, "orange");
-
-    m.landmarkMaker(200);
-
-    QLabel* myLabel = new QLabel();
-    myLabel->setPixmap(QPixmap::fromImage(m.img));
-
-    myLabel->show();
-
-    m.save("/tmp/test.png");
-
-    cout << "width : " << m.width << endl;
-    cout << "height : " << m.height << endl;
-    cout << "Facteur d'échelle : " << m.scale << endl;
-}*/
-
 void dev_ui2()
 {
 
@@ -175,7 +121,6 @@ void dev_ui2()
 
     w->resize(360, 504);
     w->show();
-
 }
 
 /****************************************************************************/
@@ -187,7 +132,7 @@ int main(int argc, char* argv[])
     QApplication app(argc, argv);
 
     //dev_img();
-    //dev_thread();
+    dev_thread();
     dev_ui2();
     return app.exec();
     //return app.closingDown();
