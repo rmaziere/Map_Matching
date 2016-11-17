@@ -10,7 +10,7 @@
 //#include <QLabel>
 
 #include "GUI/controller.h"
-#include "GUI/map.h"
+//#include "GUI/map.h"
 #include "MainWindow.h"
 #include "file.h"
 #include "grid.h"
@@ -108,7 +108,7 @@ void dev_file()
     cout << "File name : " << f.fileName.at(0).toStdString() << ", file extension : " << f.fileExtension.at(0).toStdString() << endl;
 }
 
-void dev_img()
+/*void dev_img()
 {
     vector<vector<double> > poly;
 
@@ -165,7 +165,7 @@ void dev_img()
     cout << "width : " << m.width << endl;
     cout << "height : " << m.height << endl;
     cout << "Facteur d'échelle : " << m.scale << endl;
-}
+}*/
 
 void dev_ui2()
 {
