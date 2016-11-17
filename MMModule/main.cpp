@@ -1,14 +1,12 @@
 #include <QFileDialog>
 #include <QTimer> // for sleep test
 #include <QtGui/QApplication>
-
 #include <iostream>
 #include <limits.h>
 #include <math.h>
 #include <stdio.h>
 #include <vector>
 //#include <QLabel>
-
 #include "GUI/controller.h"
 //#include "GUI/map.h"
 #include "MainWindow.h"
