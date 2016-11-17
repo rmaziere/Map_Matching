@@ -1,9 +1,6 @@
 #include "map.h"
 
-Map::Map()
-{
-    Map(1280, 1024);
-}
+Map::Map(){}
 
 Map::Map(int width = 1280, int height = 1024)
 {
