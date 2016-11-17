@@ -1,7 +1,0 @@
-<map id="Grid" name="Grid">
-<area shape="rect" id="node3" href="$class_point_road.html" title="{PointRoad\n|# m_id\l# m_isNode\l# counter\l|+ id()\l+ infos()\l+ isNode()\l+ outputInfos()\l+ PointRoad()\l+ PointRoad()\l+ setid()\l+ updateBelongToRoad()\l+ vectorOfRoadId()\l}" alt="" coords="93,351,260,575"/>
-<area shape="rect" id="node4" href="$class_point.html" title="The Point class. " alt="" coords="13,5,172,288"/>
-<area shape="rect" id="node6" title="STL class. " alt="" coords="410,652,490,729"/>
-<area shape="rect" id="node7" title="STL class. " alt="" coords="373,417,500,509"/>
-<area shape="rect" id="node10" href="$class_road.html" title="Road is an element of a network. Road are strongly linked with Points. " alt="" coords="524,351,675,575"/>
-</map>

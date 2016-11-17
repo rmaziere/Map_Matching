@@ -1,4 +1,0 @@
-<map id="Filtering::getInfo" name="Filtering::getInfo">
-<area shape="rect" id="node2" href="$class_track.html#aff258a8c303ee8a09a962d237f3823e7" title="Reads a csv file and inserts each point in m_points vector. " alt="" coords="169,5,316,32"/>
-<area shape="rect" id="node3" href="$class_track.html#a6360ae2dbed31e542a2cbaa986970352" title="getPoints Get the m_points vector " alt="" coords="183,56,302,83"/>
-</map>
