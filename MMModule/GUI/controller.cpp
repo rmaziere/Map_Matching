@@ -9,8 +9,8 @@ void Controller::addSolver(Solver* solver)
 
 void Controller::connectSignals()
 {
-    m_qMapViewer = new QMapViewer;
+    m_qProcessViewer = new QProcessViewer;
 
-    QObject::connect(m_solver, SIGNAL(signalMessage(QString)), m_qMapViewer, SLOT(onSignalMessage(QString)));
-    QObject::connect(m_qMapViewer->startSolver, SIGNAL(clicked()), m_solver, SLOT(onSignalStart()));
+    QObject::connect(m_solver, SIGNAL(signalMessage(QString)), m_qProcessViewer, SLOT(onSignalMessage(QString)));
+    QObject::connect(m_qProcessViewer->startSolver, SIGNAL(clicked()), m_solver, SLOT(onSignalStart()));
 }

@@ -28,14 +28,13 @@ SOURCES += main.cpp \
     KDTreeAlgos/kdtree.cpp \
     emissionprobability.cpp \
     KDTreeAlgos/kdtreeviewer.cpp \
-    GUI/map.cpp \
     filtering.cpp \
     MainWindow.cpp \
     SlidingStackedWidget.cpp \
-    journalprocess.cpp \
     GUI/controller.cpp \
-    GUI/qmapviewer.cpp \
-    GUI/graphicemitter.cpp
+    GUI/graphicemitter.cpp \
+    GUI/qprocessviewer.cpp \
+    GUI/qmapviewer.cpp
 
 HEADERS += \
     sauvegarde.h \
@@ -55,12 +54,11 @@ HEADERS += \
     KDTreeAlgos/kdtree.h \
     emissionprobability.h \
     KDTreeAlgos/kdtreeviewer.h \
-    GUI/map.h \
     filtering.h \
     SlidingStackedWidget.h \
     MainWindow.h \
-    journalprocess.h \
     GUI/controller.h \
-    GUI/qmapviewer.h \
-    GUI/graphicemitter.h
+    GUI/graphicemitter.h \
+    GUI/qprocessviewer.h \
+    GUI/qmapviewer.h
 
