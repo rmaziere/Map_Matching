@@ -1,0 +1,7 @@
+<map id="QMapViewer::onSignalAllPoints" name="QMapViewer::onSignalAllPoints">
+<area shape="rect" id="node2" href="$class_q_map_viewer.html#acadee31a64d4f8fe837f630e6e19dd9b" title="QMapViewer::drawAllGPSPoints" alt="" coords="260,56,473,83"/>
+<area shape="rect" id="node3" href="$class_q_map_viewer.html#a3e5765a7589d278777553814e4fd146b" title="QMapViewer::drawPoint" alt="" coords="521,56,684,83"/>
+<area shape="rect" id="node4" href="$class_q_map_viewer.html#a9efef2950d0fe1973b1677369861e14b" title="QMapViewer::transform" alt="" coords="732,5,892,32"/>
+<area shape="rect" id="node5" href="$class_point.html#a3eef47b1c4849b3395a8f9c658ca7c4a" title="Point::x" alt="" coords="779,56,845,83"/>
+<area shape="rect" id="node6" href="$class_point.html#a96e90df6b3c18e64c31abdf196e49ae9" title="Point::y" alt="" coords="779,107,845,133"/>
+</map>

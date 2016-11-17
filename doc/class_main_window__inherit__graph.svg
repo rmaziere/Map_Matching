@@ -15,11 +15,11 @@
 <polyline fill="none" stroke="black" points="0,-280.5 160,-280.5 "/>
 <text text-anchor="start" x="8" y="-268.5" font-family="Helvetica,sans-Serif" font-size="10.00"># buttonCancel</text>
 <text text-anchor="start" x="8" y="-257.5" font-family="Helvetica,sans-Serif" font-size="10.00"># buttonNext</text>
-<text text-anchor="start" x="8" y="-246.5" font-family="Helvetica,sans-Serif" font-size="10.00"># centralWidget</text>
-<text text-anchor="start" x="8" y="-235.5" font-family="Helvetica,sans-Serif" font-size="10.00"># controller</text>
-<text text-anchor="start" x="8" y="-224.5" font-family="Helvetica,sans-Serif" font-size="10.00"># controlPaneLayout</text>
-<text text-anchor="start" x="8" y="-213.5" font-family="Helvetica,sans-Serif" font-size="10.00"># grille</text>
-<text text-anchor="start" x="8" y="-202.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mainLayout</text>
+<text text-anchor="start" x="8" y="-246.5" font-family="Helvetica,sans-Serif" font-size="10.00"># controller</text>
+<text text-anchor="start" x="8" y="-235.5" font-family="Helvetica,sans-Serif" font-size="10.00"># controlPaneLayout</text>
+<text text-anchor="start" x="8" y="-224.5" font-family="Helvetica,sans-Serif" font-size="10.00"># grille</text>
+<text text-anchor="start" x="8" y="-213.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mainLayout</text>
+<text text-anchor="start" x="8" y="-202.5" font-family="Helvetica,sans-Serif" font-size="10.00"># process</text>
 <text text-anchor="start" x="8" y="-191.5" font-family="Helvetica,sans-Serif" font-size="10.00"># slideWidget1</text>
 <text text-anchor="start" x="8" y="-180.5" font-family="Helvetica,sans-Serif" font-size="10.00"># slideWidget2</text>
 <text text-anchor="start" x="8" y="-169.5" font-family="Helvetica,sans-Serif" font-size="10.00"># slideWidget3</text>
@@ -41,11 +41,11 @@
 </g>
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
-<polygon fill="none" stroke="#bfbfbf" points="40,-336.5 40,-393.5 120,-393.5 120,-336.5 40,-336.5"/>
-<text text-anchor="middle" x="80" y="-381.5" font-family="Helvetica,sans-Serif" font-size="10.00">QMainWindow</text>
-<polyline fill="none" stroke="#bfbfbf" points="40,-374.5 120,-374.5 "/>
+<polygon fill="none" stroke="#bfbfbf" points="52.5,-336.5 52.5,-393.5 107.5,-393.5 107.5,-336.5 52.5,-336.5"/>
+<text text-anchor="middle" x="80" y="-381.5" font-family="Helvetica,sans-Serif" font-size="10.00">QWidget</text>
+<polyline fill="none" stroke="#bfbfbf" points="52.5,-374.5 107.5,-374.5 "/>
 <text text-anchor="middle" x="80" y="-362.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="#bfbfbf" points="40,-355.5 120,-355.5 "/>
+<polyline fill="none" stroke="#bfbfbf" points="52.5,-355.5 107.5,-355.5 "/>
 <text text-anchor="middle" x="80" y="-343.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
 </g>
 <!-- Node2&#45;&gt;Node1 -->

@@ -110,7 +110,6 @@ $(document).ready(function(){initNavTree('class_solver.html','');});
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_solver-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Solver Class Reference</div>  </div>
@@ -121,7 +120,7 @@ $(document).ready(function(){initNavTree('class_solver.html','');});
 <div class="dynheader">
 Inheritance diagram for Solver:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_solver__inherit__graph.svg" width="156" height="375"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_solver__inherit__graph.svg" width="156" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -142,11 +141,19 @@ Public Slots</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
+<tr class="memitem:aa9c284d84a112fda81426069e2c2439f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solver.html#aa9c284d84a112fda81426069e2c2439f">signalAllPoints</a> (std::vector&lt; <a class="el" href="class_point_g_p_s.html">PointGPS</a> * &gt; *)</td></tr>
+<tr class="separator:aa9c284d84a112fda81426069e2c2439f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6abf4d9e79d08d1dab2241480d35c1f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solver.html#a6abf4d9e79d08d1dab2241480d35c1f6">signalAllRoads</a> (std::unordered_map&lt; long, <a class="el" href="class_road.html">Road</a> &gt; *, std::vector&lt; <a class="el" href="class_point_road.html">PointRoad</a> &gt; *)</td></tr>
+<tr class="separator:a6abf4d9e79d08d1dab2241480d35c1f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afce983256cbc521d36c3c9e5cfdc9bff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solver.html#afce983256cbc521d36c3c9e5cfdc9bff">signalDimension</a> (double xMin, double xMax, double yMin, double yMax)</td></tr>
+<tr class="separator:afce983256cbc521d36c3c9e5cfdc9bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a340cbdcbcd9aba83f28439c955af7550"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solver.html#a340cbdcbcd9aba83f28439c955af7550">signalMessage</a> (QString)</td></tr>
 <tr class="separator:a340cbdcbcd9aba83f28439c955af7550"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:acbe7e47bcad48b8ddba95c9281c8bf23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solver.html#acbe7e47bcad48b8ddba95c9281c8bf23">readFiles</a> (<a class="el" href="class_file.html">File</a> file1, <a class="el" href="class_file.html">File</a> file2)</td></tr>
+<tr class="separator:acbe7e47bcad48b8ddba95c9281c8bf23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11051ddab551fdcee7dc71dcad1d0fd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solver.html#a11051ddab551fdcee7dc71dcad1d0fd7">setDistance</a> (<a class="el" href="class_point_g_p_s.html">PointGPS</a> *p, <a class="el" href="class_road.html">Road</a> &amp;r)</td></tr>
 <tr class="separator:a11051ddab551fdcee7dc71dcad1d0fd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a106d95eb5f1d870cd1dd2c6f3e1543d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solver.html#a106d95eb5f1d870cd1dd2c6f3e1543d5">Solver</a> (QObject *parent=0)</td></tr>
@@ -156,19 +163,16 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a0078c3931f5bd4c64ce440e0f75f5084"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solver.html#a0078c3931f5bd4c64ce440e0f75f5084">m_gridFilename</a></td></tr>
-<tr class="separator:a0078c3931f5bd4c64ce440e0f75f5084"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3bc6bbdda75da96e47fa155a2f339d8"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solver.html#ae3bc6bbdda75da96e47fa155a2f339d8">m_trackFilename</a></td></tr>
-<tr class="separator:ae3bc6bbdda75da96e47fa155a2f339d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
 <tr class="memitem:a98ab7b88d8ad3992195a3813ec4fdbf8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_grid.html">Grid</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solver.html#a98ab7b88d8ad3992195a3813ec4fdbf8">grid</a></td></tr>
 <tr class="separator:a98ab7b88d8ad3992195a3813ec4fdbf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0078c3931f5bd4c64ce440e0f75f5084"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solver.html#a0078c3931f5bd4c64ce440e0f75f5084">m_gridFilename</a></td></tr>
+<tr class="separator:a0078c3931f5bd4c64ce440e0f75f5084"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaa8ebee53c185be6f3f2b8e466c9905"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_point_road.html">PointRoad</a> &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solver.html#abaa8ebee53c185be6f3f2b8e466c9905">m_roadPoints</a></td></tr>
 <tr class="separator:abaa8ebee53c185be6f3f2b8e466c9905"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad397c6b4f3c5a670b3b15e4afcde2b13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="grid_8h.html#ac56897dddd132e4c97d442b506be559c">AllRoadMap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solver.html#ad397c6b4f3c5a670b3b15e4afcde2b13">m_roads</a></td></tr>
 <tr class="separator:ad397c6b4f3c5a670b3b15e4afcde2b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3bc6bbdda75da96e47fa155a2f339d8"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solver.html#ae3bc6bbdda75da96e47fa155a2f339d8">m_trackFilename</a></td></tr>
+<tr class="separator:ae3bc6bbdda75da96e47fa155a2f339d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c2ec12de9fbeb1f3d96af60422ca267"><td class="memItemLeft" align="right" valign="top"><a class="el" href="solver_8h.html#a02e6dd83095d393f9b66c6213e30256e">AllPointVector</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solver.html#a3c2ec12de9fbeb1f3d96af60422ca267">m_trackPoints</a></td></tr>
 <tr class="separator:a3c2ec12de9fbeb1f3d96af60422ca267"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1922935767611b2215097b1ea056eef5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_track.html">Track</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_solver.html#a1922935767611b2215097b1ea056eef5">track</a></td></tr>
@@ -176,7 +180,7 @@ Protected Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="solver_8h_source.html#l00018">18</a> of file <a class="el" href="solver_8h_source.html">solver.h</a>.</p>
+<p>Definition at line <a class="el" href="solver_8h_source.html#l00019">19</a> of file <a class="el" href="solver_8h_source.html">solver.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a106d95eb5f1d870cd1dd2c6f3e1543d5"></a>
 <div class="memitem">
@@ -227,7 +231,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="solver_8cpp_source.html#l00043">43</a> of file <a class="el" href="solver_8cpp_source.html">solver.cpp</a>.</p>
+<p>Definition at line <a class="el" href="solver_8cpp_source.html#l00048">48</a> of file <a class="el" href="solver_8cpp_source.html">solver.cpp</a>.</p>
 
 </div>
 </div>
@@ -253,7 +257,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="solver_8cpp_source.html#l00048">48</a> of file <a class="el" href="solver_8cpp_source.html">solver.cpp</a>.</p>
+<p>Definition at line <a class="el" href="solver_8cpp_source.html#l00053">53</a> of file <a class="el" href="solver_8cpp_source.html">solver.cpp</a>.</p>
 
 </div>
 </div>
@@ -278,12 +282,56 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="solver_8cpp_source.html#l00053">53</a> of file <a class="el" href="solver_8cpp_source.html">solver.cpp</a>.</p>
+<p>Definition at line <a class="el" href="solver_8cpp_source.html#l00058">58</a> of file <a class="el" href="solver_8cpp_source.html">solver.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_solver_a323c9c0407f26a2ed3ec3ff5ed02a760_cgraph.svg" width="100%" height="556"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_solver_a323c9c0407f26a2ed3ec3ff5ed02a760_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="acbe7e47bcad48b8ddba95c9281c8bf23"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Solver::readFiles </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_file.html">File</a>&#160;</td>
+          <td class="paramname"><em>file1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_file.html">File</a>&#160;</td>
+          <td class="paramname"><em>file2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="solver_8cpp_source.html#l00064">64</a> of file <a class="el" href="solver_8cpp_source.html">solver.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_solver_acbe7e47bcad48b8ddba95c9281c8bf23_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_solver_acbe7e47bcad48b8ddba95c9281c8bf23_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </p>
@@ -314,12 +362,140 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="solver_8cpp_source.html#l00020">20</a> of file <a class="el" href="solver_8cpp_source.html">solver.cpp</a>.</p>
+<p>Definition at line <a class="el" href="solver_8cpp_source.html#l00025">25</a> of file <a class="el" href="solver_8cpp_source.html">solver.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><iframe scrolling="no" frameborder="0" src="class_solver_a11051ddab551fdcee7dc71dcad1d0fd7_cgraph.svg" width="623" height="291"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa9c284d84a112fda81426069e2c2439f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Solver::signalAllPoints </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_point_g_p_s.html">PointGPS</a> * &gt; *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_solver_aa9c284d84a112fda81426069e2c2439f_icgraph.svg" width="598" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6abf4d9e79d08d1dab2241480d35c1f6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Solver::signalAllRoads </td>
+          <td>(</td>
+          <td class="paramtype">std::unordered_map&lt; long, <a class="el" href="class_road.html">Road</a> &gt; *&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="class_point_road.html">PointRoad</a> &gt; *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_solver_a6abf4d9e79d08d1dab2241480d35c1f6_icgraph.svg" width="599" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="afce983256cbc521d36c3c9e5cfdc9bff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Solver::signalDimension </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>xMin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>xMax</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>yMin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>yMax</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_solver_afce983256cbc521d36c3c9e5cfdc9bff_icgraph.svg" width="607" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 </p>
@@ -351,7 +527,7 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_solver_a340cbdcbcd9aba83f28439c955af7550_icgraph.svg" width="599" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_solver_a340cbdcbcd9aba83f28439c955af7550_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </p>
@@ -376,7 +552,7 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_solver_a97bc7169c18b339fecd4937150f907c3_cgraph.svg" width="100%" height="556"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_solver_a97bc7169c18b339fecd4937150f907c3_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </p>
@@ -395,22 +571,14 @@ Here is the caller graph for this function:</div>
 <a class="anchor" id="a98ab7b88d8ad3992195a3813ec4fdbf8"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_grid.html">Grid</a> Solver::grid</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="solver_8h_source.html#l00045">45</a> of file <a class="el" href="solver_8h_source.html">solver.h</a>.</p>
+<p>Definition at line <a class="el" href="solver_8h_source.html#l00039">39</a> of file <a class="el" href="solver_8h_source.html">solver.h</a>.</p>
 
 </div>
 </div>
@@ -424,51 +592,35 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="solver_8h_source.html#l00033">33</a> of file <a class="el" href="solver_8h_source.html">solver.h</a>.</p>
+<p>Definition at line <a class="el" href="solver_8h_source.html#l00035">35</a> of file <a class="el" href="solver_8h_source.html">solver.h</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="abaa8ebee53c185be6f3f2b8e466c9905"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt;<a class="el" href="class_point_road.html">PointRoad</a>&gt;* Solver::m_roadPoints</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="solver_8h_source.html#l00048">48</a> of file <a class="el" href="solver_8h_source.html">solver.h</a>.</p>
+<p>Definition at line <a class="el" href="solver_8h_source.html#l00041">41</a> of file <a class="el" href="solver_8h_source.html">solver.h</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="ad397c6b4f3c5a670b3b15e4afcde2b13"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="grid_8h.html#ac56897dddd132e4c97d442b506be559c">AllRoadMap</a>* Solver::m_roads</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="solver_8h_source.html#l00047">47</a> of file <a class="el" href="solver_8h_source.html">solver.h</a>.</p>
+<p>Definition at line <a class="el" href="solver_8h_source.html#l00040">40</a> of file <a class="el" href="solver_8h_source.html">solver.h</a>.</p>
 
 </div>
 </div>
@@ -482,51 +634,35 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="solver_8h_source.html#l00034">34</a> of file <a class="el" href="solver_8h_source.html">solver.h</a>.</p>
+<p>Definition at line <a class="el" href="solver_8h_source.html#l00036">36</a> of file <a class="el" href="solver_8h_source.html">solver.h</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="a3c2ec12de9fbeb1f3d96af60422ca267"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="solver_8h.html#a02e6dd83095d393f9b66c6213e30256e">AllPointVector</a>* Solver::m_trackPoints</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="solver_8h_source.html#l00049">49</a> of file <a class="el" href="solver_8h_source.html">solver.h</a>.</p>
+<p>Definition at line <a class="el" href="solver_8h_source.html#l00042">42</a> of file <a class="el" href="solver_8h_source.html">solver.h</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="a1922935767611b2215097b1ea056eef5"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="class_track.html">Track</a> Solver::track</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="solver_8h_source.html#l00046">46</a> of file <a class="el" href="solver_8h_source.html">solver.h</a>.</p>
+<p>Definition at line <a class="el" href="solver_8h_source.html#l00038">38</a> of file <a class="el" href="solver_8h_source.html">solver.h</a>.</p>
 
 </div>
 </div>
@@ -540,7 +676,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_solver.html">Solver</a></li>
-    <li class="footer">Generated on Thu Nov 17 2016 17:18:09 for Map Matching by
+    <li class="footer">Generated on Thu Nov 17 2016 20:05:27 for Map Matching by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

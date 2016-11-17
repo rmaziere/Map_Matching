@@ -1,20 +1,26 @@
 <map id="pointGPS.h" name="pointGPS.h">
-<area shape="rect" id="node2" href="$track_8h.html" title="The class Track. " alt="" coords="371,80,434,107"/>
-<area shape="rect" id="node6" href="$main_8cpp.html" title="main.cpp" alt="" coords="95,528,169,555"/>
-<area shape="rect" id="node11" href="$solver_8h.html" title="solver.h" alt="" coords="362,304,430,331"/>
-<area shape="rect" id="node19" href="$point_g_p_s_8cpp.html" title="pointGPS.cpp" alt="" coords="777,80,879,107"/>
-<area shape="rect" id="node3" href="$filtering_8h.html" title="filtering.h" alt="" coords="517,155,592,181"/>
-<area shape="rect" id="node5" href="$_main_window_8h.html" title="MainWindow.h" alt="" coords="397,453,505,480"/>
-<area shape="rect" id="node8" href="$road_8h.html" title="road.h" alt="" coords="159,155,217,181"/>
-<area shape="rect" id="node9" href="$grid_8h.html" title="grid.h" alt="" coords="94,229,149,256"/>
-<area shape="rect" id="node16" href="$sauvegarde_8h.html" title="sauvegarde.h" alt="" coords="241,155,341,181"/>
-<area shape="rect" id="node18" href="$track_8cpp.html" title="track.cpp" alt="" coords="365,155,441,181"/>
-<area shape="rect" id="node4" href="$filtering_8cpp.html" title="filtering.cpp" alt="" coords="510,229,599,256"/>
-<area shape="rect" id="node7" href="$_main_window_8cpp.html" title="MainWindow.cpp" alt="" coords="389,528,512,555"/>
-<area shape="rect" id="node15" href="$road_8cpp.html" title="road.cpp" alt="" coords="173,229,245,256"/>
-<area shape="rect" id="node10" href="$grid_8cpp.html" title="grid.cpp" alt="" coords="145,304,213,331"/>
-<area shape="rect" id="node12" href="$controller_8h.html" title="controller.h" alt="" coords="195,379,282,405"/>
-<area shape="rect" id="node14" href="$solver_8cpp.html" title="solver.cpp" alt="" coords="357,379,440,405"/>
-<area shape="rect" id="node13" href="$controller_8cpp.html" title="controller.cpp" alt="" coords="246,453,346,480"/>
-<area shape="rect" id="node17" href="$sauvegarde_8cpp.html" title="sauvegarde.cpp" alt="" coords="320,229,435,256"/>
+<area shape="rect" id="node2" href="$track_8h.html" title="The class Track. " alt="" coords="350,80,412,107"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title="main.cpp" alt="" coords="610,528,685,555"/>
+<area shape="rect" id="node11" href="$solver_8h.html" title="solver.h" alt="" coords="419,304,487,331"/>
+<area shape="rect" id="node15" href="$qmapscene_8h.html" title="qmapscene.h" alt="" coords="742,229,842,256"/>
+<area shape="rect" id="node23" href="$qmapviewer_8h.html" title="qmapviewer.h" alt="" coords="920,229,1023,256"/>
+<area shape="rect" id="node25" href="$point_g_p_s_8cpp.html" title="pointGPS.cpp" alt="" coords="1216,80,1319,107"/>
+<area shape="rect" id="node3" href="$filtering_8h.html" title="filtering.h" alt="" coords="44,155,118,181"/>
+<area shape="rect" id="node5" href="$_main_window_8h.html" title="MainWindow.h" alt="" coords="460,453,568,480"/>
+<area shape="rect" id="node8" href="$road_8h.html" title="road.h" alt="" coords="526,155,585,181"/>
+<area shape="rect" id="node9" href="$grid_8h.html" title="grid.h" alt="" coords="616,229,671,256"/>
+<area shape="rect" id="node20" href="$sauvegarde_8h.html" title="sauvegarde.h" alt="" coords="243,155,343,181"/>
+<area shape="rect" id="node22" href="$track_8cpp.html" title="track.cpp" alt="" coords="143,155,219,181"/>
+<area shape="rect" id="node4" href="$filtering_8cpp.html" title="filtering.cpp" alt="" coords="115,229,204,256"/>
+<area shape="rect" id="node7" href="$_main_window_8cpp.html" title="MainWindow.cpp" alt="" coords="453,528,576,555"/>
+<area shape="rect" id="node19" href="$road_8cpp.html" title="road.cpp" alt="" coords="520,229,592,256"/>
+<area shape="rect" id="node10" href="$grid_8cpp.html" title="grid.cpp" alt="" coords="563,304,631,331"/>
+<area shape="rect" id="node12" href="$controller_8h.html" title="controller.h" alt="" coords="851,379,938,405"/>
+<area shape="rect" id="node14" href="$solver_8cpp.html" title="solver.cpp" alt="" coords="498,379,581,405"/>
+<area shape="rect" id="node13" href="$controller_8cpp.html" title="controller.cpp" alt="" coords="756,453,856,480"/>
+<area shape="rect" id="node16" href="$qmapwidget_8h.html" title="qmapwidget.h" alt="" coords="846,304,948,331"/>
+<area shape="rect" id="node18" href="$qmapscene_8cpp.html" title="qmapscene.cpp" alt="" coords="706,304,821,331"/>
+<area shape="rect" id="node17" href="$qmapwidget_8cpp.html" title="qmapwidget.cpp" alt="" coords="709,379,826,405"/>
+<area shape="rect" id="node21" href="$sauvegarde_8cpp.html" title="sauvegarde.cpp" alt="" coords="229,229,344,256"/>
+<area shape="rect" id="node24" href="$qmapviewer_8cpp.html" title="qmapviewer.cpp" alt="" coords="1024,304,1141,331"/>
 </map>

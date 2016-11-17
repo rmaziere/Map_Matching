@@ -35,7 +35,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_main_window_8cpp.html",
-"class_q_map_viewer.html#a69186327628579b2687b8cb69026d86d"
+"class_q_map_scene.html#a9c3b1d134cd012f2f2867bebab3dc09e",
+"qmapviewer_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

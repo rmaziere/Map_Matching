@@ -16,6 +16,7 @@ var class_grid =
     [ "readFromCSV", "class_grid.html#ae848f1c59c544adc1af9133409ee0106", null ],
     [ "setBoundingBox", "class_grid.html#a19318437702e712955d0c4631c94cb04", null ],
     [ "setDistance", "class_grid.html#a19bf6c03c97f95b07397aa4b845adc96", null ],
+    [ "signalMessage", "class_grid.html#af66932fd8e28799e2b24a0a61d69dfe8", null ],
     [ "trackInGrid", "class_grid.html#a8d8b7fa0ee20d81f130a46d80fc2a018", null ],
     [ "updateGrid", "class_grid.html#a58233ab60f7477144af334f205606aa4", null ],
     [ "xMax", "class_grid.html#a5e140affdf9653d8badf596f1f151908", null ],

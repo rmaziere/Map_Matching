@@ -46,9 +46,9 @@ if (edges && edges.length) {
         </defs>
 
 <script type="text/javascript">
-var viewWidth = 664;
+var viewWidth = 795;
 var viewHeight = 66;
-var sectionId = 'dynsection-12';
+var sectionId = 'dynsection-13';
 </script>
 <script xlink:href="svgpan.js"/>
 <svg id="graph" class="graph">
@@ -62,54 +62,67 @@ var sectionId = 'dynsection-12';
 <!-- Node2 -->
 <g id="node2" class="node"><title>Node2</title>
 <g id="a_node2"><a xlink:href="main_8cpp.html#a141063eccadf0e03662d414d897d9f5d" target="_top" xlink:title="dev_gridAndTrack">
-<polygon fill="none" stroke="black" points="170.5,-38.5 170.5,-57.5 265.5,-57.5 265.5,-38.5 170.5,-38.5"/>
-<text text-anchor="middle" x="218" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">dev_gridAndTrack</text>
+<polygon fill="none" stroke="black" points="148,-38.5 148,-57.5 243,-57.5 243,-38.5 148,-38.5"/>
+<text text-anchor="middle" x="195.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">dev_gridAndTrack</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge"><title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M122.011,-36.72C138.203,-38.6429 155.246,-40.6667 170.355,-42.4609"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="122.406,-33.2424 112.063,-35.5387 121.58,-40.1936 122.406,-33.2424"/>
+<path fill="none" stroke="midnightblue" d="M122.194,-38.0087C130.821,-39.2007 139.523,-40.4031 147.754,-41.5405"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="122.519,-34.5204 112.134,-36.6185 121.561,-41.4545 122.519,-34.5204"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node"><title>Node3</title>
-<g id="a_node3"><a xlink:href="class_main_window.html#ad39bbe8ced0d3248206ac0ca6c444d55" target="_top" xlink:title="MainWindow::readyToNext1">
-<polygon fill="none" stroke="black" points="148,-0.5 148,-19.5 288,-19.5 288,-0.5 148,-0.5"/>
-<text text-anchor="middle" x="218" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">MainWindow::readyToNext1</text>
+<g id="a_node3"><a xlink:href="class_solver.html#acbe7e47bcad48b8ddba95c9281c8bf23" target="_top" xlink:title="Solver::readFiles">
+<polygon fill="none" stroke="black" points="150.5,-0.5 150.5,-19.5 240.5,-19.5 240.5,-0.5 150.5,-0.5"/>
+<text text-anchor="middle" x="195.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Solver::readFiles</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
 <g id="edge2" class="edge"><title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M122.264,-21.2499C130.742,-20.2432 139.448,-19.2093 147.985,-18.1956"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="121.58,-17.8064 112.063,-22.4613 122.406,-24.7576 121.58,-17.8064"/>
+<path fill="none" stroke="midnightblue" d="M122.055,-20.0105C131.639,-18.6862 141.319,-17.3487 150.347,-16.1012"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="121.561,-16.5455 112.134,-21.3815 122.519,-23.4796 121.561,-16.5455"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node"><title>Node4</title>
-<g id="a_node4"><a xlink:href="class_main_window.html#af773488e0b16efe6c0fc67ad348b86b2" target="_top" xlink:title="MainWindow::createConnections">
-<polygon fill="none" stroke="black" points="324,-0.5 324,-19.5 485,-19.5 485,-0.5 324,-0.5"/>
-<text text-anchor="middle" x="404.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">MainWindow::createConnections</text>
+<g id="a_node4"><a xlink:href="class_main_window.html#ad39bbe8ced0d3248206ac0ca6c444d55" target="_top" xlink:title="MainWindow::readyToNext1">
+<polygon fill="none" stroke="black" points="279,-0.5 279,-19.5 419,-19.5 419,-0.5 279,-0.5"/>
+<text text-anchor="middle" x="349" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">MainWindow::readyToNext1</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node4 -->
 <g id="edge3" class="edge"><title>Node3&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M298.446,-10C306.9,-10 315.501,-10 323.956,-10"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="298.226,-6.5001 288.226,-10 298.226,-13.5001 298.226,-6.5001"/>
+<path fill="none" stroke="midnightblue" d="M250.798,-10C259.915,-10 269.484,-10 278.915,-10"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="250.727,-6.5001 240.727,-10 250.727,-13.5001 250.727,-6.5001"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node"><title>Node5</title>
-<g id="a_node5"><a xlink:href="class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db" target="_top" xlink:title="MainWindow::MainWindow">
-<polygon fill="none" stroke="black" points="521,-0.5 521,-19.5 656,-19.5 656,-0.5 521,-0.5"/>
-<text text-anchor="middle" x="588.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">MainWindow::MainWindow</text>
+<g id="a_node5"><a xlink:href="class_main_window.html#af773488e0b16efe6c0fc67ad348b86b2" target="_top" xlink:title="MainWindow::createConnections">
+<polygon fill="none" stroke="black" points="455,-0.5 455,-19.5 616,-19.5 616,-0.5 455,-0.5"/>
+<text text-anchor="middle" x="535.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">MainWindow::createConnections</text>
 </a>
 </g>
 </g>
 <!-- Node4&#45;&gt;Node5 -->
 <g id="edge4" class="edge"><title>Node4&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M495.196,-10C503.85,-10 512.52,-10 520.892,-10"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="495.063,-6.5001 485.063,-10 495.063,-13.5001 495.063,-6.5001"/>
+<path fill="none" stroke="midnightblue" d="M429.446,-10C437.9,-10 446.501,-10 454.956,-10"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="429.226,-6.5001 419.226,-10 429.226,-13.5001 429.226,-6.5001"/>
+</g>
+<!-- Node6 -->
+<g id="node6" class="node"><title>Node6</title>
+<g id="a_node6"><a xlink:href="class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db" target="_top" xlink:title="MainWindow::MainWindow">
+<polygon fill="none" stroke="black" points="652,-0.5 652,-19.5 787,-19.5 787,-0.5 652,-0.5"/>
+<text text-anchor="middle" x="719.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">MainWindow::MainWindow</text>
+</a>
+</g>
+</g>
+<!-- Node5&#45;&gt;Node6 -->
+<g id="edge5" class="edge"><title>Node5&#45;&gt;Node6</title>
+<path fill="none" stroke="midnightblue" d="M626.196,-10C634.85,-10 643.52,-10 651.892,-10"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="626.063,-6.5001 616.063,-10 626.063,-13.5001 626.063,-6.5001"/>
 </g>
 </g>
 </svg>

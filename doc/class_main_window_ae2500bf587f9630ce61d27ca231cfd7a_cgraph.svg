@@ -26,29 +26,42 @@
 <path fill="none" stroke="midnightblue" d="M140.082,-37.3337C150.62,-38.605 161.393,-39.9045 171.63,-41.1395"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="171.312,-44.6265 181.66,-42.3494 172.151,-37.6769 171.312,-44.6265"/>
 </g>
-<!-- Node3 -->
-<g id="node3" class="node"><title>Node3</title>
-<g id="a_node3"><a xlink:href="class_track.html#a58fcdaf47f2c87bb7095933616f5a4bc" target="_top" xlink:title="This is a temporal filter, which deletes points depending on a time value. ">
+<!-- Node4 -->
+<g id="node4" class="node"><title>Node4</title>
+<g id="a_node4"><a xlink:href="class_track.html#a58fcdaf47f2c87bb7095933616f5a4bc" target="_top" xlink:title="This is a temporal filter, which deletes points depending on a time value. ">
 <polygon fill="none" stroke="black" points="176,-0.5 176,-19.5 283,-19.5 283,-0.5 176,-0.5"/>
 <text text-anchor="middle" x="229.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Track::temporalFilter</text>
 </a>
 </g>
 </g>
-<!-- Node1&#45;&gt;Node3 -->
-<g id="edge2" class="edge"><title>Node1&#45;&gt;Node3</title>
+<!-- Node1&#45;&gt;Node4 -->
+<g id="edge3" class="edge"><title>Node1&#45;&gt;Node4</title>
 <path fill="none" stroke="midnightblue" d="M140.082,-20.6663C148.543,-19.6456 157.156,-18.6066 165.521,-17.5974"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="166.067,-21.0571 175.576,-16.3845 165.228,-14.1075 166.067,-21.0571"/>
 </g>
-<!-- Node4 -->
-<g id="node4" class="node"><title>Node4</title>
-<g id="a_node4"><a xlink:href="class_point_g_p_s.html#aa8a0cbf3cfbc3f4ac9d16737c00fcb88" target="_top" xlink:title="PointGPS::timeStamp">
+<!-- Node3 -->
+<g id="node3" class="node"><title>Node3</title>
+<g id="a_node3"><a xlink:href="class_track.html#a0477b30aca07ba3f43b25d4c6ea782e0" target="_top" xlink:title="Deletes a occurence. ">
+<polygon fill="none" stroke="black" points="323.5,-38.5 323.5,-57.5 427.5,-57.5 427.5,-38.5 323.5,-38.5"/>
+<text text-anchor="middle" x="375.5" y="-45.5" font-family="Helvetica,sans-Serif" font-size="10.00">Track::delPointGPS</text>
+</a>
+</g>
+</g>
+<!-- Node2&#45;&gt;Node3 -->
+<g id="edge2" class="edge"><title>Node2&#45;&gt;Node3</title>
+<path fill="none" stroke="midnightblue" d="M277.253,-48C288.622,-48 300.954,-48 312.895,-48"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="313.255,-51.5001 323.255,-48 313.255,-44.5001 313.255,-51.5001"/>
+</g>
+<!-- Node5 -->
+<g id="node5" class="node"><title>Node5</title>
+<g id="a_node5"><a xlink:href="class_point_g_p_s.html#aa8a0cbf3cfbc3f4ac9d16737c00fcb88" target="_top" xlink:title="PointGPS::timeStamp">
 <polygon fill="none" stroke="black" points="319,-0.5 319,-19.5 432,-19.5 432,-0.5 319,-0.5"/>
 <text text-anchor="middle" x="375.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">PointGPS::timeStamp</text>
 </a>
 </g>
 </g>
-<!-- Node3&#45;&gt;Node4 -->
-<g id="edge3" class="edge"><title>Node3&#45;&gt;Node4</title>
+<!-- Node4&#45;&gt;Node5 -->
+<g id="edge4" class="edge"><title>Node4&#45;&gt;Node5</title>
 <path fill="none" stroke="midnightblue" d="M283.303,-10C291.52,-10 300.098,-10 308.562,-10"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="308.8,-13.5001 318.8,-10 308.8,-6.5001 308.8,-13.5001"/>
 </g>

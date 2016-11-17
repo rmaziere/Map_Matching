@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['readfiles',['readFiles',['../class_solver.html#acbe7e47bcad48b8ddba95c9281c8bf23',1,'Solver']]],
   ['readfromcsv',['readFromCSV',['../class_grid.html#ae848f1c59c544adc1af9133409ee0106',1,'Grid::readFromCSV()'],['../class_track.html#aff258a8c303ee8a09a962d237f3823e7',1,'Track::readFromCSV()']]],
   ['ready',['ready',['../class_filtering.html#a8f1e6884c1784652000e763327cce302',1,'Filtering::ready()'],['../class_loading.html#a93ce5ebbd8eb3ea2438942bc7d4a706b',1,'Loading::ready()']]],
   ['readynext',['readyNext',['../class_loading.html#aa1efa9ef3bdd0368afbdd5f99b2bc30a',1,'Loading']]],

@@ -1,18 +1,18 @@
 <map id="MainWindow.h" name="MainWindow.h">
-<area shape="rect" id="node10" href="$_sliding_stacked_widget_8h.html" title="SlidingStackedWidget.h" alt="" coords="1051,80,1212,107"/>
-<area shape="rect" id="node15" href="$filtering_8h.html" title="filtering.h" alt="" coords="559,155,634,181"/>
-<area shape="rect" id="node22" href="$track_8h.html" title="The class Track. " alt="" coords="1788,379,1851,405"/>
-<area shape="rect" id="node39" href="$loading_8h.html" title="loading.h" alt="" coords="658,155,733,181"/>
-<area shape="rect" id="node41" href="$grid_8h.html" title="grid.h" alt="" coords="1904,229,1959,256"/>
-<area shape="rect" id="node46" href="$controller_8h.html" title="GUI/controller.h" alt="" coords="1510,80,1625,107"/>
-<area shape="rect" id="node50" href="$solver_8h.html" title="../solver.h" alt="" coords="1785,155,1865,181"/>
-<area shape="rect" id="node34" href="$file_8h.html" title="file.h" alt="" coords="1155,379,1206,405"/>
-<area shape="rect" id="node23" href="$point_g_p_s_8h.html" title="pointGPS.h" alt="" coords="1719,453,1808,480"/>
-<area shape="rect" id="node24" href="$emissionprobability_8h.html" title="emissionprobability.h" alt="" coords="1718,528,1862,555"/>
-<area shape="rect" id="node25" href="$point_8h.html" title="Class Point. " alt="" coords="1886,528,1947,555"/>
-<area shape="rect" id="node38" href="$myexception_8h.html" title="myexception.h" alt="" coords="1075,453,1182,480"/>
-<area shape="rect" id="node42" href="$road_8h.html" title="road.h" alt="" coords="1954,304,2013,331"/>
-<area shape="rect" id="node43" href="$pointroad_8h.html" title="pointroad.h" alt="" coords="2183,453,2269,480"/>
-<area shape="rect" id="node47" href="$qprocessviewer_8h.html" title="qprocessviewer.h" alt="" coords="1311,155,1435,181"/>
-<area shape="rect" id="node49" href="$qmapviewer_8h.html" title="qmapviewer.h" alt="" coords="1561,155,1664,181"/>
+<area shape="rect" id="node11" href="$_sliding_stacked_widget_8h.html" title="SlidingStackedWidget.h" alt="" coords="987,80,1148,107"/>
+<area shape="rect" id="node15" href="$filtering_8h.html" title="filtering.h" alt="" coords="543,155,618,181"/>
+<area shape="rect" id="node22" href="$track_8h.html" title="The class Track. " alt="" coords="2117,379,2180,405"/>
+<area shape="rect" id="node38" href="$loading_8h.html" title="loading.h" alt="" coords="658,155,733,181"/>
+<area shape="rect" id="node40" href="$grid_8h.html" title="grid.h" alt="" coords="2149,229,2204,256"/>
+<area shape="rect" id="node45" href="$controller_8h.html" title="GUI/controller.h" alt="" coords="1547,80,1662,107"/>
+<area shape="rect" id="node46" href="$qprocessviewer_8h.html" title="qprocessviewer.h" alt="" coords="1361,155,1485,181"/>
+<area shape="rect" id="node50" href="$solver_8h.html" title="solver.h" alt="" coords="1824,155,1892,181"/>
+<area shape="rect" id="node33" href="$file_8h.html" title="file.h" alt="" coords="1014,379,1065,405"/>
+<area shape="rect" id="node23" href="$point_g_p_s_8h.html" title="pointGPS.h" alt="" coords="1757,453,1847,480"/>
+<area shape="rect" id="node24" href="$emissionprobability_8h.html" title="emissionprobability.h" alt="" coords="1730,528,1874,555"/>
+<area shape="rect" id="node37" href="$myexception_8h.html" title="myexception.h" alt="" coords="1174,453,1281,480"/>
+<area shape="rect" id="node41" href="$road_8h.html" title="road.h" alt="" coords="2081,304,2139,331"/>
+<area shape="rect" id="node42" href="$pointroad_8h.html" title="pointroad.h" alt="" coords="1840,379,1927,405"/>
+<area shape="rect" id="node48" href="$qmapviewer_8h.html" title="qmapviewer.h" alt="" coords="1655,379,1757,405"/>
+<area shape="rect" id="node49" href="$qmapwidget_8h.html" title="qmapwidget.h" alt="" coords="1509,155,1612,181"/>
 </map>

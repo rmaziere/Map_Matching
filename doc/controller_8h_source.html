@@ -112,46 +112,49 @@ $(document).ready(function(){initNavTree('controller_8h_source.html','');});
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="qprocessviewer_8h.html">qprocessviewer.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="qmapviewer_8h.html">qmapviewer.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../solver.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_controller.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_controller.html">Controller</a> : <span class="keyword">public</span> QObject {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_controller.html#a95c56822d667e94b031451729ce069a9">Controller</a>();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_controller.html#ab8e345d91e901e46e0ad42a0b75ef94c">addSolver</a>(<a class="code" href="class_solver.html">Solver</a>* solver);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_controller.html#aa92b9a18a88aeb59c53272c3beab2724">connectSignals</a>();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_controller.html#af1b53de5613ec51b3375adbea44696b1">   17</a></span>&#160;    <a class="code" href="class_solver.html">Solver</a>* <a class="code" href="class_controller.html#af1b53de5613ec51b3375adbea44696b1">m_solver</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_controller.html#a129e056cb6f47177c68e2f1a624949e0">   18</a></span>&#160;    <a class="code" href="class_q_process_viewer.html">QProcessViewer</a>* <a class="code" href="class_controller.html#a129e056cb6f47177c68e2f1a624949e0">m_qProcessViewer</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_controller.html#acf06505dc0d93253e693b74f87531900">   19</a></span>&#160;    <a class="code" href="class_q_map_viewer.html">QMapViewer</a>* <a class="code" href="class_controller.html#acf06505dc0d93253e693b74f87531900">m_qMapViewer</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;signals:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif // CONTROLLER_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="qmapwidget_8h.html">qmapwidget.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="solver_8h.html">solver.h</a>&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_controller.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_controller.html">Controller</a> : <span class="keyword">public</span> QObject {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_controller.html#a95c56822d667e94b031451729ce069a9">Controller</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_controller.html#ab8e345d91e901e46e0ad42a0b75ef94c">addSolver</a>(<a class="code" href="class_solver.html">Solver</a>* solver);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_controller.html#aa92b9a18a88aeb59c53272c3beab2724">connectSignals</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_controller.html#af1b53de5613ec51b3375adbea44696b1">   18</a></span>&#160;    <a class="code" href="class_solver.html">Solver</a>* <a class="code" href="class_controller.html#af1b53de5613ec51b3375adbea44696b1">m_solver</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_controller.html#a129e056cb6f47177c68e2f1a624949e0">   19</a></span>&#160;    <a class="code" href="class_q_process_viewer.html">QProcessViewer</a>* <a class="code" href="class_controller.html#a129e056cb6f47177c68e2f1a624949e0">m_qProcessViewer</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_controller.html#a85ca4aca7771b7980eca2fa820c6f368">   20</a></span>&#160;    <a class="code" href="class_q_map_widget.html">QMapWidget</a> *<a class="code" href="class_controller.html#a85ca4aca7771b7980eca2fa820c6f368">m_qMapWidget</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;signals:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif // CONTROLLER_H</span></div>
 <div class="ttc" id="qmapviewer_8h_html"><div class="ttname"><a href="qmapviewer_8h.html">qmapviewer.h</a></div></div>
 <div class="ttc" id="class_controller_html_a95c56822d667e94b031451729ce069a9"><div class="ttname"><a href="class_controller.html#a95c56822d667e94b031451729ce069a9">Controller::Controller</a></div><div class="ttdeci">Controller()</div><div class="ttdef"><b>Definition:</b> <a href="controller_8cpp_source.html#l00003">controller.cpp:3</a></div></div>
 <div class="ttc" id="class_q_process_viewer_html"><div class="ttname"><a href="class_q_process_viewer.html">QProcessViewer</a></div><div class="ttdef"><b>Definition:</b> <a href="qprocessviewer_8h_source.html#l00008">qprocessviewer.h:8</a></div></div>
-<div class="ttc" id="class_controller_html_a129e056cb6f47177c68e2f1a624949e0"><div class="ttname"><a href="class_controller.html#a129e056cb6f47177c68e2f1a624949e0">Controller::m_qProcessViewer</a></div><div class="ttdeci">QProcessViewer * m_qProcessViewer</div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00018">controller.h:18</a></div></div>
+<div class="ttc" id="class_controller_html_a129e056cb6f47177c68e2f1a624949e0"><div class="ttname"><a href="class_controller.html#a129e056cb6f47177c68e2f1a624949e0">Controller::m_qProcessViewer</a></div><div class="ttdeci">QProcessViewer * m_qProcessViewer</div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00019">controller.h:19</a></div></div>
 <div class="ttc" id="qprocessviewer_8h_html"><div class="ttname"><a href="qprocessviewer_8h.html">qprocessviewer.h</a></div></div>
-<div class="ttc" id="class_solver_html"><div class="ttname"><a href="class_solver.html">Solver</a></div><div class="ttdef"><b>Definition:</b> <a href="solver_8h_source.html#l00018">solver.h:18</a></div></div>
-<div class="ttc" id="class_controller_html_acf06505dc0d93253e693b74f87531900"><div class="ttname"><a href="class_controller.html#acf06505dc0d93253e693b74f87531900">Controller::m_qMapViewer</a></div><div class="ttdeci">QMapViewer * m_qMapViewer</div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00019">controller.h:19</a></div></div>
-<div class="ttc" id="class_controller_html"><div class="ttname"><a href="class_controller.html">Controller</a></div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00009">controller.h:9</a></div></div>
-<div class="ttc" id="class_controller_html_af1b53de5613ec51b3375adbea44696b1"><div class="ttname"><a href="class_controller.html#af1b53de5613ec51b3375adbea44696b1">Controller::m_solver</a></div><div class="ttdeci">Solver * m_solver</div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00017">controller.h:17</a></div></div>
-<div class="ttc" id="class_controller_html_ab8e345d91e901e46e0ad42a0b75ef94c"><div class="ttname"><a href="class_controller.html#ab8e345d91e901e46e0ad42a0b75ef94c">Controller::addSolver</a></div><div class="ttdeci">void addSolver(Solver *solver)</div><div class="ttdef"><b>Definition:</b> <a href="controller_8cpp_source.html#l00005">controller.cpp:5</a></div></div>
-<div class="ttc" id="class_q_map_viewer_html"><div class="ttname"><a href="class_q_map_viewer.html">QMapViewer</a></div><div class="ttdef"><b>Definition:</b> <a href="qmapviewer_8h_source.html#l00011">qmapviewer.h:11</a></div></div>
-<div class="ttc" id="class_controller_html_aa92b9a18a88aeb59c53272c3beab2724"><div class="ttname"><a href="class_controller.html#aa92b9a18a88aeb59c53272c3beab2724">Controller::connectSignals</a></div><div class="ttdeci">void connectSignals()</div><div class="ttdef"><b>Definition:</b> <a href="controller_8cpp_source.html#l00010">controller.cpp:10</a></div></div>
+<div class="ttc" id="class_q_map_widget_html"><div class="ttname"><a href="class_q_map_widget.html">QMapWidget</a></div><div class="ttdef"><b>Definition:</b> <a href="qmapwidget_8h_source.html#l00009">qmapwidget.h:9</a></div></div>
+<div class="ttc" id="class_solver_html"><div class="ttname"><a href="class_solver.html">Solver</a></div><div class="ttdef"><b>Definition:</b> <a href="solver_8h_source.html#l00019">solver.h:19</a></div></div>
+<div class="ttc" id="class_controller_html"><div class="ttname"><a href="class_controller.html">Controller</a></div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00010">controller.h:10</a></div></div>
+<div class="ttc" id="qmapwidget_8h_html"><div class="ttname"><a href="qmapwidget_8h.html">qmapwidget.h</a></div></div>
+<div class="ttc" id="class_controller_html_af1b53de5613ec51b3375adbea44696b1"><div class="ttname"><a href="class_controller.html#af1b53de5613ec51b3375adbea44696b1">Controller::m_solver</a></div><div class="ttdeci">Solver * m_solver</div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00018">controller.h:18</a></div></div>
+<div class="ttc" id="class_controller_html_a85ca4aca7771b7980eca2fa820c6f368"><div class="ttname"><a href="class_controller.html#a85ca4aca7771b7980eca2fa820c6f368">Controller::m_qMapWidget</a></div><div class="ttdeci">QMapWidget * m_qMapWidget</div><div class="ttdef"><b>Definition:</b> <a href="controller_8h_source.html#l00020">controller.h:20</a></div></div>
+<div class="ttc" id="solver_8h_html"><div class="ttname"><a href="solver_8h.html">solver.h</a></div></div>
+<div class="ttc" id="class_controller_html_ab8e345d91e901e46e0ad42a0b75ef94c"><div class="ttname"><a href="class_controller.html#ab8e345d91e901e46e0ad42a0b75ef94c">Controller::addSolver</a></div><div class="ttdeci">void addSolver(Solver *solver)</div><div class="ttdef"><b>Definition:</b> <a href="controller_8cpp_source.html#l00010">controller.cpp:10</a></div></div>
+<div class="ttc" id="class_controller_html_aa92b9a18a88aeb59c53272c3beab2724"><div class="ttname"><a href="class_controller.html#aa92b9a18a88aeb59c53272c3beab2724">Controller::connectSignals</a></div><div class="ttdeci">void connectSignals()</div><div class="ttdef"><b>Definition:</b> <a href="controller_8cpp_source.html#l00015">controller.cpp:15</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_171b764decf33d63a7df2fab4f4bc6d8.html">GUI</a></li><li class="navelem"><a class="el" href="controller_8h.html">controller.h</a></li>
-    <li class="footer">Generated on Thu Nov 17 2016 17:18:09 for Map Matching by
+    <li class="footer">Generated on Thu Nov 17 2016 20:05:27 for Map Matching by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

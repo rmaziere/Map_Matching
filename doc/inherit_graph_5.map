@@ -1,5 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="node2" href="$class_filtering.html" title="Filtering" alt="" coords="153,5,221,32"/>
 <area shape="rect" id="node3" href="$class_loading.html" title="Loading" alt="" coords="153,56,220,83"/>
-<area shape="rect" id="node4" href="$class_q_process_viewer.html" title="QProcessViewer" alt="" coords="127,107,247,133"/>
+<area shape="rect" id="node4" href="$class_main_window.html" title="MainWindow" alt="" coords="138,107,235,133"/>
+<area shape="rect" id="node5" href="$class_q_map_widget.html" title="QMapWidget" alt="" coords="137,157,236,184"/>
+<area shape="rect" id="node6" href="$class_q_process_viewer.html" title="QProcessViewer" alt="" coords="127,208,247,235"/>
 </map>

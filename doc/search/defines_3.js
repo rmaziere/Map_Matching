@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['max_5fdouble',['MAX_DOUBLE',['../kdtree_8cpp.html#a6b65f4b50d2d129e2fe16f8febc172c4',1,'kdtree.cpp']]]
+  ['gpsdefault',['GPSDEFAULT',['../qmapscene_8h.html#a8ddc408febdb81400a687469bba63c39',1,'GPSDEFAULT():&#160;qmapscene.h'],['../qmapviewer_8cpp.html#a8ddc408febdb81400a687469bba63c39',1,'GPSDEFAULT():&#160;qmapviewer.cpp']]]
 ];

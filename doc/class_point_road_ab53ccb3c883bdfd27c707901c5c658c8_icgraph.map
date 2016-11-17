@@ -1,13 +1,14 @@
 <map id="PointRoad::updateBelongToRoad" name="PointRoad::updateBelongToRoad">
 <area shape="rect" id="node2" href="$class_grid.html#aba1830bc145f128d6deeed29cfb94c9f" title="Creates a new road and inserts it in m_road. " alt="" coords="269,81,376,108"/>
 <area shape="rect" id="node3" href="$class_grid.html#ae848f1c59c544adc1af9133409ee0106" title="Reads a csv file and inserts info into the corresponding attributs. " alt="" coords="424,81,561,108"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#a640261e473790d1a87c2f33332460793" title="dev_grid" alt="" coords="667,5,738,32"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#a141063eccadf0e03662d414d897d9f5d" title="dev_gridAndTrack" alt="" coords="639,56,766,83"/>
-<area shape="rect" id="node6" href="$class_main_window.html#ad39bbe8ced0d3248206ac0ca6c444d55" title="MainWindow::readyToNext1" alt="" coords="609,107,796,133"/>
-<area shape="rect" id="node9" href="$class_solver.html#a97bc7169c18b339fecd4937150f907c3" title="Solver::start" alt="" coords="656,157,749,184"/>
-<area shape="rect" id="node7" href="$class_main_window.html#af773488e0b16efe6c0fc67ad348b86b2" title="MainWindow::createConnections" alt="" coords="844,107,1059,133"/>
-<area shape="rect" id="node8" href="$class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="1107,107,1287,133"/>
-<area shape="rect" id="node10" href="$main_8cpp.html#a9dd67c19acf7317c6296b63e29dcfab9" title="dev_thread" alt="" coords="908,157,995,184"/>
-<area shape="rect" id="node12" href="$class_solver.html#a323c9c0407f26a2ed3ec3ff5ed02a760" title="Solver::onSignalStart" alt="" coords="879,208,1024,235"/>
-<area shape="rect" id="node11" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="1171,157,1222,184"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a640261e473790d1a87c2f33332460793" title="dev_grid" alt="" coords="637,5,708,32"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a141063eccadf0e03662d414d897d9f5d" title="dev_gridAndTrack" alt="" coords="609,56,736,83"/>
+<area shape="rect" id="node6" href="$class_solver.html#a97bc7169c18b339fecd4937150f907c3" title="Solver::start" alt="" coords="626,107,719,133"/>
+<area shape="rect" id="node10" href="$class_solver.html#acbe7e47bcad48b8ddba95c9281c8bf23" title="Solver::readFiles" alt="" coords="613,157,733,184"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#a9dd67c19acf7317c6296b63e29dcfab9" title="dev_thread" alt="" coords="834,56,921,83"/>
+<area shape="rect" id="node9" href="$class_solver.html#a323c9c0407f26a2ed3ec3ff5ed02a760" title="Solver::onSignalStart" alt="" coords="805,107,950,133"/>
+<area shape="rect" id="node8" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="1101,56,1151,83"/>
+<area shape="rect" id="node11" href="$class_main_window.html#ad39bbe8ced0d3248206ac0ca6c444d55" title="MainWindow::readyToNext1" alt="" coords="784,157,971,184"/>
+<area shape="rect" id="node12" href="$class_main_window.html#af773488e0b16efe6c0fc67ad348b86b2" title="MainWindow::createConnections" alt="" coords="1019,157,1233,184"/>
+<area shape="rect" id="node13" href="$class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="1281,157,1461,184"/>
 </map>

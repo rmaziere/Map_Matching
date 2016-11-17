@@ -12,10 +12,11 @@ var searchData=
   ['getpointsaspointer',['getPointsAsPointer',['../class_track.html#ad262a30c2abcd29cf4cdc04facd290ee',1,'Track']]],
   ['getroadentry',['getRoadEntry',['../class_grid.html#a54c76e927f8428bca87520d8ca310bec',1,'Grid']]],
   ['getroads',['getRoads',['../class_grid.html#ae43b7156c770eb4a8812d7ecce223b36',1,'Grid']]],
+  ['gpsdefault',['GPSDEFAULT',['../qmapscene_8h.html#a8ddc408febdb81400a687469bba63c39',1,'GPSDEFAULT():&#160;qmapscene.h'],['../qmapviewer_8cpp.html#a8ddc408febdb81400a687469bba63c39',1,'GPSDEFAULT():&#160;qmapviewer.cpp']]],
   ['graphicemitter',['GraphicEmitter',['../class_graphic_emitter.html',1,'GraphicEmitter'],['../class_graphic_emitter.html#afdf980080770a86efa90530bd5fa0830',1,'GraphicEmitter::GraphicEmitter()']]],
   ['graphicemitter_2ecpp',['graphicemitter.cpp',['../graphicemitter_8cpp.html',1,'']]],
   ['graphicemitter_2eh',['graphicemitter.h',['../graphicemitter_8h.html',1,'']]],
-  ['grid',['Grid',['../class_grid.html',1,'Grid'],['../class_grid.html#a4ac9ff4f63552b4c61ff90fcb35ad66c',1,'Grid::Grid()'],['../class_solver.html#a98ab7b88d8ad3992195a3813ec4fdbf8',1,'Solver::grid()'],['../class_loading.html#afb0b2fe451bdc3f6f2cc186903df96b4',1,'Loading::grid()']]],
+  ['grid',['Grid',['../class_grid.html',1,'Grid'],['../class_solver.html#a98ab7b88d8ad3992195a3813ec4fdbf8',1,'Solver::grid()'],['../class_loading.html#afb0b2fe451bdc3f6f2cc186903df96b4',1,'Loading::grid()'],['../class_grid.html#a4ac9ff4f63552b4c61ff90fcb35ad66c',1,'Grid::Grid()']]],
   ['grid_2ecpp',['grid.cpp',['../grid_8cpp.html',1,'']]],
   ['grid_2eh',['grid.h',['../grid_8h.html',1,'']]],
   ['grille',['grille',['../class_main_window.html#ae79aeaf1e52524e07754b5ab52c91f76',1,'MainWindow']]]

@@ -1,13 +1,13 @@
 <map id="Solver" name="Solver">
-<area shape="rect" id="node3" href="$class_grid.html" title="Grid embedded roads. This describes the network. " alt="" coords="376,991,524,1332"/>
-<area shape="rect" id="node5" href="$class_point_road.html" title="{PointRoad\n|# m_id\l# m_isNode\l# counter\l|+ id()\l+ infos()\l+ isNode()\l+ outputInfos()\l+ PointRoad()\l+ PointRoad()\l+ setid()\l+ updateBelongToRoad()\l+ vectorOfRoadId()\l}" alt="" coords="168,535,335,759"/>
-<area shape="rect" id="node6" href="$class_point.html" title="The Point class. " alt="" coords="328,189,487,472"/>
-<area shape="rect" id="node17" href="$class_point_g_p_s.html" title="{PointGPS\n|# m_altitude\l# m_timeStamp\l|+ addEmissionProbability()\l+ altitude()\l+ infos()\l+ PointGPS()\l+ PointGPS()\l+ timeStamp()\l}" alt="" coords="814,564,993,729"/>
-<area shape="rect" id="node8" title="STL class. " alt="" coords="478,836,558,913"/>
-<area shape="rect" id="node15" href="$class_track.html" title="The Track class. " alt="" coords="549,1005,717,1317"/>
-<area shape="rect" id="node9" title="STL class. " alt="" coords="455,601,581,693"/>
-<area shape="rect" id="node12" href="$class_road.html" title="Road is an element of a network. Road are strongly linked with Points. " alt="" coords="639,535,789,759"/>
-<area shape="rect" id="node19" href="$class_emission_probability.html" title="{EmissionProbability\n|# m_distance\l# m_probability\l# m_roadId\l|+ EmissionProbability()\l+ updateProbability()\l}" alt="" coords="879,5,1037,127"/>
-<area shape="rect" id="node20" title="STL class. " alt="" coords="952,1115,1089,1207"/>
-<area shape="rect" id="node23" title="STL class. " alt="" coords="1121,1123,1237,1200"/>
+<area shape="rect" id="node3" href="$class_grid.html" title="Grid embedded roads. This describes the network. " alt="" coords="561,991,709,1332"/>
+<area shape="rect" id="node15" href="$class_track.html" title="The Track class. " alt="" coords="170,1005,338,1317"/>
+<area shape="rect" id="node5" href="$class_point_road.html" title="{PointRoad\n|# m_id\l# m_isNode\l# counter\l|+ id()\l+ infos()\l+ isNode()\l+ outputInfos()\l+ PointRoad()\l+ PointRoad()\l+ setid()\l+ updateBelongToRoad()\l+ vectorOfRoadId()\l}" alt="" coords="479,535,645,759"/>
+<area shape="rect" id="node6" href="$class_point.html" title="The Point class. " alt="" coords="285,189,444,472"/>
+<area shape="rect" id="node17" href="$class_point_g_p_s.html" title="{PointGPS\n|# m_altitude\l# m_timeStamp\l|+ addEmissionProbability()\l+ altitude()\l+ infos()\l+ PointGPS()\l+ PointGPS()\l+ timeStamp()\l}" alt="" coords="27,564,206,729"/>
+<area shape="rect" id="node8" title="STL class. " alt="" coords="257,836,337,913"/>
+<area shape="rect" id="node9" title="STL class. " alt="" coords="233,601,360,693"/>
+<area shape="rect" id="node12" href="$class_road.html" title="Road is an element of a network. Road are strongly linked with Points. " alt="" coords="867,535,1017,759"/>
+<area shape="rect" id="node19" href="$class_emission_probability.html" title="{EmissionProbability\n|# m_distance\l# m_probability\l# m_roadId\l|+ EmissionProbability()\l+ updateProbability()\l}" alt="" coords="38,5,195,127"/>
+<area shape="rect" id="node20" title="STL class. " alt="" coords="991,1115,1128,1207"/>
+<area shape="rect" id="node23" title="STL class. " alt="" coords="1160,1123,1276,1200"/>
 </map>

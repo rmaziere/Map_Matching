@@ -9,7 +9,6 @@ var hierarchy =
       [ "MyException", "class_my_exception.html", null ]
     ] ],
     [ "File", "class_file.html", null ],
-    [ "Grid", "class_grid.html", null ],
     [ "hashFunc", "structhash_func.html", null ],
     [ "KDTree", "class_k_d_tree.html", null ],
     [ "KDTreeViewer", "class_k_d_tree_viewer.html", null ],
@@ -17,14 +16,16 @@ var hierarchy =
       [ "PointGPS", "class_point_g_p_s.html", null ],
       [ "PointRoad", "class_point_road.html", null ]
     ] ],
-    [ "QMainWindow", null, [
-      [ "MainWindow", "class_main_window.html", null ]
+    [ "QGraphicsScene", null, [
+      [ "QMapScene", "class_q_map_scene.html", null ]
     ] ],
-    [ "QMapViewer", "class_q_map_viewer.html", null ],
     [ "QObject", null, [
       [ "Controller", "class_controller.html", null ],
       [ "GraphicEmitter", "class_graphic_emitter.html", null ],
-      [ "Solver", "class_solver.html", null ]
+      [ "Grid", "class_grid.html", null ],
+      [ "QMapViewer", "class_q_map_viewer.html", null ],
+      [ "Solver", "class_solver.html", null ],
+      [ "Track", "class_track.html", null ]
     ] ],
     [ "QStackedWidget", null, [
       [ "SlidingStackedWidget", "class_sliding_stacked_widget.html", null ]
@@ -32,9 +33,10 @@ var hierarchy =
     [ "QWidget", null, [
       [ "Filtering", "class_filtering.html", null ],
       [ "Loading", "class_loading.html", null ],
+      [ "MainWindow", "class_main_window.html", null ],
+      [ "QMapWidget", "class_q_map_widget.html", null ],
       [ "QProcessViewer", "class_q_process_viewer.html", null ]
     ] ],
     [ "Road", "class_road.html", null ],
-    [ "Sauvegarde", "class_sauvegarde.html", null ],
-    [ "Track", "class_track.html", null ]
+    [ "Sauvegarde", "class_sauvegarde.html", null ]
 ];

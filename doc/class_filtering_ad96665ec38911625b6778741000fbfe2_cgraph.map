@@ -1,4 +1,7 @@
 <map id="Filtering::getInfo" name="Filtering::getInfo">
-<area shape="rect" id="node2" href="$class_track.html#aff258a8c303ee8a09a962d237f3823e7" title="Reads a csv file and inserts each point in m_points vector. " alt="" coords="169,5,316,32"/>
-<area shape="rect" id="node3" href="$class_track.html#a6360ae2dbed31e542a2cbaa986970352" title="getPoints Get the m_points vector " alt="" coords="183,56,302,83"/>
+<area shape="rect" id="node2" href="$class_track.html#aff258a8c303ee8a09a962d237f3823e7" title="Reads a csv file and inserts each point in m_points vector. " alt="" coords="169,31,316,57"/>
+<area shape="rect" id="node6" href="$class_track.html#a6360ae2dbed31e542a2cbaa986970352" title="getPoints Get the m_points vector " alt="" coords="183,81,302,108"/>
+<area shape="rect" id="node3" href="$class_track.html#ab0315e74b9b49e40d163a2ff978d833c" title="Creates a new point and inserts it in m_points. " alt="" coords="401,5,516,32"/>
+<area shape="rect" id="node5" href="$class_track.html#aac5002af6aa69a20101a5709dbbebc82" title="Apply a threshold to bounding box once the data file has been read. " alt="" coords="364,56,553,83"/>
+<area shape="rect" id="node4" href="$class_track.html#af947410651d847174d7b18d8e9df9ca7" title="Update the enclosing box of the track. " alt="" coords="601,5,727,32"/>
 </map>

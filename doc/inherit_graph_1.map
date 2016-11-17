@@ -1,5 +1,8 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
 <area shape="rect" id="node2" href="$class_controller.html" title="Controller" alt="" coords="139,5,218,32"/>
 <area shape="rect" id="node3" href="$class_graphic_emitter.html" title="GraphicEmitter" alt="" coords="124,56,233,83"/>
-<area shape="rect" id="node4" href="$class_solver.html" title="Solver" alt="" coords="149,107,208,133"/>
+<area shape="rect" id="node4" href="$class_grid.html" title="Grid embedded roads. This describes the network. " alt="" coords="155,107,202,133"/>
+<area shape="rect" id="node5" href="$class_q_map_viewer.html" title="QMapViewer" alt="" coords="130,157,227,184"/>
+<area shape="rect" id="node6" href="$class_solver.html" title="Solver" alt="" coords="149,208,208,235"/>
+<area shape="rect" id="node7" href="$class_track.html" title="The Track class. " alt="" coords="151,259,206,285"/>
 </map>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['height',['height',['../class_q_map_viewer.html#a6860a0b4df84d1a6f395dbc056a8045d',1,'QMapViewer']]]
+  ['nextok',['nextOk',['../class_filtering.html#a166be0d4d5d943d07ddfb1368ec5f22f',1,'Filtering::nextOk()'],['../class_loading.html#ae4a46be3510080f094a59b08c22e082e',1,'Loading::nextOk()']]]
 ];

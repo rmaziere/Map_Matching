@@ -10,6 +10,7 @@ var class_track =
     [ "infos", "class_track.html#abf3b02de2c94d38c6a79b7c932aa6c5b", null ],
     [ "outputInfos", "class_track.html#a1bdd5f826a2b58fcbca40fb7fb2de1c8", null ],
     [ "readFromCSV", "class_track.html#aff258a8c303ee8a09a962d237f3823e7", null ],
+    [ "signalMessage", "class_track.html#a1583bfbe44d600da7efa5d734df2e55b", null ],
     [ "spaceFilter", "class_track.html#a9f1da7896167f44da967acf9fd05d92a", null ],
     [ "temporalFilter", "class_track.html#a58fcdaf47f2c87bb7095933616f5a4bc", null ],
     [ "updateBox", "class_track.html#af947410651d847174d7b18d8e9df9ca7", null ],

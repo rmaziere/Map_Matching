@@ -1,8 +1,9 @@
 <map id="Grid::yMax" name="Grid::yMax">
-<area shape="rect" id="node2" href="$class_grid.html#a19318437702e712955d0c4631c94cb04" title="Save data about our area of roads. " alt="" coords="140,5,289,32"/>
-<area shape="rect" id="node7" href="$class_grid.html#a8d8b7fa0ee20d81f130a46d80fc2a018" title="Check if track is in grid. " alt="" coords="155,56,274,83"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#a141063eccadf0e03662d414d897d9f5d" title="dev_gridAndTrack" alt="" coords="367,5,494,32"/>
-<area shape="rect" id="node4" href="$class_main_window.html#ad39bbe8ced0d3248206ac0ca6c444d55" title="MainWindow::readyToNext1" alt="" coords="337,56,524,83"/>
-<area shape="rect" id="node5" href="$class_main_window.html#af773488e0b16efe6c0fc67ad348b86b2" title="MainWindow::createConnections" alt="" coords="572,56,787,83"/>
-<area shape="rect" id="node6" href="$class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="835,56,1015,83"/>
+<area shape="rect" id="node2" href="$class_grid.html#a19318437702e712955d0c4631c94cb04" title="Save data about our area of roads. " alt="" coords="140,56,289,83"/>
+<area shape="rect" id="node8" href="$class_grid.html#a8d8b7fa0ee20d81f130a46d80fc2a018" title="Check if track is in grid. " alt="" coords="155,107,274,133"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a141063eccadf0e03662d414d897d9f5d" title="dev_gridAndTrack" alt="" coords="337,5,464,32"/>
+<area shape="rect" id="node4" href="$class_solver.html#acbe7e47bcad48b8ddba95c9281c8bf23" title="Solver::readFiles" alt="" coords="341,56,461,83"/>
+<area shape="rect" id="node5" href="$class_main_window.html#ad39bbe8ced0d3248206ac0ca6c444d55" title="MainWindow::readyToNext1" alt="" coords="512,81,699,108"/>
+<area shape="rect" id="node6" href="$class_main_window.html#af773488e0b16efe6c0fc67ad348b86b2" title="MainWindow::createConnections" alt="" coords="747,81,961,108"/>
+<area shape="rect" id="node7" href="$class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="1009,81,1189,108"/>
 </map>

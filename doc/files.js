@@ -57,9 +57,15 @@ var files =
     [ "pointGPS.h", "point_g_p_s_8h.html", "point_g_p_s_8h" ],
     [ "pointroad.cpp", "pointroad_8cpp.html", null ],
     [ "pointroad.h", "pointroad_8h.html", "pointroad_8h" ],
-    [ "qmapviewer.cpp", "qmapviewer_8cpp.html", null ],
+    [ "qmapscene.cpp", "qmapscene_8cpp.html", "qmapscene_8cpp" ],
+    [ "qmapscene.h", "qmapscene_8h.html", "qmapscene_8h" ],
+    [ "qmapviewer.cpp", "qmapviewer_8cpp.html", "qmapviewer_8cpp" ],
     [ "qmapviewer.h", "qmapviewer_8h.html", [
       [ "QMapViewer", "class_q_map_viewer.html", "class_q_map_viewer" ]
+    ] ],
+    [ "qmapwidget.cpp", "qmapwidget_8cpp.html", null ],
+    [ "qmapwidget.h", "qmapwidget_8h.html", [
+      [ "QMapWidget", "class_q_map_widget.html", "class_q_map_widget" ]
     ] ],
     [ "qprocessviewer.cpp", "qprocessviewer_8cpp.html", null ],
     [ "qprocessviewer.h", "qprocessviewer_8h.html", [

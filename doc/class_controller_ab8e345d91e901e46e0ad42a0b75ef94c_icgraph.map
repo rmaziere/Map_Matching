@@ -1,6 +1,6 @@
 <map id="Controller::addSolver" name="Controller::addSolver">
-<area shape="rect" id="node2" href="$main_8cpp.html#a9dd67c19acf7317c6296b63e29dcfab9" title="dev_thread" alt="" coords="255,5,342,32"/>
-<area shape="rect" id="node4" href="$class_main_window.html#a684fe2be6fa67486c75ebddfbbe7d42b" title="MainWindow::createGuiControl\lComponents" alt="" coords="197,57,400,98"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="513,5,563,32"/>
-<area shape="rect" id="node5" href="$class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="448,64,628,91"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#a9dd67c19acf7317c6296b63e29dcfab9" title="dev_thread" alt="" coords="261,5,348,32"/>
+<area shape="rect" id="node4" href="$class_main_window.html#af773488e0b16efe6c0fc67ad348b86b2" title="MainWindow::createConnections" alt="" coords="197,56,412,83"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="525,5,575,32"/>
+<area shape="rect" id="node5" href="$class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="460,56,640,83"/>
 </map>

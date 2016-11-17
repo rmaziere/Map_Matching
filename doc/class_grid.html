@@ -106,7 +106,9 @@ $(document).ready(function(){initNavTree('class_grid.html','');});
 
 <div class="header">
   <div class="summary">
+<a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_grid-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -119,12 +121,23 @@ $(document).ready(function(){initNavTree('class_grid.html','');});
 
 <p><code>#include &lt;<a class="el" href="grid_8h_source.html">grid.h</a>&gt;</code></p>
 <div class="dynheader">
+Inheritance diagram for Grid:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_grid__inherit__graph.svg" width="159" height="522"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
 Collaboration diagram for Grid:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_grid__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
+Signals</h2></td></tr>
+<tr class="memitem:af66932fd8e28799e2b24a0a61d69dfe8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#af66932fd8e28799e2b24a0a61d69dfe8">signalMessage</a> (QString)</td></tr>
+<tr class="separator:af66932fd8e28799e2b24a0a61d69dfe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aba1830bc145f128d6deeed29cfb94c9f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#aba1830bc145f128d6deeed29cfb94c9f">addRoad</a> (const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;listOfCoordinates, long edgeId)</td></tr>
@@ -192,16 +205,19 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3661d0a7f998caaaf8627d7a67072116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a3661d0a7f998caaaf8627d7a67072116">More...</a><br /></td></tr>
 <tr class="separator:a3661d0a7f998caaaf8627d7a67072116"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a5578e1ff240198b12d1d17f919bb182c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="grid_8h.html#ac56897dddd132e4c97d442b506be559c">AllRoadMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a5578e1ff240198b12d1d17f919bb182c">m_mapOfAllRoads</a></td></tr>
+<tr class="separator:a5578e1ff240198b12d1d17f919bb182c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affafdc2764a84765c24b9010ba19de94"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_point_road.html">PointRoad</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#affafdc2764a84765c24b9010ba19de94">m_vectorOfPoints</a></td></tr>
+<tr class="separator:affafdc2764a84765c24b9010ba19de94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a3d09e3c15b281cd790ea559ac0cd8600"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a3d09e3c15b281cd790ea559ac0cd8600">m_gridFullName</a></td></tr>
 <tr class="separator:a3d09e3c15b281cd790ea559ac0cd8600"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5578e1ff240198b12d1d17f919bb182c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="grid_8h.html#ac56897dddd132e4c97d442b506be559c">AllRoadMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a5578e1ff240198b12d1d17f919bb182c">m_mapOfAllRoads</a></td></tr>
-<tr class="separator:a5578e1ff240198b12d1d17f919bb182c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9774c5aed906c94a14a41c732ec1f800"><td class="memItemLeft" align="right" valign="top"><a class="el" href="grid_8h.html#ae213445293bdb59728d1618fa962967a">ExtremityPointMap</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a9774c5aed906c94a14a41c732ec1f800">m_mapOfExtPoints</a></td></tr>
 <tr class="separator:a9774c5aed906c94a14a41c732ec1f800"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affafdc2764a84765c24b9010ba19de94"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_point_road.html">PointRoad</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#affafdc2764a84765c24b9010ba19de94">m_vectorOfPoints</a></td></tr>
-<tr class="separator:affafdc2764a84765c24b9010ba19de94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7592435e0deabc56eea37de7b062fddc"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grid.html#a7592435e0deabc56eea37de7b062fddc">m_xMin</a></td></tr>
 <tr class="memdesc:a7592435e0deabc56eea37de7b062fddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The coordinates of the track.  <a href="#a7592435e0deabc56eea37de7b062fddc">More...</a><br /></td></tr>
 <tr class="separator:a7592435e0deabc56eea37de7b062fddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -226,7 +242,7 @@ The coordinates of the grid.</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_grid.html" title="Grid embedded roads. This describes the network. ">Grid</a> embedded roads. This describes the network. </p>
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00034">34</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00036">36</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a4ac9ff4f63552b4c61ff90fcb35ad66c"></a>
 <div class="memitem">
@@ -301,7 +317,7 @@ The coordinates of the grid.</h2></td></tr>
 
 <p>Creates a new road and inserts it in m_road. </p>
 
-<p>Definition at line <a class="el" href="grid_8cpp_source.html#l00194">194</a> of file <a class="el" href="grid_8cpp_source.html">grid.cpp</a>.</p>
+<p>Definition at line <a class="el" href="grid_8cpp_source.html#l00196">196</a> of file <a class="el" href="grid_8cpp_source.html">grid.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -314,7 +330,7 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_grid_aba1830bc145f128d6deeed29cfb94c9f_icgraph.svg" width="100%" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_grid_aba1830bc145f128d6deeed29cfb94c9f_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </p>
@@ -336,7 +352,7 @@ Here is the caller graph for this function:</div>
 
 <p>buildKDTree </p>
 
-<p>Definition at line <a class="el" href="grid_8cpp_source.html#l00258">258</a> of file <a class="el" href="grid_8cpp_source.html">grid.cpp</a>.</p>
+<p>Definition at line <a class="el" href="grid_8cpp_source.html#l00260">260</a> of file <a class="el" href="grid_8cpp_source.html">grid.cpp</a>.</p>
 
 </div>
 </div>
@@ -355,7 +371,7 @@ Here is the caller graph for this function:</div>
 
 <p>buildMarkovMatrix </p>
 
-<p>Definition at line <a class="el" href="grid_8cpp_source.html#l00262">262</a> of file <a class="el" href="grid_8cpp_source.html">grid.cpp</a>.</p>
+<p>Definition at line <a class="el" href="grid_8cpp_source.html#l00264">264</a> of file <a class="el" href="grid_8cpp_source.html">grid.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -396,7 +412,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00114">114</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00117">117</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 </div>
 </div>
@@ -423,7 +439,7 @@ Here is the caller graph for this function:</div>
 
 <p>Getters. </p>
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00113">113</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00116">116</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 </div>
 </div>
@@ -448,7 +464,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00108">108</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00111">111</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 </div>
 </div>
@@ -466,7 +482,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="grid_8cpp_source.html#l00247">247</a> of file <a class="el" href="grid_8cpp_source.html">grid.cpp</a>.</p>
+<p>Definition at line <a class="el" href="grid_8cpp_source.html#l00249">249</a> of file <a class="el" href="grid_8cpp_source.html">grid.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -499,7 +515,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00107">107</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00110">110</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 </div>
 </div>
@@ -537,12 +553,12 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true or false </dd></dl>
 
-<p>Definition at line <a class="el" href="grid_8cpp_source.html#l00253">253</a> of file <a class="el" href="grid_8cpp_source.html">grid.cpp</a>.</p>
+<p>Definition at line <a class="el" href="grid_8cpp_source.html#l00255">255</a> of file <a class="el" href="grid_8cpp_source.html">grid.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_grid_a6b6af4fb2545b398b47794de576f15f5_icgraph.svg" width="100%" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_grid_a6b6af4fb2545b398b47794de576f15f5_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </p>
@@ -562,7 +578,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="grid_8cpp_source.html#l00238">238</a> of file <a class="el" href="grid_8cpp_source.html">grid.cpp</a>.</p>
+<p>Definition at line <a class="el" href="grid_8cpp_source.html#l00240">240</a> of file <a class="el" href="grid_8cpp_source.html">grid.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -587,7 +603,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="grid_8cpp_source.html#l00231">231</a> of file <a class="el" href="grid_8cpp_source.html">grid.cpp</a>.</p>
+<p>Definition at line <a class="el" href="grid_8cpp_source.html#l00233">233</a> of file <a class="el" href="grid_8cpp_source.html">grid.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -634,7 +650,7 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_grid_ae848f1c59c544adc1af9133409ee0106_icgraph.svg" width="100%" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_grid_ae848f1c59c544adc1af9133409ee0106_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </p>
@@ -743,6 +759,38 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="af66932fd8e28799e2b24a0a61d69dfe8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Grid::signalMessage </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_grid_af66932fd8e28799e2b24a0a61d69dfe8_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a8d8b7fa0ee20d81f130a46d80fc2a018"></a>
 <div class="memitem">
 <div class="memproto">
@@ -759,7 +807,7 @@ Here is the caller graph for this function:</div>
 <p>Check if track is in grid. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if track is in grid </dd></dl>
 
-<p>Definition at line <a class="el" href="grid_8cpp_source.html#l00299">299</a> of file <a class="el" href="grid_8cpp_source.html">grid.cpp</a>.</p>
+<p>Definition at line <a class="el" href="grid_8cpp_source.html#l00301">301</a> of file <a class="el" href="grid_8cpp_source.html">grid.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -812,12 +860,12 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="grid_8cpp_source.html#l00291">291</a> of file <a class="el" href="grid_8cpp_source.html">grid.cpp</a>.</p>
+<p>Definition at line <a class="el" href="grid_8cpp_source.html#l00293">293</a> of file <a class="el" href="grid_8cpp_source.html">grid.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_grid_a58233ab60f7477144af334f205606aa4_icgraph.svg" width="100%" height="480"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_grid_a58233ab60f7477144af334f205606aa4_icgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </p>
@@ -845,12 +893,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00116">116</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00119">119</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_grid_a5e140affdf9653d8badf596f1f151908_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_grid_a5e140affdf9653d8badf596f1f151908_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </p>
@@ -878,7 +926,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00120">120</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00123">123</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -911,12 +959,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00115">115</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00118">118</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_grid_a13d6d18b26d70ab5871a8c2ddf7fa1b5_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_grid_a13d6d18b26d70ab5871a8c2ddf7fa1b5_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </p>
@@ -944,7 +992,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00119">119</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00122">122</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -977,12 +1025,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00118">118</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00121">121</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_grid_abfa1a601742ca69a5ecc3b6a5318d7a8_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_grid_abfa1a601742ca69a5ecc3b6a5318d7a8_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </p>
@@ -1010,7 +1058,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00122">122</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00125">125</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1043,12 +1091,12 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00117">117</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00120">120</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_grid_a6acf01d876905d8709f4fb8ebe18aa94_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_grid_a6acf01d876905d8709f4fb8ebe18aa94_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 </p>
@@ -1076,7 +1124,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00121">121</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00124">124</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1107,29 +1155,21 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00125">125</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00135">135</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="a5578e1ff240198b12d1d17f919bb182c"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="grid_8h.html#ac56897dddd132e4c97d442b506be559c">AllRoadMap</a> Grid::m_mapOfAllRoads</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00127">127</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00128">128</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 </div>
 </div>
@@ -1151,29 +1191,21 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00126">126</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00136">136</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="affafdc2764a84765c24b9010ba19de94"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt;<a class="el" href="class_point_road.html">PointRoad</a>&gt; Grid::m_vectorOfPoints</td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00128">128</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00129">129</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 </div>
 </div>
@@ -1196,7 +1228,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>The x max value </p>
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00135">135</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00144">144</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 </div>
 </div>
@@ -1219,7 +1251,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>The x max value </p>
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00145">145</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00154">154</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 </div>
 </div>
@@ -1244,7 +1276,7 @@ Here is the caller graph for this function:</div>
 <p>The coordinates of the track. </p>
 <p>The x min value </p>
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00134">134</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00143">143</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 </div>
 </div>
@@ -1267,7 +1299,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>The x min value </p>
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00144">144</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00153">153</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 </div>
 </div>
@@ -1290,7 +1322,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>The y max value </p>
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00137">137</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00146">146</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 </div>
 </div>
@@ -1313,7 +1345,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>The y max value </p>
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00147">147</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00156">156</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 </div>
 </div>
@@ -1336,7 +1368,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>The y min value </p>
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00136">136</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00145">145</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 </div>
 </div>
@@ -1359,7 +1391,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>The y min value </p>
 
-<p>Definition at line <a class="el" href="grid_8h_source.html#l00146">146</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
+<p>Definition at line <a class="el" href="grid_8h_source.html#l00155">155</a> of file <a class="el" href="grid_8h_source.html">grid.h</a>.</p>
 
 </div>
 </div>
@@ -1373,7 +1405,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_grid.html">Grid</a></li>
-    <li class="footer">Generated on Thu Nov 17 2016 17:18:09 for Map Matching by
+    <li class="footer">Generated on Thu Nov 17 2016 20:05:27 for Map Matching by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
