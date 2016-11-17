@@ -14,7 +14,6 @@
 #include "MainWindow.h"
 #include "file.h"
 #include "grid.h"
-//#include "journalprocess.h"
 #include "loading.h"
 #include "myexception.h"
 #include "pointGPS.h"
