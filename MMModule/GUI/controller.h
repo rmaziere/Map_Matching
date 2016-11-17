@@ -1,9 +1,9 @@
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 
-#include "qprocessviewer.h"
 #include "qmapviewer.h"
 #include "qmapwidget.h"
+#include "qprocessviewer.h"
 #include "solver.h"
 #include <QObject>
 
@@ -17,7 +17,7 @@ public:
 
     Solver* m_solver;
     QProcessViewer* m_qProcessViewer;
-    QMapWidget *m_qMapWidget;
+    QMapWidget* m_qMapWidget;
 
 signals:
 

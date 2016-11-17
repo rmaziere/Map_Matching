@@ -13,7 +13,6 @@ Track::Track()
     , m_yMin(std::numeric_limits<double>::max())
     , m_yMax(0.0)
 {
-
 }
 
 Track::~Track()

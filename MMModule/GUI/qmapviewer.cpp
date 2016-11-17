@@ -24,16 +24,18 @@ void QMapViewer::drawAllGPSPoints()
     emit signalTrackCompleted("Track has been graphically processed");
 }
 
-void QMapViewer::drawPoint(Point &p)
+void QMapViewer::drawPoint(Point& p)
 {
-    QPointF pf(transform(p.x(),X), transform(p.y(),Y));
+    QPointF pf(transform(p.x(), X), transform(p.y(), Y));
     m_paint.drawPoint(pf);
 }
 
 double QMapViewer::transform(double x, int dim)
 {
-    if (dim==X) return (x-m_shiftX)/m_scaleFactor;
-    else return m_height-((x-m_shiftY)/m_scaleFactor);
+    if (dim == X)
+        return (x - m_shiftX) / m_scaleFactor;
+    else
+        return m_height - ((x - m_shiftY) / m_scaleFactor);
 }
 /*
 void QMapViewer::onSignalDimension(double xMinGrid, double xMaxGrid, double yMinGrid, double yMaxGrid)
@@ -112,7 +114,8 @@ void QMapViewer::makePolyline(std::vector<std::vector<double> > vXY, QString col
             QPointF polyligne[2] = { QPointF(vXY.at(i).at(0), vXY.at(i).at(1)), QPointF(vXY.at(i + 1).at(0), vXY.at(i + 1).at(1)) };
             m_paint.setPen(QPen(QColor(color), 3, Qt::SolidLine, Qt::RoundCap, Qt::BevelJoin));
             m_paint.drawPolyline(polyligne, 2);
-        }    emit signalTrackCompleted("Track has been graphically processed");
+        }
+        emit signalTrackCompleted("Track has been graphically processed");
     }
     m_paint.end();
 }
@@ -139,8 +142,8 @@ void QMapViewer::save(QString file)
     m_map.save(file);
 }
 
-void QMapViewer::onSignalAllPoints(std::vector<PointGPS *> *p)
+void QMapViewer::onSignalAllPoints(std::vector<PointGPS*>* p)
 {
-    m_trackPoints=p;
+    m_trackPoints = p;
     drawAllGPSPoints();
 }

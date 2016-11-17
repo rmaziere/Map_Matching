@@ -38,7 +38,6 @@ void MainWindow::createMainLayout()
 
     process = new QProcessViewer(this);
     mainLayout->addWidget(process);
-
 }
 
 void MainWindow::createSubSlidingWidgets()
@@ -89,7 +88,7 @@ void MainWindow::putNone()
 
 void MainWindow::readyToNext1(File file1, File file2)
 {
-    solver->readFiles(file1,file2);
+    solver->readFiles(file1, file2);
     if (!solver->grid.trackInGrid()) {
         QMessageBox::warning(this, "Erreur de fichiers", "Attention, l'emprise des données de correspond pas !");
     } else {
@@ -97,14 +96,12 @@ void MainWindow::readyToNext1(File file1, File file2)
     }
 }
 
-void MainWindow::readyToNext2(double fSpat,int fTemp)
+void MainWindow::readyToNext2(double fSpat, int fTemp)
 {
-    if (fSpat != 0)
-    {
+    if (fSpat != 0) {
         trace.spaceFilter(double(fSpat));
     }
-    if (fTemp != 0)
-    {
+    if (fTemp != 0) {
         trace.temporalFilter(fTemp);
     }
     buttonNext->setEnabled(true);

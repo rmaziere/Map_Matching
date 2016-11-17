@@ -3,11 +3,11 @@
 #include <QScrollArea>
 #include <QVBoxLayout>
 
-QMapWidget::QMapWidget(QWidget *parent)
+QMapWidget::QMapWidget(QWidget* parent)
     : QWidget(parent)
 {
     m_layout = new QVBoxLayout;
-    m_scene= new QMapScene(this);
+    m_scene = new QMapScene(this);
     m_view = new QGraphicsView(m_scene);
     m_layout->addWidget(m_view);
     setLayout(m_layout);
@@ -29,7 +29,6 @@ void QMapWidget::sceneScaleChanged()
     m_view->translate(oldMatrix.dx(), oldMatrix.dy());
     m_view->scale(newScale, newScale);
 }
-
 
 void QMapWidget::onSignalShow()
 {

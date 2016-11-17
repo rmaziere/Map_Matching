@@ -35,7 +35,6 @@ void Filtering::temporal()
     m_boutonTemp = new QPushButton("Ok");
     m_boutonTemp->setCheckable(true);
 
-
     QObject::connect(m_slidTemp, SIGNAL(valueChanged(int)), m_valueTemp, SLOT(display(int)));
     //QObject::connect(m_slidTemp, SIGNAL(valueChanged(int)), this, SLOT(launchFiltreTemp(int)));
     QObject::connect(m_boutonTemp, SIGNAL(clicked()), this, SLOT(launchFiltre()));
@@ -88,20 +87,16 @@ void Filtering::getInfo(File fileT)
 
 void Filtering::launchFiltre()
 {
-    nextOk +=1;
-    if (m_boutonSpat->isChecked())
-    {
-        m_filtreSpat = m_slidSpat->value()/100;
+    nextOk += 1;
+    if (m_boutonSpat->isChecked()) {
+        m_filtreSpat = m_slidSpat->value() / 100;
         m_slidSpat->setEnabled(false);
     }
-    if (m_boutonTemp->isChecked())
-    {
+    if (m_boutonTemp->isChecked()) {
         m_filtreTemp = m_slidTemp->value();
         m_slidTemp->setEnabled(false);
     }
-    if (nextOk >= 2)
-    {
-        emit ready(m_filtreSpat,m_filtreTemp);
+    if (nextOk >= 2) {
+        emit ready(m_filtreSpat, m_filtreTemp);
     }
-
 }

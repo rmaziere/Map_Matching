@@ -124,17 +124,15 @@ public:
     double yMinGrid() const { return m_yMinGrid; }
     double yMaxGrid() const { return m_yMaxGrid; }
 
-
     AllRoadMap m_mapOfAllRoads;
     std::vector<PointRoad> m_vectorOfPoints;
 
-    signals:
-        void signalMessage(QString);
+signals:
+    void signalMessage(QString);
 
 protected:
     std::string m_gridFullName;
     ExtremityPointMap m_mapOfExtPoints; // temporary container during csv loading
-
 
     /**
      * @brief The coordinates of the track

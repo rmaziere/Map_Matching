@@ -1,16 +1,15 @@
 #include "solver.h"
 #define DEBUG_SOLVER false
 
-Solver::Solver(QObject *parent)
+Solver::Solver(QObject* parent)
     : QObject(parent)
 {
-
 }
 
 void Solver::start()
 {
     track.readFromCSV(m_trackFilename);
-    m_trackPoints= track.getPointsAsPointer();
+    m_trackPoints = track.getPointsAsPointer();
     emit signalMessage(QString::fromStdString(track.infos()));
     emit signalDimension(track.m_xMin, track.m_xMax, track.m_yMin, track.m_yMax);
     emit signalAllPoints(m_trackPoints);

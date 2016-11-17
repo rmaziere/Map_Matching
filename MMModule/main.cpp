@@ -51,11 +51,9 @@ void dev_thread()
     controller->m_qProcessViewer->resize(500, 500);
     controller->m_qProcessViewer->show();
 
-
-    controller->m_qMapWidget->resize(500,500);
+    controller->m_qMapWidget->resize(500, 500);
     controller->m_qMapWidget->show();
 }
-
 
 void dev_grid()
 {
@@ -116,7 +114,7 @@ void dev_ui2()
 {
 
     //Fenetre non enlevable
-    MainWindow *w = new MainWindow();
+    MainWindow* w = new MainWindow();
     w->setWindowTitle("Map Matching");
 
     w->resize(360, 504);

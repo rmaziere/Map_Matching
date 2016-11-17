@@ -6,20 +6,20 @@
 #include <QListWidget>
 #include <QPushButton>
 #include <QSlider>
-#include <QtGui/QMainWindow>
-#include <QtGui>
 #include <QThread>
 #include <QWidget>
+#include <QtGui/QMainWindow>
+#include <QtGui>
 
 #include "SlidingStackedWidget.h"
 #include "filtering.h"
 #include "loading.h"
 
-#include "grid.h"
-#include "track.h"
 #include "GUI/controller.h"
-#include "solver.h"
 #include "GUI/qprocessviewer.h"
+#include "grid.h"
+#include "solver.h"
+#include "track.h"
 
 class MainWindow : public QWidget {
     Q_OBJECT

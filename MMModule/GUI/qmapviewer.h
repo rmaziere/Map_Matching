@@ -2,8 +2,8 @@
 #define QMAPVIEWER_H
 
 #include <QImage>
-#include <QPixmap>
 #include <QPainter>
+#include <QPixmap>
 #include <QString>
 #include <iostream>
 #include <string>
@@ -18,12 +18,11 @@ public:
      * @param Image's width
      * @param Image's height
      */
-    explicit QMapViewer(int width=500, int m_height=400);
+    explicit QMapViewer(int width = 500, int m_height = 400);
 
     void drawAllGPSPoints();
-    void drawPoint(Point &);
+    void drawPoint(Point&);
     double transform(double x, int dim);
-
 
     /**
      * @brief TranslateToQPoint
@@ -32,7 +31,6 @@ public:
      * @return
      */
     QPointF TranslateToQPoint(double x, double y);
-
 
     void landmarkMaker(int resolution, QString color = "black");
 
@@ -65,19 +63,14 @@ public:
 
     QImage m_map; /**< map */
 
-
-
 signals:
     void signalTrackCompleted(QString);
 
 public slots:
-    void onSignalAllPoints(std::vector<PointGPS*> *);
-
-
-
+    void onSignalAllPoints(std::vector<PointGPS*>*);
 
 protected:
-    std::vector<PointGPS*> *m_trackPoints;
+    std::vector<PointGPS*>* m_trackPoints;
     double m_scaleFactor = 1; /**< scale between the grid and the image*/
     int m_width; /**< image width*/
     int m_height; /**< image height*/

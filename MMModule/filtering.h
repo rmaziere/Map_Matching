@@ -12,8 +12,8 @@
 #include <QVBoxLayout>
 #include <QWidget>
 
-#include "track.h"
 #include "file.h"
+#include "track.h"
 
 class Filtering : public QWidget {
     Q_OBJECT
@@ -26,7 +26,7 @@ public slots:
     void launchFiltre();
 
 signals:
-    void ready(double m_filtreSpat,int m_filtreTemp);
+    void ready(double m_filtreSpat, int m_filtreTemp);
 
 private:
     void nbPtTrack();
