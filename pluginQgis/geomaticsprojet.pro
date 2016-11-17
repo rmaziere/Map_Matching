@@ -1,5 +1,4 @@
 TEMPLATE = lib
-TEMPLATE = app
 
 CONFIG = qt
 CONFIG += c++11
@@ -29,8 +28,7 @@ SOURCES += geomaticsprojet.cpp \
     ../MMModule/KDTreeAlgos/box.cpp \
     ../MMModule/KDTreeAlgos/boxnode.cpp \
     ../MMModule/KDTreeAlgos/kdtree.cpp \
-    ../MMModule/KDTreeAlgos/kdtreeviewer.cpp \
-    main.cpp
+    ../MMModule/KDTreeAlgos/kdtreeviewer.cpp
 
 HEADERS += geomaticsprojet.h \
     ../MMModule/emissionprobability.h \

@@ -37,14 +37,15 @@ void GeomaticsProjet::initGui()
 int GeomaticsProjet::run(int argc, char *argv[])
 {
     QgsMessageLog::instance()->logMessage("Geomatics projet launched", "Geomatics projet", QgsMessageLog::INFO);
-
+/*
     QApplication app(argc, argv);
 
     Loading fenetre;
     // affichage de la fenetre
     fenetre.show();
 
-    return app.exec();
+    return app.exec();*/
+    return 0;
 }
 
 void GeomaticsProjet::unload()
