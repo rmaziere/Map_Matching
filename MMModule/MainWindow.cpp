@@ -3,7 +3,7 @@
 // The Constructor calls the subfunctions for creation of the sample application
 
 MainWindow::MainWindow(QWidget* parent)
-    : QMainWindow(parent)
+    : QWidget(parent)
 {
     createGuiControlComponents();
     createSubSlidingWidgets();
@@ -21,19 +21,14 @@ void MainWindow::createGuiControlComponents()
     buttonNext = new QPushButton(tr("Next"));
     buttonNext->setEnabled(false);
     buttonCancel = new QPushButton(tr("Cancel"));
-    //thread = new QThread();
-    solver = new Solver();
-    //solver->moveToThread(thread);
-    //thread->start();
-    controller = new Controller();
-    controller->addSolver(solver);
 }
 
 void MainWindow::createMainLayout()
 {
-    centralWidget = new QWidget(this);
+    //centralWidget = new QWidget(this);
     mainLayout = new QVBoxLayout();
-    centralWidget->setLayout(mainLayout);
+    //centralWidget->setLayout(mainLayout);
+    this->setLayout(mainLayout);
     controlPaneLayout = new QGridLayout();
     mainLayout->addWidget(slidingStacked);
     mainLayout->addLayout(controlPaneLayout);
@@ -41,7 +36,9 @@ void MainWindow::createMainLayout()
     controlPaneLayout->addWidget(buttonCancel, 1, 1, 1, 1);
     controlPaneLayout->addWidget(buttonNext, 1, 2, 1, 1);
 
-    this->setCentralWidget(centralWidget);
+    process = new QProcessViewer(this);
+    mainLayout->addWidget(process);
+
 }
 
 void MainWindow::createSubSlidingWidgets()
