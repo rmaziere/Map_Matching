@@ -2,59 +2,59 @@
 #define LOADING_H
 
 #include <QApplication>
-#include <QWidget>
-#include <QPushButton>
-#include <QGroupBox>
-#include <QVBoxLayout>
-#include <QRadioButton>
-#include <QLabel>
 #include <QDialogButtonBox>
+#include <QGroupBox>
+#include <QLabel>
 #include <QObject>
+#include <QPushButton>
+#include <QRadioButton>
+#include <QVBoxLayout>
+#include <QWidget>
 
 #include "file.h"
 
-class Loading : public QWidget
-{
+class Loading : public QWidget {
     Q_OBJECT
 
 public:
     Loading();
     ~Loading();
 
+    File fileSHPGrid;
+    File fileSHPTrack;
+    File fileCSVTrack;
+
 public slots:
     void loadFileCSVTrack();
     void loadFileSHPTrack();
     void loadFileGrid();
     void getCountry();
-    void launchFiles();
-
 
 signals:
-
+    void ready(File, File);
 
 private:
     void country();
     void track();
     void grid();
-    void boutonXY();
 
-    QGroupBox *m_country;
-    QGroupBox *m_track;
-    QGroupBox *m_grid;
-    QGroupBox *m_boutonXY;
+    void launchFiles();
 
-    QRadioButton *m_fr;
-    QRadioButton *m_usa;
+    QGroupBox* m_country;
+    QGroupBox* m_track;
+    QGroupBox* m_grid;
+    QGroupBox* m_boutonXY;
 
-    QPushButton *m_csvTrack;
-    QPushButton *m_shpTrack;
-    QPushButton *m_csvGrid;
-    QLabel *m_fileGPS;
-    QLabel *m_fileGrid;
+    QRadioButton* m_fr;
+    QRadioButton* m_usa;
 
-    QPushButton *m_cancel;
-    QPushButton *m_launch;
+    QPushButton* m_csvTrack;
+    QPushButton* m_shpTrack;
+    QPushButton* m_csvGrid;
+    QLabel* m_fileGPS;
+    QLabel* m_fileGrid;
 
+    int nextOk;
 };
 
 #endif // LOADING_H

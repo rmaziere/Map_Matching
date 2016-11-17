@@ -1,15 +1,20 @@
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 
-#include <QObject>
-#include "track.h"
 #include "qmapviewer.h"
+#include "solver.h"
+#include <QObject>
 
-class Controller : public QObject
-{
+class Controller : public QObject {
     Q_OBJECT
 public:
-    explicit Controller(QObject *parent = 0): QObject(parent) {}
+    explicit Controller();
+
+    void addSolver(Solver* solver);
+    void connectSignals();
+
+    Solver* m_solver;
+    QMapViewer* m_qMapViewer;
 
 signals:
 

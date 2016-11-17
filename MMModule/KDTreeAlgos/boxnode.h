@@ -15,10 +15,10 @@ public:
         , m_daughterBox2(daughterTwo)
         , m_indexOfLowerPoint(myptlo)
         , m_indexOfUpperPoint(mypthi)
-    {}
+    {
+    }
 
-
-// protected: // no protection, classe only used within kdtree
+    // protected: // no protection, classe only used within kdtree
     int m_motherBox, m_daughterBox1, m_daughterBox2;
     int m_indexOfLowerPoint, m_indexOfUpperPoint;
 };

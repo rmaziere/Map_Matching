@@ -1,33 +1,51 @@
 #include "solver.h"
+#define DEBUG_SOLVER false
 
-#define DEBUG true
-
-void Solver::initialize()
+void Solver::start()
 {
-    if (DEBUG) std::cout << m_roads->size() << " roads and " << m_trackPoints->size() << " points." << std::endl;
-    // construction of the emissionMatrix
-    for (PointGPS *p: *m_trackPoints) {
-        for (auto &it : *m_roads) {
-           setDistance(p,it.second);
-        }
-    }
+    track.readFromCSV(m_trackFilename);
+    emit signalMessage(QString::fromStdString(track.infos()));
+    grid.readFromCSV(m_gridFilename);
+    emit signalMessage(QString::fromStdString(grid.infos()));
+    grid.buildMarkovMatrix();
+    emit signalMessage("Markov Matrix built");
 }
 
-void Solver::setDistance(PointGPS *p, Road &r)
+void Solver::setDistance(PointGPS* p, Road& r)
 {
-    if (DEBUG) {
+    if (DEBUG_SOLVER) {
         std::cout << p->infos() << std::endl;
         r.outputInfos();
     }
-/*    const vector<int> &listOfPointId= r.vectorOfPointsId();
-    double d, bestDistance= std::numeric_limits<double>::max();
-    for (uint i=1; i<listOfPointId.size(); i++) {
-        d= p->distanceToSegment(*m_roadPoints[listOfPointId[i-1]], *m_roadPoints[listOfPointId[i]]);
-        if (d<bestDistance) bestDistance= d;
+    const std::vector<int>& listOfPointId = r.vectorOfPointsId();
+    double d, bestDistance = std::numeric_limits<double>::max();
+    for (uint i = 1; i < listOfPointId.size(); i++) {
+        //int j=listOfPointId[i-1];
+        //Point p1= m_roadPoints->at(j);
+        d = p->distanceToSegment(m_roadPoints->at(listOfPointId[i - 1]), m_roadPoints->at(listOfPointId[i]));
+        if (d < bestDistance)
+            bestDistance = d;
     }
-    p->addEmissionProbability(r.edgeId(), bestDistance);
+    if (bestDistance < DISTANCE_THRESHOLD)
+        p->addEmissionProbability(r.edgeId(), bestDistance);
 
-    if (DEBUG) {
-        //std::cout << p->infos() << std::endl;
-    }*/
+    if (DEBUG_SOLVER) {
+        std::cout << p->infos() << std::endl;
+    }
+}
+
+void Solver::onSignalSetGrid(QString s)
+{
+    m_gridFilename = s;
+}
+
+void Solver::onSignalSetTrack(QString s)
+{
+    m_trackFilename = s;
+}
+
+void Solver::onSignalStart()
+{
+    emit signalMessage("Solver started");
+    start();
 }

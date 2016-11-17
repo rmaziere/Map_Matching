@@ -1,10 +1,12 @@
 #include "point.h"
 #include <algorithm>
-#include <math.h>
 #include <iomanip>
+#include <math.h>
 #include <sstream>
 
-bool Point::samePointAs(const Point &p) const
+const double Point::POINT_RADIUS = 200;
+
+bool Point::samePointAs(const Point& p) const
 {
     return (fabs(m_x - p.m_x) < EPS) && (fabs(m_y - p.m_y) < EPS);
 }
@@ -34,24 +36,27 @@ std::string Point::infos() const
     return ss.str();
 }
 
-double Point::y() const
-{
-    return m_y;
+double Point::y() const 
+{ 
+    return m_y; 
 }
 
-void Point::sety(double y)
-{
-    m_y = y;
+void Point::sety(double y) 
+{ 
+    m_y = y; 
 }
 
 double Point::x(int dim) const
 {
-    return (dim==0)?m_x:m_y;
+    return (dim == 0) ? m_x : m_y;
 }
 
 void Point::setx(int dim, double value)
 {
-    if (dim==0) m_x= value; else m_y= value;
+    if (dim == 0)
+        m_x = value;
+    else
+        m_y = value;
 }
 
 double Point::x() const

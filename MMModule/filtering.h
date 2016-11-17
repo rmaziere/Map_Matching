@@ -2,51 +2,44 @@
 #define FILTERING_H
 
 #include <QApplication>
-#include <QWidget>
-#include <QPushButton>
-#include <QGroupBox>
-#include <QVBoxLayout>
-#include <QLabel>
 #include <QDialogButtonBox>
-#include <QObject>
-#include <QSlider>
+#include <QGroupBox>
 #include <QLCDNumber>
+#include <QLabel>
+#include <QObject>
+#include <QPushButton>
+#include <QSlider>
+#include <QVBoxLayout>
+#include <QWidget>
 
 #include "track.h"
 
-class Filtering : public QWidget
-{
+class Filtering : public QWidget {
     Q_OBJECT
 public:
     Filtering();
     ~Filtering();
 
-
 public slots:
-
+    void launchFiltre(int);
 
 signals:
-
+    void ready();
 
 private:
-
     void nbPtTrack();
     void spatial();
     void temporal();
-    void boutonXY();
 
-    QGroupBox *m_spat;
-    QGroupBox *m_temp;
-    QGroupBox *m_boutonXY;
+    QGroupBox* m_spat;
+    QGroupBox* m_temp;
+    QGroupBox* m_boutonXY;
 
-    QSlider *m_slidTemp;
-    QLCDNumber *m_valueTemp;
-    QSlider *m_slidSpat;
-    QLCDNumber *m_valueSpat;
-    QLabel *m_nbPtTrack;
-
-    QPushButton *m_cancel;
-    QPushButton *m_launch;
+    QSlider* m_slidTemp;
+    QLCDNumber* m_valueTemp;
+    QSlider* m_slidSpat;
+    QLCDNumber* m_valueSpat;
+    QLabel* m_nbPtTrack;
 };
 
 #endif // FILTERING_H

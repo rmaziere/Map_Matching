@@ -2,5 +2,4 @@
 
 KDTreeViewer::KDTreeViewer()
 {
-
 }

@@ -1,9 +1,7 @@
 #ifndef EMISSIONPROBABILITY_H
 #define EMISSIONPROBABILITY_H
 
-
-class EmissionProbability
-{
+class EmissionProbability {
 public:
     EmissionProbability(long roadId, double distance)
         : m_roadId(roadId)
@@ -12,7 +10,7 @@ public:
     {
     }
 
-    void updateProbability(float p) { m_probability= p;}
+    void updateProbability(float p) { m_probability = p; }
 
 protected:
     long m_roadId;

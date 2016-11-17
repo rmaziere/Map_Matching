@@ -1,11 +1,10 @@
-#include <QString>
-#include <QFileDialog>
 #include <QApplication>
 #include <QDir>
 #include <QFile>
+#include <QFileDialog>
+#include <QString>
 
 #include <QTextStream>
-
 
 #include <iostream>
 #include <string>
@@ -14,8 +13,7 @@
 
 using namespace std;
 
-
-int main(int argc, char *argv[])
+int main(int argc, char* argv[])
 {
     // Open the app
     QApplication app(argc, argv);
@@ -25,28 +23,25 @@ int main(int argc, char *argv[])
 
     // Select multiple files
     QStringList files;
-    while (files.isEmpty())
-    {
+    while (files.isEmpty()) {
         files = QFileDialog::getOpenFileNames(
-                        NULL,
-                        "Select one or more files to open",
-                        path,
-                        "Fichier .csv (*.csv)");
+            NULL,
+            "Select one or more files to open",
+            path,
+            "Fichier .csv (*.csv)");
     }
-    
+
     // Parse each file
     QStringList::Iterator it = files.begin();
     std::vector<Trace*> traces(files.size());
 
     // Initialize a vector of Trace
-    for (uint i=0; i<traces.size();++i)
-    {
-        traces[i]=new Trace();
+    for (uint i = 0; i < traces.size(); ++i) {
+        traces[i] = new Trace();
     }
 
     std::vector<Trace*>::iterator itTrace = traces.begin();
-    for ( std::vector<Trace*>::iterator itTrace = traces.begin(); it != files.end(); ++it, ++itTrace)
-    {
+    for (std::vector<Trace *>::iterator itTrace = traces.begin(); it != files.end(); ++it, ++itTrace) {
         (*itTrace)->readFromCSV(*it);
     }
     /*
@@ -58,7 +53,6 @@ int main(int argc, char *argv[])
         ++it;
     }
     */
-    
-    return app.exec();
 
+    return app.exec();
 }

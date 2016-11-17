@@ -64,20 +64,19 @@ public:
      * @name Setters and getters of x & y
      */
     //@{
-    double x() const;       /**< x getter */
-    void setx(double x);    /**< x setter */
-    double y() const;       /**< y getter */
-    void sety(double y);    /**< y setter */
+    double x() const; /**< x getter */
+    void setx(double x); /**< x setter */
+    double y() const; /**< y getter */
+    void sety(double y); /**< y setter */
     //@}
 
     /**
      * @brief x the accessor for the KDtree
-     * @param dim, the value must be 0 for x and 1 for y
+     * @param dim this value must be 0 for x and 1 for y
      * @return m_x or m_y depending on the dim value
      */
     double x(int dim) const;
-    void setx(int dim, double value);   /**< set m_x or m_y according to dim value */
-
+    void setx(int dim, double value); /**< set m_x or m_y according to dim value */
 
 protected:
     /**
@@ -87,6 +86,8 @@ protected:
     double m_x; /**< x coordinate*/
     double m_y; /**< y coordinate*/
     //@}
+
+    static const double POINT_RADIUS; /**< max radius around a point used to look for roads */
 };
 
 #endif // POINT_H

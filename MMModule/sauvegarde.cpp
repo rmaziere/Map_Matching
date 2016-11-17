@@ -3,7 +3,8 @@
 //Utilisation du namespace std pour standard
 using namespace std;
 
-int Sauvegarde::sauvegarderCSV(QString cheminAcces, Track maTrack){
+int Sauvegarde::sauvegarderCSV(QString cheminAcces, Track maTrack)
+{
     // Répertoire de l'utilisateur
     QString home = QDir::homePath();
     // Répertoire où on va enregistrer nos fichiers
@@ -30,9 +31,10 @@ int Sauvegarde::sauvegarderCSV(QString cheminAcces, Track maTrack){
             // Outil d'écriture
             QTextStream out(&file);
 
-            // Ajout des valeurs TODO save what is necessary !
+            // Ajout des valeurs
             for (uint i = 0; i < maTrack.getPoints().size(); ++i) {
-/*                out << maTrack.getPoints()[i]->getLatitude() << ","
+                /** @todo save what is necessary ! */
+                /*                out << maTrack.getPoints()[i]->getLatitude() << ","
                     << maTrack.getPoints()[i]->getLongitude() << ","
                     << maTrack.getPoints()[i]->getAltitude() << ","
                     << maTrack.getPoints()[i]->getTimeStamp().toString("yyyy-MM-dd hh:mm:ss")

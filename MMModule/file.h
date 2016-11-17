@@ -1,10 +1,6 @@
 #ifndef FILE_H
 #define FILE_H
 
-/**
-  * @file file.h
-  */
-
 #include <QFile>
 #include <QFileDialog>
 #include <QString>
@@ -58,9 +54,13 @@ public:
      * @name All the informations of the files list
      */
     //@{
-    QStringList filePath;       /**< The path of files*/
-    QStringList fileName;       /**< The name of files*/
-    QStringList fileExtension;  /**< The extension of files*/
+    QStringList filePath; /**< The path of files*/
+    QStringList fileName; /**< The name of files*/
+    QStringList fileExtension; /**< The extension of files*/
+
+    QString filePathFirst;
+    QString fileNameFirst;
+    QString fileExtensionFirst;
     //@}
 };
 
