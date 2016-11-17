@@ -1,6 +1,12 @@
 #include "solver.h"
 #define DEBUG_SOLVER false
 
+Solver::Solver(QObject *parent)
+    : QObject(parent)
+{
+
+}
+
 void Solver::start()
 {
     track.readFromCSV(m_trackFilename);
