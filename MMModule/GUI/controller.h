@@ -3,7 +3,7 @@
 
 #include "qprocessviewer.h"
 #include "qmapviewer.h"
-#include "solver.h"
+#include "../solver.h"
 #include <QObject>
 
 class Controller : public QObject {
