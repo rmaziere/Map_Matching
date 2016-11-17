@@ -91,14 +91,12 @@ void Loading::loadFileCSVTrack()
 
 void Loading::loadFileSHPTrack()
 {
-    int result = fileSHPTrack.selectFilesToOpen("shp");
-    if (result == 1) {
-        int conv = fileSHPTrack.shp2csv("Point");
-        if (conv == 1) {
+    if(fileSHPTrack.selectFilesToOpen("shp") == 1){
+        if(fileSHPTrack.shp2csv("Point")) {
             m_fileGPS->setText("1 file loaded");
             m_csvTrack->setEnabled(false);
             m_shpTrack->setEnabled(false);
-            nextOk += 1;
+            nextOk += 2;
             launchFiles();
         }
     }
@@ -106,13 +104,11 @@ void Loading::loadFileSHPTrack()
 
 void Loading::loadFileGrid()
 {
-    int result = fileSHPGrid.selectFilesToOpen("shp");
-    if (result == 1) {
-        int conv = fileSHPGrid.shp2csv("Polyline");
-        if (conv == 1) {
+    if(fileSHPGrid.selectFilesToOpen("shp") == 1){
+        if(fileSHPGrid.shp2csv("Polyline") == 1){
             m_fileGrid->setText("1 file loaded");
             m_csvGrid->setEnabled(false);
-            nextOk += 1;
+            nextOk += 4;
             launchFiles();
         }
     }
@@ -129,7 +125,8 @@ void Loading::getCountry() //A modifier
 
 void Loading::launchFiles()
 {
-    if ((m_fr->isChecked() || m_usa->isChecked()) && (nextOk == 2))
+    //nextOk => 1 : loadFileCSVTrack |2 : loadFileSHPTrack |4 : loadFileGrid |7 : all
+    if ((m_fr->isChecked() || m_usa->isChecked()) && (nextOk == 7))
     {
         if (fileSHPTrack.fileName.isEmpty())
         {
