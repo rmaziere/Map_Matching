@@ -1,5 +1,4 @@
 #include <QFileDialog>
-#include <QTimer> // for sleep test
 #include <QtGui/QApplication>
 
 #include <iostream>
@@ -7,10 +6,8 @@
 #include <math.h>
 #include <stdio.h>
 #include <vector>
-//#include <QLabel>
 
 #include "GUI/controller.h"
-#include "GUI/map.h"
 #include "MainWindow.h"
 #include "file.h"
 #include "grid.h"
@@ -40,8 +37,10 @@ void dev_thread()
 {
     QThread* thread = new QThread();
     Solver* solver = new Solver();
-    solver->m_gridFilename = "../Data/Seattle/useful_all_network.csv";
     solver->m_trackFilename = "../Data/Seattle/useful_all_track.csv";
+    solver->m_gridFilename = "../Data/Seattle/useful_all_network.csv";
+    //solver->m_trackFilename = "../Data/Seattle/mini_start_track.csv";
+    //solver->m_gridFilename = "../Data/Seattle/mini_start_network.csv";
     solver->moveToThread(thread);
     thread->start();
     Controller* controller = new Controller();
@@ -50,6 +49,10 @@ void dev_thread()
     controller->connectSignals();
     controller->m_qProcessViewer->resize(500, 500);
     controller->m_qProcessViewer->show();
+
+    /*
+    controller->m_qMapWidget->resize(500,500);
+    controller->m_qMapWidget->show();*/
 }
 
 
@@ -109,7 +112,7 @@ void dev_file()
 }
 
 void dev_img()
-{
+{/*
     vector<vector<double> > poly;
 
     for (int i = 0; i <= 1000; i += 150) {
@@ -134,7 +137,7 @@ void dev_img()
     coordinates.push_back(6000.0);
     polyRoad.push_back(coordinates);
 
-    Map m(1280, 1024);
+    QMapViewer m(1280, 1024);
 
     m.scaleCalculator(1000.25, 2000.75, 3352.28, 6000.67);
 
@@ -162,20 +165,21 @@ void dev_img()
 
     m.save("/tmp/test.png");
 
-    cout << "width : " << m.width << endl;
+    cout << "width : " << m.m_width << endl;
     cout << "height : " << m.height << endl;
-    cout << "Facteur d'échelle : " << m.scale << endl;
+    cout << "Facteur d'échelle : " << m.scale << endl;*/
 }
 
 void dev_ui2()
 {
+    /*
     //Fenetre non enlevable
-    MainWindow w;
-    w.setWindowTitle("Map Matching");
+    MainWindow *w;
+    w->setWindowTitle("Map Matching");
 
-    w.resize(360, 504);
-    w.show();
-
+    w->resize(360, 504);
+    w->show();
+*/
 }
 
 /****************************************************************************/

@@ -3,6 +3,7 @@
 
 #include "qprocessviewer.h"
 #include "qmapviewer.h"
+#include "qmapwidget.h"
 #include "solver.h"
 #include <QObject>
 
@@ -16,7 +17,7 @@ public:
 
     Solver* m_solver;
     QProcessViewer* m_qProcessViewer;
-    QMapViewer* m_qMapViewer;
+    QMapWidget *m_qMapWidget;
 
 signals:
 

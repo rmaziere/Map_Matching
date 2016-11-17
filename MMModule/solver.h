@@ -35,7 +35,9 @@ public:
 
 signals:
     void signalMessage(QString);
-
+    void signalDimension(double xMin, double xMax, double yMin, double yMax);
+    void signalAllPoints(std::vector<PointGPS*> *);
+    void signalAllRoads(std::unordered_map<long,Road>*, std::vector<PointRoad>*);
 public slots:
     void onSignalSetGrid(QString s);
     void onSignalSetTrack(QString s);

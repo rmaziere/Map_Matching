@@ -4,9 +4,14 @@
 void Solver::start()
 {
     track.readFromCSV(m_trackFilename);
+    m_trackPoints= track.getPointsAsPointer();
     emit signalMessage(QString::fromStdString(track.infos()));
+    emit signalDimension(track.m_xMin, track.m_xMax, track.m_yMin, track.m_yMax);
+    emit signalAllPoints(m_trackPoints);
+
     grid.readFromCSV(m_gridFilename);
     emit signalMessage(QString::fromStdString(grid.infos()));
+    emit signalAllRoads(&grid.m_mapOfAllRoads, &(grid.m_vectorOfPoints));
     grid.buildMarkovMatrix();
     emit signalMessage("Markov Matrix built");
 }
