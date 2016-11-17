@@ -12,6 +12,10 @@ void Controller::addSolver(Solver* solver)
 
 void Controller::connectSignals()
 {
+
     QObject::connect(m_solver, SIGNAL(signalMessage(QString)), m_qProcessViewer, SLOT(onSignalMessage(QString)));
+    QObject::connect(&(m_solver->track), SIGNAL(signalMessage(QString)), m_qProcessViewer, SLOT(onSignalMessage(QString)));
+    QObject::connect(&(m_solver->grid), SIGNAL(signalMessage(QString)), m_qProcessViewer, SLOT(onSignalMessage(QString)));
     QObject::connect(m_qProcessViewer->startSolver, SIGNAL(clicked()), m_solver, SLOT(onSignalStart()));
+
 }

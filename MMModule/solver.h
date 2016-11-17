@@ -33,6 +33,11 @@ public:
     QString m_gridFilename; // to move in protected once signals are in use
     QString m_trackFilename;
 
+
+    Track track;
+
+    Grid grid;
+
 signals:
     void signalMessage(QString);
 
@@ -42,8 +47,7 @@ public slots:
     void onSignalStart();
 
 protected:
-    Grid grid;
-    Track track;
+
     AllRoadMap* m_roads;
     std::vector<PointRoad>* m_roadPoints;
     AllPointVector* m_trackPoints;
