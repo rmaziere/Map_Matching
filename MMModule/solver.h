@@ -8,6 +8,7 @@
 #include "pointroad.h"
 #include "road.h"
 #include "track.h"
+#include "file.h"
 
 #include <unordered_map>
 #include <vector>
@@ -29,24 +30,27 @@ public:
     */
     void start();
     void setDistance(PointGPS* p, Road& r);
+    void readFiles(File file1, File file2);
 
     QString m_gridFilename; // to move in protected once signals are in use
     QString m_trackFilename;
 
+//protected:
+    Grid grid;
+    Track track;
+    AllRoadMap* m_roads;
+    std::vector<PointRoad>* m_roadPoints;
+    AllPointVector* m_trackPoints;
+
 signals:
-    void signalMessage(QString);
+    void signalMessage(QString);    
 
 public slots:
     void onSignalSetGrid(QString s);
     void onSignalSetTrack(QString s);
     void onSignalStart();
 
-protected:
-    Grid grid;
-    Track track;
-    AllRoadMap* m_roads;
-    std::vector<PointRoad>* m_roadPoints;
-    AllPointVector* m_trackPoints;
+
 };
 
 #endif // SOLVER_H
