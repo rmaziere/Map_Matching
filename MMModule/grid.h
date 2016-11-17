@@ -130,6 +130,7 @@ public:
 
     signals:
         void signalMessage(QString);
+
 protected:
     std::string m_gridFullName;
     ExtremityPointMap m_mapOfExtPoints; // temporary container during csv loading
