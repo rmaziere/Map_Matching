@@ -14,7 +14,7 @@
 #include "MainWindow.h"
 #include "file.h"
 #include "grid.h"
-#include "journalprocess.h"
+//#include "journalprocess.h"
 #include "loading.h"
 #include "myexception.h"
 #include "pointGPS.h"
@@ -34,21 +34,23 @@ using namespace std;
  *
  * \subsection step1 Step 1: Opening the box
  *
+ * <a href="https://rmaziere.github.io/Map_Matching/">Website</a>
+ *
  * etc...
  */
 void dev_thread()
 {
     QThread* thread = new QThread();
     Solver* solver = new Solver();
-    solver->m_gridFilename = "../Data/Seattle/useful_all_network.csv";
-    solver->m_trackFilename = "../Data/Seattle/useful_all_track.csv";
+    //solver->m_gridFilename = "../Data/Seattle/useful_all_network.csv";
+    //solver->m_trackFilename = "../Data/Seattle/useful_all_track.csv";
     solver->moveToThread(thread);
-    thread->start();
+    //thread->start();
     Controller* controller = new Controller();
     //QMetaObject::invokeMethod(solver, "onSignalStart");
     controller->addSolver(solver);
     controller->connectSignals();
-    controller->m_qProcessViewer->resize(500, 500);
+    //controller->m_qProcessViewer->resize(500, 500);
     controller->m_qProcessViewer->show();
 }
 
@@ -170,11 +172,11 @@ void dev_file()
 void dev_ui2()
 {
     //Fenetre non enlevable
-    MainWindow w;
-    w.setWindowTitle("Map Matching");
+    MainWindow *w = new MainWindow();
+    w->setWindowTitle("Map Matching");
 
-    w.resize(360, 504);
-    w.show();
+    w->resize(360, 504);
+    w->show();
 
 }
 
@@ -187,7 +189,8 @@ int main(int argc, char* argv[])
     QApplication app(argc, argv);
 
     //dev_img();
-    dev_thread();
+    //dev_thread();
+    dev_ui2();
     return app.exec();
     //return app.closingDown();
 }

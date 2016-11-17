@@ -14,6 +14,8 @@ Filtering::Filtering()
     mainLayout->addWidget(m_temp);
     mainLayout->addWidget(m_spat);
     setLayout(mainLayout);
+
+    nextOk = 0;
 }
 
 Filtering::~Filtering()
@@ -30,17 +32,24 @@ void Filtering::temporal()
     m_slidTemp = new QSlider(Qt::Horizontal);
     m_slidTemp->setRange(0, 90);
 
+    m_boutonTemp = new QPushButton("Ok");
+    m_boutonTemp->setCheckable(true);
+
+
     QObject::connect(m_slidTemp, SIGNAL(valueChanged(int)), m_valueTemp, SLOT(display(int)));
+    //QObject::connect(m_slidTemp, SIGNAL(valueChanged(int)), this, SLOT(launchFiltreTemp(int)));
+    QObject::connect(m_boutonTemp, SIGNAL(clicked()), this, SLOT(launchFiltre()));
 
     QHBoxLayout* vbox = new QHBoxLayout;
     vbox->addWidget(m_valueTemp);
     vbox->addWidget(m_slidTemp);
+    vbox->addWidget(m_boutonTemp);
     m_temp->setLayout(vbox);
 }
 
 void Filtering::spatial()
 {
-    m_spat = new QGroupBox("Filtrage spatial (en metre)");
+    m_spat = new QGroupBox("Filtrage spatial (en centimetre)");
 
     m_valueSpat = new QLCDNumber();
     m_valueSpat->setSegmentStyle(QLCDNumber::Flat);
@@ -48,27 +57,61 @@ void Filtering::spatial()
     m_slidSpat = new QSlider(Qt::Horizontal);
     m_slidSpat->setRange(0, 10);
 
+    m_boutonSpat = new QPushButton("Ok");
+    m_boutonSpat->setCheckable(true);
+
     QObject::connect(m_slidSpat, SIGNAL(valueChanged(int)), m_valueSpat, SLOT(display(int)));
-    //QObject::connect(m_valueSpat, SIGNAL(valueChanged(int)), this, SLOT(launchFiltre(int)));
+    //QObject::connect(m_slidSpat, SIGNAL(valueChanged(int)), this, SLOT(launchFiltreSpat(int)));
+    QObject::connect(m_boutonSpat, SIGNAL(clicked()), this, SLOT(launchFiltre()));
 
     QHBoxLayout* vbox = new QHBoxLayout;
     vbox->addWidget(m_valueSpat);
     vbox->addWidget(m_slidSpat);
+    vbox->addWidget(m_boutonSpat);
     m_spat->setLayout(vbox);
 }
 
 void Filtering::nbPtTrack()
 {
     m_nbPtTrack = new QLabel();
-    m_nbPtTrack->setText("Your track had 0 GPS points.");
+}
+/*
+void Filtering::launchFiltreSpat(int i)
+{
+    m_filtreSpat = i/100;
 }
 
-void Filtering::launchFiltre(int i)
+void Filtering::launchFiltreTemp(int i)
 {
-    std::cout << i;
-    /*if (true)
-        if (true)
-            emit ready();
-        else
-            emit ready();*/
+    m_filtreTemp = i;
+}
+*/
+void Filtering::getInfo(File fileT)
+{
+    QString file = fileT.filePath.at(0) + fileT.fileName.at(0) + "." + fileT.fileExtension.at(0);
+    Track trace;
+    trace.readFromCSV(file);
+    m_ptTrack = trace.getPoints().size();
+
+    m_nbPtTrack->setText((QString("Your track had ") + QString::number(m_ptTrack)) + " GPS points.");
+}
+
+void Filtering::launchFiltre()
+{
+    nextOk +=1;
+    if (m_boutonSpat->isChecked())
+    {
+        m_filtreSpat = m_slidSpat->value()/100;
+        m_slidSpat->setEnabled(false);
+    }
+    if (m_boutonTemp->isChecked())
+    {
+        m_filtreTemp = m_slidTemp->value();
+        m_slidTemp->setEnabled(false);
+    }
+    if (nextOk >= 2)
+    {
+        emit ready(m_filtreSpat,m_filtreTemp);
+    }
+
 }

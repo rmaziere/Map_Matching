@@ -120,18 +120,26 @@ void Loading::loadFileGrid()
 
 void Loading::getCountry() //A modifier
 {
-    if (m_fr->isChecked())
-        cout << "fr";
-    else
-        cout << "usa";
+    //if (m_fr->isChecked())
+        //cout << "fr";
+    //else
+        //cout << "usa";
     launchFiles();
 }
 
 void Loading::launchFiles()
 {
     if ((m_fr->isChecked() || m_usa->isChecked()) && (nextOk == 2))
-        if (fileSHPTrack.fileNameFirst == "")
+    {
+        if (fileSHPTrack.fileName.isEmpty())
+        {
             emit ready(fileCSVTrack, fileSHPGrid);
+            emit readyNext(fileCSVTrack);
+        }
         else
+        {
             emit ready(fileSHPTrack, fileSHPGrid);
+            emit readyNext(fileSHPTrack);
+        }
+    }
 }
