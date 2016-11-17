@@ -57,10 +57,6 @@ public:
     QStringList filePath; /**< The path of files*/
     QStringList fileName; /**< The name of files*/
     QStringList fileExtension; /**< The extension of files*/
-
-    QString filePathFirst;
-    QString fileNameFirst;
-    QString fileExtensionFirst;
     //@}
 };
 
