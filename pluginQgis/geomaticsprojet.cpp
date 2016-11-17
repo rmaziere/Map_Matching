@@ -40,41 +40,28 @@ void GeomaticsProjet::initGui()
    m_GISInterface->addPluginToMenu(tr("&Geomatics projet"), m_action);
 }
 
-/*void dev_thread()
+void dev_thread()
 {
-    QThread* thread = new QThread();
-    Solver* solver = new Solver();
-    solver->m_gridFilename = "../Data/Seattle/useful_all_network.csv";
-    solver->m_trackFilename = "../Data/Seattle/useful_all_track.csv";
-    solver->moveToThread(thread);
-    thread->start();
+    //QThread* thread = new QThread();
+    //Solver* solver = new Solver();
+    //solver->m_gridFilename = "../Data/Seattle/useful_all_network.csv";
+    //solver->m_trackFilename = "../Data/Seattle/useful_all_track.csv";
+    //solver->moveToThread(thread);
+    //thread->start();
     Controller* controller = new Controller();
+    Solver* solver = new Solver(controller);
     //QMetaObject::invokeMethod(solver, "onSignalStart");
-    controller->addSolver(solver);
-    controller->connectSignals();
-    QProcessViewer *m_qProcessViewer = new QProcessViewer;
-    m_qProcessViewer->resize(500, 500);
-    m_qProcessViewer->show();
-}//*/
+    //controller->addSolver(solver);
+    //controller->connectSignals();
+    controller->m_qProcessViewer->resize(500, 500);
+    controller->m_qProcessViewer->show();
+}
 
 void GeomaticsProjet::run()
 {
     QgsMessageLog::instance()->logMessage("Geomatics projet launched", "Geomatics projet", QgsMessageLog::INFO);
 
-    //dev_thread();
-    QThread* thread = new QThread();
-    Solver* solver = new Solver();
-    solver->m_gridFilename = "../Data/Seattle/useful_all_network.csv";
-    solver->m_trackFilename = "../Data/Seattle/useful_all_track.csv";
-    solver->moveToThread(thread);
-    thread->start();
-    Controller* controller = new Controller();
-    //QMetaObject::invokeMethod(solver, "onSignalStart");
-    controller->addSolver(solver);
-    controller->connectSignals();
-    QProcessViewer *m_qProcessViewer = new QProcessViewer;
-    m_qProcessViewer->resize(500, 500);
-    m_qProcessViewer->show(); //*/
+    dev_thread();
 }
 
 void GeomaticsProjet::unload()

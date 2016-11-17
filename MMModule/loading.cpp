@@ -134,10 +134,12 @@ void Loading::launchFiles()
         if (fileSHPTrack.fileName.isEmpty())
         {
             emit ready(fileCSVTrack, fileSHPGrid);
+            emit readyNext(fileCSVTrack);
         }
         else
         {
             emit ready(fileSHPTrack, fileSHPGrid);
+            emit readyNext(fileSHPTrack);
         }
     }
 }

@@ -41,7 +41,7 @@ public:
     void unload() override;
 
     // Called thread and GUI
-    //void dev_thread();
+    void dev_thread();
 
 public slots:
     // Slot called when the plugin is launched

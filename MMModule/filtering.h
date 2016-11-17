@@ -22,12 +22,13 @@ public:
     ~Filtering();
 
 public slots:
-    void launchFiltreSpat(int);
-    void launchFiltreTemp(int);
-    void getInfo(File fileT, File fileG);
+    //void launchFiltreSpat(int);
+    //void launchFiltreTemp(int);
+    void getInfo(File fileT);
+    void launchFiltre();
 
 signals:
-    void ready();
+    void ready(double m_filtreSpat,int m_filtreTemp);
 
 private:
     void nbPtTrack();
@@ -36,7 +37,9 @@ private:
 
     QGroupBox* m_spat;
     QGroupBox* m_temp;
-    QGroupBox* m_boutonXY;
+
+    QPushButton* m_boutonTemp;
+    QPushButton* m_boutonSpat;
 
     QSlider* m_slidTemp;
     QLCDNumber* m_valueTemp;
@@ -46,8 +49,10 @@ private:
 
     int m_ptTrack;
 
-    int m_filtreSpat = 0;
+    double m_filtreSpat = 0;
     int m_filtreTemp = 0;
+
+    int nextOk;
 };
 
 #endif // FILTERING_H

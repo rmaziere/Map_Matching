@@ -8,6 +8,7 @@
 #include <QSlider>
 #include <QtGui/QMainWindow>
 #include <QtGui>
+#include <QThread>
 
 #include "SlidingStackedWidget.h"
 #include "filtering.h"
@@ -15,6 +16,8 @@
 
 #include "grid.h"
 #include "track.h"
+#include "GUI/controller.h"
+#include "solver.h"
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -25,6 +28,8 @@ public:
 
 public slots:
     void readyToNext1(File file1, File file2);
+    void readyToNext2(double fSpat, int fTemp);
+    void putNone();
 
 protected:
     void createGuiControlComponents();
@@ -34,6 +39,9 @@ protected:
     void createSlidingStackedWidget();
     QPushButton* buttonNext;
     QPushButton* buttonCancel;
+    QThread* thread;
+    Solver* solver;
+    Controller* controller;
 
     SlidingStackedWidget* slidingStacked;
     QVBoxLayout* mainLayout;
