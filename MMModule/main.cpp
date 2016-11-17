@@ -34,6 +34,8 @@ using namespace std;
  *
  * \subsection step1 Step 1: Opening the box
  *
+ * <a href="https://rmaziere.github.io/Map_Matching/">Website</a>
+ *
  * etc...
  */
 void dev_thread()
