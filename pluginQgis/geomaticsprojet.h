@@ -40,9 +40,12 @@ public:
     // Called when the plugin is disabled
     void unload() override;
 
+    // Called thread and GUI
+    void dev_thread();
+
 public slots:
     // Slot called when the plugin is launched
-    int run(int argc, char *argv[]);
+    void run();
 
 private:
     QgisInterface * m_GISInterface; // GIS interface

@@ -8,6 +8,8 @@
 #include <QSlider>
 #include <QtGui/QMainWindow>
 #include <QtGui>
+#include <QThread>
+#include <QWidget>
 
 #include "SlidingStackedWidget.h"
 #include "filtering.h"
@@ -15,8 +17,11 @@
 
 #include "grid.h"
 #include "track.h"
+#include "GUI/controller.h"
+#include "solver.h"
+#include "GUI/qprocessviewer.h"
 
-class MainWindow : public QMainWindow {
+class MainWindow : public QWidget {
     Q_OBJECT
 
 public:
@@ -25,6 +30,8 @@ public:
 
 public slots:
     void readyToNext1(File file1, File file2);
+    void readyToNext2(double fSpat, int fTemp);
+    void putNone();
 
 protected:
     void createGuiControlComponents();
@@ -34,14 +41,18 @@ protected:
     void createSlidingStackedWidget();
     QPushButton* buttonNext;
     QPushButton* buttonCancel;
+    QThread* thread;
+    Solver* solver;
+    Controller* controller;
 
     SlidingStackedWidget* slidingStacked;
     QVBoxLayout* mainLayout;
     QGridLayout* controlPaneLayout;
-    QWidget* centralWidget;
+    //QWidget* centralWidget;
     Loading* slideWidget1;
     Filtering* slideWidget2;
     QWidget* slideWidget3;
+    QProcessViewer* process;
 
     /**
      * @brief Value of the first Slide

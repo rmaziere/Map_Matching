@@ -32,6 +32,7 @@ public slots:
 
 signals:
     void ready(File, File);
+    void readyNext(File);
 
 private:
     void country();

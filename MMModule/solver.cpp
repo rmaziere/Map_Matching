@@ -1,6 +1,12 @@
 #include "solver.h"
 #define DEBUG_SOLVER false
 
+Solver::Solver(QObject *parent)
+    : QObject(parent)
+{
+
+}
+
 void Solver::start()
 {
     track.readFromCSV(m_trackFilename);
@@ -53,4 +59,18 @@ void Solver::onSignalStart()
 {
     emit signalMessage("Solver started");
     start();
+}
+
+void Solver::readFiles(File file1, File file2)
+{
+    File fileTrack = file1;
+    File fileGrid = file2;
+    QString fileT = fileTrack.filePath.at(0) + fileTrack.fileName.at(0) + "." + fileTrack.fileExtension.at(0);
+    QString fileG = fileGrid.filePath.at(0) + fileGrid.fileName.at(0) + "." + fileGrid.fileExtension.at(0);
+
+    track.readFromCSV(fileT);
+    emit signalMessage("Track - reading file : " + fileT);
+    grid.setBoundingBox(track.m_xMin, track.m_xMax, track.m_yMin, track.m_yMax);
+    grid.readFromCSV(fileG);
+    emit signalMessage("Grid - reading file : " + fileG);
 }

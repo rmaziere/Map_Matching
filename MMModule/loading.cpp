@@ -79,8 +79,7 @@ void Loading::track()
 
 void Loading::loadFileCSVTrack()
 {
-    int result = fileCSVTrack.selectFilesToOpen("csv");
-    if (result == 1) {
+    if (fileCSVTrack.selectFilesToOpen("csv") == 1) {
         m_fileGPS->setText("1 file loaded");
         m_csvTrack->setEnabled(false);
         m_shpTrack->setEnabled(false);
@@ -91,10 +90,8 @@ void Loading::loadFileCSVTrack()
 
 void Loading::loadFileSHPTrack()
 {
-    int result = fileSHPTrack.selectFilesToOpen("shp");
-    if (result == 1) {
-        int conv = fileSHPTrack.shp2csv("Point");
-        if (conv == 1) {
+    if(fileSHPTrack.selectFilesToOpen("shp") == 1){
+        if(fileSHPTrack.shp2csv("Point")) {
             m_fileGPS->setText("1 file loaded");
             m_csvTrack->setEnabled(false);
             m_shpTrack->setEnabled(false);
@@ -106,10 +103,8 @@ void Loading::loadFileSHPTrack()
 
 void Loading::loadFileGrid()
 {
-    int result = fileSHPGrid.selectFilesToOpen("shp");
-    if (result == 1) {
-        int conv = fileSHPGrid.shp2csv("Polyline");
-        if (conv == 1) {
+    if(fileSHPGrid.selectFilesToOpen("shp") == 1){
+        if(fileSHPGrid.shp2csv("Polyline") == 1){
             m_fileGrid->setText("1 file loaded");
             m_csvGrid->setEnabled(false);
             nextOk += 1;
@@ -120,18 +115,26 @@ void Loading::loadFileGrid()
 
 void Loading::getCountry() //A modifier
 {
-    if (m_fr->isChecked())
-        cout << "fr";
-    else
-        cout << "usa";
+    //if (m_fr->isChecked())
+        //cout << "fr";
+    //else
+        //cout << "usa";
     launchFiles();
 }
 
 void Loading::launchFiles()
 {
     if ((m_fr->isChecked() || m_usa->isChecked()) && (nextOk == 2))
-        if (fileSHPTrack.fileNameFirst == "")
+    {
+        if (fileSHPTrack.fileName.isEmpty())
+        {
             emit ready(fileCSVTrack, fileSHPGrid);
+            emit readyNext(fileCSVTrack);
+        }
         else
+        {
             emit ready(fileSHPTrack, fileSHPGrid);
+            emit readyNext(fileSHPTrack);
+        }
+    }
 }
