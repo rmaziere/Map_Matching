@@ -14,7 +14,7 @@
 #include "MainWindow.h"
 #include "file.h"
 #include "grid.h"
-#include "journalprocess.h"
+//#include "journalprocess.h"
 #include "loading.h"
 #include "myexception.h"
 #include "pointGPS.h"
@@ -170,11 +170,11 @@ void dev_file()
 void dev_ui2()
 {
     //Fenetre non enlevable
-    MainWindow w;
-    w.setWindowTitle("Map Matching");
+    MainWindow *w = new MainWindow();
+    w->setWindowTitle("Map Matching");
 
-    w.resize(360, 504);
-    w.show();
+    w->resize(360, 504);
+    w->show();
 
 }
 
@@ -187,7 +187,8 @@ int main(int argc, char* argv[])
     QApplication app(argc, argv);
 
     //dev_img();
-    dev_thread();
+    //dev_thread();
+    dev_ui2();
     return app.exec();
     //return app.closingDown();
 }

@@ -65,9 +65,15 @@ void MainWindow::createConnections()
 {
     QObject::connect(slideWidget1, SIGNAL(ready(File, File)), this, SLOT(readyToNext1(File, File)));
     QObject::connect(slideWidget1, SIGNAL(ready(File,File)), slideWidget2, SLOT(getInfo(File,File)));
-    //QObject::connect(slideWidget2, SIGNAL(ready()), this, SLOT(readyToNext2()));
+    QObject::connect(slideWidget2, SIGNAL(ready(double, int)), this, SLOT(readyToNext2(double, int)));
     QObject::connect(buttonNext, SIGNAL(clicked()), slidingStacked, SLOT(slideInNext()));
+    QObject::connect(buttonNext, SIGNAL(clicked()), this, SLOT(putNone()));
     QObject::connect(buttonCancel, SIGNAL(clicked()), qApp, SLOT(quit()));
+}
+
+void MainWindow::putNone()
+{
+    buttonNext->setEnabled(false);
 }
 
 void MainWindow::readyToNext1(File file1, File file2)
@@ -86,4 +92,17 @@ void MainWindow::readyToNext1(File file1, File file2)
     } else {
         buttonNext->setEnabled(true);
     }
+}
+
+void MainWindow::readyToNext2(double fSpat,int fTemp)
+{
+    if (fSpat != 0)
+    {
+        trace.spaceFilter(double(fSpat));
+    }
+    if (fTemp != 0)
+    {
+        trace.temporalFilter(fTemp);
+    }
+    buttonNext->setEnabled(true);
 }

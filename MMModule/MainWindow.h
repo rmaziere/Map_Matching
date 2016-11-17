@@ -25,6 +25,8 @@ public:
 
 public slots:
     void readyToNext1(File file1, File file2);
+    void readyToNext2(double fSpat, int fTemp);
+    void putNone();
 
 protected:
     void createGuiControlComponents();
