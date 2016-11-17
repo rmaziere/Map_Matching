@@ -35,10 +35,21 @@
 			\vfill
 			\centering
 			{
-				\transparent{0.2}\includegraphics[width=0.9\paperwidth,keepaspectratio]{../images/logo_grand.png}}%
+				\transparent{0.5}\includegraphics[width=0.9\paperwidth,keepaspectratio]{../images/logo_grand.png}}%
 			\vfill
 }}
 }
+
+
+
+
+
+
+
+
+
+
+
 % Pour les logos
 \newcommand{\Logos}[2]{%
 \vspace{1cm}
@@ -53,7 +64,7 @@
 	\hspace*{0.19\paperwidth}
 	\begin{minipage}[c]{0.40\paperwidth}
 		\begin{center}
-			\includegraphics[width=3.5cm, keepaspectratio]{#2}
+			\includegraphics[width=2.5cm, keepaspectratio]{#2}
 		\end{center}
 	\end{minipage}
 	\hfill
@@ -73,10 +84,81 @@
 
 
 \begin{document}
+
+\begin{titlepage}
+
+\~ 
+\newline
+\\[2cm]
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\LARGE \'Ecole Nationale des Sciences Géographiques}\\[0.5cm] % Name of your university/college
+\textsc{\Large Master Technologies des Systèmes d'Informations}\\[0.5cm] % Major heading such as course name
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Rapport du projet géomatique}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+\vfill
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Auteurs : } \newline \\
+Camille \textsc{Parisel} \\ 
+Romain \textsc{Mazière} \\ 
+Julie \textsc{Marcuzzi} \\ 
+Rudolf \textsc{Millet} \\ 
+Loïc \textsc{Messal} \\ 
+Mamady \textsc{Samassa} \\ 
+Hanane \textsc{Derbouz}
+
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}[t]{0.4\textwidth}
+\begin{flushright} \large
+\emph{Superviseurs : \\ \ \\ } 
+Didier \textsc{Richard} \\
+Benoît \textsc{Costes} \\
+\end{flushright}
+\end{minipage}\\[1cm]
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
+
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+%\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
+ 
+%----------------------------------------------------------------------------------------
+
+
 \AddToShipoutPicture*{\BackgroundPic} % Genere une image de fond
 %\AddToShipoutPicture*{\Logos{images/logo_crg}{images/logo_ensg_transparent}}
+\end{titlepage}
 
-\maketitle
+
+
+
 \ClearShipoutPictureBG % Supprime l'image en fond
 \tableofcontents
 \listoffigures
@@ -85,6 +167,7 @@
 
 %\include{exemple}
 \include{introduction}
+\include{gestion}
 \include{algorithme}
 \include{conclusion}
 
