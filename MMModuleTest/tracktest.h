@@ -63,7 +63,6 @@ TEST_F(TrackTest, DeletePoint)
 
 TEST_F(TrackTest, readFromCSVen)
 {
-
     Track Trace = Track();
     Trace.readFromCSV("../Data/Unit_tests_data_set/readFromCsvExemple.csv");
     EXPECT_DOUBLE_EQ(1686462.894975865026936, Trace.getPoints()[0]->x());
@@ -73,7 +72,6 @@ TEST_F(TrackTest, readFromCSVen)
 
 TEST_F(TrackTest, readFromCSVfr)
 {
-
     Track Trace = Track();
     Trace.readFromCSV("../Data/Unit_tests_data_set/readFromCsvExempleFr.csv");
     EXPECT_DOUBLE_EQ(570487.228190631256439, Trace.getPoints()[0]->x());
