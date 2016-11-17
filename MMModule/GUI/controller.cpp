@@ -2,9 +2,11 @@
 
 Controller::Controller()
 {
-    m_qProcessViewer = new QProcessViewer;
 
     m_qMapWidget = new QMapWidget;
+    m_qMapWidget->resize(1000,800);
+    m_qProcessViewer = new QProcessViewer;
+
 }
 
 void Controller::addSolver(Solver* solver)
@@ -14,7 +16,7 @@ void Controller::addSolver(Solver* solver)
 
 void Controller::connectSignals()
 {
-
+    QObject::connect(m_qProcessViewer->closeButton, SIGNAL(pressed()), m_qMapWidget, SLOT(close()));
     QObject::connect(m_solver, SIGNAL(signalMessage(QString)), m_qProcessViewer, SLOT(onSignalMessage(QString)));
     QObject::connect(&(m_solver->track), SIGNAL(signalMessage(QString)), m_qProcessViewer, SLOT(onSignalMessage(QString)));
     QObject::connect(&(m_solver->grid), SIGNAL(signalMessage(QString)), m_qProcessViewer, SLOT(onSignalMessage(QString)));
