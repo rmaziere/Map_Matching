@@ -86,7 +86,7 @@ void Filtering::launchFiltreTemp(int i)
     m_filtreTemp = i;
 }
 */
-void Filtering::getInfo(File fileT, File fileG)
+void Filtering::getInfo(File fileT)
 {
     QString file = fileT.filePath.at(0) + fileT.fileName.at(0) + "." + fileT.fileExtension.at(0);
     Track trace;

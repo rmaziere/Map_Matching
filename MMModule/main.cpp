@@ -42,15 +42,15 @@ void dev_thread()
 {
     QThread* thread = new QThread();
     Solver* solver = new Solver();
-    solver->m_gridFilename = "../Data/Seattle/useful_all_network.csv";
-    solver->m_trackFilename = "../Data/Seattle/useful_all_track.csv";
+    //solver->m_gridFilename = "../Data/Seattle/useful_all_network.csv";
+    //solver->m_trackFilename = "../Data/Seattle/useful_all_track.csv";
     solver->moveToThread(thread);
-    thread->start();
+    //thread->start();
     Controller* controller = new Controller();
     //QMetaObject::invokeMethod(solver, "onSignalStart");
     controller->addSolver(solver);
     controller->connectSignals();
-    controller->m_qProcessViewer->resize(500, 500);
+    //controller->m_qProcessViewer->resize(500, 500);
     controller->m_qProcessViewer->show();
 }
 

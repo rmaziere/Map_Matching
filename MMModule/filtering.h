@@ -24,7 +24,7 @@ public:
 public slots:
     //void launchFiltreSpat(int);
     //void launchFiltreTemp(int);
-    void getInfo(File fileT, File fileG);
+    void getInfo(File fileT);
     void launchFiltre();
 
 signals:
