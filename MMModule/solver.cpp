@@ -70,8 +70,26 @@ void Solver::readFiles(File file1, File file2)
     QString fileG = fileGrid.filePath.at(0) + fileGrid.fileName.at(0) + "." + fileGrid.fileExtension.at(0);
 
     track.readFromCSV(fileT);
-    emit signalMessage("Track - reading file : " + fileT);
+    emit signalMessage(QString::fromStdString(track.infos()));
+
     grid.setBoundingBox(track.m_xMin, track.m_xMax, track.m_yMin, track.m_yMax);
     grid.readFromCSV(fileG);
-    emit signalMessage("Grid - reading file : " + fileG);
+    emit signalMessage(QString::fromStdString(grid.infos()));
+    emit signalAllRoads(&grid.m_mapOfAllRoads, &(grid.m_vectorOfPoints));
+}
+
+void Solver::filterSpace(double val)
+{
+    track.spaceFilter(val);
+    m_trackPoints = track.getPointsAsPointer();
+    emit signalDimension(track.m_xMin, track.m_xMax, track.m_yMin, track.m_yMax);
+    emit signalAllPoints(m_trackPoints);
+}
+
+void Solver::filterTemp(int val)
+{
+    track.temporalFilter(val);
+    m_trackPoints = track.getPointsAsPointer();
+    emit signalDimension(track.m_xMin, track.m_xMax, track.m_yMin, track.m_yMax);
+    emit signalAllPoints(m_trackPoints);
 }
