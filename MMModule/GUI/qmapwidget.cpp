@@ -40,7 +40,7 @@ void QMapWidget::onSignalDimension(double xMinGrid, double xMaxGrid, double yMin
 
 void QMapWidget::sceneScaleChanged(int i)
 {
-    double newScale = 1.0/i;
+    double newScale = i/100.0;
     QMatrix oldMatrix = m_view->matrix();
     m_view->resetMatrix();
     //m_view->translate(oldMatrix.dx(), oldMatrix.dy());
