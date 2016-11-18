@@ -15,6 +15,15 @@ Track::Track()
 {
 }
 
+Track::Track(const Track & oldTrack) :
+    m_xMin(oldTrack.m_xMin)
+    , m_xMax(oldTrack.m_xMax)
+    , m_yMin(oldTrack.m_yMin)
+    , m_yMax(oldTrack.m_yMax)
+{
+
+}
+
 Track::~Track()
 {
     for (uint i = 0; i < m_points.size(); ++i) {
@@ -219,7 +228,7 @@ vector<PointGPS*> Track::getPoints()
 void Track::temporalFilter(uint interval)
 {
     int initialNumberOfPoints(m_points.size());
-    emit signalMessage(QString("Temporal filter initilizer ... ") + QString::number(initialNumberOfPoints) + QString(" initial points") + QString("\nTemporal filter will delete each successive point withing interval of ") + QString::number(interval) + QString(" seconds"));
+    emit signalMessage(QString("---\nTemporal filter initilizer ... ") + QString::number(initialNumberOfPoints) + QString(" initial points") + QString("\nTemporal filter will delete each successive point withing interval of ") + QString::number(interval) + QString(" seconds"));
     PointGPS* pointPrecedent;
 
     bool firstElement(true);
@@ -247,7 +256,7 @@ void Track::temporalFilter(uint interval)
 void Track::spaceFilter(double interval)
 {
     int initialNumberOfPoints(m_points.size());
-    emit signalMessage(QString("Spatial filter initilizer ... ") + QString::number(initialNumberOfPoints) + QString(" initial points") + QString("\nSpatial filter will delete each successive point withing interval of ") + QString::number(interval) + QString(" meters"));
+    emit signalMessage(QString("---\nSpatial filter initilizer ... ") + QString::number(initialNumberOfPoints) + QString(" initial points") + QString("\nSpatial filter will delete each successive point withing interval of ") + QString::number(interval) + QString(" meters"));
 
     for (uint i = 0; i < m_points.size(); i++) { // on parcours la liste des points
         // tant qu on ne se trouve pas sur le dernier point
