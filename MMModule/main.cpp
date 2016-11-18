@@ -35,10 +35,14 @@ void dev_thread()
 {
     QThread* thread = new QThread();
     Solver* solver = new Solver();
-    solver->m_trackFilename = "../Data/Seattle/useful_all_track.csv";
-    solver->m_gridFilename = "../Data/Seattle/useful_all_network.csv";
+    //solver->m_trackFilename = "../Data/Seattle/useful_all_track.csv";
+    //solver->m_gridFilename = "../Data/Seattle/useful_all_network.csv";
     //solver->m_trackFilename = "../Data/Seattle/mini_start_track.csv";
     //solver->m_gridFilename = "../Data/Seattle/mini_start_network.csv";
+
+    solver->m_trackFilename = "../Data/France/Zones/Trace_Z5_L93.csv";
+    solver->m_gridFilename = "../Data/France/Zones/Route_Ready_Z5_L93.csv";
+
     solver->moveToThread(thread);
     thread->start();
     Controller* controller = new Controller();
@@ -164,7 +168,7 @@ void dev_ui()
     MainWindow* w = new MainWindow();
     w->setWindowTitle("Map Matching");
 
-    w->resize(360, 504);
+    w->resize(500, 700);
     w->show();
 }
 
@@ -177,6 +181,7 @@ int main(int argc, char* argv[])
     QApplication app(argc, argv);
 
     dev_thread();
+    //dev_ui();
 
     return app.exec();
     //return app.closingDown();

@@ -33,7 +33,7 @@ void QMapWidget::onSignalDimension(double xMinGrid, double xMaxGrid, double yMin
 {
     m_scene->initialize(int(xMinGrid), int(yMinGrid), int(xMaxGrid), int(yMaxGrid));
     sceneScaleChanged(250);
-    show();
+    //show();
 
     connect(m_zoom, SIGNAL(valueChanged(int)), this, SLOT(sceneScaleChanged(int)));
 }

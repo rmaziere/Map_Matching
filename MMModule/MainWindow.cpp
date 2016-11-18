@@ -25,9 +25,7 @@ void MainWindow::createGuiControlComponents()
 
 void MainWindow::createMainLayout()
 {
-    //centralWidget = new QWidget(this);
     mainLayout = new QVBoxLayout();
-    //centralWidget->setLayout(mainLayout);
     this->setLayout(mainLayout);
     controlPaneLayout = new QGridLayout();
     mainLayout->addWidget(slidingStacked);
@@ -44,15 +42,7 @@ void MainWindow::createSubSlidingWidgets()
 {
     slideWidget1 = new Loading();
     slideWidget2 = new Filtering();
-    slideWidget3 = new QWidget();
-
-    QVBoxLayout* slideWidget3layout = new QVBoxLayout();
-    slideWidget3->setLayout(slideWidget3layout);
-
-    QPushButton* b31 = new QPushButton("Isn't");
-    slideWidget3layout->addWidget(b31);
-    QPushButton* b32 = new QPushButton("Qt cool ?");
-    slideWidget3layout->addWidget(b32);
+    slideWidget3 = new QMapWidget();
 }
 
 void MainWindow::createSlidingStackedWidget()
@@ -70,6 +60,7 @@ void MainWindow::createConnections()
     solver->moveToThread(thread);
     controller = new Controller();
     controller->m_qProcessViewer = process;
+    controller->m_qMapWidget = slideWidget3;
     controller->addSolver(solver);
     controller->connectSignals();
 
@@ -98,11 +89,11 @@ void MainWindow::readyToNext1(File file1, File file2)
 
 void MainWindow::readyToNext2(double fSpat, int fTemp)
 {
-    if (fSpat != 0) {
-        trace.spaceFilter(double(fSpat));
+    if (fSpat != 0.00) {
+        solver->filterSpace(fSpat);
     }
-    if (fTemp != 0) {
-        trace.temporalFilter(fTemp);
+    if (fTemp != 0.00) {
+        solver->filterTemp(fTemp);
     }
     buttonNext->setEnabled(true);
 }
