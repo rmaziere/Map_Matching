@@ -75,3 +75,13 @@ void Solver::readFiles(File file1, File file2)
     grid.readFromCSV(fileG);
     emit signalMessage("Grid - reading file : " + fileG);
 }
+
+void Solver::filterSpace(double val)
+{
+    track.spaceFilter(val);
+}
+
+void Solver::filterTemp(int val)
+{
+    track.temporalFilter(val);
+}

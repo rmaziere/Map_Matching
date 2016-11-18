@@ -31,6 +31,8 @@ public:
     void start();
     void setDistance(PointGPS* p, Road& r);
     void readFiles(File file1, File file2);
+    void filterSpace(double val);
+    void filterTemp(int val);
 
     QString m_gridFilename; // to move in protected once signals are in use
     QString m_trackFilename;

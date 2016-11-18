@@ -98,11 +98,11 @@ void MainWindow::readyToNext1(File file1, File file2)
 
 void MainWindow::readyToNext2(double fSpat, int fTemp)
 {
-    if (fSpat != 0) {
-        trace.spaceFilter(double(fSpat));
+    if (fSpat != 0.00) {
+        solver->filterSpace(fSpat);
     }
-    if (fTemp != 0) {
-        trace.temporalFilter(fTemp);
+    if (fTemp != 0.00) {
+        solver->filterTemp(fTemp);
     }
     buttonNext->setEnabled(true);
 }

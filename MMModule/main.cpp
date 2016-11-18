@@ -176,7 +176,8 @@ int main(int argc, char* argv[])
 {
     QApplication app(argc, argv);
 
-    dev_thread();
+    //dev_thread();
+    dev_ui();
 
     return app.exec();
     //return app.closingDown();
