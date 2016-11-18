@@ -1,13 +1,10 @@
 #include <QFileDialog>
-#include <QTimer> // for sleep test
 #include <QtGui/QApplication>
-
 #include <iostream>
 #include <limits.h>
 #include <math.h>
 #include <stdio.h>
 #include <vector>
-
 #include "GUI/controller.h"
 #include "MainWindow.h"
 #include "grid.h"
@@ -38,18 +35,22 @@ void dev_thread()
 {
     QThread* thread = new QThread();
     Solver* solver = new Solver();
-    //solver->m_gridFilename = "../Data/Seattle/useful_all_network.csv";
-    //solver->m_trackFilename = "../Data/Seattle/useful_all_track.csv";
+    solver->m_trackFilename = "../Data/Seattle/useful_all_track.csv";
+    solver->m_gridFilename = "../Data/Seattle/useful_all_network.csv";
+    //solver->m_trackFilename = "../Data/Seattle/mini_start_track.csv";
+    //solver->m_gridFilename = "../Data/Seattle/mini_start_network.csv";
     solver->moveToThread(thread);
-    //thread->start();
+    thread->start();
     Controller* controller = new Controller();
     //QMetaObject::invokeMethod(solver, "onSignalStart");
     controller->addSolver(solver);
     controller->connectSignals();
-    //controller->m_qProcessViewer->resize(500, 500);
+    controller->m_qProcessViewer->resize(500, 500);
     controller->m_qProcessViewer->show();
-}
 
+    controller->m_qMapWidget->resize(500, 500);
+    controller->m_qMapWidget->show();
+}
 
 void dev_grid()
 {
@@ -160,12 +161,11 @@ void dev_file()
 void dev_ui()
 {
     //Fenetre non enlevable
-    MainWindow *w = new MainWindow();
+    MainWindow* w = new MainWindow();
     w->setWindowTitle("Map Matching");
 
     w->resize(360, 504);
     w->show();
-
 }
 
 /****************************************************************************/
@@ -176,10 +176,7 @@ int main(int argc, char* argv[])
 {
     QApplication app(argc, argv);
 
-    //dev_img();
-    //dev_thread();
-    //dev_file();
-    dev_ui();
+    dev_thread();
 
     return app.exec();
     //return app.closingDown();

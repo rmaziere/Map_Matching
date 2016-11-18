@@ -3,6 +3,7 @@
 
 #include <QObject>
 
+#include "file.h"
 #include "grid.h"
 #include "pointGPS.h"
 #include "pointroad.h"
@@ -18,7 +19,7 @@ typedef std::vector<PointGPS*> AllPointVector;
 class Solver : public QObject {
     Q_OBJECT
 public:
-    explicit Solver() {}
+    explicit Solver(QObject* parent = 0);
     /*
     explicit Solver(AllRoadMap* gridRoad, std::vector<PointRoad>* roadPoints, AllPointVector* trackPoint)
         : m_roads(gridRoad)
@@ -29,24 +30,27 @@ public:
     */
     void start();
     void setDistance(PointGPS* p, Road& r);
+    void readFiles(File file1, File file2);
 
     QString m_gridFilename; // to move in protected once signals are in use
     QString m_trackFilename;
+    //protected:
+    Track track;
+    Grid grid;
+    AllRoadMap* m_roads;
+    std::vector<PointRoad>* m_roadPoints;
+    AllPointVector* m_trackPoints;
 
 signals:
     void signalMessage(QString);
+    void signalDimension(double xMin, double xMax, double yMin, double yMax);
+    void signalAllPoints(std::vector<PointGPS*>*);
+    void signalAllRoads(std::unordered_map<long, Road>*, std::vector<PointRoad>*);
 
 public slots:
     void onSignalSetGrid(QString s);
     void onSignalSetTrack(QString s);
     void onSignalStart();
-
-protected:
-    Grid grid;
-    Track track;
-    AllRoadMap* m_roads;
-    std::vector<PointRoad>* m_roadPoints;
-    AllPointVector* m_trackPoints;
 };
 
 #endif // SOLVER_H

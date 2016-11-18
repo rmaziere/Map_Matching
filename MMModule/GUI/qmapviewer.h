@@ -1,51 +1,40 @@
 #ifndef QMAPVIEWER_H
 #define QMAPVIEWER_H
 
-#include <QApplication>
 #include <QImage>
 #include <QPainter>
+#include <QPixmap>
 #include <QString>
 #include <iostream>
 #include <string>
 
-class QMapViewer {
+#include "pointGPS.h"
+
+class QMapViewer : public QObject {
+    Q_OBJECT
 public:
     /**
      * @brief The Map class's constructor
      * @param Image's width
      * @param Image's height
      */
-    QMapViewer();
+    explicit QMapViewer(int width = 500, int m_height = 400);
 
-    QMapViewer(int width, int height);
-
-    /**
-     * @brief scaleCalculator
-     * @param xMinGrid
-     * @param xMaxGrid
-     * @param yMinGrid
-     * @param yMaxGrid
-     */
-    void scaleCalculator(double xMinGrid, double xMaxGrid, double yMinGrid, double yMaxGrid);
+    void drawAllGPSPoints();
+    void drawPoint(Point&);
+    double transform(double x, int dim);
 
     /**
-     * @brief deltaCalculator
-     * @param xMinGrid
-     * @param yMinGrid
-     */
-    void deltaCalculator(double xMinGrid, double yMinGrid);
-
-    /**
-     * @brief coordinateTranslator
+     * @brief TranslateToQPoint
      * @param x
      * @param y
      * @return
      */
-    QPointF coordinateTranslator(double x, double y);
+    QPointF TranslateToQPoint(double x, double y);
 
     void landmarkMaker(int resolution, QString color = "black");
 
-    void write(QPoint point, QString text, QString color = "black");
+    void paintTick(QPoint point, QString text, QString color = "black");
 
     void makePointFromTrack(std::vector<std::vector<double> > vXY, QString color = "black");
 
@@ -72,14 +61,23 @@ public:
      */
     void save(QString file);
 
-    //protected:
-    int width; /**< image width*/
-    int height; /**< image height*/
-    double scale = 1; /**< scale between the grid and the image*/
-    int deltaX; /**< delta between the SRID's x origin and the grid's x*/
-    int deltaY; /**< delta between the SRID's y origin and the grid's y*/
-    QImage img; /**< The QImage object*/
-    QPainter paint; /**< The QPainter object*/
+    QImage m_map; /**< map */
+
+signals:
+    void signalTrackCompleted(QString);
+
+public slots:
+    void onSignalAllPoints(std::vector<PointGPS*>*);
+
+protected:
+    std::vector<PointGPS*>* m_trackPoints;
+    double m_scaleFactor = 1; /**< scale between the grid and the image*/
+    int m_width; /**< image width*/
+    int m_height; /**< image height*/
+    int m_shiftX; /**< delta between the SRID's x origin and the grid's x*/
+    int m_shiftY; /**< delta between the SRID's y origin and the grid's y*/
+
+    QPainter m_paint; /**< The QPainter object*/
 };
 
 #endif // QMAPVIEWER_H

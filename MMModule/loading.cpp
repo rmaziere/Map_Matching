@@ -79,8 +79,7 @@ void Loading::track()
 
 void Loading::loadFileCSVTrack()
 {
-    int result = fileCSVTrack.selectFilesToOpen("csv");
-    if (result == 1) {
+    if (fileCSVTrack.selectFilesToOpen("csv") == 1) {
         m_fileGPS->setText("1 file loaded");
         m_csvTrack->setEnabled(false);
         m_shpTrack->setEnabled(false);
@@ -91,12 +90,12 @@ void Loading::loadFileCSVTrack()
 
 void Loading::loadFileSHPTrack()
 {
-    if(fileSHPTrack.selectFilesToOpen("shp") == 1){
-        if(fileSHPTrack.shp2csv("Point")) {
+    if (fileSHPTrack.selectFilesToOpen("shp") == 1) {
+        if (fileSHPTrack.shp2csv("Point")) {
             m_fileGPS->setText("1 file loaded");
             m_csvTrack->setEnabled(false);
             m_shpTrack->setEnabled(false);
-            nextOk += 2;
+            nextOk += 1;
             launchFiles();
         }
     }
@@ -104,11 +103,11 @@ void Loading::loadFileSHPTrack()
 
 void Loading::loadFileGrid()
 {
-    if(fileSHPGrid.selectFilesToOpen("shp") == 1){
-        if(fileSHPGrid.shp2csv("Polyline") == 1){
+    if (fileSHPGrid.selectFilesToOpen("shp") == 1) {
+        if (fileSHPGrid.shp2csv("Polyline") == 1) {
             m_fileGrid->setText("1 file loaded");
             m_csvGrid->setEnabled(false);
-            nextOk += 4;
+            nextOk += 1;
             launchFiles();
         }
     }
@@ -117,24 +116,19 @@ void Loading::loadFileGrid()
 void Loading::getCountry() //A modifier
 {
     //if (m_fr->isChecked())
-        //cout << "fr";
+    //cout << "fr";
     //else
-        //cout << "usa";
+    //cout << "usa";
     launchFiles();
 }
 
 void Loading::launchFiles()
 {
-    //nextOk => 1 : loadFileCSVTrack |2 : loadFileSHPTrack |4 : loadFileGrid |7 : all
-    if ((m_fr->isChecked() || m_usa->isChecked()) && (nextOk == 7))
-    {
-        if (fileSHPTrack.fileName.isEmpty())
-        {
+    if ((m_fr->isChecked() || m_usa->isChecked()) && (nextOk == 2)) {
+        if (fileSHPTrack.fileName.isEmpty()) {
             emit ready(fileCSVTrack, fileSHPGrid);
             emit readyNext(fileCSVTrack);
-        }
-        else
-        {
+        } else {
             emit ready(fileSHPTrack, fileSHPGrid);
             emit readyNext(fileSHPTrack);
         }

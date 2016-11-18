@@ -4,6 +4,8 @@
 #include "road.h"
 #include "track.h"
 
+#include <QObject>
+
 #include <QString>
 #include <unordered_map>
 #include <vector>
@@ -31,7 +33,8 @@ typedef std::unordered_map<long, Road> AllRoadMap;
 /**
  * @brief Grid embedded roads. This describes the network.
  */
-class Grid {
+class Grid : public QObject {
+    Q_OBJECT
 public:
     /**
      * @brief Constructor
@@ -121,11 +124,15 @@ public:
     double yMinGrid() const { return m_yMinGrid; }
     double yMaxGrid() const { return m_yMaxGrid; }
 
+    AllRoadMap m_mapOfAllRoads;
+    std::vector<PointRoad> m_vectorOfPoints;
+
+signals:
+    void signalMessage(QString);
+
 protected:
     std::string m_gridFullName;
     ExtremityPointMap m_mapOfExtPoints; // temporary container during csv loading
-    AllRoadMap m_mapOfAllRoads;
-    std::vector<PointRoad> m_vectorOfPoints;
 
     /**
      * @brief The coordinates of the track

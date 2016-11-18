@@ -41,6 +41,8 @@ void Grid::setBoundingBox(double xMin, double xMax, double yMin, double yMax)
 
 void Grid::readFromCSV(QString filename)
 {
+
+    emit signalMessage("Loading grid ...");
     string line;
     QString stringConverted;
     m_gridFullName = filename.toStdString();

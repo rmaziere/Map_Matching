@@ -7,6 +7,14 @@ using namespace std;
 
 #define DEBUG_READCSV false
 
+Track::Track()
+    : m_xMin(std::numeric_limits<double>::max())
+    , m_xMax(0.0)
+    , m_yMin(std::numeric_limits<double>::max())
+    , m_yMax(0.0)
+{
+}
+
 Track::~Track()
 {
     for (uint i = 0; i < m_points.size(); ++i) {
@@ -18,6 +26,7 @@ Track::~Track()
 // WARNING : This function doesn't check the correct extension (trust the user who puts a csv-format file)
 void Track::readFromCSV(QString filename)
 {
+    emit signalMessage("Loading track ...");
     string value; // Save the value of the line
     QString stringConverted;
 
@@ -38,7 +47,6 @@ void Track::readFromCSV(QString filename)
     for (uint i = 0; i < correspondance.size(); ++i) {
         correspondance[i] = -1;
     }
-
     // Read header
     if (file.good()) {
         // Read the line

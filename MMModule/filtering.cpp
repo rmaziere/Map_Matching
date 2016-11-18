@@ -35,7 +35,6 @@ void Filtering::temporal()
     m_boutonTemp = new QPushButton("Ok");
     m_boutonTemp->setCheckable(true);
 
-
     QObject::connect(m_slidTemp, SIGNAL(valueChanged(int)), m_valueTemp, SLOT(display(int)));
     //QObject::connect(m_slidTemp, SIGNAL(valueChanged(int)), this, SLOT(launchFiltreTemp(int)));
     QObject::connect(m_boutonTemp, SIGNAL(clicked()), this, SLOT(launchFiltre()));
@@ -55,7 +54,7 @@ void Filtering::spatial()
     m_valueSpat->setSegmentStyle(QLCDNumber::Flat);
 
     m_slidSpat = new QSlider(Qt::Horizontal);
-    m_slidSpat->setRange(0, 10);
+    m_slidSpat->setRange(0, 1000);
 
     m_boutonSpat = new QPushButton("Ok");
     m_boutonSpat->setCheckable(true);
@@ -75,17 +74,7 @@ void Filtering::nbPtTrack()
 {
     m_nbPtTrack = new QLabel();
 }
-/*
-void Filtering::launchFiltreSpat(int i)
-{
-    m_filtreSpat = i/100;
-}
 
-void Filtering::launchFiltreTemp(int i)
-{
-    m_filtreTemp = i;
-}
-*/
 void Filtering::getInfo(File fileT)
 {
     QString file = fileT.filePath.at(0) + fileT.fileName.at(0) + "." + fileT.fileExtension.at(0);
@@ -98,20 +87,16 @@ void Filtering::getInfo(File fileT)
 
 void Filtering::launchFiltre()
 {
-    nextOk +=1;
-    if (m_boutonSpat->isChecked())
-    {
-        m_filtreSpat = m_slidSpat->value()/100;
+    nextOk += 1;
+    if (m_boutonSpat->isChecked()) {
+        m_filtreSpat = m_slidSpat->value() / 100;
         m_slidSpat->setEnabled(false);
     }
-    if (m_boutonTemp->isChecked())
-    {
+    if (m_boutonTemp->isChecked()) {
         m_filtreTemp = m_slidTemp->value();
         m_slidTemp->setEnabled(false);
     }
-    if (nextOk >= 2)
-    {
-        emit ready(m_filtreSpat,m_filtreTemp);
+    if (nextOk >= 2) {
+        emit ready(m_filtreSpat, m_filtreTemp);
     }
-
 }

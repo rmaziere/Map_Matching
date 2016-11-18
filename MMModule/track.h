@@ -1,6 +1,7 @@
 #ifndef TRACK_H
 #define TRACK_H
 
+#include <QObject>
 /**
   * @file track.h
   * @brief The class Track
@@ -22,19 +23,13 @@
 /**
  * @brief The Track class
  */
-class Track {
+class Track : public QObject {
+    Q_OBJECT
 public:
     /**
      * @brief Track's Constructor
      */
-    Track()
-        : //m_points(0),
-        m_xMin(std::numeric_limits<double>::max())
-        , m_xMax(0.0)
-        , m_yMin(std::numeric_limits<double>::max())
-        , m_yMax(0.0)
-    {
-    }
+    explicit Track();
     virtual ~Track();
 
     /**
@@ -110,6 +105,9 @@ public:
     double m_yMin; /**< The y min value*/
     double m_yMax; /**< The y max value*/
     //@}
+
+signals:
+    void signalMessage(QString);
 
 protected:
     /**

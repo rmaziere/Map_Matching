@@ -6,20 +6,22 @@
 #include <QListWidget>
 #include <QPushButton>
 #include <QSlider>
+#include <QThread>
+#include <QWidget>
 #include <QtGui/QMainWindow>
 #include <QtGui>
-#include <QThread>
 
 #include "SlidingStackedWidget.h"
 #include "filtering.h"
 #include "loading.h"
 
-#include "grid.h"
-#include "track.h"
 #include "GUI/controller.h"
+#include "GUI/qprocessviewer.h"
+#include "grid.h"
 #include "solver.h"
+#include "track.h"
 
-class MainWindow : public QMainWindow {
+class MainWindow : public QWidget {
     Q_OBJECT
 
 public:
@@ -46,10 +48,11 @@ protected:
     SlidingStackedWidget* slidingStacked;
     QVBoxLayout* mainLayout;
     QGridLayout* controlPaneLayout;
-    QWidget* centralWidget;
+    //QWidget* centralWidget;
     Loading* slideWidget1;
     Filtering* slideWidget2;
     QWidget* slideWidget3;
+    QProcessViewer* process;
 
     /**
      * @brief Value of the first Slide
