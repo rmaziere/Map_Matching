@@ -2,7 +2,6 @@
 #define QMAPWIDGET_H
 
 #include "qmapscene.h"
-#include "qmapviewer.h"
 #include <QGraphicsView>
 #include <QVBoxLayout>
 #include <QHBoxLayout>
@@ -26,12 +25,13 @@ private slots:
 public slots:
     void onSignalShow();
     void onSignalDimension(double xMinGrid, double xMaxGrid, double yMinGrid, double yMaxGrid);
+    void onSignalStart(); // zoom on the first GPS point
 
 protected:
     QGraphicsView* m_view;
     QVBoxLayout* m_layout;
     QWidget* m_controlZone;
-    QPushButton* m_start;
+    QPushButton* m_play;
     QPushButton* m_next;
     QSlider *m_zoom;
 };

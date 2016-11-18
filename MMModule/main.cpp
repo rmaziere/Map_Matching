@@ -129,6 +129,10 @@ int main(int argc, char* argv[])
 {
     QApplication app(argc, argv);
 
+#ifdef _TESTPERSO
+    std::cout << "bingo!" << std::endl;
+#endif
+
     //dev_img();
     dev_thread();
     //dev_ui2();

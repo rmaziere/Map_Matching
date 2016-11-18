@@ -20,15 +20,9 @@ class Solver : public QObject {
     Q_OBJECT
 public:
     explicit Solver(QObject* parent = 0);
-    /*
-    explicit Solver(AllRoadMap* gridRoad, std::vector<PointRoad>* roadPoints, AllPointVector* trackPoint)
-        : m_roads(gridRoad)
-        , m_roadPoints(roadPoints)
-        , m_trackPoints(trackPoint)
-    {
-    }
-    */
+
     void start();
+    void viterbiSetup();
     void setDistance(PointGPS* p, Road& r);
     void readFiles(File file1, File file2);
 
@@ -46,11 +40,15 @@ signals:
     void signalDimension(double xMin, double xMax, double yMin, double yMax);
     void signalAllPoints(std::vector<PointGPS*>*);
     void signalAllRoads(std::unordered_map<long, Road>*, std::vector<PointRoad>*);
-
+    void signalCurrentPoint(int id);
 public slots:
     void onSignalSetGrid(QString s);
     void onSignalSetTrack(QString s);
     void onSignalStart();
+
+protected:
+    int m_currentStep;
+    std::vector<std::vector<float>> T1, T2;
 };
 
 #endif // SOLVER_H

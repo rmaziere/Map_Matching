@@ -14,11 +14,30 @@ void Solver::start()
     emit signalDimension(track.m_xMin, track.m_xMax, track.m_yMin, track.m_yMax);
     emit signalAllPoints(m_trackPoints);
 
+    track.temporalFilter(10);
+    track.spaceFilter(3.0);
+
     grid.readFromCSV(m_gridFilename);
     emit signalMessage(QString::fromStdString(grid.infos()));
     emit signalAllRoads(&grid.m_mapOfAllRoads, &(grid.m_vectorOfPoints));
     grid.buildMarkovMatrix();
     emit signalMessage("Markov Matrix built");
+
+    // temp
+    viterbiSetup();
+}
+
+void Solver::viterbiSetup()
+{
+    int noOfStates= grid.getNoOfRoads();
+    int noOfObs= track.getNoOfPoints();
+    // initialize T1, T2 with 0
+    for (int i=0; i<noOfStates; i++) {
+        T1.push_back(std::vector<float>(noOfObs));
+        T2.push_back(std::vector<float>(noOfObs));
+    }
+    m_currentStep= 0;
+    emit signalCurrentPoint(10);
 }
 
 void Solver::setDistance(PointGPS* p, Road& r)

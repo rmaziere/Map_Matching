@@ -24,7 +24,9 @@ void Controller::connectSignals()
 
     QObject::connect(m_solver, SIGNAL(signalDimension(double, double, double, double)), m_qMapWidget, SLOT(onSignalDimension(double, double, double, double)));
     QObject::connect(m_solver, SIGNAL(signalAllPoints(std::vector<PointGPS*>*)), m_qMapWidget->m_scene, SLOT(onSignalAllPoints(std::vector<PointGPS*>*)));
-    QObject::connect(m_solver, SIGNAL(signalAllRoads(std::unordered_map<long, Road>*, std::vector<PointRoad>*)), m_qMapWidget->m_scene, SLOT(signalAllRoads(std::unordered_map<long, Road>*, std::vector<PointRoad>*)));
+    QObject::connect(m_solver, SIGNAL(signalAllRoads(std::unordered_map<long, Road>*, std::vector<PointRoad>*)), m_qMapWidget->m_scene, SLOT(onSignalAllRoads(std::unordered_map<long, Road>*, std::vector<PointRoad>*)));
+    QObject::connect(m_solver, SIGNAL(signalCurrentPoint(int)), m_qMapWidget->m_scene, SLOT(onSignalCurrentPoint(int)));
+
 
     /*QObject::connect(m_qMapWidget->m_qMapViewer, SIGNAL(signalTrackCompleted(QString)), m_qMapWidget, SLOT(onSignalShow()));
     QObject::connect(m_qMapWidget->m_qMapViewer, SIGNAL(signalTrackCompleted(QString)), m_qProcessViewer, SLOT(onSignalMessage(QString)));

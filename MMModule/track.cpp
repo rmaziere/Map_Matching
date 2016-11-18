@@ -229,7 +229,6 @@ void Track::temporalFilter(uint interval)
         } else {
             if ((*b)->timeStamp() - pointPrecedent->timeStamp() <= interval) {
                 b = m_points.erase(b); // reseat iterator to a valid value post-erase
-                cout << "point supprimé" << endl;
             } else {
                 pointPrecedent = *b;
                 ++b;

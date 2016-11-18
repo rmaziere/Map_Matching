@@ -9,7 +9,8 @@
 #include <unordered_map>
 #include <vector>
 
-#define GPSDEFAULT "black"
+#define GPSDEFAULT "red"
+#define ROADDEFAULT "grey"
 #define X 0
 #define Y 1
 
@@ -24,7 +25,9 @@ signals:
 
 public slots:
     void onSignalAllPoints(std::vector<PointGPS*>*);
-    void signalAllRoads(std::unordered_map<long, Road>* roads, std::vector<PointRoad>*);
+    void onSignalAllRoads(std::unordered_map<long, Road>* roads, std::vector<PointRoad>*);
+    void onSignalStart();
+    void onSignalCurrentPoint(int pointId);
 
 protected:
     std::vector<PointGPS*>* m_trackPoints;
@@ -36,7 +39,7 @@ protected:
     int m_shiftX; /**< delta between the SRID's x origin and the grid's x*/
     int m_shiftY; /**< delta between the SRID's y origin and the grid's y*/
 
-    QGraphicsRectItem* points;
+    std::vector<QGraphicsRectItem *> pointItems;
 };
 
 #endif // QMAPSCENE_H

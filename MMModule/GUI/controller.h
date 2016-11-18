@@ -1,7 +1,6 @@
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
 
-#include "qmapviewer.h"
 #include "qmapwidget.h"
 #include "qprocessviewer.h"
 #include "solver.h"

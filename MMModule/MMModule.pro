@@ -2,6 +2,8 @@ QT += core
 QT += gui
 QT += widgets
 
+DEFINES += _TESTPERSO
+
 CONFIG += c++11
 
 QMAKE_CXXFLAGS += -std=c++11
@@ -34,7 +36,6 @@ SOURCES += main.cpp \
     GUI/controller.cpp \
     GUI/graphicemitter.cpp \
     GUI/qprocessviewer.cpp \
-    GUI/qmapviewer.cpp \
     GUI/qmapwidget.cpp \
     GUI/qmapscene.cpp
 
@@ -62,7 +63,6 @@ HEADERS += \
     GUI/controller.h \
     GUI/graphicemitter.h \
     GUI/qprocessviewer.h \
-    GUI/qmapviewer.h \
     GUI/qmapwidget.h \
     GUI/qmapscene.h
 
