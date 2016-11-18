@@ -30,7 +30,17 @@ public:
     ~MainWindow();
 
 public slots:
+    /**
+     * @brief readyToNext1 Pass informations
+     * @param file1 File track
+     * @param file2 File grid
+     */
     void readyToNext1(File file1, File file2);
+    /**
+     * @brief readyToNext2 Pass informations
+     * @param fSpat value of spatial filter
+     * @param fTemp value of temporal filter
+     */
     void readyToNext2(double fSpat, int fTemp);
     void putNone();
 
