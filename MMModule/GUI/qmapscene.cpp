@@ -1,7 +1,7 @@
 #include "qmapscene.h"
 
 #include <QPen>
-#define POINT_SIZE 20
+#define POINT_SIZE 5
 
 QMapScene::QMapScene(QObject* parent)
     : QGraphicsScene(parent)

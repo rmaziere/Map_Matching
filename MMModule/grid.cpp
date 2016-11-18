@@ -12,6 +12,8 @@ using namespace std;
 #define DEBUG_READCSV true
 #define DEBUG_ADDROAD true
 
+long Grid::counter = 0;
+
 Grid::Grid()
     : m_xMin(0.0)
     , m_xMax(std::numeric_limits<double>::max())
@@ -199,6 +201,10 @@ void Grid::addRoad(const vector<vector<double> >& listOfCoordinates, long edgeId
     int curPoint = 0; // used to apply a special treatment to first and last point of a road
     bool newPoint = true;
     int existingPointId = -1; // id of the point if its already exists
+    if(edgeId == 0){
+        edgeId = counter;
+        counter++;
+    }
     Road road(edgeId);
     for (const auto& coord : listOfCoordinates) {
         newPoint = true;

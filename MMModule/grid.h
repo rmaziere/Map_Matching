@@ -133,6 +133,7 @@ signals:
 protected:
     std::string m_gridFullName;
     ExtremityPointMap m_mapOfExtPoints; // temporary container during csv loading
+    static long counter; // counter used to generate unique m_id (not used for Seattle data)
 
     /**
      * @brief The coordinates of the track

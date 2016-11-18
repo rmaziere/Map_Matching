@@ -220,7 +220,7 @@ void Track::readFromCSV(QString filename)
     }
     applyThresholdToBox();
     if (DEBUG_READCSV)
-        cout << "Le fichier " << filename.toStdString() << " a été lu." << endl;
+        cout << "Le fichier de traces GPS " << filename.toStdString() << " a été lu." << endl;
 }
 
 vector<PointGPS*> Track::getPoints()
