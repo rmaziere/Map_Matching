@@ -2,7 +2,6 @@
 #define FILTERING_H
 
 #include <QApplication>
-#include <QDialogButtonBox>
 #include <QGroupBox>
 #include <QLCDNumber>
 #include <QLabel>

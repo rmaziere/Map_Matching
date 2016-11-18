@@ -2,14 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QApplication>
-#include <QCheckBox>
-#include <QListWidget>
 #include <QPushButton>
-#include <QSlider>
 #include <QThread>
 #include <QWidget>
-#include <QtGui/QMainWindow>
-#include <QtGui>
 
 #include "SlidingStackedWidget.h"
 #include "filtering.h"

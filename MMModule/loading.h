@@ -2,7 +2,6 @@
 #define LOADING_H
 
 #include <QApplication>
-#include <QDialogButtonBox>
 #include <QGroupBox>
 #include <QLabel>
 #include <QObject>
