@@ -41,13 +41,13 @@ void GeomaticsProjet::initGui()
    m_GISInterface->addRasterToolBarIcon(m_action);
    m_GISInterface->addPluginToMenu(tr("&Geomatics projet"), m_action);
 }
-
+/*
 void dev_class()
 {
     Grid grid;
     Track trace;
 }
-/*
+
 void dev_thread()
 {
     //QThread* thread = new QThread();
@@ -70,7 +70,10 @@ void GeomaticsProjet::run()
     QgsMessageLog::instance()->logMessage("Geomatics projet launched", "Geomatics projet", QgsMessageLog::INFO);
 
     //dev_thread();
-    dev_class();
+    //dev_class();
+    Controller* controller = new Controller();
+    controller->m_qProcessViewer->resize(500, 500);
+    controller->m_qProcessViewer->show();
 }
 
 void GeomaticsProjet::unload()
