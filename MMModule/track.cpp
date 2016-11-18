@@ -5,7 +5,7 @@
 
 using namespace std;
 
-#define DEBUG_READCSV false
+#define DEBUG_READCSV true
 
 Track::Track()
     : m_xMin(std::numeric_limits<double>::max())
@@ -197,13 +197,16 @@ void Track::readFromCSV(QString filename)
                 ts = QDateTime::fromString(specificDate[0], "yyyy-MM-dd");
             else if ((specificDate[0].size() == 0) && (specificDate[1].size() == 8))
                 ts = QDateTime::fromString(specificDate[1], "hh:mm:ss");
-            else if ((specificDate[0].size() == 11) && (specificDate[1].size() == 8)) {
+            else if ((specificDate[0].size() == 10) && (specificDate[1].size() == 8)) {
+                ts = QDateTime(QDate::fromString(specificDate[0], "yyyy/MM/dd"), QTime::fromString(specificDate[1], "hh:mm:ss"));
+            }else if ((specificDate[0].size() == 11) && (specificDate[1].size() == 8)) {
                 // Attention : si les mois sont enregistres avec "Jan",
                 // il faut passer en langue anglaise/americaine
                 // Sinon timeStamp est vide... et c'est embetant
                 QLocale locale(QLocale::English, QLocale::UnitedStates);
                 ts = locale.toDateTime((specificDate[0] + specificDate[1]), "dd'-'MMM'-'yyyyhh':'mm':'ss");
             }
+
             if (DEBUG_READCSV)
                 cout << "timestamp : " << ts.toString("yyyy-MM-dd hh:mm:ss").toStdString();
             if (DEBUG_READCSV)
