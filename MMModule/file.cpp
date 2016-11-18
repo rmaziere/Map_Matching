@@ -63,7 +63,7 @@ int File::shp2csv(QString geometryType)
     } else {
         QString originPath;
         QString destinationPath;
-        string gdalGeometryParam;
+        std::string gdalGeometryParam;
 
         if (geometryType == "Point") {
             gdalGeometryParam = "AS_YX";
@@ -79,7 +79,7 @@ int File::shp2csv(QString geometryType)
             originPath = tempFilePath + tempFileName + "." + tempFileExtension;
             destinationPath = tempFilePath + tempFileName + "_L93.csv";
 
-            string shpToCsv_command = "ogr2ogr -f CSV " + destinationPath.toStdString() + " " + originPath.toStdString() + " -t_srs EPSG:2154 -lco GEOMETRY=" + gdalGeometryParam;
+            std::string shpToCsv_command = "ogr2ogr -f CSV " + destinationPath.toStdString() + " " + originPath.toStdString() + " -t_srs EPSG:2154 -lco GEOMETRY=" + gdalGeometryParam;
 
             system(shpToCsv_command.c_str()); //shp wgs84 => csv Lambert 93
 

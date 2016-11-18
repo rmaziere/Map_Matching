@@ -2,9 +2,9 @@
 #define CONTROLLER_H
 
 #include "qmapviewer.h"
+#include "../solver.h"
 #include "qmapwidget.h"
 #include "qprocessviewer.h"
-#include "solver.h"
 #include <QObject>
 
 class Controller : public QObject {
