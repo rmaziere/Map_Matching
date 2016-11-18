@@ -218,6 +218,8 @@ vector<PointGPS*> Track::getPoints()
 
 void Track::temporalFilter(uint interval)
 {
+    int initialNumberOfPoints(m_points.size());
+    emit signalMessage(QString("Temporal filter initilizer ... ")+QString::number(initialNumberOfPoints)+QString(" initial points")+QString("\nTemporal filter will delete each point withing interval of ")+QString::number(interval)+QString(" seconds"));
     PointGPS* pointPrecedent;
 
     bool firstElement(true);
@@ -236,6 +238,11 @@ void Track::temporalFilter(uint interval)
             }
         }
     }
+
+    int endNumberOfPoints(m_points.size());
+    double reduction(((double)(initialNumberOfPoints-endNumberOfPoints)*100)/initialNumberOfPoints);
+    emit signalMessage(QString("Temporal filter ended ... ")+QString::number(endNumberOfPoints)+QString(" points left ")+QString(" ( ")+QString::number(reduction,'g',4) + QString(" % of reduction)"));
+
 }
 
 void Track::spaceFilter(double interval)

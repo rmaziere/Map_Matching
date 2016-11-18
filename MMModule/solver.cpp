@@ -9,6 +9,7 @@ Solver::Solver(QObject* parent)
 void Solver::start()
 {
     track.readFromCSV(m_trackFilename);
+    track.temporalFilter(5);
     m_trackPoints = track.getPointsAsPointer();
     emit signalMessage(QString::fromStdString(track.infos()));
     emit signalDimension(track.m_xMin, track.m_xMax, track.m_yMin, track.m_yMax);
