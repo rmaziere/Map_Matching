@@ -30,6 +30,9 @@ public:
      * @brief Track's Constructor
      */
     explicit Track();
+
+    Track(const Track &);
+
     virtual ~Track();
 
     /**

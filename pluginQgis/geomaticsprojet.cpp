@@ -1,11 +1,13 @@
 #include "geomaticsprojet.h"
 #include "qgisinterface.h"
 #include "qgsmessagelog.h"
-
+#include "../MMModule/grid.h"
+#include "../MMModule/track.h"
+/*
 #include "../MMModule/solver.h"
 #include "../MMModule/GUI/controller.h"
 #include "../MMModule/GUI/qprocessviewer.h"
-
+*/
 #include <QAction>
 #include <QThread>
 
@@ -40,6 +42,12 @@ void GeomaticsProjet::initGui()
    m_GISInterface->addPluginToMenu(tr("&Geomatics projet"), m_action);
 }
 
+void dev_class()
+{
+    Grid grid;
+    Track trace;
+}
+/*
 void dev_thread()
 {
     //QThread* thread = new QThread();
@@ -56,12 +64,13 @@ void dev_thread()
     controller->m_qProcessViewer->resize(500, 500);
     controller->m_qProcessViewer->show();
 }
-
+*/
 void GeomaticsProjet::run()
 {
     QgsMessageLog::instance()->logMessage("Geomatics projet launched", "Geomatics projet", QgsMessageLog::INFO);
 
-    dev_thread();
+    //dev_thread();
+    dev_class();
 }
 
 void GeomaticsProjet::unload()
