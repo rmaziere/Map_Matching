@@ -14,6 +14,15 @@ Track::Track()
     , m_yMax(0.0)
 {
 }
+#ifdef QT_DEBUG
+Track::Track(const Track& oldTrack)
+    : m_xMin(oldTrack.m_xMin)
+    , m_xMax(oldTrack.m_xMax)
+    , m_yMin(oldTrack.m_yMin)
+    , m_yMax(oldTrack.m_yMax)
+{
+}
+#endif
 
 Track::~Track()
 {
@@ -218,6 +227,8 @@ vector<PointGPS*> Track::getPoints()
 
 void Track::temporalFilter(uint interval)
 {
+    int initialNumberOfPoints(m_points.size());
+    emit signalMessage(QString("---\nTemporal filter initilizer ... ") + QString::number(initialNumberOfPoints) + QString(" initial points") + QString("\nTemporal filter will delete each successive point withing interval of ") + QString::number(interval) + QString(" seconds"));
     PointGPS* pointPrecedent;
 
     bool firstElement(true);
@@ -236,10 +247,17 @@ void Track::temporalFilter(uint interval)
             }
         }
     }
+
+    int endNumberOfPoints(m_points.size());
+    double reduction(((double)(initialNumberOfPoints - endNumberOfPoints) * 100) / initialNumberOfPoints);
+    emit signalMessage(QString("Temporal filter ended ... ") + QString::number(endNumberOfPoints) + QString(" points left ") + QString(" ( ") + QString::number(reduction, 'g', 4) + QString(" % of reduction)"));
 }
 
 void Track::spaceFilter(double interval)
 {
+    int initialNumberOfPoints(m_points.size());
+    emit signalMessage(QString("---\nSpatial filter initilizer ... ") + QString::number(initialNumberOfPoints) + QString(" initial points") + QString("\nSpatial filter will delete each successive point withing interval of ") + QString::number(interval) + QString(" meters"));
+
     for (uint i = 0; i < m_points.size(); i++) { // on parcours la liste des points
         // tant qu on ne se trouve pas sur le dernier point
         //&& (security segmentation)
@@ -248,6 +266,9 @@ void Track::spaceFilter(double interval)
             this->delPointGPS(i + 1); // on supprime le point suivant
         }
     }
+    int endNumberOfPoints(m_points.size());
+    double reduction(((double)(initialNumberOfPoints - endNumberOfPoints) * 100) / initialNumberOfPoints);
+    emit signalMessage(QString("Spatial filter ended ... ") + QString::number(endNumberOfPoints) + QString(" points left ") + QString(" ( ") + QString::number(reduction, 'g', 4) + QString(" % of reduction)"));
 }
 
 void Track::delPointGPS(int occurrence)

@@ -8,7 +8,7 @@
 #include <iostream>
 #include <string>
 
-#include "pointGPS.h"
+#include "../pointGPS.h"
 
 class QMapViewer : public QObject {
     Q_OBJECT

@@ -30,6 +30,9 @@ public:
      * @brief Track's Constructor
      */
     explicit Track();
+#ifdef QT_DEBUG
+    Track(const Track&);
+#endif
     virtual ~Track();
 
     /**

@@ -9,8 +9,8 @@
 
 using namespace std;
 
-#define DEBUG_READCSV false
-#define DEBUG_ADDROAD false
+#define DEBUG_READCSV true
+#define DEBUG_ADDROAD true
 
 Grid::Grid()
     : m_xMin(0.0)

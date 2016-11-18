@@ -16,6 +16,8 @@ Filtering::Filtering()
     setLayout(mainLayout);
 
     nextOk = 0;
+    m_filtreSpat = 0.00;
+    m_filtreTemp = 0;
 }
 
 Filtering::~Filtering()
@@ -89,7 +91,7 @@ void Filtering::launchFiltre()
 {
     nextOk += 1;
     if (m_boutonSpat->isChecked()) {
-        m_filtreSpat = m_slidSpat->value() / 100;
+        m_filtreSpat = double(m_slidSpat->value())/100;
         m_slidSpat->setEnabled(false);
     }
     if (m_boutonTemp->isChecked()) {
