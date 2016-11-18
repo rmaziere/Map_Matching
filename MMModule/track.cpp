@@ -14,15 +14,15 @@ Track::Track()
     , m_yMax(0.0)
 {
 }
-
-Track::Track(const Track & oldTrack) :
-    m_xMin(oldTrack.m_xMin)
+#ifdef QT_DEBUG
+Track::Track(const Track& oldTrack)
+    : m_xMin(oldTrack.m_xMin)
     , m_xMax(oldTrack.m_xMax)
     , m_yMin(oldTrack.m_yMin)
     , m_yMax(oldTrack.m_yMax)
 {
-
 }
+#endif
 
 Track::~Track()
 {

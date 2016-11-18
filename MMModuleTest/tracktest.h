@@ -3,7 +3,7 @@
 
 #include <QDateTime>
 #include <vector>
-
+#include <QObject>
 #include "../MMModule/track.h"
 #include "gtest/gtest.h"
 

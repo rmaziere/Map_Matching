@@ -1,20 +1,21 @@
-#include <QFileDialog>
 #include <QtGui/QApplication>
-#include <iostream>
+
 #include <limits.h>
 #include <math.h>
 #include <stdio.h>
 #include <vector>
-#include "GUI/controller.h"
-#include "MainWindow.h"
-#include "grid.h"
-#include "loading.h"
-#include "myexception.h"
-#include "pointGPS.h"
-#include "solver.h"
-#include "track.h"
 
-#include <QTextEdit>
+#include "myexception.h"
+
+#include "GUI/controller.h"
+#include "solver.h"
+
+#include "MainWindow.h"
+
+#include "grid.h"
+#include "track.h"
+#include "pointGPS.h"
+
 
 using namespace std;
 /*! \mainpage My Personal Index Page

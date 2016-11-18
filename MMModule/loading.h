@@ -2,7 +2,6 @@
 #define LOADING_H
 
 #include <QApplication>
-#include <QDialogButtonBox>
 #include <QGroupBox>
 #include <QLabel>
 #include <QObject>
@@ -25,20 +24,49 @@ public:
     File fileCSVTrack;
 
 public slots:
+    /**
+     * @brief loadFileCSVTrack Get File of SHP track
+     */
     void loadFileCSVTrack();
+    /**
+     * @brief loadFileSHPTrack Get File of CSV track
+     */
     void loadFileSHPTrack();
+    /**
+     * @brief loadFileGrid Get File of grid
+     */
     void loadFileGrid();
+    /**
+     * @brief getCountry Choose country
+     */
     void getCountry();
 
 signals:
+    /**
+     * @brief ready Emit files informations
+     */
     void ready(File, File);
+    /**
+     * @brief readyNext track file informations
+     */
     void readyNext(File);
 
 private:
+    /**
+     * @brief country
+     */
     void country();
+    /**
+     * @brief track
+     */
     void track();
+    /**
+     * @brief grid
+     */
     void grid();
-
+    /**
+     * @brief launchFiles
+     */
     void launchFiles();
 
     QGroupBox* m_country;

@@ -5,7 +5,7 @@
 #include <QFileDialog>
 #include <QString>
 #include <QStringList>
-#include <string>
+//#include <string>
 
 /**
  * @brief The File class

@@ -2,14 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QApplication>
-#include <QCheckBox>
-#include <QListWidget>
 #include <QPushButton>
-#include <QSlider>
 #include <QThread>
 #include <QWidget>
-#include <QtGui/QMainWindow>
-#include <QtGui>
 
 #include "SlidingStackedWidget.h"
 #include "filtering.h"
@@ -30,15 +25,43 @@ public:
     ~MainWindow();
 
 public slots:
+    /**
+     * @brief readyToNext1 Pass informations
+     * @param file1 File track
+     * @param file2 File grid
+     */
     void readyToNext1(File file1, File file2);
+    /**
+     * @brief readyToNext2 Pass informations
+     * @param fSpat value of spatial filter
+     * @param fTemp value of temporal filter
+     */
     void readyToNext2(double fSpat, int fTemp);
+    /**
+     * @brief putNone Disable next button
+     */
     void putNone();
 
 protected:
+    /**
+     * @brief createGuiControlComponents
+     */
     void createGuiControlComponents();
+    /**
+     * @brief createMainLayout
+     */
     void createMainLayout();
+    /**
+     * @brief createSubSlidingWidgets
+     */
     void createSubSlidingWidgets();
+    /**
+     * @brief createConnections
+     */
     void createConnections();
+    /**
+     * @brief createSlidingStackedWidget
+     */
     void createSlidingStackedWidget();
     QPushButton* buttonNext;
     QPushButton* buttonCancel;

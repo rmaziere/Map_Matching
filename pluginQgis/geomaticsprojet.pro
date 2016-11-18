@@ -22,14 +22,7 @@ SOURCES += geomaticsprojet.cpp \
     ../MMModule/point.cpp \
     ../MMModule/pointGPS.cpp \
     ../MMModule/pointroad.cpp \
-    ../MMModule/road.cpp \
-    ../MMModule/solver.cpp #\
-    #../MMModule/KDTreeAlgos/box.cpp \
-    #../MMModule/KDTreeAlgos/boxnode.cpp \
-    #../MMModule/KDTreeAlgos/kdtree.cpp \
-    #../MMModule/KDTreeAlgos/kdtreeviewer.cpp \
-    #../MMModule/GUI/qprocessviewer.cpp
-
+    ../MMModule/road.cpp
 
 HEADERS += geomaticsprojet.h \
     ../MMModule/emissionprobability.h \
@@ -39,15 +32,9 @@ HEADERS += geomaticsprojet.h \
     ../MMModule/road.h \
     ../MMModule/sauvegarde.h \
     ../MMModule/track.h \
-    ../MMModule/myexception.h \
     ../MMModule/point.h \
     ../MMModule/pointGPS.h \
-    ../MMModule/pointroad.h #\
-    #../MMModule/KDTreeAlgos/kdtreeviewer.h \
-    #../MMModule/KDTreeAlgos/box.h \
-    #../MMModule/KDTreeAlgos/boxnode.h \
-    #../MMModule/KDTreeAlgos/kdtree.h \
-    #../MMModule/GUI/qprocessviewer.h
+    ../MMModule/pointroad.h
 
 DEST = libgeomaticsprojet.so
 
