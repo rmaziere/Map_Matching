@@ -3,11 +3,10 @@
 #include "qgsmessagelog.h"
 #include "../MMModule/grid.h"
 #include "../MMModule/track.h"
-/*
-#include "../MMModule/solver.h"
+//#include "../MMModule/solver.h"
 #include "../MMModule/GUI/controller.h"
-#include "../MMModule/GUI/qprocessviewer.h"
-*/
+//#include "../MMModule/GUI/qprocessviewer.h"
+
 #include <QAction>
 #include <QThread>
 
