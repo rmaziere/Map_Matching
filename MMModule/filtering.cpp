@@ -93,7 +93,6 @@ void Filtering::launchFiltre()
     if (m_boutonSpat->isChecked()) {
         m_filtreSpat = double(m_slidSpat->value())/100;
         m_slidSpat->setEnabled(false);
-        std::cout << m_filtreSpat;
     }
     if (m_boutonTemp->isChecked()) {
         m_filtreTemp = m_slidTemp->value();

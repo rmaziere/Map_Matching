@@ -25,10 +25,10 @@ void MainWindow::createGuiControlComponents()
 
 void MainWindow::createMainLayout()
 {
-    //centralWidget = new QWidget(this);
+    affLayout = new QHBoxLayout();
+    this->setLayout(affLayout);
     mainLayout = new QVBoxLayout();
-    //centralWidget->setLayout(mainLayout);
-    this->setLayout(mainLayout);
+    //this->setLayout(mainLayout);
     controlPaneLayout = new QGridLayout();
     mainLayout->addWidget(slidingStacked);
     mainLayout->addLayout(controlPaneLayout);
@@ -38,6 +38,10 @@ void MainWindow::createMainLayout()
 
     process = new QProcessViewer(this);
     mainLayout->addWidget(process);
+
+    affLayout->addLayout(mainLayout);
+    map = new QMapWidget();
+    affLayout->addWidget(map);
 }
 
 void MainWindow::createSubSlidingWidgets()
@@ -70,6 +74,7 @@ void MainWindow::createConnections()
     solver->moveToThread(thread);
     controller = new Controller();
     controller->m_qProcessViewer = process;
+    controller->m_qMapWidget = map;
     controller->addSolver(solver);
     controller->connectSignals();
 

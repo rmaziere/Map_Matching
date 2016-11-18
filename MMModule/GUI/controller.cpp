@@ -4,7 +4,7 @@ Controller::Controller()
 {
 
     m_qMapWidget = new QMapWidget;
-    m_qMapWidget->resize(1000,800);
+    //m_qMapWidget->resize(1000,800);
     m_qProcessViewer = new QProcessViewer;
 
 }

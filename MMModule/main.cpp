@@ -164,7 +164,7 @@ void dev_ui()
     MainWindow* w = new MainWindow();
     w->setWindowTitle("Map Matching");
 
-    w->resize(360, 504);
+    w->resize(2000, 2000);
     w->show();
 }
 

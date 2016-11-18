@@ -17,6 +17,7 @@
 
 #include "GUI/controller.h"
 #include "GUI/qprocessviewer.h"
+#include "GUI/qmapwidget.h"
 #include "grid.h"
 #include "solver.h"
 #include "track.h"
@@ -47,12 +48,15 @@ protected:
 
     SlidingStackedWidget* slidingStacked;
     QVBoxLayout* mainLayout;
+    QHBoxLayout* affLayout;
     QGridLayout* controlPaneLayout;
     //QWidget* centralWidget;
     Loading* slideWidget1;
     Filtering* slideWidget2;
     QWidget* slideWidget3;
+
     QProcessViewer* process;
+    QMapWidget* map;
 
     /**
      * @brief Value of the first Slide
