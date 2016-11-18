@@ -2,7 +2,6 @@
 #define FILTERING_H
 
 #include <QApplication>
-#include <QDialogButtonBox>
 #include <QGroupBox>
 #include <QLCDNumber>
 #include <QLabel>
@@ -22,15 +21,36 @@ public:
     ~Filtering();
 
 public slots:
+    /**
+     * @brief getInfo
+     * @param fileT
+     */
     void getInfo(File fileT);
+    /**
+     * @brief launchFiltre
+     */
     void launchFiltre();
 
 signals:
+    /**
+     * @brief ready
+     * @param m_filtreSpat
+     * @param m_filtreTemp
+     */
     void ready(double m_filtreSpat, int m_filtreTemp);
 
 private:
+    /**
+     * @brief nbPtTrack
+     */
     void nbPtTrack();
+    /**
+     * @brief spatial
+     */
     void spatial();
+    /**
+     * @brief temporal
+     */
     void temporal();
 
     QGroupBox* m_spat;
@@ -47,8 +67,8 @@ private:
 
     int m_ptTrack;
 
-    double m_filtreSpat = 0;
-    int m_filtreTemp = 0;
+    double m_filtreSpat;
+    int m_filtreTemp;
 
     int nextOk;
 };

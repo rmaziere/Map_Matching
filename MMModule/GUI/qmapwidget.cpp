@@ -33,7 +33,7 @@ void QMapWidget::onSignalDimension(double xMinGrid, double xMaxGrid, double yMin
 {
     m_scene->initialize(int(xMinGrid), int(yMinGrid), int(xMaxGrid), int(yMaxGrid));
     sceneScaleChanged(250);
-    show();
+    //show();
 
     connect(m_zoom, SIGNAL(valueChanged(int)), this, SLOT(sceneScaleChanged(int)));
 }
@@ -47,6 +47,10 @@ void QMapWidget::sceneScaleChanged(int i)
 {
     double newScale = 1.0/i;
     //QMatrix oldMatrix = m_view->matrix();
+
+//    double newScale = i/100.0;
+//    QMatrix oldMatrix = m_view->matrix();
+
     m_view->resetMatrix();
     //m_view->translate(oldMatrix.dx(), oldMatrix.dy());
     m_view->scale(newScale, -newScale);

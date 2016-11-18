@@ -1,7 +1,8 @@
 #include "geomaticsprojet.h"
 #include "qgisinterface.h"
 #include "qgsmessagelog.h"
-
+#include "../MMModule/grid.h"
+#include "../MMModule/track.h"
 #include "../MMModule/solver.h"
 #include "../MMModule/GUI/controller.h"
 #include "../MMModule/GUI/qprocessviewer.h"
@@ -40,7 +41,13 @@ void GeomaticsProjet::initGui()
    m_GISInterface->addPluginToMenu(tr("&Geomatics projet"), m_action);
 }
 
-void dev_thread()
+void dev_class()
+{
+    Grid grid; // Crash Qgis
+    Track trace; // Crash Qgis
+}
+
+/*void dev_thread() // Crash Qgis
 {
     //QThread* thread = new QThread();
     //Solver* solver = new Solver();
@@ -48,20 +55,21 @@ void dev_thread()
     //solver->m_trackFilename = "../Data/Seattle/useful_all_track.csv";
     //solver->moveToThread(thread);
     //thread->start();
-    Controller* controller = new Controller();
-    Solver* solver = new Solver(controller);
+    //Controller* controller = new Controller();
+    //Solver* solver = new Solver(controller);
     //QMetaObject::invokeMethod(solver, "onSignalStart");
     //controller->addSolver(solver);
     //controller->connectSignals();
-    controller->m_qProcessViewer->resize(500, 500);
-    controller->m_qProcessViewer->show();
-}
+    //controller->m_qProcessViewer->resize(500, 500);
+    //controller->m_qProcessViewer->show();
+}*/
 
 void GeomaticsProjet::run()
 {
     QgsMessageLog::instance()->logMessage("Geomatics projet launched", "Geomatics projet", QgsMessageLog::INFO);
 
-    dev_thread();
+    //dev_thread(); // Crash Qgis
+    //dev_class(); // Crash Qgis
 }
 
 void GeomaticsProjet::unload()

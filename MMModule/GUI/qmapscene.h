@@ -1,9 +1,9 @@
 #ifndef QMAPSCENE_H
 #define QMAPSCENE_H
 
-#include "pointGPS.h"
-#include "pointroad.h"
-#include "road.h"
+#include "../pointGPS.h"
+#include "../pointroad.h"
+#include "../road.h"
 #include <QGraphicsRectItem>
 #include <QGraphicsScene>
 #include <unordered_map>

@@ -23,8 +23,29 @@ public:
 
     void start();
     void viterbiSetup();
+
+    /**
+    * @brief setDistance Calculate distance between GPS point et Road
+    * @param p GPS point
+    * @param r Road
+    */
     void setDistance(PointGPS* p, Road& r);
+    /**
+     * @brief readFiles Read files : track and grid
+     * @param file1 track file
+     * @param file2 grid file
+     */
     void readFiles(File file1, File file2);
+    /**
+     * @brief filterSpace Use Spatial filter with a value
+     * @param val value
+     */
+    void filterSpace(double val);
+    /**
+     * @brief filterTemp Use Temporal filter with a value
+     * @param val value
+     */
+    void filterTemp(int val);
 
     QString m_gridFilename; // to move in protected once signals are in use
     QString m_trackFilename;

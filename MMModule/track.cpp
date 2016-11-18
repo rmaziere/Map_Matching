@@ -5,7 +5,7 @@
 
 using namespace std;
 
-#define DEBUG_READCSV false
+#define DEBUG_READCSV true
 
 Track::Track()
     : m_xMin(std::numeric_limits<double>::max())
@@ -14,6 +14,15 @@ Track::Track()
     , m_yMax(0.0)
 {
 }
+#ifdef QT_DEBUG
+Track::Track(const Track& oldTrack)
+    : m_xMin(oldTrack.m_xMin)
+    , m_xMax(oldTrack.m_xMax)
+    , m_yMin(oldTrack.m_yMin)
+    , m_yMax(oldTrack.m_yMax)
+{
+}
+#endif
 
 Track::~Track()
 {
@@ -188,13 +197,16 @@ void Track::readFromCSV(QString filename)
                 ts = QDateTime::fromString(specificDate[0], "yyyy-MM-dd");
             else if ((specificDate[0].size() == 0) && (specificDate[1].size() == 8))
                 ts = QDateTime::fromString(specificDate[1], "hh:mm:ss");
-            else if ((specificDate[0].size() == 11) && (specificDate[1].size() == 8)) {
+            else if ((specificDate[0].size() == 10) && (specificDate[1].size() == 8)) {
+                ts = QDateTime(QDate::fromString(specificDate[0], "yyyy/MM/dd"), QTime::fromString(specificDate[1], "hh:mm:ss"));
+            }else if ((specificDate[0].size() == 11) && (specificDate[1].size() == 8)) {
                 // Attention : si les mois sont enregistres avec "Jan",
                 // il faut passer en langue anglaise/americaine
                 // Sinon timeStamp est vide... et c'est embetant
                 QLocale locale(QLocale::English, QLocale::UnitedStates);
                 ts = locale.toDateTime((specificDate[0] + specificDate[1]), "dd'-'MMM'-'yyyyhh':'mm':'ss");
             }
+
             if (DEBUG_READCSV)
                 cout << "timestamp : " << ts.toString("yyyy-MM-dd hh:mm:ss").toStdString();
             if (DEBUG_READCSV)
@@ -208,7 +220,7 @@ void Track::readFromCSV(QString filename)
     }
     applyThresholdToBox();
     if (DEBUG_READCSV)
-        cout << "Le fichier " << filename.toStdString() << " a été lu." << endl;
+        cout << "Le fichier de traces GPS " << filename.toStdString() << " a été lu." << endl;
 }
 
 vector<PointGPS*> Track::getPoints()
@@ -218,6 +230,8 @@ vector<PointGPS*> Track::getPoints()
 
 void Track::temporalFilter(uint interval)
 {
+    int initialNumberOfPoints(m_points.size());
+    emit signalMessage(QString("---\nTemporal filter initilizer ... ") + QString::number(initialNumberOfPoints) + QString(" initial points") + QString("\nTemporal filter will delete each successive point withing interval of ") + QString::number(interval) + QString(" seconds"));
     PointGPS* pointPrecedent;
 
     bool firstElement(true);
@@ -235,10 +249,17 @@ void Track::temporalFilter(uint interval)
             }
         }
     }
+
+    int endNumberOfPoints(m_points.size());
+    double reduction(((double)(initialNumberOfPoints - endNumberOfPoints) * 100) / initialNumberOfPoints);
+    emit signalMessage(QString("Temporal filter ended ... ") + QString::number(endNumberOfPoints) + QString(" points left ") + QString(" ( ") + QString::number(reduction, 'g', 4) + QString(" % of reduction)"));
 }
 
 void Track::spaceFilter(double interval)
 {
+    int initialNumberOfPoints(m_points.size());
+    emit signalMessage(QString("---\nSpatial filter initilizer ... ") + QString::number(initialNumberOfPoints) + QString(" initial points") + QString("\nSpatial filter will delete each successive point withing interval of ") + QString::number(interval) + QString(" meters"));
+
     for (uint i = 0; i < m_points.size(); i++) { // on parcours la liste des points
         // tant qu on ne se trouve pas sur le dernier point
         //&& (security segmentation)
@@ -247,6 +268,9 @@ void Track::spaceFilter(double interval)
             this->delPointGPS(i + 1); // on supprime le point suivant
         }
     }
+    int endNumberOfPoints(m_points.size());
+    double reduction(((double)(initialNumberOfPoints - endNumberOfPoints) * 100) / initialNumberOfPoints);
+    emit signalMessage(QString("Spatial filter ended ... ") + QString::number(endNumberOfPoints) + QString(" points left ") + QString(" ( ") + QString::number(reduction, 'g', 4) + QString(" % of reduction)"));
 }
 
 void Track::delPointGPS(int occurrence)

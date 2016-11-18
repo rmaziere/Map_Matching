@@ -5,11 +5,7 @@
 #include <QFileDialog>
 #include <QString>
 #include <QStringList>
-#include <QTextStream>
-#include <iostream>
-#include <string>
-
-#include "myexception.h"
+//#include <string>
 
 /**
  * @brief The File class

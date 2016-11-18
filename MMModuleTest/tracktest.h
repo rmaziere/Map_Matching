@@ -3,7 +3,7 @@
 
 #include <QDateTime>
 #include <vector>
-
+#include <QObject>
 #include "../MMModule/track.h"
 #include "gtest/gtest.h"
 
@@ -21,14 +21,12 @@ protected:
 
 TEST_F(TrackTest, Constructeurs)
 {
-
     Track Trace = Track();
     EXPECT_EQ(0, Trace.getPoints().size());
 }
 
 TEST_F(TrackTest, AddPoint)
 {
-
     Track Trace = Track();
     unsigned int timeStamp = QDateTime::currentDateTime().toTime_t();
 
@@ -42,7 +40,6 @@ TEST_F(TrackTest, AddPoint)
 
 TEST_F(TrackTest, DeletePoint)
 {
-
     Track Trace = Track();
     EXPECT_EQ(0, Trace.getPoints().size());
 
@@ -81,7 +78,6 @@ TEST_F(TrackTest, readFromCSVfr)
 
 TEST_F(TrackTest, includingRectangle)
 {
-
     Track Trace5 = Track();
     for (int i = 4; i < 11; i++) {
         Trace5.updateBox(i, i+2);
@@ -94,7 +90,6 @@ TEST_F(TrackTest, includingRectangle)
 
 TEST_F(TrackTest, spaceFilterY)
 {
-
     Track Trace = Track();
     Trace.addPoint(0,0,0,QDateTime::currentDateTime().toTime_t());
     Trace.addPoint(0,1,0,QDateTime::currentDateTime().toTime_t());
@@ -148,7 +143,6 @@ TEST_F(TrackTest, spaceFilterXY)
 
 TEST_F(TrackTest, temporalFilter)
 {
-
     Track Trace = Track();
     unsigned int time = QDateTime::fromString("2016-12-24 12:00:02", "yyyy-MM-dd hh:mm:ss").toTime_t();
     for (int i=0; i<10000; i++){
