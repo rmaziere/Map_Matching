@@ -50,13 +50,11 @@ protected:
     QVBoxLayout* mainLayout;
     QHBoxLayout* affLayout;
     QGridLayout* controlPaneLayout;
-    //QWidget* centralWidget;
     Loading* slideWidget1;
     Filtering* slideWidget2;
-    QWidget* slideWidget3;
+    QMapWidget* slideWidget3;
 
     QProcessViewer* process;
-    QMapWidget* map;
 
     /**
      * @brief Value of the first Slide

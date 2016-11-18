@@ -25,10 +25,8 @@ void MainWindow::createGuiControlComponents()
 
 void MainWindow::createMainLayout()
 {
-    affLayout = new QHBoxLayout();
-    this->setLayout(affLayout);
     mainLayout = new QVBoxLayout();
-    //this->setLayout(mainLayout);
+    this->setLayout(mainLayout);
     controlPaneLayout = new QGridLayout();
     mainLayout->addWidget(slidingStacked);
     mainLayout->addLayout(controlPaneLayout);
@@ -38,25 +36,13 @@ void MainWindow::createMainLayout()
 
     process = new QProcessViewer(this);
     mainLayout->addWidget(process);
-
-    affLayout->addLayout(mainLayout);
-    map = new QMapWidget();
-    affLayout->addWidget(map);
 }
 
 void MainWindow::createSubSlidingWidgets()
 {
     slideWidget1 = new Loading();
     slideWidget2 = new Filtering();
-    slideWidget3 = new QWidget();
-
-    QVBoxLayout* slideWidget3layout = new QVBoxLayout();
-    slideWidget3->setLayout(slideWidget3layout);
-
-    QPushButton* b31 = new QPushButton("Isn't");
-    slideWidget3layout->addWidget(b31);
-    QPushButton* b32 = new QPushButton("Qt cool ?");
-    slideWidget3layout->addWidget(b32);
+    slideWidget3 = new QMapWidget();
 }
 
 void MainWindow::createSlidingStackedWidget()
@@ -74,7 +60,7 @@ void MainWindow::createConnections()
     solver->moveToThread(thread);
     controller = new Controller();
     controller->m_qProcessViewer = process;
-    controller->m_qMapWidget = map;
+    controller->m_qMapWidget = slideWidget3;
     controller->addSolver(solver);
     controller->connectSignals();
 
