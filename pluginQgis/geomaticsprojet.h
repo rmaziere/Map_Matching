@@ -40,8 +40,11 @@ public:
     // Called when the plugin is disabled
     void unload() override;
 
+    // Called class Track & Grid
+    void dev_class();
+
     // Called thread and GUI
-    void dev_thread();
+    //void dev_thread(); // Crash Qgis
 
 public slots:
     // Slot called when the plugin is launched
