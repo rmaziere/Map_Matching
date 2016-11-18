@@ -42,13 +42,31 @@ public slots:
      * @param fTemp value of temporal filter
      */
     void readyToNext2(double fSpat, int fTemp);
+    /**
+     * @brief putNone Disable next button
+     */
     void putNone();
 
 protected:
+    /**
+     * @brief createGuiControlComponents
+     */
     void createGuiControlComponents();
+    /**
+     * @brief createMainLayout
+     */
     void createMainLayout();
+    /**
+     * @brief createSubSlidingWidgets
+     */
     void createSubSlidingWidgets();
+    /**
+     * @brief createConnections
+     */
     void createConnections();
+    /**
+     * @brief createSlidingStackedWidget
+     */
     void createSlidingStackedWidget();
     QPushButton* buttonNext;
     QPushButton* buttonCancel;
