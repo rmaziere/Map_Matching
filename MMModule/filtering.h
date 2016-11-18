@@ -47,8 +47,8 @@ private:
 
     int m_ptTrack;
 
-    double m_filtreSpat = 0;
-    int m_filtreTemp = 0;
+    double m_filtreSpat;
+    int m_filtreTemp;
 
     int nextOk;
 };
