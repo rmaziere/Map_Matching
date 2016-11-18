@@ -14,7 +14,15 @@ SOURCES += main.cpp \
     ../MMModule/pointGPS.cpp \
     ../MMModule/road.cpp \
     ../MMModule/sauvegarde.cpp \
-    ../MMModule/track.cpp
+    ../MMModule/track.cpp \
+    ../MMModule/emissionprobability.cpp \
+    ../MMModule/file.cpp \
+    ../MMModule/filtering.cpp \
+    ../MMModule/loading.cpp \
+    ../MMModule/main.cpp \
+    ../MMModule/MainWindow.cpp \
+    ../MMModule/SlidingStackedWidget.cpp \
+    ../MMModule/solver.cpp
 
 HEADERS += \
     ../MMModule/myexception.h \
@@ -29,4 +37,11 @@ HEADERS += \
     tracktest.h \
     pointgpstest.h \
     roadtest.h \
-    gridtest.h
+    gridtest.h \
+    ../MMModule/emissionprobability.h \
+    ../MMModule/file.h \
+    ../MMModule/filtering.h \
+    ../MMModule/loading.h \
+    ../MMModule/MainWindow.h \
+    ../MMModule/SlidingStackedWidget.h \
+    ../MMModule/solver.h

@@ -7,14 +7,10 @@
 #include <math.h>
 #include <stdio.h>
 #include <vector>
-//#include <QLabel>
 
 #include "GUI/controller.h"
-//#include "GUI/map.h"
 #include "MainWindow.h"
-#include "file.h"
 #include "grid.h"
-//#include "journalprocess.h"
 #include "loading.h"
 #include "myexception.h"
 #include "pointGPS.h"
@@ -82,7 +78,6 @@ void dev_gridAndTrack()
     track.outputInfos();
 
     grid.setBoundingBox(track.m_xMin, track.m_xMax, track.m_yMin, track.m_yMax);
-    //grid.readFromCSVSeattle(gridFile);
     grid.readFromCSV(gridFile);
     grid.outputInfos();
     grid.buildMarkovMatrix();
@@ -93,21 +88,14 @@ void dev_gridAndTrack()
     std::cout << "The end." << std::endl;
 }
 
-void ui()
-{
-    Loading fenetre;
-    // Affichage de la fenêtre
-    fenetre.show();
-}
-
 void dev_file()
 {
     File f;
     f.selectFilesToOpen("shp");
     cout << "File name : " << f.fileName.at(0).toStdString() << ", file extension : " << f.fileExtension.at(0).toStdString() << endl;
 
-    f.shp2csv("Polyline");
-    cout << "File name : " << f.fileName.at(0).toStdString() << ", file extension : " << f.fileExtension.at(0).toStdString() << endl;
+    cout << f.shp2csv("Point") << endl;
+    cout << "File path : " << f.filePath.at(0).toStdString() << "File name : " << f.fileName.at(0).toStdString() << ", file extension : " << f.fileExtension.at(0).toStdString() << endl;
 }
 
 /*void dev_img()
@@ -169,7 +157,7 @@ void dev_file()
     cout << "Facteur d'échelle : " << m.scale << endl;
 }*/
 
-void dev_ui2()
+void dev_ui()
 {
     //Fenetre non enlevable
     MainWindow *w = new MainWindow();
@@ -190,7 +178,9 @@ int main(int argc, char* argv[])
 
     //dev_img();
     //dev_thread();
-    dev_ui2();
+    //dev_file();
+    dev_ui();
+
     return app.exec();
     //return app.closingDown();
 }
