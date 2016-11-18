@@ -16,9 +16,6 @@ void Solver::start()
     emit signalDimension(track.m_xMin, track.m_xMax, track.m_yMin, track.m_yMax);
     emit signalAllPoints(m_trackPoints);
 
-    track.temporalFilter(10);
-    track.spaceFilter(3.0);
-
     grid.readFromCSV(m_gridFilename);
     emit signalMessage(QString::fromStdString(grid.infos()));
     emit signalAllRoads(&grid.m_mapOfAllRoads, &(grid.m_vectorOfPoints));
