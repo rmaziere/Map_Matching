@@ -36,13 +36,13 @@ void dev_thread()
 {
     QThread* thread = new QThread();
     Solver* solver = new Solver();
-    //solver->m_trackFilename = "../Data/Seattle/useful_all_track.csv";
-    //solver->m_gridFilename = "../Data/Seattle/useful_all_network.csv";
+    solver->m_trackFilename = "../Data/Seattle/useful_all_track.csv";
+    solver->m_gridFilename = "../Data/Seattle/useful_all_network.csv";
     //solver->m_trackFilename = "../Data/Seattle/mini_start_track.csv";
     //solver->m_gridFilename = "../Data/Seattle/mini_start_network.csv";
 
-    solver->m_trackFilename = "../Data/France/Zones/Trace_Z5_L93.csv";
-    solver->m_gridFilename = "../Data/France/Zones/Route_Ready_Z5_L93.csv";
+    //solver->m_trackFilename = "../Data/France/Zones/Trace_Z5_L93.csv";
+    //solver->m_gridFilename = "../Data/France/Zones/Route_Ready_Z5_L93.csv";
 
     solver->moveToThread(thread);
     thread->start();
@@ -52,9 +52,6 @@ void dev_thread()
     controller->connectSignals();
     controller->m_qProcessViewer->resize(500, 500);
     controller->m_qProcessViewer->show();
-
-    controller->m_qMapWidget->resize(500, 500);
-    controller->m_qMapWidget->show();
 }
 
 void dev_grid()
@@ -83,7 +80,7 @@ void dev_gridAndTrack()
     track.readFromCSV(trackFile);
     track.outputInfos();
 
-    grid.setBoundingBox(track.m_xMin, track.m_xMax, track.m_yMin, track.m_yMax);
+    grid.setTrackBoundingBox(track.m_xMin, track.m_xMax, track.m_yMin, track.m_yMax);
     grid.readFromCSV(gridFile);
     grid.outputInfos();
     grid.buildMarkovMatrix();

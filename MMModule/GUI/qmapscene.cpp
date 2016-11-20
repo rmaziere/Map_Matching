@@ -3,11 +3,10 @@
 
 #define POINT_SIZE 15
 #define ROAD_SIZE 5
+#define RADIUS 200
 
-/**
-http://doc.qt.io/qt-5/graphicsview.html#the-graphics-view-coordinate-system
-Finally, if you use want to find what items are inside a view ellipse, you can pass a QPainterPath to mapToScene(), and then pass the mapped path to QGraphicsScene::items().
- */
+#define KEY_ISROAD 0
+#define KEY_ROADID 1
 
 
 QMapScene::QMapScene(QObject* parent)
@@ -23,21 +22,70 @@ void QMapScene::initialize(int startx, int starty, int width, int height)
     this->setSceneRect(QRectF(startx, starty, m_width - startx, m_height - starty));
 }
 
+void QMapScene::highlightSelectedPoint(int pointId)
+{
+    QGraphicsRectItem *it= pointItems[pointId];
+    it->setPen(QPen(QColor(GPSSELECTED), POINT_SIZE*2));
+    //it->setBrush(QBrush(QColor(GPSSELECTED)));
+    // show circle 200m radius
+    m_selectionCircle->setPen(QPen(QColor(COLORCLEAR), POINT_SIZE));
+    m_selectionCircle->setPos(it->x()-RADIUS, it->y()-RADIUS);
+    m_selectionCircle->setPen(QPen(QColor(GPSSELECTED), POINT_SIZE));
+    //update();
+}
+
+void QMapScene::highlightRoadsDefault(bool basic)
+{
+    QList<QGraphicsItem *> list= m_selectionCircle->collidingItems();
+    for (auto *item: list) {
+        if (item->data(KEY_ISROAD).toBool()) {
+            if (basic) ((QGraphicsPathItem*) item)->setPen(QPen(QColor(ROADDEFAULT)));
+            else ((QGraphicsPathItem*) item)->setPen(QPen(QColor(ROADSELECTED)));
+        }
+    }
+}
+
+void QMapScene::setBackToDefault(int pointId)
+{
+    QGraphicsRectItem *it= pointItems[pointId];
+    it->setPen(QPen(QColor(GPSDEFAULT), POINT_SIZE));
+}
+
+void QMapScene::setNeighborRoads()
+{
+    QList<QGraphicsItem *> list= m_selectionCircle->collidingItems();
+    m_neighboursId.clear();
+    for (auto *item: list) {
+        if (item->data(KEY_ISROAD).toBool()) {
+            m_neighboursId.push_back(item->data(KEY_ROADID).toLongLong());
+        }
+    }
+
+}
+
 void QMapScene::onSignalAllPoints(std::vector<PointGPS*>* p)
 {
     m_trackPoints = p;
     int count = 0;
 
     for (auto p : *m_trackPoints) {
-        QGraphicsRectItem* rect = new QGraphicsRectItem(p->x(), p->y(), POINT_SIZE, POINT_SIZE);
+       /*
+        QGraphicsRectItem* rect = new QGraphicsRectItem(p->x(), p->y(), POINT_SIZE, POINT_SIZE);*/
+        QGraphicsRectItem* rect= new QGraphicsRectItem(0,0,POINT_SIZE, POINT_SIZE);
+        rect->setPos(p->x(), p->y());
         rect->setPen(QPen(QColor(GPSDEFAULT), POINT_SIZE));
+        rect->setData(KEY_ISROAD, false);
         addItem(rect);
 
         pointItems.push_back(rect);
         //qreal x, qreal y, qreal width, qreal height, QGraphicsItem *parent = Q_NULLPTR
         ++count;
-        std::cout << rect->x() << " " << rect->y() << std::endl;
     }
+    PointGPS *p0= m_trackPoints->at(0);
+    m_selectionCircle= new QGraphicsEllipseItem(0,0,2*RADIUS, 2*RADIUS);
+    m_selectionCircle->setPos(p0->x()-RADIUS, p0->y()-RADIUS);
+    m_selectionCircle->setPen(QPen(QColor(GPSSELECTED), POINT_SIZE));
+    addItem(m_selectionCircle);
     emit signalTrackCompleted("Track has been graphically processed");
 }
 
@@ -52,30 +100,38 @@ void QMapScene::onSignalAllRoads(std::unordered_map<long, Road>* roads, std::vec
         for (uint i = 1; i < listOfPointId.size(); i++) {
             path->lineTo(m_roadPoints->at(listOfPointId[i]).x(), m_roadPoints->at(listOfPointId[i]).y());
         }
-        addPath(*path, QPen(QColor(ROADDEFAULT)));
+        QGraphicsPathItem *pathItem= new QGraphicsPathItem();
+        pathItem->setPath(*path);
+        pathItem->setData(KEY_ISROAD, true);
+        qlonglong v= r.edgeId();
+        pathItem->setData(KEY_ROADID, v);
+        pathItem->setPen(QPen(QColor(ROADDEFAULT)));
+        addItem(pathItem);
     }
 }
 
+
 void QMapScene::onSignalStart()
 {
-
+    QGraphicsRectItem *it= pointItems[0];
+    highlightSelectedPoint(0);
+    emit signalItemToShow(it);
 }
 
 void QMapScene::onSignalCurrentPoint(int pointId)
 {
-    // show point
-    std::cout << pointItems.size() << std::endl;
-    QGraphicsRectItem *it= pointItems[pointId];
-    //it->mapToScene()
-    it->setPen(QPen(QColor(GPSDEFAULT), POINT_SIZE*10));
-    it->setBrush(QBrush(QColor(0, 0, 0, 150)));
-    QPointF pos= it->scenePos();
-    // show circle 200m radius
-    //QGraphicsEllipseItem *test= new QGraphicsEllipseItem(pos.x(), pos.y(), 200, 200);
-    addEllipse(it->x(), it->y(), 200, 200, QPen(QColor("green"),20));
-    // select roads
+    if (pointId>0) {
+        setBackToDefault(pointId-1);
+        highlightRoadsDefault(true);
+    }
+    highlightSelectedPoint(pointId);
 
-    // send roads
+    QList<QGraphicsItem *> list= m_selectionCircle->collidingItems();
+    highlightRoadsDefault(false);
+    setNeighborRoads();
 
-    std::cout << "point at " << pos.x() << " " << pos.y() << std::endl;
+    std::cout << "Point " << pointId << std::endl;
+
+    emit signalNeighboursId(&m_neighboursId);
+    emit signalItemToShow(pointItems[pointId]);
 }

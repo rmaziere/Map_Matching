@@ -52,7 +52,7 @@ public:
      * @param yMin Coordinate yMin of a track
      * @param yMax Coordinate yMax of a track
      */
-    void setBoundingBox(double xMin, double xMax, double yMin, double yMax);
+    void setTrackBoundingBox(double xMin, double xMax, double yMin, double yMax);
 
     /**
      * @brief Reads a csv file and inserts info into the corresponding attributs

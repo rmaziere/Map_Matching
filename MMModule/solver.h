@@ -13,9 +13,6 @@
 #include <unordered_map>
 #include <vector>
 
-typedef std::unordered_map<long, Road> AllRoadMap;
-typedef std::vector<PointGPS*> AllPointVector;
-
 class Solver : public QObject {
     Q_OBJECT
 public:
@@ -29,7 +26,7 @@ public:
     * @param p GPS point
     * @param r Road
     */
-    void setDistance(PointGPS* p, Road& r);
+    void setDistance(PointGPS* p, Road *r);
     /**
      * @brief readFiles Read files : track and grid
      * @param file1 track file
@@ -47,14 +44,16 @@ public:
      */
     void filterTemp(int val);
 
+
+
     QString m_gridFilename; // to move in protected once signals are in use
     QString m_trackFilename;
     //protected:
     Track track;
     Grid grid;
-    AllRoadMap* m_roads;
+    std::unordered_map<long, Road>* m_roads;
     std::vector<PointRoad>* m_roadPoints;
-    AllPointVector* m_trackPoints;
+    std::vector<PointGPS*>* m_trackPoints;
 
 signals:
     void signalMessage(QString);
@@ -66,9 +65,10 @@ public slots:
     void onSignalSetGrid(QString s);
     void onSignalSetTrack(QString s);
     void onSignalStart();
-
+    void onSignalNextStep();
+    void onSignalNeighbours(std::vector<long>* roadsId);
 protected:
-    int m_currentStep;
+    unsigned int m_currentStep;
     std::vector<std::vector<float>> T1, T2;
 };
 

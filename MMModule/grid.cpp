@@ -9,8 +9,8 @@
 
 using namespace std;
 
-#define DEBUG_READCSV true
-#define DEBUG_ADDROAD true
+#define DEBUG_READCSV false
+#define DEBUG_ADDROAD false
 
 long Grid::counter = 0;
 
@@ -33,7 +33,7 @@ Grid::~Grid()
     m_vectorOfPoints.clear();
 }
 
-void Grid::setBoundingBox(double xMin, double xMax, double yMin, double yMax)
+void Grid::setTrackBoundingBox(double xMin, double xMax, double yMin, double yMax)   // from GPS track
 {
     m_xMin = xMin;
     m_xMax = xMax;
@@ -261,10 +261,6 @@ AllRoadMap::iterator Grid::getRoadEntry(long id)
 bool Grid::inFootPrint(double x, double y)
 {
     return (m_xMin <= x) && (x <= m_xMax) && (m_yMin <= y) && (y <= m_yMax);
-}
-
-void Grid::buildKDTree()
-{
 }
 
 void Grid::buildMarkovMatrix()

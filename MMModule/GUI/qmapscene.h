@@ -10,7 +10,10 @@
 #include <vector>
 
 #define GPSDEFAULT "red"
+#define GPSSELECTED "green"
 #define ROADDEFAULT "grey"
+#define ROADSELECTED "blue"
+#define COLORCLEAR "white"
 #define X 0
 #define Y 1
 
@@ -20,9 +23,15 @@ public:
     explicit QMapScene(QObject* parent = 0);
     void initialize(int startx, int starty, int width, int height);
     double transform(double x, int dim);
+    void highlightSelectedPoint(int pointId);
+    void highlightRoadsDefault(bool basic);
+    void setBackToDefault(int pointId);
+    void setNeighborRoads();
+
 signals:
     void signalTrackCompleted(QString);
-
+    void signalItemToShow(QGraphicsItem *);
+    void signalNeighboursId(std::vector<long> *);
 public slots:
     void onSignalAllPoints(std::vector<PointGPS*>*);
     void onSignalAllRoads(std::unordered_map<long, Road>* roads, std::vector<PointRoad>*);
@@ -33,6 +42,7 @@ protected:
     std::vector<PointGPS*>* m_trackPoints;
     std::unordered_map<long, Road>* m_roads;
     std::vector<PointRoad>* m_roadPoints;
+    std::vector<long> m_neighboursId;
     double m_scaleFactor = 1; /**< scale between the grid and the image*/
     int m_width; /**< image width*/
     int m_height; /**< image height*/
@@ -40,6 +50,7 @@ protected:
     int m_shiftY; /**< delta between the SRID's y origin and the grid's y*/
 
     std::vector<QGraphicsRectItem *> pointItems;
+    QGraphicsEllipseItem *m_selectionCircle;
 };
 
 #endif // QMAPSCENE_H

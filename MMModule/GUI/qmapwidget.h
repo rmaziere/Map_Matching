@@ -15,25 +15,28 @@ public:
     explicit QMapWidget(QWidget* parent = 0);
 
     void buildControls();
+    //void startSimulation();
+
 
     QMapScene* m_scene;
+    QPushButton* m_next;
 signals:
 
 private slots:
-    void sceneScaleChanged(int);
+    void sceneScaleChanged(int scaleTickValue);
 
 public slots:
-    void onSignalShow();
     void onSignalDimension(double xMinGrid, double xMaxGrid, double yMinGrid, double yMaxGrid);
-    void onSignalStart(); // zoom on the first GPS point
+    void onSignalItemToShow(QGraphicsItem *item);
 
 protected:
     QGraphicsView* m_view;
     QVBoxLayout* m_layout;
     QWidget* m_controlZone;
     QPushButton* m_play;
-    QPushButton* m_next;
+
     QSlider *m_zoom;
+    bool m_startSimulation;
 };
 
 #endif // QMAPWIDGET_H

@@ -5,7 +5,7 @@
 
 using namespace std;
 
-#define DEBUG_READCSV true
+#define DEBUG_READCSV false
 
 Track::Track()
     : m_xMin(std::numeric_limits<double>::max())

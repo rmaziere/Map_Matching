@@ -2,7 +2,7 @@ QT += core
 QT += gui
 QT += widgets
 
-DEFINES += _TESTPERSO
+#DEFINES += _GTEST
 
 CONFIG += c++11
 
@@ -33,7 +33,6 @@ SOURCES += main.cpp \
     MainWindow.cpp \
     SlidingStackedWidget.cpp \
     GUI/controller.cpp \
-    GUI/graphicemitter.cpp \
     GUI/qprocessviewer.cpp \
     GUI/qmapwidget.cpp \
     GUI/qmapscene.cpp
@@ -57,7 +56,6 @@ HEADERS += \
     SlidingStackedWidget.h \
     MainWindow.h \
     GUI/controller.h \
-    GUI/graphicemitter.h \
     GUI/qprocessviewer.h \
     GUI/qmapwidget.h \
     GUI/qmapscene.h
