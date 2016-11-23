@@ -22,8 +22,4 @@ void Road::outputInfos() const
     std::cout << "\t and has " << m_setOfNeighbors.size() << " neighbors (including itself)" << std::endl;
 }
 
-long Road::getm_edgeId()
-{
 
-    return m_edgeId;
-}

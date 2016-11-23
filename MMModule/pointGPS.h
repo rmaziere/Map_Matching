@@ -31,15 +31,18 @@ public:
     }
 
     void addEmissionProbability(long roadId, double distance);
+    void updateProbability();
 
     std::string infos() const;
 
     // accessors
     unsigned int timeStamp() const { return m_timeStamp; }
     float altitude() const { return m_altitude; }
+
+    std::vector<EmissionProbability> m_emissionProbability;
 protected:
     float m_altitude; // TODO keep ?
     unsigned int m_timeStamp; // WARNING in second
-    std::vector<EmissionProbability> m_emissionProbability;
+
 };
 #endif // POINTGPS_H

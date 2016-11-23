@@ -57,14 +57,6 @@ public:
     std::vector<Point*> getListOfPoints() const;
 
     /**
-     * @brief Get the id of the road
-     * @return the id of the road
-     * @todo refactor the name of the function
-     * @todo delete edgeId() or getm_edgeId() because they do the same stuff
-     */
-    long getm_edgeId();
-
-    /**
      * @brief print some informations about the road
      */
     void outputInfos() const;
@@ -73,8 +65,6 @@ public:
     /**
      * @brief Get the id of the road
      * @return the id of the road
-     * @todo refactor the name of the function
-     * @todo delete edgeId() or getm_edgeId() because they do the same stuff
      */
     long edgeId() const { return m_edgeId; }
 
@@ -89,10 +79,12 @@ public:
      * @return the number of neighbors of the road
      */
     int getNoOfNeighbors() const { return m_setOfNeighbors.size(); }
+
+    std::set<long> m_setOfNeighbors; ///<  Set of all roadId connected to this one (including this one)
+
 protected:
     long m_edgeId; ///<  Id of the road
     std::vector<int> m_vectorOfPointsId; ///<  Vector representing the id of each node (Point object)
-    std::set<long> m_setOfNeighbors; ///<  Set of all roadId connected to this one (including this one)
 };
 
 #endif // ROAD_H

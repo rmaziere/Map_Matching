@@ -10,8 +10,11 @@ public:
     {
     }
 
-    void updateProbability(float p) { m_probability = p; }
+    void updateProbability(double distanceAll);
 
+    long roadId() const { return m_roadId; }
+    double distance() const { return m_distance; }
+    float probability() const { return m_probability; }
 protected:
     long m_roadId;
     double m_distance;

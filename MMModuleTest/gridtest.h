@@ -27,7 +27,7 @@ TEST_F(GridTest, Constructor)
 TEST_F(GridTest, setBoundingBox)
 {
     Grid grid;
-    grid.setBoundingBox(10.0,418.0,30.012,50.2);
+    grid.setTrackBoundingBox(10.0,418.0,30.012,50.2);
     EXPECT_DOUBLE_EQ(10.0, grid.xMin());
     EXPECT_DOUBLE_EQ(418.0, grid.xMax());
     EXPECT_DOUBLE_EQ(30.012, grid.yMin());
@@ -37,7 +37,7 @@ TEST_F(GridTest, setBoundingBox)
 TEST_F(GridTest, InFootPrint)
 {
     Grid myGrid;
-    myGrid.setBoundingBox(1,8,3,50);
+    myGrid.setTrackBoundingBox(1,8,3,50);
     ASSERT_TRUE(myGrid.inFootPrint(3,12));
     ASSERT_TRUE(myGrid.inFootPrint(1,48));
     ASSERT_FALSE(myGrid.inFootPrint(-200,12));
@@ -55,7 +55,7 @@ TEST_F(GridTest, LoadRoadFromFile)
 TEST_F(GridTest, LoadPointsFromFile)
 {
     Grid myGrid;
-    myGrid.setBoundingBox(0,std::numeric_limits<double>::max(),0,std::numeric_limits<double>::max());
+    myGrid.setTrackBoundingBox(0,std::numeric_limits<double>::max(),0,std::numeric_limits<double>::max());
     myGrid.readFromCSV("../Data/Unit_tests_data_set/simpleNetworkLoaderExemple.csv");
     EXPECT_EQ(2, myGrid.getRoads()[0].size());
     EXPECT_DOUBLE_EQ(14, myGrid.getPoints()[0].size());
@@ -89,7 +89,7 @@ TEST_F(GridTest, updateGrid)
 TEST_F(GridTest, trackInGrid)
 {
     Grid grid;
-    grid.setBoundingBox(1,5,30,50);
+    grid.setTrackBoundingBox(1,5,30,50);
     grid.readFromCSV("../Data/Unit_tests_data_set/gridTestPointsHaveNoDuplicate.csv");
     ASSERT_TRUE(grid.trackInGrid());
 }
