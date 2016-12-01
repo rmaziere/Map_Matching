@@ -16,7 +16,6 @@ SOURCES += main.cpp \
     ../MMModule/sauvegarde.cpp \
     ../MMModule/track.cpp \
     ../MMModule/emissionprobability.cpp \
-    ../MMModule/file.cpp \
     ../MMModule/solver.cpp
 
 HEADERS += \
@@ -34,5 +33,4 @@ HEADERS += \
     roadtest.h \
     gridtest.h \
     ../MMModule/emissionprobability.h \
-    ../MMModule/file.h \
     ../MMModule/solver.h

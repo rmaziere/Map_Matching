@@ -16,6 +16,19 @@ double Point::distanceToPoint(const Point& p) const
     return sqrt(pow(p.m_x - this->m_x, 2) + pow(p.m_y - this->m_y, 2));
 }
 
+std::vector<double> Point::projectionOnSegment(const Point &a, const Point &b) const
+{
+    double num = (this->m_x - a.m_x) * (b.m_x - a.m_x) + (this->m_y - a.m_y) * (b.m_y - a.m_y);
+    double tSol = num / pow(a.distanceToPoint(b), 2);
+    double t = std::max(0.0, std::min(1.0, tSol));
+    Point proj(a.m_x + t * (b.m_x - a.m_x), a.m_y + t * (b.m_y - a.m_y));
+    std::vector<double> res;
+    res.push_back(proj.x()); res.push_back(proj.y());
+    res.push_back(this->distanceToPoint(proj));
+    return res;
+
+}
+
 double Point::distanceToSegment(const Point& a, const Point& b) const
 {
     if (a.samePointAs(b)) {

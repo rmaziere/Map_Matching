@@ -80,7 +80,8 @@ protected:
     std::vector<std::vector<float>> T1, T2;
     std::vector<long> m_fromIndexToRoadId;
     std::unordered_map<long,int> m_fromRoadIdToIndex;
-
+    std::vector<long> *prevRoadIds;
+    PointGPS *prevPoint;
 };
 
 #endif // SOLVER_H

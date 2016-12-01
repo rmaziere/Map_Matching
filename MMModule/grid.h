@@ -94,14 +94,16 @@ public:
     void setDistance(PointGPS& p, Road& r);
 
     /**
-     * @brief buildKDTree
-     */
-    void buildKDTree();
-
-    /**
      * @brief buildMarkovMatrix
      */
     void buildMarkovMatrix();
+
+    double computeDistanceFraction(PointGPS *prevPoint, PointGPS *curPoint, long prevRoadId, long curRoadId);
+    std::vector<double> getProjectedPointAndDistance(PointGPS *p, Road *r);
+
+    double getDistanceBetweenProjections(Point *projR1, Point *projR2, Road *r1);
+    double getDistanceToExtremity(Point *projR1, int node, Road *r1);
+    int getSegmentCounter(Point *p, Road *r);
 
     // test functions
     void outputInfos();

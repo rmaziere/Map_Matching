@@ -2,7 +2,7 @@
 #define POINT_H
 
 #include <iostream>
-
+#include <vector>
 /**
   * @file point.h
   * @brief Class Point
@@ -49,6 +49,8 @@ public:
      * @return Euclidian distance
      */
     double distanceToPoint(const Point& p) const;
+
+    std::vector<double> projectionOnSegment(const Point& a, const Point& b) const;
 
     /**
      * @brief Compute the distance between a point and a segment
