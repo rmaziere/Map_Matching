@@ -1,3 +1,78 @@
-\chapter{Gestion du projet}
-\section{Méthodologie agile}
-\section{Outils utilisés}
+\chapter{Methodology, Project management and Organization}
+
+\section{Agile - Scrum}
+Agile is a methodology which describes the software development principles. Its aims
+are to be reactive in development and to include the client's modifications on real time.
+Agile counterbalances absence of communication and interaction in companies.
+This is simples and logicals rules.
+With Agile, the team manages itself, there is no hierarchy between all the members.
+The different rules are :
+\begin{itemize}
+	\item Product owner
+	\item Scrum master
+	\item Developers
+	\item Testers
+\end{itemize}
+To be more efficient, we choose two Products owners.
+Product owner have to understands client's requirements and describes it in the user stories. He is in interaction with the client to present the development evolution sprint by sprint. The client asks to the product owner software modifications or add/remove functionalities.
+He is in charge to the products backlog, he valid the user stories before deliver it to the client.
+
+Scrum master forms the team members to the Scrum methodology if it's necessary and checks if the methodology is respected.
+He is the team leader, motivate the staff.
+Scrum master is working with the product owner to write user stories.
+He preserves the team by assuming the pressure.
+
+The developers team organize itself and each member select its user stories by skills.
+Developers code all the sprint's user stories one by one, make there own tests before marking the user story "ready for tests".
+
+Testers 
+
+This is a different way to develops software. Development is separated into sprints, which are periods of development, with the same duration.
+Each sprint is composed of singles tasks which called user story.
+On the map matching project, we have four sprints of two and half days.
+\subsection{Taiga.io}
+To organize and manage user stories, sprints and team interaction we need an system to manage the development, follow the evolution, assign tasks to team members, etc...
+After comparing multiple Scrum solutions founded on Internet : on-line solutions or server applications, we found taiga.
+Taiga is an open-source on-line solution, the must efficient we founded and Scrum respectful.
+We need user stories which describe all singles tasks, taiga allowed it, all created user stories are in the backlog.
+In the user story creation, we can inform the story points, add some informations, files, add followers, assign the status.
+We can create multiple sprints and assign each user stories to the good sprint.
+When we close user stories, taiga updates sprint's statistics (number of ended tasks points).
+Taiga allow interaction with GitHub to update user stories status using a special code into the git commit message.
+\begin{lstlisting}[frame=single, caption="The default syntax"]
+$git commit - m "description
+>TG-identifiant #status"
+\end{lstlisting}
+
+\begin{lstlisting}[frame=single, caption="For example mark the user story 23 to 'Done'"]
+$git commit - m "Correction du bug
+>TG-23 #done"
+\end{lstlisting}
+
+List of default available status : 
+\begin{tasks}(6)
+	\task new
+	\task ready
+	\task in-progress
+	\task done
+	\task archived
+\end{tasks}
+
+\section{TDD}
+
+\section{Team}
+Members of the team are :
+as scrum master : Romain Mazière
+as product owners :
+R Millet
+C Parisel
+as developers :
+all
+as testers :
+C Parisel
+\section{The version control system}
+The best way to organize a collaborative work on software development is by using a system which allowed version control, do automatic merge, permit conflicts resolution.
+We used GitHub for the project : \url{https://github.com/rmaziere/Map_Matching}
+
+At the beginning, we use the Git Cheat Sheet to help us and to remember commands and the good order to use them.
+%\subsection{}
