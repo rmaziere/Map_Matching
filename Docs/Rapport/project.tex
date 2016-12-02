@@ -1,0 +1,84 @@
+\chapter{Project implementation}
+
+\section{Presentation of the Map-Matching method}
+
+The objective is to match GPS points to roads by constructing a Hidden Markov Model with roads as states and GPS points as observations. Once the Hidden Markov Model is built, a dynamic programming technique, called Viterbi algorithm, is applied to find the most probable sequence of roads.
+
+The paper (ref) presents how the matrices of the HMM are built and the robustness of the algorithm with different time steps for the GPS track.
+
+The emission matrix $E$ reports the probabilistic relation between a point and the surrounding roads (up to 200m). 
+The closer the point $p$ is to a road $r$ the higher the probability $E(p,r)$ is.
+	
+The transition matrix $M$ reports the probability of going to road $r_j$ from a road $r_i$. In the HMM theory, the probability of transitioning is independent of the observations.
+
+In the paper, this probability depends on the distance between two consecutive points (straight distance) and the distance between the projection of those points on the roads.
+
+A few constants are introduced (but their real value not given in the paper) for the probability computations. For instance, $\sigma_z$ represents the standard deviation of GPS measurements and is part of the computation of the emission matrix.  
+
+\section{Input data}
+
+The map matching algorithms works with GPS points and roads expressed as coordinates (x,y) in the metric system. 
+The data presented on the paper is freely available in the latitude and longitude system including other informations such as one-ways and average speed (for roads).
+
+This input data, as well as data from ??, has been processed through \textbf{QGIS} to produce ready to use datasets :
+\begin{itemize}
+	\item a full dataset (road network and GPS track) from the paper representing a trip of xx points in Seattle ;
+	\item a small dataset from the same inputs ;
+	\item datasets of trips in Paris.
+\end{itemize}
+
+For each of these datasets, we have, at least :
+\begin{description}
+	\item[Tracks] x,y in meters and a timestamp;
+	\item[Network] a set of coordinates describing the extremities of each segment of a road.
+\end{description}
+
+\section{Implementation hazards}
+
+Once the input data where available in the adequate form (sufficient information expressed in meters), we could focus on the difficulties of the algorithms and the implementations options. 
+
+A basic UML class diagram was produced in order to initiate the agile process. The principle(?) being that each sprint would lead to a prototype expanding the previous sprint's prototype, hence adding more classes and functionalities to the software.
+
+<uml pic)
+
+In order to compute the transition matrix, distances between roads have to be computed. To do that we took opportunity of the fact that each end road coordinates is shared among others (ie this end points represent an intersection). Knowing the neighbors of a road, we have decided to distribute the probabilities equally among them (including the road itself).
+Thus, the formula for the probability of transitioning for road $1$ to road $2$, which was :
+\begin{eqnarray}
+todo
+\end{eqnarray}
+in the paper, has become :
+\begin{eqnarray}
+todo
+\end{eqnarray}
+
+Then for the transition matrix, our change are less drastic. We compute the shortest distance to roads and distribute the probability ?inverse to the value of the distance. 
+Looking for roads in the vicinity of a point can be costly. On the largest data input, we have xx points and yy roads (with an average of yy segments). A spatial partitioning is necessary.
+
+\section{Implementation details}
+
+From the requirements (??), we were advised to use C++, OpenGL through a library, QGIS, Globe, and Unit Tests.
+
+A previously mentioned, QGIS has been used to transform input data, and more generally, to visualize tracks and road networks. 
+
+During the first sprint, we focused on getting a grip on C++ QGIS plugins and Globe. Our conclusion was that not only it is very unlikely that we would succeed in compiling the whole QGIS project on Debian\footnote{QGIS includes Globe, so by setting all the required libraries with their correct versions for QGIS, we should have been able to compile Globe.}, but the development of a code as a plug in would drastically slow down our progress. As a stand alone application, it was way easier to detect any bugs and focus on our own code. The drawback is that none of the functionalities of QGIS (like computing distance, selecting roads in an area) where available to us. 
+
+\subsection{Unit tests}
+
+Our development has been done with Qt Creator and a limited use of Qt libraries. Qt offers a Unit Test library (Qt Test). Our ...??? showed that a large amount of C++ projects use GoogleTest. We think that it is a better investment to use a well established standard. 
+Google Test is relatively easy to setup and use (see document ... on our github). We only tackle the a tiny part of the possibilities of GTest as we focused on checking basic functionalities of our code (related to points and road segments), but it is a first step... 
+
+\subsection{Visualization and spatialization}
+
+A big side effect of our decision to not use QGIS was the problem of visualization and more specifically of spatialization.
+
+Qt is very... . Among all the libraries, is \textit{GraphicsScene} and \textit{GraphicsView}. Once .., we could easily display, zoom and ?? on a road network and more importantly take opportunity of its embedded partitioning to quickly select a set of neighboring roads.
+
+\subsection{Other ??}
+threads, gui, events systems, 
+
+In order to have a responsive UI (when loading files and during the visualization of the track correction), we have separated all the GUI classes and the "logic" classes in two threads, a feat easily done in Qt thanks to its Qt thread library.
+
+Communication between threads is easily done with the slot/event system provided by Qt.
+
+
+
