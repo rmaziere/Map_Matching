@@ -119,7 +119,7 @@ void Solver::onSignalNeighbours(std::vector<long>* roadsId)
     std::unordered_map<long, Road>::iterator idToRoad; // find road from its id
     Road *r;
     std::cout << "Neighbour roads " << roadsId->size() << std::endl;
-    // compute distance current point -> roads
+    // compute distance current point -> roads then probabilities (emission matrix)
     PointGPS* p = m_trackPoints->at(m_currentStep);
     if (p->m_emissionProbability.size()>0) return;
     for (const auto id : *roadsId) {
@@ -130,6 +130,19 @@ void Solver::onSignalNeighbours(std::vector<long>* roadsId)
         setDistance(p, r);
     }
     p->updateProbability();
+/*
+    // compute straight distance over road distance then probabilities (transition matrix)
+    double v;
+    if (m_currentStep>0) {
+        for (const auto prevId: *prevRoadIds) {
+            for (const auto id: *roadsId) {
+                v= grid.computeDistanceFraction(prevPoint, p, prevId, id);
+            }
+        }
+    }
+*/
+
+
     // update T1, T2
     int roadIndex;
     int neighIndex;

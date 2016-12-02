@@ -7,8 +7,6 @@
 #include <regex>
 #include <vector>
 
-using namespace std;
-
 #define DEBUG_READCSV false
 #define DEBUG_ADDROAD false
 
@@ -45,13 +43,13 @@ void Grid::readFromCSV(QString filename)
 {
 
     emit signalMessage("Loading grid ...");
-    string line;
+    std::string line;
     QString stringConverted;
     m_gridFullName = filename.toStdString();
     // Declare file stream
-    ifstream file(filename.toStdString().c_str()); // c_str() http://stackoverflow.com/questions/32332/why-dont-the-stdfstream-classes-take-a-stdstring
+    std::ifstream file(filename.toStdString().c_str()); // c_str() http://stackoverflow.com/questions/32332/why-dont-the-stdfstream-classes-take-a-stdstring
 
-    vector<int> correspondance(4, -1); // Correpondance between the header and the parser :
+    std::vector<int> correspondance(4, -1); // Correpondance between the header and the parser :
     // correspondance :
     //  0 : # WKT
     //  1 : # Edge ID
@@ -99,7 +97,7 @@ void Grid::readFromCSV(QString filename)
         long edgeId(0);
         //long fromNodeId(0);
         //long toNodeId(0);
-        vector<vector<double> > listOfCoordinates(0);
+        std::vector<std::vector<double> > listOfCoordinates(0);
 
         getline(file, line);
         // Convert string to Qstring (easiest
@@ -152,7 +150,7 @@ void Grid::readFromCSV(QString filename)
 
                     QStringList listePoints = contenu.split(",");
                     if (DEBUG_READCSV)
-                        cout << "Coordonnées points : " << endl;
+                        std::cout << "Coordonnées points : " << std::endl;
                     for (int j = 0; j < listePoints.size(); ++j) {
                         double x(0.0);
                         double y(0.0);
@@ -162,8 +160,8 @@ void Grid::readFromCSV(QString filename)
                         inBox = inFootPrint(x, y);
                         updateGrid(x, y);
                         if (DEBUG_READCSV)
-                            cout << setprecision(150) << x << "," << y << endl;
-                        vector<double> coordinates;
+                            std::cout << std::setprecision(150) << x << "," << y << std::endl;
+                        std::vector<double> coordinates;
                         coordinates.push_back(x);
                         coordinates.push_back(y);
                         listOfCoordinates.push_back(coordinates);
@@ -172,22 +170,22 @@ void Grid::readFromCSV(QString filename)
                 } else if (i == correspondance[1]) {
                     // traitement Edge ID
                     if (DEBUG_READCSV)
-                        cout << "Edge ID : " << text[i].toStdString() << " ";
+                        std::cout << "Edge ID : " << text[i].toStdString() << " ";
                     edgeId = text[i].toLong();
                 } else if (i == correspondance[2]) {
                     // traitement From Node
                     if (DEBUG_READCSV)
-                        cout << "From Node : " << text[i].toStdString() << " ";
+                        std::cout << "From Node : " << text[i].toStdString() << " ";
                     //fromNodeId = text[i].toLong();
                 } else if (i == correspondance[3]) {
                     // traitement To Node ID
                     if (DEBUG_READCSV)
-                        cout << "To Node ID : " << text[i].toStdString() << " ";
+                        std::cout << "To Node ID : " << text[i].toStdString() << " ";
                     //toNodeId = text[i].toLong();
                 }
             }
             if (DEBUG_READCSV)
-                cout << endl;
+                std::cout << std::endl;
             if (inBox)
                 addRoad(listOfCoordinates, edgeId);
         }
@@ -195,7 +193,7 @@ void Grid::readFromCSV(QString filename)
     // m_mapOfExtPoints.clear(); // TODO remove comment, and DO clear map (kept for test)
 }
 
-void Grid::addRoad(const vector<vector<double> >& listOfCoordinates, long edgeId)
+void Grid::addRoad(const std::vector<std::vector<double> >& listOfCoordinates, long edgeId)
 {
     int n = listOfCoordinates.size();
     int curPoint = 0; // used to apply a special treatment to first and last point of a road
@@ -238,12 +236,12 @@ void Grid::addRoad(const vector<vector<double> >& listOfCoordinates, long edgeId
 
 void Grid::outputInfos()
 {
-    cout << "Network " << m_gridFullName << " contains: \n\t" << m_mapOfAllRoads.size() << " roads" << endl;
-    cout << "\twith a grand total of " << m_vectorOfPoints.size() << " points" << endl;
-    cout << "\tof which " << m_mapOfExtPoints.size() << " are extremities." << endl;
+    std::cout << "Network " << m_gridFullName << " contains: \n\t" << m_mapOfAllRoads.size() << " roads" << std::endl;
+    std::cout << "\twith a grand total of " << m_vectorOfPoints.size() << " points" << std::endl;
+    std::cout << "\tof which " << m_mapOfExtPoints.size() << " are extremities." << std::endl;
 }
 
-string Grid::infos()
+std::string Grid::infos()
 {
     std::stringstream ss;
     ss << "Network " << m_gridFullName << " contains: \n\t" << m_mapOfAllRoads.size() << " roads\n";
@@ -269,13 +267,13 @@ void Grid::buildMarkovMatrix()
     // check all points and for those who are a node (extremity of a road) update all the roads
     for (const auto& p : m_vectorOfPoints) {
         if (p.isNode()) {
-            const vector<long>& listOfRoadId = p.vectorOfRoadId();
+            const std::vector<long>& listOfRoadId = p.vectorOfRoadId();
             for (const auto roadId : listOfRoadId) {
                 AllRoadMap::iterator got = getRoadEntry(roadId);
                 for (const auto neighborId : listOfRoadId) {
                     got->second.addNeighbor(neighborId);
                     if (DEBUG) {
-                        cout << "update neighbour " << endl;
+                        std::cout << "update neighbour " << std::endl;
                         got->second.outputInfos();
                     }
                 }
@@ -285,12 +283,104 @@ void Grid::buildMarkovMatrix()
     // verification
 
     if (DEBUG) {
-        cout << "Resutat: " << endl;
+        std::cout << "Resutat: " << std::endl;
         for (auto& it : m_mapOfAllRoads) {
             it.second.outputInfos();
         }
     }
 }
+
+double Grid::computeDistanceFraction(PointGPS *prevPoint, PointGPS *curPoint, long prevRoadId, long curRoadId)
+{
+   double dbird, droad;   // distance
+   double r= 0.0;   // fraction
+   AllRoadMap::iterator got = getRoadEntry(prevRoadId);
+   Road *r1= &got->second;
+   Road *r2= &getRoadEntry(prevRoadId)->second;
+   // find projection of each point on road
+   std::vector<double> k1= getProjectedPointAndDistance(prevPoint, r1);
+   std::vector<double> k2= getProjectedPointAndDistance(curPoint, r2);
+   Point projR1(k1.at(0), k1.at(1)), projR2(k2.at(0), k2.at(1));
+   int node= r1->getIntersectionIDWith(r2);
+   // bird distance
+   dbird= prevPoint->distanceToPoint(*curPoint);
+   if (prevRoadId==curRoadId) {
+       droad= getDistanceBetweenProjections(&projR1, &projR2, r1);
+   } else {
+    droad= getDistanceToExtremity(&projR1, node, r1) + getDistanceToExtremity(&projR2, node, r2);
+   }
+
+   //Point *p= r1->
+   return r;
+}
+
+std::vector<double> Grid::getProjectedPointAndDistance(PointGPS *p, Road *r)
+{
+    std::vector<double> res, bestRes;
+    double d, bestDistance = std::numeric_limits<double>::max();
+    const std::vector<int>& listOfPointId = r->vectorOfPointsId();
+    for (uint i = 1; i < listOfPointId.size(); i++) {
+        res = p->projectionOnSegment(m_vectorOfPoints.at(listOfPointId[i - 1]), m_vectorOfPoints.at(listOfPointId[i]));
+        d= res.at(2);
+        if (d < bestDistance) {
+            bestDistance = d;
+            bestRes= res;
+        }
+    }
+    return res;
+}
+
+double Grid::getDistanceBetweenProjections(Point *projR1, Point *projR2, Road *r1)
+{
+    double d1,d2,dTotal=0.0;
+    const std::vector<int>& listOfPointId = r1->vectorOfPointsId();
+    int start1= getSegmentCounter(projR1, r1);
+    int start2= getSegmentCounter(projR2, r1);
+
+    if (start1== start2) return projR1->distanceToPoint(*projR2);
+    // compute segments inbetween
+    if (start1<start2) {
+        // from p1 to end of segment, all segment inbetween then from start2-1 to p2
+    } else {
+
+    }
+    // TODO
+    return dTotal;
+}
+
+double Grid::getDistanceToExtremity(Point *projR1, int node, Road *r1)
+{
+    double d,dTotal=0.0;
+    const std::vector<int>& listOfPointId = r1->vectorOfPointsId();
+    // start with extremity and stop when d==0
+    if (listOfPointId.at(0)==node) {
+        for (uint i = 1; i < listOfPointId.size(); i++) {
+            d= projR1->distanceToSegment(m_vectorOfPoints.at(listOfPointId[i - 1]), m_vectorOfPoints.at(listOfPointId[i]));
+            dTotal+=d;
+            if (d<0.0001) break;
+        }
+    } else {
+        for (uint i = listOfPointId.size()-1; i>1; i--) {
+            d= projR1->distanceToSegment(m_vectorOfPoints.at(listOfPointId[i - 1]), m_vectorOfPoints.at(listOfPointId[i]));
+            dTotal+=d;
+            if (d<0.0001) break;
+        }
+    }
+    return dTotal;
+}
+
+int Grid::getSegmentCounter(Point *p, Road *r)
+{
+    double d;
+    const std::vector<int>& listOfPointId = r->vectorOfPointsId();
+    for (uint i = 1; i < listOfPointId.size(); i++) {
+        d= p->distanceToSegment(m_vectorOfPoints.at(listOfPointId[i - 1]), m_vectorOfPoints.at(listOfPointId[i]));
+        if (d<=0.0001) return i;
+    }
+}
+
+
+
 
 void Grid::updateGrid(double x, double y)
 {

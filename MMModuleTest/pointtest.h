@@ -59,6 +59,7 @@ TEST_F(PointTest, distanceToSegment)
     EXPECT_DOUBLE_EQ(p0.distanceToSegment(p_up, p1), 1.0);
     //EXPECT_FLOAT_EQ(p0.distanceToSegment(p_diag2, p0), 0.0);      // error if double or float comparison
     EXPECT_DOUBLE_EQ(p0.distanceToSegment(p0, p_diag2), 0.0);
+    EXPECT_DOUBLE_EQ(p0.distanceToSegment(Point(1.0,2.0), Point(1.0,4.0)), sqrt(1+4));
 }
 
 #endif // POINTTEST_H
