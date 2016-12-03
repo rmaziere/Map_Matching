@@ -18,19 +18,15 @@
 
 
 using namespace std;
-/*! \mainpage My Personal Index Page
+/*! \mainpage This is the official documentation for the Map Matching project
  *
- * \section intro_sec Introduction
+ * \section install_sec Dependances
  *
- * This is the introduction.
+ * QT4 : sudo apt-get install libqt4-dev
  *
- * \section install_sec Installation
- *
- * \subsection step1 Step 1: Opening the box
  *
  * <a href="https://rmaziere.github.io/Map_Matching/">Website</a>
  *
- * etc...
  */
 void dev_thread()
 {
