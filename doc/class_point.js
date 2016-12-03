@@ -6,6 +6,7 @@ var class_point =
     [ "distanceToPoint", "class_point.html#a7cd7f7e2c0f1a11b66eac8b6f360bfd9", null ],
     [ "distanceToSegment", "class_point.html#a39daa6ebd31cdc2d7151db77bfdf2166", null ],
     [ "infos", "class_point.html#a1c2033a89f5dc6faa9e50f06c2111e88", null ],
+    [ "projectionOnSegment", "class_point.html#a9cff645d17a17081494fca956d43102a", null ],
     [ "samePointAs", "class_point.html#a9d93fb520b4a3e170aab25ea738b105c", null ],
     [ "setx", "class_point.html#a6f6a42c3b4bfe6e7e5ccb502788227d6", null ],
     [ "setx", "class_point.html#a643bc096cfd5930a93898d1ba1a4de96", null ],

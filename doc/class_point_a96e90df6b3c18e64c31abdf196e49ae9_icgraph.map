@@ -1,8 +1,0 @@
-<map id="Point::y" name="Point::y">
-<area shape="rect" id="node2" href="$class_box.html#a3a96bf8f86322e4885028e517ef40535" title="Box::distanceToPoint" alt="" coords="128,5,275,32"/>
-<area shape="rect" id="node3" href="$structhash_func.html#a1ec440ab36b0e013a3bbc9cf48f34e35" title="hashFunc::operator()" alt="" coords="130,56,273,83"/>
-<area shape="rect" id="node4" href="$class_point.html#a16550863eab3e713371cdf8d5fa26926" title="Point::sety" alt="" coords="159,107,244,133"/>
-<area shape="rect" id="node5" href="$class_q_map_viewer.html#a3e5765a7589d278777553814e4fd146b" title="QMapViewer::drawPoint" alt="" coords="120,157,283,184"/>
-<area shape="rect" id="node6" href="$class_q_map_viewer.html#acadee31a64d4f8fe837f630e6e19dd9b" title="QMapViewer::drawAllGPSPoints" alt="" coords="331,157,544,184"/>
-<area shape="rect" id="node7" href="$class_q_map_viewer.html#a348e9f7fa0b46836bb72b19a852f99ac" title="QMapViewer::onSignalAllPoints" alt="" coords="592,157,799,184"/>
-</map>

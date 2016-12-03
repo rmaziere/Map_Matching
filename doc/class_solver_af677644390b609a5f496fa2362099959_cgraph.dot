@@ -1,0 +1,15 @@
+digraph "Solver::filterSpace"
+{
+ // INTERACTIVE_SVG=YES
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Solver::filterSpace",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Track::spaceFilter",height=0.2,width=0.4,color="black",URL="$class_track.html#a9f1da7896167f44da967acf9fd05d92a",tooltip="This is a space filter, which deletes points depending on a distance interval. "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Track::delPointGPS",height=0.2,width=0.4,color="black",URL="$class_track.html#a0477b30aca07ba3f43b25d4c6ea782e0",tooltip="Deletes a occurence. "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Track::getPointsAsPointer",height=0.2,width=0.4,color="black",URL="$class_track.html#ad262a30c2abcd29cf4cdc04facd290ee"];
+}

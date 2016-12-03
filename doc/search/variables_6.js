@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['point_5fradius',['POINT_RADIUS',['../class_point.html#a1c37050ec8b6a293726a8c7129b2c7c7',1,'Point']]],
-  ['points',['points',['../class_q_map_scene.html#aeb4758c1f0ff9639cdee5d2c26de1110',1,'QMapScene']]],
-  ['process',['process',['../class_main_window.html#ad7c530ee70c07b95abe26bc73c910fa0',1,'MainWindow']]]
+  ['nextok',['nextOk',['../class_filtering.html#a166be0d4d5d943d07ddfb1368ec5f22f',1,'Filtering::nextOk()'],['../class_loading.html#ae4a46be3510080f094a59b08c22e082e',1,'Loading::nextOk()']]]
 ];

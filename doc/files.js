@@ -24,10 +24,6 @@ var files =
     [ "filtering.h", "filtering_8h.html", [
       [ "Filtering", "class_filtering.html", "class_filtering" ]
     ] ],
-    [ "graphicemitter.cpp", "graphicemitter_8cpp.html", null ],
-    [ "graphicemitter.h", "graphicemitter_8h.html", [
-      [ "GraphicEmitter", "class_graphic_emitter.html", "class_graphic_emitter" ]
-    ] ],
     [ "grid.cpp", "grid_8cpp.html", "grid_8cpp" ],
     [ "grid.h", "grid_8h.html", "grid_8h" ],
     [ "kdtree.cpp", "kdtree_8cpp.html", "kdtree_8cpp" ],
@@ -59,11 +55,7 @@ var files =
     [ "pointroad.h", "pointroad_8h.html", "pointroad_8h" ],
     [ "qmapscene.cpp", "qmapscene_8cpp.html", "qmapscene_8cpp" ],
     [ "qmapscene.h", "qmapscene_8h.html", "qmapscene_8h" ],
-    [ "qmapviewer.cpp", "qmapviewer_8cpp.html", "qmapviewer_8cpp" ],
-    [ "qmapviewer.h", "qmapviewer_8h.html", [
-      [ "QMapViewer", "class_q_map_viewer.html", "class_q_map_viewer" ]
-    ] ],
-    [ "qmapwidget.cpp", "qmapwidget_8cpp.html", null ],
+    [ "qmapwidget.cpp", "qmapwidget_8cpp.html", "qmapwidget_8cpp" ],
     [ "qmapwidget.h", "qmapwidget_8h.html", [
       [ "QMapWidget", "class_q_map_widget.html", "class_q_map_widget" ]
     ] ],
@@ -84,7 +76,9 @@ var files =
       [ "SlidingStackedWidget", "class_sliding_stacked_widget.html", "class_sliding_stacked_widget" ]
     ] ],
     [ "solver.cpp", "solver_8cpp.html", "solver_8cpp" ],
-    [ "solver.h", "solver_8h.html", "solver_8h" ],
+    [ "solver.h", "solver_8h.html", [
+      [ "Solver", "class_solver.html", "class_solver" ]
+    ] ],
     [ "track.cpp", "track_8cpp.html", "track_8cpp" ],
     [ "track.h", "track_8h.html", "track_8h" ]
 ];

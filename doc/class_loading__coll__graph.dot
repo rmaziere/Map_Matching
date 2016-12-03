@@ -1,0 +1,12 @@
+digraph "Loading"
+{
+ // INTERACTIVE_SVG=YES
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Loading\n|- m_boutonXY\l- m_country\l- m_csvGrid\l- m_csvTrack\l- m_fileGPS\l- m_fileGrid\l- m_fr\l- m_grid\l- m_shpTrack\l- m_track\l- m_usa\l- nextOk\l|+ Loading()\l+ ~Loading()\l+ getCountry()\l+ loadFileCSVTrack()\l+ loadFileGrid()\l+ loadFileSHPTrack()\l- country()\l- grid()\l- launchFiles()\l- track()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",arrowtail="onormal",fontname="Helvetica"];
+  Node2 [label="{QWidget\n||}",height=0.2,width=0.4,color="grey75"];
+  Node3 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +fileCSVTrack\n+fileSHPGrid\n+fileSHPTrack" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node3 [label="{File\n||+ File()\l+ selectFilesToOpen()\l+ shp2csv()\l+ splitPath()\l+ whereSave()\l+ ~File()\l* filePath\l* fileName\l* fileExtension\l}",height=0.2,width=0.4,color="black",URL="$class_file.html",tooltip="The File class. "];
+}

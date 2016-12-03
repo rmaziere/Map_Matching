@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gpsdefault',['GPSDEFAULT',['../qmapscene_8h.html#a8ddc408febdb81400a687469bba63c39',1,'GPSDEFAULT():&#160;qmapscene.h'],['../qmapviewer_8cpp.html#a8ddc408febdb81400a687469bba63c39',1,'GPSDEFAULT():&#160;qmapviewer.cpp']]]
+  ['eps',['EPS',['../point_8h.html#a6ebf6899d6c1c8b7b9d09be872c05aae',1,'point.h']]]
 ];

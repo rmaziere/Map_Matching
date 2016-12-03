@@ -5,6 +5,7 @@ var class_track =
     [ "addPoint", "class_track.html#ab0315e74b9b49e40d163a2ff978d833c", null ],
     [ "applyThresholdToBox", "class_track.html#aac5002af6aa69a20101a5709dbbebc82", null ],
     [ "delPointGPS", "class_track.html#a0477b30aca07ba3f43b25d4c6ea782e0", null ],
+    [ "getNoOfPoints", "class_track.html#aa16b233f5eaca258da5f00aca77e00f9", null ],
     [ "getPoints", "class_track.html#a6360ae2dbed31e542a2cbaa986970352", null ],
     [ "getPointsAsPointer", "class_track.html#ad262a30c2abcd29cf4cdc04facd290ee", null ],
     [ "infos", "class_track.html#abf3b02de2c94d38c6a79b7c932aa6c5b", null ],

@@ -1,11 +1,5 @@
 var searchData=
 [
-  ['landmarkmaker',['landmarkMaker',['../class_q_map_viewer.html#adebcdd66becb55104a21e34ac22de419',1,'QMapViewer']]],
-  ['launchfiles',['launchFiles',['../class_loading.html#a1d3058f5f9c701a3bd7300ae985ff83a',1,'Loading']]],
-  ['launchfiltre',['launchFiltre',['../class_filtering.html#af19a51baea507dd6ab30d1f7c2843600',1,'Filtering']]],
-  ['loadfilecsvtrack',['loadFileCSVTrack',['../class_loading.html#ae0c96193667418083fc4a8c6cc19d9db',1,'Loading']]],
-  ['loadfilegrid',['loadFileGrid',['../class_loading.html#a84d718939a74cf1680ea3e2409324194',1,'Loading']]],
-  ['loadfileshptrack',['loadFileSHPTrack',['../class_loading.html#a9a01f3e328100b681f3f08192fc9b208',1,'Loading']]],
-  ['loading',['Loading',['../class_loading.html#a7634c001ec052e10c402e49f5be030db',1,'Loading']]],
-  ['locate',['locate',['../class_k_d_tree.html#a39df3eb7a379ef30cf6b71136cdb320e',1,'KDTree']]]
+  ['kdtree',['KDTree',['../class_k_d_tree.html#a8f658d6d9211976a26b0f60471880e4a',1,'KDTree']]],
+  ['kdtreeviewer',['KDTreeViewer',['../class_k_d_tree_viewer.html#a51ad74a475d125545a68896444b79947',1,'KDTreeViewer']]]
 ];

@@ -1,6 +1,0 @@
-<map id="Loading::loadFileGrid" name="Loading::loadFileGrid">
-<area shape="rect" id="node2" href="$class_file.html#a7177a8eac75b0fc5425ebd65e16c2d6f" title="The UI to select the file&#39;s path to open. " alt="" coords="197,5,357,32"/>
-<area shape="rect" id="node4" href="$class_file.html#a2cd702098066c4abde1c20ee708fa91f" title="The function to convert WGS84 ShapeFile(s) to Lambert 93 CSV(s) " alt="" coords="227,56,327,83"/>
-<area shape="rect" id="node5" href="$class_loading.html#a1d3058f5f9c701a3bd7300ae985ff83a" title="Loading::launchFiles" alt="" coords="207,107,348,133"/>
-<area shape="rect" id="node3" href="$class_file.html#ac464caa98a33cfe227111dd7cd5e77e1" title="The split function to split the path file to filePath, fileName, fileExtension attributes. " alt="" coords="405,5,508,32"/>
-</map>

@@ -21,9 +21,7 @@ var hierarchy =
     ] ],
     [ "QObject", null, [
       [ "Controller", "class_controller.html", null ],
-      [ "GraphicEmitter", "class_graphic_emitter.html", null ],
       [ "Grid", "class_grid.html", null ],
-      [ "QMapViewer", "class_q_map_viewer.html", null ],
       [ "Solver", "class_solver.html", null ],
       [ "Track", "class_track.html", null ]
     ] ],

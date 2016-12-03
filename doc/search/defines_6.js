@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['point_5fsize',['POINT_SIZE',['../qmapscene_8cpp.html#a5b748b2b1d95168a4447a233d4cfdf04',1,'qmapscene.cpp']]]
+  ['max_5fdouble',['MAX_DOUBLE',['../kdtree_8cpp.html#a6b65f4b50d2d129e2fe16f8febc172c4',1,'kdtree.cpp']]]
 ];

@@ -11,5 +11,7 @@ var searchData=
   ['fileshptrack',['fileSHPTrack',['../class_loading.html#a944e85215a86002382a4b4b659a806ef',1,'Loading']]],
   ['filtering',['Filtering',['../class_filtering.html',1,'Filtering'],['../class_filtering.html#a9d28d9ff9bc37dac64194259f261d427',1,'Filtering::Filtering()']]],
   ['filtering_2ecpp',['filtering.cpp',['../filtering_8cpp.html',1,'']]],
-  ['filtering_2eh',['filtering.h',['../filtering_8h.html',1,'']]]
+  ['filtering_2eh',['filtering.h',['../filtering_8h.html',1,'']]],
+  ['filterspace',['filterSpace',['../class_solver.html#af677644390b609a5f496fa2362099959',1,'Solver']]],
+  ['filtertemp',['filterTemp',['../class_solver.html#a95af3471a75ea1b9dc7051959c70b6e7',1,'Solver']]]
 ];

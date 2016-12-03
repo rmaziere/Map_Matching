@@ -1,7 +1,0 @@
-<map id="road.h" name="road.h">
-<area shape="rect" id="node2" href="$pointroad_8h.html" title="pointroad.h" alt="" coords="5,155,92,181"/>
-<area shape="rect" id="node6" href="$track_8h.html" title="The class Track. " alt="" coords="575,80,637,107"/>
-<area shape="rect" id="node3" href="$point_8h.html" title="Class Point. " alt="" coords="131,229,193,256"/>
-<area shape="rect" id="node8" href="$point_g_p_s_8h.html" title="pointGPS.h" alt="" coords="301,155,391,181"/>
-<area shape="rect" id="node9" href="$emissionprobability_8h.html" title="emissionprobability.h" alt="" coords="231,229,375,256"/>
-</map>

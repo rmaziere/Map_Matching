@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['computedistancefraction',['computeDistanceFraction',['../class_grid.html#afc6f21c3514d66d3ce16765ccb97411e',1,'Grid']]],
   ['connectsignals',['connectSignals',['../class_controller.html#aa92b9a18a88aeb59c53272c3beab2724',1,'Controller']]],
   ['controller',['Controller',['../class_controller.html#a95c56822d667e94b031451729ce069a9',1,'Controller']]],
   ['country',['country',['../class_loading.html#a8393eca502e0e8946e9e9b8ca57a565d',1,'Loading']]],

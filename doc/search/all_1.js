@@ -9,8 +9,9 @@ var searchData=
   ['boxnode',['BoxNode',['../class_box_node.html',1,'BoxNode'],['../class_box_node.html#a7b8603d8007187dfcd5d296795a08f48',1,'BoxNode::BoxNode()'],['../class_box_node.html#a839b67b47241cdfacea494667729880a',1,'BoxNode::BoxNode(Point low, Point high, int mother, int daughterOne, int daughterTwo, int myptlo, int mypthi)']]],
   ['boxnode_2ecpp',['boxnode.cpp',['../boxnode_8cpp.html',1,'']]],
   ['boxnode_2eh',['boxnode.h',['../boxnode_8h.html',1,'']]],
-  ['buildkdtree',['buildKDTree',['../class_grid.html#a385463a3b96dcdbd212cbfc07c711c12',1,'Grid']]],
+  ['buildcontrols',['buildControls',['../class_q_map_widget.html#a04c3ab65a5a4c967322ff1eafcdcf56b',1,'QMapWidget']]],
   ['buildmarkovmatrix',['buildMarkovMatrix',['../class_grid.html#aea292f48c96b2e9d1abee08040cd3833',1,'Grid']]],
+  ['buildroadpath',['buildRoadPath',['../class_solver.html#a69e11a5cede2377d8151620160918aab',1,'Solver']]],
   ['buttoncancel',['buttonCancel',['../class_main_window.html#aab7cc2e774c2f61e7164f6f32b9cb7f7',1,'MainWindow']]],
   ['buttonnext',['buttonNext',['../class_main_window.html#adfe7c2194fe57ad0a85bb653c362267e',1,'MainWindow']]]
 ];

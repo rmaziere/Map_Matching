@@ -1,4 +1,0 @@
-<map id="PointGPS" name="PointGPS">
-<area shape="rect" id="node2" href="$class_point.html" title="The Point class. " alt="" coords="5,189,164,472"/>
-<area shape="rect" id="node4" href="$class_emission_probability.html" title="{EmissionProbability\n|# m_distance\l# m_probability\l# m_roadId\l|+ EmissionProbability()\l+ updateProbability()\l}" alt="" coords="221,5,378,127"/>
-</map>

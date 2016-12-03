@@ -1,0 +1,8 @@
+digraph "Point"
+{
+ // INTERACTIVE_SVG=YES
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Point\n|# POINT_RADIUS\l|+ distanceToPoint()\l+ distanceToSegment()\l+ infos()\l+ Point()\l+ Point()\l+ projectionOnSegment()\l+ samePointAs()\l+ setx()\l+ x()\l+ ~Point()\l* m_x\l* m_y\l* x()\l* setx()\l* y()\l* sety()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

@@ -1,0 +1,24 @@
+digraph "Grid::xMin"
+{
+ // INTERACTIVE_SVG=YES
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Grid::xMin",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Grid::setTrackBoundingBox",height=0.2,width=0.4,color="black",URL="$class_grid.html#aa2fcca933248f3c1f4361f1b7826b692",tooltip="Save data about our area of roads. "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="dev_gridAndTrack",height=0.2,width=0.4,color="black",URL="$main_8cpp.html#a141063eccadf0e03662d414d897d9f5d"];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Solver::readFiles",height=0.2,width=0.4,color="black",URL="$class_solver.html#acbe7e47bcad48b8ddba95c9281c8bf23",tooltip="readFiles Read files : track and grid "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="MainWindow::readyToNext1",height=0.2,width=0.4,color="black",URL="$class_main_window.html#ad39bbe8ced0d3248206ac0ca6c444d55",tooltip="readyToNext1 Pass informations "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="MainWindow::createConnections",height=0.2,width=0.4,color="black",URL="$class_main_window.html#af773488e0b16efe6c0fc67ad348b86b2",tooltip="createConnections "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="MainWindow::MainWindow",height=0.2,width=0.4,color="black",URL="$class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="Grid::trackInGrid",height=0.2,width=0.4,color="black",URL="$class_grid.html#a8d8b7fa0ee20d81f130a46d80fc2a018",tooltip="Check if track is in grid. "];
+  Node8 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}
