@@ -11,8 +11,8 @@
 #include "loading.h"
 
 #include "GUI/controller.h"
-#include "GUI/qprocessviewer.h"
 #include "GUI/qmapwidget.h"
+#include "GUI/qprocessviewer.h"
 #include "grid.h"
 #include "solver.h"
 #include "track.h"

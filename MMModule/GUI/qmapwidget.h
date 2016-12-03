@@ -3,11 +3,11 @@
 
 #include "qmapscene.h"
 #include <QGraphicsView>
-#include <QVBoxLayout>
 #include <QHBoxLayout>
-#include <QWidget>
 #include <QPushButton>
 #include <QSlider>
+#include <QVBoxLayout>
+#include <QWidget>
 
 class QMapWidget : public QWidget {
     Q_OBJECT
@@ -16,7 +16,6 @@ public:
 
     void buildControls();
     //void startSimulation();
-
 
     QMapScene* m_scene;
     QPushButton* m_next;
@@ -27,7 +26,7 @@ private slots:
 
 public slots:
     void onSignalDimension(double xMinGrid, double xMaxGrid, double yMinGrid, double yMaxGrid);
-    void onSignalItemToShow(QGraphicsItem *item);
+    void onSignalItemToShow(QGraphicsItem* item);
 
 protected:
     QGraphicsView* m_view;
@@ -35,7 +34,7 @@ protected:
     QWidget* m_controlZone;
     QPushButton* m_play;
 
-    QSlider *m_zoom;
+    QSlider* m_zoom;
     bool m_startSimulation;
 };
 

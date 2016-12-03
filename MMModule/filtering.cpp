@@ -91,7 +91,7 @@ void Filtering::launchFiltre()
 {
     nextOk += 1;
     if (m_boutonSpat->isChecked()) {
-        m_filtreSpat = double(m_slidSpat->value())/100;
+        m_filtreSpat = double(m_slidSpat->value()) / 100;
         m_slidSpat->setEnabled(false);
     }
     if (m_boutonTemp->isChecked()) {

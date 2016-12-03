@@ -40,9 +40,9 @@ public:
     float altitude() const { return m_altitude; }
 
     std::vector<EmissionProbability> m_emissionProbability;
+
 protected:
     float m_altitude; // TODO keep ?
     unsigned int m_timeStamp; // WARNING in second
-
 };
 #endif // POINTGPS_H

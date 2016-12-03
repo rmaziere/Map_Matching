@@ -199,7 +199,7 @@ void Track::readFromCSV(QString filename)
                 ts = QDateTime::fromString(specificDate[1], "hh:mm:ss");
             else if ((specificDate[0].size() == 10) && (specificDate[1].size() == 8)) {
                 ts = QDateTime(QDate::fromString(specificDate[0], "yyyy/MM/dd"), QTime::fromString(specificDate[1], "hh:mm:ss"));
-            }else if ((specificDate[0].size() == 11) && (specificDate[1].size() == 8)) {
+            } else if ((specificDate[0].size() == 11) && (specificDate[1].size() == 8)) {
                 // Attention : si les mois sont enregistres avec "Jan",
                 // il faut passer en langue anglaise/americaine
                 // Sinon timeStamp est vide... et c'est embetant

@@ -2,5 +2,5 @@
 
 void EmissionProbability::updateProbability(double distanceAll)
 {
-    m_probability= (float) (m_distance/distanceAll);
+    m_probability = (float)(m_distance / distanceAll);
 }

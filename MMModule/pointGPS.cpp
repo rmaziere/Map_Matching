@@ -10,9 +10,11 @@ void PointGPS::addEmissionProbability(long roadId, double distance)
 
 void PointGPS::updateProbability()
 {
-    double sum= 0.0;
-    for (auto &e : m_emissionProbability) sum+= e.distance();
-    for (auto &e : m_emissionProbability) e.updateProbability(sum);
+    double sum = 0.0;
+    for (auto& e : m_emissionProbability)
+        sum += e.distance();
+    for (auto& e : m_emissionProbability)
+        e.updateProbability(sum);
 }
 
 std::string PointGPS::infos() const

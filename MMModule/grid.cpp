@@ -31,7 +31,7 @@ Grid::~Grid()
     m_vectorOfPoints.clear();
 }
 
-void Grid::setTrackBoundingBox(double xMin, double xMax, double yMin, double yMax)   // from GPS track
+void Grid::setTrackBoundingBox(double xMin, double xMax, double yMin, double yMax) // from GPS track
 {
     m_xMin = xMin;
     m_xMax = xMax;
@@ -199,7 +199,7 @@ void Grid::addRoad(const std::vector<std::vector<double> >& listOfCoordinates, l
     int curPoint = 0; // used to apply a special treatment to first and last point of a road
     bool newPoint = true;
     int existingPointId = -1; // id of the point if its already exists
-    if(edgeId == 0){
+    if (edgeId == 0) {
         edgeId = counter;
         counter++;
     }
@@ -290,97 +290,97 @@ void Grid::buildMarkovMatrix()
     }
 }
 
-double Grid::computeDistanceFraction(PointGPS *prevPoint, PointGPS *curPoint, long prevRoadId, long curRoadId)
+double Grid::computeDistanceFraction(PointGPS* prevPoint, PointGPS* curPoint, long prevRoadId, long curRoadId)
 {
-   double dbird, droad;   // distance
-   double r= 0.0;   // fraction
-   AllRoadMap::iterator got = getRoadEntry(prevRoadId);
-   Road *r1= &got->second;
-   Road *r2= &getRoadEntry(prevRoadId)->second;
-   // find projection of each point on road
-   std::vector<double> k1= getProjectedPointAndDistance(prevPoint, r1);
-   std::vector<double> k2= getProjectedPointAndDistance(curPoint, r2);
-   Point projR1(k1.at(0), k1.at(1)), projR2(k2.at(0), k2.at(1));
-   int node= r1->getIntersectionIDWith(r2);
-   // bird distance
-   dbird= prevPoint->distanceToPoint(*curPoint);
-   if (prevRoadId==curRoadId) {
-       droad= getDistanceBetweenProjections(&projR1, &projR2, r1);
-   } else {
-    droad= getDistanceToExtremity(&projR1, node, r1) + getDistanceToExtremity(&projR2, node, r2);
-   }
+    double dbird, droad; // distance
+    double r = 0.0; // fraction
+    AllRoadMap::iterator got = getRoadEntry(prevRoadId);
+    Road* r1 = &got->second;
+    Road* r2 = &getRoadEntry(prevRoadId)->second;
+    // find projection of each point on road
+    std::vector<double> k1 = getProjectedPointAndDistance(prevPoint, r1);
+    std::vector<double> k2 = getProjectedPointAndDistance(curPoint, r2);
+    Point projR1(k1.at(0), k1.at(1)), projR2(k2.at(0), k2.at(1));
+    int node = r1->getIntersectionIDWith(r2);
+    // bird distance
+    dbird = prevPoint->distanceToPoint(*curPoint);
+    if (prevRoadId == curRoadId) {
+        droad = getDistanceBetweenProjections(&projR1, &projR2, r1);
+    } else {
+        droad = getDistanceToExtremity(&projR1, node, r1) + getDistanceToExtremity(&projR2, node, r2);
+    }
 
-   //Point *p= r1->
-   return r;
+    //Point *p= r1->
+    return r;
 }
 
-std::vector<double> Grid::getProjectedPointAndDistance(PointGPS *p, Road *r)
+std::vector<double> Grid::getProjectedPointAndDistance(PointGPS* p, Road* r)
 {
     std::vector<double> res, bestRes;
     double d, bestDistance = std::numeric_limits<double>::max();
     const std::vector<int>& listOfPointId = r->vectorOfPointsId();
     for (uint i = 1; i < listOfPointId.size(); i++) {
         res = p->projectionOnSegment(m_vectorOfPoints.at(listOfPointId[i - 1]), m_vectorOfPoints.at(listOfPointId[i]));
-        d= res.at(2);
+        d = res.at(2);
         if (d < bestDistance) {
             bestDistance = d;
-            bestRes= res;
+            bestRes = res;
         }
     }
     return res;
 }
 
-double Grid::getDistanceBetweenProjections(Point *projR1, Point *projR2, Road *r1)
+double Grid::getDistanceBetweenProjections(Point* projR1, Point* projR2, Road* r1)
 {
-    double d1,d2,dTotal=0.0;
+    double d1, d2, dTotal = 0.0;
     const std::vector<int>& listOfPointId = r1->vectorOfPointsId();
-    int start1= getSegmentCounter(projR1, r1);
-    int start2= getSegmentCounter(projR2, r1);
+    int start1 = getSegmentCounter(projR1, r1);
+    int start2 = getSegmentCounter(projR2, r1);
 
-    if (start1== start2) return projR1->distanceToPoint(*projR2);
+    if (start1 == start2)
+        return projR1->distanceToPoint(*projR2);
     // compute segments inbetween
-    if (start1<start2) {
+    if (start1 < start2) {
         // from p1 to end of segment, all segment inbetween then from start2-1 to p2
     } else {
-
     }
     // TODO
     return dTotal;
 }
 
-double Grid::getDistanceToExtremity(Point *projR1, int node, Road *r1)
+double Grid::getDistanceToExtremity(Point* projR1, int node, Road* r1)
 {
-    double d,dTotal=0.0;
+    double d, dTotal = 0.0;
     const std::vector<int>& listOfPointId = r1->vectorOfPointsId();
     // start with extremity and stop when d==0
-    if (listOfPointId.at(0)==node) {
+    if (listOfPointId.at(0) == node) {
         for (uint i = 1; i < listOfPointId.size(); i++) {
-            d= projR1->distanceToSegment(m_vectorOfPoints.at(listOfPointId[i - 1]), m_vectorOfPoints.at(listOfPointId[i]));
-            dTotal+=d;
-            if (d<0.0001) break;
+            d = projR1->distanceToSegment(m_vectorOfPoints.at(listOfPointId[i - 1]), m_vectorOfPoints.at(listOfPointId[i]));
+            dTotal += d;
+            if (d < 0.0001)
+                break;
         }
     } else {
-        for (uint i = listOfPointId.size()-1; i>1; i--) {
-            d= projR1->distanceToSegment(m_vectorOfPoints.at(listOfPointId[i - 1]), m_vectorOfPoints.at(listOfPointId[i]));
-            dTotal+=d;
-            if (d<0.0001) break;
+        for (uint i = listOfPointId.size() - 1; i > 1; i--) {
+            d = projR1->distanceToSegment(m_vectorOfPoints.at(listOfPointId[i - 1]), m_vectorOfPoints.at(listOfPointId[i]));
+            dTotal += d;
+            if (d < 0.0001)
+                break;
         }
     }
     return dTotal;
 }
 
-int Grid::getSegmentCounter(Point *p, Road *r)
+int Grid::getSegmentCounter(Point* p, Road* r)
 {
     double d;
     const std::vector<int>& listOfPointId = r->vectorOfPointsId();
     for (uint i = 1; i < listOfPointId.size(); i++) {
-        d= p->distanceToSegment(m_vectorOfPoints.at(listOfPointId[i - 1]), m_vectorOfPoints.at(listOfPointId[i]));
-        if (d<=0.0001) return i;
+        d = p->distanceToSegment(m_vectorOfPoints.at(listOfPointId[i - 1]), m_vectorOfPoints.at(listOfPointId[i]));
+        if (d <= 0.0001)
+            return i;
     }
 }
-
-
-
 
 void Grid::updateGrid(double x, double y)
 {

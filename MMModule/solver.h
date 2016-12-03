@@ -26,10 +26,9 @@ public:
     * @param p GPS point
     * @param r Road
     */
-    void setDistance(PointGPS* p, Road *r);
+    void setDistance(PointGPS* p, Road* r);
 
     void buildRoadPath();
-
 
     /**
      * @brief readFiles Read files : track and grid
@@ -51,7 +50,6 @@ public:
     void filterTemp(int val);
 
     int getIndexFromRoadId(long id);
-
 
     QString m_gridFilename; // to move in protected once signals are in use
     QString m_trackFilename;
@@ -75,13 +73,14 @@ public slots:
     void onSignalStart();
     void onSignalNextStep();
     void onSignalNeighbours(std::vector<long>* roadsId);
+
 protected:
     unsigned int m_currentStep;
-    std::vector<std::vector<float>> T1, T2;
+    std::vector<std::vector<float> > T1, T2;
     std::vector<long> m_fromIndexToRoadId;
-    std::unordered_map<long,int> m_fromRoadIdToIndex;
-    std::vector<long> *prevRoadIds;
-    PointGPS *prevPoint;
+    std::unordered_map<long, int> m_fromRoadIdToIndex;
+    std::vector<long>* prevRoadIds;
+    PointGPS* prevPoint;
 };
 
 #endif // SOLVER_H

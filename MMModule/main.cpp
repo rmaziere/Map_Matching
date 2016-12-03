@@ -13,9 +13,8 @@
 #include "MainWindow.h"
 
 #include "grid.h"
-#include "track.h"
 #include "pointGPS.h"
-
+#include "track.h"
 
 using namespace std;
 /*! \mainpage This is the official documentation for the Map Matching project

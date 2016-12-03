@@ -50,7 +50,7 @@ public:
      */
     void addNeighbor(long roadId);
 
-    int getIntersectionIDWith(Road *r) const;
+    int getIntersectionIDWith(Road* r) const;
 
     /**
      * @brief print some informations about the road
@@ -77,7 +77,6 @@ public:
     int getNoOfNeighbors() const { return m_setOfNeighbors.size(); }
 
     std::set<long> m_setOfNeighbors; ///<  Set of all roadId connected to this one (including this one)
-
 
 protected:
     long m_edgeId; ///<  Id of the road

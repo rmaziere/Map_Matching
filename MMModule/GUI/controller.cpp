@@ -4,9 +4,8 @@ Controller::Controller()
 {
 
     m_qMapWidget = new QMapWidget;
-    m_qMapWidget->resize(1000,800);
+    m_qMapWidget->resize(1000, 800);
     m_qProcessViewer = new QProcessViewer;
-
 }
 
 void Controller::addSolver(Solver* solver)
@@ -32,8 +31,7 @@ void Controller::connectSignals()
     QObject::connect(m_qMapWidget->m_scene, SIGNAL(signalNeighboursId(std::vector<long>*)), m_solver, SLOT(onSignalNeighbours(std::vector<long>*)));
     QObject::connect(m_qMapWidget->m_next, SIGNAL(released()), m_solver, SLOT(onSignalNextStep()));
     connect(m_solver, SIGNAL(signalCurrentPoint(int)), m_qMapWidget->m_scene, SLOT(onSignalCurrentPoint(int)));
-    connect(m_solver, SIGNAL(signalRoadPath(std::vector<long> *)), m_qMapWidget->m_scene, SLOT(onSignalRoadPath(std::vector<long>*)));
-
+    connect(m_solver, SIGNAL(signalRoadPath(std::vector<long>*)), m_qMapWidget->m_scene, SLOT(onSignalRoadPath(std::vector<long>*)));
 
     /*QObject::connect(m_qMapWidget->m_qMapViewer, SIGNAL(signalTrackCompleted(QString)), m_qMapWidget, SLOT(onSignalShow()));
     QObject::connect(m_qMapWidget->m_qMapViewer, SIGNAL(signalTrackCompleted(QString)), m_qProcessViewer, SLOT(onSignalMessage(QString)));

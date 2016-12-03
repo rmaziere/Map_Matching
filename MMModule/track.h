@@ -97,7 +97,7 @@ public:
     std::vector<PointGPS*> getPoints();
 
     std::vector<PointGPS*>* getPointsAsPointer() { return &m_points; } // TODO const ?
-    int getNoOfPoints() { return m_points.size();}
+    int getNoOfPoints() { return m_points.size(); }
 
     //TODO protected
     /**

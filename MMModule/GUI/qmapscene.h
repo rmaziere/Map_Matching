@@ -30,14 +30,15 @@ public:
 
 signals:
     void signalTrackCompleted(QString);
-    void signalItemToShow(QGraphicsItem *);
-    void signalNeighboursId(std::vector<long> *);
+    void signalItemToShow(QGraphicsItem*);
+    void signalNeighboursId(std::vector<long>*);
 public slots:
     void onSignalAllPoints(std::vector<PointGPS*>*);
     void onSignalAllRoads(std::unordered_map<long, Road>* roads, std::vector<PointRoad>*);
     void onSignalStart();
     void onSignalCurrentPoint(int pointId);
-    void onSignalRoadPath(std::vector<long> *rp);
+    void onSignalRoadPath(std::vector<long>* rp);
+
 protected:
     std::vector<PointGPS*>* m_trackPoints;
     std::unordered_map<long, Road>* m_roads;
@@ -49,8 +50,8 @@ protected:
     int m_shiftX; /**< delta between the SRID's x origin and the grid's x*/
     int m_shiftY; /**< delta between the SRID's y origin and the grid's y*/
 
-    std::vector<QGraphicsRectItem *> pointItems;
-    QGraphicsEllipseItem *m_selectionCircle;
+    std::vector<QGraphicsRectItem*> pointItems;
+    QGraphicsEllipseItem* m_selectionCircle;
 };
 
 #endif // QMAPSCENE_H
