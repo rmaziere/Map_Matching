@@ -16,6 +16,9 @@
 
 \usepackage{tasks}
 
+%Delete Chapter mention
+\usepackage{titlesec}
+\titleformat{\chapter}{\normalfont\huge}{\thechapter.}{20pt}{\huge\it}
 
 % Module pour inclure des algorithmes implémentés
 \usepackage{listingsutf8} % listings peut faire l'affaire. Celui ci gère mieux les problèmes d'encodage. Doit être chargé après babel
@@ -109,7 +112,7 @@
 	%----------------------------------------------------------------------------------------
 		
 	\HRule \\[0.4cm]
-	{ \huge \bfseries Rapport du projet géomatique}\\[0.4cm] % Title of your document
+	{ \huge \bfseries Geomatic project report}\\[0.4cm] % Title of your document
 	\HRule \\[1.5cm]
 	\vfill
 	%----------------------------------------------------------------------------------------
@@ -118,7 +121,7 @@
 		
 	\begin{minipage}[t]{0.4\textwidth}
 		\begin{flushleft} \large
-			\emph{Auteurs : } \newline \\
+			\emph{Authors : } \newline \\
 			Camille \textsc{Parisel} \\ 
 			Romain \textsc{Mazière} \\ 
 			Julie \textsc{Marcuzzi} \\ 
@@ -132,14 +135,11 @@
 	~
 	\begin{minipage}[t]{0.4\textwidth}
 		\begin{flushright} \large
-			\emph{Superviseurs : \\ \ \\ } 
+			\emph{Supervisors : \\ \ \\ } 
 			Didier \textsc{Richard} \\
 			Benoît \textsc{Costes} \\
 		\end{flushright}
 	\end{minipage}\\[1cm]
-	% If you don't want a supervisor, uncomment the two lines below and remove the section above
-	%\Large \emph{Author:}\\
-	%John \textsc{Smith}\\[3cm] % Your name
 		
 	%----------------------------------------------------------------------------------------
 	%	DATE SECTION
@@ -170,7 +170,7 @@
 %\listofalgorithms
 
 %\include{exemple}
-%\include{introduction}
+\include{introduction}
 \include{gestion}
 %\include{algorithme}
 %\include{conclusion}

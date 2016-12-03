@@ -1,37 +1,45 @@
 \chapter{Methodology, Project management and Organization}
 
 \section{Agile - Scrum}
-Agile is a methodology which describes the software development principles. Its aims
-are to be reactive in development and to include the client's modifications on real time.
+
+Agile is a methodology which describes the software development principles. Its aims are to be reactive in development and to include the client's modifications on real time.
 Agile counterbalances absence of communication and interaction in companies.
 This is simples and logicals rules.
 With Agile, the team manages itself, there is no hierarchy between all the members.
 The different rules are :
 \begin{itemize}
-	\item Product owner
+	\item Product owners
 	\item Scrum master
 	\item Developers
 	\item Testers
 \end{itemize}
 To be more efficient, we choose two Products owners.
-Product owner have to understands client's requirements and describes it in the user stories. He is in interaction with the client to present the development evolution sprint by sprint. The client asks to the product owner software modifications or add/remove functionalities.
-He is in charge to the products backlog, he valid the user stories before deliver it to the client.
+Product owners have to understands client's requirements and describes it in user stories. They are in interaction with Benoît \textsc{Costes} to present the development evolution sprint by sprint. The client asks to the product owner software modifications or add/remove functionalities.
+They are in charge to the products backlog, must validate the user stories before deliver it to the client.
 
-Scrum master forms the team members to the Scrum methodology if it's necessary and checks if the methodology is respected.
+Scrum master teaches the team members to the Scrum methodology if it's necessary and checks if the methodology is respected.
 He is the team leader, motivate the staff.
 Scrum master is working with the product owner to write user stories.
 He preserves the team by assuming the pressure.
+We organized meeting when it's necessary, so not all days, but we interacted with each other regularly.
 
-The developers team organize itself and each member select its user stories by skills.
+The developers team organize itself and each member selected its user stories by skills.
 Developers code all the sprint's user stories one by one, make there own tests before marking the user story "ready for tests".
 
-Testers 
+We have two testers in this team, because we think in this project and with our organization that is enough.
 
-This is a different way to develops software. Development is separated into sprints, which are periods of development, with the same duration.
 Each sprint is composed of singles tasks which called user story.
 On the map matching project, we have four sprints of two and half days.
+\begin{itemize}
+	\item The first sprint 86 upts,
+	\item The second sprint 39 upts,
+	\item The third sprint 83 upts,
+	\item The fourth sprint 71 upts.
+\end{itemize}
+
 \subsection{Taiga.io}
-To organize and manage user stories, sprints and team interaction we need an system to manage the development, follow the evolution, assign tasks to team members, etc...
+
+To organize and manage user stories, sprints and simplify team interaction we need a system, follow the evolution, assign tasks to team members, etc...
 After comparing multiple Scrum solutions founded on Internet : on-line solutions or server applications, we found taiga.
 Taiga is an open-source on-line solution, the must efficient we founded and Scrum respectful.
 We need user stories which describe all singles tasks, taiga allowed it, all created user stories are in the backlog.
@@ -39,6 +47,7 @@ In the user story creation, we can inform the story points, add some information
 We can create multiple sprints and assign each user stories to the good sprint.
 When we close user stories, taiga updates sprint's statistics (number of ended tasks points).
 Taiga allow interaction with GitHub to update user stories status using a special code into the git commit message.
+
 \begin{lstlisting}[frame=single, caption="The default syntax"]
 $git commit - m "description
 >TG-identifiant #status"
@@ -50,29 +59,27 @@ $git commit - m "Correction du bug
 \end{lstlisting}
 
 List of default available status : 
-\begin{tasks}(6)
-	\task new
-	\task ready
-	\task in-progress
-	\task done
-	\task archived
-\end{tasks}
+\begin{itemize}
+	\item new
+	\item ready
+	\item in-progress
+	\item done
+	\item archived
+\end{itemize}
 
 \section{TDD}
 
-\section{Team}
-Members of the team are :
-as scrum master : Romain Mazière
-as product owners :
-R Millet
-C Parisel
-as developers :
-all
-as testers :
-C Parisel
+***To complete***
+			
 \section{The version control system}
-The best way to organize a collaborative work on software development is by using a system which allowed version control, do automatic merge, permit conflicts resolution.
-We used GitHub for the project : \url{https://github.com/rmaziere/Map_Matching}
 
-At the beginning, we use the Git Cheat Sheet to help us and to remember commands and the good order to use them.
-%\subsection{}
+The best way to organize a collaborative work on software development is by using a system which allowed version control, do automatic merge, permit conflicts resolution.
+We began with GitLab, but have some problems of lowness and at the end of the day .
+So, we switch to GitHub for the project : \url{https://github.com/rmaziere/Map_Matching}
+
+To help us, at the beginning, we use the Git Cheat Sheet to help us and to remember commands and the good order to use them \url{https://services.github.com/on-demand/downloads/fr/github-git-cheat-sheet.pdf}
+
+\section{Integrated Development Environment}
+
+We choose Qt Creator to write code, classes and make the graphic user interface.
+***To develop***
