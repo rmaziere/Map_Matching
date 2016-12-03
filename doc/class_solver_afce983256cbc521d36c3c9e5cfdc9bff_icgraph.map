@@ -1,0 +1,11 @@
+<map id="Solver::signalDimension" name="Solver::signalDimension">
+<area shape="rect" id="node2" href="$class_solver.html#a97bc7169c18b339fecd4937150f907c3" title="Solver::start" alt="" coords="234,31,327,57"/>
+<area shape="rect" id="node6" href="$class_solver.html#af677644390b609a5f496fa2362099959" title="filterSpace Use Spatial filter with a value " alt="" coords="216,81,345,108"/>
+<area shape="rect" id="node10" href="$class_solver.html#a95af3471a75ea1b9dc7051959c70b6e7" title="filterTemp Use Temporal filter with a value " alt="" coords="218,132,343,159"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a9dd67c19acf7317c6296b63e29dcfab9" title="dev_thread" alt="" coords="443,5,530,32"/>
+<area shape="rect" id="node5" href="$class_solver.html#a323c9c0407f26a2ed3ec3ff5ed02a760" title="Solver::onSignalStart" alt="" coords="414,56,559,83"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="710,5,761,32"/>
+<area shape="rect" id="node7" href="$class_main_window.html#ae2500bf587f9630ce61d27ca231cfd7a" title="readyToNext2 Pass informations " alt="" coords="393,119,580,145"/>
+<area shape="rect" id="node8" href="$class_main_window.html#af773488e0b16efe6c0fc67ad348b86b2" title="createConnections " alt="" coords="628,119,843,145"/>
+<area shape="rect" id="node9" href="$class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="891,119,1071,145"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Grid::getProjectedPointAndDistance" name="Grid::getProjectedPointAndDistance">
+<area shape="rect" id="node2" href="$class_road.html#a2877f55c577ddff8c519e7f44c2256d5" title="Get the vector of points composing the road. " alt="" coords="247,5,405,32"/>
+<area shape="rect" id="node3" href="$class_point.html#a9cff645d17a17081494fca956d43102a" title="Point::projectionOnSegment" alt="" coords="233,56,419,83"/>
+<area shape="rect" id="node4" href="$class_point.html#a7cd7f7e2c0f1a11b66eac8b6f360bfd9" title="Calculate distance between two points. " alt="" coords="467,5,621,32"/>
+<area shape="rect" id="node5" href="$class_point.html#a3eef47b1c4849b3395a8f9c658ca7c4a" title="Point::x" alt="" coords="511,56,577,83"/>
+<area shape="rect" id="node6" href="$class_point.html#a96e90df6b3c18e64c31abdf196e49ae9" title="Point::y" alt="" coords="511,107,577,133"/>
+</map>

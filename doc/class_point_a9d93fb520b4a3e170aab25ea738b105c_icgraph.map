@@ -1,0 +1,11 @@
+<map id="Point::samePointAs" name="Point::samePointAs">
+<area shape="rect" id="node2" href="$structequals_func.html#a20bec4534ac20aba8bd6652318f35ac8" title="equalsFunc::operator()" alt="" coords="204,64,356,91"/>
+<area shape="rect" id="node3" href="$class_point.html#a39daa6ebd31cdc2d7151db77bfdf2166" title="Compute the distance between a point and a segment. " alt="" coords="192,115,368,141"/>
+<area shape="rect" id="node8" href="$class_point.html#a364091762d6aa1aa5983d36fd7d8b6d5" title="Point Class&#39;s Destructor. " alt="" coords="452,165,551,192"/>
+<area shape="rect" id="node4" href="$class_grid.html#a8923d001226c9c9d4e19ac17a40ff44b" title="Grid::getDistanceToExtremity" alt="" coords="635,5,829,32"/>
+<area shape="rect" id="node6" href="$class_grid.html#a459ceb14878d0bb3c40286c0eb3df2fd" title="Grid::getSegmentCounter" alt="" coords="416,64,587,91"/>
+<area shape="rect" id="node9" href="$class_solver.html#ac93808d9f79208e9917830d0ff0a5dfd" title="setDistance Calculate distance between GPS point et Road " alt="" coords="433,115,570,141"/>
+<area shape="rect" id="node5" href="$class_grid.html#afc6f21c3514d66d3ce16765ccb97411e" title="Grid::computeDistanceFraction" alt="" coords="877,35,1080,61"/>
+<area shape="rect" id="node7" href="$class_grid.html#a22e72ffe8491d3d9df45d870979a8f21" title="Grid::getDistanceBetween\lProjections" alt="" coords="645,57,819,98"/>
+<area shape="rect" id="node10" href="$class_solver.html#a2abdc34ec29d4301a7219375f6e5ec84" title="Solver::onSignalNeighbours" alt="" coords="641,123,823,149"/>
+</map>

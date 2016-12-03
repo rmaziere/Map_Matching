@@ -1,0 +1,4 @@
+<map id="Road::getIntersectionIDWith" name="Road::getIntersectionIDWith">
+<area shape="rect" id="node2" href="$class_grid.html#afc6f21c3514d66d3ce16765ccb97411e" title="Grid::computeDistanceFraction" alt="" coords="241,5,444,32"/>
+<area shape="rect" id="node3" href="$class_road.html#ae27e2447c9236e0b432cbb8ebf0222f3" title="Constructor. Instanciates a Road object with a specific ID. " alt="" coords="297,56,389,83"/>
+</map>

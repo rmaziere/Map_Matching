@@ -1,0 +1,10 @@
+<map id="File::splitPath" name="File::splitPath">
+<area shape="rect" id="node2" href="$class_file.html#a7177a8eac75b0fc5425ebd65e16c2d6f" title="The UI to select the file&#39;s path to open. " alt="" coords="156,81,316,108"/>
+<area shape="rect" id="node3" href="$class_loading.html#ae0c96193667418083fc4a8c6cc19d9db" title="loadFileCSVTrack Get File of SHP track " alt="" coords="364,5,545,32"/>
+<area shape="rect" id="node6" href="$class_loading.html#a9a01f3e328100b681f3f08192fc9b208" title="loadFileSHPTrack Get File of CSV track " alt="" coords="364,56,545,83"/>
+<area shape="rect" id="node7" href="$class_loading.html#a84d718939a74cf1680ea3e2409324194" title="loadFileGrid Get File of grid " alt="" coords="383,107,527,133"/>
+<area shape="rect" id="node9" href="$main_8cpp.html#a78a67b17d4d189a7c0732ad1ac54912e" title="dev_file" alt="" coords="421,157,488,184"/>
+<area shape="rect" id="node4" href="$class_loading.html#ab603e821bd6b047fb04285e926974ff6" title="track " alt="" coords="593,56,697,83"/>
+<area shape="rect" id="node5" href="$class_loading.html#a7634c001ec052e10c402e49f5be030db" title="Loading::Loading" alt="" coords="745,81,865,108"/>
+<area shape="rect" id="node8" href="$class_loading.html#afb0b2fe451bdc3f6f2cc186903df96b4" title="grid " alt="" coords="597,107,693,133"/>
+</map>

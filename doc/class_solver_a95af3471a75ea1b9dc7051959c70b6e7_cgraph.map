@@ -1,0 +1,5 @@
+<map id="Solver::filterTemp" name="Solver::filterTemp">
+<area shape="rect" id="node2" href="$class_track.html#a58fcdaf47f2c87bb7095933616f5a4bc" title="This is a temporal filter, which deletes points depending on a time value. " alt="" coords="195,5,337,32"/>
+<area shape="rect" id="node4" href="$class_track.html#ad262a30c2abcd29cf4cdc04facd290ee" title="Track::getPointsAsPointer" alt="" coords="179,56,353,83"/>
+<area shape="rect" id="node3" href="$class_point_g_p_s.html#aa8a0cbf3cfbc3f4ac9d16737c00fcb88" title="PointGPS::timeStamp" alt="" coords="401,5,552,32"/>
+</map>

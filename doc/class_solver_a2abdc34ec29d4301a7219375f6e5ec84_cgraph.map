@@ -1,0 +1,15 @@
+<map id="Solver::onSignalNeighbours" name="Solver::onSignalNeighbours">
+<area shape="rect" id="node2" href="$class_point.html#a3eef47b1c4849b3395a8f9c658ca7c4a" title="Point::x" alt="" coords="297,5,364,32"/>
+<area shape="rect" id="node3" href="$class_road.html#ad6715392969e36eb10efac542519755c" title="Get the id of the road. " alt="" coords="535,31,635,57"/>
+<area shape="rect" id="node4" href="$class_solver.html#ac93808d9f79208e9917830d0ff0a5dfd" title="setDistance Calculate distance between GPS point et Road " alt="" coords="262,107,399,133"/>
+<area shape="rect" id="node12" href="$class_point_g_p_s.html#ae93eac1b7998f2ba4bae11599ebcfd17" title="PointGPS::updateProbability" alt="" coords="237,157,425,184"/>
+<area shape="rect" id="node13" href="$class_solver.html#a48062c3b8bc8d93446b8d1456a17752a" title="Solver::getIndexFromRoadId" alt="" coords="236,208,425,235"/>
+<area shape="rect" id="node14" href="$class_solver.html#a69e11a5cede2377d8151620160918aab" title="Solver::buildRoadPath" alt="" coords="255,259,407,285"/>
+<area shape="rect" id="node5" href="$class_road.html#a2877f55c577ddff8c519e7f44c2256d5" title="Get the vector of points composing the road. " alt="" coords="506,81,665,108"/>
+<area shape="rect" id="node6" href="$class_point.html#a39daa6ebd31cdc2d7151db77bfdf2166" title="Compute the distance between a point and a segment. " alt="" coords="497,132,673,159"/>
+<area shape="rect" id="node9" href="$class_point_g_p_s.html#a9c833db3ff338f3cd2ee8480db6c7d56" title="PointGPS::addEmissionProbability" alt="" coords="473,183,697,209"/>
+<area shape="rect" id="node10" href="$class_point_g_p_s.html#a9a622f6883b721ee5f04f092a76ece64" title="PointGPS::infos" alt="" coords="527,233,643,260"/>
+<area shape="rect" id="node7" href="$class_point.html#a9d93fb520b4a3e170aab25ea738b105c" title="Check if two points share the same coordinates. " alt="" coords="753,107,892,133"/>
+<area shape="rect" id="node8" href="$class_point.html#a7cd7f7e2c0f1a11b66eac8b6f360bfd9" title="Calculate distance between two points. " alt="" coords="745,157,900,184"/>
+<area shape="rect" id="node11" href="$class_point.html#a1c2033a89f5dc6faa9e50f06c2111e88" title="Point::infos" alt="" coords="779,233,867,260"/>
+</map>

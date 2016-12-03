@@ -1,0 +1,5 @@
+<map id="Solver::filterSpace" name="Solver::filterSpace">
+<area shape="rect" id="node2" href="$class_track.html#a9f1da7896167f44da967acf9fd05d92a" title="This is a space filter, which deletes points depending on a distance interval. " alt="" coords="207,5,333,32"/>
+<area shape="rect" id="node4" href="$class_track.html#ad262a30c2abcd29cf4cdc04facd290ee" title="Track::getPointsAsPointer" alt="" coords="183,56,357,83"/>
+<area shape="rect" id="node3" href="$class_track.html#a0477b30aca07ba3f43b25d4c6ea782e0" title="Deletes a occurence. " alt="" coords="405,5,544,32"/>
+</map>

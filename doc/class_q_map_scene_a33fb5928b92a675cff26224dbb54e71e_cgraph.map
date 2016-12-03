@@ -1,0 +1,6 @@
+<map id="QMapScene::onSignalCurrentPoint" name="QMapScene::onSignalCurrentPoint">
+<area shape="rect" id="node2" href="$class_q_map_scene.html#a17f5250a4401b0b56d37512d69f0c4cb" title="QMapScene::setBackToDefault" alt="" coords="250,5,457,32"/>
+<area shape="rect" id="node3" href="$class_q_map_scene.html#add1be87bf7492ddce405473d86a130e8" title="QMapScene::highlightRoads\lDefault" alt="" coords="259,57,447,98"/>
+<area shape="rect" id="node4" href="$class_q_map_scene.html#ad8e5f9f34ea3ce40f7f0d49e20ad5094" title="QMapScene::highlightSelected\lPoint" alt="" coords="253,122,454,163"/>
+<area shape="rect" id="node5" href="$class_q_map_scene.html#ab816c67d64b85d0dc8b1d97d48b0007b" title="QMapScene::setNeighborRoads" alt="" coords="248,188,459,215"/>
+</map>

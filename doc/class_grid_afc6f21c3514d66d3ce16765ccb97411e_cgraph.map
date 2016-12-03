@@ -1,0 +1,15 @@
+<map id="Grid::computeDistanceFraction" name="Grid::computeDistanceFraction">
+<area shape="rect" id="node2" href="$class_grid.html#a54c76e927f8428bca87520d8ca310bec" title="Grid::getRoadEntry" alt="" coords="283,5,417,32"/>
+<area shape="rect" id="node3" href="$class_grid.html#ac4e7d17f7ac28247f6cbd55d4ae0fee8" title="Grid::getProjectedPointAnd\lDistance" alt="" coords="499,41,679,82"/>
+<area shape="rect" id="node6" href="$class_point.html#a7cd7f7e2c0f1a11b66eac8b6f360bfd9" title="Calculate distance between two points. " alt="" coords="968,219,1123,245"/>
+<area shape="rect" id="node9" href="$class_road.html#ac16bb31d9710b3626bc6e4ed15f5f9ac" title="Road::getIntersectionIDWith" alt="" coords="256,157,444,184"/>
+<area shape="rect" id="node10" href="$class_grid.html#a22e72ffe8491d3d9df45d870979a8f21" title="Grid::getDistanceBetween\lProjections" alt="" coords="263,230,437,271"/>
+<area shape="rect" id="node14" href="$class_grid.html#a8923d001226c9c9d4e19ac17a40ff44b" title="Grid::getDistanceToExtremity" alt="" coords="492,360,687,387"/>
+<area shape="rect" id="node4" href="$class_road.html#a2877f55c577ddff8c519e7f44c2256d5" title="Get the vector of points composing the road. " alt="" coords="748,208,907,235"/>
+<area shape="rect" id="node5" href="$class_point.html#a9cff645d17a17081494fca956d43102a" title="Point::projectionOnSegment" alt="" coords="735,52,920,79"/>
+<area shape="rect" id="node7" href="$class_point.html#a3eef47b1c4849b3395a8f9c658ca7c4a" title="Point::x" alt="" coords="1012,27,1079,53"/>
+<area shape="rect" id="node8" href="$class_point.html#a96e90df6b3c18e64c31abdf196e49ae9" title="Point::y" alt="" coords="1012,77,1079,104"/>
+<area shape="rect" id="node11" href="$class_grid.html#a459ceb14878d0bb3c40286c0eb3df2fd" title="Grid::getSegmentCounter" alt="" coords="504,259,675,285"/>
+<area shape="rect" id="node12" href="$class_point.html#a39daa6ebd31cdc2d7151db77bfdf2166" title="Compute the distance between a point and a segment. " alt="" coords="739,360,915,387"/>
+<area shape="rect" id="node13" href="$class_point.html#a9d93fb520b4a3e170aab25ea738b105c" title="Check if two points share the same coordinates. " alt="" coords="976,360,1115,387"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="Track::delPointGPS" name="Track::delPointGPS">
+<area shape="rect" id="node2" href="$class_track.html#a9f1da7896167f44da967acf9fd05d92a" title="This is a space filter, which deletes points depending on a distance interval. " alt="" coords="192,81,319,108"/>
+<area shape="rect" id="node3" href="$class_solver.html#a97bc7169c18b339fecd4937150f907c3" title="Solver::start" alt="" coords="385,56,478,83"/>
+<area shape="rect" id="node7" href="$class_solver.html#af677644390b609a5f496fa2362099959" title="filterSpace Use Spatial filter with a value " alt="" coords="367,107,496,133"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a9dd67c19acf7317c6296b63e29dcfab9" title="dev_thread" alt="" coords="594,5,681,32"/>
+<area shape="rect" id="node6" href="$class_solver.html#a323c9c0407f26a2ed3ec3ff5ed02a760" title="Solver::onSignalStart" alt="" coords="565,56,710,83"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="861,5,911,32"/>
+<area shape="rect" id="node8" href="$class_main_window.html#ae2500bf587f9630ce61d27ca231cfd7a" title="readyToNext2 Pass informations " alt="" coords="544,107,731,133"/>
+<area shape="rect" id="node9" href="$class_main_window.html#af773488e0b16efe6c0fc67ad348b86b2" title="createConnections " alt="" coords="779,107,993,133"/>
+<area shape="rect" id="node10" href="$class_main_window.html#a8b244be8b7b7db1b08de2a2acb9409db" title="MainWindow::MainWindow" alt="" coords="1041,107,1221,133"/>
+</map>

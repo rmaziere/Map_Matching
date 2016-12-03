@@ -1,0 +1,11 @@
+<map id="Point::~Point" name="Point::~Point">
+<area shape="rect" id="node2" href="$class_point.html#a9d93fb520b4a3e170aab25ea738b105c" title="Check if two points share the same coordinates. " alt="" coords="393,23,532,50"/>
+<area shape="rect" id="node3" href="$class_point.html#a7cd7f7e2c0f1a11b66eac8b6f360bfd9" title="Calculate distance between two points. " alt="" coords="385,99,540,126"/>
+<area shape="rect" id="node4" href="$class_point.html#a9cff645d17a17081494fca956d43102a" title="Point::projectionOnSegment" alt="" coords="152,150,337,177"/>
+<area shape="rect" id="node5" href="$class_point.html#a3eef47b1c4849b3395a8f9c658ca7c4a" title="Point::x" alt="" coords="429,201,496,227"/>
+<area shape="rect" id="node6" href="$class_point.html#a96e90df6b3c18e64c31abdf196e49ae9" title="Point::y" alt="" coords="429,302,496,329"/>
+<area shape="rect" id="node7" href="$class_point.html#a39daa6ebd31cdc2d7151db77bfdf2166" title="Compute the distance between a point and a segment. " alt="" coords="157,49,333,75"/>
+<area shape="rect" id="node8" href="$class_point.html#a1c2033a89f5dc6faa9e50f06c2111e88" title="Point::infos" alt="" coords="201,403,289,430"/>
+<area shape="rect" id="node9" href="$class_point.html#a6f6a42c3b4bfe6e7e5ccb502788227d6" title="Point::setx" alt="" coords="202,251,287,278"/>
+<area shape="rect" id="node10" href="$class_point.html#a16550863eab3e713371cdf8d5fa26926" title="Point::sety" alt="" coords="202,302,287,329"/>
+</map>

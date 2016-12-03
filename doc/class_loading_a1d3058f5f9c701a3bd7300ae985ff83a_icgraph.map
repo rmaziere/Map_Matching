@@ -1,0 +1,10 @@
+<map id="Loading::launchFiles" name="Loading::launchFiles">
+<area shape="rect" id="node2" href="$class_loading.html#ae0c96193667418083fc4a8c6cc19d9db" title="loadFileCSVTrack Get File of SHP track " alt="" coords="195,5,376,32"/>
+<area shape="rect" id="node5" href="$class_loading.html#a9a01f3e328100b681f3f08192fc9b208" title="loadFileSHPTrack Get File of CSV track " alt="" coords="195,56,376,83"/>
+<area shape="rect" id="node6" href="$class_loading.html#a84d718939a74cf1680ea3e2409324194" title="loadFileGrid Get File of grid " alt="" coords="213,107,357,133"/>
+<area shape="rect" id="node8" href="$class_loading.html#a1925efcb9ccc2a01359b40a59cb542d9" title="getCountry Choose country " alt="" coords="216,157,355,184"/>
+<area shape="rect" id="node3" href="$class_loading.html#ab603e821bd6b047fb04285e926974ff6" title="track " alt="" coords="431,56,535,83"/>
+<area shape="rect" id="node4" href="$class_loading.html#a7634c001ec052e10c402e49f5be030db" title="Loading::Loading" alt="" coords="591,107,711,133"/>
+<area shape="rect" id="node7" href="$class_loading.html#afb0b2fe451bdc3f6f2cc186903df96b4" title="grid " alt="" coords="435,107,531,133"/>
+<area shape="rect" id="node9" href="$class_loading.html#a8393eca502e0e8946e9e9b8ca57a565d" title="country " alt="" coords="424,157,543,184"/>
+</map>

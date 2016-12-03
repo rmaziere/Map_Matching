@@ -1,0 +1,12 @@
+<map id="Point::distanceToPoint" name="Point::distanceToPoint">
+<area shape="rect" id="node2" href="$class_grid.html#afc6f21c3514d66d3ce16765ccb97411e" title="Grid::computeDistanceFraction" alt="" coords="903,97,1105,124"/>
+<area shape="rect" id="node3" href="$class_grid.html#a22e72ffe8491d3d9df45d870979a8f21" title="Grid::getDistanceBetween\lProjections" alt="" coords="670,235,845,277"/>
+<area shape="rect" id="node4" href="$class_point.html#a9cff645d17a17081494fca956d43102a" title="Point::projectionOnSegment" alt="" coords="208,36,393,63"/>
+<area shape="rect" id="node6" href="$class_point.html#a364091762d6aa1aa5983d36fd7d8b6d5" title="Point Class&#39;s Destructor. " alt="" coords="477,87,576,113"/>
+<area shape="rect" id="node7" href="$class_point.html#a39daa6ebd31cdc2d7151db77bfdf2166" title="Compute the distance between a point and a segment. " alt="" coords="213,137,389,164"/>
+<area shape="rect" id="node5" href="$class_grid.html#ac4e7d17f7ac28247f6cbd55d4ae0fee8" title="Grid::getProjectedPointAnd\lDistance" alt="" coords="667,54,847,95"/>
+<area shape="rect" id="node8" href="$class_grid.html#a8923d001226c9c9d4e19ac17a40ff44b" title="Grid::getDistanceToExtremity" alt="" coords="660,133,855,160"/>
+<area shape="rect" id="node9" href="$class_grid.html#a459ceb14878d0bb3c40286c0eb3df2fd" title="Grid::getSegmentCounter" alt="" coords="441,239,612,265"/>
+<area shape="rect" id="node10" href="$class_solver.html#ac93808d9f79208e9917830d0ff0a5dfd" title="setDistance Calculate distance between GPS point et Road " alt="" coords="458,188,595,215"/>
+<area shape="rect" id="node11" href="$class_solver.html#a2abdc34ec29d4301a7219375f6e5ec84" title="Solver::onSignalNeighbours" alt="" coords="666,184,849,211"/>
+</map>

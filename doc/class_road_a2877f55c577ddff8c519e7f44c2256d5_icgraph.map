@@ -1,0 +1,12 @@
+<map id="Road::vectorOfPointsId" name="Road::vectorOfPointsId">
+<area shape="rect" id="node2" href="$class_grid.html#ac4e7d17f7ac28247f6cbd55d4ae0fee8" title="Grid::getProjectedPointAnd\lDistance" alt="" coords="473,5,653,47"/>
+<area shape="rect" id="node4" href="$class_grid.html#a22e72ffe8491d3d9df45d870979a8f21" title="Grid::getDistanceBetween\lProjections" alt="" coords="475,84,650,125"/>
+<area shape="rect" id="node5" href="$class_grid.html#a8923d001226c9c9d4e19ac17a40ff44b" title="Grid::getDistanceToExtremity" alt="" coords="465,150,660,177"/>
+<area shape="rect" id="node6" href="$class_grid.html#a459ceb14878d0bb3c40286c0eb3df2fd" title="Grid::getSegmentCounter" alt="" coords="229,99,400,126"/>
+<area shape="rect" id="node7" href="$class_q_map_scene.html#a488091d99db8ab3daf8f4fe610e520b6" title="QMapScene::onSignalAllRoads" alt="" coords="212,201,417,227"/>
+<area shape="rect" id="node8" href="$class_road.html#ac16bb31d9710b3626bc6e4ed15f5f9ac" title="Road::getIntersectionIDWith" alt="" coords="221,251,409,278"/>
+<area shape="rect" id="node10" href="$class_solver.html#ac93808d9f79208e9917830d0ff0a5dfd" title="setDistance Calculate distance between GPS point et Road " alt="" coords="246,302,383,329"/>
+<area shape="rect" id="node3" href="$class_grid.html#afc6f21c3514d66d3ce16765ccb97411e" title="Grid::computeDistanceFraction" alt="" coords="708,121,911,147"/>
+<area shape="rect" id="node9" href="$class_road.html#ae27e2447c9236e0b432cbb8ebf0222f3" title="Constructor. Instanciates a Road object with a specific ID. " alt="" coords="517,251,609,278"/>
+<area shape="rect" id="node11" href="$class_solver.html#a2abdc34ec29d4301a7219375f6e5ec84" title="Solver::onSignalNeighbours" alt="" coords="471,302,654,329"/>
+</map>

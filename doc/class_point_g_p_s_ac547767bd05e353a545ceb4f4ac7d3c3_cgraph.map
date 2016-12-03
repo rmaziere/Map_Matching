@@ -1,0 +1,6 @@
+<map id="PointGPS::PointGPS" name="PointGPS::PointGPS">
+<area shape="rect" id="node2" href="$class_point_g_p_s.html#a9c833db3ff338f3cd2ee8480db6c7d56" title="PointGPS::addEmissionProbability" alt="" coords="200,5,424,32"/>
+<area shape="rect" id="node3" href="$class_point_g_p_s.html#ae93eac1b7998f2ba4bae11599ebcfd17" title="PointGPS::updateProbability" alt="" coords="218,56,406,83"/>
+<area shape="rect" id="node4" href="$class_point_g_p_s.html#a9a622f6883b721ee5f04f092a76ece64" title="PointGPS::infos" alt="" coords="254,107,370,133"/>
+<area shape="rect" id="node5" href="$class_point.html#a1c2033a89f5dc6faa9e50f06c2111e88" title="Point::infos" alt="" coords="472,107,560,133"/>
+</map>
