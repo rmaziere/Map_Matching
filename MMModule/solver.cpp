@@ -1,15 +1,21 @@
 #include "solver.h"
 #define DEBUG_SOLVER true
+#define DEBUG_LASTMINUTE true
+
 
 Solver::Solver(QObject* parent)
     : QObject(parent)
 {
+    m_timer= new QTimer(this);
+    connect(m_timer, SIGNAL(timeout()), this, SLOT(onSignalAutoplay()));
+    m_timerOn= false;
 }
 
 void Solver::start()
 {
+
     track.readFromCSV(m_trackFilename);
-    track.temporalFilter(2);
+    track.temporalFilter(3);
     track.spaceFilter(15);
     m_trackPoints = track.getPointsAsPointer();
     emit signalMessage(QString::fromStdString(track.infos()));
@@ -35,8 +41,8 @@ void Solver::viterbiSetup()
     int noOfObs = track.getNoOfPoints();
     // initialize T1, T2 with 0
     for (int i = 0; i < noOfStates; i++) {
-        T1.push_back(std::vector<float>(noOfObs));
-        T2.push_back(std::vector<float>(noOfObs));
+        T1.push_back(std::vector<double>(noOfObs));
+        T2.push_back(std::vector<double>(noOfObs));
     }
     // build bidirectionnal mapping between roadId and index
     int index = 0;
@@ -73,6 +79,7 @@ void Solver::buildRoadPath()
 {
     unsigned int i;
     std::vector<long>* roadPath = new std::vector<long>(0);
+    std::set<long>* roadSet= new std::set<long>();
     int roadIndex, prevrI = -1;
     float bestProbaSoFar = 0.0;
     for (i = 0; i < m_fromIndexToRoadId.size(); i++) {
@@ -82,14 +89,18 @@ void Solver::buildRoadPath()
         }
     }
     roadPath->push_back(m_fromIndexToRoadId[roadIndex]);
+    roadSet->insert(roadIndex);
     prevrI = roadIndex;
     for (int i = m_currentStep - 1; i > 0; i--) {
         int roadIndex = T2[prevrI][i];
-        if (roadIndex != prevrI)
+        if (roadIndex != prevrI) {
             roadPath->push_back(m_fromIndexToRoadId[roadIndex]);
+            roadSet->insert(roadIndex);
+        }
         prevrI = roadIndex;
     }
     emit signalRoadPath(roadPath);
+    //emit signalRoadSet(roadSet);
 }
 
 void Solver::onSignalSetGrid(QString s)
@@ -110,10 +121,16 @@ void Solver::onSignalStart()
 
 void Solver::onSignalNextStep()
 {
+    if (m_timerOn) { m_timer->stop(); m_timerOn= false;}
+    else { m_timer->start(500); m_timerOn= true;}
+}
+
+void Solver::autoPlay() {
     m_currentStep++;
     if (m_currentStep < m_trackPoints->size())
         emit signalCurrentPoint(m_currentStep);
 }
+
 
 void Solver::onSignalNeighbours(std::vector<long>* roadsId)
 {
@@ -128,7 +145,7 @@ void Solver::onSignalNeighbours(std::vector<long>* roadsId)
         idToRoad = grid.m_mapOfAllRoads.find(id);
         // Road *r= ...
         r = &idToRoad->second;
-        std::cout << p->x() << " distance " << r->edgeId() << std::endl;
+        //std::cout << p->x() << " distance " << r->edgeId() << std::endl;
         setDistance(p, r);
     }
     p->updateProbability();
@@ -162,14 +179,24 @@ void Solver::onSignalNeighbours(std::vector<long>* roadsId)
             // find all connexions to this road
             idToRoad = grid.m_mapOfAllRoads.find(ep.roadId());
             r = &idToRoad->second;
-            float maxT1 = 0.0; // used to build T2
+            double maxT1 = 0.0; // used to build T2
             int maxT1roadId = 0;
             for (auto neigh : r->m_setOfNeighbors) {
                 neighIndex = getIndexFromRoadId(neigh);
-                T1[roadIndex][m_currentStep] = std::max(T1[roadIndex][m_currentStep],
-                    T1[neighIndex][m_currentStep - 1] * 1 * ep.probability());
-                if (maxT1 < T1[neighIndex][m_currentStep - 1] * 1) {
-                    maxT1 = T1[neighIndex][m_currentStep - 1] * 1;
+                /* START addition last minute               */
+                double pTrans=1.0; // transition from prevRoad to curRoad
+                if (DEBUG_LASTMINUTE) {
+                    pTrans= grid.computeDistanceFraction(m_trackPoints->at(m_currentStep-1), p, neigh, ep.roadId());
+                    std::cout << "Stat " << pTrans << std::endl;
+                }
+                /* END addition last minute               */
+                const double t1= T1[neighIndex][m_currentStep - 1] * (pTrans) * (ep.probability());
+                //if (DEBUG_SOLVER) std::cout << "Float r "<< neigh << " to r " << ep.roadId() << " through points (" << (double)(m_trackPoints->at(m_currentStep-1)->x()) << "," <<
+                //                                           m_trackPoints->at(m_currentStep-1)->y()<<") and (" << p->x() << "," << p->y() << ")"<< std::endl;
+                T1[roadIndex][m_currentStep] = std::max(T1[roadIndex][m_currentStep],t1);
+                    //T1[neighIndex][m_currentStep - 1] * pTrans * ep.probability());
+                if (maxT1 < T1[neighIndex][m_currentStep - 1] * pTrans) {
+                    maxT1 = T1[neighIndex][m_currentStep - 1] * pTrans;
                     maxT1roadId = neighIndex;
                 }
             }
@@ -177,6 +204,11 @@ void Solver::onSignalNeighbours(std::vector<long>* roadsId)
         }
     }
     buildRoadPath();
+}
+
+void Solver::onSignalAutoplay()
+{
+    autoPlay();
 }
 
 void Solver::readFiles(File file1, File file2)

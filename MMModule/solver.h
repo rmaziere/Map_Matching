@@ -2,7 +2,7 @@
 #define SOLVER_H
 
 #include <QObject>
-
+#include <QTimer>
 #include "file.h"
 #include "grid.h"
 #include "pointGPS.h"
@@ -51,6 +51,8 @@ public:
 
     int getIndexFromRoadId(long id);
 
+    void autoPlay();
+
     QString m_gridFilename; // to move in protected once signals are in use
     QString m_trackFilename;
     //protected:
@@ -59,7 +61,7 @@ public:
     std::unordered_map<long, Road>* m_roads;
     std::vector<PointRoad>* m_roadPoints;
     std::vector<PointGPS*>* m_trackPoints;
-
+    QTimer *m_timer;
 signals:
     void signalMessage(QString);
     void signalDimension(double xMin, double xMax, double yMin, double yMax);
@@ -67,20 +69,24 @@ signals:
     void signalAllRoads(std::unordered_map<long, Road>*, std::vector<PointRoad>*);
     void signalCurrentPoint(int id);
     void signalRoadPath(std::vector<long>* rp);
+    void signalRoadSet(std::set<long>* rs);
 public slots:
     void onSignalSetGrid(QString s);
     void onSignalSetTrack(QString s);
     void onSignalStart();
     void onSignalNextStep();
     void onSignalNeighbours(std::vector<long>* roadsId);
+    void onSignalAutoplay();
 
 protected:
     unsigned int m_currentStep;
-    std::vector<std::vector<float> > T1, T2;
+    std::vector<std::vector<double> > T1, T2;
     std::vector<long> m_fromIndexToRoadId;
     std::unordered_map<long, int> m_fromRoadIdToIndex;
     std::vector<long>* prevRoadIds;
     PointGPS* prevPoint;
+    bool m_timerOn= false;
+
 };
 
 #endif // SOLVER_H

@@ -157,3 +157,26 @@ void QMapScene::onSignalRoadPath(std::vector<long>* rp)
     }
     delete rp;
 }
+
+void QMapScene::onSignalRoadSet(std::set<long> *rs)
+{
+    bool found;
+    QPen pen(QColor(GPSSELECTED), POINT_SIZE);
+    QPen defaultPen(QColor(ROADDEFAULT));
+    foreach (QGraphicsItem* item, items()) {
+        QGraphicsPathItem* path = qgraphicsitem_cast<QGraphicsPathItem*>(item);
+        if (!path)
+            continue;
+        // check if in road path
+        found = false;
+        for (auto r : *rs) {
+            if (path->data(KEY_ROADID).toLongLong() == r) {
+                path->setPen(pen);
+                found = true;
+            }
+        }
+        if (!found)
+            path->setPen(defaultPen);
+    }
+    delete rs;
+}
