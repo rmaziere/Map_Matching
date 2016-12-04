@@ -20,10 +20,10 @@ A few constants are introduced (but their real value not given in the paper) for
 The map matching algorithms works with GPS points and roads expressed as coordinates (x,y) in the metric system. 
 The data presented on the paper is freely available in the latitude and longitude system including other informations such as one-ways and average speed (for roads).
 
-This input data, as well as data from ??, has been processed through \textbf{QGIS} to produce ready to use datasets :
+This input data, as well as data from Paris, has been processed through \textbf{QGIS} to produce ready to use datasets :
 \begin{itemize}
-	\item a full dataset (road network and GPS track) from the paper representing a trip of xx points in Seattle ;
-	\item a small dataset from the same inputs ;
+	\item a full dataset (road network and GPS track) from the paper representing a trip of more than 7500 points in Seattle (2500+ roads);
+	\item a small dataset from the same inputs (231 GPS points);
 	\item datasets of trips in Paris.
 \end{itemize}
 
@@ -37,26 +37,20 @@ For each of these datasets, we have, at least :
 
 Once the input data where available in the adequate form (sufficient information expressed in meters), we could focus on the difficulties of the algorithms and the implementations options. 
 
-A basic UML class diagram was produced in order to initiate the agile process. The principle(?) being that each sprint would lead to a prototype expanding the previous sprint's prototype, hence adding more classes and functionalities to the software.
+A basic UML class diagram was produced in order to initiate the agile process. The principle being that each sprint would lead to a prototype expanding the previous sprint's prototype, hence adding more classes and functionalities to the software.
 
-<uml pic)
+During the development phase, Doxygen was used to generate updated UML class diagrams.
 
-In order to compute the transition matrix, distances between roads have to be computed. To do that we took opportunity of the fact that each end road coordinates is shared among others (ie this end points represent an intersection). Knowing the neighbors of a road, we have decided to distribute the probabilities equally among them (including the road itself).
-Thus, the formula for the probability of transitioning for road $1$ to road $2$, which was :
-\begin{eqnarray}
-todo
-\end{eqnarray}
-in the paper, has become :
-\begin{eqnarray}
-todo
-\end{eqnarray}
+<uml pic>
 
-Then for the transition matrix, our change are less drastic. We compute the shortest distance to roads and distribute the probability ?inverse to the value of the distance. 
-Looking for roads in the vicinity of a point can be costly. On the largest data input, we have xx points and yy roads (with an average of yy segments). A spatial partitioning is necessary.
+We have simplified the computation of both the emission matrix and the transition matrix. This was a side effect of our choice to not use a spatial library.
+
+In the end, we were able to get a similar results as the one shown on the paper. Our probabilities don't follow the same distribution and its shows after a long strand of GPS point corrections : as each probability depends on all the previous steps, its value can only go down. Using \textit{double} instead of \textit{float} only delay the moments where the values of all the probabilities for one timestep are almost null.  
+
 
 \section{Implementation details}
 
-From the requirements (??), we were advised to use C++, OpenGL through a library, QGIS, Globe, and Unit Tests.
+From the project description, we were advised to use C++, OpenGL through a library, QGIS, Globe, and Unit Tests.
 
 A previously mentioned, QGIS has been used to transform input data, and more generally, to visualize tracks and road networks. 
 
@@ -64,21 +58,21 @@ During the first sprint, we focused on getting a grip on C++ QGIS plugins and Gl
 
 \subsection{Unit tests}
 
-Our development has been done with Qt Creator and a limited use of Qt libraries. Qt offers a Unit Test library (Qt Test). Our ...??? showed that a large amount of C++ projects use GoogleTest. We think that it is a better investment to use a well established standard. 
-Google Test is relatively easy to setup and use (see document ... on our github). We only tackle the a tiny part of the possibilities of GTest as we focused on checking basic functionalities of our code (related to points and road segments), but it is a first step... 
+Our development has been done with Qt Creator and a limited use of Qt libraries. Qt offers a Unit Test library (Qt Test). A quick research showed that a large amount of C++ projects uses GoogleTest. We think that it is a better investment to use a well established standard. 
+Google Test is relatively easy to setup and use (a short documentation was written to get everyone up to speed). We only tackled a tiny part of the possibilities of GTest as we focused on checking basic functionalities of our code (related to GSP tracks and road segments), but we are confident that we can go deeper on a future project. 
 
 \subsection{Visualization and spatialization}
 
 A big side effect of our decision to not use QGIS was the problem of visualization and more specifically of spatialization.
 
-Qt is very... . Among all the libraries, is \textit{GraphicsScene} and \textit{GraphicsView}. Once .., we could easily display, zoom and ?? on a road network and more importantly take opportunity of its embedded partitioning to quickly select a set of neighboring roads.
+Qt is a very rich development framework. Among all the libraries, is \textit{GraphicsScene} and \textit{GraphicsView}. Whith those two classes, we could easily display, zoom and navigate on a road network, and, more importantly, take opportunity of its embedded partitioning to quickly select a set of neighboring roads.
 
-\subsection{Other ??}
-threads, gui, events systems, 
+\subsection{Other concepts}
 
 In order to have a responsive UI (when loading files and during the visualization of the track correction), we have separated all the GUI classes and the "logic" classes in two threads, a feat easily done in Qt thanks to its Qt thread library.
 
-Communication between threads is easily done with the slot/event system provided by Qt.
+Communication between threads is performed with the slot/event system provided by Qt.
 
+GUI classes helped to create a user friendly interface. 
 
 
