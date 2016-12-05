@@ -122,7 +122,7 @@ void Solver::onSignalStart()
 void Solver::onSignalNextStep()
 {
     if (m_timerOn) { m_timer->stop(); m_timerOn= false;}
-    else { m_timer->start(500); m_timerOn= true;}
+    else { m_timer->start(750); m_timerOn= true;}
 }
 
 void Solver::autoPlay() {
