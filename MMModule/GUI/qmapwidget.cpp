@@ -13,7 +13,6 @@ QMapWidget::QMapWidget(QWidget* parent)
     m_layout->addWidget(m_controlZone);
     setLayout(m_layout);
     setWindowTitle(tr("Map viewer"));
-
     connect(m_play, SIGNAL(clicked()), m_scene, SLOT(onSignalStart()));
     connect(m_zoom, SIGNAL(valueChanged(int)), this, SLOT(sceneScaleChanged(int)));
     connect(m_scene, SIGNAL(signalItemToShow(QGraphicsItem*)), this, SLOT(onSignalItemToShow(QGraphicsItem*)));
@@ -57,3 +56,4 @@ void QMapWidget::sceneScaleChanged(int scaleTickValue)
     m_view->resetMatrix();
     m_view->scale(newScale, -newScale);
 }
+

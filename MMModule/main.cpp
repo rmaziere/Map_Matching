@@ -175,8 +175,8 @@ int main(int argc, char* argv[])
 
     //dev_img();
 
-    dev_thread();
-    //dev_ui();
+    //dev_thread();
+    dev_ui();
 
     return app.exec();
     //return app.closingDown();

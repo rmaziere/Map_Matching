@@ -38,7 +38,7 @@ public slots:
     void onSignalStart();
     void onSignalCurrentPoint(int pointId);
     void onSignalRoadPath(std::vector<long>* rp);
-
+    void onSignalRoadSet(std::set<long>* rs);
 protected:
     std::vector<PointGPS*>* m_trackPoints;
     std::unordered_map<long, Road>* m_roads;

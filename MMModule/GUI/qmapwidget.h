@@ -8,6 +8,7 @@
 #include <QSlider>
 #include <QVBoxLayout>
 #include <QWidget>
+#include <QTimer>
 
 class QMapWidget : public QWidget {
     Q_OBJECT
@@ -36,6 +37,7 @@ protected:
 
     QSlider* m_zoom;
     bool m_startSimulation;
+
 };
 
 #endif // QMAPWIDGET_H

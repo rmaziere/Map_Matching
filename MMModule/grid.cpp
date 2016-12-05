@@ -302,16 +302,23 @@ double Grid::computeDistanceFraction(PointGPS* prevPoint, PointGPS* curPoint, lo
     std::vector<double> k2 = getProjectedPointAndDistance(curPoint, r2);
     Point projR1(k1.at(0), k1.at(1)), projR2(k2.at(0), k2.at(1));
     int node = r1->getIntersectionIDWith(r2);
+    Point *pnode= &m_vectorOfPoints.at(node);
     // bird distance
     dbird = prevPoint->distanceToPoint(*curPoint);
     if (prevRoadId == curRoadId) {
-        droad = getDistanceBetweenProjections(&projR1, &projR2, r1);
+        //droad = getDistanceBetweenProjections(&projR1, &projR2, r1);
+        droad= projR1.distanceToPoint(projR2);
     } else {
-        droad = getDistanceToExtremity(&projR1, node, r1) + getDistanceToExtremity(&projR2, node, r2);
+        //droad = getDistanceToExtremity(&projR1, node, r1) + getDistanceToExtremity(&projR2, node, r2);
+        droad= projR1.distanceToPoint(*pnode)+ projR2.distanceToPoint(*pnode);
     }
 
-    //Point *p= r1->
-    return r;
+    if (droad<0.00001 || dbird<0.00001)
+        return 0.4;
+    double res= 0.5;
+    if (dbird>droad) res= droad/dbird; else res= dbird/droad;
+    if (prevRoadId != curRoadId) res*=0.8; // malus for changing road (quick fix)
+    return (res*res);
 }
 
 std::vector<double> Grid::getProjectedPointAndDistance(PointGPS* p, Road* r)
@@ -328,47 +335,6 @@ std::vector<double> Grid::getProjectedPointAndDistance(PointGPS* p, Road* r)
         }
     }
     return res;
-}
-
-double Grid::getDistanceBetweenProjections(Point* projR1, Point* projR2, Road* r1)
-{
-    double d1, d2, dTotal = 0.0;
-    const std::vector<int>& listOfPointId = r1->vectorOfPointsId();
-    int start1 = getSegmentCounter(projR1, r1);
-    int start2 = getSegmentCounter(projR2, r1);
-
-    if (start1 == start2)
-        return projR1->distanceToPoint(*projR2);
-    // compute segments inbetween
-    if (start1 < start2) {
-        // from p1 to end of segment, all segment inbetween then from start2-1 to p2
-    } else {
-    }
-    // TODO
-    return dTotal;
-}
-
-double Grid::getDistanceToExtremity(Point* projR1, int node, Road* r1)
-{
-    double d, dTotal = 0.0;
-    const std::vector<int>& listOfPointId = r1->vectorOfPointsId();
-    // start with extremity and stop when d==0
-    if (listOfPointId.at(0) == node) {
-        for (uint i = 1; i < listOfPointId.size(); i++) {
-            d = projR1->distanceToSegment(m_vectorOfPoints.at(listOfPointId[i - 1]), m_vectorOfPoints.at(listOfPointId[i]));
-            dTotal += d;
-            if (d < 0.0001)
-                break;
-        }
-    } else {
-        for (uint i = listOfPointId.size() - 1; i > 1; i--) {
-            d = projR1->distanceToSegment(m_vectorOfPoints.at(listOfPointId[i - 1]), m_vectorOfPoints.at(listOfPointId[i]));
-            dTotal += d;
-            if (d < 0.0001)
-                break;
-        }
-    }
-    return dTotal;
 }
 
 int Grid::getSegmentCounter(Point* p, Road* r)
