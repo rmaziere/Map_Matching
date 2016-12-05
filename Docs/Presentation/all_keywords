@@ -1,0 +1,116 @@
+Teamwork
+Management
+Team
+Organization
+Agile
+Charge overflow
+anticipation
+Cohesion
+Communication
+Taiga.io - Scrum Project Management
+Open-Source on-line Agile Projects Management
+Scrum compatible (Backlog, user stories, sprints ...)
+User stories assignation
+Linkable with Git
+Statistics and graphics
+Multiple awards
+
+Learn new methodology
+Discover news tools
+Project Organization
+How to make it better
+
+[Tools] Debian
+Full Install
+Setup of proxy
+Customized : plugin (todos, taskbar)
+Installation of IDE (qtcreator, markdown editor, laTeX, uml editor)
+[Tools] Beautify
+Readable source code file
+Same way of writing
+Automatic use
+[Tools] Doxygen
+Automatic documentation from source code comments
+Hosted on gh-pages (github service)
+[Tools] Unit Tests
+Choice of using GoogleTest library
+Principles (Test Driven Development)
+Git :
+Version Control System
+Code accessible to all
+GitHub :
+Web-based Git repository hosting service
+Continuous integration tools
+Plugin :
+Parallel project Qt
+Resuming code
+Creating a file .so
+    Difficulties to transform an application to a plugin
+Git :
+Getting Started with a Code Manager
+Conflict management
+Software discovery (GitHub Desktop, Gitk…)
+Plugin Qgis :
+Create a plugin
+Qt Creator
+C ++ Coding
+Using Script Shell
+[Library] globe
+Compilation
+Running
+Visualisation 2D / 3D
+C++
+Plugin
+Available source code
+[Library] GDAL / OGR
+GDAL : Geospatial Data Abstraction Library
+OGR : The related OGR library (OGR Simple Features Library)
+Command line
+Easy to use...
+Application of the agile method in a real project,
+Discovery of Qt and Qt-creator,
+Use of git and github commands,
+Implementation of Unit tests with googletest,
+Use of GDAL
+Improve in C++ coding.
+[ Paper ] Objective 
+Map matching using Hidden Markov Model
+Data structures
+Spatial partitioning
+Emission Matrix (HMM)
+Transition Matrix (HMM)
+Backtracking on the matrices (Viterbi)
+“Realtime” correction 
+Hidden Markov Map Matching Through Noise and Sparseness (Paul Newson, John Krumm)
+Modern C++ (11), Qt development environment, Google Tests
+Memory management
+Event system
+Spatial partitioning
+First “successful” agile methodology experience
+From SVN to GIT
+First time on Github & Taiga
+Difficult but interesting :
+Agility (roles, users stories and sprints duration), compilation & deployment
+[Tools] QT Creator
+[Library] QT
+Learn Qt
+Events
+Graphic Interface
+Unit tests
+Explore C++
+Scrum Method
+Improve in Git
+Lack of knowledge 
+Communication
+Communication
+Roles on Agile
+Tests
+Great experience
+Hidden Markov Map Matching, Paul Newson and John Krumm 
+Qt Center website
+Cheers to Wikipedia for its clear Hidden Markov Models and Viterbi Algorithm pages
+Google Test github
+Doxygen website
+Github
+
+
